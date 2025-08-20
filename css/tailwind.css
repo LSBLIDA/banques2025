@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Primary Colors - Banking Authority */
+  --color-primary: #1e3a8a; /* blue-800 */
+  --color-primary-50: #eff6ff; /* blue-50 */
+  --color-primary-100: #dbeafe; /* blue-100 */
+  --color-primary-200: #bfdbfe; /* blue-200 */
+  --color-primary-300: #93c5fd; /* blue-300 */
+  --color-primary-400: #60a5fa; /* blue-400 */
+  --color-primary-500: #3b82f6; /* blue-500 */
+  --color-primary-600: #2563eb; /* blue-600 */
+  --color-primary-700: #1d4ed8; /* blue-700 */
+  --color-primary-800: #1e3a8a; /* blue-800 */
+  --color-primary-900: #1e40af; /* blue-900 */
+
+  /* Secondary Colors - Supporting Hierarchy */
+  --color-secondary: #3b82f6; /* blue-500 */
+  --color-secondary-50: #eff6ff; /* blue-50 */
+  --color-secondary-100: #dbeafe; /* blue-100 */
+  --color-secondary-200: #bfdbfe; /* blue-200 */
+  --color-secondary-300: #93c5fd; /* blue-300 */
+  --color-secondary-400: #60a5fa; /* blue-400 */
+  --color-secondary-500: #3b82f6; /* blue-500 */
+  --color-secondary-600: #2563eb; /* blue-600 */
+  --color-secondary-700: #1d4ed8; /* blue-700 */
+  --color-secondary-800: #1e3a8a; /* blue-800 */
+  --color-secondary-900: #1e40af; /* blue-900 */
+
+  /* Accent Colors - Conversion CTAs */
+  --color-accent: #06b6d4; /* cyan-500 */
+  --color-accent-50: #ecfeff; /* cyan-50 */
+  --color-accent-100: #cffafe; /* cyan-100 */
+  --color-accent-200: #a5f3fc; /* cyan-200 */
+  --color-accent-300: #67e8f9; /* cyan-300 */
+  --color-accent-400: #22d3ee; /* cyan-400 */
+  --color-accent-500: #06b6d4; /* cyan-500 */
+  --color-accent-600: #0891b2; /* cyan-600 */
+  --color-accent-700: #0e7490; /* cyan-700 */
+  --color-accent-800: #155e75; /* cyan-800 */
+  --color-accent-900: #164e63; /* cyan-900 */
+
+  /* Background Colors */
+  --color-background: #ffffff; /* white */
+  --color-surface: #f8fafc; /* slate-50 */
+
+  /* Text Colors */
+  --color-text-primary: #1f2937; /* gray-800 */
+  --color-text-secondary: #6b7280; /* gray-500 */
+
+  /* Status Colors */
+  --color-success: #10b981; /* emerald-500 */
+  --color-success-50: #ecfdf5; /* emerald-50 */
+  --color-success-100: #d1fae5; /* emerald-100 */
+  --color-success-500: #10b981; /* emerald-500 */
+  --color-success-600: #059669; /* emerald-600 */
+
+  --color-warning: #f59e0b; /* amber-500 */
+  --color-warning-50: #fffbeb; /* amber-50 */
+  --color-warning-100: #fef3c7; /* amber-100 */
+  --color-warning-500: #f59e0b; /* amber-500 */
+  --color-warning-600: #d97706; /* amber-600 */
+
+  --color-error: #ef4444; /* red-500 */
+  --color-error-50: #fef2f2; /* red-50 */
+  --color-error-100: #fee2e2; /* red-100 */
+  --color-error-500: #ef4444; /* red-500 */
+  --color-error-600: #dc2626; /* red-600 */
+
+  /* Border Colors */
+  --color-border: #e5e7eb; /* gray-200 */
+  --color-border-focus: #06b6d4; /* cyan-500 */
+}
+
+/* Custom Banking Gradient */
+.banking-gradient {
+  background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+}
+
+.banking-gradient-reverse {
+  background: linear-gradient(135deg, #3b82f6 0%, #1e3a8a 100%);
+}
+
+/* Executive Shadow for CTAs and Cards */
+.executive-shadow {
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* Smooth Transitions */
+.smooth-transition {
+  transition: all 200ms ease-in-out;
+}
+
+.scroll-transition {
+  transition: all 300ms ease-in-out;
+}
+
+/* CTA Button Styles */
+.cta-button {
+  @apply bg-accent text-white font-semibold py-3 px-6 rounded-lg executive-shadow smooth-transition;
+}
+
+.cta-button:hover {
+  @apply bg-accent-600 transform -translate-y-0.5;
+}
+
+.cta-button:focus {
+  @apply outline-none ring-2 ring-accent ring-offset-2;
+}
+
+/* Form Input Styles */
+.form-input {
+  @apply border border-gray-200 rounded-lg px-4 py-3 focus:border-accent focus:ring-2 focus:ring-accent focus:ring-opacity-20 smooth-transition;
+}
+
+/* Banking Card Styles */
+.banking-card {
+  @apply bg-white rounded-xl executive-shadow p-6 smooth-transition;
+}
+
+.banking-card:hover {
+  @apply transform -translate-y-1;
+}
