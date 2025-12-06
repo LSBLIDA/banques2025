@@ -20,7 +20,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
                 <div class="flex items-center">
-                    <img src="/public/logo.png" alt="Logo" width="150" height="60" style="object-fit:contain;" />
+                    <img src="../public/logo.png" alt="Logo" width="150" height="60" style="object-fit:contain;" />
 
                 </div>
                 <div class="hidden md:flex items-center space-x-8">
@@ -65,7 +65,7 @@
         <img src="../public/image_fond.png" 
              alt="Banking Background" 
              class="w-full h-full object-cover"
-             onerror="this.src='/logo.png'; this.onerror=null;" />
+             onerror="this.src='../public/logo.png'; this.onerror=null;" />
     </div>
         <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32">
             <div class="grid lg:grid-cols-2 gap-12 items-center">
@@ -142,9 +142,9 @@
                         </div>
 
                         <!-- Image en bas -->
-                        <img src="/public/Couverture.png" alt="Étude Bancaire Algérie"
+                        <img src="../public/Couverture.png" alt="Étude Bancaire Algérie"
                             class="w-72 mx-auto rounded-lg executive-shadow"
-                            onerror="this.src='/public/logo.png'; this.onerror=null;" />
+                            onerror="this.src='../public/logo.png'; this.onerror=null;" />
                     </div>
                 </div>
 
@@ -507,12 +507,11 @@
                         <li class="flex items-start">Mises à jour d’errata mineures</li>
                     </ul>
 
-                    <!-- Ecwid bouton unique -->
-                    <div class="ecsp ecsp-SingleProduct-v2 ecsp-Product ec-Product-773981027 w-full"
-                        itemtype="http://schema.org/Product" data-single-product-id="773981027">
-                        <div class="ecsp-title" style="display:none;"></div>
-                        <div customprop="addtobag"></div>
-                    </div>
+                    <!-- Bouton COMMANDEZ -->
+                    <button onclick="openOrder('essential')"
+                        class="w-full text-center bg-accent text-white px-6 py-3 rounded-lg font-semibold hover:bg-accent-600 smooth-transition">
+                        COMMANDEZ
+                    </button>
                 </div>
 
                 <!-- Pack Pro - Populaire -->
@@ -534,11 +533,10 @@
                         <li class="flex items-start">Accès aux mises à jour majeures</li>
                         <li class="flex items-start">Jusqu'à 3 utilisateurs (même entité)</li>
                     </ul>
-                    <div class="ecsp ecsp-SingleProduct-v2 ecsp-Product ec-Product-775728107 w-full"
-                        itemtype="http://schema.org/Product" data-single-product-id="775728107">
-                        <div class="ecsp-title" style="display:none;"></div>
-                        <div customprop="addtobag"></div>
-                    </div>
+                    <button onclick="openOrder('pro')"
+                        class="w-full text-center bg-accent text-white px-6 py-3 rounded-lg font-semibold hover:bg-accent-600 smooth-transition">
+                        COMMANDEZ
+                    </button>
 
                 </div>
 
@@ -554,11 +552,10 @@
                         <li class="flex items-start">Webinar exclusif : Décryptage de l’étude par M. Sekak Rachid</li>
                         <li class="flex items-start">Jusqu'à 20 utilisateurs (même entité)</li>
                     </ul>
-                    <div class="ecsp ecsp-SingleProduct-v2 ecsp-Product ec-Product-775728109 w-full"
-                        itemtype="http://schema.org/Product" data-single-product-id="775728109">
-                        <div class="ecsp-title" style="display:none;"></div>
-                        <div customprop="addtobag"></div>
-                    </div>
+                    <button onclick="openOrder('corporate')"
+                        class="w-full text-center bg-accent text-white px-6 py-3 rounded-lg font-semibold hover:bg-accent-600 smooth-transition">
+                        COMMANDEZ
+                    </button>
 
                 </div>
             </div>
@@ -590,40 +587,6 @@
             </div>
         </div>
     </section>
-
-    <!-- Script Ecwid -->
-    <script data-cfasync="false" type="text/javascript"
-        src="https://app.ecwid.com/script.js?86926766&data_platform=singleproduct_v2" charset="utf-8"></script>
-    <script type="text/javascript">xProduct()</script>
-
-    <!-- Style personnalisé -->
-    <style>
-        .ecsp .ecsp-button,
-        .ecwid-btn--primary {
-            width: 100% !important;
-            /* Largeur totale */
-            background-color: var(--accent, #007BFF) !important;
-            /* Couleur bleu */
-            color: #fff !important;
-            padding: 0.75rem 1.5rem !important;
-            /* py-3 px-6 */
-            border-radius: 0.5rem !important;
-            /* rounded-lg */
-            font-weight: 600 !important;
-            /* font-semibold */
-            transition: background-color 0.3s ease !important;
-            /* smooth-transition */
-        }
-
-        /* Effet hover */
-        .ecsp .ecsp-button:hover,
-        .ecwid-btn--primary:hover {
-            background-color: #0056b3 !important;
-            /* bleu foncé */
-        }
-    </style>
-
-
 
     <!-- FAQ Section -->
     <section id="faq" class="py-20 bg-white">
@@ -916,7 +879,33 @@
         </div>
     </footer>
 
-    <!-- Preview Modal -->
+    <!-- Order Modal -->
+    <div id="orderModal"
+        class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] flex flex-col overflow-hidden shadow-xl">
+            <div class="p-4 border-b border-gray-200 flex justify-between items-center">
+                <h3 class="text-xl font-bold text-gray-900">Commander l'?tude</h3>
+                <button onclick="closeOrder()" class="text-gray-400 hover:text-gray-600">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+            <div class="bg-gray-50 px-4 py-2 text-sm text-gray-600" id="orderPlanLabel"></div>
+            <div id="orderModalContent" class="p-4 flex-1 overflow-y-auto">
+                <div class="relative w-full overflow-hidden rounded-xl border border-gray-200 bg-white">
+                    <iframe id="orderFrame" title="Formulaire de commande" width="100%" height="850"
+                        class="min-h-[750px]"
+                        frameborder="0"
+                        sandbox="allow-top-navigation allow-forms allow-scripts allow-same-origin allow-popups"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- Preview Modal -->
     <div id="previewModal"
         class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center p-4">
         <div class="bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
@@ -1105,6 +1094,99 @@
             alert('Demande de consultation envoyée ! Nous vous contacterons sous 24h.');
         }
 
+        
+
+        function resetOrderScroll() {
+            const content = document.getElementById('orderModalContent');
+            if (content) {
+                const reset = () => { content.scrollTop = 0; };
+                reset();
+                requestAnimationFrame(reset);
+                setTimeout(reset, 50);
+                setTimeout(reset, 150);
+                setTimeout(reset, 350);
+            }
+            // Ensure page itself is at top
+            document.documentElement.scrollTop = 0;
+            document.body.scrollTop = 0;
+        }
+
+        function resetIframeScroll() {
+            const frame = document.getElementById('orderFrame');
+            if (!frame) return;
+            try {
+                frame.contentWindow.scrollTo(0, 0);
+                setTimeout(() => frame.contentWindow.scrollTo(0, 0), 50);
+                setTimeout(() => frame.contentWindow.scrollTo(0, 0), 150);
+            } catch (e) {
+                // Cross-origin, ignore
+            }
+        }
+
+        let orderFrameLoadBound = false;
+
+        // Order modal with per-plan iframe
+        function openOrder(plan) {
+            const forms = {
+                essential: {
+                    src: 'https://fenekio.com/tandp/ps/forms/wtl/0bccc65018b199f02aaa3c4480417faa',
+                    label: 'Pack Essentiel'
+                },
+                pro: {
+                    src: 'https://fenekio.com/tandp/ps/forms/wtl/2f4348a8582cd25ba9b432a05d0f0fea',
+                    label: 'Pack Pro'
+                },
+                corporate: {
+                    src: 'https://fenekio.com/tandp/ps/forms/wtl/4ef2febf12076dca8bd2ff812cf9a824',
+                    label: 'Pack Corporate Executive'
+                }
+            };
+
+            const selection = forms[plan];
+            if (!selection) {
+                alert('Veuillez choisir un plan valide.');
+                return;
+            }
+
+            const modal = document.getElementById('orderModal');
+            const frame = document.getElementById('orderFrame');
+            const label = document.getElementById('orderPlanLabel');
+
+            frame.setAttribute('src', selection.src);
+            label.textContent = selection.label;
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+
+            // Reset scroll to top on open (several passes)
+            resetOrderScroll();
+            resetIframeScroll();
+            setTimeout(resetOrderScroll, 100);
+            setTimeout(resetOrderScroll, 300);
+            setTimeout(resetIframeScroll, 100);
+            setTimeout(resetIframeScroll, 300);
+
+            // Reset scroll after the iframe finishes loading (including post-submission views)
+            if (!orderFrameLoadBound) {
+                frame.addEventListener('load', () => {
+                    resetOrderScroll();
+                    resetIframeScroll();
+                    setTimeout(resetOrderScroll, 100);
+                    setTimeout(resetOrderScroll, 300);
+                    setTimeout(resetIframeScroll, 100);
+                    setTimeout(resetIframeScroll, 300);
+                });
+                orderFrameLoadBound = true;
+            }
+        }
+
+        function closeOrder() {
+            const modal = document.getElementById('orderModal');
+            const frame = document.getElementById('orderFrame');
+            modal.classList.add('hidden');
+            frame.removeAttribute('src');
+            document.body.style.overflow = 'auto';
+        }
+
         // Smooth scrolling
         function scrollToSection(sectionId) {
             document.getElementById(sectionId).scrollIntoView({
@@ -1138,6 +1220,7 @@
         document.addEventListener('keydown', function (e) {
             if (e.key === 'Escape') {
                 closePreview();
+                closeOrder();
             }
         });
     </script>
