@@ -1,0 +1,103 @@
+# ══════════════════════════════════════════════════════════════════════════════
+# ABIX — Algerian Banking Index
+# Configuration Apache / Laragon
+# ══════════════════════════════════════════════════════════════════════════════
+
+Options -Indexes
+DirectorySlash Off
+
+# ── Charset et encodage ──────────────────────────────────────────────────────
+AddDefaultCharset UTF-8
+AddCharset UTF-8 .html .css .js .json .xml
+
+# ── Types MIME ───────────────────────────────────────────────────────────────
+<IfModule mod_mime.c>
+  AddType text/html .html
+  AddType text/css .css
+  AddType application/javascript .js
+  AddType application/json .json
+  AddType application/pdf .pdf
+  AddType image/png .png
+  AddType image/jpeg .jpg .jpeg
+  AddType image/svg+xml .svg
+  AddType image/x-icon .ico
+  AddType font/woff2 .woff2
+  AddType font/woff .woff
+</IfModule>
+
+# ── Cache statique ───────────────────────────────────────────────────────────
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/html "access plus 1 hour"
+  ExpiresByType text/css "access plus 1 month"
+  ExpiresByType application/javascript "access plus 1 month"
+  ExpiresByType image/png "access plus 6 months"
+  ExpiresByType image/jpeg "access plus 6 months"
+  ExpiresByType application/pdf "access plus 1 week"
+</IfModule>
+
+# ── HTTPS ────────────────────────────────────────────────────────────────────
+# Activer en production uniquement — désactivé pour le développement Laragon
+# <IfModule mod_rewrite.c>
+#   RewriteEngine On
+#   RewriteCond %{HTTPS} off
+#   RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+# </IfModule>
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # ── Règle 1 : Racine → /fr/ (302 en dev, à passer en 301 en production) ──
+  RewriteRule ^$ /fr/ [R=302,L]
+
+  # ── Règle 2 : Redirections 301 — Ancienne URL landing page historique ─────
+  # L'ancienne URL /pages/banking_sector_research_study_landing_page.html
+  # pointe désormais vers l'édition 2025.
+  RewriteRule ^pages/banking_sector_research_study_landing_page\.html$ /fr/editions/2025/ [R=301,L]
+  RewriteRule ^pages/banking_sector_research_study_landing_page$ /fr/editions/2025/ [R=301,L]
+
+  # ── Règle 3 : /edition-2025 ou /etude → /fr/editions/2025/ ──────────────
+  RewriteRule ^edition-2025/?$ /fr/editions/2025/ [R=301,L]
+  RewriteRule ^etude/?$ /fr/editions/2025/ [R=301,L]
+  RewriteRule ^study/?$ /fr/editions/2025/ [R=301,L]
+
+  # ── Règle 4 : Barre oblique sur les répertoires de langue ────────────────
+  # Assure que /fr, /en, /ar pointent vers /fr/, /en/, /ar/
+  RewriteRule ^(fr|en|ar)$ /$1/ [R=301,L]
+
+  # ── Règle 5 : Suppression de l'extension .html des URLs ─────────────────
+  # Optionnelle en Phase 1 — décommentez si nécessaire
+  # RewriteCond %{REQUEST_FILENAME} !-d
+  # RewriteCond %{REQUEST_FILENAME}.html -f
+  # RewriteRule ^(.+)$ $1.html [L]
+
+</IfModule>
+
+# ── Headers de sécurité ──────────────────────────────────────────────────────
+<IfModule mod_headers.c>
+  # Protection de base
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set X-XSS-Protection "1; mode=block"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+
+  # Interdire l'accès direct aux fichiers sensibles
+  <FilesMatch "\.(json|js|env|sh|bak|log)$">
+    # Autoriser les fichiers JS et JSON du site (main.css, site-config.js, locales)
+    # Mais interdire les locales directement si souhaité (commenté pour l'instant)
+    # Header set X-Robots-Tag "noindex, nofollow"
+  </FilesMatch>
+</IfModule>
+
+# ── Interdire l'accès aux dossiers sensibles ─────────────────────────────────
+# Les rapports complets et fichiers Excel ne doivent JAMAIS être dans /public/
+# Cette directive bloque l'accès aux extensions sensibles si elles étaient déposées par erreur
+<FilesMatch "\.(xlsx|xls|docx|doc|pptx|ppt)$">
+  Order Allow,Deny
+  Deny from all
+</FilesMatch>
+
+# ── Pages d'erreur personnalisées ────────────────────────────────────────────
+ErrorDocument 404 /fr/404.html
+ErrorDocument 403 /fr/403.html

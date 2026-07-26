@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html lang="{{__lang}}" dir="{{__dir}}" class="{{__langClass}}">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{meta.title}}</title>
+  <meta name="description" content="{{meta.description}}" />
+  <link rel="canonical" href="{{__canonical}}" />
+
+  <!-- Hreflang -->
+  {{__hreflang}}
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="{{__canonical}}" />
+  <meta property="og:title" content="{{meta.title}}" />
+  <meta property="og:description" content="{{meta.description}}" />
+  <meta property="og:image" content="/public/og-abix.png" />
+  <meta property="og:site_name" content="{{site.fullName}}" />
+  <meta property="og:locale" content="{{__lang}}" />
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" href="{{__basePath}}/public/favicon.png" />
+  <link rel="icon" type="image/x-icon" href="{{__basePath}}/public/favicon.ico" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap" />
+
+  <!-- CSS compilé -->
+  <link rel="stylesheet" href="{{__basePath}}/css/main.css" />
+
+  <!-- Configuration centrale (exposée côté client, sans données sensibles) -->
+  <script src="{{__basePath}}/js/site-config.js"></script>
+</head>
+<body class="font-inter bg-white antialiased">

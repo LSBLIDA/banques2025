@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="{{__lang}}" dir="{{__dir}}">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{edition2026.meta.title}}</title>
+  <meta name="description" content="{{edition2026.meta.description}}" />
+  <link rel="canonical" href="{{__canonical}}" />
+  {{__hreflang}}
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="{{__canonical}}" />
+  <meta property="og:title" content="{{edition2026.meta.title}}" />
+  <meta property="og:description" content="{{edition2026.meta.description}}" />
+  <meta property="og:image" content="{{__basePath}}/public/og-abix.png" />
+  <meta name="robots" content="index, follow" />
+  <link rel="icon" type="image/png" href="{{__basePath}}/public/favicon.png" />
+  <link rel="icon" type="image/x-icon" href="{{__basePath}}/public/favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap" />
+  <link rel="stylesheet" href="{{__basePath}}/css/main.css" />
+  <script src="{{__basePath}}/js/site-config.js" defer></script>
+  <script src="{{__basePath}}/js/main.js" defer></script>
+</head>
+<body class="font-inter bg-white antialiased">
+
+<!-- ═══════════════════════════════════════════════════════════════ NAVIGATION -->
+{{__mainNav}}
+
+<!-- ════════════════════════════════════════════════════════════════════ HERO -->
+<section id="accueil" class="pt-16 bg-banking-gradient text-white relative overflow-hidden">
+  <div class="absolute inset-0 opacity-10" aria-hidden="true">
+    <img src="{{__basePath}}/public/image_fond.png" alt="" class="w-full h-full object-cover" />
+  </div>
+  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
+    <div class="grid lg:grid-cols-12 gap-8 items-center">
+      <div class="lg:col-span-7 space-y-6">
+
+        <!-- Badge Early Bird -->
+        <div class="inline-flex items-center gap-2 bg-amber-400/20 text-amber-300 px-4 py-2 rounded-full text-xs sm:text-sm font-bold border border-amber-400/40">
+          <span class="w-2.5 h-2.5 bg-amber-400 rounded-full animate-pulse"></span>
+          {{edition2026.hero.badge}}
+        </div>
+
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold font-playfair leading-tight">
+          ABIX — {{edition2026.hero.title}}
+        </h1>
+
+        <p class="text-lg text-blue-100">{{edition2026.hero.subtitle}}</p>
+
+        <!-- Encart statut -->
+        <div class="bg-white/10 border border-white/20 rounded-xl p-5 space-y-2">
+          <div class="flex items-start gap-3">
+            <svg class="w-5 h-5 text-amber-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            <div class="space-y-1">
+              <p class="font-semibold text-white">{{edition2026.hero.status}}</p>
+              <p class="text-xs text-blue-200">{{edition2026.hero.disclaimerNoDate}}</p>
+              <p class="text-xs text-blue-200">{{edition2026.hero.disclaimerNoBanks}}</p>
+            </div>
+          </div>
+        </div>
+
+        <p class="text-blue-100 leading-relaxed text-sm sm:text-base">{{edition2026.hero.description}}</p>
+
+        <div class="flex flex-col sm:flex-row gap-4 pt-2">
+          <a href="#precommande" data-track="click_preorder_2026" class="btn-primary-hero">
+            <svg class="w-5 h-5 me-2 flex-shrink-0 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
+            {{edition2026.hero.ctaPreorder}}
+          </a>
+          <a href="#notification" class="btn-secondary-hero">
+            {{edition2026.hero.ctaNotify}}
+          </a>
+        </div>
+      </div>
+
+      <!-- Couverture 2026 (Col 5) -->
+      <div class="lg:col-span-5 flex justify-center">
+        <div class="relative bg-white/10 rounded-2xl overflow-hidden shadow-2xl border border-white/20 max-w-xs transform hover:scale-105 transition-transform duration-300">
+          <img src="{{__basePath}}/public/couverture-2026.jpg" alt="Couverture Algeria Banking Index Édition 2026"
+            class="w-full h-auto object-cover rounded-2xl"
+            onerror="this.src='/public/logo.png'; this.onerror=null;" />
+          <div class="bg-slate-900/90 p-3 text-center text-white border-t border-white/10 space-y-1">
+            <p class="text-xs font-bold text-white mb-0.5">{{edition2026.hero.title}}</p>
+            <p class="text-[11px] font-semibold text-amber-300">{{home.covers.cover2026Subtitle}}</p>
+            <p class="text-[9px] text-blue-200/90 font-normal">{{home.covers.cover2026Trends}}</p>
+            <span class="inline-block text-[10px] text-amber-300 font-semibold bg-amber-500/20 px-2.5 py-0.5 rounded-full border border-amber-400/30 mt-1">Offre Early Bird</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════ CONTENU PRÉVISIONNEL -->
+<section id="contenu-prevu" class="py-16 bg-gray-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12">
+      <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-3">{{edition2026.forecast.title}}</h2>
+      <p class="text-gray-600 max-w-2xl mx-auto text-sm sm:text-base">{{edition2026.forecast.subtitle}}</p>
+    </div>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="bg-white rounded-xl p-6 border border-gray-200 shadow-sm space-y-3">
+        <div class="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center text-primary font-bold">01</div>
+        <h3 class="font-bold text-gray-900 text-base">Évolution triennale 2023–2025</h3>
+        <p class="text-xs text-gray-600 leading-relaxed">Bilan global des dynamiques d'octroi de crédits, de collecte des dépôts et des ratios de liquidité sur 3 exercices.</p>
+      </div>
+      <div class="bg-white rounded-xl p-6 border border-gray-200 shadow-sm space-y-3">
+        <div class="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center text-primary font-bold">02</div>
+        <h3 class="font-bold text-gray-900 text-base">Diagnostics par banque</h3>
+        <p class="text-xs text-gray-600 leading-relaxed">Fiches d'analyse détaillées couvrant l'ensemble des établissements publics et privés du périmètre retenu.</p>
+      </div>
+      <div class="bg-white rounded-xl p-6 border border-gray-200 shadow-sm space-y-3">
+        <div class="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center text-primary font-bold">03</div>
+        <h3 class="font-bold text-gray-900 text-base">Benchmark & classements</h3>
+        <p class="text-xs text-gray-600 leading-relaxed">Positionnement relatif des établissements sur les indicateurs de rentabilité (RoE, RoA, PNB, RBE).</p>
+      </div>
+      <div class="bg-white rounded-xl p-6 border border-gray-200 shadow-sm space-y-3">
+        <div class="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center text-primary font-bold">04</div>
+        <h3 class="font-bold text-gray-900 text-base">Analyses réglementaires</h3>
+        <p class="text-xs text-gray-600 leading-relaxed">Décryptage des évolutions prudentielles et stratégiques du marché bancaire algérien.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════ TARIFS ET OFFRES 2026 -->
+<section id="tarifs" class="scroll-mt-16 pt-24 pb-20 bg-slate-900 text-white relative border-y border-amber-400/20">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+      <div id="pricing-earlybird-badge" class="badge-discount inline-flex items-center gap-2 bg-amber-400/20 text-amber-300 border border-amber-400/30 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider">
+        <span class="w-2 h-2 bg-amber-400 rounded-full animate-pulse"></span>
+        <span>{{edition2026.pricing.earlyBirdBadge}}</span>
+      </div>
+      <h2 class="text-3xl sm:text-4xl font-extrabold font-playfair text-white">{{edition2026.pricing.sectionTitle}}</h2>
+      <p class="text-gray-300 text-base leading-relaxed">{{edition2026.pricing.sectionSubtitle}}</p>
+    </div>
+
+    <!-- Grille des 3 cartes d'offres -->
+    <div class="grid lg:grid-cols-3 gap-8 items-stretch">
+
+      <!-- PACK ESSENTIEL -->
+      <div class="pricing-card bg-slate-800/90 rounded-3xl p-8 border border-gray-700/80 shadow-xl flex flex-col justify-between relative transition-all duration-300 hover:border-gray-500">
+        <div class="space-y-6">
+          <div>
+            <h3 class="text-2xl font-bold font-playfair text-white mb-2">{{edition2026.pricing.essential.title}}</h3>
+            <p class="text-xs text-gray-400">{{edition2026.pricing.essential.userLicensesText}}</p>
+          </div>
+
+          <!-- Affichage du Prix -->
+          <div class="pricing-block space-y-1 py-4 border-y border-gray-700/60">
+            <div class="flex items-baseline gap-2">
+              <span class="regular-price-struck text-sm text-gray-400 line-through font-semibold">{{edition2026.pricing.essential.regularPrice}}</span>
+              <span class="badge-discount inline-block text-[10px] font-bold text-amber-300 bg-amber-500/20 px-2 py-0.5 rounded border border-amber-400/40">{{edition2026.pricing.earlyBirdBadge}}</span>
+            </div>
+            <div class="early-bird-price text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+              {{edition2026.pricing.essential.earlyBirdPrice}}
+            </div>
+            <p class="saving-mention text-xs font-bold text-emerald-400">{{edition2026.pricing.essential.saving}}</p>
+            <p class="validity-mention text-[11px] text-gray-400 italic pt-1">{{edition2026.pricing.validityMention}}</p>
+          </div>
+
+          <!-- Caractéristiques du Pack Essentiel -->
+          <ul class="space-y-3 text-sm text-gray-300">
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-amber-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              <span>{{edition2026.pricing.essential.f1}}</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-amber-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              <span>{{edition2026.pricing.essential.f2}}</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-amber-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              <span>{{edition2026.pricing.essential.f3}}</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-amber-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              <span>{{edition2026.pricing.essential.f4}}</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-amber-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              <span>{{edition2026.pricing.essential.f5}}</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-amber-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              <span>{{edition2026.pricing.essential.f6}}</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-amber-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              <span>{{edition2026.pricing.essential.f7}}</span>
+            </li>
+          </ul>
+        </div>
+
+        <button onclick="openPreorder('essential')" data-pack="essential" class="cta-pricing-btn btn-outline w-full mt-8 py-3.5 px-4 rounded-xl font-bold flex items-center justify-center gap-2 text-white border-white/20 hover:bg-white/10 transition-all">
+          <svg class="w-4 h-4 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
+          <span class="cta-text">{{edition2026.pricing.essential.cta}}</span>
+        </button>
+      </div>
+
+      <!-- PACK PRO (RECOMMANDÉ) -->
+      <div class="pricing-card bg-slate-800 rounded-3xl p-8 border-2 border-amber-400 shadow-2xl flex flex-col justify-between relative transition-all duration-300 transform lg:-translate-y-2">
+        <div class="popular-badge absolute -top-4 left-1/2 -translate-x-1/2 bg-amber-400 text-slate-950 text-xs font-black px-4 py-1 rounded-full uppercase tracking-wider shadow-lg flex items-center gap-1">
+          <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          {{edition2026.pricing.pro.badge}}
+        </div>
+
+        <div class="space-y-6 pt-2">
+          <div>
+            <h3 class="text-2xl font-bold font-playfair text-white mb-2">{{edition2026.pricing.pro.title}}</h3>
+            <p class="text-xs text-amber-300 font-medium">{{edition2026.pricing.pro.userLicensesText}}</p>
+          </div>
+
+          <!-- Affichage du Prix -->
+          <div class="pricing-block space-y-1 py-4 border-y border-amber-400/30">
+            <div class="flex items-baseline gap-2">
+              <span class="regular-price-struck text-sm text-gray-400 line-through font-semibold">{{edition2026.pricing.pro.regularPrice}}</span>
+              <span class="badge-discount inline-block text-[10px] font-bold text-amber-300 bg-amber-500/20 px-2 py-0.5 rounded border border-amber-400/40">{{edition2026.pricing.earlyBirdBadge}}</span>
+            </div>
+            <div class="early-bird-price text-3xl sm:text-4xl font-extrabold text-amber-300 tracking-tight">
+              {{edition2026.pricing.pro.earlyBirdPrice}}
+            </div>
+            <p class="saving-mention text-xs font-bold text-emerald-400">{{edition2026.pricing.pro.saving}}</p>
+            <p class="validity-mention text-[11px] text-gray-400 italic pt-1">{{edition2026.pricing.validityMention}}</p>
+          </div>
+
+          <!-- Caractéristiques du Pack Pro -->
+          <ul class="space-y-3 text-sm text-gray-200">
+            <li class="flex items-start gap-3 font-semibold text-white">
+              <svg class="w-5 h-5 text-amber-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+              <span>{{edition2026.pricing.pro.f1}}</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-amber-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              <span>{{edition2026.pricing.pro.f2}}</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-amber-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              <span>{{edition2026.pricing.pro.f3}}</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-amber-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              <span>{{edition2026.pricing.pro.f4}}</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-amber-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              <span>{{edition2026.pricing.pro.f5}}</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-amber-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              <span>{{edition2026.pricing.pro.f6}}</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-amber-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              <span>{{edition2026.pricing.pro.f7}}</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-amber-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              <span>{{edition2026.pricing.pro.f8}}</span>
+            </li>
+          </ul>
+        </div>
+
+        <button onclick="openPreorder('pro')" data-pack="pro" class="cta-pricing-btn btn-cta w-full mt-8 py-3.5 px-4 rounded-xl font-bold flex items-center justify-center gap-2 transition-all shadow-xl">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
+          <span class="cta-text">{{edition2026.pricing.pro.cta}}</span>
+        </button>
+      </div>
+
+      <!-- PACK CORPORATE EXECUTIVE -->
+      <div class="pricing-card bg-slate-800/90 rounded-3xl p-8 border border-gray-700/80 shadow-xl flex flex-col justify-between relative transition-all duration-300 hover:border-gray-500">
+        <div class="space-y-6">
+          <div>
+            <h3 class="text-2xl font-bold font-playfair text-white mb-2">{{edition2026.pricing.corporate.title}}</h3>
+            <p class="text-xs text-gray-400">{{edition2026.pricing.corporate.userLicensesText}}</p>
+          </div>
+
+          <!-- Affichage du Prix -->
+          <div class="pricing-block space-y-1 py-4 border-y border-gray-700/60">
+            <div class="flex items-baseline gap-2">
+              <span class="regular-price-struck text-sm text-gray-400 line-through font-semibold">{{edition2026.pricing.corporate.regularPrice}}</span>
+              <span class="badge-discount inline-block text-[10px] font-bold text-amber-300 bg-amber-500/20 px-2 py-0.5 rounded border border-amber-400/40">{{edition2026.pricing.earlyBirdBadge}}</span>
+            </div>
+            <div class="early-bird-price text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+              {{edition2026.pricing.corporate.earlyBirdPrice}}
+            </div>
+            <p class="saving-mention text-xs font-bold text-emerald-400">{{edition2026.pricing.corporate.saving}}</p>
+            <p class="validity-mention text-[11px] text-gray-400 italic pt-1">{{edition2026.pricing.validityMention}}</p>
+          </div>
+
+          <!-- Caractéristiques du Pack Corporate -->
+          <ul class="space-y-3 text-sm text-gray-300">
+            <li class="flex items-start gap-3 font-semibold text-white">
+              <svg class="w-5 h-5 text-amber-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+              <span>{{edition2026.pricing.corporate.f1}}</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-amber-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              <span>{{edition2026.pricing.corporate.f2}}</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-amber-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              <span>{{edition2026.pricing.corporate.f3}}</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-amber-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              <span>{{edition2026.pricing.corporate.f4}}</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-amber-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              <span>{{edition2026.pricing.corporate.f5}}</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-amber-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              <span>{{edition2026.pricing.corporate.f6}}</span>
+            </li>
+          </ul>
+        </div>
+
+        <button onclick="openPreorder('corporate')" data-pack="corporate" class="cta-pricing-btn btn-outline w-full mt-8 py-3.5 px-4 rounded-xl font-bold flex items-center justify-center gap-2 text-white border-white/20 hover:bg-white/10 transition-all">
+          <svg class="w-4 h-4 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
+          <span class="cta-text">{{edition2026.pricing.corporate.cta}}</span>
+        </button>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════ FORMULAIRE DE PRÉCOMMANDE 2026 -->
+<section id="precommande" class="py-20 bg-white">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="bg-slate-900 text-white rounded-3xl p-8 sm:p-12 border border-amber-400/30 shadow-2xl space-y-8">
+      <div class="text-center space-y-3">
+        <div class="inline-block bg-amber-400/20 text-amber-300 text-xs font-bold px-3 py-1 rounded-full border border-amber-400/30">
+          Offre Early Bird — Jusqu'au 31 août 2026
+        </div>
+        <h2 class="text-3xl font-bold font-playfair text-white">{{edition2026.preorderForm.title}}</h2>
+        <p class="text-sm text-gray-300 max-w-xl mx-auto">{{edition2026.preorderForm.subtitle}}</p>
+      </div>
+
+      <form id="page-preorder-form-2026" class="space-y-5 text-gray-900" novalidate>
+        <div class="grid grid-cols-2 gap-4">
+          <div>
+            <label for="ppo_first_name" class="form-label text-white">{{edition2026.preorderForm.labelFirstName}} <span class="text-amber-400">*</span></label>
+            <input type="text" id="ppo_first_name" name="first_name" autocomplete="given-name" required class="form-input w-full" />
+          </div>
+          <div>
+            <label for="ppo_last_name" class="form-label text-white">{{edition2026.preorderForm.labelLastName}} <span class="text-amber-400">*</span></label>
+            <input type="text" id="ppo_last_name" name="last_name" autocomplete="family-name" required class="form-input w-full" />
+          </div>
+        </div>
+
+        <div class="grid grid-cols-2 gap-4">
+          <div>
+            <label for="ppo_job_title" class="form-label text-white">{{edition2026.preorderForm.labelTitle}} <span class="text-amber-400">*</span></label>
+            <input type="text" id="ppo_job_title" name="job_title" autocomplete="organization-title" required class="form-input w-full" />
+          </div>
+          <div>
+            <label for="ppo_organization" class="form-label text-white">{{edition2026.preorderForm.labelOrg}} <span class="text-amber-400">*</span></label>
+            <input type="text" id="ppo_organization" name="organization" autocomplete="organization" required class="form-input w-full" />
+          </div>
+        </div>
+
+        <div class="grid grid-cols-2 gap-4">
+          <div>
+            <label for="ppo_email" class="form-label text-white">{{edition2026.preorderForm.labelEmail}} <span class="text-amber-400">*</span></label>
+            <input type="email" id="ppo_email" name="email" autocomplete="email" required class="form-input w-full" />
+            <p class="text-[11px] text-gray-400 mt-1">{{edition2026.preorderForm.labelEmailHint}}</p>
+          </div>
+          <div>
+            <label for="ppo_phone" class="form-label text-white">{{edition2026.preorderForm.labelPhone}} <span class="text-amber-400">*</span></label>
+            <input type="tel" id="ppo_phone" name="phone" autocomplete="tel" required class="form-input w-full" />
+          </div>
+        </div>
+
+        <div class="grid grid-cols-2 gap-4">
+          <div>
+            <label for="ppo_country" class="form-label text-white">{{edition2026.preorderForm.labelCountry}} <span class="text-amber-400">*</span></label>
+            <select id="ppo_country" name="country" required class="form-input w-full">
+              <option value="">—</option>
+              <option value="DZ" selected>Algérie</option>
+              <option value="FR">France</option>
+              <option value="TN">Tunisie</option>
+              <option value="MA">Maroc</option>
+              <option value="OTHER">Autre</option>
+            </select>
+          </div>
+          <div>
+            <label for="ppo_pack" class="form-label text-white">{{edition2026.preorderForm.labelPack}} <span class="text-amber-400">*</span></label>
+            <select id="ppo_pack" name="pack" required class="form-input w-full">
+              <option value="essential">{{edition2026.preorderForm.packOptions.essential}}</option>
+              <option value="pro" selected>{{edition2026.preorderForm.packOptions.pro}}</option>
+              <option value="corporate">{{edition2026.preorderForm.packOptions.corporate}}</option>
+            </select>
+          </div>
+        </div>
+
+        <div>
+          <label for="ppo_users" class="form-label text-white">{{edition2026.preorderForm.labelUserCount}}</label>
+          <input type="number" id="ppo_users" name="user_count" min="1" max="50" value="1" class="form-input w-full" />
+        </div>
+
+        <!-- Facture Pro Forma -->
+        <div class="space-y-2 pt-1">
+          <label class="form-label text-white">{{edition2026.preorderForm.labelProforma}}</label>
+          <div class="bg-white/5 p-3 rounded-lg border border-white/10">
+            <label class="flex items-center gap-2 text-xs text-gray-200 cursor-pointer">
+              <input type="checkbox" id="ppo_proforma" name="proforma_invoice" value="yes" class="rounded text-amber-500 focus:ring-amber-400" />
+              <span>{{edition2026.preorderForm.proformaOption}}</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="space-y-2 pt-2">
+          <label class="form-label text-white">{{edition2026.preorderForm.labelAddons}}</label>
+          <div class="space-y-2 bg-white/5 p-3 rounded-lg border border-white/10">
+            <label class="flex items-center gap-2 text-xs text-gray-200 cursor-pointer">
+              <input type="checkbox" name="addons" value="presentation" class="rounded text-amber-500 focus:ring-amber-400" />
+              <span>{{edition2026.preorderForm.addonOptions.presentation}}</span>
+            </label>
+            <label class="flex items-center gap-2 text-xs text-gray-200 cursor-pointer">
+              <input type="checkbox" name="addons" value="benchmark" class="rounded text-amber-500 focus:ring-amber-400" />
+              <span>{{edition2026.preorderForm.addonOptions.benchmark}}</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Case à cocher obligatoire relative au statut de finalisation -->
+        <div class="bg-amber-400/10 p-4 rounded-xl border border-amber-400/30">
+          <label class="flex items-start gap-3 text-xs text-amber-200 cursor-pointer">
+            <input type="checkbox" id="ppo_terms" name="terms_consent" required class="mt-0.5 rounded text-amber-500 focus:ring-amber-400 flex-shrink-0" />
+            <span>{{edition2026.preorderForm.labelTermsConsent}} <span class="text-amber-400">*</span></span>
+          </label>
+        </div>
+
+        <p class="text-[11px] text-gray-400">{{edition2026.preorderForm.privacyNotice}}</p>
+
+        <div id="ppo-form-error" class="hidden bg-red-500/20 border border-red-400/40 text-red-200 rounded-lg p-3 text-xs"></div>
+
+        <button type="submit" id="ppo-submit-btn" data-track="submit_preorder_form" class="btn-cta w-full flex items-center justify-center gap-2 py-3.5 text-base">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+          {{edition2026.preorderForm.submitReservation}}
+        </button>
+
+        <p class="text-xs text-gray-400 text-center">{{edition2026.preorderForm.fallbackNote}}</p>
+      </form>
+
+      <div id="ppo-form-success" class="hidden text-center space-y-4 py-8">
+        <div class="w-16 h-16 bg-emerald-500/20 rounded-full flex items-center justify-center mx-auto border border-emerald-400/40">
+          <svg class="w-8 h-8 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+        </div>
+        <h4 class="text-2xl font-bold text-white">{{edition2026.preorderForm.successTitle}}</h4>
+        <p class="text-sm text-gray-300 max-w-md mx-auto">{{edition2026.preorderForm.successBody}}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════ FAQ PRÉCOMMANDE -->
+<section id="faq-precommande" class="py-20 bg-gray-50">
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-bold text-gray-900 mb-3">{{edition2026.faq.title}}</h2>
+      <p class="text-gray-600 text-sm sm:text-base">{{edition2026.faq.subtitle}}</p>
+    </div>
+    <div class="space-y-3">
+      <div class="bg-white rounded-xl border border-gray-200 overflow-hidden">
+        <button onclick="toggleFAQ('pfaq1')" class="w-full text-start p-5 flex justify-between items-center focus:outline-none">
+          <span class="font-semibold text-gray-900 text-sm sm:text-base pe-4">Quand l’étude sera-t-elle livrée ?</span>
+          <svg id="pfaq1-icon" class="w-5 h-5 text-gray-400 flex-shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div id="pfaq1-content" class="hidden px-5 pb-5 text-gray-600 text-xs sm:text-sm leading-relaxed border-t border-gray-100 pt-3">
+          L’étude complète sera livrée immédiatement dès la finalisation et la validation des données financières de la période 2023–2025. Vous serez averti en avant-première.
+        </div>
+      </div>
+      <div class="bg-white rounded-xl border border-gray-200 overflow-hidden">
+        <button onclick="toggleFAQ('pfaq2')" class="w-full text-start p-5 flex justify-between items-center focus:outline-none">
+          <span class="font-semibold text-gray-900 text-sm sm:text-base pe-4">Que contient la précommande ?</span>
+          <svg id="pfaq2-icon" class="w-5 h-5 text-gray-400 flex-shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div id="pfaq2-content" class="hidden px-5 pb-5 text-gray-600 text-xs sm:text-sm leading-relaxed border-t border-gray-100 pt-3">
+          La précommande vous garantit la réservation du rapport complet 2026 dès sa sortie au tarif préférentiel Early Bird, ainsi que l'envoi de la synthèse exécutive dès sa disponibilité.
+        </div>
+      </div>
+      <div class="bg-white rounded-xl border border-gray-200 overflow-hidden">
+        <button onclick="toggleFAQ('pfaq3')" class="w-full text-start p-5 flex justify-between items-center focus:outline-none">
+          <span class="font-semibold text-gray-900 text-sm sm:text-base pe-4">Le tarif Early Bird est-il garanti ?</span>
+          <svg id="pfaq3-icon" class="w-5 h-5 text-gray-400 flex-shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div id="pfaq3-content" class="hidden px-5 pb-5 text-gray-600 text-xs sm:text-sm leading-relaxed border-t border-gray-100 pt-3">
+          Oui. Toute réservation ou précommande enregistrée avant le 31 août 2026 à 23h59 (heure d'Algérie) conserve le tarif préférentiel garanti.
+        </div>
+      </div>
+      <div class="bg-white rounded-xl border border-gray-200 overflow-hidden">
+        <button onclick="toggleFAQ('pfaq4')" class="w-full text-start p-5 flex justify-between items-center focus:outline-none">
+          <span class="font-semibold text-gray-900 text-sm sm:text-base pe-4">Puis-je recevoir une facture pro forma ?</span>
+          <svg id="pfaq4-icon" class="w-5 h-5 text-gray-400 flex-shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div id="pfaq4-content" class="hidden px-5 pb-5 text-gray-600 text-xs sm:text-sm leading-relaxed border-t border-gray-100 pt-3">
+          Oui. Lors de votre réservation commerciale, Tadjeddine & Partners peut vous établir une facture pro forma ou une convention de prestation.
+        </div>
+      </div>
+      <div class="bg-white rounded-xl border border-gray-200 overflow-hidden">
+        <button onclick="toggleFAQ('pfaq5')" class="w-full text-start p-5 flex justify-between items-center focus:outline-none">
+          <span class="font-semibold text-gray-900 text-sm sm:text-base pe-4">Puis-je commander pour plusieurs utilisateurs ?</span>
+          <svg id="pfaq5-icon" class="w-5 h-5 text-gray-400 flex-shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div id="pfaq5-content" class="hidden px-5 pb-5 text-gray-600 text-xs sm:text-sm leading-relaxed border-t border-gray-100 pt-3">
+          Oui, les options Pack Pro (jusqu'à 3 utilisateurs) et Pack Corporate Executive (jusqu'à 20 utilisateurs) permettent l'accès multi-utilisateurs.
+        </div>
+      </div>
+      <div class="bg-white rounded-xl border border-gray-200 overflow-hidden">
+        <button onclick="toggleFAQ('pfaq6')" class="w-full text-start p-5 flex justify-between items-center focus:outline-none">
+          <span class="font-semibold text-gray-900 text-sm sm:text-base pe-4">Que se passe-t-il si la publication est reportée ?</span>
+          <svg id="pfaq6-icon" class="w-5 h-5 text-gray-400 flex-shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div id="pfaq6-content" class="hidden px-5 pb-5 text-gray-600 text-xs sm:text-sm leading-relaxed border-t border-gray-100 pt-3">
+          Vous serez immédiatement notifié par nos équipes. Votre précommande reste valide et votre tarif Early Bird demeure entièrement garanti.
+        </div>
+      </div>
+      <div class="bg-white rounded-xl border border-gray-200 overflow-hidden">
+        <button onclick="toggleFAQ('pfaq7')" class="w-full text-start p-5 flex justify-between items-center focus:outline-none">
+          <span class="font-semibold text-gray-900 text-sm sm:text-base pe-4">L’édition 2025 est-elle incluse ?</span>
+          <svg id="pfaq7-icon" class="w-5 h-5 text-gray-400 flex-shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div id="pfaq7-content" class="hidden px-5 pb-5 text-gray-600 text-xs sm:text-sm leading-relaxed border-t border-gray-100 pt-3">
+          L’édition 2025 est disponible immédiatement comme étude indépendante. Si vous souhaitez acquérir un pack combiné 2025 + 2026, nos conseillers établiront une proposition sur-mesure.
+        </div>
+      </div>
+      <div class="bg-white rounded-xl border border-gray-200 overflow-hidden">
+        <button onclick="toggleFAQ('pfaq8')" class="w-full text-start p-5 flex justify-between items-center focus:outline-none">
+          <span class="font-semibold text-gray-900 text-sm sm:text-base pe-4">Puis-je demander une présentation personnalisée ?</span>
+          <svg id="pfaq8-icon" class="w-5 h-5 text-gray-400 flex-shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div id="pfaq8-content" class="hidden px-5 pb-5 text-gray-600 text-xs sm:text-sm leading-relaxed border-t border-gray-100 pt-3">
+          Oui. Vous pouvez cocher l'option lors de votre précommande pour intégrer une présentation exécutive devant votre comité de direction.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════ ÉTRE INFORMÉ (ALTERNATIVE NON-PRÉCOMMANDE) -->
+<section id="notification" class="py-16 bg-white border-t border-gray-100">
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
+    <h2 class="text-2xl font-bold text-gray-900">{{edition2026.notify.title}}</h2>
+    <p class="text-gray-600 text-sm">{{edition2026.notify.body}}</p>
+    <a href="{{__basePath}}/{{__lang}}/contact/" class="btn-outline inline-flex items-center gap-2 text-sm">
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/></svg>
+      {{edition2026.notify.submit}}
+    </a>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════ FOOTER -->
+<footer class="bg-gray-900 text-white pt-16 pb-8">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid md:grid-cols-4 gap-8 pb-12 border-b border-gray-800">
+      <div class="space-y-4">
+        <img src="{{__basePath}}/public/logo.png" alt="ABIX — {{site.publisher}}" class="h-10 sm:h-12 w-auto object-contain brightness-0 invert" />
+        <p class="text-sm text-gray-400">{{footer.slogan}}</p>
+      </div>
+      <div>
+        <h3 class="text-sm font-semibold mb-4">{{nav.editions}}</h3>
+        <ul class="space-y-2 text-sm text-gray-400">
+          <li><a href="{{__basePath}}/{{__lang}}/editions/2026/" class="hover:text-accent transition-colors">{{nav.edition2026}}</a></li>
+          <li><a href="{{__basePath}}/{{__lang}}/editions/2025/" class="hover:text-accent transition-colors">{{nav.edition2025}}</a></li>
+          <li><a href="{{__basePath}}/{{__lang}}/classements/" class="hover:text-accent transition-colors">{{nav.rankings}}</a></li>
+          <li><a href="{{__basePath}}/{{__lang}}/banques/" class="hover:text-accent transition-colors">{{nav.banks}}</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-sm font-semibold mb-4">{{footer.servicesLinks.title}}</h3>
+        <ul class="space-y-2 text-sm text-gray-400">
+          <li><a href="{{__basePath}}/{{__lang}}/services/" class="hover:text-accent transition-colors">Benchmark personnalisé</a></li>
+          <li><a href="{{__basePath}}/{{__lang}}/services/" class="hover:text-accent transition-colors">Diagnostic de performance</a></li>
+          <li><a href="{{__basePath}}/{{__lang}}/a-propos/" class="hover:text-accent transition-colors">{{nav.about}}</a></li>
+          <li><a href="{{__basePath}}/{{__lang}}/contact/" class="hover:text-accent transition-colors">{{nav.contact}}</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-sm font-semibold mb-4">{{footer.contact.title}}</h3>
+        <div class="space-y-2 text-sm text-gray-400">
+          <div class="flex items-center gap-2"><svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg><a href="mailto:{{footer.contact.email}}" class="hover:text-accent">{{footer.contact.email}}</a></div>
+          <div class="flex items-center gap-2"><svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg><span>{{footer.contact.phone}}</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-gray-500">
+      <p>{{site.copyright}}</p>
+      <div class="flex gap-4">
+        <a href="{{__basePath}}/{{__lang}}/mentions-legales/" class="hover:text-gray-300 transition-colors">Mentions légales</a>
+        <a href="{{__basePath}}/{{__lang}}/politique-confidentialite/" class="hover:text-gray-300 transition-colors">Confidentialité</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ════════════════════════════════════════════════ MODAL PRÉCOMMANDE 2026 -->
+<div id="preorderModal" class="fixed inset-0 bg-slate-950/80 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden overflow-y-auto" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+  <div class="bg-slate-900 text-white rounded-3xl p-6 sm:p-8 max-w-2xl w-full border border-amber-400/30 shadow-2xl relative max-h-[90vh] overflow-y-auto space-y-6">
+    <button onclick="closePreorder()" class="absolute top-5 right-5 text-gray-400 hover:text-white transition-colors" aria-label="Fermer">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+    </button>
+    
+    <div class="text-center space-y-2">
+      <div id="modal-earlybird-badge" class="badge-discount inline-block bg-amber-400/20 text-amber-300 text-xs font-bold px-3 py-1 rounded-full border border-amber-400/30">
+        {{edition2026.pricing.earlyBirdBadge}}
+      </div>
+      <h3 id="modal-title" class="text-2xl font-bold font-playfair text-white">{{edition2026.preorderForm.title}}</h3>
+      <p class="text-xs text-gray-300">{{edition2026.preorderForm.subtitle}}</p>
+    </div>
+
+    <form id="preorder-form-2026" class="space-y-4 text-gray-900" novalidate>
+      <div class="grid grid-cols-2 gap-3">
+        <div>
+          <label for="po_first_name" class="form-label text-white text-xs">{{edition2026.preorderForm.labelFirstName}} <span class="text-amber-400">*</span></label>
+          <input type="text" id="po_first_name" name="first_name" autocomplete="given-name" required class="form-input w-full text-xs" />
+        </div>
+        <div>
+          <label for="po_last_name" class="form-label text-white text-xs">{{edition2026.preorderForm.labelLastName}} <span class="text-amber-400">*</span></label>
+          <input type="text" id="po_last_name" name="last_name" autocomplete="family-name" required class="form-input w-full text-xs" />
+        </div>
+      </div>
+
+      <div class="grid grid-cols-2 gap-3">
+        <div>
+          <label for="po_job_title" class="form-label text-white text-xs">{{edition2026.preorderForm.labelTitle}} <span class="text-amber-400">*</span></label>
+          <input type="text" id="po_job_title" name="job_title" autocomplete="organization-title" required class="form-input w-full text-xs" />
+        </div>
+        <div>
+          <label for="po_organization" class="form-label text-white text-xs">{{edition2026.preorderForm.labelOrg}} <span class="text-amber-400">*</span></label>
+          <input type="text" id="po_organization" name="organization" autocomplete="organization" required class="form-input w-full text-xs" />
+        </div>
+      </div>
+
+      <div class="grid grid-cols-2 gap-3">
+        <div>
+          <label for="po_email" class="form-label text-white text-xs">{{edition2026.preorderForm.labelEmail}} <span class="text-amber-400">*</span></label>
+          <input type="email" id="po_email" name="email" autocomplete="email" required class="form-input w-full text-xs" />
+        </div>
+        <div>
+          <label for="po_phone" class="form-label text-white text-xs">{{edition2026.preorderForm.labelPhone}} <span class="text-amber-400">*</span></label>
+          <input type="tel" id="po_phone" name="phone" autocomplete="tel" required class="form-input w-full text-xs" />
+        </div>
+      </div>
+
+      <div class="grid grid-cols-2 gap-3">
+        <div>
+          <label for="po_country" class="form-label text-white text-xs">{{edition2026.preorderForm.labelCountry}} <span class="text-amber-400">*</span></label>
+          <select id="po_country" name="country" required class="form-input w-full text-xs">
+            <option value="DZ" selected>Algérie</option>
+            <option value="FR">France</option>
+            <option value="TN">Tunisie</option>
+            <option value="MA">Maroc</option>
+            <option value="OTHER">Autre</option>
+          </select>
+        </div>
+        <div>
+          <label for="po_pack" class="form-label text-white text-xs">{{edition2026.preorderForm.labelPack}} <span class="text-amber-400">*</span></label>
+          <select id="po_pack" name="pack" required class="form-input w-full text-xs">
+            <option value="essential">{{edition2026.preorderForm.packOptions.essential}}</option>
+            <option value="pro" selected>{{edition2026.preorderForm.packOptions.pro}}</option>
+            <option value="corporate">{{edition2026.preorderForm.packOptions.corporate}}</option>
+          </select>
+        </div>
+      </div>
+
+      <div>
+        <label for="po_users" class="form-label text-white text-xs">{{edition2026.preorderForm.labelUserCount}}</label>
+        <input type="number" id="po_users" name="user_count" min="1" max="50" value="1" class="form-input w-full text-xs" />
+      </div>
+
+      <!-- Facture Pro Forma -->
+      <div class="space-y-1">
+        <label class="form-label text-white text-xs">{{edition2026.preorderForm.labelProforma}}</label>
+        <div class="bg-white/5 p-2.5 rounded-lg border border-white/10">
+          <label class="flex items-center gap-2 text-xs text-gray-200 cursor-pointer">
+            <input type="checkbox" id="po_proforma" name="proforma_invoice" value="yes" class="rounded text-amber-500 focus:ring-amber-400" />
+            <span>{{edition2026.preorderForm.proformaOption}}</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="space-y-1">
+        <label class="form-label text-white text-xs">{{edition2026.preorderForm.labelAddons}}</label>
+        <div class="space-y-1.5 bg-white/5 p-2.5 rounded-lg border border-white/10">
+          <label class="flex items-center gap-2 text-xs text-gray-200 cursor-pointer">
+            <input type="checkbox" name="addons" value="presentation" class="rounded text-amber-500 focus:ring-amber-400" />
+            <span>{{edition2026.preorderForm.addonOptions.presentation}}</span>
+          </label>
+          <label class="flex items-center gap-2 text-xs text-gray-200 cursor-pointer">
+            <input type="checkbox" name="addons" value="benchmark" class="rounded text-amber-500 focus:ring-amber-400" />
+            <span>{{edition2026.preorderForm.addonOptions.benchmark}}</span>
+          </label>
+        </div>
+      </div>
+
+      <!-- Case à cocher obligatoire relative au statut de finalisation -->
+      <div class="bg-amber-400/10 p-3 rounded-xl border border-amber-400/30">
+        <label class="flex items-start gap-2.5 text-xs text-amber-200 cursor-pointer">
+          <input type="checkbox" id="po_terms" name="terms_consent" required class="mt-0.5 rounded text-amber-500 focus:ring-amber-400 flex-shrink-0" />
+          <span>{{edition2026.preorderForm.labelTermsConsent}} <span class="text-amber-400">*</span></span>
+        </label>
+      </div>
+
+      <div id="preorder-form-error" class="hidden bg-red-500/20 border border-red-400/40 text-red-200 rounded-lg p-3 text-xs"></div>
+
+      <button type="submit" id="po-submit-btn" data-track="submit_preorder_form" class="btn-cta w-full flex items-center justify-center gap-2 py-3 text-sm font-bold">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+        {{edition2026.preorderForm.submitReservation}}
+      </button>
+    </form>
+
+    <div id="preorder-form-success" class="hidden text-center space-y-4 py-6">
+      <div class="w-14 h-14 bg-emerald-500/20 rounded-full flex items-center justify-center mx-auto border border-emerald-400/40">
+        <svg class="w-7 h-7 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+      </div>
+      <h4 class="text-xl font-bold text-white">{{edition2026.preorderForm.successTitle}}</h4>
+      <p class="text-xs text-gray-300 max-w-md mx-auto">{{edition2026.preorderForm.successBody}}</p>
+      <button onclick="closePreorder()" class="btn-outline text-xs px-4 py-2 mt-2 text-white border-white/20">Fermer</button>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

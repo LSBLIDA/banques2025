@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="{{__lang}}" dir="{{__dir}}">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>{{legal.meta.title}}</title>
+  <meta name="description" content="{{legal.meta.description}}"/>
+  <link rel="canonical" href="{{__canonical}}"/>
+  {{__hreflang}}
+  <link rel="icon" type="image/png" href="{{__basePath}}/public/favicon.png"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap"/>
+  <link rel="stylesheet" href="{{__basePath}}/css/main.css"/>
+  <script src="{{__basePath}}/js/site-config.js" defer></script>
+  <script src="{{__basePath}}/js/main.js" defer></script>
+</head>
+<body class="font-inter bg-white antialiased">
+
+{{__mainNav}}
+
+<div class="pt-16">
+  <section class="bg-banking-gradient text-white py-16">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
+      <h1 class="text-4xl lg:text-5xl font-bold font-playfair">{{legal.hero.title}}</h1>
+      <p class="text-xl text-blue-100">{{legal.hero.subtitle}}</p>
+    </div>
+  </section>
+
+  <section class="py-16 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+
+      <!-- Éditeur du site -->
+      <div class="bg-gray-50 border border-gray-200/80 rounded-2xl p-8 space-y-4 shadow-sm">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center text-primary font-bold">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+          </div>
+          <h2 class="text-2xl font-bold text-gray-900">{{legal.publisher.title}}</h2>
+        </div>
+        <div class="space-y-2 text-gray-700 leading-relaxed text-sm">
+          <p class="font-semibold text-base text-primary">{{legal.publisher.name}}</p>
+          <p><strong>{{legal.publisher.labelAddress}} :</strong> {{legal.publisher.address}}</p>
+          <p><strong>{{legal.publisher.labelLegalReg}} :</strong> {{legal.publisher.legalReg}}</p>
+          <p><strong>{{legal.publisher.labelEmail}} :</strong> <a href="mailto:{{legal.publisher.email}}" class="text-accent font-medium hover:underline">{{legal.publisher.email}}</a></p>
+          <p><strong>{{legal.publisher.labelPhone}} :</strong> {{legal.publisher.phone}}</p>
+          <p><strong>{{legal.publisher.labelManager}} :</strong> {{legal.publisher.manager}}</p>
+        </div>
+      </div>
+
+      <!-- Hébergement -->
+      <div class="bg-gray-50 border border-gray-200/80 rounded-2xl p-8 space-y-4 shadow-sm">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center text-primary font-bold">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01"/></svg>
+          </div>
+          <h2 class="text-2xl font-bold text-gray-900">{{legal.hosting.title}}</h2>
+        </div>
+        <div class="space-y-2 text-gray-700 leading-relaxed text-sm">
+          <p class="font-semibold text-base text-gray-900">{{legal.hosting.name}}</p>
+          <p>{{legal.hosting.address}}</p>
+          <p><strong>{{legal.hosting.labelEmail}} :</strong> <a href="mailto:{{legal.hosting.email}}" class="text-accent font-medium hover:underline">{{legal.hosting.email}}</a></p>
+        </div>
+      </div>
+
+      <!-- Propriété intellectuelle -->
+      <div class="bg-gray-50 border border-gray-200/80 rounded-2xl p-8 space-y-4 shadow-sm">
+        <h2 class="text-2xl font-bold text-gray-900">{{legal.ip.title}}</h2>
+        <p class="text-gray-700 leading-relaxed text-sm">{{legal.ip.body}}</p>
+      </div>
+
+      <!-- Protection des données personnelles -->
+      <div class="bg-gray-50 border border-gray-200/80 rounded-2xl p-8 space-y-4 shadow-sm">
+        <h2 class="text-2xl font-bold text-gray-900">{{legal.privacy.title}}</h2>
+        <p class="text-gray-700 leading-relaxed text-sm">{{legal.privacy.body}}</p>
+      </div>
+
+      <!-- Conditions d'utilisation -->
+      <div class="bg-gray-50 border border-gray-200/80 rounded-2xl p-8 space-y-4 shadow-sm">
+        <h2 class="text-2xl font-bold text-gray-900">{{legal.cgu.title}}</h2>
+        <p class="text-gray-700 leading-relaxed text-sm">{{legal.cgu.body}}</p>
+      </div>
+
+      <!-- Liens hypertextes -->
+      <div class="bg-gray-50 border border-gray-200/80 rounded-2xl p-8 space-y-4 shadow-sm">
+        <h2 class="text-2xl font-bold text-gray-900">{{legal.links.title}}</h2>
+        <p class="text-gray-700 leading-relaxed text-sm">{{legal.links.body}}</p>
+      </div>
+
+      <!-- Droit applicable -->
+      <div class="bg-gray-50 border border-gray-200/80 rounded-2xl p-8 space-y-4 shadow-sm">
+        <h2 class="text-2xl font-bold text-gray-900">{{legal.law.title}}</h2>
+        <p class="text-gray-700 leading-relaxed text-sm">{{legal.law.body}}</p>
+      </div>
+
+      <!-- Contact -->
+      <div class="bg-gray-50 border border-gray-200/80 rounded-2xl p-8 space-y-4 shadow-sm">
+        <h2 class="text-2xl font-bold text-gray-900">{{legal.contact.title}}</h2>
+        <div class="space-y-2 text-gray-700 leading-relaxed text-sm">
+          <p><strong>Email :</strong> <a href="mailto:info@tadjeddine-partners.com" class="text-accent font-medium hover:underline">info@tadjeddine-partners.com</a></p>
+          <p><strong>Téléphone :</strong> 05.60.403.405 / 05.60.349.059</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</div>
+
+<footer class="bg-gray-900 text-white py-12">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-gray-400">
+    <p>{{site.copyright}}</p>
+    <div class="flex gap-4">
+      <a href="{{__basePath}}/{{__lang}}/mentions-legales/" class="hover:text-gray-200">Mentions légales</a>
+      <a href="{{externalLinks.privacyPage}}" class="hover:text-gray-200" target="_blank" rel="noopener noreferrer">Confidentialité</a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

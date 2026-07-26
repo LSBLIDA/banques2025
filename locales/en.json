@@ -1,0 +1,349 @@
+{
+  "_meta": {
+    "lang": "en",
+    "status": "draft",
+    "note": "Draft translation — must not be published before human review by a bilingual banking/finance specialist. All keys from fr.json must be present."
+  },
+
+  "site": {
+    "name": "ABIX",
+    "fullName": "ABIX — Algeria Banking Index",
+    "publisher": "Tadjeddine & Partners",
+    "tagline": "The reference for banking sector analysis in Algeria",
+    "copyright": "© 2025 Tadjeddine & Partners. All rights reserved."
+  },
+
+  "nav": {
+    "home": "Home",
+    "editions": "Editions",
+    "edition2026": "Edition 2026",
+    "edition2025": "Edition 2025",
+    "methodology": "Methodology",
+    "abixIndex": "ABIX Project",
+    "services": "Services",
+    "rankings": "Rankings",
+    "banks": "Banks",
+    "about": "About",
+    "contact": "Contact",
+    "ctaStudy": "Get the report",
+    "ctaNotify": "Be notified of the 2026 release",
+    "langSelectLabel": "Language"
+  },
+
+  "home": {
+    "hero": {
+      "badge": "Pre-orders are open — Early Bird offer until August 31, 2026",
+      "title": "The reference index for the Algerian banking sector",
+      "subtitle": "ABIX analyses and compares the financial performance of banks operating in Algeria based on public data. The 2026 edition will offer a consolidated analysis of fiscal years 2023 to 2025, sector benchmarks, and bank-by-bank diagnostics.",
+      "ctaPreorder": "Pre-order the 2026 Edition",
+      "ctaPrimary": "Pre-order the 2026 Edition",
+      "ctaNotify": "Be notified of the release",
+      "ctaSynthesis": "Receive the executive summary",
+      "ctaPresentation": "Request a presentation",
+      "ctaBenchmark": "Get a customised benchmark",
+      "ctaDiscover2025": "Discover the 2025 edition"
+    },
+    "covers": {
+      "cover2026Title": "Edition 2026",
+      "cover2026Subtitle": "Analysis of financial data 2023–2025",
+      "cover2026Status": "Forthcoming release",
+      "cover2026MockupTag": "Provisional visual — cover in preparation",
+      "cover2025Title": "Edition 2025",
+      "cover2025Subtitle": "Financial data 2023–2024",
+      "cover2025Status": "Previous edition available"
+    },
+    "earlyBird": {
+      "badge": "Early Bird offer — Until August 31, 2026",
+      "title": "Pre-order the 2026 edition at launch rate",
+      "subtitle": "Reserve the new ABIX report today and benefit from launch rates until August 31, 2026. The full report will be delivered upon publication.",
+      "reassurance": [
+        "Preferential rate reserved for pre-orders",
+        "Full report delivered upon publication",
+        "Access to deliverables corresponding to ordered package"
+      ],
+      "ctaPrimary": "Pre-order now",
+      "ctaSecondary": "View expected 2026 content",
+      "disclaimer": "The 2026 edition is currently being consolidated, validated, and finalised.",
+      "priceDefaultLabel": "Launch rate"
+    },
+    "stats": {
+      "label2025": "2025 edition available",
+      "labelPeriod": "Data period",
+      "labelBanks": "Banks covered (2025)",
+      "labelPages": "Pages of analysis (2025)",
+      "value2025": "Available",
+      "valuePeriod": "2023–2024",
+      "valueBanks": "20",
+      "valuePages": "104"
+    },
+    "edition2026Teaser": {
+      "title": "Edition 2026 — Financial data 2023–2025",
+      "status": "Forthcoming — data currently being consolidated and validated.",
+      "description": "The next edition of ABIX will cover the financial data for the 2023–2025 period and offer an in-depth analysis of the Algerian banking sector.",
+      "ctaNotify": "Be notified of the release",
+      "disclaimer": "No publication date has been set yet. We will notify you as soon as the edition is available."
+    },
+    "advisory": {
+      "title": "Go beyond the report",
+      "body": "Need an analysis tailored to your institution? The experts at Tadjeddine & Partners can turn ABIX data into diagnostics, recommendations, and a roadmap.",
+      "cta": "Request a personalised diagnostic"
+    },
+    "edition2025Preview": {
+      "title": "2025 edition available",
+      "subtitle": "Financial data 2023–2024 · 104 pages · 20 banks",
+      "body": "The 2025 edition of ABIX is available for order. It covers the published financial data of 20 banks operating in Algeria for the 2023 and 2024 fiscal years.",
+      "cta": "Discover the 2025 edition"
+    },
+    "methodology": {
+      "title": "A rigorous and transparent methodology",
+      "body": "ABIX is a comparative index based on publicly available financial data. It does not constitute a regulatory or prudential rating.",
+      "cta": "Learn more about the methodology"
+    }
+  },
+
+  "edition2026": {
+    "meta": {
+      "title": "Edition 2026 — ABIX | Algeria Banking Index",
+      "description": "The 2026 edition of ABIX is being prepared. Register to be notified of its publication and receive the executive summary."
+    },
+    "hero": {
+      "badge": "In preparation",
+      "title": "Edition 2026",
+      "subtitle": "Analysis of financial data 2023–2025",
+      "status": "Forthcoming — data currently being consolidated and validated.",
+      "description": "The next edition of ABIX will analyse the evolution of financial performance of banks operating in Algeria over the 2023–2025 period.",
+      "disclaimerNoBanks": "The definitive scope of the 2026 edition is being validated.",
+      "disclaimerNoDate": "The publication date will be communicated once the data has been consolidated and validated."
+    },
+    "pricing": {
+      "sectionTitle": "Pricing and Offers — 2026 Edition",
+      "sectionSubtitle": "Same public rates as the 2025 edition with a 10% Early Bird discount for pre-orders registered before August 31, 2026, 23:59 (Algeria time).",
+      "earlyBirdBadge": "-10% Early Bird",
+      "validityMention": "Offer valid until August 31, 2026",
+      "popularBadge": "Most Popular",
+      "regularPriceStruckLabel": "Regular price",
+      "earlyBirdPriceLabel": "Early Bird price",
+      "savingLabel": "Save",
+      "ctaBeforeDeadline": "Pre-order",
+      "ctaAfterAvailable": "Order",
+      "ctaAfterPreorder": "Request a reservation",
+      "essential": {
+        "title": "Essential Pack",
+        "userLicensesText": "1 user · Secured PDF",
+        "regularPrice": "84,000 DA HT",
+        "earlyBirdPrice": "75,600 DA HT",
+        "saving": "Save 8,400 DA HT",
+        "cta": "Pre-order Essential Pack",
+        "ctaAfterAvailable": "Order Essential Pack",
+        "ctaAfterPreorder": "Request a reservation",
+        "f1": "Complete study of the 2026 edition in secured PDF format",
+        "f2": "Consolidated banking sector analysis",
+        "f3": "Public vs private banks comparison",
+        "f4": "Individual analyses of covered institutions",
+        "f5": "Rankings and benchmarks by indicator",
+        "f6": "Individual license for one user",
+        "f7": "Possible corrections and errata",
+        "features": [
+          "Complete study of the 2026 edition in secured PDF format",
+          "Consolidated banking sector analysis",
+          "Public vs private banks comparison",
+          "Individual analyses of covered institutions",
+          "Rankings and benchmarks by indicator",
+          "Individual license for one user",
+          "Possible corrections and errata"
+        ]
+      },
+      "pro": {
+        "title": "Pro Pack",
+        "badge": "Most Popular",
+        "userLicensesText": "Up to 3 users · Excel data included",
+        "regularPrice": "120,000 DA HT",
+        "earlyBirdPrice": "108,000 DA HT",
+        "saving": "Save 12,000 DA HT",
+        "cta": "Pre-order Pro Pack",
+        "ctaAfterAvailable": "Order Pro Pack",
+        "ctaAfterPreorder": "Request a reservation",
+        "f1": "All features of Essential Pack",
+        "f2": "Structured Excel file containing study data",
+        "f3": "Detailed comparative tables",
+        "f4": "Historical data 2023–2025",
+        "f5": "Ratios and market shares",
+        "f6": "Access to major edition updates",
+        "f7": "Up to three users from the same entity",
+        "f8": "Assistance regarding data and deliverable reading",
+        "features": [
+          "All features of Essential Pack",
+          "Structured Excel file containing study data",
+          "Detailed comparative tables",
+          "Historical data 2023–2025",
+          "Ratios and market shares",
+          "Access to major edition updates",
+          "Up to three users from the same entity",
+          "Assistance regarding data and deliverable reading"
+        ]
+      },
+      "corporate": {
+        "title": "Corporate Executive Pack",
+        "userLicensesText": "Up to 20 users · Presentation & Benchmark included",
+        "regularPrice": "180,000 DA HT",
+        "earlyBirdPrice": "162,000 DA HT",
+        "saving": "Save 18,000 DA HT",
+        "cta": "Pre-order Corporate Executive Pack",
+        "ctaAfterAvailable": "Order Corporate Executive Pack",
+        "ctaAfterPreorder": "Request a reservation",
+        "f1": "All features of Pro Pack",
+        "f2": "Executive presentation in PowerPoint format",
+        "f3": "Exclusive debriefing session with experts",
+        "f4": "Personalized institutional benchmark",
+        "f5": "Up to twenty users from the same entity",
+        "f6": "Priority exchange with Tadjeddine & Partners",
+        "features": [
+          "All features of Pro Pack",
+          "Executive presentation in PowerPoint format",
+          "Exclusive debriefing session with experts",
+          "Personalized institutional benchmark",
+          "Up to twenty users from the same entity",
+          "Priority exchange with Tadjeddine & Partners"
+        ]
+      }
+    },
+    "preorderForm": {
+      "title": "Pre-order 2026 Edition",
+      "subtitle": "Reserve your copy at the Early Bird rate valid until August 31, 2026 at 23:59.",
+      "labelFirstName": "First name",
+      "labelLastName": "Last name",
+      "labelTitle": "Position",
+      "labelOrg": "Bank or organization",
+      "labelEmail": "Email address",
+      "labelEmailHint": "Professional email recommended",
+      "labelPhone": "Phone",
+      "labelCountry": "Country",
+      "labelPack": "Selected offer",
+      "packOptions": {
+        "essential": "Essential Pack (75,600 DA HT Early Bird / 84,000 DA HT)",
+        "pro": "Pro Pack (108,000 DA HT Early Bird / 120,000 DA HT)",
+        "corporate": "Corporate Executive Pack (162,000 DA HT Early Bird / 180,000 DA HT)"
+      },
+      "labelUserCount": "Number of users",
+      "labelProforma": "Pro forma invoice",
+      "proformaOption": "Request a pro forma invoice",
+      "labelAddons": "Interest in custom services",
+      "addonOptions": {
+        "presentation": "Executive presentation to the board",
+        "benchmark": "Personalized institutional benchmark"
+      },
+      "labelTermsConsent": "I acknowledge that the 2026 edition is currently being finalized and will be delivered upon publication.",
+      "privacyNotice": "Your personal data is processed by Tadjeddine & Partners in accordance with our privacy policy.",
+      "submit": "Submit my pre-order",
+      "submitReservation": "Pre-order at Early Bird rate",
+      "successTitle": "Request successfully registered",
+      "successBody": "Your Early Bird reservation has been recorded. A Tadjeddine & Partners advisor will contact you within 48 business hours.",
+      "fallbackNote": "Direct processing within 48 business hours."
+    },
+    "notify": {
+      "title": "Be notified of the release",
+      "body": "Enter your professional email to receive a notification as soon as the 2026 edition is published.",
+      "labelFirstName": "First name",
+      "labelLastName": "Last name",
+      "labelTitle": "Position",
+      "labelOrg": "Bank or organisation",
+      "labelEmail": "Email address",
+      "labelEmailHint": "Professional email recommended",
+      "labelPhone": "Phone (optional)",
+      "labelCountry": "Country",
+      "labelInterest": "Nature of interest",
+      "interestOptions": {
+        "banking_executive": "Banking executive",
+        "investor": "Investor",
+        "analyst": "Financial analyst",
+        "researcher": "Student / Researcher",
+        "press": "Press and media",
+        "other": "Other"
+      },
+      "submit": "Register and be notified",
+      "successTitle": "Registration confirmed",
+      "successBody": "You will be notified when the 2026 edition is published. You will also receive the executive summary as soon as it is available.",
+      "fallbackNote": "Your request will be processed manually within 48 working hours."
+    },
+    "advisory": {
+      "title": "Go beyond the report",
+      "body": "Need an analysis tailored to your institution? The experts at Tadjeddine & Partners can turn ABIX data into diagnostics, recommendations, and a roadmap.",
+      "cta": "Request a personalised diagnostic"
+    }
+  },
+
+  "edition2025": {
+    "meta": {
+      "title": "Edition 2025 — ABIX | Algeria Banking Index",
+      "description": "The 2025 edition of ABIX analyses the financial performance of 20 Algerian banks for the 2023 and 2024 fiscal years. Available in 3 packs."
+    },
+    "alert2026": "The 2026 edition is being prepared.",
+    "alert2026Cta": "Discover the 2026 edition",
+    "hero": {
+      "badge": "Available",
+      "title": "Edition 2025",
+      "subtitle": "Financial data 2023–2024 · 104 pages · 20 banks",
+      "body": "The 2025 edition of ABIX covers the published financial data of 20 banks operating in Algeria for the 2023 and 2024 fiscal years.",
+      "ctaPrimary": "Get the 2025 edition",
+      "ctaPreview": "View the free preview"
+    },
+    "pricing": {
+      "title": "Choose your pack",
+      "subtitle": "Options tailored to your analysis, monitoring, and strategic decision-making needs.",
+      "popular": "Most popular",
+      "ctaOrder": "Order",
+      "paymentNote": "Secure payment · EUR & DZD accepted · Access after order processing"
+    },
+    "faq": {
+      "title": "Frequently asked questions",
+      "subtitle": "Everything you need to know about the 2025 edition."
+    },
+    "advisory": {
+      "title": "Go beyond the report",
+      "body": "Need an analysis tailored to your institution? The experts at Tadjeddine & Partners can turn ABIX data into diagnostics, recommendations, and a roadmap.",
+      "cta": "Request a personalised diagnostic"
+    }
+  },
+
+  "footer": {
+    "slogan": "Turning ideas into concrete results through multidisciplinary expertise.",
+    "servicesLinks": { "title": "Services" },
+    "supportLinks": { "title": "Support" },
+    "contact": { "title": "Contact" }
+  },
+
+  "modal": {
+    "closeLabel": "Close",
+    "orderTitle": "Order the report",
+    "previewTitle": "Preview of the 2025 edition",
+    "previewContent": {
+      "ctaDownload": "Download the free preview",
+      "ctaOrder": "Get the full report"
+    }
+  },
+
+  "about": {
+    "meta": {
+      "title": "About — ABIX | Algeria Banking Index",
+      "description": "Discover ABIX, the Algeria Banking Index, and Tadjeddine & Partners."
+    },
+    "hero": {
+      "title": "About ABIX",
+      "subtitle": "The Algeria Banking Index is an initiative by Tadjeddine & Partners."
+    },
+    "abix": {
+      "title": "What is ABIX?",
+      "body": "ABIX — Algeria Banking Index — is an index and annual comparative study of banks operating in Algeria."
+    },
+    "publisher": {
+      "title": "Tadjeddine & Partners",
+      "body": "Consulting firm specializing in Algerian banking and financial institutions.",
+      "cta": "Discover our services"
+    },
+    "author": {
+      "name": "Mr. Rachid Sekak",
+      "role": "Banking Expert",
+      "bio": "Specialist in the Algerian banking sector."
+    }
+  }
+}

@@ -1,0 +1,830 @@
+{
+  "_meta": {
+    "lang": "fr",
+    "status": "published",
+    "note": "Version éditoriale de référence. Toute modification doit être validée avant génération des traductions EN et AR."
+  },
+
+  "site": {
+    "name": "ABIX",
+    "fullName": "Algeria Banking Index",
+    "publisher": "Tadjeddine & Partners",
+    "tagline": "Études, benchmarks et analyses stratégiques du secteur bancaire algérien",
+    "copyright": "© 2025 Tadjeddine & Partners. Tous droits réservés."
+  },
+
+  "nav": {
+    "home": "Accueil",
+    "editions": "Éditions",
+    "edition2026": "Édition 2026",
+    "edition2025": "Édition 2025",
+    "methodology": "Méthodologie",
+    "abixIndex": "Projet ABIX",
+    "services": "Services",
+    "rankings": "Classements",
+    "banks": "Banques",
+    "about": "À propos",
+    "contact": "Contact",
+    "ctaStudy": "Obtenir l'étude",
+    "ctaNotify": "Être informé de la parution 2026",
+    "langSelectLabel": "Langue"
+  },
+
+  "home": {
+    "meta": {
+      "title": "Algeria Banking Index | Études du secteur bancaire algérien",
+      "description": "Algeria Banking Index publie des études, benchmarks et analyses stratégiques consacrés aux banques opérant en Algérie. Découvrez et précommandez l’édition 2026."
+    },
+    "hero": {
+      "pretitle": "Études et analyses stratégiques du secteur bancaire",
+      "title": "Algeria Banking Index",
+      "signature": "Études, benchmarks et analyses stratégiques du secteur bancaire algérien",
+      "badge": "Précommandes ouvertes — Offre Early Bird jusqu’au 31 août 2026",
+      "subtitle": "Algeria Banking Index est la marque éditoriale créée par Tadjeddine & Partners pour publier des études indépendantes, des benchmarks et des analyses stratégiques consacrés au secteur bancaire algérien.",
+      "subtitleParagraph2": "L’édition 2026 analysera les données financières 2023 à 2025, les principales évolutions du secteur, les dynamiques concurrentielles et le positionnement des établissements.",
+      "ctaPreorder": "Précommander l’édition 2026",
+      "ctaPrimary": "Précommander l’édition 2026",
+      "ctaNotify": "Recevoir les actualités de l’édition 2026",
+      "ctaSynthesis": "Recevoir la synthèse exécutive",
+      "ctaPresentation": "Demander une présentation",
+      "ctaBenchmark": "Obtenir un benchmark personnalisé",
+      "ctaDiscover2025": "Découvrir l'édition 2025"
+    },
+    "covers": {
+      "badge2026": "Nouvelle édition",
+      "badge2025": "Édition précédente",
+      "cover2026Title": "Édition 2026",
+      "cover2026Subtitle": "Étude comparative 2024–2025",
+      "cover2026Trends": "Avec analyse des tendances 2023–2025",
+      "cover2026Status": "Publication prochaine",
+      "cover2025Title": "Édition 2025",
+      "cover2025Subtitle": "Données financières 2023–2024",
+      "cover2025Status": "Édition précédente disponible"
+    },
+    "earlyBird": {
+      "badge": "Offre Early Bird — Jusqu'au 31 août 2026",
+      "title": "Précommandez l’édition 2026 à tarif préférentiel",
+      "subtitle": "Réservez dès maintenant la nouvelle édition de l’étude ABIX et bénéficiez du tarif de lancement jusqu’au 31 août 2026. L’étude complète sera livrée dès sa publication.",
+      "reassurance": [
+        "Tarif préférentiel réservé aux précommandes",
+        "Livraison de l’étude complète dès publication",
+        "Accès aux livrables correspondant à l’offre commandée"
+      ],
+      "ctaPrimary": "Précommander maintenant",
+      "ctaSecondary": "Voir le contenu prévu de l’édition 2026",
+      "disclaimer": "L’édition 2026 est actuellement en cours de consolidation, de validation et de finalisation éditoriale.",
+      "priceDefaultLabel": "Tarif préférentiel"
+    },
+    "stats": {
+      "label2025": "Édition 2025 disponible",
+      "labelPeriod": "Données analysées",
+      "labelBanks": "Banques couvertes (2025)",
+      "labelPages": "Pages d'analyse (2025)",
+      "value2025": "Disponible",
+      "valuePeriod": "2023–2024",
+      "valueBanks": "20",
+      "valuePages": "104"
+    },
+    "edition2026Teaser": {
+      "title": "Édition 2026 — Données financières 2023–2025",
+      "status": "Publication prochaine — données en cours de consolidation et de validation.",
+      "description": "La prochaine édition d'ABIX couvrira les données financières de la période 2023–2025 et proposera une analyse approfondie de l'évolution du secteur bancaire algérien.",
+      "ctaNotify": "Être informé de la parution",
+      "disclaimer": "Aucune date de publication n'est encore arrêtée. Nous vous informerons dès que l'édition sera disponible."
+    },
+    "advisory": {
+      "title": "Aller au-delà de l'étude",
+      "body": "Besoin d'une analyse propre à votre établissement ? Les experts de Tadjeddine & Partners peuvent transformer les données ABIX en diagnostic, recommandations et feuille de route.",
+      "cta": "Demander un diagnostic personnalisé"
+    },
+    "edition2025Preview": {
+      "title": "Édition 2025 disponible",
+      "subtitle": "Données financières 2023–2024 · 104 pages · 20 banques",
+      "body": "L'édition 2025 d'ABIX est disponible à la commande. Elle couvre les données financières publiées de 20 banques opérant en Algérie pour les exercices 2023 et 2024.",
+      "cta": "Découvrir l'édition 2025"
+    },
+    "methodology": {
+      "title": "Une méthodologie rigoureuse et transparente",
+      "body": "L'ABIX est un indice comparatif fondé sur les données financières publiquement disponibles. Il ne constitue pas une notation réglementaire ou prudentielle.",
+      "cta": "En savoir plus sur la méthodologie"
+    }
+  },
+
+  "edition2026": {
+    "meta": {
+      "title": "Édition 2026 — Algeria Banking Index",
+      "description": "Précommandez l'étude annuelle 2026 d'Algeria Banking Index à tarif préférentiel jusqu'au 31 août 2026. Données financières 2023–2025."
+    },
+    "hero": {
+      "badge": "Précommandes ouvertes — Offre Early Bird jusqu’au 31 août 2026",
+      "title": "Étude annuelle du secteur bancaire algérien — Édition 2026",
+      "subtitle": "Analyse des données financières 2023–2025",
+      "status": "Publication prochaine — données en cours de consolidation et de validation.",
+      "description": "La nouvelle édition proposera une analyse consolidée du secteur, une comparaison entre banques publiques et privées, l’évolution des parts de marché, des benchmarks de performance et des diagnostics individuels des établissements couverts.",
+      "disclaimerNoBanks": "Le périmètre définitif de l'édition 2026 est en cours de validation.",
+      "disclaimerNoDate": "La date de publication sera communiquée dès que les données seront consolidées et validées.",
+      "ctaPreorder": "Précommander l’édition 2026",
+      "ctaNotify": "Être informé de la parution"
+    },
+    "pricing": {
+      "sectionTitle": "Tarifs et offres — Édition 2026",
+      "sectionSubtitle": "Tarifs identiques à l’édition 2025, bénéficiant d’une remise Early Bird de 10 % pour toute précommande enregistrée avant le 31 août 2026 à 23 h 59 (heure d’Algérie).",
+      "earlyBirdBadge": "-10 % Early Bird",
+      "validityMention": "Offre valable jusqu’au 31 août 2026",
+      "popularBadge": "Plus populaire",
+      "regularPriceStruckLabel": "Tarif normal",
+      "earlyBirdPriceLabel": "Tarif Early Bird",
+      "savingLabel": "Économisez",
+      "ctaBeforeDeadline": "Précommander",
+      "ctaAfterAvailable": "Commander",
+      "ctaAfterPreorder": "Demander une réservation",
+      "essential": {
+        "title": "Pack Essentiel",
+        "userLicensesText": "1 utilisateur · PDF sécurisé",
+        "regularPrice": "84 000 DA HT",
+        "earlyBirdPrice": "75 600 DA HT",
+        "saving": "Économisez 8 400 DA HT",
+        "cta": "Précommander le Pack Essentiel",
+        "ctaAfterAvailable": "Commander le Pack Essentiel",
+        "ctaAfterPreorder": "Demander une réservation",
+        "f1": "Étude complète de l’édition 2026 au format PDF sécurisé",
+        "f2": "Analyse consolidée du secteur bancaire",
+        "f3": "Comparaison banques publiques / banques privées",
+        "f4": "Analyses individuelles des établissements couverts",
+        "f5": "Classements et benchmarks par indicateur",
+        "f6": "Usage individuel pour un utilisateur",
+        "f7": "Corrections et errata éventuels",
+        "features": [
+          "Étude complète de l’édition 2026 au format PDF sécurisé",
+          "Analyse consolidée du secteur bancaire",
+          "Comparaison banques publiques / banques privées",
+          "Analyses individuelles des établissements couverts",
+          "Classements et benchmarks par indicateur",
+          "Usage individuel pour un utilisateur",
+          "Corrections et errata éventuels"
+        ]
+      },
+      "pro": {
+        "title": "Pack Pro",
+        "badge": "Plus populaire",
+        "userLicensesText": "Jusqu'à 3 utilisateurs · Données Excel incluses",
+        "regularPrice": "120 000 DA HT",
+        "earlyBirdPrice": "108 000 DA HT",
+        "saving": "Économisez 12 000 DA HT",
+        "cta": "Précommander le Pack Pro",
+        "ctaAfterAvailable": "Commander le Pack Pro",
+        "ctaAfterPreorder": "Demander une réservation",
+        "f1": "Tout le Pack Essentiel",
+        "f2": "Fichier Excel structuré contenant les données de l’étude",
+        "f3": "Tableaux comparatifs détaillés",
+        "f4": "Historique des données 2023–2025",
+        "f5": "Ratios et parts de marché",
+        "f6": "Accès aux mises à jour majeures de l’édition",
+        "f7": "Jusqu’à trois utilisateurs appartenant à la même entité",
+        "f8": "Assistance relative à la lecture des données et des livrables",
+        "features": [
+          "Tout le Pack Essentiel",
+          "Fichier Excel structuré contenant les données de l’étude",
+          "Tableaux comparatifs détaillés",
+          "Historique des données 2023–2025",
+          "Ratios et parts de marché",
+          "Accès aux mises à jour majeures de l’édition",
+          "Jusqu’à trois utilisateurs appartenant à la même entité",
+          "Assistance relative à la lecture des données et des livrables"
+        ]
+      },
+      "corporate": {
+        "title": "Pack Corporate Executive",
+        "userLicensesText": "Jusqu'à 20 utilisateurs · Présentation & Benchmark inclus",
+        "regularPrice": "180 000 DA HT",
+        "earlyBirdPrice": "162 000 DA HT",
+        "saving": "Économisez 18 000 DA HT",
+        "cta": "Précommander le Pack Corporate Executive",
+        "ctaAfterAvailable": "Commander le Pack Corporate Executive",
+        "ctaAfterPreorder": "Demander une réservation",
+        "f1": "Tout le Pack Pro",
+        "f2": "Présentation exécutive au format PowerPoint",
+        "f3": "Séance exclusive de décryptage avec les experts",
+        "f4": "Benchmark personnalisé de l’établissement",
+        "f5": "Jusqu’à vingt utilisateurs appartenant à la même entité",
+        "f6": "Échange prioritaire avec Tadjeddine & Partners",
+        "features": [
+          "Tout le Pack Pro",
+          "Présentation exécutive au format PowerPoint",
+          "Séance exclusive de décryptage avec les experts",
+          "Benchmark personnalisé de l’établissement",
+          "Jusqu’à vingt utilisateurs appartenant à la même entité",
+          "Échange prioritaire avec Tadjeddine & Partners"
+        ]
+      }
+    },
+    "preorderForm": {
+      "title": "Précommander l’édition 2026",
+      "subtitle": "Réservez votre exemplaire au tarif préférentiel Early Bird valable jusqu’au 31 août 2026 à 23 h 59.",
+      "labelFirstName": "Prénom",
+      "labelLastName": "Nom",
+      "labelTitle": "Fonction",
+      "labelOrg": "Banque ou organisme",
+      "labelEmail": "Adresse email",
+      "labelEmailHint": "Email professionnel recommandé",
+      "labelPhone": "Téléphone",
+      "labelCountry": "Pays",
+      "labelPack": "Offre sélectionnée",
+      "packOptions": {
+        "essential": "Pack Essentiel (75 600 DA HT en Early Bird / 84 000 DA HT)",
+        "pro": "Pack Pro (108 000 DA HT en Early Bird / 120 000 DA HT)",
+        "corporate": "Pack Corporate Executive (162 000 DA HT en Early Bird / 180 000 DA HT)"
+      },
+      "labelUserCount": "Nombre d’utilisateurs",
+      "labelProforma": "Facture pro forma",
+      "proformaOption": "Demander l’établissement d’une facture pro forma",
+      "labelAddons": "Intérêt pour des prestations personnalisées",
+      "addonOptions": {
+        "presentation": "Présentation exécutive devant le comité de direction",
+        "benchmark": "Benchmark personnalisé de l’établissement"
+      },
+      "labelTermsConsent": "J’ai pris connaissance du fait que l’édition 2026 est en cours de finalisation et qu’elle me sera livrée dès sa publication.",
+      "privacyNotice": "Vos données personnelles sont traitées par Tadjeddine & Partners conformément à notre politique de confidentialité.",
+      "submit": "Valider ma précommande",
+      "submitReservation": "Précommander au tarif Early Bird",
+      "successTitle": "Demande enregistrée avec succès",
+      "successBody": "Votre réservation au tarif Early Bird a bien été enregistrée. Un conseiller Tadjeddine & Partners prendra contact avec vous dans un délai de 48 heures ouvrées.",
+      "fallbackNote": "Traitement direct sous 48h ouvrées."
+    },
+    "forecast": {
+      "title": "Contenu prévisionnel de l'édition 2026",
+      "subtitle": "Une analyse exhaustive de la triennale 2023–2025",
+      "items": [
+        { "title": "Évolution triennale 2023–2025", "body": "Bilan global des dynamiques d'octroi de crédits, de collecte des dépôts et des ratios de liquidité sur 3 exercices." },
+        { "title": "Diagnostics individuel banque par banque", "body": "Fiches d'analyse détaillées couvrant l'ensemble des établissements publics et privés du périmètre retenu." },
+        { "title": "Benchmarks sectoriels & comparaisons", "body": "Positionnement relatif des établissements sur les indicateurs de rentabilité (RoE, RoA, PNB, RBE)." },
+        { "title": "Analyses prospectives & réglementaires", "body": "Décryptage des évolutions prudentielles et stratégiques du marché bancaire algérien." }
+      ]
+    },
+    "faq": {
+      "title": "Questions fréquentes — Précommande 2026",
+      "subtitle": "Tout ce que vous devez savoir sur l'offre Early Bird et les modalités de précommande.",
+      "items": [
+        {
+          "q": "Quand l’étude sera-t-elle livrée ?",
+          "a": "L’étude complète sera livrée immédiatement dès la finalisation et la validation des données financières de la période 2023–2025. Vous serez averti en avant-première."
+        },
+        {
+          "q": "Que contient la précommande ?",
+          "a": "La précommande vous garantit la réservation du rapport complet 2026 dès sa sortie au tarif préférentiel Early Bird, ainsi que l'envoi de la synthèse exécutive dès sa disponibilité."
+        },
+        {
+          "q": "Le tarif Early Bird est-il garanti ?",
+          "a": "Oui. Toute réservation ou précommande enregistrée avant le 31 août 2026 à 23h59 (heure d'Algérie) conserve le tarif préférentiel garanti."
+        },
+        {
+          "q": "Puis-je recevoir une facture pro forma ?",
+          "a": "Oui. Lors de votre réservation commerciale, Tadjeddine & Partners peut vous établir une facture pro forma ou une convention de prestation."
+        },
+        {
+          "q": "Puis-je commander pour plusieurs utilisateurs ?",
+          "a": "Oui, les options Pack Pro (jusqu'à 3 utilisateurs) et Pack Corporate Executive (jusqu'à 20 utilisateurs) permettent l'accès multi-utilisateurs."
+        },
+        {
+          "q": "Que se passe-t-il si la publication est reportée ?",
+          "a": "Vous serez immédiatement notifié par nos équipes. Votre précommande reste valide et votre tarif Early Bird demeure entièrement garanti."
+        },
+        {
+          "q": "L’édition 2025 est-elle incluse ?",
+          "a": "L’édition 2025 est disponible immédiatement comme étude indépendante. Si vous souhaitez acquérir un pack combiné 2025 + 2026, nos conseillers établiront une proposition sur-mesure."
+        },
+        {
+          "q": "Puis-je demander une présentation personnalisée ?",
+          "a": "Oui. Vous pouvez cocher l'option lors de votre précommande pour intégrer une présentation exécutive devant votre comité de direction."
+        }
+      ]
+    },
+    "notify": {
+      "title": "Être informé sans précommander",
+      "body": "Si vous préférez ne pas précommander dès maintenant, inscrivez votre adresse pour recevoir une simple alerte lors de la parution.",
+      "labelFirstName": "Prénom",
+      "labelLastName": "Nom",
+      "labelTitle": "Fonction",
+      "labelOrg": "Banque ou organisme",
+      "labelEmail": "Adresse email",
+      "labelEmailHint": "Email professionnel recommandé",
+      "labelPhone": "Téléphone (facultatif)",
+      "labelCountry": "Pays",
+      "labelInterest": "Nature de l'intérêt",
+      "interestOptions": {
+        "banking_executive": "Dirigeant bancaire",
+        "investor": "Investisseur",
+        "analyst": "Analyste financier",
+        "researcher": "Étudiant / Chercheur",
+        "press": "Presse et médias",
+        "other": "Autre"
+      },
+      "submit": "M'inscrire et être informé",
+      "successTitle": "Inscription confirmée",
+      "successBody": "Vous serez informé dès la publication de l'édition 2026.",
+      "fallbackNote": "Votre demande sera traitée manuellement sous 48h ouvrées."
+    },
+    "advisory": {
+      "title": "Aller au-delà de l'étude",
+      "body": "Besoin d'une analyse propre à votre établissement ? Les experts de Tadjeddine & Partners peuvent transformer les données en diagnostic, recommandations et feuille de route.",
+      "cta": "Demander un diagnostic personnalisé"
+    }
+  },
+
+  "edition2025": {
+    "meta": {
+      "title": "Édition 2025 — Algeria Banking Index",
+      "description": "L'édition 2025 d'Algeria Banking Index analyse les performances financières de 20 banques algériennes sur les exercices 2023 et 2024. Disponible en 3 packs."
+    },
+    "alert2026": "L’édition 2026 est désormais disponible en précommande à tarif préférentiel jusqu’au 31 août 2026.",
+    "alert2026Cta": "Précommander l’édition 2026",
+    "hero": {
+      "badge": "Disponible",
+      "title": "Édition 2025",
+      "subtitle": "Données financières 2023–2024 · 104 pages · 20 banques",
+      "body": "L'édition 2025 d'Algeria Banking Index couvre les données financières publiées de 20 banques opérant en Algérie pour les exercices 2023 et 2024.",
+      "ctaPrimary": "Obtenir l'édition 2025",
+      "ctaPreview": "Consulter l'aperçu gratuit"
+    },
+    "methodology": {
+      "tabs": {
+        "methodology": "Méthodologie des études",
+        "content": "Contenu",
+        "sample": "Échantillon"
+      },
+      "body": "Découvrir la démarche de collecte, de consolidation et d'analyse des études Algeria Banking Index.",
+      "cta": "En savoir plus sur la méthodologie"
+    },
+    "challenges": {
+      "title": "Les défis des dirigeants bancaires",
+      "subtitle": "Sans données fiables et analyses comparatives, les décisions stratégiques restent fragiles.",
+      "items": [
+        {
+          "title": "Manque de données locales",
+          "body": "Les rapports internationaux ne reflètent pas les spécificités du marché bancaire algérien.",
+          "stat": "70 %",
+          "statLabel": "des décisions stratégiques sont prises sans données comparatives locales fiables."
+        },
+        {
+          "title": "Retards de décision",
+          "body": "L'absence d'analyses sectorielles comparatives retarde les choix stratégiques.",
+          "stat": "3 à 6 mois",
+          "statLabel": "de retard moyen observé dans l'adaptation aux nouvelles dynamiques bancaires."
+        },
+        {
+          "title": "Désavantage concurrentiel",
+          "body": "Sans veille sectorielle, difficile d'anticiper la concurrence et les changements réglementaires.",
+          "stat": "−3,1 pts",
+          "statLabel": "baisse du ratio prêts/dépôts en 2024, illustrant un repli du financement de l'économie."
+        }
+      ]
+    },
+    "benefits": {
+      "title": "Pourquoi cette étude est indispensable",
+      "subtitle": "Des analyses exclusives qui éclairent la dynamique réelle du secteur bancaire algérien.",
+      "items": [
+        {
+          "title": "Données financières consolidées 2023/2024",
+          "body": "Une base de données unique issue des bilans publiés de 20 banques représentant la quasi-totalité du marché.",
+          "points": ["Ratios clés : prêts/dépôts, liquidité, rentabilité", "Analyse comparative publics vs privés", "Tendances des dépôts et crédits"]
+        },
+        {
+          "title": "Analyse concurrentielle approfondie",
+          "body": "Un benchmark sectoriel inédit pour comprendre les forces et faiblesses de chaque acteur.",
+          "points": ["Parts de marché et évolution 2023 → 2024", "Analyse individuelle des 20 banques (61 pages)", "Benchmarks de performance comparés"]
+        },
+        {
+          "title": "Perspectives et stratégies",
+          "body": "Des projections fondées sur l'évolution récente et validées par données réglementaires.",
+          "points": ["Projection du total bilan, dépôts et crédits", "Rentabilité attendue et dynamique du RoE", "Axes de différenciation stratégique"]
+        }
+      ]
+    },
+    "pricing": {
+      "title": "Choisissez votre pack",
+      "subtitle": "Des options adaptées à vos besoins d'analyse, de veille et de décision stratégique.",
+      "popular": "Plus populaire",
+      "ctaOrder": "Commander",
+      "paymentNote": "Paiement sécurisé · EUR & DZD acceptés · Accès après traitement de la commande"
+    },
+    "faq": {
+      "title": "Questions fréquentes",
+      "subtitle": "Tout ce que vous devez savoir sur l'édition 2025.",
+      "items": [
+        {
+          "q": "Quelle est la méthodologie utilisée pour cette étude ?",
+          "a": "L'étude repose sur une analyse approfondie des bilans bancaires et des données officielles publiées par les établissements et les autorités réglementaires. Elle intègre des comparatifs public/privé ainsi que des analyses prospectives. Les données ont été structurées pour fournir une vision claire et exploitable par les décideurs."
+        },
+        {
+          "q": "Quelles banques sont couvertes dans l'analyse ?",
+          "a": "L'étude couvre 20 banques opérant en Algérie, incluant les banques publiques (BEA, BNA, CPA, BADR, BDL), les principales banques privées (ABC Bank, Trust Bank Algeria, Bank Al Baraka, Gulf Bank Algeria…), ainsi que les filiales de groupes internationaux (BNP Paribas El Djazaïr, Société Générale Algérie, Natixis Algérie, AGB, HSBC Algeria, Calyon Algérie)."
+        },
+        {
+          "q": "Puis-je utiliser cette étude pour mes travaux internes ?",
+          "a": "Oui. Le Pack Essentiel est destiné à un usage individuel. Le Pack Pro élargit l'utilisation jusqu'à 3 utilisateurs au sein de la même organisation. Le Pack Corporate Executive autorise jusqu'à 20 utilisateurs et inclut un livrable PowerPoint exécutif ainsi qu'un webinar exclusif."
+        },
+        {
+          "q": "À quelle fréquence l'étude est-elle mise à jour ?",
+          "a": "L'édition 2025 intègre les données financières publiées pour les exercices 2023 et 2024. Une nouvelle édition est publiée chaque année."
+        },
+        {
+          "q": "Quelle est votre politique concernant l'accès aux fichiers ?",
+          "a": "Étant donné la nature numérique du livrable, l'accès est fourni après traitement de la commande et paiement."
+        }
+      ]
+    },
+    "advisory": {
+      "title": "Aller au-delà de l'étude",
+      "body": "Besoin d'une analyse propre à votre établissement ? Les experts de Tadjeddine & Partners peuvent transformer les données en diagnostic, recommandations et feuille de route.",
+      "cta": "Demander un diagnostic personnalisé"
+    }
+  },
+
+  "methodology": {
+    "meta": {
+      "title": "Méthodologie des études | Algeria Banking Index",
+      "description": "Découvrez la démarche de collecte, de consolidation, de contrôle et d’analyse des données utilisée dans les études du secteur bancaire algérien."
+    },
+    "hero": {
+      "title": "Méthodologie des études",
+      "subtitle": "Une démarche structurée pour collecter, consolider, comparer et interpréter les données financières publiques du secteur bancaire algérien."
+    },
+    "disclaimerBox": {
+      "title": "Ce que la méthodologie ne constitue pas",
+      "body": "Les analyses publiées ne constituent ni une notation de crédit, ni une notation prudentielle, ni une certification de solvabilité, ni une recommandation d’investissement. Elles reposent sur les informations publiques disponibles et sur une méthodologie comparative propre à l’étude."
+    },
+    "approach": {
+      "title": "Notre démarche analytique en 6 étapes",
+      "description": "Les études Algeria Banking Index reposent sur une collecte systématique et un traitement rigoureux des états financiers annuels publiés par les établissements bancaires et les autorités publiques en Algérie.",
+      "principles": [
+        { "title": "Périmètre & Collecte des données publiques", "body": "Recensement exhaustif des rapports annuels, bilans et comptes de résultats publiquement diffusés par les 20 banques publiques et privées du secteur." },
+        { "title": "Consolidation & Contrôles de cohérence", "body": "Vérification systématique de l'égalité des bilans, réconciliation des totaux et traitement homogène des données révisées ou retraitées." },
+        { "title": "Définition des indicateurs & Ratios", "body": "Normalisation des indicateurs financiers (stocks et flux) : PNB, RBE, RoE, RoA, coefficient d'exploitation, ratios de liquidité et prêts/dépôts." },
+        { "title": "Comparaisons & Benchmarks sectoriels", "body": "Analyse comparative structurée opposant banques publiques et privées, calcul des parts de marché et positionnements relatifs." },
+        { "title": "Diagnostics banque par banque", "body": "Rédaction de fiches individuelles restituant les dynamiques propres à chaque établissement sur la période étudiée." },
+        { "title": "Validation & Interprétation humaine", "body": "Analyse qualitative et prospective menée par les experts de Tadjeddine & Partners pour contextualiser les évolutions observées." }
+      ]
+    },
+    "limitations": {
+      "title": "Précisions importantes",
+      "items": [
+        "Les études sont fondées exclusivement sur les informations financières publiquement disponibles au moment de la rédaction.",
+        "Elles n'intègrent aucune donnée confidentielle ou non publiée par les établissements.",
+        "La méthodologie vise une analyse comparative de performance et ne constitue en aucun cas une évaluation prudentielle ou réglementaire."
+      ]
+    }
+  },
+
+  "services": {
+    "meta": {
+      "title": "Services de conseil — Tadjeddine & Partners",
+      "description": "Transformez les données ABIX en analyses sur-mesure pour votre établissement. Benchmark, diagnostic de performance, accompagnement stratégique."
+    },
+    "hero": {
+      "title": "Services de conseil",
+      "subtitle": "Les experts de Tadjeddine & Partners accompagnent les institutions bancaires et financières dans leurs décisions stratégiques.",
+      "badge": "Tadjeddine & Partners"
+    },
+    "advisory": {
+      "title": "Aller au-delà de l'étude",
+      "body": "Besoin d'une analyse propre à votre établissement ? Les experts de Tadjeddine & Partners peuvent transformer les données ABIX en diagnostic, recommandations et feuille de route.",
+      "cta": "Demander un diagnostic personnalisé"
+    },
+    "offerings": [
+      {
+        "id": "benchmark",
+        "title": "Benchmark personnalisé",
+        "body": "Positionnement de votre établissement par rapport à ses pairs sur les indicateurs clés : rentabilité, liquidité, efficience opérationnelle, parts de marché.",
+        "cta": "Demander un benchmark"
+      },
+      {
+        "id": "diagnostic",
+        "title": "Diagnostic de performance",
+        "body": "Analyse approfondie de la performance financière de votre établissement, identification des forces, faiblesses et leviers d'amélioration.",
+        "cta": "Demander un diagnostic"
+      },
+      {
+        "id": "comparative",
+        "title": "Analyse comparative avec les pairs",
+        "body": "Comparaison structurée avec un panel de banques similaires, sur mesure selon le profil de votre établissement.",
+        "cta": "En savoir plus"
+      },
+      {
+        "id": "presentation",
+        "title": "Présentation au comité de direction",
+        "body": "Synthèse et présentation exécutive des résultats pour votre comité de direction, adaptée à vos priorités stratégiques.",
+        "cta": "Demander une présentation"
+      },
+      {
+        "id": "strategy",
+        "title": "Conseil stratégique et accompagnement",
+        "body": "Élaboration de recommandations stratégiques et accompagnement dans la définition de la feuille de route de votre établissement.",
+        "cta": "Demander un accompagnement"
+      }
+    ],
+    "cta": {
+      "title": "Contactez nos experts",
+      "body": "Chaque mission de conseil est conçue sur mesure selon les besoins de votre établissement.",
+      "primary": "Demander un devis",
+      "secondary": "En savoir plus sur Tadjeddine & Partners"
+    }
+  },
+  "abixIndex": {
+    "meta": {
+      "title": "Projet d’indice ABIX | Algeria Banking Index",
+      "description": "Découvrez le projet ABIX, un futur indice comparatif multidimensionnel des banques opérant en Algérie, actuellement en cours de conception et de validation."
+    },
+    "hero": {
+      "badge": "Projet en cours de conception et de validation",
+      "title": "ABIX — Un indice bancaire en développement",
+      "subtitle": "Un projet d'indice comparatif multidimensionnel de la performance bancaire en Algérie",
+      "intro": "Tadjeddine & Partners travaille au développement d’ABIX, un futur indice comparatif destiné à synthétiser plusieurs dimensions de la performance des banques opérant en Algérie.",
+      "introParagraph2": "Ce projet est distinct des études sectorielles actuellement publiées sous la marque Algeria Banking Index."
+    },
+    "objectivesTitle": "Objectifs envisagés pour le futur indice",
+    "objectives": [
+      "Proposer une lecture multidimensionnelle de la performance bancaire",
+      "Faciliter les comparaisons synthétiques entre établissements",
+      "Suivre les évolutions de performance dans le temps",
+      "Compléter les analyses détaillées des études annuelles",
+      "Fournir un cadre synthétique de benchmark sectoriel"
+    ],
+    "dimensionsTitle": "Les 5 dimensions actuellement à l'étude",
+    "dimensions": [
+      { "title": "Performance financière", "body": "Rentabilité des fonds propres (RoE), rentabilité des actifs (RoA), produit net bancaire et résultat brut d'exploitation." },
+      { "title": "Efficience opérationnelle", "body": "Coefficient d'exploitation, productivité du réseau d'agences et maîtrise des charges générales." },
+      { "title": "Croissance commerciale", "body": "Dynamique d'octroi de crédits, collecte des dépôts et évolution des parts de marché." },
+      { "title": "Solidité financière", "body": "Niveau de fonds propres, couverture des risques et structure des ratios de liquidité." },
+      { "title": "Structure des actifs", "body": "Composition du bilan, répartition des créances et qualité du portefeuille d'actifs." }
+    ],
+    "warningTitle": "Important — Projet en développement",
+    "warning": "La méthodologie, les indicateurs, les pondérations et les modalités de calcul sont encore en cours de test et de validation. Aucun score ni classement ABIX définitif n’est actuellement publié.",
+    "cta": "Être informé du lancement de l’indice ABIX"
+  },
+
+  "about": {
+    "meta": {
+      "title": "À propos — ABIX | Algeria Banking Index",
+      "description": "Découvrez ABIX, l'Algeria Banking Index, et Tadjeddine & Partners, le cabinet à l'origine de cette référence du secteur bancaire algérien."
+    },
+    "hero": {
+      "title": "À propos d'ABIX",
+      "subtitle": "L'Algeria Banking Index est une initiative de Tadjeddine & Partners visant à doter les décideurs algériens d'une référence analytique indépendante sur le secteur bancaire."
+    },
+    "abix": {
+      "title": "Qu'est-ce qu'ABIX ?",
+      "body": "ABIX — Algeria Banking Index — est un indice et une étude comparative annuelle des banques opérant en Algérie. Il analyse les performances financières des établissements sur la base de leurs données publiées, afin de fournir aux dirigeants, analystes et investisseurs une référence objective et structurée.\n\nABIX ne constitue pas une notation réglementaire ou prudentielle. C'est un outil d'aide à la décision fondé sur la transparence et la rigueur méthodologique."
+    },
+    "publisher": {
+      "title": "Tadjeddine & Partners",
+      "body": "Cabinet de conseil spécialisé dans l'accompagnement des institutions bancaires et financières algériennes, Tadjeddine & Partners apporte son expertise en stratégie, performance financière, conformité réglementaire et développement institutionnel.",
+      "cta": "Découvrir nos services"
+    },
+    "author": {
+      "name": "M. Rachid Sekak",
+      "role": "Expert bancaire",
+      "bio": "Spécialiste du secteur bancaire algérien, M. Rachid Sekak apporte son expertise et sa connaissance du marché à l'édition annuelle de l'ABIX. Son analyse est fondée sur une lecture approfondie des données financières publiées et une connaissance de terrain du secteur."
+    }
+  },
+
+  "contact": {
+    "meta": {
+      "title": "Contact — ABIX | Algeria Banking Index",
+      "description": "Contactez l'équipe ABIX et Tadjeddine & Partners pour toute demande : commande de l'étude, devis conseil, benchmark, partenariat, presse."
+    },
+    "hero": {
+      "title": "Nous contacter",
+      "subtitle": "Choisissez l'objet de votre demande pour être orienté vers le bon interlocuteur."
+    },
+    "forms": {
+      "order": { "label": "Commander l'étude 2025", "description": "Accéder aux formulaires de commande des packs Essentiel, Pro et Corporate Executive." },
+      "quote": { "label": "Demande de devis conseil", "description": "Obtenir un devis pour une mission de benchmark, diagnostic ou accompagnement stratégique." },
+      "benchmark": { "label": "Benchmark personnalisé", "description": "Demander un benchmark de votre établissement par rapport à ses pairs." },
+      "partnership": { "label": "Partenariat ou sponsoring", "description": "Explorer une collaboration ou un sponsoring avec ABIX ou Tadjeddine & Partners." },
+      "press": { "label": "Presse et institutions", "description": "Demande d'information à destination des journalistes, chercheurs ou institutions." }
+    },
+    "info": {
+      "address": "Cité Naii Rue G N°1, Blida, Algérie",
+      "email": "info@tadjeddine-partners.com",
+      "phone": "+213 (0) 560 403 405 / 0560 349 059"
+    }
+  },
+
+  "rankings": {
+    "meta": {
+      "title": "Classements bancaires — ABIX | Algeria Banking Index",
+      "description": "Découvrez les classements ABIX du secteur bancaire algérien. Les classements complets sont disponibles dans le rapport."
+    },
+    "hero": {
+      "title": "Classements ABIX",
+      "subtitle": "Un aperçu des performances comparées du secteur bancaire algérien."
+    },
+    "status2026": "Classements 2026 en cours de préparation — données en cours de consolidation et de validation.",
+    "teaser": {
+      "title": "Classements 2025 — Aperçu public",
+      "note": "Les classements complets, avec l'intégralité des établissements et des indicateurs, sont disponibles dans l'édition 2025 du rapport ABIX.",
+      "lockMessage": "Classement complet disponible dans l'étude complète",
+      "ctaStudy": "Obtenir le rapport complet"
+    }
+  },
+
+  "banks": {
+    "meta": {
+      "title": "Les banques couvertes — ABIX | Algeria Banking Index",
+      "description": "Découvrez les banques couvertes par l'étude ABIX. Analyse des performances du secteur bancaire algérien."
+    },
+    "hero": {
+      "title": "Les banques couvertes par l'étude",
+      "subtitle": "L'étude ABIX analyse les banques opérant en Algérie sur la base de leurs données financières publiées."
+    },
+    "scopeNote": "Le périmètre définitif de l'édition 2026 est en cours de validation. Le nombre définitif de banques couvertes sera communiqué après cette validation.",
+    "scope2025": "L'édition 2025 couvre 20 banques opérant en Algérie.",
+    "lockMessage": "Analyse détaillée disponible dans l'étude complète",
+    "ctaStudy": "Obtenir le rapport complet",
+    "banks": [
+      { "id": "bea", "name": "BEA", "fullName": "Banque Extérieure d'Algérie", "type": "public" },
+      { "id": "bna", "name": "BNA", "fullName": "Banque Nationale d'Algérie", "type": "public" },
+      { "id": "cpa", "name": "CPA", "fullName": "Crédit Populaire d'Algérie", "type": "public" },
+      { "id": "badr", "name": "BADR", "fullName": "Banque de l'Agriculture et du Développement Rural", "type": "public" },
+      { "id": "bdl", "name": "BDL", "fullName": "Banque de Développement Local", "type": "public" },
+      { "id": "cnep", "name": "CNEP-Banque", "fullName": "Caisse Nationale d'Épargne et de Prévoyance", "type": "public" },
+      { "id": "al_baraka", "name": "Al Baraka Bank", "fullName": "Banque Al Baraka d'Algérie", "type": "private" },
+      { "id": "bnpp", "name": "BNP Paribas El Djazaïr", "fullName": "BNP Paribas El Djazaïr", "type": "private" },
+      { "id": "abc", "name": "ABC Bank Algeria", "fullName": "Arab Banking Corporation Algeria", "type": "private" },
+      { "id": "sgalger", "name": "SGA", "fullName": "Société Générale Algérie", "type": "private" },
+      { "id": "citibank", "name": "Citibank Algeria", "fullName": "Citibank Algeria", "type": "private" },
+      { "id": "natixis", "name": "Natixis Algérie", "fullName": "Natixis Algérie", "type": "private" },
+      { "id": "agb", "name": "AGB", "fullName": "Algeria Gulf Bank", "type": "private" },
+      { "id": "hsbc", "name": "HSBC Algeria", "fullName": "HSBC Algeria", "type": "private" },
+      { "id": "calyon", "name": "Calyon Algérie", "fullName": "Crédit Agricole Corporate and Investment Bank Algérie", "type": "private" },
+      { "id": "trust", "name": "Trust Bank Algeria", "fullName": "Trust Bank Algeria", "type": "private" },
+      { "id": "gulf_bank", "name": "Gulf Bank Algeria", "fullName": "Gulf Bank Algeria", "type": "private" },
+      { "id": "fransabank", "name": "Fransabank El Djazaïr", "fullName": "Fransabank El Djazaïr", "type": "private" },
+      { "id": "societe_gen_consociation", "name": "El Djazaïr Dawli", "fullName": "El Djazaïr Dawli (ex-Housing Bank)", "type": "private" },
+      { "id": "arab_bank", "name": "Arab Bank PLC Algeria", "fullName": "Arab Bank PLC Algeria", "type": "private" }
+    ]
+  },
+
+  "footer": {
+    "slogan": "Transformer les idées en résultats concrets grâce à une expertise pluridisciplinaire.",
+    "servicesLinks": {
+      "title": "Services",
+      "items": [
+        { "label": "Études Sectorielles", "url": "https://tadjeddine-partners.com/services/" },
+        { "label": "Conseil Stratégique", "url": "https://tadjeddine-partners.com/services/" },
+        { "label": "Conformité à la loi 18-07", "url": "https://tadjeddine-partners.com/services/" },
+        { "label": "Formation", "url": "https://tadjeddine-partners.com/services/" }
+      ]
+    },
+    "supportLinks": {
+      "title": "Support",
+      "items": [
+        { "label": "Contact", "url": "https://tadjeddine-partners.com/contact/" },
+        { "label": "Mentions légales", "url": "https://tadjeddine-partners.com/mentions-legales/" },
+        { "label": "Politique de confidentialité", "url": "https://tadjeddine-partners.com/politique-confidentialite/" }
+      ]
+    },
+    "contact": {
+      "title": "Contact",
+      "address": "Cité Naii Rue G N°1, Blida, Algérie",
+      "email": "info@tadjeddine-partners.com",
+      "phone": "+213 (0) 560 403 405 / 0560 349 059"
+    }
+  },
+
+  "modal": {
+    "closeLabel": "Fermer",
+    "orderTitle": "Commander l'étude",
+    "previewTitle": "Aperçu de l'édition 2025",
+    "previewContent": {
+      "items": [
+        "Table des matières complète",
+        "Échantillon d'analyses",
+        "Exemples de graphiques et données",
+        "Méthodologie générale"
+      ],
+      "ctaDownload": "Télécharger l'aperçu gratuit",
+      "ctaOrder": "Obtenir l'étude complète"
+    }
+  },
+
+  "legal": {
+    "meta": {
+      "title": "Mentions légales — ABIX | Algeria Banking Index",
+      "description": "Mentions légales, éditeur du site, hébergeur, propriété intellectuelle et conditions d'utilisation d'ABIX — Tadjeddine & Partners."
+    },
+    "hero": {
+      "title": "Mentions légales",
+      "subtitle": "Informations légales réglementaires de la plateforme ABIX et d'EURL Tadjeddine & Partners."
+    },
+    "publisher": {
+      "title": "Éditeur du site",
+      "name": "EURL Tadjeddine & Partners (au capital de 20.000.000 DA)",
+      "labelAddress": "Adresse",
+      "address": "Rue G N° 1, Cité Naimi Centre Zabana, Blida – Algérie",
+      "labelLegalReg": "Registres & Numéros fiscaux",
+      "legalReg": "RC : 10B0981001 — NIF : 001016098100195 — AI : 09010399908",
+      "labelEmail": "Email",
+      "email": "info@tadjeddine-partners.com",
+      "labelPhone": "Téléphone",
+      "phone": "+213 (0) 560 403 405 / +213 (0) 560 349 059",
+      "labelManager": "Gérant",
+      "manager": "TADJEDDINE BACHIR"
+    },
+    "hosting": {
+      "title": "Hébergement",
+      "name": "Djezzy Cloud",
+      "address": "Route de wilaya, Lot n°37/4, Dar El Beida, Alger, Algérie",
+      "labelEmail": "Email",
+      "email": "contact@djezzy.dz"
+    },
+    "ip": {
+      "title": "Propriété intellectuelle",
+      "body": "L'ensemble des contenus présents sur le site (textes, images, vidéos, logos, structure, etc.) sont la propriété exclusive d'EURL Tadjeddine & Partners, sauf mention contraire. Toute reproduction, distribution ou réutilisation, totale ou partielle, est strictement interdite sans autorisation écrite préalable."
+    },
+    "privacy": {
+      "title": "Protection des données personnelles",
+      "body": "Pour en savoir plus sur la collecte, l'utilisation et le traitement de vos données à caractère personnel, veuillez consulter notre Politique de confidentialité."
+    },
+    "cgu": {
+      "title": "Conditions d'utilisation",
+      "body": "L'utilisation du site implique l'acceptation pleine et entière des conditions générales d'utilisation (CGU). L’éditeur se réserve le droit de modifier ces conditions à tout moment."
+    },
+    "links": {
+      "title": "Liens hypertextes",
+      "body": "Des liens vers d'autres sites web peuvent être proposés. Tadjeddine & Partners décline toute responsabilité quant aux contenus externes accessibles depuis ces liens."
+    },
+    "law": {
+      "title": "Droit applicable",
+      "body": "Les présentes mentions légales sont régies par le droit algérien. En cas de litige, les tribunaux du ressort de Blida sont seuls compétents."
+    },
+    "contact": {
+      "title": "Contact"
+    }
+  },
+
+  "privacy": {
+    "meta": {
+      "title": "Politique de Confidentialité — ABIX | Algeria Banking Index",
+      "description": "Politique de confidentialité et de protection des données à caractère personnel conformément à la loi n° 18-07 — EURL Tadjeddine & Partners."
+    },
+    "hero": {
+      "badge": "Loi n° 18-07 du 10 juin 2018",
+      "title": "Politique de Confidentialité",
+      "subtitle": "Protection des données à caractère personnel et engagements de confidentialité d'EURL Tadjeddine & Partners."
+    },
+    "sec1": {
+      "title": "1. Identité du responsable du traitement",
+      "p1": "Conformément aux dispositions de la loi n° 18-07 du 10 juin 2018 relative à la protection des données à caractère personnel, le responsable du traitement des données collectées est TADJEDDINE AND PARTNERS, société immatriculée au Registre du Commerce sous le numéro 10B0981001, dont le siège social est situé à Cité Naimi, Rue G N° 1, Zabana, Blida, représentée par son gérant légal M. Tadjeddine BACHIR.",
+      "p2": "En sa qualité de responsable du traitement, TADJEDDINE AND PARTNERS s'engage à se conformer à l'ensemble des obligations légales et réglementaires applicables en matière de protection des données à caractère personnel."
+    },
+    "sec2": {
+      "title": "2. Données collectées",
+      "intro": "Dans le cadre de ses activités commerciales et de la gestion du portail ABIX, TADJEDDINE AND PARTNERS collecte et traite les données suivantes concernant ses utilisateurs et prospects :",
+      "item1": "Nom et prénom",
+      "item2": "Adresse e-mail professionnelle",
+      "item3": "Numéro de téléphone",
+      "item4": "Nom de l'organisme / banque / entreprise",
+      "item5": "Fonction / Poste occupé",
+      "item6": "Site web et besoins exprimés"
+    },
+    "sec3": {
+      "title": "3. Finalités du traitement",
+      "intro": "Les données collectées sont traitées exclusivement aux fins suivantes :",
+      "item1": "Répondre aux demandes de contact, de commande ou d'information formulées par les utilisateurs",
+      "item2": "Adresser des offres commerciales adaptées aux besoins exprimés (étude ABIX, conseils, benchmarks)",
+      "item3": "Assurer le suivi de la relation commerciale précontractuelle et contractuelle",
+      "item4": "Réaliser des analyses et des statistiques commerciales internes"
+    },
+    "sec4": {
+      "title": "4. Destinataires des données",
+      "p1": "Les données à caractère personnel sont traitées exclusivement par le personnel habilité de TADJEDDINE AND PARTNERS et ne font l'objet d'aucune cession ni vente à des tiers.",
+      "p2": "Toute transmission éventuelle à des sous-traitants techniques (notamment prestataires d'hébergement ou d'envoi d'e-mails) est encadrée par un contrat intégrant des obligations strictes de confidentialité et de conformité aux dispositions de la loi n° 18-07."
+    },
+    "sec5": {
+      "title": "5. Durée de conservation",
+      "body": "Les données collectées sont conservées pendant une durée maximale de trois (3) ans à compter du dernier contact ou de la dernière interaction de la part du prospect, sauf opposition ou retrait de consentement exercé conformément aux dispositions légales."
+    },
+    "sec6": {
+      "title": "6. Mesures de sécurité",
+      "body": "TADJEDDINE AND PARTNERS met en place toutes les mesures techniques et organisationnelles appropriées pour garantir la confidentialité, l'intégrité et la disponibilité des données à caractère personnel traitées."
+    },
+    "sec7": {
+      "title": "7. Droits des personnes concernées",
+      "intro": "Conformément aux articles 7 et 34 à 36 de la loi n° 18-07, toute personne concernée bénéficie des droits suivants :",
+      "right1": "Droit d'accès à ses données à caractère personnel",
+      "right2": "Droit de rectification des données inexactes ou incomplètes",
+      "right3": "Droit d'opposition au traitement pour motifs légitimes",
+      "right4": "Droit de retrait du consentement à tout moment",
+      "exerciseTitle": "Pour exercer ces droits, toute demande peut être adressée :"
+    },
+    "sec8": {
+      "title": "8. Transferts internationaux de données",
+      "body": "Aucun transfert de données à caractère personnel vers l'étranger n'est effectué sans l'obtention des autorisations préalables requises par la loi n° 18-07."
+    },
+    "sec9": {
+      "title": "9. Mise à jour de la politique",
+      "body": "TADJEDDINE AND PARTNERS se réserve le droit de modifier la présente politique de confidentialité à tout moment, notamment pour tenir compte de toute évolution législative ou réglementaire."
+    }
+  }
+}
