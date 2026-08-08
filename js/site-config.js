@@ -61,7 +61,7 @@ const SITE_CONFIG = {
       coverStatus: "provisional",    // "provisional" | "official"
       periodAnalyzed: "2023–2025",
       pageCount: null,               // Non renseigné → non affiché
-      bankCount: null,               // Périmètre en cours de validation → non affiché
+      bankCount: 21,                 // 21 banques commerciales couvertes en 2026 (avec Ziraat Bank)
       releaseDate: null,             // Non validée → non affichée
       synthesisAvailable: false,     // Synthèse exécutive non exposée
       leadFormEndpoint: null,        // null = formulaire en mode fallback/réservation
@@ -129,6 +129,11 @@ const SITE_CONFIG = {
     contactPage:      "https://tadjeddine-partners.com/contact/",
     legalPage:        "/banques2025/fr/mentions-legales/",
     privacyPage:      "/banques2025/fr/politique-confidentialite/"
+  },
+  questionnaire: {
+    enabled: true,
+    year: "2026",
+    scriptUrl: null
   }
 };
 

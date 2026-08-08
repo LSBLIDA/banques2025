@@ -65,12 +65,32 @@
           <p>{{home.hero.subtitleParagraph2}}</p>
         </div>
 
+        <!-- Repères visuels Édition 2026 -->
+        <div class="flex flex-wrap items-center gap-2 pt-1">
+          <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-white/10 border border-white/15 text-xs text-blue-100 font-medium">
+            <span class="w-1.5 h-1.5 rounded-full bg-accent"></span>
+            21 banques analysées
+          </span>
+          <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-white/10 border border-white/15 text-xs text-blue-100 font-medium">
+            <span class="w-1.5 h-1.5 rounded-full bg-accent"></span>
+            Comparatif 2024–2025
+          </span>
+          <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-white/10 border border-white/15 text-xs text-blue-100 font-medium">
+            <span class="w-1.5 h-1.5 rounded-full bg-accent"></span>
+            Tendances 2023–2025
+          </span>
+          <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-white/10 border border-white/15 text-xs text-blue-100 font-medium">
+            <span class="w-1.5 h-1.5 rounded-full bg-accent"></span>
+            Nouveaux indicateurs opérationnels
+          </span>
+        </div>
+
         <!-- CTA Principaux -->
         <div class="flex flex-col sm:flex-row gap-4 pt-2">
-          <button onclick="openPreorder('2026')" data-track="click_preorder_2026" id="btn-preorder-hero" class="btn-primary-hero">
+          <a href="{{__basePath}}/{{__lang}}/editions/2026/#tarifs" data-track="click_preorder_2026" id="btn-preorder-hero" class="btn-primary-hero flex items-center justify-center">
             <svg class="w-5 h-5 me-2 flex-shrink-0 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
             {{home.hero.ctaPreorder}}
-          </button>
+          </a>
           <a href="{{__basePath}}/{{__lang}}/editions/2025/" data-track="click_edition_2025" class="btn-secondary-hero">
             {{home.hero.ctaDiscover2025}}
           </a>
@@ -192,7 +212,7 @@
 
           <!-- Compte à rebours sobre (date réelle) -->
           <div id="countdown-container" class="bg-black/30 rounded-xl p-3 border border-white/10">
-            <p class="text-[11px] text-gray-400 uppercase tracking-wider mb-2">Fin de l'offre Early Bird dans</p>
+            <p class="text-[11px] text-gray-400 uppercase tracking-wider mb-2">Fin du tarif préférentiel dans</p>
             <div class="grid grid-cols-4 gap-2 text-center" id="earlybird-countdown">
               <div class="bg-white/10 rounded py-1.5"><span id="cd-days" class="block text-lg font-bold text-amber-300">--</span><span class="text-[9px] text-gray-400">Jours</span></div>
               <div class="bg-white/10 rounded py-1.5"><span id="cd-hours" class="block text-lg font-bold text-amber-300">--</span><span class="text-[9px] text-gray-400">Heures</span></div>
@@ -201,11 +221,7 @@
             </div>
           </div>
 
-          <div class="space-y-3 pt-2">
-            <button onclick="openPreorder('pro')" data-track="click_preorder_2026" class="btn-cta w-full flex items-center justify-center gap-2">
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
-              {{home.earlyBird.ctaPrimary}}
-            </button>
+          <div class="pt-2">
             <a href="{{__basePath}}/{{__lang}}/editions/2026/#tarifs" class="btn-outline w-full text-center block text-sm">
               Consulter le détail des 3 offres (Essentiel, Pro, Corporate)
             </a>
@@ -342,6 +358,30 @@
   </div>
 </section>
 
+<!-- ════════════════════════════════════════════════ BAROMÈTRE E-BANKING 2026 CTA -->
+<section class="py-12 bg-slate-900 text-white border-y border-slate-800">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="bg-gradient-to-r from-primary-900 via-primary-800 to-slate-900 rounded-3xl p-8 sm:p-10 border border-white/10 shadow-2xl flex flex-col md:flex-row items-center justify-between gap-8">
+      <div class="space-y-3 text-center md:text-left max-w-2xl">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/20 text-cyan-300 text-xs font-semibold uppercase tracking-wider border border-cyan-400/30">
+          <span>{{questionnaire.hero.brand}}</span>
+        </div>
+        <h3 class="text-2xl sm:text-3xl font-bold font-playfair text-white">
+          {{questionnaire.cta.bannerTitle}}
+        </h3>
+        <p class="text-sm sm:text-base text-gray-300">
+          {{questionnaire.cta.bannerText}}
+        </p>
+      </div>
+      <div class="flex-shrink-0">
+        <a href="{{__basePath}}/{{__lang}}/questionnaire/" class="btn-cta text-base py-3.5 px-8 shadow-lg shadow-cyan-500/20 hover:scale-105 transition-all">
+          {{questionnaire.cta.button}} →
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ══════════════════════════════════════════════════════ SECTION ÉDITION 2025 -->
 <section id="edition-2025" class="py-20 bg-gray-50">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -465,125 +505,38 @@
 </div>
 
 <!-- MODAL PRÉCOMMANDE 2026 -->
-<div id="preorderModal" class="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4" role="dialog" aria-modal="true" aria-labelledby="preorderModalTitle">
-  <div class="bg-white rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-2xl border border-gray-100">
-    <div class="p-6 border-b border-gray-100 flex justify-between items-center bg-gray-50 rounded-t-2xl">
+<div id="preorderModal" class="fixed inset-0 bg-slate-950/80 backdrop-blur-sm z-50 hidden flex items-center justify-center p-2 sm:p-4" role="dialog" aria-modal="true" aria-labelledby="preorderModalTitle">
+  <div class="bg-slate-900 text-white rounded-3xl max-w-2xl w-full max-h-[95vh] flex flex-col border border-amber-400/30 shadow-2xl relative overflow-hidden">
+    <div class="p-4 sm:p-5 border-b border-gray-800 flex items-center justify-between bg-slate-900/90 flex-shrink-0">
       <div>
-        <div class="inline-block bg-amber-100 text-amber-800 text-xs font-bold px-2.5 py-0.5 rounded-full mb-1">Offre Early Bird</div>
-        <h3 id="preorderModalTitle" class="text-xl font-bold text-gray-900">{{edition2026.preorderForm.title}}</h3>
-        <p class="text-xs text-gray-500">{{edition2026.preorderForm.subtitle}}</p>
+        <span class="inline-block bg-amber-400/20 text-amber-300 text-[11px] font-bold px-3 py-0.5 rounded-full border border-amber-400/30 mb-1">Souscription anticipée — Édition 2026</span>
+        <h3 id="preorderModalTitle" class="text-lg font-bold text-white font-playfair">Formulaire de souscription</h3>
       </div>
-      <button onclick="closePreorder()" class="text-gray-400 hover:text-gray-600 transition-colors p-1 rounded-lg hover:bg-gray-200" aria-label="Fermer">
+      <button onclick="closePreorder()" class="text-gray-400 hover:text-white transition-colors p-2 rounded-xl hover:bg-slate-800" aria-label="Fermer">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <div class="flex-1 w-full bg-white overflow-y-auto min-h-[600px]">
+      <iframe id="preorderIframe" width="600" height="850" src="" frameborder="0" sandbox="allow-top-navigation allow-forms allow-scripts allow-popups" allowfullscreen class="w-full h-full min-h-[850px] border-0"></iframe>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL POLITIQUE DE CONFIDENTIALITÉ -->
+<div id="privacyModal" class="fixed inset-0 bg-slate-950/70 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden" role="dialog" aria-modal="true">
+  <div class="bg-white text-gray-900 rounded-2xl p-6 sm:p-8 max-w-3xl w-full border border-gray-200 shadow-2xl relative max-h-[90vh] flex flex-col space-y-4">
+    <div class="flex items-center justify-between border-b border-gray-100 pb-4">
+      <h3 class="text-xl font-bold font-playfair text-gray-900">{{edition2026.preorderForm.privacyModalTitle}}</h3>
+      <button onclick="closePrivacyModal()" class="text-gray-400 hover:text-gray-600 transition-colors p-1 rounded-lg hover:bg-gray-100" aria-label="Fermer">
         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
       </button>
     </div>
-
-    <div class="p-6">
-      <form id="preorder-form-2026" class="space-y-4" novalidate>
-        <div class="grid grid-cols-2 gap-4">
-          <div>
-            <label for="po_first_name" class="form-label">{{edition2026.preorderForm.labelFirstName}} <span class="text-red-500">*</span></label>
-            <input type="text" id="po_first_name" name="first_name" autocomplete="given-name" required class="form-input w-full" />
-          </div>
-          <div>
-            <label for="po_last_name" class="form-label">{{edition2026.preorderForm.labelLastName}} <span class="text-red-500">*</span></label>
-            <input type="text" id="po_last_name" name="last_name" autocomplete="family-name" required class="form-input w-full" />
-          </div>
-        </div>
-
-        <div class="grid grid-cols-2 gap-4">
-          <div>
-            <label for="po_job_title" class="form-label">{{edition2026.preorderForm.labelTitle}} <span class="text-red-500">*</span></label>
-            <input type="text" id="po_job_title" name="job_title" autocomplete="organization-title" required class="form-input w-full" />
-          </div>
-          <div>
-            <label for="po_organization" class="form-label">{{edition2026.preorderForm.labelOrg}} <span class="text-red-500">*</span></label>
-            <input type="text" id="po_organization" name="organization" autocomplete="organization" required class="form-input w-full" />
-          </div>
-        </div>
-
-        <div class="grid grid-cols-2 gap-4">
-          <div>
-            <label for="po_email" class="form-label">{{edition2026.preorderForm.labelEmail}} <span class="text-red-500">*</span></label>
-            <input type="email" id="po_email" name="email" autocomplete="email" required class="form-input w-full" />
-            <p class="text-[11px] text-gray-400 mt-1">{{edition2026.preorderForm.labelEmailHint}}</p>
-          </div>
-          <div>
-            <label for="po_phone" class="form-label">{{edition2026.preorderForm.labelPhone}} <span class="text-red-500">*</span></label>
-            <input type="tel" id="po_phone" name="phone" autocomplete="tel" required class="form-input w-full" />
-          </div>
-        </div>
-
-        <div class="grid grid-cols-2 gap-4">
-          <div>
-            <label for="po_country" class="form-label">{{edition2026.preorderForm.labelCountry}} <span class="text-red-500">*</span></label>
-            <select id="po_country" name="country" required class="form-input w-full">
-              <option value="">—</option>
-              <option value="DZ" selected>Algérie</option>
-              <option value="FR">France</option>
-              <option value="TN">Tunisie</option>
-              <option value="MA">Maroc</option>
-              <option value="OTHER">Autre</option>
-            </select>
-          </div>
-          <div>
-            <label for="po_pack" class="form-label">{{edition2026.preorderForm.labelPack}} <span class="text-red-500">*</span></label>
-            <select id="po_pack" name="pack" required class="form-input w-full">
-              <option value="essential">{{edition2026.preorderForm.packOptions.essential}}</option>
-              <option value="pro" selected>{{edition2026.preorderForm.packOptions.pro}}</option>
-              <option value="corporate">{{edition2026.preorderForm.packOptions.corporate}}</option>
-            </select>
-          </div>
-        </div>
-
-        <div>
-          <label for="po_users" class="form-label">{{edition2026.preorderForm.labelUserCount}}</label>
-          <input type="number" id="po_users" name="user_count" min="1" max="50" value="1" class="form-input w-full" />
-        </div>
-
-        <div class="space-y-2 pt-2">
-          <label class="form-label">{{edition2026.preorderForm.labelAddons}}</label>
-          <div class="space-y-2">
-            <label class="flex items-center gap-2 text-xs text-gray-700 cursor-pointer">
-              <input type="checkbox" name="addons" value="presentation" class="rounded text-accent focus:ring-accent" />
-              <span>{{edition2026.preorderForm.addonOptions.presentation}}</span>
-            </label>
-            <label class="flex items-center gap-2 text-xs text-gray-700 cursor-pointer">
-              <input type="checkbox" name="addons" value="benchmark" class="rounded text-accent focus:ring-accent" />
-              <span>{{edition2026.preorderForm.addonOptions.benchmark}}</span>
-            </label>
-          </div>
-        </div>
-
-        <!-- Case à cocher obligatoire relative au statut de finalisation -->
-        <div class="bg-amber-50 p-3 rounded-lg border border-amber-200 mt-4">
-          <label class="flex items-start gap-2.5 text-xs text-amber-900 cursor-pointer">
-            <input type="checkbox" id="po_terms" name="terms_consent" required class="mt-0.5 rounded text-amber-600 focus:ring-amber-500 flex-shrink-0" />
-            <span>{{edition2026.preorderForm.labelTermsConsent}} <span class="text-red-500">*</span></span>
-          </label>
-        </div>
-
-        <p class="text-[11px] text-gray-400">{{edition2026.preorderForm.privacyNotice}}</p>
-
-        <div id="preorder-form-error" class="hidden bg-red-50 border border-red-200 text-red-700 rounded-lg p-3 text-xs"></div>
-
-        <button type="submit" id="po-submit-btn" data-track="submit_preorder_form" class="btn-cta w-full flex items-center justify-center gap-2">
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-          {{edition2026.preorderForm.submitReservation}}
-        </button>
-
-        <p class="text-[11px] text-gray-400 text-center">{{edition2026.preorderForm.fallbackNote}}</p>
-      </form>
-
-      <!-- Confirmation réservée (déclenchée uniquement après soumission réelle) -->
-      <div id="preorder-form-success" class="hidden text-center space-y-4 py-8">
-        <div class="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mx-auto">
-          <svg class="w-8 h-8 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-        </div>
-        <h4 class="text-xl font-bold text-gray-900">{{edition2026.preorderForm.successTitle}}</h4>
-        <p class="text-sm text-gray-600 max-w-md mx-auto">{{edition2026.preorderForm.successBody}}</p>
-        <button onclick="closePreorder()" class="btn-outline text-sm">Fermer</button>
-      </div>
+    <div class="flex-1 overflow-y-auto min-h-[350px]">
+      <iframe src="https://tadjeddine-partners.com/politique-confidentialite/" class="w-full h-[450px] border border-gray-200 rounded-xl"></iframe>
+    </div>
+    <div class="pt-4 border-t border-gray-100 flex items-center justify-between gap-3">
+      <a href="https://tadjeddine-partners.com/politique-confidentialite/" target="_blank" rel="noopener" class="text-xs font-semibold text-primary hover:underline flex items-center gap-1">Ouvrir dans un nouvel onglet ↗</a>
+      <button onclick="closePrivacyModal()" class="btn-cta-sm py-2 px-5">Fermer</button>
     </div>
   </div>
 </div>

@@ -18,6 +18,8 @@
     "editions": "Editions",
     "edition2026": "Edition 2026",
     "edition2025": "Edition 2025",
+    "study": "The Study",
+    "barometer2026": "2026 Banking Services Barometer",
     "methodology": "Methodology",
     "abixIndex": "ABIX Project",
     "services": "Services",
@@ -25,6 +27,7 @@
     "banks": "Banks",
     "about": "About",
     "contact": "Contact",
+    "questionnaire": "2026 Barometer",
     "ctaStudy": "Get the report",
     "ctaNotify": "Be notified of the 2026 release",
     "langSelectLabel": "Language"
@@ -116,100 +119,96 @@
       "disclaimerNoDate": "The publication date will be communicated once the data has been consolidated and validated."
     },
     "pricing": {
-      "sectionTitle": "Pricing and Offers — 2026 Edition",
-      "sectionSubtitle": "Same public rates as the 2025 edition with a 10% Early Bird discount for pre-orders registered before August 31, 2026, 23:59 (Algeria time).",
-      "earlyBirdBadge": "-10% Early Bird",
-      "validityMention": "Offer valid until August 31, 2026",
+      "sectionTitle": "Early Subscription Offer — 2026 Edition",
+      "sectionSubtitle": "Subscribe before August 31, 2026 and enjoy a 10% discount on the public rate for the 2026 edition. Delivered upon publication.",
+      "earlyBirdBadge": "-10% until Aug 31",
+      "validityMention": "Early subscription rate valid until August 31, 2026",
       "popularBadge": "Most Popular",
-      "regularPriceStruckLabel": "Regular price",
-      "earlyBirdPriceLabel": "Early Bird price",
+      "regularPriceStruckLabel": "Public rate",
+      "earlyBirdPriceLabel": "Early subscription rate",
       "savingLabel": "Save",
-      "ctaBeforeDeadline": "Pre-order",
+      "ctaBeforeDeadline": "Subscribe",
       "ctaAfterAvailable": "Order",
       "ctaAfterPreorder": "Request a reservation",
+      "webinarNotice": "2026 Edition Presentation Webinar — open upon registration",
       "essential": {
         "title": "Essential Pack",
+        "tagline": "Understand the market",
         "userLicensesText": "1 user · Secured PDF",
         "regularPrice": "84,000 DA HT",
         "earlyBirdPrice": "75,600 DA HT",
         "saving": "Save 8,400 DA HT",
-        "cta": "Pre-order Essential Pack",
+        "cta": "Subscribe to Essential Pack",
         "ctaAfterAvailable": "Order Essential Pack",
         "ctaAfterPreorder": "Request a reservation",
         "f1": "Complete study of the 2026 edition in secured PDF format",
         "f2": "Consolidated banking sector analysis",
         "f3": "Public vs private banks comparison",
-        "f4": "Individual analyses of covered institutions",
+        "f4": "Individual analysis of covered banks",
         "f5": "Rankings and benchmarks by indicator",
-        "f6": "Individual license for one user",
-        "f7": "Possible corrections and errata",
+        "f6": "Individual license for 1 user",
         "features": [
           "Complete study of the 2026 edition in secured PDF format",
           "Consolidated banking sector analysis",
           "Public vs private banks comparison",
-          "Individual analyses of covered institutions",
+          "Individual analysis of covered banks",
           "Rankings and benchmarks by indicator",
-          "Individual license for one user",
-          "Possible corrections and errata"
+          "Individual license for 1 user"
         ]
       },
       "pro": {
         "title": "Pro Pack",
+        "tagline": "Exploit the data",
         "badge": "Most Popular",
         "userLicensesText": "Up to 3 users · Excel data included",
         "regularPrice": "120,000 DA HT",
         "earlyBirdPrice": "108,000 DA HT",
         "saving": "Save 12,000 DA HT",
-        "cta": "Pre-order Pro Pack",
+        "cta": "Subscribe to Pro Pack",
         "ctaAfterAvailable": "Order Pro Pack",
         "ctaAfterPreorder": "Request a reservation",
         "f1": "All features of Essential Pack",
         "f2": "Structured Excel file containing study data",
         "f3": "Detailed comparative tables",
-        "f4": "Historical data 2023–2025",
-        "f5": "Ratios and market shares",
-        "f6": "Access to major edition updates",
-        "f7": "Up to three users from the same entity",
-        "f8": "Assistance regarding data and deliverable reading",
+        "f4": "Ratios and market shares",
+        "f5": "Historical data 2023–2025",
+        "f6": "Up to 3 users from the same entity",
         "features": [
           "All features of Essential Pack",
           "Structured Excel file containing study data",
           "Detailed comparative tables",
-          "Historical data 2023–2025",
           "Ratios and market shares",
-          "Access to major edition updates",
-          "Up to three users from the same entity",
-          "Assistance regarding data and deliverable reading"
+          "Historical data 2023–2025",
+          "Up to 3 users from the same entity"
         ]
       },
       "corporate": {
         "title": "Corporate Executive Pack",
-        "userLicensesText": "Up to 20 users · Presentation & Benchmark included",
+        "tagline": "Explore and share the data",
+        "userLicensesText": "Up to 20 users · ABIX Data Explorer & PPT included",
         "regularPrice": "180,000 DA HT",
         "earlyBirdPrice": "162,000 DA HT",
         "saving": "Save 18,000 DA HT",
-        "cta": "Pre-order Corporate Executive Pack",
+        "cta": "Subscribe to Corporate Executive Pack",
         "ctaAfterAvailable": "Order Corporate Executive Pack",
         "ctaAfterPreorder": "Request a reservation",
         "f1": "All features of Pro Pack",
-        "f2": "Executive presentation in PowerPoint format",
-        "f3": "Exclusive debriefing session with experts",
-        "f4": "Personalized institutional benchmark",
-        "f5": "Up to twenty users from the same entity",
-        "f6": "Priority exchange with Tadjeddine & Partners",
+        "f2": "Access to ABIX Data Explorer — interactive application for visualizing and comparing study data",
+        "f3": "Executive presentation of the study in PowerPoint format",
+        "f4": "Up to 20 users from the same entity",
         "features": [
           "All features of Pro Pack",
-          "Executive presentation in PowerPoint format",
-          "Exclusive debriefing session with experts",
-          "Personalized institutional benchmark",
-          "Up to twenty users from the same entity",
-          "Priority exchange with Tadjeddine & Partners"
+          "Access to ABIX Data Explorer — interactive application for visualizing and comparing study data",
+          "Executive presentation of the study in PowerPoint format",
+          "Up to 20 users from the same entity"
         ]
       }
     },
     "preorderForm": {
-      "title": "Pre-order 2026 Edition",
-      "subtitle": "Reserve your copy at the Early Bird rate valid until August 31, 2026 at 23:59.",
+      "title": "Early Subscription Form",
+      "subtitle": "Benefit from a 10% discount for all subscriptions registered before August 31, 2026.",
+      "labelCompany": "Company / Organization",
+      "labelFullName": "Full Name",
       "labelFirstName": "First name",
       "labelLastName": "Last name",
       "labelTitle": "Position",
@@ -220,9 +219,9 @@
       "labelCountry": "Country",
       "labelPack": "Selected offer",
       "packOptions": {
-        "essential": "Essential Pack (75,600 DA HT Early Bird / 84,000 DA HT)",
-        "pro": "Pro Pack (108,000 DA HT Early Bird / 120,000 DA HT)",
-        "corporate": "Corporate Executive Pack (162,000 DA HT Early Bird / 180,000 DA HT)"
+        "essential": "Essential Pack (75,600 DA HT early subscription / 84,000 DA HT)",
+        "pro": "Pro Pack (108,000 DA HT early subscription / 120,000 DA HT)",
+        "corporate": "Corporate Executive Pack (162,000 DA HT early subscription / 180,000 DA HT)"
       },
       "labelUserCount": "Number of users",
       "labelProforma": "Pro forma invoice",
@@ -233,10 +232,16 @@
         "benchmark": "Personalized institutional benchmark"
       },
       "labelTermsConsent": "I acknowledge that the 2026 edition is currently being finalized and will be delivered upon publication.",
+      "labelTermsAccept": "I accept the Terms & Conditions",
+      "labelPrivacyConsent": "I have read the privacy policy and consent to the processing of my data in accordance with this policy.",
+      "privacyModalTitle": "Privacy Policy — Tadjeddine & Partners",
       "privacyNotice": "Your personal data is processed by Tadjeddine & Partners in accordance with our privacy policy.",
-      "submit": "Submit my pre-order",
-      "submitReservation": "Pre-order at Early Bird rate",
-      "successTitle": "Request successfully registered",
+      "submit": "Subscribe to 2026 Edition",
+      "submitReservation": "Subscribe at Preferential Rate",
+      "submitting": "Submitting…",
+      "successTitle": "Subscription successfully registered",
+      "successMessage": "Thank you. Your subscription for the 2026 edition has been recorded.",
+      "errorMessage": "An error occurred while recording your subscription. Please try again.",
       "successBody": "Your Early Bird reservation has been recorded. A Tadjeddine & Partners advisor will contact you within 48 business hours.",
       "fallbackNote": "Direct processing within 48 business hours."
     },
@@ -345,5 +350,76 @@
       "role": "Banking Expert",
       "bio": "Specialist in the Algerian banking sector."
     }
+  },
+
+  "questionnaire": {
+    "meta": {
+      "title": "Algeria Banking Services Barometer 2026 | ABIX Survey",
+      "description": "Rate your bank's mobile app, web e-banking and branch services in Algeria. Participate in the independent ABIX 2026 study."
+    },
+    "hero": {
+      "brand": "ABIX — Banking Services Barometer 2026",
+      "title": "Your Opinion on Banking Services in Algeria",
+      "subtitle": "Rate the mobile app, web service and branch services of the banks you use. Your responses will feed into the ABIX 2026 independent study."
+    },
+    "step1": {
+      "title": "Step 1: Choose your banks",
+      "hint": "Check at least one bank whose services you use."
+    },
+    "step2": {
+      "title": "Step 2: Rate the services",
+      "hint": "Select your satisfaction level for each service used."
+    },
+    "services": {
+      "mobile": "Mobile App",
+      "web": "Web e-Banking",
+      "branch": "Branch Services"
+    },
+    "ratings": {
+      "veryUnsatisfied": "Very unsatisfied",
+      "unsatisfied": "Unsatisfied",
+      "average": "Average",
+      "satisfied": "Satisfied",
+      "verySatisfied": "Very satisfied",
+      "notUsed": "I do not use this service"
+    },
+    "actions": {
+      "submit": "Submit my evaluation",
+      "submitting": "Submitting…",
+      "selectBankFirst": "Please select at least one bank above to display evaluation options."
+    },
+    "messages": {
+      "success": "Thank you! Your evaluation has been recorded.",
+      "selectAtLeastOneBank": "Please select at least one bank.",
+      "evaluateAtLeastOneService": "Please evaluate at least one service.",
+      "error": "An error occurred while submitting your evaluation.",
+      "alreadyCompletedTitle": "Thank you for participating!",
+      "alreadyCompletedText": "You have already completed the Algeria Banking Services Barometer 2026. Your responses have been recorded.",
+      "alreadySubmittedIP": "An evaluation has already been submitted from your internet connection or device."
+    },
+    "notice": {
+      "title": "Information & Privacy",
+      "text": "This survey is organized by Tadjeddine & Partners as part of the ABIX 2026 study. Your responses remain strictly confidential and are processed in anonymous, aggregated form."
+    },
+    "cta": {
+      "bannerTitle": "Participate in the 2026 Banking Services Barometer",
+      "bannerText": "Rate your bank's mobile app, web portal and branch services in under 2 minutes.",
+      "button": "Take the survey"
+    }
+  },
+
+  "banks": {
+    "meta": {
+      "title": "Banks Covered — ABIX | Algeria Banking Index",
+      "description": "Discover the banks covered by the ABIX study. Performance analysis of the Algerian banking sector."
+    },
+    "hero": {
+      "title": "Banks covered by the study",
+      "subtitle": "The ABIX study analyses banks operating in Algeria based on their published financial data."
+    },
+    "scopeNote": "The 2026 edition covers 21 commercial banks operating in Algeria, including the integration of Ziraat Bankası Algeria.",
+    "scope2025": "The 2025 edition covers 20 banks operating in Algeria.",
+    "lockMessage": "Detailed analysis available in the full study",
+    "ctaStudy": "Get the full report"
   }
 }

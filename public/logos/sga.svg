@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 100" width="300" height="100">
+    <rect width="300" height="100" fill="transparent"/>
+    <g transform="translate(15, 15)">
+      <rect x="10" y="10" width="50" height="25" fill="#E0001A"/>
+      <rect x="10" y="35" width="50" height="25" fill="#000000"/>
+      <rect x="10" y="33" width="50" height="4" fill="#FFFFFF"/>
+    </g>
+    <text x="95" y="42" font-family="Inter, Arial, sans-serif" font-weight="800" font-size="18" fill="#000000">SOCIETE GENERALE</text>
+    <text x="95" y="62" font-family="Inter, Arial, sans-serif" font-weight="600" font-size="12" fill="#E0001A">Algérie</text>
+  </svg>

@@ -211,12 +211,15 @@
       qsa(".cta-pricing-btn .cta-text").forEach(function (el) {
         var btn = el.closest("[data-pack]");
         var packKey = btn ? btn.getAttribute("data-pack") : "";
-        var packLabel = packKey === "essential" ? "le Pack Essentiel" : packKey === "pro" ? "le Pack Pro" : packKey === "corporate" ? "le Pack Corporate Executive" : "";
-        el.textContent = "Précommander " + packLabel;
+        var packLabel = packKey === "essential" ? "au Pack Essentiel" : packKey === "pro" ? "au Pack Pro" : packKey === "corporate" ? "au Pack Corporate Executive" : "";
+        el.textContent = "Souscrire " + packLabel;
       });
 
       var btnHero = qs("#btn-preorder-hero");
-      if (btnHero) btnHero.textContent = "Précommander l'édition 2026";
+      if (btnHero) {
+        var svgEl = btnHero.querySelector("svg");
+        btnHero.innerHTML = (svgEl ? svgEl.outerHTML + " " : "") + "Souscrire à l’édition 2026";
+      }
 
       updateCountdown(deadlineDate);
       if (countdownInterval) clearInterval(countdownInterval);
@@ -267,42 +270,56 @@
   };
 
   // ══════════════════════════════════════════════════════════ MODAUX DE COMMANDE & PRÉCOMMANDE
-  var ORDER_FORMS = {};
-  if (typeof SITE_CONFIG !== "undefined" && SITE_CONFIG.editions["2025"]) {
-    ORDER_FORMS = SITE_CONFIG.editions["2025"].orderForms || {};
-  }
+  var PREORDER_IFRAMES = {
+    essential: "https://fenekio.com/tandp/ps/forms/wtl/5ba23a9399dbe1484beb72b52e95593f",
+    pro: "https://fenekio.com/tandp/ps/forms/wtl/9c18a26196a5b5630df381113da3d4b2",
+    corporate: "https://fenekio.com/tandp/ps/forms/wtl/79e33d8596a4c5f745648a74fe76c5c5"
+  };
+
+  var PREORDER_TITLE_LABELS = {
+    essential: "Souscription — Pack Essentiel (Édition 2026)",
+    pro: "Souscription — Pack Pro (Édition 2026)",
+    corporate: "Souscription — Pack Corporate Executive (Édition 2026)"
+  };
 
   window.openPreorder = function (packKey) {
-    window.trackEvent("open_preorder_form", { pack: packKey || "2026" });
-    var modal = qs("#preorderModal");
+    var key = (packKey && PREORDER_IFRAMES[packKey]) ? packKey : "pro";
+    window.trackEvent("open_preorder_form", { pack: key });
 
-    if (packKey && ["essential", "pro", "corporate"].indexOf(packKey) !== -1) {
-      var poPack = qs("#po_pack");
-      if (poPack) poPack.value = packKey;
+    var modal = qs("#preorderModal") || qs("#subscription-modal");
+    var iframe = qs("#preorderIframe") || qs("#subscription-iframe");
+    var titleEl = qs("#preorderModalTitle");
 
-      var ppoPack = qs("#ppo_pack");
-      if (ppoPack) ppoPack.value = packKey;
+    if (titleEl) {
+      titleEl.textContent = PREORDER_TITLE_LABELS[key] || "Formulaire de souscription anticipée";
+    }
+
+    if (iframe) {
+      iframe.src = PREORDER_IFRAMES[key];
     }
 
     if (modal) {
       modal.classList.remove("hidden");
       document.body.style.overflow = "hidden";
-      modal.focus();
-    } else {
-      var preorderSec = qs("#precommande");
-      if (preorderSec) {
-        preorderSec.scrollIntoView({ behavior: "smooth" });
-      }
+      if (typeof modal.focus === "function") modal.focus();
     }
   };
 
+  window.openSubscriptionPopup = window.openPreorder;
+
   window.closePreorder = function () {
-    const modal = qs("#preorderModal");
+    var modal = qs("#preorderModal") || qs("#subscription-modal");
+    var iframe = qs("#preorderIframe") || qs("#subscription-iframe");
     if (modal) {
       modal.classList.add("hidden");
       document.body.style.overflow = "";
     }
+    if (iframe) {
+      iframe.src = "about:blank";
+    }
   };
+
+  window.closeSubscriptionModal = window.closePreorder;
 
   window.openOrder = function (pack) {
     window.trackEvent("open_order_form_2025", { pack: pack });
@@ -395,21 +412,71 @@
     });
   };
 
-  // ══════════════════════════════════════════════════════════ FORMULAIRES DE PRÉCOMMANDE 2026
+  window.openPrivacyPopup = function (e) {
+    if (e) e.preventDefault();
+    window.trackEvent("open_privacy_policy_popup");
+
+    var url = "https://tadjeddine-partners.com/politique-confidentialite/";
+    var width = 850;
+    var height = 750;
+    var left = Math.max(0, (window.screen.width - width) / 2);
+    var top = Math.max(0, (window.screen.height - height) / 2);
+    var features = "width=" + width + ",height=" + height + ",left=" + left + ",top=" + top + ",scrollbars=yes,resizable=yes,status=no,location=no,toolbar=no,menubar=no";
+
+    var popup = window.open(url, "ABIX_Privacy_Policy", features);
+    if (!popup || popup.closed || typeof popup.closed === "undefined") {
+      // Si le popup du navigateur est bloqué par la sécurité client, afficher la modale HTML sur la page
+      var modal = qs("#privacyModal");
+      if (modal) {
+        modal.classList.remove("hidden");
+        document.body.style.overflow = "hidden";
+      }
+    } else {
+      popup.focus();
+    }
+  };
+
+  window.openPrivacyModal = window.openPrivacyPopup;
+
+  window.closePrivacyModal = function () {
+    var modal = qs("#privacyModal");
+    if (modal) {
+      modal.classList.add("hidden");
+      document.body.style.overflow = "";
+    }
+  };
+
+  // ══════════════════════════════════════════════════════════ FORMULAIRES DE PRÉCOMMANDE 2026 (RELAIS BACKEND FENEKIO)
   function handlePreorderSubmit(form, formErrorId, formSuccessId, submitBtnId) {
     if (!form) return;
 
-    form.addEventListener("submit", function (e) {
+    form.addEventListener("submit", async function (e) {
       e.preventDefault();
 
       var errEl = qs("#" + formErrorId);
-      if (errEl) errEl.classList.add("hidden");
+      if (errEl) {
+        errEl.classList.add("hidden");
+        errEl.textContent = "";
+      }
 
-      // Vérification case à cocher obligatoire
-      var termsCheck = qs('input[name="terms_consent"]', form);
+      var submitBtn = qs("#" + submitBtnId, form);
+      var originalBtnText = submitBtn ? submitBtn.textContent : "";
+
+      // Vérification case 1 : Termes & Conditions
+      var termsCheck = qs('input[name="accept_terms_and_conditions"]', form);
       if (termsCheck && !termsCheck.checked) {
         if (errEl) {
-          errEl.textContent = "Veuillez cocher la case confirmant que vous avez pris connaissance du statut de finalisation de l'édition 2026.";
+          errEl.textContent = "Veuillez cocher la case d'acceptation des Termes & Conditions.";
+          errEl.classList.remove("hidden");
+        }
+        return;
+      }
+
+      // Vérification case 2 : Politique de Confidentialité
+      var privacyCheck = qs('input[name="privacy_consent"]', form);
+      if (privacyCheck && !privacyCheck.checked) {
+        if (errEl) {
+          errEl.textContent = "Veuillez accepter la politique de confidentialité pour pouvoir valider votre précommande.";
           errEl.classList.remove("hidden");
         }
         return;
@@ -417,34 +484,61 @@
 
       window.trackEvent("submit_preorder_form");
 
-      var submitBtn = qs("#" + submitBtnId, form);
       if (submitBtn) {
         submitBtn.disabled = true;
-        submitBtn.textContent = "Enregistrement...";
+        submitBtn.textContent = "Envoi en cours…";
       }
 
       var formData = new FormData(form);
-      var body = [];
-      formData.forEach(function (val, key) { body.push(key + ": " + val); });
+      var payload = {};
+      formData.forEach(function (val, key) {
+        payload[key] = val;
+      });
 
-      var mailto = "mailto:info@tadjeddine-partners.com"
-        + "?subject=" + encodeURIComponent("Réservation Early Bird ABIX 2026 — " + (formData.get("organization") || ""))
-        + "&body=" + encodeURIComponent(body.join("\n"));
+      var basePath = (window.SITE_CONFIG && window.SITE_CONFIG.basePath) ? window.SITE_CONFIG.basePath : "/banques2025";
+      var endpoint = basePath + "/api/preorder.php";
 
-      // Déclenche le mailto de secours et affiche le panneau de succès
-      setTimeout(function () {
-        form.classList.add("hidden");
-        var succEl = qs("#" + formSuccessId);
-        if (succEl) succEl.classList.remove("hidden");
-
-        // Événement preorder_success DÉCLENCHÉ UNIQUEMENT après enregistrement réel
-        window.trackEvent("preorder_success", {
-          pack: formData.get("pack"),
-          organization: formData.get("organization")
+      try {
+        var res = await fetch(endpoint, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload)
         });
 
-        window.location.href = mailto;
-      }, 500);
+        var data = await res.json().catch(function () { return {}; });
+
+        if (res.ok && data.ok) {
+          form.reset();
+          form.classList.add("hidden");
+          var succEl = qs("#" + formSuccessId);
+          if (succEl) {
+            succEl.classList.remove("hidden");
+          }
+
+          window.trackEvent("preorder_success", {
+            organization: payload.company || payload.organization
+          });
+        } else {
+          var errorMsg = data.error || "Une erreur est survenue lors de l’enregistrement de votre précommande. Veuillez réessayer.";
+          if (errEl) {
+            errEl.textContent = errorMsg;
+            errEl.classList.remove("hidden");
+          }
+          if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.textContent = originalBtnText;
+          }
+        }
+      } catch (err) {
+        if (errEl) {
+          errEl.textContent = "Une erreur est survenue lors de l’enregistrement de votre précommande. Veuillez réessayer.";
+          errEl.classList.remove("hidden");
+        }
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.textContent = originalBtnText;
+        }
+      }
     });
   }
 
@@ -467,5 +561,6 @@
       window.location.href = mailtoUrl;
     });
   }
+
 
 }());

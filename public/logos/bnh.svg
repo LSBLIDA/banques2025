@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 100" width="300" height="100">
+    <rect width="300" height="100" fill="transparent"/>
+    <g transform="translate(15, 15)">
+      <rect x="5" y="5" width="60" height="60" rx="12" fill="#154360"/>
+      <path d="M 35 16 L 54 34 L 48 34 L 48 52 L 22 52 L 22 34 L 16 34 Z" fill="#D4AC0D"/>
+    </g>
+    <text x="95" y="44" font-family="Inter, Arial, sans-serif" font-weight="900" font-size="24" fill="#154360">BNH</text>
+    <text x="95" y="66" font-family="Inter, Arial, sans-serif" font-weight="600" font-size="10" fill="#4B5563">Banque Nationale de l'Habitat</text>
+  </svg>

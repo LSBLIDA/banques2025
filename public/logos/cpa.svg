@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 100" width="300" height="100">
+    <rect width="300" height="100" fill="transparent"/>
+    <g transform="translate(15, 15)">
+      <circle cx="35" cy="35" r="32" fill="#8B0000"/>
+      <path d="M 35 12 L 53 47 L 17 47 Z" fill="#D4AF37"/>
+      <circle cx="35" cy="32" r="8" fill="#FFFFFF"/>
+    </g>
+    <text x="95" y="46" font-family="Inter, Arial, sans-serif" font-weight="900" font-size="28" fill="#8B0000">CPA</text>
+    <text x="95" y="68" font-family="Inter, Arial, sans-serif" font-weight="600" font-size="11" fill="#4B5563">Crédit Populaire d'Algérie</text>
+  </svg>

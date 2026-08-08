@@ -18,6 +18,8 @@
     "editions": "Éditions",
     "edition2026": "Édition 2026",
     "edition2025": "Édition 2025",
+    "study": "L’étude",
+    "barometer2026": "Baromètre des services bancaires 2026",
     "methodology": "Méthodologie",
     "abixIndex": "Projet ABIX",
     "services": "Services",
@@ -25,6 +27,7 @@
     "banks": "Banques",
     "about": "À propos",
     "contact": "Contact",
+    "questionnaire": "Baromètre 2026",
     "ctaStudy": "Obtenir l'étude",
     "ctaNotify": "Être informé de la parution 2026",
     "langSelectLabel": "Langue"
@@ -39,11 +42,11 @@
       "pretitle": "Études et analyses stratégiques du secteur bancaire",
       "title": "Algeria Banking Index",
       "signature": "Études, benchmarks et analyses stratégiques du secteur bancaire algérien",
-      "badge": "Précommandes ouvertes — Offre Early Bird jusqu’au 31 août 2026",
+      "badge": "Souscriptions anticipées ouvertes — Tarif préférentiel jusqu’au 31 août 2026",
       "subtitle": "Algeria Banking Index est la marque éditoriale créée par Tadjeddine & Partners pour publier des études indépendantes, des benchmarks et des analyses stratégiques consacrés au secteur bancaire algérien.",
-      "subtitleParagraph2": "L’édition 2026 analysera les données financières 2023 à 2025, les principales évolutions du secteur, les dynamiques concurrentielles et le positionnement des établissements.",
-      "ctaPreorder": "Précommander l’édition 2026",
-      "ctaPrimary": "Précommander l’édition 2026",
+      "subtitleParagraph2": "L’édition 2026 analyse les performances 2024–2025 de 21 banques opérant en Algérie, avec une mise en perspective des tendances 2023–2025. Elle croise données financières, indicateurs opérationnels, benchmarks, dynamiques concurrentielles et nouveaux éclairages sur les usages bancaires digitaux.",
+      "ctaPreorder": "Souscrire à l’édition 2026",
+      "ctaPrimary": "Souscrire à l’édition 2026",
       "ctaNotify": "Recevoir les actualités de l’édition 2026",
       "ctaSynthesis": "Recevoir la synthèse exécutive",
       "ctaPresentation": "Demander une présentation",
@@ -62,18 +65,18 @@
       "cover2025Status": "Édition précédente disponible"
     },
     "earlyBird": {
-      "badge": "Offre Early Bird — Jusqu'au 31 août 2026",
-      "title": "Précommandez l’édition 2026 à tarif préférentiel",
-      "subtitle": "Réservez dès maintenant la nouvelle édition de l’étude ABIX et bénéficiez du tarif de lancement jusqu’au 31 août 2026. L’étude complète sera livrée dès sa publication.",
+      "badge": "Offre de souscription anticipée — Jusqu'au 31 août 2026",
+      "title": "Souscrivez à l’édition 2026 à tarif préférentiel",
+      "subtitle": "Bénéficiez d’une remise de 10 % pour toute souscription enregistrée avant le 31 août 2026. L’étude est actuellement en cours de finalisation et sera remise aux souscripteurs dès sa publication.",
       "reassurance": [
-        "Tarif préférentiel réservé aux précommandes",
-        "Livraison de l’étude complète dès publication",
-        "Accès aux livrables correspondant à l’offre commandée"
+        "Tarif préférentiel réservé aux souscriptions anticipées avant le 31 août 2026",
+        "Livraison de l’étude complète dès sa publication",
+        "Accès aux livrables correspondant à l’offre souscrite"
       ],
-      "ctaPrimary": "Précommander maintenant",
-      "ctaSecondary": "Voir le contenu prévu de l’édition 2026",
-      "disclaimer": "L’édition 2026 est actuellement en cours de consolidation, de validation et de finalisation éditoriale.",
-      "priceDefaultLabel": "Tarif préférentiel"
+      "ctaPrimary": "Souscrire à l’édition 2026",
+      "ctaSecondary": "Voir le contenu prévisionnel de l’édition 2026",
+      "disclaimer": "Offre réservée aux souscriptions anticipées enregistrées avant le 31 août 2026.",
+      "priceDefaultLabel": "Tarif de souscription anticipée"
     },
     "stats": {
       "label2025": "Édition 2025 disponible",
@@ -86,11 +89,11 @@
       "valuePages": "104"
     },
     "edition2026Teaser": {
-      "title": "Édition 2026 — Données financières 2023–2025",
-      "status": "Publication prochaine — données en cours de consolidation et de validation.",
-      "description": "La prochaine édition d'ABIX couvrira les données financières de la période 2023–2025 et proposera une analyse approfondie de l'évolution du secteur bancaire algérien.",
+      "title": "Édition 2026 — Étude comparative 2024–2025",
+      "status": "Publication prévue en septembre 2026 — analyses et enrichissements éditoriaux en cours de finalisation.",
+      "description": "La prochaine édition couvrira 21 banques opérant en Algérie avec une analyse des performances 2024–2025 et des tendances 2023–2025.",
       "ctaNotify": "Être informé de la parution",
-      "disclaimer": "Aucune date de publication n'est encore arrêtée. Nous vous informerons dès que l'édition sera disponible."
+      "disclaimer": "Les souscripteurs seront informés dès la parution de l'étude."
     },
     "advisory": {
       "title": "Aller au-delà de l'étude",
@@ -105,7 +108,7 @@
     },
     "methodology": {
       "title": "Une méthodologie rigoureuse et transparente",
-      "body": "L'ABIX est un indice comparatif fondé sur les données financières publiquement disponibles. Il ne constitue pas une notation réglementaire ou prudentielle.",
+      "body": "Algeria Banking Index s'appuie sur une analyse fondée sur les données financières et opérationnelles des établissements. Les données historiques peuvent intégrer les reclassements et retraitements publiés ultérieurement par les établissements afin d’assurer la cohérence des comparaisons.",
       "cta": "En savoir plus sur la méthodologie"
     }
   },
@@ -113,114 +116,110 @@
   "edition2026": {
     "meta": {
       "title": "Édition 2026 — Algeria Banking Index",
-      "description": "Précommandez l'étude annuelle 2026 d'Algeria Banking Index à tarif préférentiel jusqu'au 31 août 2026. Données financières 2023–2025."
+      "description": "Étude comparative 2024–2025 avec analyse des tendances 2023–2025 du secteur bancaire algérien. 21 banques analysées. Souscription anticipée."
     },
     "hero": {
-      "badge": "Précommandes ouvertes — Offre Early Bird jusqu’au 31 août 2026",
-      "title": "Étude annuelle du secteur bancaire algérien — Édition 2026",
-      "subtitle": "Analyse des données financières 2023–2025",
-      "status": "Publication prochaine — données en cours de consolidation et de validation.",
-      "description": "La nouvelle édition proposera une analyse consolidée du secteur, une comparaison entre banques publiques et privées, l’évolution des parts de marché, des benchmarks de performance et des diagnostics individuels des établissements couverts.",
-      "disclaimerNoBanks": "Le périmètre définitif de l'édition 2026 est en cours de validation.",
-      "disclaimerNoDate": "La date de publication sera communiquée dès que les données seront consolidées et validées.",
-      "ctaPreorder": "Précommander l’édition 2026",
+      "badge": "Souscriptions anticipées ouvertes — Tarif préférentiel jusqu’au 31 août 2026",
+      "title": "Étude du secteur bancaire algérien — Édition 2026",
+      "subtitle": "Étude comparative 2024–2025 avec analyse des tendances 2023–2025",
+      "status": "Publication prévue en septembre 2026 — analyses et enrichissements éditoriaux en cours de finalisation.",
+      "description": "L'édition 2026 proposera une lecture approfondie des transformations du secteur bancaire algérien à travers l'analyse de 21 établissements. Elle combinera performances financières 2024–2025, tendances 2023–2025, comparaisons public/privé, parts de marché, benchmarks, analyses individuelles, données sur le hors-bilan, les effectifs et le réseau, ainsi qu'un nouveau volet consacré à l'expérience des utilisateurs des services bancaires — application mobile, e-banking web et services en agence.\n\nDes regards de dirigeants et des contributions d'experts viendront également enrichir l'analyse, sous réserve de confirmation éditoriale.",
+      "disclaimerNoBanks": "21 banques couvertes sur le marché bancaire algérien.",
+      "disclaimerNoDate": "Les données financières de référence sont consolidées. Les derniers travaux portent notamment sur les analyses comparatives, les données opérationnelles, le Baromètre des services bancaires et les contributions éditoriales.",
+      "ctaPreorder": "Souscrire à l’édition 2026",
       "ctaNotify": "Être informé de la parution"
     },
     "pricing": {
-      "sectionTitle": "Tarifs et offres — Édition 2026",
-      "sectionSubtitle": "Tarifs identiques à l’édition 2025, bénéficiant d’une remise Early Bird de 10 % pour toute précommande enregistrée avant le 31 août 2026 à 23 h 59 (heure d’Algérie).",
-      "earlyBirdBadge": "-10 % Early Bird",
-      "validityMention": "Offre valable jusqu’au 31 août 2026",
+      "sectionTitle": "Offre de souscription anticipée — Édition 2026",
+      "sectionSubtitle": "Souscrivez avant le 31 août 2026 et bénéficiez d’une remise de 10 % sur le tarif public de l’édition 2026. L’étude sera livrée dès sa publication.",
+      "earlyBirdBadge": "-10 % jusqu’au 31 août",
+      "validityMention": "Tarif de souscription anticipée valable jusqu’au 31 août 2026",
       "popularBadge": "Plus populaire",
-      "regularPriceStruckLabel": "Tarif normal",
-      "earlyBirdPriceLabel": "Tarif Early Bird",
+      "regularPriceStruckLabel": "Tarif public",
+      "earlyBirdPriceLabel": "Tarif de souscription anticipée",
       "savingLabel": "Économisez",
-      "ctaBeforeDeadline": "Précommander",
+      "ctaBeforeDeadline": "Souscrire",
       "ctaAfterAvailable": "Commander",
       "ctaAfterPreorder": "Demander une réservation",
+      "webinarNotice": "Webinar de présentation de l’édition 2026 — ouvert sur inscription",
       "essential": {
         "title": "Pack Essentiel",
+        "tagline": "Comprendre le marché",
         "userLicensesText": "1 utilisateur · PDF sécurisé",
         "regularPrice": "84 000 DA HT",
         "earlyBirdPrice": "75 600 DA HT",
         "saving": "Économisez 8 400 DA HT",
-        "cta": "Précommander le Pack Essentiel",
+        "cta": "Souscrire au Pack Essentiel",
         "ctaAfterAvailable": "Commander le Pack Essentiel",
         "ctaAfterPreorder": "Demander une réservation",
         "f1": "Étude complète de l’édition 2026 au format PDF sécurisé",
         "f2": "Analyse consolidée du secteur bancaire",
         "f3": "Comparaison banques publiques / banques privées",
-        "f4": "Analyses individuelles des établissements couverts",
+        "f4": "Analyse individuelle des banques couvertes",
         "f5": "Classements et benchmarks par indicateur",
-        "f6": "Usage individuel pour un utilisateur",
-        "f7": "Corrections et errata éventuels",
+        "f6": "Usage individuel pour 1 utilisateur",
         "features": [
           "Étude complète de l’édition 2026 au format PDF sécurisé",
           "Analyse consolidée du secteur bancaire",
           "Comparaison banques publiques / banques privées",
-          "Analyses individuelles des établissements couverts",
+          "Analyse individuelle des banques couvertes",
           "Classements et benchmarks par indicateur",
-          "Usage individuel pour un utilisateur",
-          "Corrections et errata éventuels"
+          "Usage individuel pour 1 utilisateur"
         ]
       },
       "pro": {
         "title": "Pack Pro",
+        "tagline": "Exploiter les données",
         "badge": "Plus populaire",
         "userLicensesText": "Jusqu'à 3 utilisateurs · Données Excel incluses",
         "regularPrice": "120 000 DA HT",
         "earlyBirdPrice": "108 000 DA HT",
         "saving": "Économisez 12 000 DA HT",
-        "cta": "Précommander le Pack Pro",
+        "cta": "Souscrire au Pack Pro",
         "ctaAfterAvailable": "Commander le Pack Pro",
         "ctaAfterPreorder": "Demander une réservation",
         "f1": "Tout le Pack Essentiel",
         "f2": "Fichier Excel structuré contenant les données de l’étude",
         "f3": "Tableaux comparatifs détaillés",
-        "f4": "Historique des données 2023–2025",
-        "f5": "Ratios et parts de marché",
-        "f6": "Accès aux mises à jour majeures de l’édition",
-        "f7": "Jusqu’à trois utilisateurs appartenant à la même entité",
-        "f8": "Assistance relative à la lecture des données et des livrables",
+        "f4": "Ratios et parts de marché",
+        "f5": "Historique des données 2023–2025",
+        "f6": "Jusqu’à 3 utilisateurs appartenant à la même entité",
         "features": [
           "Tout le Pack Essentiel",
           "Fichier Excel structuré contenant les données de l’étude",
           "Tableaux comparatifs détaillés",
-          "Historique des données 2023–2025",
           "Ratios et parts de marché",
-          "Accès aux mises à jour majeures de l’édition",
-          "Jusqu’à trois utilisateurs appartenant à la même entité",
-          "Assistance relative à la lecture des données et des livrables"
+          "Historique des données 2023–2025",
+          "Jusqu’à 3 utilisateurs appartenant à la même entité"
         ]
       },
       "corporate": {
         "title": "Pack Corporate Executive",
-        "userLicensesText": "Jusqu'à 20 utilisateurs · Présentation & Benchmark inclus",
+        "tagline": "Explorer et partager les données",
+        "userLicensesText": "Jusqu'à 20 utilisateurs · ABIX Data Explorer & PPT inclus",
         "regularPrice": "180 000 DA HT",
         "earlyBirdPrice": "162 000 DA HT",
         "saving": "Économisez 18 000 DA HT",
-        "cta": "Précommander le Pack Corporate Executive",
+        "cta": "Souscrire au Pack Corporate Executive",
         "ctaAfterAvailable": "Commander le Pack Corporate Executive",
         "ctaAfterPreorder": "Demander une réservation",
         "f1": "Tout le Pack Pro",
-        "f2": "Présentation exécutive au format PowerPoint",
-        "f3": "Séance exclusive de décryptage avec les experts",
-        "f4": "Benchmark personnalisé de l’établissement",
-        "f5": "Jusqu’à vingt utilisateurs appartenant à la même entité",
-        "f6": "Échange prioritaire avec Tadjeddine & Partners",
+        "f2": "Accès à ABIX Data Explorer — application interactive de visualisation et de comparaison des données de l’étude",
+        "f3": "Présentation exécutive de l’étude au format PowerPoint",
+        "f4": "Jusqu’à 20 utilisateurs appartenant à la même entité",
         "features": [
           "Tout le Pack Pro",
-          "Présentation exécutive au format PowerPoint",
-          "Séance exclusive de décryptage avec les experts",
-          "Benchmark personnalisé de l’établissement",
-          "Jusqu’à vingt utilisateurs appartenant à la même entité",
-          "Échange prioritaire avec Tadjeddine & Partners"
+          "Accès à ABIX Data Explorer — application interactive de visualisation et de comparaison des données de l’étude",
+          "Présentation exécutive de l’étude au format PowerPoint",
+          "Jusqu’à 20 utilisateurs appartenant à la même entité"
         ]
       }
     },
     "preorderForm": {
-      "title": "Précommander l’édition 2026",
-      "subtitle": "Réservez votre exemplaire au tarif préférentiel Early Bird valable jusqu’au 31 août 2026 à 23 h 59.",
+      "title": "Formulaire de souscription anticipée",
+      "subtitle": "Bénéficiez d’une remise de 10 % pour toute souscription enregistrée avant le 31 août 2026 à 23 h 59.",
+      "labelCompany": "Société / Organisme",
+      "labelFullName": "Nom & Prénom",
       "labelFirstName": "Prénom",
       "labelLastName": "Nom",
       "labelTitle": "Fonction",
@@ -231,9 +230,9 @@
       "labelCountry": "Pays",
       "labelPack": "Offre sélectionnée",
       "packOptions": {
-        "essential": "Pack Essentiel (75 600 DA HT en Early Bird / 84 000 DA HT)",
-        "pro": "Pack Pro (108 000 DA HT en Early Bird / 120 000 DA HT)",
-        "corporate": "Pack Corporate Executive (162 000 DA HT en Early Bird / 180 000 DA HT)"
+        "essential": "Pack Essentiel (75 600 DA HT souscription anticipée / 84 000 DA HT)",
+        "pro": "Pack Pro (108 000 DA HT souscription anticipée / 120 000 DA HT)",
+        "corporate": "Pack Corporate Executive (162 000 DA HT souscription anticipée / 180 000 DA HT)"
       },
       "labelUserCount": "Nombre d’utilisateurs",
       "labelProforma": "Facture pro forma",
@@ -244,11 +243,17 @@
         "benchmark": "Benchmark personnalisé de l’établissement"
       },
       "labelTermsConsent": "J’ai pris connaissance du fait que l’édition 2026 est en cours de finalisation et qu’elle me sera livrée dès sa publication.",
+      "labelTermsAccept": "J'accepte les Termes & Conditions",
+      "labelPrivacyConsent": "J'ai pris connaissance de la politique de confidentialité et donne mon consentement au traitement de mes données selon cette politique.",
+      "privacyModalTitle": "Politique de confidentialité — Tadjeddine & Partners",
       "privacyNotice": "Vos données personnelles sont traitées par Tadjeddine & Partners conformément à notre politique de confidentialité.",
-      "submit": "Valider ma précommande",
-      "submitReservation": "Précommander au tarif Early Bird",
-      "successTitle": "Demande enregistrée avec succès",
-      "successBody": "Votre réservation au tarif Early Bird a bien été enregistrée. Un conseiller Tadjeddine & Partners prendra contact avec vous dans un délai de 48 heures ouvrées.",
+      "submit": "Souscrire à l’édition 2026",
+      "submitReservation": "Souscrire au tarif préférentiel",
+      "submitting": "Envoi en cours…",
+      "successTitle": "Souscription enregistrée avec succès",
+      "successMessage": "Merci. Votre souscription à l’édition 2026 a bien été enregistrée.",
+      "errorMessage": "Une erreur est survenue lors de l’enregistrement de votre souscription. Veuillez réessayer.",
+      "successBody": "Votre souscription au tarif préférentiel a bien été enregistrée. Un conseiller Tadjeddine & Partners prendra contact avec vous dans un délai de 48 heures ouvrées.",
       "fallbackNote": "Traitement direct sous 48h ouvrées."
     },
     "forecast": {
@@ -262,46 +267,70 @@
       ]
     },
     "faq": {
-      "title": "Questions fréquentes — Précommande 2026",
-      "subtitle": "Tout ce que vous devez savoir sur l'offre Early Bird et les modalités de précommande.",
+      "title": "Questions fréquentes — Souscription anticipée 2026",
+      "subtitle": "Tout ce que vous devez savoir sur l’édition 2026 d’Algeria Banking Index, son contenu et les modalités de souscription anticipée.",
       "items": [
         {
-          "q": "Quand l’étude sera-t-elle livrée ?",
-          "a": "L’étude complète sera livrée immédiatement dès la finalisation et la validation des données financières de la période 2023–2025. Vous serez averti en avant-première."
+          "q": "Quand l’étude sera-t-elle publiée ?",
+          "a": "La publication de l’édition 2026 est prévue en septembre 2026, après finalisation des derniers travaux d’analyse et validation éditoriale. Les souscripteurs seront informés dès sa mise à disposition et recevront les livrables correspondant à l’offre souscrite."
         },
         {
-          "q": "Que contient la précommande ?",
-          "a": "La précommande vous garantit la réservation du rapport complet 2026 dès sa sortie au tarif préférentiel Early Bird, ainsi que l'envoi de la synthèse exécutive dès sa disponibilité."
+          "q": "Quel sera le périmètre de l’édition 2026 ?",
+          "a": "L’édition 2026 couvrira 21 banques opérant en Algérie. Elle portera principalement sur la comparaison des performances 2024–2025, complétée par une analyse des tendances observées sur la période 2023–2025."
         },
         {
-          "q": "Le tarif Early Bird est-il garanti ?",
-          "a": "Oui. Toute réservation ou précommande enregistrée avant le 31 août 2026 à 23h59 (heure d'Algérie) conserve le tarif préférentiel garanti."
+          "q": "Que contiendra l’étude 2026 ?",
+          "a": "L’étude proposera une analyse consolidée du secteur bancaire algérien, des comparaisons entre banques publiques et privées, des analyses individuelles des 21 établissements, ainsi que des classements et benchmarks par indicateur.\n\nCette édition sera également enrichie de nouveaux éclairages sur le hors-bilan, les effectifs, le réseau bancaire et la performance opérationnelle.\n\nElle intégrera par ailleurs un volet consacré aux services bancaires digitaux, notamment à travers un baromètre de satisfaction des utilisateurs des services e-banking."
+        },
+        {
+          "q": "Que garantit la souscription anticipée ?",
+          "a": "La souscription anticipée vous permet de réserver l’édition 2026 avant sa publication et de bénéficier d’un tarif préférentiel de 10 %.\n\nÀ la publication, les livrables correspondant au pack souscrit seront mis à disposition du souscripteur."
+        },
+        {
+          "q": "Le tarif préférentiel est-il garanti ?",
+          "a": "Oui. Toute souscription enregistrée au plus tard le 31 août 2026 à 23 h 59, heure d’Algérie, bénéficie du tarif de souscription anticipée.\n\nCe tarif reste garanti jusqu’à la livraison de l’étude."
+        },
+        {
+          "q": "Quels sont les différents niveaux d’offre ?",
+          "a": "Trois offres sont proposées :\n\nPack Essentiel :\n- étude complète au format PDF ;\n- analyses sectorielles ;\n- analyses individuelles des banques ;\n- benchmarks et classements ;\n- licence pour 1 utilisateur.\n\nPack Pro :\n- tout le Pack Essentiel ;\n- base de données Excel ;\n- tableaux comparatifs détaillés ;\n- historique 2023–2025 ;\n- ratios et parts de marché ;\n- jusqu’à 3 utilisateurs appartenant à la même organisation.\n\nPack Corporate Executive :\n- tout le Pack Pro ;\n- présentation exécutive ;\n- séance de décryptage avec les experts ;\n- benchmark personnalisé ;\n- jusqu’à 20 utilisateurs appartenant à la même organisation."
         },
         {
           "q": "Puis-je recevoir une facture pro forma ?",
-          "a": "Oui. Lors de votre réservation commerciale, Tadjeddine & Partners peut vous établir une facture pro forma ou une convention de prestation."
+          "a": "Oui. Sur demande, Tadjeddine & Partners peut établir une facture pro forma correspondant au pack sélectionné afin de faciliter la procédure interne de commande de l’organisation."
         },
         {
-          "q": "Puis-je commander pour plusieurs utilisateurs ?",
-          "a": "Oui, les options Pack Pro (jusqu'à 3 utilisateurs) et Pack Corporate Executive (jusqu'à 20 utilisateurs) permettent l'accès multi-utilisateurs."
+          "q": "Puis-je souscrire pour plusieurs utilisateurs ?",
+          "a": "Oui.\n\nLe Pack Pro permet un accès jusqu’à 3 utilisateurs appartenant à la même organisation.\n\nLe Pack Corporate Executive permet un accès jusqu’à 20 utilisateurs appartenant à la même organisation."
         },
         {
-          "q": "Que se passe-t-il si la publication est reportée ?",
-          "a": "Vous serez immédiatement notifié par nos équipes. Votre précommande reste valide et votre tarif Early Bird demeure entièrement garanti."
+          "q": "Les données 2024 sont-elles les mêmes que dans l’édition précédente ?",
+          "a": "Pas nécessairement.\n\nCertaines banques ont procédé, dans leurs publications ultérieures, à des reclassements ou retraitements de certains postes financiers.\n\nPour garantir la meilleure cohérence possible avec les données 2025, l’édition 2026 retient les données 2024 révisées les plus récentes disponibles.\n\nCes données remplacent donc, lorsque cela est nécessaire, celles utilisées dans l’édition précédente."
         },
         {
-          "q": "L’édition 2025 est-elle incluse ?",
-          "a": "L’édition 2025 est disponible immédiatement comme étude indépendante. Si vous souhaitez acquérir un pack combiné 2025 + 2026, nos conseillers établiront une proposition sur-mesure."
+          "q": "Le Baromètre des services bancaires influencera-t-il les résultats financiers ou les classements des banques ?",
+          "a": "Non.\n\nLe Baromètre des services bancaires constitue un volet distinct consacré à l'expérience et à la satisfaction des utilisateurs des services bancaires — application mobile, e-banking web et services en agence.\n\nSes résultats ne modifient pas les données financières des établissements.\n\nIls seront présentés séparément, avec une description de la méthodologie utilisée et des informations permettant d'apprécier la représentativité de l'enquête."
         },
         {
-          "q": "Puis-je demander une présentation personnalisée ?",
-          "a": "Oui. Vous pouvez cocher l'option lors de votre précommande pour intégrer une présentation exécutive devant votre comité de direction."
+          "q": "L’étude donnera-t-elle la parole aux banques et à des experts ?",
+          "a": "L’édition 2026 prévoit également d’accueillir des contributions de dirigeants et d’experts, sous réserve de confirmation éditoriale.\n\nCes contributions seront clairement distinguées de l’analyse éditoriale d’Algeria Banking Index.\n\nElles n’interviendront ni dans le calcul des indicateurs, ni dans les classements, ni dans les conclusions indépendantes de l’étude."
+        },
+        {
+          "q": "L’édition 2025 est-elle incluse dans la souscription 2026 ?",
+          "a": "Non.\n\nL’édition 2025 reste une publication indépendante et peut être acquise séparément.\n\nPour les organisations souhaitant disposer des éditions 2025 et 2026, une proposition combinée peut être établie sur demande."
+        },
+        {
+          "q": "Que se passe-t-il si la date de publication évolue ?",
+          "a": "Les souscripteurs seront informés de toute évolution du calendrier de publication.\n\nLa souscription restera valide et le tarif préférentiel obtenu avant le 31 août 2026 demeurera garanti."
+        },
+        {
+          "q": "Puis-je demander une présentation ou un benchmark personnalisé ?",
+          "a": "Oui.\n\nLe Pack Corporate Executive comprend une séance de décryptage ainsi qu’un benchmark personnalisé.\n\nDes prestations complémentaires, telles qu’une présentation devant un comité de direction ou une analyse approfondie, peuvent également être proposées séparément selon les besoins de l’organisation."
         }
       ]
     },
     "notify": {
-      "title": "Être informé sans précommander",
-      "body": "Si vous préférez ne pas précommander dès maintenant, inscrivez votre adresse pour recevoir une simple alerte lors de la parution.",
+      "title": "Être informé sans souscrire immédiatement",
+      "body": "Si vous préférez ne pas souscrire dès maintenant, inscrivez votre adresse pour recevoir une simple alerte lors de la parution.",
       "labelFirstName": "Prénom",
       "labelLastName": "Nom",
       "labelTitle": "Fonction",
@@ -336,8 +365,8 @@
       "title": "Édition 2025 — Algeria Banking Index",
       "description": "L'édition 2025 d'Algeria Banking Index analyse les performances financières de 20 banques algériennes sur les exercices 2023 et 2024. Disponible en 3 packs."
     },
-    "alert2026": "L’édition 2026 est désormais disponible en précommande à tarif préférentiel jusqu’au 31 août 2026.",
-    "alert2026Cta": "Précommander l’édition 2026",
+    "alert2026": "L’édition 2026 est ouverte à la souscription anticipée avec un tarif préférentiel valable jusqu’au 31 août 2026.",
+    "alert2026Cta": "Souscrire à l’édition 2026",
     "hero": {
       "badge": "Disponible",
       "title": "Édition 2025",
@@ -442,36 +471,48 @@
 
   "methodology": {
     "meta": {
-      "title": "Méthodologie des études | Algeria Banking Index",
-      "description": "Découvrez la démarche de collecte, de consolidation, de contrôle et d’analyse des données utilisée dans les études du secteur bancaire algérien."
+      "title": "Méthodologie des études — Algeria Banking Index",
+      "description": "Découvrez la démarche de collecte, de consolidation, de comparaison et d’interprétation des données financières, opérationnelles et publiques relatives au secteur bancaire algérien."
     },
     "hero": {
       "title": "Méthodologie des études",
-      "subtitle": "Une démarche structurée pour collecter, consolider, comparer et interpréter les données financières publiques du secteur bancaire algérien."
+      "subtitle": "Une démarche structurée pour collecter, consolider, comparer et interpréter les données financières, opérationnelles et publiques relatives au secteur bancaire algérien.",
+      "introText": "Les études Algeria Banking Index reposent sur l’exploitation méthodique des informations publiquement disponibles, leur mise en cohérence et leur analyse comparative. L’objectif est de fournir une lecture homogène des performances, des évolutions et du positionnement des établissements couverts."
     },
     "disclaimerBox": {
       "title": "Ce que la méthodologie ne constitue pas",
-      "body": "Les analyses publiées ne constituent ni une notation de crédit, ni une notation prudentielle, ni une certification de solvabilité, ni une recommandation d’investissement. Elles reposent sur les informations publiques disponibles et sur une méthodologie comparative propre à l’étude."
+      "p1": "Les analyses publiées ne constituent ni une notation de crédit, ni une notation prudentielle, ni une certification de solvabilité, ni un audit des états financiers, ni une recommandation d’investissement.",
+      "p2": "Elles reposent sur les informations publiques disponibles et sur une méthodologie comparative propre aux études Algeria Banking Index."
     },
     "approach": {
       "title": "Notre démarche analytique en 6 étapes",
-      "description": "Les études Algeria Banking Index reposent sur une collecte systématique et un traitement rigoureux des états financiers annuels publiés par les établissements bancaires et les autorités publiques en Algérie.",
-      "principles": [
-        { "title": "Périmètre & Collecte des données publiques", "body": "Recensement exhaustif des rapports annuels, bilans et comptes de résultats publiquement diffusés par les 20 banques publiques et privées du secteur." },
-        { "title": "Consolidation & Contrôles de cohérence", "body": "Vérification systématique de l'égalité des bilans, réconciliation des totaux et traitement homogène des données révisées ou retraitées." },
-        { "title": "Définition des indicateurs & Ratios", "body": "Normalisation des indicateurs financiers (stocks et flux) : PNB, RBE, RoE, RoA, coefficient d'exploitation, ratios de liquidité et prêts/dépôts." },
-        { "title": "Comparaisons & Benchmarks sectoriels", "body": "Analyse comparative structurée opposant banques publiques et privées, calcul des parts de marché et positionnements relatifs." },
-        { "title": "Diagnostics banque par banque", "body": "Rédaction de fiches individuelles restituant les dynamiques propres à chaque établissement sur la période étudiée." },
-        { "title": "Validation & Interprétation humaine", "body": "Analyse qualitative et prospective menée par les experts de Tadjeddine & Partners pour contextualiser les évolutions observées." }
-      ]
+      "description": "Les études Algeria Banking Index reposent sur une collecte structurée des informations publiquement disponibles, suivie de travaux de consolidation, de contrôle de cohérence, de comparaison et d’interprétation."
     },
-    "limitations": {
-      "title": "Précisions importantes",
-      "items": [
-        "Les études sont fondées exclusivement sur les informations financières publiquement disponibles au moment de la rédaction.",
-        "Elles n'intègrent aucune donnée confidentielle ou non publiée par les établissements.",
-        "La méthodologie vise une analyse comparative de performance et ne constitue en aucun cas une évaluation prudentielle ou réglementaire."
-      ]
+    "revisions": {
+      "title": "Données historiques et révisions",
+      "p1": "Les données historiques peuvent évoluer.",
+      "p2": "Certaines banques peuvent procéder, lors de publications ultérieures, à des reclassements ou retraitements concernant les exercices précédents.",
+      "p3": "Lorsqu’une donnée révisée est publiée par l’établissement, Algeria Banking Index peut substituer cette donnée à celle utilisée dans une édition antérieure afin d’assurer la cohérence des séries comparatives.",
+      "p4": "Les chiffres d’une nouvelle édition peuvent donc différer ponctuellement de ceux figurant dans une édition précédente sans que cela constitue nécessairement une erreur."
+    },
+    "ebanking": {
+      "title": "Une méthodologie spécifique pour le baromètre e-banking",
+      "p1": "Le baromètre e-banking constitue un volet complémentaire et indépendant de l’analyse financière.",
+      "p2": "Il repose sur une enquête auprès des utilisateurs des services bancaires digitaux afin de mesurer leur niveau de satisfaction et leur perception des services proposés par les établissements.",
+      "p3": "Les résultats du baromètre sont présentés séparément des indicateurs financiers. Ils n’interviennent ni dans le calcul des ratios financiers, ni dans les classements fondés sur les données comptables.",
+      "p4": "La publication des résultats précisera notamment le nombre de répondants, la période de collecte, la répartition des réponses et les limites éventuelles de représentativité."
+    },
+    "contributions": {
+      "title": "Contributions éditoriales",
+      "p1": "Certaines éditions peuvent accueillir des contributions signées de dirigeants de banques ou d’experts.",
+      "p2": "Ces contributions sont clairement identifiées et distinctes des analyses produites par Algeria Banking Index.",
+      "p3": "Elles reflètent le point de vue de leurs auteurs et n’interviendront ni dans les calculs, ni dans les comparaisons, ni dans les conclusions indépendantes de l’étude."
+    },
+    "sources": {
+      "title": "Sources et limites",
+      "p1": "Les analyses sont établies à partir des informations publiques disponibles à la date de clôture de chaque édition.",
+      "p2": "La disponibilité, le niveau de détail et la présentation des informations peuvent varier d’un établissement à l’autre.",
+      "p3": "Lorsque certaines données ne sont pas disponibles ou ne peuvent pas être comparées de manière suffisamment homogène, elles peuvent être exclues d’un indicateur ou faire l’objet d’une mention spécifique."
     }
   },
 
@@ -637,7 +678,7 @@
       "title": "Les banques couvertes par l'étude",
       "subtitle": "L'étude ABIX analyse les banques opérant en Algérie sur la base de leurs données financières publiées."
     },
-    "scopeNote": "Le périmètre définitif de l'édition 2026 est en cours de validation. Le nombre définitif de banques couvertes sera communiqué après cette validation.",
+    "scopeNote": "L'édition 2026 couvre 21 banques commerciales opérant en Algérie, avec l'intégration de la nouvelle banque Ziraat Bankası Algérie.",
     "scope2025": "L'édition 2025 couvre 20 banques opérant en Algérie.",
     "lockMessage": "Analyse détaillée disponible dans l'étude complète",
     "ctaStudy": "Obtenir le rapport complet",
@@ -825,6 +866,62 @@
     "sec9": {
       "title": "9. Mise à jour de la politique",
       "body": "TADJEDDINE AND PARTNERS se réserve le droit de modifier la présente politique de confidentialité à tout moment, notamment pour tenir compte de toute évolution législative ou réglementaire."
+    }
+  },
+
+  "questionnaire": {
+    "meta": {
+      "title": "Baromètre des services bancaires 2026 — ABIX | Algeria Banking Index",
+      "description": "Donnez votre avis sur l'application mobile, le service web et les services en agence des banques en Algérie. Participez à l'étude indépendante ABIX 2026."
+    },
+    "hero": {
+      "brand": "ABIX — Baromètre des services bancaires 2026",
+      "title": "Votre avis sur les services bancaires en Algérie",
+      "subtitle": "Évaluez l’application mobile, le service web et les services en agence des banques que vous utilisez. Vos réponses alimenteront l’étude indépendante ABIX 2026."
+    },
+    "step1": {
+      "title": "Étape 1 : Choisissez vos banques",
+      "hint": "Cochez au moins une banque dont vous utilisez les services."
+    },
+    "step2": {
+      "title": "Étape 2 : Évaluez les services",
+      "hint": "Sélectionnez votre niveau de satisfaction pour chaque service utilisé."
+    },
+    "services": {
+      "mobile": "Application mobile",
+      "web": "E-banking web",
+      "branch": "Services en agence"
+    },
+    "ratings": {
+      "veryUnsatisfied": "Très insatisfait",
+      "unsatisfied": "Insatisfait",
+      "average": "Moyen",
+      "satisfied": "Satisfait",
+      "verySatisfied": "Très satisfait",
+      "notUsed": "Je n’utilise pas ce service"
+    },
+    "actions": {
+      "submit": "Envoyer mon évaluation",
+      "submitting": "Envoi en cours…",
+      "selectBankFirst": "Veuillez sélectionner au moins une banque ci-dessus pour afficher l'évaluation."
+    },
+    "messages": {
+      "success": "Merci ! Votre évaluation a bien été enregistrée.",
+      "selectAtLeastOneBank": "Veuillez sélectionner au moins une banque.",
+      "evaluateAtLeastOneService": "Veuillez évaluer au moins un service.",
+      "error": "Une erreur est survenue lors de l'envoi de votre évaluation.",
+      "alreadyCompletedTitle": "Merci pour votre participation !",
+      "alreadyCompletedText": "Vous avez déjà rempli le Baromètre e-Banking Algérie 2026. Vos réponses ont bien été enregistrées.",
+      "alreadySubmittedIP": "Une évaluation a déjà été enregistrée depuis votre connexion internet ou appareil."
+    },
+    "notice": {
+      "title": "Information & Confidentialité",
+      "text": "Cette enquête est organisée par Tadjeddine & Partners dans le cadre de l'étude indépendante ABIX 2026. Vos réponses restent confidentielles et sont traitées sous forme anonyme et agrégée."
+    },
+    "cta": {
+      "bannerTitle": "Participez au Baromètre e-Banking 2026",
+      "bannerText": "Donnez votre avis sur l'application mobile et l'espace web de votre banque en moins de 2 minutes.",
+      "button": "Répondre au questionnaire"
     }
   }
 }

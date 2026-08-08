@@ -1,0 +1,14 @@
+{
+  "responses": [
+    {
+      "bank": "Banque Nationale d'Algérie",
+      "service": "Application mobile",
+      "satisfaction": "Satisfait"
+    },
+    {
+      "bank": "Banque Extérieure d'Algérie",
+      "service": "E-banking web",
+      "satisfaction": "Très satisfait"
+    }
+  ]
+}

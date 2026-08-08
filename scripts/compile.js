@@ -44,6 +44,7 @@ const PAGES = [
   { template: "services.html",      output: "services/index.html",          titleKey: "services" },
   { template: "a-propos.html",      output: "a-propos/index.html",          titleKey: "about" },
   { template: "contact.html",       output: "contact/index.html",           titleKey: "contact" },
+  { template: "questionnaire.html", output: "questionnaire/index.html",     titleKey: "questionnaire" },
   { template: "classements.html",   output: "classements/index.html",       titleKey: "rankings" },
   { template: "banques.html",       output: "banques/index.html",           titleKey: "banks" },
   { template: "mentions-legales.html", output: "mentions-legales/index.html", titleKey: "legal" },
@@ -154,54 +155,49 @@ function buildMainNav(lang, pageKey, translations, langSwitcher) {
   const tEd2025 = translations.edition2025 || {};
 
   const isHomeActive = pageKey === "home" ? " nav-link--active" : "";
-  const isEd2026Active = pageKey === "edition2026" ? " nav-link--active" : "";
-  const isEd2025Active = pageKey === "edition2025" ? " nav-link--active" : "";
   const isEditionsActive = (pageKey === "edition2026" || pageKey === "edition2025" || pageKey === "rankings" || pageKey === "banks") ? " nav-link--active" : "";
-  const isMethodologyActive = pageKey === "methodology" ? " nav-link--active" : "";
+  const isStudyActive = (pageKey === "methodology" || pageKey === "questionnaire") ? " nav-link--active" : "";
   const isAbixIndexActive = pageKey === "abixIndex" ? " nav-link--active" : "";
   const isServicesActive = pageKey === "services" ? " nav-link--active" : "";
-  const isAboutActive = pageKey === "about" ? " nav-link--active" : "";
-  const isContactActive = pageKey === "contact" ? " nav-link--active" : "";
+  const isAboutActive = (pageKey === "about" || pageKey === "contact") ? " nav-link--active" : "";
 
-  const isHomeMobileActive = pageKey === "home" ? " mobile-nav-link--active" : "";
-  const isEd2026MobileActive = pageKey === "edition2026" ? " mobile-nav-link--active" : "";
-  const isEd2025MobileActive = pageKey === "edition2025" ? " mobile-nav-link--active" : "";
-  const isMethodologyMobileActive = pageKey === "methodology" ? " mobile-nav-link--active" : "";
-  const isAbixIndexMobileActive = pageKey === "abixIndex" ? " mobile-nav-link--active" : "";
-  const isServicesMobileActive = pageKey === "services" ? " mobile-nav-link--active" : "";
-  const isAboutMobileActive = pageKey === "about" ? " mobile-nav-link--active" : "";
-  const isContactMobileActive = pageKey === "contact" ? " mobile-nav-link--active" : "";
+  const isEd2026Active = pageKey === "edition2026" ? " nav-link--active" : "";
+  const isEd2025Active = pageKey === "edition2025" ? " nav-link--active" : "";
+  const isMethodologyActive = pageKey === "methodology" ? " nav-link--active" : "";
+  const isQuestionnaireActive = pageKey === "questionnaire" ? " nav-link--active" : "";
+  const isAboutPageActive = pageKey === "about" ? " nav-link--active" : "";
+  const isContactPageActive = pageKey === "contact" ? " nav-link--active" : "";
 
   let ctaHtml = '';
   let mobileCtaHtml = '';
 
+  const targetTarifs2026 = `${BASE_PATH}/${lang}/editions/2026/#tarifs`;
+  const ctaText = tHome.hero?.ctaPreorder || tEd2026.hero?.ctaPreorder || "Souscrire à l'édition 2026";
+
   if (pageKey === "edition2026") {
-    const ctaText = tEd2026.hero?.ctaPreorder || tHome.hero?.ctaPreorder || "Précommander l'édition 2026";
-    ctaHtml = `<a href="#precommande" data-track="click_preorder_2026" class="btn-cta-sm">${ctaText}</a>`;
-    mobileCtaHtml = `<a href="#precommande" data-track="click_preorder_2026" class="btn-cta w-full text-center block">${ctaText}</a>`;
-  } else if (pageKey === "edition2025") {
-    const ctaText = tEd2025.hero?.ctaPrimary || tNav.ctaStudy || "Obtenir l'étude";
-    ctaHtml = `<a href="#tarifs" data-track="click_edition_2025_tarifs" class="btn-cta-sm">${ctaText}</a>`;
-    mobileCtaHtml = `<a href="#tarifs" data-track="click_edition_2025_tarifs" class="btn-cta w-full text-center block">${ctaText}</a>`;
+    ctaHtml = `<a href="#tarifs" data-track="click_preorder_2026" class="btn-cta-sm whitespace-nowrap">${ctaText}</a>`;
+    mobileCtaHtml = `<a href="#tarifs" data-track="click_preorder_2026" class="btn-cta w-full text-center block">${ctaText}</a>`;
   } else {
-    const ctaText = tHome.hero?.ctaPreorder || tEd2026.hero?.ctaPreorder || "Précommander l'édition 2026";
-    ctaHtml = `<button onclick="openPreorder('2026')" data-track="click_preorder_2026" class="btn-cta-sm">${ctaText}</button>`;
-    mobileCtaHtml = `<button onclick="openPreorder('2026')" data-track="click_preorder_2026" class="btn-cta w-full text-center block">${ctaText}</button>`;
+    ctaHtml = `<a href="${targetTarifs2026}" data-track="click_preorder_2026" class="btn-cta-sm whitespace-nowrap">${ctaText}</a>`;
+    mobileCtaHtml = `<a href="${targetTarifs2026}" data-track="click_preorder_2026" class="btn-cta w-full text-center block">${ctaText}</a>`;
   }
 
-  const prepBadge = lang === 'en' ? 'Pre-order' : lang === 'ar' ? 'طلب مسبق' : 'Précommande';
+  const prepBadge = lang === 'en' ? 'Early Subscription' : lang === 'ar' ? 'اشتراك مسبق' : 'Souscription';
   const availBadge = lang === 'en' ? 'Available' : lang === 'ar' ? 'متاح' : (tEd2025.hero?.badge || 'Disponible');
 
   return `<nav id="main-nav" class="fixed top-0 w-full bg-white/95 backdrop-blur-sm z-50 border-b border-gray-100 transition-all duration-300">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex justify-between items-center h-16">
-      <a href="${BASE_PATH}/${lang}/" class="flex items-center py-1">
+      <a href="${BASE_PATH}/${lang}/" class="flex items-center py-1 flex-shrink-0" aria-label="${tNav.home || 'Accueil'}">
         <img src="${BASE_PATH}/public/logo.png" alt="ABIX — ${SITE_CONFIG.publisherName}" class="h-10 sm:h-12 w-auto object-contain" />
       </a>
-      <div class="hidden md:flex items-center gap-6">
-        <a href="${BASE_PATH}/${lang}/" class="nav-link${isHomeActive}">${tNav.home || "Accueil"}</a>
+      <div class="hidden md:flex items-center gap-5 lg:gap-6">
+        <!-- Menu 0 : Accueil -->
+        <a href="${BASE_PATH}/${lang}/" class="nav-link whitespace-nowrap${isHomeActive}">${tNav.home || "Accueil"}</a>
+
+        <!-- Menu 1 : Éditions -->
         <div class="relative group">
-          <button class="nav-link flex items-center gap-1${isEditionsActive}" aria-expanded="false" aria-haspopup="true">
+          <button class="nav-link flex items-center gap-1 whitespace-nowrap${isEditionsActive}" aria-expanded="false" aria-haspopup="true">
             ${tNav.editions || "Éditions"}
             <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
           </button>
@@ -223,11 +219,41 @@ function buildMainNav(lang, pageKey, translations, langSwitcher) {
             </a>
           </div>
         </div>
-        <a href="${BASE_PATH}/${lang}/methodologie/" class="nav-link${isMethodologyActive}">${tNav.methodology || "Méthodologie"}</a>
-        <a href="${BASE_PATH}/${lang}/indice-abix/" class="nav-link${isAbixIndexActive}">${tNav.abixIndex || "Projet ABIX"}</a>
-        <a href="${BASE_PATH}/${lang}/services/" class="nav-link${isServicesActive}">${tNav.services || "Services"}</a>
-        <a href="${BASE_PATH}/${lang}/a-propos/" class="nav-link${isAboutActive}">${tNav.about || "À propos"}</a>
-        <a href="${BASE_PATH}/${lang}/contact/" class="nav-link${isContactActive}">${tNav.contact || "Contact"}</a>
+
+        <!-- Menu 2 : L'étude -->
+        <div class="relative group">
+          <button class="nav-link flex items-center gap-1 whitespace-nowrap${isStudyActive}" aria-expanded="false" aria-haspopup="true">
+            ${tNav.study || "L’étude"}
+            <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="dropdown-menu">
+            <a href="${BASE_PATH}/${lang}/methodologie/" class="dropdown-item${isMethodologyActive}">
+              ${tNav.methodology || "Méthodologie"}
+            </a>
+            <a href="${BASE_PATH}/${lang}/questionnaire/" class="dropdown-item${isQuestionnaireActive}">
+              ${tNav.barometer2026 || "Baromètre e-banking 2026"}
+            </a>
+          </div>
+        </div>
+
+        <!-- Menu 4 : Services -->
+        <a href="${BASE_PATH}/${lang}/services/" class="nav-link whitespace-nowrap${isServicesActive}">${tNav.services || "Services"}</a>
+
+        <!-- Menu 5 : À propos -->
+        <div class="relative group">
+          <button class="nav-link flex items-center gap-1 whitespace-nowrap${isAboutActive}" aria-expanded="false" aria-haspopup="true">
+            ${tNav.about || "À propos"}
+            <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="dropdown-menu">
+            <a href="${BASE_PATH}/${lang}/a-propos/" class="dropdown-item${isAboutPageActive}">
+              ${tNav.about || "À propos"}
+            </a>
+            <a href="${BASE_PATH}/${lang}/contact/" class="dropdown-item${isContactPageActive}">
+              ${tNav.contact || "Contact"}
+            </a>
+          </div>
+        </div>
       </div>
       <div class="hidden md:flex items-center gap-4">
         <div class="lang-switcher" aria-label="${tNav.langSelectLabel || 'Langue'}">
@@ -240,26 +266,50 @@ function buildMainNav(lang, pageKey, translations, langSwitcher) {
       </button>
     </div>
   </div>
+
   <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 shadow-lg">
-    <div class="px-4 py-4 space-y-1">
-      <a href="${BASE_PATH}/${lang}/" class="mobile-nav-link${isHomeMobileActive}">${tNav.home || "Accueil"}</a>
-      <div class="ps-2 border-l-2 border-primary/20 space-y-1 my-1">
-        <a href="${BASE_PATH}/${lang}/editions/2026/" class="mobile-nav-link flex items-center justify-between${isEd2026MobileActive}">
-          <span>${tNav.edition2026 || "Édition 2026"}</span>
-          <span class="dropdown-badge dropdown-badge--prep">${prepBadge}</span>
-        </a>
-        <a href="${BASE_PATH}/${lang}/editions/2025/" class="mobile-nav-link flex items-center justify-between${isEd2025MobileActive}">
-          <span>${tNav.edition2025 || "Édition 2025"}</span>
-          <span class="dropdown-badge dropdown-badge--avail">${availBadge}</span>
-        </a>
-        <a href="${BASE_PATH}/${lang}/classements/" class="mobile-nav-link${pageKey === 'rankings' ? ' mobile-nav-link--active' : ''}">${tNav.rankings || "Classements"}</a>
-        <a href="${BASE_PATH}/${lang}/banques/" class="mobile-nav-link${pageKey === 'banks' ? ' mobile-nav-link--active' : ''}">${tNav.banks || "Banques"}</a>
+    <div class="px-4 py-4 space-y-2">
+      <!-- Item 0 : Accueil -->
+      <a href="${BASE_PATH}/${lang}/" class="mobile-nav-link${pageKey === 'home' ? ' mobile-nav-link--active' : ''}">${tNav.home || "Accueil"}</a>
+
+      <!-- Section 1 : Éditions -->
+      <div>
+        <span class="block px-3 py-1 text-xs font-bold uppercase tracking-wider text-gray-400">${tNav.editions || "Éditions"}</span>
+        <div class="ps-3 border-s-2 border-primary/20 space-y-1 my-1">
+          <a href="${BASE_PATH}/${lang}/editions/2026/" class="mobile-nav-link flex items-center justify-between${pageKey === 'edition2026' ? ' mobile-nav-link--active' : ''}">
+            <span>${tNav.edition2026 || "Édition 2026"}</span>
+            <span class="dropdown-badge dropdown-badge--prep">${prepBadge}</span>
+          </a>
+          <a href="${BASE_PATH}/${lang}/editions/2025/" class="mobile-nav-link flex items-center justify-between${pageKey === 'edition2025' ? ' mobile-nav-link--active' : ''}">
+            <span>${tNav.edition2025 || "Édition 2025"}</span>
+            <span class="dropdown-badge dropdown-badge--avail">${availBadge}</span>
+          </a>
+          <a href="${BASE_PATH}/${lang}/classements/" class="mobile-nav-link${pageKey === 'rankings' ? ' mobile-nav-link--active' : ''}">${tNav.rankings || "Classements"}</a>
+          <a href="${BASE_PATH}/${lang}/banques/" class="mobile-nav-link${pageKey === 'banks' ? ' mobile-nav-link--active' : ''}">${tNav.banks || "Banques"}</a>
+        </div>
       </div>
-      <a href="${BASE_PATH}/${lang}/methodologie/" class="mobile-nav-link${isMethodologyMobileActive}">${tNav.methodology || "Méthodologie"}</a>
-      <a href="${BASE_PATH}/${lang}/indice-abix/" class="mobile-nav-link${isAbixIndexMobileActive}">${tNav.abixIndex || "Projet ABIX"}</a>
-      <a href="${BASE_PATH}/${lang}/services/" class="mobile-nav-link${isServicesMobileActive}">${tNav.services || "Services"}</a>
-      <a href="${BASE_PATH}/${lang}/a-propos/" class="mobile-nav-link${isAboutMobileActive}">${tNav.about || "À propos"}</a>
-      <a href="${BASE_PATH}/${lang}/contact/" class="mobile-nav-link${isContactMobileActive}">${tNav.contact || "Contact"}</a>
+
+      <!-- Section 2 : L'étude -->
+      <div>
+        <span class="block px-3 py-1 text-xs font-bold uppercase tracking-wider text-gray-400">${tNav.study || "L’étude"}</span>
+        <div class="ps-3 border-s-2 border-primary/20 space-y-1 my-1">
+          <a href="${BASE_PATH}/${lang}/methodologie/" class="mobile-nav-link${pageKey === 'methodology' ? ' mobile-nav-link--active' : ''}">${tNav.methodology || "Méthodologie"}</a>
+          <a href="${BASE_PATH}/${lang}/questionnaire/" class="mobile-nav-link${pageKey === 'questionnaire' ? ' mobile-nav-link--active' : ''}">${tNav.barometer2026 || "Baromètre e-banking 2026"}</a>
+        </div>
+      </div>
+
+      <!-- Item 4 : Services -->
+      <a href="${BASE_PATH}/${lang}/services/" class="mobile-nav-link${pageKey === 'services' ? ' mobile-nav-link--active' : ''}">${tNav.services || "Services"}</a>
+
+      <!-- Section 5 : À propos -->
+      <div>
+        <span class="block px-3 py-1 text-xs font-bold uppercase tracking-wider text-gray-400">${tNav.about || "À propos"}</span>
+        <div class="ps-3 border-s-2 border-primary/20 space-y-1 my-1">
+          <a href="${BASE_PATH}/${lang}/a-propos/" class="mobile-nav-link${pageKey === 'about' ? ' mobile-nav-link--active' : ''}">${tNav.about || "À propos"}</a>
+          <a href="${BASE_PATH}/${lang}/contact/" class="mobile-nav-link${pageKey === 'contact' ? ' mobile-nav-link--active' : ''}">${tNav.contact || "Contact"}</a>
+        </div>
+      </div>
+
       <div class="pt-3 border-t border-gray-100">
         <p class="text-xs text-gray-400 mb-2 px-2">${tNav.langSelectLabel || "Langue"}</p>
         <div class="lang-switcher-mobile">${langSwitcher}</div>

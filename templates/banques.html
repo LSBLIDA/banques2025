@@ -1,18 +1,24 @@
 <!DOCTYPE html>
 <html lang="{{__lang}}" dir="{{__dir}}">
-<head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-  <title>{{banks.meta.title}}</title><meta name="description" content="{{banks.meta.description}}"/>
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>{{banks.meta.title}}</title>
+  <meta name="description" content="{{banks.meta.description}}"/>
   <link rel="canonical" href="{{__canonical}}"/>{{__hreflang}}
   <link rel="icon" type="image/png" href="{{__basePath}}/public/favicon.png"/>
-  <link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap"/>
   <link rel="stylesheet" href="{{__basePath}}/css/main.css"/>
-  <script src="{{__basePath}}/js/site-config.js" defer></script><script src="{{__basePath}}/js/main.js" defer></script>
+  <script src="{{__basePath}}/js/site-config.js" defer></script>
+  <script src="{{__basePath}}/js/main.js" defer></script>
 </head>
 <body class="font-inter bg-white antialiased">
 {{__mainNav}}
 
 <div class="pt-16">
+  <!-- Hero Section -->
   <section class="bg-banking-gradient text-white py-16">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
       <h1 class="text-4xl lg:text-5xl font-bold font-playfair">{{banks.hero.title}}</h1>
@@ -44,30 +50,406 @@
       <div id="banks-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
 
         <!-- Banques publiques -->
-        <div class="bank-card" data-type="public"><div class="bg-white border border-gray-100 rounded-xl p-5 shadow-sm hover:shadow-md transition-shadow h-full"><div class="flex items-start justify-between mb-3"><div class="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0"><svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 21l18 0M3 7l18 0M6 7l0 14M18 7l0 14M10 11l4 0M10 11l0 4M14 11l0 4M10 15l4 0"/></svg></div><span class="text-xs text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-full font-medium">Public</span></div><h3 class="font-bold text-gray-900">BEA</h3><p class="text-xs text-gray-500 mb-4">Banque Extérieure d'Algérie</p><div class="border-t border-gray-50 pt-3"><p class="text-xs text-gray-400">{{banks.lockMessage}}</p><a href="{{__basePath}}/{{__lang}}/editions/2025/#tarifs" class="text-accent text-xs font-semibold hover:text-accent-700 transition-colors">{{banks.ctaStudy}} →</a></div></div></div>
+        <div class="bank-card" data-type="public">
+          <div class="bg-white border border-gray-200 rounded-xl p-5 shadow-2xs hover:shadow-md transition-all h-full flex flex-col justify-between space-y-4">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div class="w-20 h-12 bg-white border border-gray-200 rounded-lg p-1.5 flex items-center justify-center flex-shrink-0 shadow-2xs">
+                  <img src="{{__basePath}}/public/logos/bea.png" alt="BEA" class="max-h-9 max-w-full object-contain" />
+                </div>
+                <span class="text-xs text-emerald-700 bg-emerald-50 border border-emerald-200/60 px-2.5 py-1 rounded-full font-medium">Public</span>
+              </div>
+              <h3 class="font-bold text-gray-900 text-lg">BEA</h3>
+              <p class="text-xs text-gray-500">Banque Extérieure d'Algérie</p>
+            </div>
+            <div class="border-t border-gray-100 pt-3">
+              <p class="text-xs text-gray-400 mb-2">{{banks.lockMessage}}</p>
+              <a href="{{__basePath}}/{{__lang}}/editions/2025/#tarifs" class="text-accent text-xs font-semibold hover:text-accent-700 transition-colors inline-flex items-center gap-1">{{banks.ctaStudy}} →</a>
+            </div>
+          </div>
+        </div>
 
-        <div class="bank-card" data-type="public"><div class="bg-white border border-gray-100 rounded-xl p-5 shadow-sm hover:shadow-md transition-shadow h-full"><div class="flex items-start justify-between mb-3"><div class="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0"><svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 21l18 0M3 7l18 0M6 7l0 14M18 7l0 14M10 11l4 0M10 11l0 4M14 11l0 4M10 15l4 0"/></svg></div><span class="text-xs text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-full font-medium">Public</span></div><h3 class="font-bold text-gray-900">BNA</h3><p class="text-xs text-gray-500 mb-4">Banque Nationale d'Algérie</p><div class="border-t border-gray-50 pt-3"><p class="text-xs text-gray-400">{{banks.lockMessage}}</p><a href="{{__basePath}}/{{__lang}}/editions/2025/#tarifs" class="text-accent text-xs font-semibold hover:text-accent-700 transition-colors">{{banks.ctaStudy}} →</a></div></div></div>
+        <div class="bank-card" data-type="public">
+          <div class="bg-white border border-gray-200 rounded-xl p-5 shadow-2xs hover:shadow-md transition-all h-full flex flex-col justify-between space-y-4">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div class="w-20 h-12 bg-white border border-gray-200 rounded-lg p-1.5 flex items-center justify-center flex-shrink-0 shadow-2xs">
+                  <img src="{{__basePath}}/public/logos/bna.png" alt="BNA" class="max-h-9 max-w-full object-contain" />
+                </div>
+                <span class="text-xs text-emerald-700 bg-emerald-50 border border-emerald-200/60 px-2.5 py-1 rounded-full font-medium">Public</span>
+              </div>
+              <h3 class="font-bold text-gray-900 text-lg">BNA</h3>
+              <p class="text-xs text-gray-500">Banque Nationale d'Algérie</p>
+            </div>
+            <div class="border-t border-gray-100 pt-3">
+              <p class="text-xs text-gray-400 mb-2">{{banks.lockMessage}}</p>
+              <a href="{{__basePath}}/{{__lang}}/editions/2025/#tarifs" class="text-accent text-xs font-semibold hover:text-accent-700 transition-colors inline-flex items-center gap-1">{{banks.ctaStudy}} →</a>
+            </div>
+          </div>
+        </div>
 
-        <div class="bank-card" data-type="public"><div class="bg-white border border-gray-100 rounded-xl p-5 shadow-sm hover:shadow-md transition-shadow h-full"><div class="flex items-start justify-between mb-3"><div class="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0"><svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 21l18 0M3 7l18 0M6 7l0 14M18 7l0 14M10 11l4 0M10 11l0 4M14 11l0 4M10 15l4 0"/></svg></div><span class="text-xs text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-full font-medium">Public</span></div><h3 class="font-bold text-gray-900">CPA</h3><p class="text-xs text-gray-500 mb-4">Crédit Populaire d'Algérie</p><div class="border-t border-gray-50 pt-3"><p class="text-xs text-gray-400">{{banks.lockMessage}}</p><a href="{{__basePath}}/{{__lang}}/editions/2025/#tarifs" class="text-accent text-xs font-semibold hover:text-accent-700 transition-colors">{{banks.ctaStudy}} →</a></div></div></div>
+        <div class="bank-card" data-type="public">
+          <div class="bg-white border border-gray-200 rounded-xl p-5 shadow-2xs hover:shadow-md transition-all h-full flex flex-col justify-between space-y-4">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div class="w-20 h-12 bg-white border border-gray-200 rounded-lg p-1.5 flex items-center justify-center flex-shrink-0 shadow-2xs">
+                  <img src="{{__basePath}}/public/logos/cpa.png" alt="CPA" class="max-h-9 max-w-full object-contain" />
+                </div>
+                <span class="text-xs text-emerald-700 bg-emerald-50 border border-emerald-200/60 px-2.5 py-1 rounded-full font-medium">Public</span>
+              </div>
+              <h3 class="font-bold text-gray-900 text-lg">CPA</h3>
+              <p class="text-xs text-gray-500">Crédit Populaire d'Algérie</p>
+            </div>
+            <div class="border-t border-gray-100 pt-3">
+              <p class="text-xs text-gray-400 mb-2">{{banks.lockMessage}}</p>
+              <a href="{{__basePath}}/{{__lang}}/editions/2025/#tarifs" class="text-accent text-xs font-semibold hover:text-accent-700 transition-colors inline-flex items-center gap-1">{{banks.ctaStudy}} →</a>
+            </div>
+          </div>
+        </div>
 
-        <div class="bank-card" data-type="public"><div class="bg-white border border-gray-100 rounded-xl p-5 shadow-sm hover:shadow-md transition-shadow h-full"><div class="flex items-start justify-between mb-3"><div class="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0"><svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 21l18 0M3 7l18 0M6 7l0 14M18 7l0 14M10 11l4 0M10 11l0 4M14 11l0 4M10 15l4 0"/></svg></div><span class="text-xs text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-full font-medium">Public</span></div><h3 class="font-bold text-gray-900">BADR</h3><p class="text-xs text-gray-500 mb-4">Banque de l'Agriculture et du Développement Rural</p><div class="border-t border-gray-50 pt-3"><p class="text-xs text-gray-400">{{banks.lockMessage}}</p><a href="{{__basePath}}/{{__lang}}/editions/2025/#tarifs" class="text-accent text-xs font-semibold hover:text-accent-700 transition-colors">{{banks.ctaStudy}} →</a></div></div></div>
+        <div class="bank-card" data-type="public">
+          <div class="bg-white border border-gray-200 rounded-xl p-5 shadow-2xs hover:shadow-md transition-all h-full flex flex-col justify-between space-y-4">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div class="w-20 h-12 bg-white border border-gray-200 rounded-lg p-1.5 flex items-center justify-center flex-shrink-0 shadow-2xs">
+                  <img src="{{__basePath}}/public/logos/badr.png" alt="BADR" class="max-h-9 max-w-full object-contain" />
+                </div>
+                <span class="text-xs text-emerald-700 bg-emerald-50 border border-emerald-200/60 px-2.5 py-1 rounded-full font-medium">Public</span>
+              </div>
+              <h3 class="font-bold text-gray-900 text-lg">BADR</h3>
+              <p class="text-xs text-gray-500">Banque de l'Agriculture et du Développement Rural</p>
+            </div>
+            <div class="border-t border-gray-100 pt-3">
+              <p class="text-xs text-gray-400 mb-2">{{banks.lockMessage}}</p>
+              <a href="{{__basePath}}/{{__lang}}/editions/2025/#tarifs" class="text-accent text-xs font-semibold hover:text-accent-700 transition-colors inline-flex items-center gap-1">{{banks.ctaStudy}} →</a>
+            </div>
+          </div>
+        </div>
 
-        <div class="bank-card" data-type="public"><div class="bg-white border border-gray-100 rounded-xl p-5 shadow-sm hover:shadow-md transition-shadow h-full"><div class="flex items-start justify-between mb-3"><div class="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0"><svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 21l18 0M3 7l18 0M6 7l0 14M18 7l0 14M10 11l4 0M10 11l0 4M14 11l0 4M10 15l4 0"/></svg></div><span class="text-xs text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-full font-medium">Public</span></div><h3 class="font-bold text-gray-900">BDL</h3><p class="text-xs text-gray-500 mb-4">Banque de Développement Local</p><div class="border-t border-gray-50 pt-3"><p class="text-xs text-gray-400">{{banks.lockMessage}}</p><a href="{{__basePath}}/{{__lang}}/editions/2025/#tarifs" class="text-accent text-xs font-semibold hover:text-accent-700 transition-colors">{{banks.ctaStudy}} →</a></div></div></div>
+        <div class="bank-card" data-type="public">
+          <div class="bg-white border border-gray-200 rounded-xl p-5 shadow-2xs hover:shadow-md transition-all h-full flex flex-col justify-between space-y-4">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div class="w-20 h-12 bg-white border border-gray-200 rounded-lg p-1.5 flex items-center justify-center flex-shrink-0 shadow-2xs">
+                  <img src="{{__basePath}}/public/logos/bdl.jpg" alt="BDL" class="max-h-9 max-w-full object-contain" />
+                </div>
+                <span class="text-xs text-emerald-700 bg-emerald-50 border border-emerald-200/60 px-2.5 py-1 rounded-full font-medium">Public</span>
+              </div>
+              <h3 class="font-bold text-gray-900 text-lg">BDL</h3>
+              <p class="text-xs text-gray-500">Banque du Développement Local</p>
+            </div>
+            <div class="border-t border-gray-100 pt-3">
+              <p class="text-xs text-gray-400 mb-2">{{banks.lockMessage}}</p>
+              <a href="{{__basePath}}/{{__lang}}/editions/2025/#tarifs" class="text-accent text-xs font-semibold hover:text-accent-700 transition-colors inline-flex items-center gap-1">{{banks.ctaStudy}} →</a>
+            </div>
+          </div>
+        </div>
 
-        <div class="bank-card" data-type="public"><div class="bg-white border border-gray-100 rounded-xl p-5 shadow-sm hover:shadow-md transition-shadow h-full"><div class="flex items-start justify-between mb-3"><div class="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0"><svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 21l18 0M3 7l18 0M6 7l0 14M18 7l0 14M10 11l4 0M10 11l0 4M14 11l0 4M10 15l4 0"/></svg></div><span class="text-xs text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-full font-medium">Public</span></div><h3 class="font-bold text-gray-900">CNEP-Banque</h3><p class="text-xs text-gray-500 mb-4">Caisse Nationale d'Épargne et de Prévoyance</p><div class="border-t border-gray-50 pt-3"><p class="text-xs text-gray-400">{{banks.lockMessage}}</p><a href="{{__basePath}}/{{__lang}}/editions/2025/#tarifs" class="text-accent text-xs font-semibold hover:text-accent-700 transition-colors">{{banks.ctaStudy}} →</a></div></div></div>
+        <div class="bank-card" data-type="public">
+          <div class="bg-white border border-gray-200 rounded-xl p-5 shadow-2xs hover:shadow-md transition-all h-full flex flex-col justify-between space-y-4">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div class="w-20 h-12 bg-white border border-gray-200 rounded-lg p-1.5 flex items-center justify-center flex-shrink-0 shadow-2xs">
+                  <img src="{{__basePath}}/public/logos/cnep.png" alt="CNEP-Banque" class="max-h-9 max-w-full object-contain" />
+                </div>
+                <span class="text-xs text-emerald-700 bg-emerald-50 border border-emerald-200/60 px-2.5 py-1 rounded-full font-medium">Public</span>
+              </div>
+              <h3 class="font-bold text-gray-900 text-lg">CNEP-Banque</h3>
+              <p class="text-xs text-gray-500">Caisse Nationale d'Épargne et de Prévoyance</p>
+            </div>
+            <div class="border-t border-gray-100 pt-3">
+              <p class="text-xs text-gray-400 mb-2">{{banks.lockMessage}}</p>
+              <a href="{{__basePath}}/{{__lang}}/editions/2025/#tarifs" class="text-accent text-xs font-semibold hover:text-accent-700 transition-colors inline-flex items-center gap-1">{{banks.ctaStudy}} →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="bank-card" data-type="public">
+          <div class="bg-white border border-gray-200 rounded-xl p-5 shadow-2xs hover:shadow-md transition-all h-full flex flex-col justify-between space-y-4">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div class="w-20 h-12 bg-white border border-gray-200 rounded-lg p-1.5 flex items-center justify-center flex-shrink-0 shadow-2xs">
+                  <img src="{{__basePath}}/public/logos/bnh.jpg" alt="BNH" class="max-h-9 max-w-full object-contain" />
+                </div>
+                <span class="text-xs text-emerald-700 bg-emerald-50 border border-emerald-200/60 px-2.5 py-1 rounded-full font-medium">Public</span>
+              </div>
+              <h3 class="font-bold text-gray-900 text-lg">BNH</h3>
+              <p class="text-xs text-gray-500">Banque Nationale de l'Habitat</p>
+            </div>
+            <div class="border-t border-gray-100 pt-3">
+              <p class="text-xs text-gray-400 mb-2">{{banks.lockMessage}}</p>
+              <a href="{{__basePath}}/{{__lang}}/editions/2025/#tarifs" class="text-accent text-xs font-semibold hover:text-accent-700 transition-colors inline-flex items-center gap-1">{{banks.ctaStudy}} →</a>
+            </div>
+          </div>
+        </div>
 
         <!-- Banques privées -->
-        <div class="bank-card" data-type="private"><div class="bg-white border border-gray-100 rounded-xl p-5 shadow-sm hover:shadow-md transition-shadow h-full"><div class="flex items-start justify-between mb-3"><div class="w-10 h-10 bg-accent/10 rounded-lg flex items-center justify-center flex-shrink-0"><svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg></div><span class="text-xs text-blue-600 bg-blue-50 px-2 py-0.5 rounded-full font-medium">Privé</span></div><h3 class="font-bold text-gray-900">Al Baraka Bank</h3><p class="text-xs text-gray-500 mb-4">Banque Al Baraka d'Algérie</p><div class="border-t border-gray-50 pt-3"><p class="text-xs text-gray-400">{{banks.lockMessage}}</p><a href="{{__basePath}}/{{__lang}}/editions/2025/#tarifs" class="text-accent text-xs font-semibold hover:text-accent-700 transition-colors">{{banks.ctaStudy}} →</a></div></div></div>
+        <div class="bank-card" data-type="private">
+          <div class="bg-white border border-gray-200 rounded-xl p-5 shadow-2xs hover:shadow-md transition-all h-full flex flex-col justify-between space-y-4">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div class="w-20 h-12 bg-white border border-gray-200 rounded-lg p-1.5 flex items-center justify-center flex-shrink-0 shadow-2xs">
+                  <img src="{{__basePath}}/public/logos/albaraka.png" alt="Al Baraka Bank" class="max-h-9 max-w-full object-contain" />
+                </div>
+                <span class="text-xs text-blue-700 bg-blue-50 border border-blue-200/60 px-2.5 py-1 rounded-full font-medium">Privé</span>
+              </div>
+              <h3 class="font-bold text-gray-900 text-lg">Al Baraka Bank</h3>
+              <p class="text-xs text-gray-500">Banque Al Baraka d'Algérie</p>
+            </div>
+            <div class="border-t border-gray-100 pt-3">
+              <p class="text-xs text-gray-400 mb-2">{{banks.lockMessage}}</p>
+              <a href="{{__basePath}}/{{__lang}}/editions/2025/#tarifs" class="text-accent text-xs font-semibold hover:text-accent-700 transition-colors inline-flex items-center gap-1">{{banks.ctaStudy}} →</a>
+            </div>
+          </div>
+        </div>
 
-        <div class="bank-card" data-type="private"><div class="bg-white border border-gray-100 rounded-xl p-5 shadow-sm hover:shadow-md transition-shadow h-full"><div class="flex items-start justify-between mb-3"><div class="w-10 h-10 bg-accent/10 rounded-lg flex items-center justify-center flex-shrink-0"><svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg></div><span class="text-xs text-blue-600 bg-blue-50 px-2 py-0.5 rounded-full font-medium">Privé</span></div><h3 class="font-bold text-gray-900">BNP Paribas El Djazaïr</h3><p class="text-xs text-gray-500 mb-4">BNP Paribas El Djazaïr</p><div class="border-t border-gray-50 pt-3"><p class="text-xs text-gray-400">{{banks.lockMessage}}</p><a href="{{__basePath}}/{{__lang}}/editions/2025/#tarifs" class="text-accent text-xs font-semibold hover:text-accent-700 transition-colors">{{banks.ctaStudy}} →</a></div></div></div>
+        <div class="bank-card" data-type="private">
+          <div class="bg-white border border-gray-200 rounded-xl p-5 shadow-2xs hover:shadow-md transition-all h-full flex flex-col justify-between space-y-4">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div class="w-20 h-12 bg-white border border-gray-200 rounded-lg p-1.5 flex items-center justify-center flex-shrink-0 shadow-2xs">
+                  <img src="{{__basePath}}/public/logos/bnp.jpg" alt="BNP Paribas" class="max-h-9 max-w-full object-contain" />
+                </div>
+                <span class="text-xs text-blue-700 bg-blue-50 border border-blue-200/60 px-2.5 py-1 rounded-full font-medium">Privé</span>
+              </div>
+              <h3 class="font-bold text-gray-900 text-lg">BNP Paribas El Djazaïr</h3>
+              <p class="text-xs text-gray-500">BNP Paribas El Djazaïr</p>
+            </div>
+            <div class="border-t border-gray-100 pt-3">
+              <p class="text-xs text-gray-400 mb-2">{{banks.lockMessage}}</p>
+              <a href="{{__basePath}}/{{__lang}}/editions/2025/#tarifs" class="text-accent text-xs font-semibold hover:text-accent-700 transition-colors inline-flex items-center gap-1">{{banks.ctaStudy}} →</a>
+            </div>
+          </div>
+        </div>
 
-        <div class="bank-card" data-type="private"><div class="bg-white border border-gray-100 rounded-xl p-5 shadow-sm hover:shadow-md transition-shadow h-full"><div class="flex items-start justify-between mb-3"><div class="w-10 h-10 bg-accent/10 rounded-lg flex items-center justify-center flex-shrink-0"><svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg></div><span class="text-xs text-blue-600 bg-blue-50 px-2 py-0.5 rounded-full font-medium">Privé</span></div><h3 class="font-bold text-gray-900">Société Générale Algérie</h3><p class="text-xs text-gray-500 mb-4">Société Générale Algérie</p><div class="border-t border-gray-50 pt-3"><p class="text-xs text-gray-400">{{banks.lockMessage}}</p><a href="{{__basePath}}/{{__lang}}/editions/2025/#tarifs" class="text-accent text-xs font-semibold hover:text-accent-700 transition-colors">{{banks.ctaStudy}} →</a></div></div></div>
+        <div class="bank-card" data-type="private">
+          <div class="bg-white border border-gray-200 rounded-xl p-5 shadow-2xs hover:shadow-md transition-all h-full flex flex-col justify-between space-y-4">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div class="w-20 h-12 bg-white border border-gray-200 rounded-lg p-1.5 flex items-center justify-center flex-shrink-0 shadow-2xs">
+                  <img src="{{__basePath}}/public/logos/sga.jpg" alt="Société Générale" class="max-h-9 max-w-full object-contain" />
+                </div>
+                <span class="text-xs text-blue-700 bg-blue-50 border border-blue-200/60 px-2.5 py-1 rounded-full font-medium">Privé</span>
+              </div>
+              <h3 class="font-bold text-gray-900 text-lg">Société Générale</h3>
+              <p class="text-xs text-gray-500">Société Générale Algérie</p>
+            </div>
+            <div class="border-t border-gray-100 pt-3">
+              <p class="text-xs text-gray-400 mb-2">{{banks.lockMessage}}</p>
+              <a href="{{__basePath}}/{{__lang}}/editions/2025/#tarifs" class="text-accent text-xs font-semibold hover:text-accent-700 transition-colors inline-flex items-center gap-1">{{banks.ctaStudy}} →</a>
+            </div>
+          </div>
+        </div>
 
-        <div class="bank-card" data-type="private"><div class="bg-white border border-gray-100 rounded-xl p-5 shadow-sm hover:shadow-md transition-shadow h-full"><div class="flex items-start justify-between mb-3"><div class="w-10 h-10 bg-accent/10 rounded-lg flex items-center justify-center flex-shrink-0"><svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg></div><span class="text-xs text-blue-600 bg-blue-50 px-2 py-0.5 rounded-full font-medium">Privé</span></div><h3 class="font-bold text-gray-900">ABC Bank Algeria</h3><p class="text-xs text-gray-500 mb-4">Arab Banking Corporation Algeria</p><div class="border-t border-gray-50 pt-3"><p class="text-xs text-gray-400">{{banks.lockMessage}}</p><a href="{{__basePath}}/{{__lang}}/editions/2025/#tarifs" class="text-accent text-xs font-semibold hover:text-accent-700 transition-colors">{{banks.ctaStudy}} →</a></div></div></div>
+        <div class="bank-card" data-type="private">
+          <div class="bg-white border border-gray-200 rounded-xl p-5 shadow-2xs hover:shadow-md transition-all h-full flex flex-col justify-between space-y-4">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div class="w-20 h-12 bg-white border border-gray-200 rounded-lg p-1.5 flex items-center justify-center flex-shrink-0 shadow-2xs">
+                  <img src="{{__basePath}}/public/logos/agb.jpg" alt="AGB" class="max-h-9 max-w-full object-contain" />
+                </div>
+                <span class="text-xs text-blue-700 bg-blue-50 border border-blue-200/60 px-2.5 py-1 rounded-full font-medium">Privé</span>
+              </div>
+              <h3 class="font-bold text-gray-900 text-lg">AGB</h3>
+              <p class="text-xs text-gray-500">Gulf Bank Algérie</p>
+            </div>
+            <div class="border-t border-gray-100 pt-3">
+              <p class="text-xs text-gray-400 mb-2">{{banks.lockMessage}}</p>
+              <a href="{{__basePath}}/{{__lang}}/editions/2025/#tarifs" class="text-accent text-xs font-semibold hover:text-accent-700 transition-colors inline-flex items-center gap-1">{{banks.ctaStudy}} →</a>
+            </div>
+          </div>
+        </div>
 
-        <!-- + 12 autres banques similaires — simplifiées pour la Phase 1 -->
-        <!-- Les 12 banques restantes ont la même structure de carte : public/privé, lockMessage, ctaStudy -->
-        <!-- Aucune donnée financière n'est présente dans le HTML -->
+        <div class="bank-card" data-type="private">
+          <div class="bg-white border border-gray-200 rounded-xl p-5 shadow-2xs hover:shadow-md transition-all h-full flex flex-col justify-between space-y-4">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div class="w-20 h-12 bg-white border border-gray-200 rounded-lg p-1.5 flex items-center justify-center flex-shrink-0 shadow-2xs">
+                  <img src="{{__basePath}}/public/logos/natixis.jpg" alt="Natixis" class="max-h-9 max-w-full object-contain" />
+                </div>
+                <span class="text-xs text-blue-700 bg-blue-50 border border-blue-200/60 px-2.5 py-1 rounded-full font-medium">Privé</span>
+              </div>
+              <h3 class="font-bold text-gray-900 text-lg">Natixis Algérie</h3>
+              <p class="text-xs text-gray-500">Natixis Algérie</p>
+            </div>
+            <div class="border-t border-gray-100 pt-3">
+              <p class="text-xs text-gray-400 mb-2">{{banks.lockMessage}}</p>
+              <a href="{{__basePath}}/{{__lang}}/editions/2025/#tarifs" class="text-accent text-xs font-semibold hover:text-accent-700 transition-colors inline-flex items-center gap-1">{{banks.ctaStudy}} →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="bank-card" data-type="private">
+          <div class="bg-white border border-gray-200 rounded-xl p-5 shadow-2xs hover:shadow-md transition-all h-full flex flex-col justify-between space-y-4">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div class="w-20 h-12 bg-white border border-gray-200 rounded-lg p-1.5 flex items-center justify-center flex-shrink-0 shadow-2xs">
+                  <img src="{{__basePath}}/public/logos/alsalam.png" alt="Alsalam Bank" class="max-h-9 max-w-full object-contain" />
+                </div>
+                <span class="text-xs text-blue-700 bg-blue-50 border border-blue-200/60 px-2.5 py-1 rounded-full font-medium">Privé</span>
+              </div>
+              <h3 class="font-bold text-gray-900 text-lg">Alsalam Bank</h3>
+              <p class="text-xs text-gray-500">Alsalam Bank Algeria</p>
+            </div>
+            <div class="border-t border-gray-100 pt-3">
+              <p class="text-xs text-gray-400 mb-2">{{banks.lockMessage}}</p>
+              <a href="{{__basePath}}/{{__lang}}/editions/2025/#tarifs" class="text-accent text-xs font-semibold hover:text-accent-700 transition-colors inline-flex items-center gap-1">{{banks.ctaStudy}} →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="bank-card" data-type="private">
+          <div class="bg-white border border-gray-200 rounded-xl p-5 shadow-2xs hover:shadow-md transition-all h-full flex flex-col justify-between space-y-4">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div class="w-20 h-12 bg-white border border-gray-200 rounded-lg p-1.5 flex items-center justify-center flex-shrink-0 shadow-2xs">
+                  <img src="{{__basePath}}/public/logos/housing.png" alt="Housing Bank" class="max-h-9 max-w-full object-contain" />
+                </div>
+                <span class="text-xs text-blue-700 bg-blue-50 border border-blue-200/60 px-2.5 py-1 rounded-full font-medium">Privé</span>
+              </div>
+              <h3 class="font-bold text-gray-900 text-lg">Housing Bank</h3>
+              <p class="text-xs text-gray-500">Housing Bank Algeria</p>
+            </div>
+            <div class="border-t border-gray-100 pt-3">
+              <p class="text-xs text-gray-400 mb-2">{{banks.lockMessage}}</p>
+              <a href="{{__basePath}}/{{__lang}}/editions/2025/#tarifs" class="text-accent text-xs font-semibold hover:text-accent-700 transition-colors inline-flex items-center gap-1">{{banks.ctaStudy}} →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="bank-card" data-type="private">
+          <div class="bg-white border border-gray-200 rounded-xl p-5 shadow-2xs hover:shadow-md transition-all h-full flex flex-col justify-between space-y-4">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div class="w-20 h-12 bg-white border border-gray-200 rounded-lg p-1.5 flex items-center justify-center flex-shrink-0 shadow-2xs">
+                  <img src="{{__basePath}}/public/logos/arab-bank.jpg" alt="Arab Bank" class="max-h-9 max-w-full object-contain" />
+                </div>
+                <span class="text-xs text-blue-700 bg-blue-50 border border-blue-200/60 px-2.5 py-1 rounded-full font-medium">Privé</span>
+              </div>
+              <h3 class="font-bold text-gray-900 text-lg">Arab Bank</h3>
+              <p class="text-xs text-gray-500">Arab Bank Algeria</p>
+            </div>
+            <div class="border-t border-gray-100 pt-3">
+              <p class="text-xs text-gray-400 mb-2">{{banks.lockMessage}}</p>
+              <a href="{{__basePath}}/{{__lang}}/editions/2025/#tarifs" class="text-accent text-xs font-semibold hover:text-accent-700 transition-colors inline-flex items-center gap-1">{{banks.ctaStudy}} →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="bank-card" data-type="private">
+          <div class="bg-white border border-gray-200 rounded-xl p-5 shadow-2xs hover:shadow-md transition-all h-full flex flex-col justify-between space-y-4">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div class="w-20 h-12 bg-white border border-gray-200 rounded-lg p-1.5 flex items-center justify-center flex-shrink-0 shadow-2xs">
+                  <img src="{{__basePath}}/public/logos/abc.png" alt="Bank ABC" class="max-h-9 max-w-full object-contain" />
+                </div>
+                <span class="text-xs text-blue-700 bg-blue-50 border border-blue-200/60 px-2.5 py-1 rounded-full font-medium">Privé</span>
+              </div>
+              <h3 class="font-bold text-gray-900 text-lg">Bank ABC</h3>
+              <p class="text-xs text-gray-500">Arab Banking Corporation Algeria</p>
+            </div>
+            <div class="border-t border-gray-100 pt-3">
+              <p class="text-xs text-gray-400 mb-2">{{banks.lockMessage}}</p>
+              <a href="{{__basePath}}/{{__lang}}/editions/2025/#tarifs" class="text-accent text-xs font-semibold hover:text-accent-700 transition-colors inline-flex items-center gap-1">{{banks.ctaStudy}} →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="bank-card" data-type="private">
+          <div class="bg-white border border-gray-200 rounded-xl p-5 shadow-2xs hover:shadow-md transition-all h-full flex flex-col justify-between space-y-4">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div class="w-20 h-12 bg-white border border-gray-200 rounded-lg p-1.5 flex items-center justify-center flex-shrink-0 shadow-2xs">
+                  <img src="{{__basePath}}/public/logos/fransabank.jpg" alt="Fransabank" class="max-h-9 max-w-full object-contain" />
+                </div>
+                <span class="text-xs text-blue-700 bg-blue-50 border border-blue-200/60 px-2.5 py-1 rounded-full font-medium">Privé</span>
+              </div>
+              <h3 class="font-bold text-gray-900 text-lg">Fransabank</h3>
+              <p class="text-xs text-gray-500">Fransabank El Djazaïr SPA</p>
+            </div>
+            <div class="border-t border-gray-100 pt-3">
+              <p class="text-xs text-gray-400 mb-2">{{banks.lockMessage}}</p>
+              <a href="{{__basePath}}/{{__lang}}/editions/2025/#tarifs" class="text-accent text-xs font-semibold hover:text-accent-700 transition-colors inline-flex items-center gap-1">{{banks.ctaStudy}} →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="bank-card" data-type="private">
+          <div class="bg-white border border-gray-200 rounded-xl p-5 shadow-2xs hover:shadow-md transition-all h-full flex flex-col justify-between space-y-4">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div class="w-20 h-12 bg-white border border-gray-200 rounded-lg p-1.5 flex items-center justify-center flex-shrink-0 shadow-2xs">
+                  <img src="{{__basePath}}/public/logos/trust.jpg" alt="Trust Bank" class="max-h-9 max-w-full object-contain" />
+                </div>
+                <span class="text-xs text-blue-700 bg-blue-50 border border-blue-200/60 px-2.5 py-1 rounded-full font-medium">Privé</span>
+              </div>
+              <h3 class="font-bold text-gray-900 text-lg">Trust Bank</h3>
+              <p class="text-xs text-gray-500">Trust Bank Algeria</p>
+            </div>
+            <div class="border-t border-gray-100 pt-3">
+              <p class="text-xs text-gray-400 mb-2">{{banks.lockMessage}}</p>
+              <a href="{{__basePath}}/{{__lang}}/editions/2025/#tarifs" class="text-accent text-xs font-semibold hover:text-accent-700 transition-colors inline-flex items-center gap-1">{{banks.ctaStudy}} →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="bank-card" data-type="private">
+          <div class="bg-white border border-gray-200 rounded-xl p-5 shadow-2xs hover:shadow-md transition-all h-full flex flex-col justify-between space-y-4">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div class="w-20 h-12 bg-white border border-gray-200 rounded-lg p-1.5 flex items-center justify-center flex-shrink-0 shadow-2xs">
+                  <img src="{{__basePath}}/public/logos/citi.png" alt="Citibank" class="max-h-9 max-w-full object-contain" />
+                </div>
+                <span class="text-xs text-blue-700 bg-blue-50 border border-blue-200/60 px-2.5 py-1 rounded-full font-medium">Privé</span>
+              </div>
+              <h3 class="font-bold text-gray-900 text-lg">Citibank</h3>
+              <p class="text-xs text-gray-500">Citibank N.A. Algeria</p>
+            </div>
+            <div class="border-t border-gray-100 pt-3">
+              <p class="text-xs text-gray-400 mb-2">{{banks.lockMessage}}</p>
+              <a href="{{__basePath}}/{{__lang}}/editions/2025/#tarifs" class="text-accent text-xs font-semibold hover:text-accent-700 transition-colors inline-flex items-center gap-1">{{banks.ctaStudy}} →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="bank-card" data-type="private">
+          <div class="bg-white border border-gray-200 rounded-xl p-5 shadow-2xs hover:shadow-md transition-all h-full flex flex-col justify-between space-y-4">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div class="w-20 h-12 bg-white border border-gray-200 rounded-lg p-1.5 flex items-center justify-center flex-shrink-0 shadow-2xs">
+                  <img src="{{__basePath}}/public/logos/hsbc.png" alt="HSBC" class="max-h-9 max-w-full object-contain" />
+                </div>
+                <span class="text-xs text-blue-700 bg-blue-50 border border-blue-200/60 px-2.5 py-1 rounded-full font-medium">Privé</span>
+              </div>
+              <h3 class="font-bold text-gray-900 text-lg">HSBC</h3>
+              <p class="text-xs text-gray-500">HSBC Algeria</p>
+            </div>
+            <div class="border-t border-gray-100 pt-3">
+              <p class="text-xs text-gray-400 mb-2">{{banks.lockMessage}}</p>
+              <a href="{{__basePath}}/{{__lang}}/editions/2025/#tarifs" class="text-accent text-xs font-semibold hover:text-accent-700 transition-colors inline-flex items-center gap-1">{{banks.ctaStudy}} →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="bank-card" data-type="private">
+          <div class="bg-white border border-gray-200 rounded-xl p-5 shadow-2xs hover:shadow-md transition-all h-full flex flex-col justify-between space-y-4">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div class="w-20 h-12 bg-white border border-gray-200 rounded-lg p-1.5 flex items-center justify-center flex-shrink-0 shadow-2xs">
+                  <img src="{{__basePath}}/public/logos/ziraat.jpg" alt="Ziraat Bank" class="max-h-9 max-w-full object-contain" />
+                </div>
+                <span class="text-xs text-blue-700 bg-blue-50 border border-blue-200/60 px-2.5 py-1 rounded-full font-medium">Privé</span>
+              </div>
+              <h3 class="font-bold text-gray-900 text-lg">Ziraat Bank</h3>
+              <p class="text-xs text-gray-500">Ziraat Bankası Algérie</p>
+            </div>
+            <div class="border-t border-gray-100 pt-3">
+              <p class="text-xs text-gray-400 mb-2">{{banks.lockMessage}}</p>
+              <a href="{{__basePath}}/{{__lang}}/editions/2025/#tarifs" class="text-accent text-xs font-semibold hover:text-accent-700 transition-colors inline-flex items-center gap-1">{{banks.ctaStudy}} →</a>
+            </div>
+          </div>
+        </div>
+
       </div>
 
       <!-- CTA complet -->

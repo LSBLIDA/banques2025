@@ -17,74 +17,164 @@
 {{__mainNav}}
 
 <div class="pt-16">
+  <!-- SECTION 1: HERO HEADER -->
   <section class="bg-banking-gradient text-white py-16 lg:py-20">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
       <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold font-playfair">{{methodology.hero.title}}</h1>
-      <p class="text-lg sm:text-xl text-blue-100/90 leading-relaxed max-w-3xl mx-auto">{{methodology.hero.subtitle}}</p>
+      <p class="text-lg sm:text-xl text-blue-100/90 leading-relaxed max-w-3xl mx-auto font-medium">{{methodology.hero.subtitle}}</p>
+      <div class="pt-2">
+        <p class="text-sm sm:text-base text-blue-100/90 leading-relaxed max-w-3xl mx-auto bg-white/10 border border-white/15 p-4 sm:p-5 rounded-xl text-left sm:text-center">
+          {{methodology.hero.introText}}
+        </p>
+      </div>
     </div>
   </section>
 
   <section class="py-16 lg:py-20 bg-white">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
 
-      <!-- Encadré d'avertissement institutionnel -->
+      <!-- SECTION 2: CE QUE LA MÉTHODOLOGIE NE CONSTITUE PAS -->
       <div class="bg-amber-50/80 border border-amber-200/80 rounded-2xl p-6 sm:p-8 space-y-3">
         <div class="flex items-center gap-3 text-amber-900 font-bold text-lg">
           <svg class="w-6 h-6 text-amber-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
           <h2>{{methodology.disclaimerBox.title}}</h2>
         </div>
-        <p class="text-sm sm:text-base text-amber-900/90 leading-relaxed">
-          {{methodology.disclaimerBox.body}}
-        </p>
+        <div class="space-y-2 text-sm sm:text-base text-amber-900/90 leading-relaxed">
+          <p>{{methodology.disclaimerBox.p1}}</p>
+          <p>{{methodology.disclaimerBox.p2}}</p>
+        </div>
       </div>
 
-      <!-- Processus analytique -->
+      <!-- SECTION 3: NOTRE DÉMARCHE ANALYTIQUE EN 6 ÉTAPES -->
       <div class="space-y-8">
         <div>
           <h2 class="text-2xl sm:text-3xl font-bold font-playfair text-gray-900 mb-3">{{methodology.approach.title}}</h2>
-          <p class="text-gray-600 leading-relaxed">{{methodology.approach.description}}</p>
+          <p class="text-gray-600 leading-relaxed text-sm sm:text-base">{{methodology.approach.description}}</p>
         </div>
 
         <div class="grid sm:grid-cols-2 gap-6">
-          <div class="bg-gray-50 rounded-xl p-6 border border-gray-100 space-y-2">
-            <span class="w-8 h-8 rounded-full bg-primary/10 text-primary font-bold text-sm flex items-center justify-center">1</span>
-            <h3 class="font-bold text-gray-900">Périmètre & Collecte publique</h3>
-            <p class="text-sm text-gray-600 leading-relaxed">Recensement et extraction des états financiers officiellement publiés par l'ensemble des banques commerciales et publiques opérant en Algérie.</p>
+          <!-- Étape 1 -->
+          <div class="bg-gray-50/80 rounded-xl p-6 border border-gray-200/80 space-y-3 flex flex-col justify-between hover:shadow-sm transition-shadow">
+            <div class="space-y-2">
+              <span class="w-8 h-8 rounded-full bg-primary/10 text-primary font-extrabold text-sm flex items-center justify-center">1</span>
+              <h3 class="font-bold text-gray-900 text-base">Périmètre & collecte des données</h3>
+              <p class="text-xs sm:text-sm text-gray-600 leading-relaxed">Recensement et extraction des informations publiées par les banques et les sources institutionnelles disponibles : états financiers, rapports annuels et autres informations financières ou opérationnelles pertinentes pour l’analyse.</p>
+            </div>
           </div>
-          <div class="bg-gray-50 rounded-xl p-6 border border-gray-100 space-y-2">
-            <span class="w-8 h-8 rounded-full bg-primary/10 text-primary font-bold text-sm flex items-center justify-center">2</span>
-            <h3 class="font-bold text-gray-900">Consolidation & Contrôles</h3>
-            <p class="text-sm text-gray-600 leading-relaxed">Vérification de l'équilibre des bilans, réconciliation des totaux comptables et traitement homogène des données retraitées d'une année sur l'autre.</p>
+
+          <!-- Étape 2 -->
+          <div class="bg-gray-50/80 rounded-xl p-6 border border-gray-200/80 space-y-3 flex flex-col justify-between hover:shadow-sm transition-shadow">
+            <div class="space-y-2">
+              <span class="w-8 h-8 rounded-full bg-primary/10 text-primary font-extrabold text-sm flex items-center justify-center">2</span>
+              <h3 class="font-bold text-gray-900 text-base">Consolidation, cohérence & retraitements</h3>
+              <p class="text-xs sm:text-sm text-gray-600 leading-relaxed">Contrôle de cohérence des données, rapprochement des agrégats et traitement homogène des informations entre établissements et entre exercices.</p>
+              <p class="text-xs text-gray-500 italic bg-gray-100/80 p-2.5 rounded-lg border border-gray-200/60 mt-2">Lorsque des banques publient ultérieurement des données historiques retraitées ou reclassées, les études retiennent, lorsque cela est pertinent, les données révisées les plus récentes disponibles afin de préserver la cohérence des comparaisons.</p>
+            </div>
           </div>
-          <div class="bg-gray-50 rounded-xl p-6 border border-gray-100 space-y-2">
-            <span class="w-8 h-8 rounded-full bg-primary/10 text-primary font-bold text-sm flex items-center justify-center">3</span>
-            <h3 class="font-bold text-gray-900">Définition des indicateurs</h3>
-            <p class="text-sm text-gray-600 leading-relaxed">Distinction rigoureuse entre indicateurs de stock et de flux, normalisation des calculs de rentabilité (RoE, RoA), du PNB et du coefficient d'exploitation.</p>
+
+          <!-- Étape 3 -->
+          <div class="bg-gray-50/80 rounded-xl p-6 border border-gray-200/80 space-y-3 flex flex-col justify-between hover:shadow-sm transition-shadow">
+            <div class="space-y-2">
+              <span class="w-8 h-8 rounded-full bg-primary/10 text-primary font-extrabold text-sm flex items-center justify-center">3</span>
+              <h3 class="font-bold text-gray-900 text-base">Définition & normalisation des indicateurs</h3>
+              <p class="text-xs sm:text-sm text-gray-600 leading-relaxed">Définition homogène des indicateurs utilisés et distinction entre données de stock, données de flux et ratios.</p>
+              <p class="text-xs text-gray-500 italic bg-gray-100/80 p-2.5 rounded-lg border border-gray-200/60 mt-2">Les calculs portent notamment sur la croissance, la rentabilité, l’efficience, les parts de marché et différents indicateurs permettant de comparer les trajectoires des établissements.</p>
+            </div>
           </div>
-          <div class="bg-gray-50 rounded-xl p-6 border border-gray-100 space-y-2">
-            <span class="w-8 h-8 rounded-full bg-primary/10 text-primary font-bold text-sm flex items-center justify-center">4</span>
-            <h3 class="font-bold text-gray-900">Comparaisons & Parts de marché</h3>
-            <p class="text-sm text-gray-600 leading-relaxed">Analyse comparative des agrégats du secteur public face au secteur privé et calcul de l'évolution des parts de marché individuelles.</p>
+
+          <!-- Étape 4 -->
+          <div class="bg-gray-50/80 rounded-xl p-6 border border-gray-200/80 space-y-3 flex flex-col justify-between hover:shadow-sm transition-shadow">
+            <div class="space-y-2">
+              <span class="w-8 h-8 rounded-full bg-primary/10 text-primary font-extrabold text-sm flex items-center justify-center">4</span>
+              <h3 class="font-bold text-gray-900 text-base">Comparaisons sectorielles & positionnement</h3>
+              <p class="text-xs sm:text-sm text-gray-600 leading-relaxed">Analyse des agrégats sectoriels, comparaison entre banques publiques et privées, évolution des parts de marché et positionnement relatif des établissements selon les indicateurs étudiés.</p>
+            </div>
+            <div class="bg-primary/5 border border-primary/20 rounded-lg p-2.5 text-xs text-primary font-semibold">
+              Principe méthodologique : Les comparaisons sont réalisées sur une base méthodologique identique pour l’ensemble des établissements couverts.
+            </div>
           </div>
-          <div class="bg-gray-50 rounded-xl p-6 border border-gray-100 space-y-2">
-            <span class="w-8 h-8 rounded-full bg-primary/10 text-primary font-bold text-sm flex items-center justify-center">5</span>
-            <h3 class="font-bold text-gray-900">Diagnostics banque par banque</h3>
-            <p class="text-sm text-gray-600 leading-relaxed">Fiches d'analyse individuelles restituant le profil financier, les points forts et la trajectoire de chaque établissement couvert par l'étude.</p>
+
+          <!-- Étape 5 -->
+          <div class="bg-gray-50/80 rounded-xl p-6 border border-gray-200/80 space-y-3 flex flex-col justify-between hover:shadow-sm transition-shadow">
+            <div class="space-y-2">
+              <span class="w-8 h-8 rounded-full bg-primary/10 text-primary font-extrabold text-sm flex items-center justify-center">5</span>
+              <h3 class="font-bold text-gray-900 text-base">Analyses individuelles & dimensions opérationnelles</h3>
+              <p class="text-xs sm:text-sm text-gray-600 leading-relaxed">Chaque établissement fait l’objet d’une lecture individuelle de son évolution, de son positionnement et de ses principaux indicateurs.</p>
+              <p class="text-xs text-gray-500 italic bg-gray-100/80 p-2.5 rounded-lg border border-gray-200/60 mt-2">Selon la disponibilité et la comparabilité des informations, l’analyse peut également intégrer des données complémentaires telles que le hors-bilan, les effectifs, le réseau bancaire ou des indicateurs de productivité opérationnelle.</p>
+            </div>
           </div>
-          <div class="bg-gray-50 rounded-xl p-6 border border-gray-100 space-y-2">
-            <span class="w-8 h-8 rounded-full bg-primary/10 text-primary font-bold text-sm flex items-center justify-center">6</span>
-            <h3 class="font-bold text-gray-900">Validation & Interprétation humaine</h3>
-            <p class="text-sm text-gray-600 leading-relaxed">Analyse qualitative et prospective menée par M. Rachid Sekak et les experts de Tadjeddine & Partners pour donner du sens aux chiffres.</p>
+
+          <!-- Étape 6 -->
+          <div class="bg-gray-50/80 rounded-xl p-6 border border-gray-200/80 space-y-3 flex flex-col justify-between hover:shadow-sm transition-shadow">
+            <div class="space-y-2">
+              <span class="w-8 h-8 rounded-full bg-primary/10 text-primary font-extrabold text-sm flex items-center justify-center">6</span>
+              <h3 class="font-bold text-gray-900 text-base">Revue, analyse & interprétation</h3>
+              <p class="text-xs sm:text-sm text-gray-600 leading-relaxed">Les données consolidées font l’objet d’une revue analytique et d’une interprétation par M. Rachid Sekak et Tadjeddine & Partners afin d’identifier les évolutions significatives, les tendances du secteur et les éléments susceptibles d’expliquer les trajectoires observées.</p>
+              <p class="text-xs text-gray-500 italic bg-gray-100/80 p-2.5 rounded-lg border border-gray-200/60 mt-2">Les constats factuels, les calculs et les interprétations sont distingués autant que possible dans la restitution.</p>
+            </div>
           </div>
         </div>
       </div>
 
-      <!-- CTA vers la précommande 2026 -->
+      <!-- SECTIONS COMPLÉMENTAIRES SOBRES -->
+      <div class="space-y-6 pt-4 border-t border-gray-200/80">
+        <!-- 10. DONNÉES HISTORIQUES ET RÉVISIONS -->
+        <div class="bg-slate-50/90 rounded-2xl p-6 sm:p-8 border border-gray-200/80 space-y-3">
+          <h3 class="text-xl font-bold text-gray-900 font-playfair flex items-center gap-2">
+            <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            {{methodology.revisions.title}}
+          </h3>
+          <div class="space-y-2 text-xs sm:text-sm text-gray-600 leading-relaxed">
+            <p>{{methodology.revisions.p1}} {{methodology.revisions.p2}}</p>
+            <p>{{methodology.revisions.p3}}</p>
+            <p class="font-medium text-gray-700 bg-gray-200/50 p-3 rounded-lg border border-gray-300/50">{{methodology.revisions.p4}}</p>
+          </div>
+        </div>
+
+        <!-- 11. BAROMÈTRE E-BANKING -->
+        <div class="bg-slate-50/90 rounded-2xl p-6 sm:p-8 border border-gray-200/80 space-y-3">
+          <h3 class="text-xl font-bold text-gray-900 font-playfair flex items-center gap-2">
+            <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
+            {{methodology.ebanking.title}}
+          </h3>
+          <div class="space-y-2 text-xs sm:text-sm text-gray-600 leading-relaxed">
+            <p>{{methodology.ebanking.p1}} {{methodology.ebanking.p2}}</p>
+            <p class="font-semibold text-gray-800 bg-white p-3 rounded-lg border border-gray-200/80">{{methodology.ebanking.p3}}</p>
+            <p>{{methodology.ebanking.p4}}</p>
+          </div>
+        </div>
+
+        <!-- 12. CONTRIBUTIONS ÉDITORIALES -->
+        <div class="bg-slate-50/90 rounded-2xl p-6 sm:p-8 border border-gray-200/80 space-y-3">
+          <h3 class="text-xl font-bold text-gray-900 font-playfair flex items-center gap-2">
+            <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+            {{methodology.contributions.title}}
+          </h3>
+          <div class="space-y-2 text-xs sm:text-sm text-gray-600 leading-relaxed">
+            <p>{{methodology.contributions.p1}} {{methodology.contributions.p2}}</p>
+            <p class="italic text-gray-700 bg-white p-3 rounded-lg border border-gray-200/80">{{methodology.contributions.p3}}</p>
+          </div>
+        </div>
+
+        <!-- 13. SOURCES ET LIMITES -->
+        <div class="bg-slate-50/90 rounded-2xl p-6 sm:p-8 border border-gray-200/80 space-y-3">
+          <h3 class="text-xl font-bold text-gray-900 font-playfair flex items-center gap-2">
+            <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+            {{methodology.sources.title}}
+          </h3>
+          <div class="space-y-2 text-xs sm:text-sm text-gray-600 leading-relaxed">
+            <p>{{methodology.sources.p1}} {{methodology.sources.p2}}</p>
+            <p>{{methodology.sources.p3}}</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA DE FIN DE PAGE -->
       <div class="text-center pt-8 space-y-4 border-t border-gray-100">
         <h3 class="text-xl font-bold text-gray-900">Découvrir les résultats et analyses des études</h3>
-        <p class="text-gray-600 max-w-xl mx-auto">L’édition 2026 est actuellement disponible en précommande à tarif préférentiel Early Bird jusqu’au 31 août 2026.</p>
-        <div class="flex justify-center gap-4 pt-2">
-          <button onclick="openPreorder('2026')" class="btn-cta">{{home.hero.ctaPreorder}}</button>
+        <p class="text-gray-600 max-w-xl mx-auto text-sm sm:text-base">L’édition 2026 est ouverte à la souscription anticipée avec un tarif préférentiel valable jusqu’au 31 août 2026.</p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4 pt-2">
+          <a href="{{__basePath}}/{{__lang}}/editions/2026/#tarifs" class="btn-cta">{{home.hero.ctaPreorder}}</a>
           <a href="{{__basePath}}/{{__lang}}/editions/2025/" class="btn-secondary">{{home.hero.ctaDiscover2025}}</a>
         </div>
       </div>
