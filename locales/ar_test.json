@@ -1,0 +1,35 @@
+﻿{
+  "_meta": {
+    "lang": "ar",
+    "status": "draft",
+    "note": "Traduction arabe provisoire — doit etre relue par un specialiste bilingue banque/finance avant publication. Toutes les cles de fr.json sont presentes."
+  },
+
+  "site": {
+    "name": "ABIX",
+    "fullName": "Algeria Banking Index",
+    "publisher": "Tadjeddine & Partners",
+    "tagline": "Etudes, benchmarks et analyses strategiques du secteur bancaire algerien (AR)",
+    "copyright": "2025 Tadjeddine & Partners."
+  },
+
+  "nav": {
+    "home": "ar_home",
+    "editions": "ar_editions",
+    "edition2026": "ar_edition2026",
+    "edition2025": "ar_edition2025",
+    "study": "ar_study",
+    "barometer2026": "ar_barometer2026",
+    "methodology": "ar_methodology",
+    "abixIndex": "ar_abixIndex",
+    "services": "ar_services",
+    "rankings": "ar_rankings",
+    "banks": "ar_banks",
+    "about": "ar_about",
+    "contact": "ar_contact",
+    "questionnaire": "ar_questionnaire_nav",
+    "ctaStudy": "ar_ctaStudy",
+    "ctaNotify": "ar_ctaNotify",
+    "langSelectLabel": "ar_lang"
+  }
+}

@@ -163,6 +163,9 @@
 .dropdown-badge--avail {
   @apply bg-emerald-100 text-emerald-700;
 }
+.dropdown-badge--free {
+  @apply bg-slate-100 text-slate-700;
+}
 
 /* Hero section gradient */
 .bg-banking-gradient {

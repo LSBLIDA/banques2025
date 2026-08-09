@@ -69,19 +69,19 @@
         <div class="flex flex-wrap items-center gap-2 pt-1">
           <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-white/10 border border-white/15 text-xs text-blue-100 font-medium">
             <span class="w-1.5 h-1.5 rounded-full bg-accent"></span>
-            21 banques analysées
+            {{home.hero.badgeBanks}}
           </span>
           <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-white/10 border border-white/15 text-xs text-blue-100 font-medium">
             <span class="w-1.5 h-1.5 rounded-full bg-accent"></span>
-            Comparatif 2024–2025
+            {{home.hero.badgeComparative}}
           </span>
           <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-white/10 border border-white/15 text-xs text-blue-100 font-medium">
             <span class="w-1.5 h-1.5 rounded-full bg-accent"></span>
-            Tendances 2023–2025
+            {{home.hero.badgeTrends}}
           </span>
           <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-white/10 border border-white/15 text-xs text-blue-100 font-medium">
             <span class="w-1.5 h-1.5 rounded-full bg-accent"></span>
-            Nouveaux indicateurs opérationnels
+            {{home.hero.badgeIndicators}}
           </span>
         </div>
 
@@ -113,7 +113,7 @@
           </div>
           <div class="flex items-center gap-2 opacity-80">
             <svg class="w-4 h-4 text-amber-300 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M12 2a10 10 0 100 20A10 10 0 0012 2zm0 18a8 8 0 110-16 8 8 0 010 16z"/></svg>
-            <span class="text-xs text-blue-200/80">Une publication de Tadjeddine & Partners</span>
+            <span class="text-xs text-blue-200/80">{{home.hero.publisherMention}}</span>
           </div>
         </div>
       </div>
@@ -183,15 +183,15 @@
           <ul class="space-y-3 pt-2">
             <li class="flex items-start gap-3 text-sm text-gray-200">
               <svg class="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/></svg>
-              <span>Tarif préférentiel réservé aux précommandes</span>
+              <span>{{home.earlyBird.reassurance.0}}</span>
             </li>
             <li class="flex items-start gap-3 text-sm text-gray-200">
               <svg class="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/></svg>
-              <span>Livraison de l’étude complète dès publication</span>
+              <span>{{home.earlyBird.reassurance.1}}</span>
             </li>
             <li class="flex items-start gap-3 text-sm text-gray-200">
               <svg class="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/></svg>
-              <span>Accès aux livrables correspondant à l’offre commandée</span>
+              <span>{{home.earlyBird.reassurance.2}}</span>
             </li>
           </ul>
 
@@ -203,27 +203,27 @@
         <!-- Tarification & CTA (Col 5) -->
         <div class="lg:col-span-5 bg-white/5 rounded-2xl p-6 sm:p-8 border border-white/10 text-center space-y-6">
           <div class="space-y-1">
-            <span class="text-xs uppercase tracking-widest text-amber-300 font-semibold">Offre spéciale précommande</span>
+            <span class="text-xs uppercase tracking-widest text-amber-300 font-semibold">{{home.earlyBird.specialOffer}}</span>
             <div id="earlybird-price-display" class="text-3xl font-extrabold text-white">
               {{home.earlyBird.priceDefaultLabel}}
             </div>
-            <p class="text-xs text-gray-400">Valable jusqu'au 31 août 2026 à 23h59</p>
+            <p class="text-xs text-gray-400">{{home.earlyBird.validityText}}</p>
           </div>
 
           <!-- Compte à rebours sobre (date réelle) -->
           <div id="countdown-container" class="bg-black/30 rounded-xl p-3 border border-white/10">
-            <p class="text-[11px] text-gray-400 uppercase tracking-wider mb-2">Fin du tarif préférentiel dans</p>
+            <p class="text-[11px] text-gray-400 uppercase tracking-wider mb-2">{{home.earlyBird.countdownText}}</p>
             <div class="grid grid-cols-4 gap-2 text-center" id="earlybird-countdown">
-              <div class="bg-white/10 rounded py-1.5"><span id="cd-days" class="block text-lg font-bold text-amber-300">--</span><span class="text-[9px] text-gray-400">Jours</span></div>
-              <div class="bg-white/10 rounded py-1.5"><span id="cd-hours" class="block text-lg font-bold text-amber-300">--</span><span class="text-[9px] text-gray-400">Heures</span></div>
-              <div class="bg-white/10 rounded py-1.5"><span id="cd-mins" class="block text-lg font-bold text-amber-300">--</span><span class="text-[9px] text-gray-400">Min</span></div>
-              <div class="bg-white/10 rounded py-1.5"><span id="cd-secs" class="block text-lg font-bold text-amber-300">--</span><span class="text-[9px] text-gray-400">Sec</span></div>
+              <div class="bg-white/10 rounded py-1.5"><span id="cd-days" class="block text-lg font-bold text-amber-300">--</span><span class="text-[9px] text-gray-400">{{home.earlyBird.days}}</span></div>
+              <div class="bg-white/10 rounded py-1.5"><span id="cd-hours" class="block text-lg font-bold text-amber-300">--</span><span class="text-[9px] text-gray-400">{{home.earlyBird.hours}}</span></div>
+              <div class="bg-white/10 rounded py-1.5"><span id="cd-mins" class="block text-lg font-bold text-amber-300">--</span><span class="text-[9px] text-gray-400">{{home.earlyBird.minutes}}</span></div>
+              <div class="bg-white/10 rounded py-1.5"><span id="cd-secs" class="block text-lg font-bold text-amber-300">--</span><span class="text-[9px] text-gray-400">{{home.earlyBird.seconds}}</span></div>
             </div>
           </div>
 
           <div class="pt-2">
             <a href="{{__basePath}}/{{__lang}}/editions/2026/#tarifs" class="btn-outline w-full text-center block text-sm">
-              Consulter le détail des 3 offres (Essentiel, Pro, Corporate)
+              {{home.earlyBird.viewDetails}}
             </a>
           </div>
         </div>
@@ -233,7 +233,7 @@
       <!-- Aperçu compact des 3 cartes d'offres 2026 sur la page d'accueil -->
       <div class="pt-8 border-t border-white/10">
         <div class="text-center mb-6">
-          <h3 class="text-xl font-bold font-playfair text-white">Tarifs et formules 2026 — Vue synthétique</h3>
+          <h3 class="text-xl font-bold font-playfair text-white">{{home.earlyBird.syntheticViewTitle}}</h3>
         </div>
         <div class="grid md:grid-cols-3 gap-6">
 
@@ -298,7 +298,7 @@
 
         <div class="mt-6 text-center">
           <a href="{{__basePath}}/{{__lang}}/editions/2026/#tarifs" class="inline-flex items-center gap-2 text-sm text-amber-300 hover:text-amber-200 font-semibold underline underline-offset-4 transition-colors">
-            <span>Voir la comparaison détaillée du contenu des offres 2026</span>
+            <span>{{home.earlyBird.viewFullComparison}}</span>
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
           </a>
         </div>
@@ -329,29 +329,29 @@
           <div class="w-10 h-10 bg-accent/30 rounded-lg flex items-center justify-center">
             <svg class="w-5 h-5 text-accent-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
           </div>
-          <p class="font-semibold text-sm">Benchmark personnalisé</p>
-          <p class="text-xs text-blue-200">Positionnement par rapport aux pairs</p>
+          <p class="font-semibold text-sm">{{services.offerings.0.title}}</p>
+          <p class="text-xs text-blue-200">{{services.offerings.0.body}}</p>
         </div>
         <div class="bg-white/10 rounded-xl p-5 border border-white/20 space-y-2">
           <div class="w-10 h-10 bg-accent/30 rounded-lg flex items-center justify-center">
             <svg class="w-5 h-5 text-accent-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
           </div>
-          <p class="font-semibold text-sm">Diagnostic de performance</p>
-          <p class="text-xs text-blue-200">Analyse sur-mesure de votre établissement</p>
+          <p class="font-semibold text-sm">{{services.offerings.1.title}}</p>
+          <p class="text-xs text-blue-200">{{services.offerings.1.body}}</p>
         </div>
         <div class="bg-white/10 rounded-xl p-5 border border-white/20 space-y-2">
           <div class="w-10 h-10 bg-accent/30 rounded-lg flex items-center justify-center">
             <svg class="w-5 h-5 text-accent-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0"/></svg>
           </div>
-          <p class="font-semibold text-sm">Présentation comité</p>
-          <p class="text-xs text-blue-200">Synthèse pour votre direction</p>
+          <p class="font-semibold text-sm">{{services.offerings.3.title}}</p>
+          <p class="text-xs text-blue-200">{{services.offerings.3.body}}</p>
         </div>
         <div class="bg-white/10 rounded-xl p-5 border border-white/20 space-y-2">
           <div class="w-10 h-10 bg-accent/30 rounded-lg flex items-center justify-center">
             <svg class="w-5 h-5 text-accent-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
           </div>
-          <p class="font-semibold text-sm">Conseil stratégique</p>
-          <p class="text-xs text-blue-200">Recommandations et feuille de route</p>
+          <p class="font-semibold text-sm">{{services.offerings.4.title}}</p>
+          <p class="text-xs text-blue-200">{{services.offerings.4.body}}</p>
         </div>
       </div>
     </div>
@@ -423,6 +423,112 @@
   </div>
 </section>
 
+<!-- ══════════════════════════════════════════════════════ SECTION HISTORIQUE -->
+<section id="evolution-projet" class="py-20 bg-gray-50 border-t border-gray-100">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 font-playfair mb-4">
+        {{home.history.title}}
+      </h2>
+      <p class="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
+        {{home.history.subtitle}}
+      </p>
+    </div>
+
+    <!-- Timeline/Cartes container -->
+    <div class="relative flex flex-col lg:flex-row gap-8 lg:gap-6 justify-center items-stretch mt-12">
+      
+      <!-- Subtly linking line for desktop -->
+      <div class="hidden lg:block absolute top-1/2 left-10 right-10 h-0.5 bg-gray-200 -translate-y-1/2 z-0" aria-hidden="true"></div>
+
+      <!-- CARTE 2023: Discrète & sobre -->
+      <div class="relative flex-1 bg-white rounded-2xl p-6 border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-300 flex flex-col justify-between z-10 opacity-90 scale-95 lg:scale-90 hover:scale-95 origin-center">
+        <div class="space-y-4">
+          <div class="flex items-center justify-between">
+            <span class="text-3xl font-extrabold text-gray-400 font-playfair">{{home.history.c2023.year}}</span>
+            <span class="text-[10px] font-bold uppercase tracking-wider bg-slate-100 text-slate-600 px-2.5 py-1 rounded-full border border-slate-200">
+              {{home.history.c2023.badge}}
+            </span>
+          </div>
+          <div class="flex gap-4 items-center">
+            <img src="{{__basePath}}/public/couverture-2023.png" alt="Couverture Rapport 2023" class="w-16 h-auto rounded shadow border border-gray-100 flex-shrink-0" />
+            <div>
+              <h3 class="font-bold text-gray-900 leading-snug">{{home.history.c2023.title}}</h3>
+              <p class="text-xs text-gray-500 font-medium mt-0.5">{{home.history.c2023.subtitle}}</p>
+            </div>
+          </div>
+          <p class="text-sm text-gray-600 leading-relaxed">{{home.history.c2023.description}}</p>
+        </div>
+        <div class="mt-6 pt-4 border-t border-gray-50">
+          <a href="{{__basePath}}/{{__lang}}/{{nav.report2023Path}}" class="inline-flex items-center text-sm font-semibold text-primary hover:text-accent transition-colors gap-1">
+            {{home.history.c2023.cta}}
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- CARTE 2025: Classique -->
+      <div class="relative flex-1 bg-white rounded-2xl p-6 border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-300 flex flex-col justify-between z-10 lg:scale-95 origin-center">
+        <div class="space-y-4">
+          <div class="flex items-center justify-between">
+            <span class="text-3xl font-extrabold text-gray-500 font-playfair">{{home.history.c2025.year}}</span>
+            <span class="text-[10px] font-bold uppercase tracking-wider bg-emerald-50 text-emerald-700 px-2.5 py-1 rounded-full border border-emerald-100">
+              {{home.history.c2025.badge}}
+            </span>
+          </div>
+          <div class="flex gap-4 items-center">
+            <img src="{{__basePath}}/public/Couverture.png" alt="Couverture Étude 2025" class="w-16 h-auto rounded shadow border border-gray-100 flex-shrink-0" />
+            <div>
+              <h3 class="font-bold text-gray-900 leading-snug">{{home.history.c2025.title}}</h3>
+              <p class="text-xs text-gray-500 font-medium mt-0.5">{{home.history.c2025.subtitle}}</p>
+            </div>
+          </div>
+          <p class="text-sm text-gray-600 leading-relaxed">{{home.history.c2025.description}}</p>
+        </div>
+        <div class="mt-6 pt-4 border-t border-gray-50">
+          <a href="{{__basePath}}/{{__lang}}/editions/2025/" class="inline-flex items-center text-sm font-semibold text-primary hover:text-accent transition-colors gap-1">
+            {{home.history.c2025.cta}}
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- CARTE 2026: Produit Phare, plus grande & lumineuse -->
+      <div class="relative flex-1 bg-gradient-to-br from-slate-900 to-blue-950 text-white rounded-3xl p-8 border-2 border-amber-400/30 shadow-xl hover:shadow-2xl hover:border-amber-400 transition-all duration-300 flex flex-col justify-between z-20 transform scale-100 lg:scale-105 origin-center">
+        <div class="space-y-4">
+          <div class="flex items-center justify-between">
+            <span class="text-4xl font-extrabold text-amber-300 font-playfair">{{home.history.c2026.year}}</span>
+            <span class="text-[10px] font-bold uppercase tracking-wider bg-amber-400/20 text-amber-300 px-3 py-1 rounded-full border border-amber-400/30">
+              {{home.history.c2026.badge}}
+            </span>
+          </div>
+          <div class="flex gap-4 items-center">
+            <img src="{{__basePath}}/public/couverture-2026.png" alt="Couverture ABIX 2026" class="w-20 h-auto rounded shadow-lg border border-white/10 flex-shrink-0" />
+            <div>
+              <h3 class="font-bold text-lg text-white leading-snug font-playfair">{{home.history.c2026.title}}</h3>
+              <p class="text-xs text-blue-200 font-medium mt-0.5">{{home.history.c2026.subtitle}}</p>
+            </div>
+          </div>
+          <p class="text-sm text-blue-100 leading-relaxed">{{home.history.c2026.description}}</p>
+        </div>
+        <div class="mt-8 pt-4 border-t border-white/10">
+          <a href="{{__basePath}}/{{__lang}}/editions/2026/" class="inline-flex items-center btn-cta-sm w-full justify-center text-center text-sm font-semibold whitespace-nowrap shadow-md">
+            {{home.history.c2026.cta}}
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Conclusion sentence -->
+    <div class="text-center mt-16 pt-4">
+      <p class="text-sm font-medium text-gray-500 italic max-w-2xl mx-auto leading-relaxed">
+        {{home.history.conclusion}}
+      </p>
+    </div>
+  </div>
+</section>
+
 <!-- ══════════════════════════════════════════════════════════════════ FOOTER -->
 <footer class="bg-gray-900 text-white pt-16 pb-8">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -444,8 +550,8 @@
           <li><a href="{{__basePath}}/{{__lang}}/editions/2026/" class="hover:text-accent transition-colors">{{nav.edition2026}}</a></li>
           <li><a href="{{__basePath}}/{{__lang}}/editions/2025/" class="hover:text-accent transition-colors">{{nav.edition2025}}</a></li>
           <li><a href="{{__basePath}}/{{__lang}}/methodologie/" class="hover:text-accent transition-colors">{{nav.methodology}}</a></li>
-          <li><a href="{{__basePath}}/{{__lang}}/classements/" class="hover:text-accent transition-colors">{{nav.rankings}}</a></li>
-          <li><a href="{{__basePath}}/{{__lang}}/banques/" class="hover:text-accent transition-colors">{{nav.banks}}</a></li>
+          
+          
         </ul>
       </div>
 
@@ -453,9 +559,9 @@
       <div>
         <h3 class="text-sm font-semibold text-white mb-4">{{footer.servicesLinks.title}}</h3>
         <ul class="space-y-2 text-sm text-gray-400">
-          <li><a href="{{__basePath}}/{{__lang}}/services/" class="hover:text-accent transition-colors">Benchmark personnalisé</a></li>
-          <li><a href="{{__basePath}}/{{__lang}}/services/" class="hover:text-accent transition-colors">Diagnostic de performance</a></li>
-          <li><a href="{{__basePath}}/{{__lang}}/services/" class="hover:text-accent transition-colors">Conseil stratégique</a></li>
+          <li><a href="{{__basePath}}/{{__lang}}/services/" class="hover:text-accent transition-colors">{{services.offerings.0.title}}</a></li>
+          <li><a href="{{__basePath}}/{{__lang}}/services/" class="hover:text-accent transition-colors">{{services.offerings.1.title}}</a></li>
+          <li><a href="{{__basePath}}/{{__lang}}/services/" class="hover:text-accent transition-colors">{{services.offerings.4.title}}</a></li>
           <li><a href="{{__basePath}}/{{__lang}}/a-propos/" class="hover:text-accent transition-colors">{{nav.about}}</a></li>
           <li><a href="{{__basePath}}/{{__lang}}/contact/" class="hover:text-accent transition-colors">{{nav.contact}}</a></li>
         </ul>
@@ -485,8 +591,8 @@
     <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-gray-500">
       <p>{{site.copyright}}</p>
       <div class="flex gap-4">
-        <a href="{{__basePath}}/{{__lang}}/mentions-legales/" class="hover:text-gray-300 transition-colors">Mentions légales</a>
-        <a href="{{__basePath}}/{{__lang}}/politique-confidentialite/" class="hover:text-gray-300 transition-colors">Confidentialité</a>
+        <a href="{{__basePath}}/{{__lang}}/mentions-legales/" class="hover:text-gray-300 transition-colors">{{legal.hero.title}}</a>
+        <a href="{{__basePath}}/{{__lang}}/politique-confidentialite/" class="hover:text-gray-300 transition-colors">{{privacy.hero.title}}</a>
       </div>
     </div>
   </div>
@@ -509,10 +615,10 @@
   <div class="bg-slate-900 text-white rounded-3xl max-w-2xl w-full max-h-[95vh] flex flex-col border border-amber-400/30 shadow-2xl relative overflow-hidden">
     <div class="p-4 sm:p-5 border-b border-gray-800 flex items-center justify-between bg-slate-900/90 flex-shrink-0">
       <div>
-        <span class="inline-block bg-amber-400/20 text-amber-300 text-[11px] font-bold px-3 py-0.5 rounded-full border border-amber-400/30 mb-1">Souscription anticipée — Édition 2026</span>
-        <h3 id="preorderModalTitle" class="text-lg font-bold text-white font-playfair">Formulaire de souscription</h3>
+        <span class="inline-block bg-amber-400/20 text-amber-300 text-[11px] font-bold px-3 py-0.5 rounded-full border border-amber-400/30 mb-1">{{home.earlyBird.badge}}</span>
+        <h3 id="preorderModalTitle" class="text-lg font-bold text-white font-playfair">{{edition2026.preorderForm.title}}</h3>
       </div>
-      <button onclick="closePreorder()" class="text-gray-400 hover:text-white transition-colors p-2 rounded-xl hover:bg-slate-800" aria-label="Fermer">
+      <button onclick="closePreorder()" class="text-gray-400 hover:text-white transition-colors p-2 rounded-xl hover:bg-slate-800" aria-label="{{modal.closeLabel}}">
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
       </button>
     </div>
@@ -527,7 +633,7 @@
   <div class="bg-white text-gray-900 rounded-2xl p-6 sm:p-8 max-w-3xl w-full border border-gray-200 shadow-2xl relative max-h-[90vh] flex flex-col space-y-4">
     <div class="flex items-center justify-between border-b border-gray-100 pb-4">
       <h3 class="text-xl font-bold font-playfair text-gray-900">{{edition2026.preorderForm.privacyModalTitle}}</h3>
-      <button onclick="closePrivacyModal()" class="text-gray-400 hover:text-gray-600 transition-colors p-1 rounded-lg hover:bg-gray-100" aria-label="Fermer">
+      <button onclick="closePrivacyModal()" class="text-gray-400 hover:text-gray-600 transition-colors p-1 rounded-lg hover:bg-gray-100" aria-label="{{modal.closeLabel}}">
         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
       </button>
     </div>
@@ -535,8 +641,8 @@
       <iframe src="https://tadjeddine-partners.com/politique-confidentialite/" class="w-full h-[450px] border border-gray-200 rounded-xl"></iframe>
     </div>
     <div class="pt-4 border-t border-gray-100 flex items-center justify-between gap-3">
-      <a href="https://tadjeddine-partners.com/politique-confidentialite/" target="_blank" rel="noopener" class="text-xs font-semibold text-primary hover:underline flex items-center gap-1">Ouvrir dans un nouvel onglet ↗</a>
-      <button onclick="closePrivacyModal()" class="btn-cta-sm py-2 px-5">Fermer</button>
+      <a href="https://tadjeddine-partners.com/politique-confidentialite/" target="_blank" rel="noopener" class="text-xs font-semibold text-primary hover:underline flex items-center gap-1">{{modal.openInNewTab}}</a>
+      <button onclick="closePrivacyModal()" class="btn-cta-sm py-2 px-5">{{modal.closeLabel}}</button>
     </div>
   </div>
 </div>

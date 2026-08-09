@@ -57,8 +57,8 @@
           <div class="bg-gray-50/80 rounded-xl p-6 border border-gray-200/80 space-y-3 flex flex-col justify-between hover:shadow-sm transition-shadow">
             <div class="space-y-2">
               <span class="w-8 h-8 rounded-full bg-primary/10 text-primary font-extrabold text-sm flex items-center justify-center">1</span>
-              <h3 class="font-bold text-gray-900 text-base">Périmètre & collecte des données</h3>
-              <p class="text-xs sm:text-sm text-gray-600 leading-relaxed">Recensement et extraction des informations publiées par les banques et les sources institutionnelles disponibles : états financiers, rapports annuels et autres informations financières ou opérationnelles pertinentes pour l’analyse.</p>
+              <h3 class="font-bold text-gray-900 text-base">{{methodology.approach.steps.0.title}}</h3>
+              <p class="text-xs sm:text-sm text-gray-600 leading-relaxed">{{methodology.approach.steps.0.body}}</p>
             </div>
           </div>
 
@@ -66,9 +66,9 @@
           <div class="bg-gray-50/80 rounded-xl p-6 border border-gray-200/80 space-y-3 flex flex-col justify-between hover:shadow-sm transition-shadow">
             <div class="space-y-2">
               <span class="w-8 h-8 rounded-full bg-primary/10 text-primary font-extrabold text-sm flex items-center justify-center">2</span>
-              <h3 class="font-bold text-gray-900 text-base">Consolidation, cohérence & retraitements</h3>
-              <p class="text-xs sm:text-sm text-gray-600 leading-relaxed">Contrôle de cohérence des données, rapprochement des agrégats et traitement homogène des informations entre établissements et entre exercices.</p>
-              <p class="text-xs text-gray-500 italic bg-gray-100/80 p-2.5 rounded-lg border border-gray-200/60 mt-2">Lorsque des banques publient ultérieurement des données historiques retraitées ou reclassées, les études retiennent, lorsque cela est pertinent, les données révisées les plus récentes disponibles afin de préserver la cohérence des comparaisons.</p>
+              <h3 class="font-bold text-gray-900 text-base">{{methodology.approach.steps.1.title}}</h3>
+              <p class="text-xs sm:text-sm text-gray-600 leading-relaxed">{{methodology.approach.steps.1.body}}</p>
+              <p class="text-xs text-gray-500 italic bg-gray-100/80 p-2.5 rounded-lg border border-gray-200/60 mt-2">{{methodology.approach.steps.1.note}}</p>
             </div>
           </div>
 
@@ -76,9 +76,9 @@
           <div class="bg-gray-50/80 rounded-xl p-6 border border-gray-200/80 space-y-3 flex flex-col justify-between hover:shadow-sm transition-shadow">
             <div class="space-y-2">
               <span class="w-8 h-8 rounded-full bg-primary/10 text-primary font-extrabold text-sm flex items-center justify-center">3</span>
-              <h3 class="font-bold text-gray-900 text-base">Définition & normalisation des indicateurs</h3>
-              <p class="text-xs sm:text-sm text-gray-600 leading-relaxed">Définition homogène des indicateurs utilisés et distinction entre données de stock, données de flux et ratios.</p>
-              <p class="text-xs text-gray-500 italic bg-gray-100/80 p-2.5 rounded-lg border border-gray-200/60 mt-2">Les calculs portent notamment sur la croissance, la rentabilité, l’efficience, les parts de marché et différents indicateurs permettant de comparer les trajectoires des établissements.</p>
+              <h3 class="font-bold text-gray-900 text-base">{{methodology.approach.steps.2.title}}</h3>
+              <p class="text-xs sm:text-sm text-gray-600 leading-relaxed">{{methodology.approach.steps.2.body}}</p>
+              <p class="text-xs text-gray-500 italic bg-gray-100/80 p-2.5 rounded-lg border border-gray-200/60 mt-2">{{methodology.approach.steps.2.note}}</p>
             </div>
           </div>
 
@@ -86,11 +86,11 @@
           <div class="bg-gray-50/80 rounded-xl p-6 border border-gray-200/80 space-y-3 flex flex-col justify-between hover:shadow-sm transition-shadow">
             <div class="space-y-2">
               <span class="w-8 h-8 rounded-full bg-primary/10 text-primary font-extrabold text-sm flex items-center justify-center">4</span>
-              <h3 class="font-bold text-gray-900 text-base">Comparaisons sectorielles & positionnement</h3>
-              <p class="text-xs sm:text-sm text-gray-600 leading-relaxed">Analyse des agrégats sectoriels, comparaison entre banques publiques et privées, évolution des parts de marché et positionnement relatif des établissements selon les indicateurs étudiés.</p>
+              <h3 class="font-bold text-gray-900 text-base">{{methodology.approach.steps.3.title}}</h3>
+              <p class="text-xs sm:text-sm text-gray-600 leading-relaxed">{{methodology.approach.steps.3.body}}</p>
             </div>
             <div class="bg-primary/5 border border-primary/20 rounded-lg p-2.5 text-xs text-primary font-semibold">
-              Principe méthodologique : Les comparaisons sont réalisées sur une base méthodologique identique pour l’ensemble des établissements couverts.
+              {{methodology.approach.steps.3.badge}}
             </div>
           </div>
 
@@ -98,9 +98,9 @@
           <div class="bg-gray-50/80 rounded-xl p-6 border border-gray-200/80 space-y-3 flex flex-col justify-between hover:shadow-sm transition-shadow">
             <div class="space-y-2">
               <span class="w-8 h-8 rounded-full bg-primary/10 text-primary font-extrabold text-sm flex items-center justify-center">5</span>
-              <h3 class="font-bold text-gray-900 text-base">Analyses individuelles & dimensions opérationnelles</h3>
-              <p class="text-xs sm:text-sm text-gray-600 leading-relaxed">Chaque établissement fait l’objet d’une lecture individuelle de son évolution, de son positionnement et de ses principaux indicateurs.</p>
-              <p class="text-xs text-gray-500 italic bg-gray-100/80 p-2.5 rounded-lg border border-gray-200/60 mt-2">Selon la disponibilité et la comparabilité des informations, l’analyse peut également intégrer des données complémentaires telles que le hors-bilan, les effectifs, le réseau bancaire ou des indicateurs de productivité opérationnelle.</p>
+              <h3 class="font-bold text-gray-900 text-base">{{methodology.approach.steps.4.title}}</h3>
+              <p class="text-xs sm:text-sm text-gray-600 leading-relaxed">{{methodology.approach.steps.4.body}}</p>
+              <p class="text-xs text-gray-500 italic bg-gray-100/80 p-2.5 rounded-lg border border-gray-200/60 mt-2">{{methodology.approach.steps.4.note}}</p>
             </div>
           </div>
 
@@ -108,9 +108,9 @@
           <div class="bg-gray-50/80 rounded-xl p-6 border border-gray-200/80 space-y-3 flex flex-col justify-between hover:shadow-sm transition-shadow">
             <div class="space-y-2">
               <span class="w-8 h-8 rounded-full bg-primary/10 text-primary font-extrabold text-sm flex items-center justify-center">6</span>
-              <h3 class="font-bold text-gray-900 text-base">Revue, analyse & interprétation</h3>
-              <p class="text-xs sm:text-sm text-gray-600 leading-relaxed">Les données consolidées font l’objet d’une revue analytique et d’une interprétation par M. Rachid Sekak et Tadjeddine & Partners afin d’identifier les évolutions significatives, les tendances du secteur et les éléments susceptibles d’expliquer les trajectoires observées.</p>
-              <p class="text-xs text-gray-500 italic bg-gray-100/80 p-2.5 rounded-lg border border-gray-200/60 mt-2">Les constats factuels, les calculs et les interprétations sont distingués autant que possible dans la restitution.</p>
+              <h3 class="font-bold text-gray-900 text-base">{{methodology.approach.steps.5.title}}</h3>
+              <p class="text-xs sm:text-sm text-gray-600 leading-relaxed">{{methodology.approach.steps.5.body}}</p>
+              <p class="text-xs text-gray-500 italic bg-gray-100/80 p-2.5 rounded-lg border border-gray-200/60 mt-2">{{methodology.approach.steps.5.note}}</p>
             </div>
           </div>
         </div>
@@ -171,8 +171,8 @@
 
       <!-- CTA DE FIN DE PAGE -->
       <div class="text-center pt-8 space-y-4 border-t border-gray-100">
-        <h3 class="text-xl font-bold text-gray-900">Découvrir les résultats et analyses des études</h3>
-        <p class="text-gray-600 max-w-xl mx-auto text-sm sm:text-base">L’édition 2026 est ouverte à la souscription anticipée avec un tarif préférentiel valable jusqu’au 31 août 2026.</p>
+        <h3 class="text-xl font-bold text-gray-900">{{methodology.ctaTitle}}</h3>
+        <p class="text-gray-600 max-w-xl mx-auto text-sm sm:text-base">{{methodology.ctaSubtitle}}</p>
         <div class="flex flex-col sm:flex-row justify-center gap-4 pt-2">
           <a href="{{__basePath}}/{{__lang}}/editions/2026/#tarifs" class="btn-cta">{{home.hero.ctaPreorder}}</a>
           <a href="{{__basePath}}/{{__lang}}/editions/2025/" class="btn-secondary">{{home.hero.ctaDiscover2025}}</a>
@@ -187,8 +187,8 @@
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-gray-400">
     <p>{{site.copyright}}</p>
     <div class="flex gap-4">
-      <a href="{{__basePath}}/{{__lang}}/mentions-legales/" class="hover:text-gray-200">Mentions légales</a>
-      <a href="{{__basePath}}/{{__lang}}/politique-confidentialite/" class="hover:text-gray-200">Confidentialité</a>
+      <a href="{{__basePath}}/{{__lang}}/mentions-legales/" class="hover:text-gray-200">{{legal.hero.title}}</a>
+      <a href="{{__basePath}}/{{__lang}}/politique-confidentialite/" class="hover:text-gray-200">{{privacy.hero.title}}</a>
     </div>
   </div>
 </footer>

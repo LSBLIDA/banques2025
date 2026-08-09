@@ -26,67 +26,34 @@
       <div class="grid lg:grid-cols-3 gap-8 mb-16">
         <!-- Formulaire principal -->
         <div class="lg:col-span-2 space-y-6">
-          <h2 class="text-2xl font-bold text-gray-900">Envoyez-nous votre demande</h2>
-          <!-- Sélecteur de type de demande -->
-          <div class="grid sm:grid-cols-2 gap-3">
-            <label class="contact-type-card">
-              <input type="radio" name="contact_type" value="order" class="sr-only peer" />
-              <div class="border border-gray-200 rounded-xl p-4 cursor-pointer peer-checked:border-accent peer-checked:bg-accent/5 transition-all hover:border-gray-300">
-                <div class="font-semibold text-sm text-gray-900 mb-1">{{contact.forms.order.label}}</div>
-                <div class="text-xs text-gray-500">{{contact.forms.order.description}}</div>
-              </div>
-            </label>
-            <label class="contact-type-card">
-              <input type="radio" name="contact_type" value="quote" class="sr-only peer" />
-              <div class="border border-gray-200 rounded-xl p-4 cursor-pointer peer-checked:border-accent peer-checked:bg-accent/5 transition-all hover:border-gray-300">
-                <div class="font-semibold text-sm text-gray-900 mb-1">{{contact.forms.quote.label}}</div>
-                <div class="text-xs text-gray-500">{{contact.forms.quote.description}}</div>
-              </div>
-            </label>
-            <label class="contact-type-card">
-              <input type="radio" name="contact_type" value="benchmark" class="sr-only peer" />
-              <div class="border border-gray-200 rounded-xl p-4 cursor-pointer peer-checked:border-accent peer-checked:bg-accent/5 transition-all hover:border-gray-300">
-                <div class="font-semibold text-sm text-gray-900 mb-1">{{contact.forms.benchmark.label}}</div>
-                <div class="text-xs text-gray-500">{{contact.forms.benchmark.description}}</div>
-              </div>
-            </label>
-            <label class="contact-type-card">
-              <input type="radio" name="contact_type" value="partnership" class="sr-only peer" />
-              <div class="border border-gray-200 rounded-xl p-4 cursor-pointer peer-checked:border-accent peer-checked:bg-accent/5 transition-all hover:border-gray-300">
-                <div class="font-semibold text-sm text-gray-900 mb-1">{{contact.forms.partnership.label}}</div>
-                <div class="text-xs text-gray-500">{{contact.forms.partnership.description}}</div>
-              </div>
-            </label>
-            <label class="contact-type-card sm:col-span-2">
-              <input type="radio" name="contact_type" value="press" class="sr-only peer" />
-              <div class="border border-gray-200 rounded-xl p-4 cursor-pointer peer-checked:border-accent peer-checked:bg-accent/5 transition-all hover:border-gray-300">
-                <div class="font-semibold text-sm text-gray-900 mb-1">{{contact.forms.press.label}}</div>
-                <div class="text-xs text-gray-500">{{contact.forms.press.description}}</div>
-              </div>
-            </label>
-          </div>
-
-          <!-- Formulaire générique -->
-          </form>
-          <div id="contact-form-success" class="hidden text-center py-8 space-y-4">
-            <div class="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mx-auto"><svg class="w-8 h-8 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg></div>
-            <h3 class="text-xl font-bold text-gray-900">Message envoyé</h3>
-            <p class="text-gray-600">Notre équipe vous répondra dans les plus brefs délais.</p>
+          <h2 class="text-2xl font-bold text-gray-900">{{contact.formTitle}}</h2>
+          <!-- Formulaire Fenekio -->
+          <div class="w-full flex justify-center">
+            <iframe
+              width="600"
+              height="850"
+              src="https://fenekio.com/tandp/ps/forms/wtl/9adc89b3476356300da871d0e977e64f"
+              frameborder="0"
+              sandbox="allow-top-navigation allow-forms allow-scripts allow-same-origin allow-popups"
+              allowfullscreen
+              class="w-full max-w-2xl rounded-xl border border-gray-100 shadow-sm"
+              title="{{contact.formTitle}}"
+            ></iframe>
           </div>
         </div>
 
         <!-- Informations de contact -->
         <div class="space-y-6">
-          <h2 class="text-lg font-bold text-gray-900">Coordonnées</h2>
+          <h2 class="text-lg font-bold text-gray-900">{{contact.infoTitle}}</h2>
           <div class="space-y-4 text-sm text-gray-600">
             <div class="flex items-start gap-3"><svg class="w-5 h-5 text-primary mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg><span>{{contact.info.address}}</span></div>
             <div class="flex items-center gap-3"><svg class="w-5 h-5 text-primary flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg><a href="mailto:{{contact.info.email}}" class="hover:text-accent transition-colors">{{contact.info.email}}</a></div>
             <div class="flex items-start gap-3"><svg class="w-5 h-5 text-primary mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg><span>{{contact.info.phone}}</span></div>
           </div>
           <div class="bg-primary/5 border border-primary/20 rounded-xl p-5 space-y-2">
-            <p class="text-sm font-semibold text-primary">Commander l'édition 2025</p>
-            <p class="text-xs text-gray-600">Accédez directement aux formulaires de commande sécurisés.</p>
-            <a href="{{__basePath}}/{{__lang}}/editions/2025/#tarifs" class="text-accent font-semibold text-sm hover:text-accent-700 transition-colors">Voir les offres →</a>
+            <p class="text-sm font-semibold text-primary">{{contact.order2025Title}}</p>
+            <p class="text-xs text-gray-600">{{contact.order2025Body}}</p>
+            <a href="{{__basePath}}/{{__lang}}/editions/2025/#tarifs" class="text-accent font-semibold text-sm hover:text-accent-700 transition-colors">{{contact.order2025Cta}}</a>
           </div>
         </div>
       </div>
@@ -97,7 +64,7 @@
 <footer class="bg-gray-900 text-white py-12">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-gray-400">
     <p>{{site.copyright}}</p>
-    <div class="flex gap-4"><a href="{{__basePath}}/{{__lang}}/mentions-legales/" class="hover:text-gray-200">Mentions légales</a><a href="{{__basePath}}/{{__lang}}/politique-confidentialite/" class="hover:text-gray-200">Confidentialité</a></div>
+    <div class="flex gap-4"><a href="{{__basePath}}/{{__lang}}/mentions-legales/" class="hover:text-gray-200">{{legal.hero.title}}</a><a href="{{__basePath}}/{{__lang}}/politique-confidentialite/" class="hover:text-gray-200">{{privacy.hero.title}}</a></div>
   </div>
 </footer>
 </body></html>

@@ -4,7 +4,80 @@
     "status": "published",
     "note": "Version éditoriale de référence. Toute modification doit être validée avant génération des traductions EN et AR."
   },
-
+  "rapport2023": {
+    "meta": {
+      "title": "Rapport secteur bancaire Algérie 2023 | Algeria Banking Index",
+      "description": "Téléchargez gratuitement le Rapport sur le secteur bancaire en Algérie 2023 de Tadjeddine & Partners, basé sur les données financières 2021–2022."
+    },
+    "hero": {
+      "badge": "Publication fondatrice · Accès gratuit",
+      "title": "Rapport sur le secteur bancaire en Algérie — 2023",
+      "subtitle": "Une première photographie comparative du secteur bancaire algérien à partir des données financières 2021–2022.",
+      "cta": "Télécharger gratuitement le rapport PDF",
+      "ctaSubtitle": "Accès libre · PDF · 50 pages"
+    },
+    "intro": {
+      "title": "La première publication à l'origine de la démarche",
+      "body1": "Publié en 2023, ce rapport constitue la première publication de Tadjeddine & Partners consacrée à l'observation comparative du secteur bancaire algérien.",
+      "body2": "À partir des données financières 2021 et 2022, il propose une lecture des principaux indicateurs des banques opérant en Algérie, des comparaisons entre établissements et plusieurs constats sur les évolutions du marché.",
+      "body3": "Cette première démarche a progressivement évolué vers des analyses plus approfondies et structurées, conduisant aux études suivantes puis au développement d'Algeria Banking Index."
+    },
+    "stats": {
+      "period": "2021–2022",
+      "periodLabel": "Période analysée",
+      "banks": "20 banques",
+      "banksLabel": "Présentées et comparées",
+      "pages": "50 pages",
+      "pagesLabel": "De données, graphiques et constats",
+      "year": "2023",
+      "yearLabel": "Première publication"
+    },
+    "content": {
+      "title": "Ce que contient le rapport",
+      "items": [
+        "Indicateurs financiers banque par banque",
+        "Total bilan",
+        "Dépôts de la clientèle",
+        "Prêts à la clientèle",
+        "Produit Net Bancaire",
+        "Résultat Brut d'Exploitation",
+        "Résultat net",
+        "Fonds propres",
+        "Provisions nettes",
+        "Coefficient d'exploitation",
+        "Return on Equity",
+        "Comparaisons entre banques",
+        "Principaux constats sur le secteur bancaire",
+        "Réflexions sur l'inclusion financière",
+        "Ouverture du capital des banques publiques",
+        "Gouvernance bancaire"
+      ]
+    },
+    "timeline": {
+      "title": "Progression de notre démarche",
+      "subtitle": "D'un premier rapport sectoriel en 2023 à Algeria Banking Index, notre démarche s'est progressivement enrichie en données, méthodologie et outils d'analyse.",
+      "t2023": {
+        "title": "2023",
+        "name": "Rapport sur le secteur bancaire",
+        "desc": "Première publication comparative · Données 2021–2022"
+      },
+      "t2025": {
+        "title": "2025",
+        "name": "Étude comparative du secteur bancaire",
+        "desc": "Analyse approfondie · Données 2023–2024"
+      },
+      "t2026": {
+        "title": "2026",
+        "name": "Algeria Banking Index",
+        "desc": "Nouvelle génération de l'étude · Analyse enrichie, données, classements et outils interactifs"
+      }
+    },
+    "footerCta": {
+      "title": "Consultez librement notre première publication",
+      "text": "Le Rapport sur le secteur bancaire en Algérie 2023 reste accessible gratuitement dans son intégralité.",
+      "cta": "Télécharger le rapport 2023"
+    }
+  },
   "site": {
     "name": "ABIX",
     "fullName": "Algeria Banking Index",
@@ -12,7 +85,6 @@
     "tagline": "Études, benchmarks et analyses stratégiques du secteur bancaire algérien",
     "copyright": "© 2025 Tadjeddine & Partners. Tous droits réservés."
   },
-
   "nav": {
     "home": "Accueil",
     "editions": "Éditions",
@@ -30,9 +102,9 @@
     "questionnaire": "Baromètre 2026",
     "ctaStudy": "Obtenir l'étude",
     "ctaNotify": "Être informé de la parution 2026",
-    "langSelectLabel": "Langue"
+    "langSelectLabel": "Langue",
+    "report2023Path": "editions/rapport-2023/"
   },
-
   "home": {
     "meta": {
       "title": "Algeria Banking Index | Études du secteur bancaire algérien",
@@ -51,7 +123,12 @@
       "ctaSynthesis": "Recevoir la synthèse exécutive",
       "ctaPresentation": "Demander une présentation",
       "ctaBenchmark": "Obtenir un benchmark personnalisé",
-      "ctaDiscover2025": "Découvrir l'édition 2025"
+      "ctaDiscover2025": "Découvrir l'édition 2025",
+      "badgeBanks": "21 banques analysées",
+      "badgeComparative": "Comparatif 2024–2025",
+      "badgeTrends": "Tendances 2023–2025",
+      "badgeIndicators": "Nouveaux indicateurs opérationnels",
+      "publisherMention": "Une publication de Tadjeddine & Partners"
     },
     "covers": {
       "badge2026": "Nouvelle édition",
@@ -76,7 +153,17 @@
       "ctaPrimary": "Souscrire à l’édition 2026",
       "ctaSecondary": "Voir le contenu prévisionnel de l’édition 2026",
       "disclaimer": "Offre réservée aux souscriptions anticipées enregistrées avant le 31 août 2026.",
-      "priceDefaultLabel": "Tarif de souscription anticipée"
+      "priceDefaultLabel": "Tarif de souscription anticipée",
+      "specialOffer": "Offre spéciale précommande",
+      "validityText": "Valable jusqu'au 31 août 2026 à 23h59",
+      "countdownText": "Fin du tarif préférentiel dans",
+      "days": "Jours",
+      "hours": "Heures",
+      "minutes": "Min",
+      "seconds": "Sec",
+      "viewDetails": "Consulter le détail des 3 offres (Essentiel, Pro, Corporate)",
+      "syntheticViewTitle": "Tarifs et formules 2026 — Vue synthétique",
+      "viewFullComparison": "Voir la comparaison détaillée du contenu des offres 2026"
     },
     "stats": {
       "label2025": "Édition 2025 disponible",
@@ -110,9 +197,37 @@
       "title": "Une méthodologie rigoureuse et transparente",
       "body": "Algeria Banking Index s'appuie sur une analyse fondée sur les données financières et opérationnelles des établissements. Les données historiques peuvent intégrer les reclassements et retraitements publiés ultérieurement par les établissements afin d’assurer la cohérence des comparaisons.",
       "cta": "En savoir plus sur la méthodologie"
+    },
+    "history": {
+      "title": "Une démarche initiée en 2023",
+      "subtitle": "Du premier rapport sectoriel publié en 2023 à Algeria Banking Index 2026, notre approche s’est progressivement enrichie en données, méthodologie et outils d’analyse.",
+      "conclusion": "Une démarche construite dans le temps, avec un niveau croissant de profondeur analytique, de comparabilité et d’outils d’aide à la décision.",
+      "c2023": {
+        "year": "2023",
+        "title": "Rapport sur le secteur bancaire en Algérie",
+        "subtitle": "Données 2021–2022",
+        "description": "Première publication comparative de Tadjeddine & Partners consacrée au secteur bancaire algérien.",
+        "badge": "Publication fondatrice",
+        "cta": "Télécharger gratuitement"
+      },
+      "c2025": {
+        "year": "2025",
+        "title": "Étude comparative du secteur bancaire algérien",
+        "subtitle": "Données 2023–2024",
+        "description": "Une analyse approfondie des performances, dynamiques et principaux indicateurs du secteur bancaire algérien.",
+        "badge": "Disponible",
+        "cta": "Découvrir l’édition 2025"
+      },
+      "c2026": {
+        "year": "2026",
+        "title": "Algeria Banking Index",
+        "subtitle": "Analyse comparative 2024–2025",
+        "description": "Une nouvelle génération de l’étude, enrichie par de nouveaux indicateurs, des analyses comparatives et des outils interactifs.",
+        "badge": "Nouvelle édition",
+        "cta": "Souscrire à l’édition 2026"
+      }
     }
   },
-
   "edition2026": {
     "meta": {
       "title": "Édition 2026 — Algeria Banking Index",
@@ -258,12 +373,50 @@
     },
     "forecast": {
       "title": "Contenu prévisionnel de l'édition 2026",
-      "subtitle": "Une analyse exhaustive de la triennale 2023–2025",
+      "subtitle": "Une lecture multidimensionnelle des performances et transformations du secteur bancaire algérien",
       "items": [
-        { "title": "Évolution triennale 2023–2025", "body": "Bilan global des dynamiques d'octroi de crédits, de collecte des dépôts et des ratios de liquidité sur 3 exercices." },
-        { "title": "Diagnostics individuel banque par banque", "body": "Fiches d'analyse détaillées couvrant l'ensemble des établissements publics et privés du périmètre retenu." },
-        { "title": "Benchmarks sectoriels & comparaisons", "body": "Positionnement relatif des établissements sur les indicateurs de rentabilité (RoE, RoA, PNB, RBE)." },
-        { "title": "Analyses prospectives & réglementaires", "body": "Décryptage des évolutions prudentielles et stratégiques du marché bancaire algérien." }
+        {
+          "title": "Évolution triennale 2023–2025",
+          "body": "Bilan global des dynamiques d'octroi de crédits, de collecte des dépôts et des ratios de liquidité sur 3 exercices."
+        },
+        {
+          "title": "Diagnostics individuel banque par banque",
+          "body": "Fiches d'analyse détaillées couvrant l'ensemble des établissements publics et privés du périmètre retenu."
+        },
+        {
+          "title": "Benchmarks sectoriels & comparaisons",
+          "body": "Positionnement relatif des établissements sur les indicateurs de rentabilité (RoE, RoA, PNB, RBE)."
+        },
+        {
+          "title": "Analyses prospectives & réglementaires",
+          "body": "Décryptage des évolutions prudentielles et stratégiques du marché bancaire algérien."
+        }
+      ],
+      "cards": [
+        {
+          "title": "Performances du secteur 2024–2025",
+          "body": "Évolution du bilan, des dépôts, des crédits, du PNB, de la rentabilité, des provisions et des principaux équilibres financiers du secteur."
+        },
+        {
+          "title": "Tendances 2023–2025",
+          "body": "Mise en perspective sur trois exercices afin d’identifier les tendances structurelles, les accélérations et les changements de trajectoire."
+        },
+        {
+          "title": "Analyse des 21 banques",
+          "body": "Fiches individuelles, évolution des principaux indicateurs, positionnement de chaque établissement et comparaison avec les performances du secteur."
+        },
+        {
+          "title": "Benchmarks & parts de marché",
+          "body": "Comparaison banques publiques / banques privées, classements par indicateur, parts de marché et dynamiques concurrentielles."
+        },
+        {
+          "title": "Hors-bilan, réseau & performance opérationnelle",
+          "body": "Analyse des engagements hors-bilan, des effectifs, du réseau d’agences, de la productivité et de nouveaux indicateurs opérationnels."
+        },
+        {
+          "title": "Digital & regards sur le secteur",
+          "body": "Baromètre des services bancaires : application mobile, e-banking web et services en agence. Sous réserve de confirmation, contributions de dirigeants et d'experts."
+        }
       ]
     },
     "faq": {
@@ -357,9 +510,31 @@
       "title": "Aller au-delà de l'étude",
       "body": "Besoin d'une analyse propre à votre établissement ? Les experts de Tadjeddine & Partners peuvent transformer les données en diagnostic, recommandations et feuille de route.",
       "cta": "Demander un diagnostic personnalisé"
+    },
+    "enriched": {
+      "badge": "Évolutions & nouveautés",
+      "title": "Une édition 2026 enrichie",
+      "subtitle": "Au-delà de l’actualisation des données financières, l’édition 2026 élargit son champ d’analyse pour offrir une lecture plus complète de la performance, de l’organisation et de la transformation des banques opérant en Algérie.",
+      "items": [
+        {
+          "title": "21 banques couvertes",
+          "body": "Un périmètre élargi intégrant les établissements opérant sur le marché algérien."
+        },
+        {
+          "title": "Nouveaux indicateurs opérationnels",
+          "body": "Effectifs, réseau, hors-bilan et indicateurs de productivité viennent compléter l’analyse financière."
+        },
+        {
+          "title": "Expérience bancaire — services digitaux et en agence",
+          "body": "Le Baromètre ABIX 2026 mesure la satisfaction des utilisateurs : application mobile, e-banking web et services en agence."
+        },
+        {
+          "title": "Regards croisés",
+          "body": "Des contributions de dirigeants et d’experts pourront compléter les analyses indépendantes de l’étude, sous réserve de confirmation éditoriale."
+        }
+      ]
     }
   },
-
   "edition2025": {
     "meta": {
       "title": "Édition 2025 — Algeria Banking Index",
@@ -382,7 +557,47 @@
         "sample": "Échantillon"
       },
       "body": "Découvrir la démarche de collecte, de consolidation et d'analyse des études Algeria Banking Index.",
-      "cta": "En savoir plus sur la méthodologie"
+      "cta": "En savoir plus sur la méthodologie",
+      "tabMethodology": {
+        "items": [
+          "Analyse quantitative des 20 banques opérant en Algérie",
+          "Exploitation des états financiers annuels publiés pour 2023 et 2024",
+          "Consolidation et structuration pour comparaison sectorielle",
+          "Analyse assistée par des outils de modélisation"
+        ]
+      },
+      "tabContent": {
+        "items": [
+          {
+            "label": "Évolution globale du secteur bancaire (2023–2024)",
+            "pages": "15 pages"
+          },
+          {
+            "label": "Comparatif banques publiques vs privées",
+            "pages": "10 pages"
+          },
+          {
+            "label": "Analyse individuelle des 20 banques de la place",
+            "pages": "61 pages"
+          },
+          {
+            "label": "Analyse comparative sur plusieurs indices",
+            "pages": "17 pages"
+          }
+        ]
+      },
+      "tabSample": {
+        "items": [
+          {
+            "label": "Bons du Trésor / Total bilan",
+            "value": "34,12 %"
+          },
+          {
+            "label": "PNB — croissance 2024",
+            "value": "+17,3 %"
+          }
+        ]
+      }
     },
     "challenges": {
       "title": "Les défis des dirigeants bancaires",
@@ -415,17 +630,29 @@
         {
           "title": "Données financières consolidées 2023/2024",
           "body": "Une base de données unique issue des bilans publiés de 20 banques représentant la quasi-totalité du marché.",
-          "points": ["Ratios clés : prêts/dépôts, liquidité, rentabilité", "Analyse comparative publics vs privés", "Tendances des dépôts et crédits"]
+          "points": [
+            "Ratios clés : prêts/dépôts, liquidité, rentabilité",
+            "Analyse comparative publics vs privés",
+            "Tendances des dépôts et crédits"
+          ]
         },
         {
           "title": "Analyse concurrentielle approfondie",
           "body": "Un benchmark sectoriel inédit pour comprendre les forces et faiblesses de chaque acteur.",
-          "points": ["Parts de marché et évolution 2023 → 2024", "Analyse individuelle des 20 banques (61 pages)", "Benchmarks de performance comparés"]
+          "points": [
+            "Parts de marché et évolution 2023 → 2024",
+            "Analyse individuelle des 20 banques (61 pages)",
+            "Benchmarks de performance comparés"
+          ]
         },
         {
           "title": "Perspectives et stratégies",
           "body": "Des projections fondées sur l'évolution récente et validées par données réglementaires.",
-          "points": ["Projection du total bilan, dépôts et crédits", "Rentabilité attendue et dynamique du RoE", "Axes de différenciation stratégique"]
+          "points": [
+            "Projection du total bilan, dépôts et crédits",
+            "Rentabilité attendue et dynamique du RoE",
+            "Axes de différenciation stratégique"
+          ]
         }
       ]
     },
@@ -434,7 +661,43 @@
       "subtitle": "Des options adaptées à vos besoins d'analyse, de veille et de décision stratégique.",
       "popular": "Plus populaire",
       "ctaOrder": "Commander",
-      "paymentNote": "Paiement sécurisé · EUR & DZD acceptés · Accès après traitement de la commande"
+      "paymentNote": "Paiement sécurisé · EUR & DZD acceptés · Accès après traitement de la commande",
+      "packs": {
+        "essential": {
+          "title": "Pack Essentiel",
+          "price": "84 000 DA HT",
+          "features": [
+            "Étude complète (104 pages, PDF via accès sécurisé)",
+            "Comparatif public/privé + 20 banques",
+            "Usage individuel (1 utilisateur)",
+            "Mises à jour d'errata mineures"
+          ]
+        },
+        "pro": {
+          "title": "Pack Pro",
+          "price": "120 000 DA HT",
+          "features": [
+            "Tout du Pack Essentiel",
+            "Fichier Excel interactif",
+            "Support email 7 jours",
+            "Accès aux mises à jour majeures",
+            "Jusqu'à 3 utilisateurs (même entité)"
+          ]
+        },
+        "corporate": {
+          "title": "Pack Corporate Executive",
+          "price": "180 000 DA HT",
+          "features": [
+            "Tout du Pack Pro",
+            "Livrable PowerPoint exécutif",
+            "Webinar exclusif : Décryptage par M. Rachid Sekak",
+            "Jusqu'à 20 utilisateurs (même entité)"
+          ]
+        }
+      },
+      "securePayment": "Paiement sécurisé",
+      "acceptedCurrencies": "EUR & DZD acceptés",
+      "accessNote": "Accès après traitement"
     },
     "faq": {
       "title": "Questions fréquentes",
@@ -466,9 +729,13 @@
       "title": "Aller au-delà de l'étude",
       "body": "Besoin d'une analyse propre à votre établissement ? Les experts de Tadjeddine & Partners peuvent transformer les données en diagnostic, recommandations et feuille de route.",
       "cta": "Demander un diagnostic personnalisé"
+    },
+    "stats": {
+      "banksAnalysed": "Banques analysées",
+      "analysisPages": "Pages d'analyse",
+      "coveredYears": "Exercices couverts"
     }
   },
-
   "methodology": {
     "meta": {
       "title": "Méthodologie des études — Algeria Banking Index",
@@ -486,7 +753,38 @@
     },
     "approach": {
       "title": "Notre démarche analytique en 6 étapes",
-      "description": "Les études Algeria Banking Index reposent sur une collecte structurée des informations publiquement disponibles, suivie de travaux de consolidation, de contrôle de cohérence, de comparaison et d’interprétation."
+      "description": "Les études Algeria Banking Index reposent sur une collecte structurée des informations publiquement disponibles, suivie de travaux de consolidation, de contrôle de cohérence, de comparaison et d’interprétation.",
+      "steps": [
+        {
+          "title": "Périmètre & collecte des données",
+          "body": "Recensement et extraction des informations publiées par les banques et les sources institutionnelles disponibles : états financiers, rapports annuels et autres informations financières ou opérationnelles pertinentes pour l’analyse."
+        },
+        {
+          "title": "Consolidation, cohérence & retraitements",
+          "body": "Contrôle de cohérence des données, rapprochement des agrégats et traitement homogène des informations entre établissements et entre exercices.",
+          "note": "Lorsque des banques publient ultérieurement des données historiques retraitées ou reclassées, les études retiennent, lorsque cela est pertinent, les données révisées les plus récentes disponibles afin de préserver la cohérence des comparaisons."
+        },
+        {
+          "title": "Définition & normalisation des indicateurs",
+          "body": "Définition homogène des indicateurs utilisés et distinction entre données de stock, données de flux et ratios.",
+          "note": "Les calculs portent notamment sur la croissance, la rentabilité, l’efficience, les parts de marché et différents indicateurs permettant de comparer les trajectoires des établissements."
+        },
+        {
+          "title": "Comparaisons sectorielles & positionnement",
+          "body": "Analyse des agrégats sectoriels, comparaison entre banques publiques et privées, évolution des parts de marché et positionnement relatif des établissements selon les indicateurs étudiés.",
+          "badge": "Principe méthodologique : Les comparaisons sont réalisées sur une base méthodologique identique pour l’ensemble des établissements couverts."
+        },
+        {
+          "title": "Analyses individuelles & dimensions opérationnelles",
+          "body": "Chaque établissement fait l’objet d’une lecture individuelle de son évolution, de son positionnement et de ses principaux indicateurs.",
+          "note": "Selon la disponibilité et la comparabilité des informations, l’analyse peut également intégrer des données complémentaires telles que le hors-bilan, les effectifs, le réseau bancaire ou des indicateurs de productivité opérationnelle."
+        },
+        {
+          "title": "Revue, analyse & interprétation",
+          "body": "Les données consolidées font l’objet d’une revue analytique et d’une interprétation par M. Rachid Sekak et Tadjeddine & Partners afin d’identifier les évolutions significatives, les tendances du secteur et les éléments susceptibles d’expliquer les trajectoires observées.",
+          "note": "Les constats factuels, les calculs et les interprétations sont distingués autant que possible dans la restitution."
+        }
+      ]
     },
     "revisions": {
       "title": "Données historiques et révisions",
@@ -513,9 +811,10 @@
       "p1": "Les analyses sont établies à partir des informations publiques disponibles à la date de clôture de chaque édition.",
       "p2": "La disponibilité, le niveau de détail et la présentation des informations peuvent varier d’un établissement à l’autre.",
       "p3": "Lorsque certaines données ne sont pas disponibles ou ne peuvent pas être comparées de manière suffisamment homogène, elles peuvent être exclues d’un indicateur ou faire l’objet d’une mention spécifique."
-    }
+    },
+    "ctaTitle": "Découvrir les résultats et analyses des études",
+    "ctaSubtitle": "L’édition 2026 est ouverte à la souscription anticipée avec un tarif préférentiel valable jusqu’au 31 août 2026."
   },
-
   "services": {
     "meta": {
       "title": "Services de conseil — Tadjeddine & Partners",
@@ -568,7 +867,9 @@
       "body": "Chaque mission de conseil est conçue sur mesure selon les besoins de votre établissement.",
       "primary": "Demander un devis",
       "secondary": "En savoir plus sur Tadjeddine & Partners"
-    }
+    },
+    "sectionTitle": "Nos prestations",
+    "sectionSubtitle": "Chaque mission est conçue sur mesure selon les besoins et le profil de votre établissement."
   },
   "abixIndex": {
     "meta": {
@@ -586,23 +887,43 @@
     "objectives": [
       "Proposer une lecture multidimensionnelle de la performance bancaire",
       "Faciliter les comparaisons synthétiques entre établissements",
-      "Suivre les évolutions de performance dans le temps",
+      "Suivre l'évolution des performances dans le temps",
       "Compléter les analyses détaillées des études annuelles",
-      "Fournir un cadre synthétique de benchmark sectoriel"
+      "Fournir un cadre synthétique de benchmark sectoriel pour la place financière"
     ],
     "dimensionsTitle": "Les 5 dimensions actuellement à l'étude",
     "dimensions": [
-      { "title": "Performance financière", "body": "Rentabilité des fonds propres (RoE), rentabilité des actifs (RoA), produit net bancaire et résultat brut d'exploitation." },
-      { "title": "Efficience opérationnelle", "body": "Coefficient d'exploitation, productivité du réseau d'agences et maîtrise des charges générales." },
-      { "title": "Croissance commerciale", "body": "Dynamique d'octroi de crédits, collecte des dépôts et évolution des parts de marché." },
-      { "title": "Solidité financière", "body": "Niveau de fonds propres, couverture des risques et structure des ratios de liquidité." },
-      { "title": "Structure des actifs", "body": "Composition du bilan, répartition des créances et qualité du portefeuille d'actifs." }
+      {
+        "title": "1. Performance financière",
+        "body": "Analyse de la rentabilité (RoE, RoA, PNB, RBE) et de la capacité de création de valeur de l'établissement.",
+        "status": "En évaluation"
+      },
+      {
+        "title": "2. Efficience opérationnelle",
+        "body": "Évaluation du coefficient d'exploitation, de la maîtrise des charges et de la productivité des réseaux d'agences.",
+        "status": "En évaluation"
+      },
+      {
+        "title": "3. Croissance commerciale",
+        "body": "Dynamique de collecte des dépôts, octroi de crédits et évolution des parts de marché relatives.",
+        "status": "En évaluation"
+      },
+      {
+        "title": "4. Solidité financière",
+        "body": "Niveau des fonds propres, couverture des risques et structure de liquidité des établissements.",
+        "status": "En évaluation"
+      },
+      {
+        "title": "5. Structure des actifs",
+        "body": "Composition du bilan, répartition des créances et qualité du portefeuille d'investissements.",
+        "status": "En évaluation"
+      }
     ],
     "warningTitle": "Important — Projet en développement",
     "warning": "La méthodologie, les indicateurs, les pondérations et les modalités de calcul sont encore en cours de test et de validation. Aucun score ni classement ABIX définitif n’est actuellement publié.",
-    "cta": "Être informé du lancement de l’indice ABIX"
+    "cta": "Être informé du lancement de l’indice ABIX",
+    "ctaBody": "Inscrivez-vous pour recevoir les actualités du projet et être notifié lors de la publication officielle de l'indice ABIX."
   },
-
   "about": {
     "meta": {
       "title": "À propos — ABIX | Algeria Banking Index",
@@ -624,10 +945,13 @@
     "author": {
       "name": "M. Rachid Sekak",
       "role": "Expert bancaire",
-      "bio": "Spécialiste du secteur bancaire algérien, M. Rachid Sekak apporte son expertise et sa connaissance du marché à l'édition annuelle de l'ABIX. Son analyse est fondée sur une lecture approfondie des données financières publiées et une connaissance de terrain du secteur."
-    }
+      "bio": "Spécialiste du secteur bancaire algérien, M. Rachid Sekak apporte son expertise et sa connaissance du marché à l'édition annuelle de l'ABIX. Son analyse est fondée sur une lecture approfondie des données financières publiées et une connaissance de terrain du secteur.",
+      "body": "Spécialiste du secteur bancaire algérien, M. Rachid Sekak apporte son expertise et sa connaissance du marché à l'édition annuelle de l'ABIX. Son analyse est fondée sur une lecture approfondie des données financières publiées et une connaissance de terrain du secteur."
+    },
+    "introP1": "ABIX — Algeria Banking Index — est un indice et une étude comparative annuelle des banques opérant en Algérie. Il analyse les performances financières des établissements sur la base de leurs données publiées, afin de fournir aux dirigeants, analystes et investisseurs une référence objective et structurée.",
+    "introP2": "ABIX ne constitue pas une notation réglementaire ou prudentielle. C'est un outil d'aide à la décision fondé sur la transparence et la rigueur méthodologique de l'étude et de l'ABIX.",
+    "tagline": "Analyse annuelle du secteur bancaire algérien"
   },
-
   "contact": {
     "meta": {
       "title": "Contact — ABIX | Algeria Banking Index",
@@ -638,19 +962,40 @@
       "subtitle": "Choisissez l'objet de votre demande pour être orienté vers le bon interlocuteur."
     },
     "forms": {
-      "order": { "label": "Commander l'étude 2025", "description": "Accéder aux formulaires de commande des packs Essentiel, Pro et Corporate Executive." },
-      "quote": { "label": "Demande de devis conseil", "description": "Obtenir un devis pour une mission de benchmark, diagnostic ou accompagnement stratégique." },
-      "benchmark": { "label": "Benchmark personnalisé", "description": "Demander un benchmark de votre établissement par rapport à ses pairs." },
-      "partnership": { "label": "Partenariat ou sponsoring", "description": "Explorer une collaboration ou un sponsoring avec ABIX ou Tadjeddine & Partners." },
-      "press": { "label": "Presse et institutions", "description": "Demande d'information à destination des journalistes, chercheurs ou institutions." }
+      "order": {
+        "label": "Commander l'étude 2025",
+        "description": "Accéder aux formulaires de commande des packs Essentiel, Pro et Corporate Executive."
+      },
+      "quote": {
+        "label": "Demande de devis conseil",
+        "description": "Obtenir un devis pour une mission de benchmark, diagnostic ou accompagnement stratégique."
+      },
+      "benchmark": {
+        "label": "Benchmark personnalisé",
+        "description": "Demander un benchmark de votre établissement par rapport à ses pairs."
+      },
+      "partnership": {
+        "label": "Partenariat ou sponsoring",
+        "description": "Explorer une collaboration ou un sponsoring avec ABIX ou Tadjeddine & Partners."
+      },
+      "press": {
+        "label": "Presse et institutions",
+        "description": "Demande d'information à destination des journalistes, chercheurs ou institutions."
+      }
     },
     "info": {
       "address": "Cité Naii Rue G N°1, Blida, Algérie",
       "email": "info@tadjeddine-partners.com",
       "phone": "+213 (0) 560 403 405 / 0560 349 059"
-    }
+    },
+    "successTitle": "Message envoyé",
+    "successMessage": "Notre équipe vous répondra dans les plus brefs délais.",
+    "infoTitle": "Coordonnées",
+    "order2025Title": "Commander l'édition 2025",
+    "order2025Body": "Accédez directement aux formulaires de commande sécurisés.",
+    "order2025Cta": "Voir les offres →",
+    "formTitle": "Envoyez-nous votre demande"
   },
-
   "rankings": {
     "meta": {
       "title": "Classements bancaires — ABIX | Algeria Banking Index",
@@ -668,7 +1013,6 @@
       "ctaStudy": "Obtenir le rapport complet"
     }
   },
-
   "banks": {
     "meta": {
       "title": "Les banques couvertes — ABIX | Algeria Banking Index",
@@ -683,46 +1027,166 @@
     "lockMessage": "Analyse détaillée disponible dans l'étude complète",
     "ctaStudy": "Obtenir le rapport complet",
     "banks": [
-      { "id": "bea", "name": "BEA", "fullName": "Banque Extérieure d'Algérie", "type": "public" },
-      { "id": "bna", "name": "BNA", "fullName": "Banque Nationale d'Algérie", "type": "public" },
-      { "id": "cpa", "name": "CPA", "fullName": "Crédit Populaire d'Algérie", "type": "public" },
-      { "id": "badr", "name": "BADR", "fullName": "Banque de l'Agriculture et du Développement Rural", "type": "public" },
-      { "id": "bdl", "name": "BDL", "fullName": "Banque de Développement Local", "type": "public" },
-      { "id": "cnep", "name": "CNEP-Banque", "fullName": "Caisse Nationale d'Épargne et de Prévoyance", "type": "public" },
-      { "id": "al_baraka", "name": "Al Baraka Bank", "fullName": "Banque Al Baraka d'Algérie", "type": "private" },
-      { "id": "bnpp", "name": "BNP Paribas El Djazaïr", "fullName": "BNP Paribas El Djazaïr", "type": "private" },
-      { "id": "abc", "name": "ABC Bank Algeria", "fullName": "Arab Banking Corporation Algeria", "type": "private" },
-      { "id": "sgalger", "name": "SGA", "fullName": "Société Générale Algérie", "type": "private" },
-      { "id": "citibank", "name": "Citibank Algeria", "fullName": "Citibank Algeria", "type": "private" },
-      { "id": "natixis", "name": "Natixis Algérie", "fullName": "Natixis Algérie", "type": "private" },
-      { "id": "agb", "name": "AGB", "fullName": "Algeria Gulf Bank", "type": "private" },
-      { "id": "hsbc", "name": "HSBC Algeria", "fullName": "HSBC Algeria", "type": "private" },
-      { "id": "calyon", "name": "Calyon Algérie", "fullName": "Crédit Agricole Corporate and Investment Bank Algérie", "type": "private" },
-      { "id": "trust", "name": "Trust Bank Algeria", "fullName": "Trust Bank Algeria", "type": "private" },
-      { "id": "gulf_bank", "name": "Gulf Bank Algeria", "fullName": "Gulf Bank Algeria", "type": "private" },
-      { "id": "fransabank", "name": "Fransabank El Djazaïr", "fullName": "Fransabank El Djazaïr", "type": "private" },
-      { "id": "societe_gen_consociation", "name": "El Djazaïr Dawli", "fullName": "El Djazaïr Dawli (ex-Housing Bank)", "type": "private" },
-      { "id": "arab_bank", "name": "Arab Bank PLC Algeria", "fullName": "Arab Bank PLC Algeria", "type": "private" }
+      {
+        "id": "bea",
+        "name": "BEA",
+        "fullName": "Banque Extérieure d'Algérie",
+        "type": "public"
+      },
+      {
+        "id": "bna",
+        "name": "BNA",
+        "fullName": "Banque Nationale d'Algérie",
+        "type": "public"
+      },
+      {
+        "id": "cpa",
+        "name": "CPA",
+        "fullName": "Crédit Populaire d'Algérie",
+        "type": "public"
+      },
+      {
+        "id": "badr",
+        "name": "BADR",
+        "fullName": "Banque de l'Agriculture et du Développement Rural",
+        "type": "public"
+      },
+      {
+        "id": "bdl",
+        "name": "BDL",
+        "fullName": "Banque de Développement Local",
+        "type": "public"
+      },
+      {
+        "id": "cnep",
+        "name": "CNEP-Banque",
+        "fullName": "Caisse Nationale d'Épargne et de Prévoyance",
+        "type": "public"
+      },
+      {
+        "id": "al_baraka",
+        "name": "Al Baraka Bank",
+        "fullName": "Banque Al Baraka d'Algérie",
+        "type": "private"
+      },
+      {
+        "id": "bnpp",
+        "name": "BNP Paribas El Djazaïr",
+        "fullName": "BNP Paribas El Djazaïr",
+        "type": "private"
+      },
+      {
+        "id": "abc",
+        "name": "ABC Bank Algeria",
+        "fullName": "Arab Banking Corporation Algeria",
+        "type": "private"
+      },
+      {
+        "id": "sgalger",
+        "name": "SGA",
+        "fullName": "Société Générale Algérie",
+        "type": "private"
+      },
+      {
+        "id": "citibank",
+        "name": "Citibank Algeria",
+        "fullName": "Citibank Algeria",
+        "type": "private"
+      },
+      {
+        "id": "natixis",
+        "name": "Natixis Algérie",
+        "fullName": "Natixis Algérie",
+        "type": "private"
+      },
+      {
+        "id": "agb",
+        "name": "AGB",
+        "fullName": "Algeria Gulf Bank",
+        "type": "private"
+      },
+      {
+        "id": "hsbc",
+        "name": "HSBC Algeria",
+        "fullName": "HSBC Algeria",
+        "type": "private"
+      },
+      {
+        "id": "calyon",
+        "name": "Calyon Algérie",
+        "fullName": "Crédit Agricole Corporate and Investment Bank Algérie",
+        "type": "private"
+      },
+      {
+        "id": "trust",
+        "name": "Trust Bank Algeria",
+        "fullName": "Trust Bank Algeria",
+        "type": "private"
+      },
+      {
+        "id": "gulf_bank",
+        "name": "Gulf Bank Algeria",
+        "fullName": "Gulf Bank Algeria",
+        "type": "private"
+      },
+      {
+        "id": "fransabank",
+        "name": "Fransabank El Djazaïr",
+        "fullName": "Fransabank El Djazaïr",
+        "type": "private"
+      },
+      {
+        "id": "societe_gen_consociation",
+        "name": "El Djazaïr Dawli",
+        "fullName": "El Djazaïr Dawli (ex-Housing Bank)",
+        "type": "private"
+      },
+      {
+        "id": "arab_bank",
+        "name": "Arab Bank PLC Algeria",
+        "fullName": "Arab Bank PLC Algeria",
+        "type": "private"
+      }
     ]
   },
-
   "footer": {
     "slogan": "Transformer les idées en résultats concrets grâce à une expertise pluridisciplinaire.",
     "servicesLinks": {
       "title": "Services",
       "items": [
-        { "label": "Études Sectorielles", "url": "https://tadjeddine-partners.com/services/" },
-        { "label": "Conseil Stratégique", "url": "https://tadjeddine-partners.com/services/" },
-        { "label": "Conformité à la loi 18-07", "url": "https://tadjeddine-partners.com/services/" },
-        { "label": "Formation", "url": "https://tadjeddine-partners.com/services/" }
+        {
+          "label": "Études Sectorielles",
+          "url": "https://tadjeddine-partners.com/services/"
+        },
+        {
+          "label": "Conseil Stratégique",
+          "url": "https://tadjeddine-partners.com/services/"
+        },
+        {
+          "label": "Conformité à la loi 18-07",
+          "url": "https://tadjeddine-partners.com/services/"
+        },
+        {
+          "label": "Formation",
+          "url": "https://tadjeddine-partners.com/services/"
+        }
       ]
     },
     "supportLinks": {
       "title": "Support",
       "items": [
-        { "label": "Contact", "url": "https://tadjeddine-partners.com/contact/" },
-        { "label": "Mentions légales", "url": "https://tadjeddine-partners.com/mentions-legales/" },
-        { "label": "Politique de confidentialité", "url": "https://tadjeddine-partners.com/politique-confidentialite/" }
+        {
+          "label": "Contact",
+          "url": "https://tadjeddine-partners.com/contact/"
+        },
+        {
+          "label": "Mentions légales",
+          "url": "https://tadjeddine-partners.com/mentions-legales/"
+        },
+        {
+          "label": "Politique de confidentialité",
+          "url": "https://tadjeddine-partners.com/politique-confidentialite/"
+        }
       ]
     },
     "contact": {
@@ -732,7 +1196,6 @@
       "phone": "+213 (0) 560 403 405 / 0560 349 059"
     }
   },
-
   "modal": {
     "closeLabel": "Fermer",
     "orderTitle": "Commander l'étude",
@@ -748,7 +1211,6 @@
       "ctaOrder": "Obtenir l'étude complète"
     }
   },
-
   "legal": {
     "meta": {
       "title": "Mentions légales — ABIX | Algeria Banking Index",
@@ -803,7 +1265,6 @@
       "title": "Contact"
     }
   },
-
   "privacy": {
     "meta": {
       "title": "Politique de Confidentialité — ABIX | Algeria Banking Index",
@@ -868,7 +1329,6 @@
       "body": "TADJEDDINE AND PARTNERS se réserve le droit de modifier la présente politique de confidentialité à tout moment, notamment pour tenir compte de toute évolution législative ou réglementaire."
     }
   },
-
   "questionnaire": {
     "meta": {
       "title": "Baromètre des services bancaires 2026 — ABIX | Algeria Banking Index",

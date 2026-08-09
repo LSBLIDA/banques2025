@@ -22,7 +22,7 @@ const watchMode = args.includes("--watch");
 // --basePath : chemin de base pour les assets (CSS, JS, images).
 // Par défaut pour Laragon : /banques2025 (ou vide en production si --basePath "" est spécifié).
 const hasBasePath = args.includes("--basePath");
-const basePathArg = hasBasePath ? args[args.indexOf("--basePath") + 1] : "/banques2025";
+const basePathArg = hasBasePath ? args[args.indexOf("--basePath") + 1] : "";
 const BASE_PATH = (basePathArg || "").replace(/\/$/, ""); // Supprime le slash final si présent
 
 const SITE_CONFIG = require("../js/site-config.js");
@@ -36,17 +36,18 @@ const OUTPUT_ROOT = ROOT; // La racine du projet EST la racine du site
 
 // ── Pages à générer (template → chemin de sortie) ─────────────────────────────
 const PAGES = [
-  { template: "homepage.html",      output: "index.html",                   titleKey: "home" },
-  { template: "edition-2026.html",  output: "editions/2026/index.html",     titleKey: "edition2026" },
-  { template: "edition-2025.html",  output: "editions/2025/index.html",     titleKey: "edition2025" },
-  { template: "methodologie.html",  output: "methodologie/index.html",      titleKey: "methodology" },
-  { template: "indice-abix.html",   output: "indice-abix/index.html",       titleKey: "abixIndex" },
-  { template: "services.html",      output: "services/index.html",          titleKey: "services" },
-  { template: "a-propos.html",      output: "a-propos/index.html",          titleKey: "about" },
-  { template: "contact.html",       output: "contact/index.html",           titleKey: "contact" },
-  { template: "questionnaire.html", output: "questionnaire/index.html",     titleKey: "questionnaire" },
-  { template: "classements.html",   output: "classements/index.html",       titleKey: "rankings" },
-  { template: "banques.html",       output: "banques/index.html",           titleKey: "banks" },
+  { template: "homepage.html", output: "index.html", titleKey: "home" },
+  { template: "edition-2026.html", output: "editions/2026/index.html", titleKey: "edition2026" },
+  { template: "edition-2025.html", output: "editions/2025/index.html", titleKey: "edition2025" },
+  { template: "rapport-2023.html", output: "editions/rapport-2023/index.html", titleKey: "rapport2023" },
+  { template: "methodologie.html", output: "methodologie/index.html", titleKey: "methodology" },
+  { template: "indice-abix.html", output: "indice-abix/index.html", titleKey: "abixIndex" },
+  { template: "services.html", output: "services/index.html", titleKey: "services" },
+  { template: "a-propos.html", output: "a-propos/index.html", titleKey: "about" },
+  { template: "contact.html", output: "contact/index.html", titleKey: "contact" },
+  { template: "questionnaire.html", output: "questionnaire/index.html", titleKey: "questionnaire" },
+  { template: "classements.html", output: "classements/index.html", titleKey: "rankings" },
+  { template: "banques.html", output: "banques/index.html", titleKey: "banks" },
   { template: "mentions-legales.html", output: "mentions-legales/index.html", titleKey: "legal" },
   { template: "politique-confidentialite.html", output: "politique-confidentialite/index.html", titleKey: "privacy" },
 ];
@@ -110,13 +111,21 @@ function buildHreflang(lang, outputPath) {
 
   for (const [l, conf] of Object.entries(SITE_CONFIG.languages)) {
     if (conf.enabled) {
-      const url = `${domain}/${l}/${outputPath}`.replace(/\/+/g, "/").replace(":/", "://");
+      let targetOutputPath = outputPath;
+      if (outputPath.includes("rapport-2023") || outputPath.includes("report-2023")) {
+        targetOutputPath = l === "fr" ? "editions/rapport-2023/index.html" : "editions/report-2023/index.html";
+      }
+      const url = `${domain}/${l}/${targetOutputPath}`.replace(/\/+/g, "/").replace(":/", "://");
       lines.push(`<link rel="alternate" hreflang="${l}" href="${url}" />`);
     }
   }
   // x-default pointe vers la langue par défaut
   const defaultLang = SITE_CONFIG.defaultLanguage;
-  const defaultUrl = `${domain}/${defaultLang}/${outputPath}`.replace(/\/+/g, "/").replace(":/", "://");
+  let defaultOutputPath = outputPath;
+  if (outputPath.includes("rapport-2023") || outputPath.includes("report-2023")) {
+    defaultOutputPath = defaultLang === "fr" ? "editions/rapport-2023/index.html" : "editions/report-2023/index.html";
+  }
+  const defaultUrl = `${domain}/${defaultLang}/${defaultOutputPath}`.replace(/\/+/g, "/").replace(":/", "://");
   lines.push(`<link rel="alternate" hreflang="x-default" href="${defaultUrl}" />`);
   return lines.join("\n    ");
 }
@@ -130,7 +139,8 @@ function injectConfigVars(html, lang, outputPath, pageKey, translations) {
   const hreflang = buildHreflang(lang, outputPath);
   const langClass = lang === "ar" ? "font-arabic" : "";
   const langSwitcher = buildLangSwitcher(lang, outputPath);
-  const mainNavHtml = buildMainNav(lang, pageKey, translations, langSwitcher);
+  const mobileLangSwitcher = buildMobileLangSwitcher(lang, outputPath);
+  const mainNavHtml = buildMainNav(lang, pageKey, translations, langSwitcher, mobileLangSwitcher);
 
   return html
     .replace(/<nav id="main-nav"[\s\S]*?<\/nav>/gi, mainNavHtml)
@@ -148,14 +158,14 @@ function injectConfigVars(html, lang, outputPath, pageKey, translations) {
 /**
  * Construit le HTML unifié de la barre de navigation principale (nav id="main-nav").
  */
-function buildMainNav(lang, pageKey, translations, langSwitcher) {
+function buildMainNav(lang, pageKey, translations, langSwitcher, mobileLangSwitcher) {
   const tNav = translations.nav || {};
   const tHome = translations.home || {};
   const tEd2026 = translations.edition2026 || {};
   const tEd2025 = translations.edition2025 || {};
 
   const isHomeActive = pageKey === "home" ? " nav-link--active" : "";
-  const isEditionsActive = (pageKey === "edition2026" || pageKey === "edition2025" || pageKey === "rankings" || pageKey === "banks") ? " nav-link--active" : "";
+  const isEditionsActive = (pageKey === "edition2026" || pageKey === "edition2025" || pageKey === "rapport2023" || pageKey === "rankings" || pageKey === "banks") ? " nav-link--active" : "";
   const isStudyActive = (pageKey === "methodology" || pageKey === "questionnaire") ? " nav-link--active" : "";
   const isAbixIndexActive = pageKey === "abixIndex" ? " nav-link--active" : "";
   const isServicesActive = pageKey === "services" ? " nav-link--active" : "";
@@ -163,6 +173,7 @@ function buildMainNav(lang, pageKey, translations, langSwitcher) {
 
   const isEd2026Active = pageKey === "edition2026" ? " nav-link--active" : "";
   const isEd2025Active = pageKey === "edition2025" ? " nav-link--active" : "";
+  const isReportActive = pageKey === "rapport2023" ? " nav-link--active" : "";
   const isMethodologyActive = pageKey === "methodology" ? " nav-link--active" : "";
   const isQuestionnaireActive = pageKey === "questionnaire" ? " nav-link--active" : "";
   const isAboutPageActive = pageKey === "about" ? " nav-link--active" : "";
@@ -184,6 +195,9 @@ function buildMainNav(lang, pageKey, translations, langSwitcher) {
 
   const prepBadge = lang === 'en' ? 'Early Subscription' : lang === 'ar' ? 'اشتراك مسبق' : 'Souscription';
   const availBadge = lang === 'en' ? 'Available' : lang === 'ar' ? 'متاح' : (tEd2025.hero?.badge || 'Disponible');
+  const freeBadge = lang === 'en' ? 'Free' : lang === 'ar' ? 'مجاني' : 'Gratuit';
+  const report2023Label = lang === 'en' ? '2023 Report' : lang === 'ar' ? 'تقرير 2023' : 'Rapport 2023';
+  const reportPath = lang === 'fr' ? 'editions/rapport-2023/' : 'editions/report-2023/';
 
   return `<nav id="main-nav" class="fixed top-0 w-full bg-white/95 backdrop-blur-sm z-50 border-b border-gray-100 transition-all duration-300">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -210,12 +224,9 @@ function buildMainNav(lang, pageKey, translations, langSwitcher) {
               <span class="dropdown-badge dropdown-badge--avail">${availBadge}</span>
               ${tNav.edition2025 || "Édition 2025"}
             </a>
-            <div class="border-t border-gray-100 my-1"></div>
-            <a href="${BASE_PATH}/${lang}/classements/" class="dropdown-item${pageKey === 'rankings' ? ' nav-link--active' : ''}">
-              ${tNav.rankings || "Classements"}
-            </a>
-            <a href="${BASE_PATH}/${lang}/banques/" class="dropdown-item${pageKey === 'banks' ? ' nav-link--active' : ''}">
-              ${tNav.banks || "Banques"}
+            <a href="${BASE_PATH}/${lang}/${reportPath}" class="dropdown-item${isReportActive}">
+              <span class="dropdown-badge dropdown-badge--free">${freeBadge}</span>
+              ${report2023Label}
             </a>
           </div>
         </div>
@@ -284,8 +295,10 @@ function buildMainNav(lang, pageKey, translations, langSwitcher) {
             <span>${tNav.edition2025 || "Édition 2025"}</span>
             <span class="dropdown-badge dropdown-badge--avail">${availBadge}</span>
           </a>
-          <a href="${BASE_PATH}/${lang}/classements/" class="mobile-nav-link${pageKey === 'rankings' ? ' mobile-nav-link--active' : ''}">${tNav.rankings || "Classements"}</a>
-          <a href="${BASE_PATH}/${lang}/banques/" class="mobile-nav-link${pageKey === 'banks' ? ' mobile-nav-link--active' : ''}">${tNav.banks || "Banques"}</a>
+          <a href="${BASE_PATH}/${lang}/${reportPath}" class="mobile-nav-link flex items-center justify-between${pageKey === 'rapport2023' ? ' mobile-nav-link--active' : ''}">
+            <span>${report2023Label}</span>
+            <span class="dropdown-badge dropdown-badge--free">${freeBadge}</span>
+          </a>
         </div>
       </div>
 
@@ -312,7 +325,7 @@ function buildMainNav(lang, pageKey, translations, langSwitcher) {
 
       <div class="pt-3 border-t border-gray-100">
         <p class="text-xs text-gray-400 mb-2 px-2">${tNav.langSelectLabel || "Langue"}</p>
-        <div class="lang-switcher-mobile">${langSwitcher}</div>
+        <div class="lang-switcher-mobile">${mobileLangSwitcher}</div>
       </div>
       <div class="pt-2">
         ${mobileCtaHtml}
@@ -333,7 +346,11 @@ function buildLangSwitcher(currentLang, currentPath) {
   const options = Object.entries(allLangs)
     .filter(([, conf]) => conf.enabled || conf.status === "draft")
     .map(([l, conf]) => {
-      const href = `${BASE_PATH}/${l}/${pageSlug}`.replace(/\/+/g, "/");
+      let targetPageSlug = pageSlug;
+      if (pageSlug.includes("rapport-2023") || pageSlug.includes("report-2023")) {
+        targetPageSlug = l === "fr" ? "editions/rapport-2023/" : "editions/report-2023/";
+      }
+      const href = `${BASE_PATH}/${l}/${targetPageSlug}`.replace(/\/+/g, "/");
       const isActive = l === currentLang;
       const statusBadge = conf.status === "draft" ? '<span class="ms-auto text-[9px] font-semibold text-amber-700 bg-amber-50 px-1.5 py-0.5 rounded border border-amber-200/80">Brouillon</span>' : '';
       return `<a href="${href}" class="flex items-center gap-2 px-3 py-2 text-xs font-medium text-gray-700 hover:bg-gray-50 hover:text-primary rounded-lg transition-colors${isActive ? " bg-primary/5 text-primary font-bold" : ""}" hreflang="${l}" lang="${l}">
@@ -345,17 +362,46 @@ function buildLangSwitcher(currentLang, currentPath) {
     .join('');
 
   return `
-    <div class="relative group inline-block text-left">
-      <button type="button" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-gray-200 bg-white text-xs font-semibold text-gray-700 hover:border-gray-300 hover:bg-gray-50 focus:outline-none transition-all shadow-sm" aria-expanded="false" aria-haspopup="true">
+    <div class="relative group inline-block text-left lang-switcher-container">
+      <button type="button" class="lang-switcher-btn inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-gray-200 bg-white text-xs font-semibold text-gray-700 hover:border-gray-300 hover:bg-gray-50 focus:outline-none transition-all shadow-sm" aria-expanded="false" aria-haspopup="true">
         <svg class="w-3.5 h-3.5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/></svg>
         <span>${currentConf.nativeLabel}</span>
         <svg class="w-3.5 h-3.5 text-gray-400 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
       </button>
-      <div class="dropdown-menu absolute right-0 mt-1 w-44 rounded-xl bg-white shadow-xl ring-1 ring-black/5 p-1.5 hidden group-hover:block transition-all z-50">
+      <div class="lang-dropdown-menu dropdown-menu absolute end-0 top-full mt-1 w-44 rounded-xl bg-white shadow-xl ring-1 ring-black/5 p-1.5 hidden group-hover:block [.is-open_&]:block transition-all z-50 before:absolute before:-top-3 before:inset-x-0 before:h-3">
         ${options}
       </div>
     </div>
   `;
+}
+
+/**
+ * Construit le HTML du sélecteur de langues pour le menu mobile (pills).
+ */
+function buildMobileLangSwitcher(currentLang, currentPath) {
+  const allLangs = SITE_CONFIG.languages;
+  const pageSlug = currentPath.replace("index.html", "");
+
+  const options = Object.entries(allLangs)
+    .filter(([, conf]) => conf.enabled || conf.status === "draft")
+    .map(([l, conf]) => {
+      let targetPageSlug = pageSlug;
+      if (pageSlug.includes("rapport-2023") || pageSlug.includes("report-2023")) {
+        targetPageSlug = l === "fr" ? "editions/rapport-2023/" : "editions/report-2023/";
+      }
+      const href = `${BASE_PATH}/${l}/${targetPageSlug}`.replace(/\/+/g, "/");
+      const isActive = l === currentLang;
+      return `<a href="${href}" class="flex-1 text-center py-2 px-3 rounded-lg text-xs font-semibold border transition-all ${
+        isActive
+          ? "bg-primary text-white border-primary shadow-sm"
+          : "bg-white text-gray-700 border-gray-200 hover:bg-gray-50"
+      }" hreflang="${l}" lang="${l}">
+        ${conf.nativeLabel}
+      </a>`;
+    })
+    .join('');
+
+  return `<div class="flex items-center gap-2 px-1">${options}</div>`;
 }
 
 /**
@@ -392,21 +438,27 @@ function buildAll(targetLang = null) {
       try {
         const templateHtml = loadTemplate(page.template);
 
+        let pageOutput = page.output;
+        if (page.titleKey === "rapport2023") {
+          pageOutput = lang === "fr" ? "editions/rapport-2023/index.html" : "editions/report-2023/index.html";
+        }
+
         // Injection des variables de configuration, hreflang et menu principal unifié
-        let html = injectConfigVars(templateHtml, lang, page.output, page.titleKey, translations);
+        let html = injectConfigVars(templateHtml, lang, pageOutput, page.titleKey, translations);
 
         // Résolution des clés de traduction {{key.subkey}}
         html = resolveTranslations(html, translations);
 
         // Chemin de sortie : /{lang}/{output}
-        const outputPath = path.join(OUTPUT_ROOT, lang, page.output);
+        const outputPath = path.join(OUTPUT_ROOT, lang, pageOutput);
         ensureDir(outputPath);
         fs.writeFileSync(outputPath, html, "utf8");
 
-        console.log(`[compile] ✓ ${lang}/${page.output}`);
+        console.log(`[compile] ✓ ${lang}/${pageOutput}`);
         generatedCount++;
       } catch (err) {
-        const errMsg = `[compile] ✗ ${lang}/${page.output} → ${err.message}`;
+        const pageOutput = page.titleKey === "rapport2023" ? (lang === "fr" ? "editions/rapport-2023/index.html" : "editions/report-2023/index.html") : page.output;
+        const errMsg = `[compile] ✗ ${lang}/${pageOutput} → ${err.message}`;
         console.error(errMsg);
         errors.push(errMsg);
       }

@@ -25,9 +25,9 @@ const SITE_CONFIG = {
   // Status : "published" = indexable et visible | "draft" = générée mais non indexée.
   defaultLanguage: "fr",
   languages: {
-    fr: { enabled: true,  status: "published", dir: "ltr", label: "Français",  nativeLabel: "Français"  },
-    en: { enabled: false, status: "draft",     dir: "ltr", label: "English",   nativeLabel: "English"   },
-    ar: { enabled: false, status: "draft",     dir: "rtl", label: "Arabe",     nativeLabel: "العربية"   }
+    fr: { enabled: true, status: "published", dir: "ltr", label: "Français", nativeLabel: "Français" },
+    en: { enabled: true, status: "published", dir: "ltr", label: "English",  nativeLabel: "English"  },
+    ar: { enabled: true, status: "published", dir: "rtl", label: "Arabe",    nativeLabel: "العربية"  }
   },
 
   // ── Éditions ─────────────────────────────────────────────────────────────────

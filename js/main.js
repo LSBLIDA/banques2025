@@ -76,12 +76,26 @@
     }, { passive: true });
   }
 
-  // ══════════════════════════════════════════════════════════ DROPDOWNS DESKTOP
+  // ══════════════════════════════════════════════════════════ SÉLECTEUR DE LANGUE & DROPDOWNS
+  document.addEventListener("click", function (e) {
+    var langBtn = e.target.closest(".lang-switcher-btn");
+    var langContainer = e.target.closest(".lang-switcher-container");
+
+    if (langBtn && langContainer) {
+      e.stopPropagation();
+      var isOpen = langContainer.classList.contains("is-open");
+      qsa(".lang-switcher-container").forEach(function (c) { c.classList.remove("is-open"); });
+      if (!isOpen) {
+        langContainer.classList.add("is-open");
+      }
+    } else if (!e.target.closest(".lang-switcher-container")) {
+      qsa(".lang-switcher-container").forEach(function (c) { c.classList.remove("is-open"); });
+    }
+  });
+
   document.addEventListener("keydown", function (e) {
     if (e.key === "Escape") {
-      qsa(".dropdown-menu").forEach(function (menu) {
-        menu.style.display = "";
-      });
+      qsa(".lang-switcher-container").forEach(function (c) { c.classList.remove("is-open"); });
     }
   });
 
@@ -114,6 +128,13 @@
   // ══════════════════════════════════════════════════════════ GESTION AUTOMATIQUE DATE LIMITE EARLY BIRD
   var countdownInterval = null;
 
+  function getLang() {
+    if (window.SITE_CONFIG && window.SITE_CONFIG.lang) {
+      return window.SITE_CONFIG.lang.toLowerCase();
+    }
+    return (document.documentElement.lang || "fr").toLowerCase();
+  }
+
   function initEarlyBirdDeadline() {
     var deadlineStr = "2026-08-31T23:59:59+01:00";
     var editionStatus = "preorder";
@@ -143,6 +164,35 @@
         editionStatus = expParam;
       }
     }
+
+    var lang = getLang();
+
+    var packNamesOrder = {
+      fr: { essential: "le Pack Essentiel", pro: "le Pack Pro", corporate: "le Pack Corporate Executive" },
+      en: { essential: "Essential Pack", pro: "Pro Pack", corporate: "Corporate Executive Pack" },
+      ar: { essential: "الباقة الأساسية", pro: "الباقة الاحترافية", corporate: "الباقة التنفيذية" }
+    };
+
+    var i18nLabels = {
+      fr: {
+        orderPrefix: "Commander ",
+        requestReservation: "Demander une réservation",
+        order2026: "Commander l'édition 2026"
+      },
+      en: {
+        orderPrefix: "Order ",
+        requestReservation: "Request a reservation",
+        order2026: "Order 2026 Edition"
+      },
+      ar: {
+        orderPrefix: "طلب ",
+        requestReservation: "طلب حجز",
+        order2026: "طلب إصدار 2026"
+      }
+    };
+
+    var curLabels = i18nLabels[lang] || i18nLabels.fr;
+    var curPacksOrder = packNamesOrder[lang] || packNamesOrder.fr;
 
     if (isExpired) {
       if (countdownInterval) {
@@ -174,20 +224,20 @@
       var countdownContainer = qs("#countdown-container");
       if (countdownContainer) countdownContainer.classList.add("hidden");
 
-      // 5. Mettre à jour les CTA en fonction du statut de l'édition
+      // 5. Mettre à jour les CTA en fonction du statut de l'édition et de la langue
       qsa(".cta-pricing-btn .cta-text").forEach(function (el) {
         var btn = el.closest("[data-pack]");
         var packKey = btn ? btn.getAttribute("data-pack") : "";
         if (editionStatus === "available") {
-          var packLabel = packKey === "essential" ? "le Pack Essentiel" : packKey === "pro" ? "le Pack Pro" : packKey === "corporate" ? "le Pack Corporate Executive" : "";
-          el.textContent = "Commander " + packLabel;
+          var packLabel = curPacksOrder[packKey] || "";
+          el.textContent = curLabels.orderPrefix + packLabel;
         } else {
-          el.textContent = "Demander une réservation";
+          el.textContent = curLabels.requestReservation;
         }
       });
 
       var btnHero = qs("#btn-preorder-hero");
-      if (btnHero) btnHero.textContent = editionStatus === "available" ? "Commander l'édition 2026" : "Demander une réservation";
+      if (btnHero) btnHero.textContent = editionStatus === "available" ? curLabels.order2026 : curLabels.requestReservation;
 
       console.log("[ABIX] Offre Early Bird expirée le 31 août 2026. Statut édition : " + editionStatus);
     } else {
@@ -207,19 +257,6 @@
       });
       var countdownContainer = qs("#countdown-container");
       if (countdownContainer) countdownContainer.classList.remove("hidden");
-
-      qsa(".cta-pricing-btn .cta-text").forEach(function (el) {
-        var btn = el.closest("[data-pack]");
-        var packKey = btn ? btn.getAttribute("data-pack") : "";
-        var packLabel = packKey === "essential" ? "au Pack Essentiel" : packKey === "pro" ? "au Pack Pro" : packKey === "corporate" ? "au Pack Corporate Executive" : "";
-        el.textContent = "Souscrire " + packLabel;
-      });
-
-      var btnHero = qs("#btn-preorder-hero");
-      if (btnHero) {
-        var svgEl = btnHero.querySelector("svg");
-        btnHero.innerHTML = (svgEl ? svgEl.outerHTML + " " : "") + "Souscrire à l’édition 2026";
-      }
 
       updateCountdown(deadlineDate);
       if (countdownInterval) clearInterval(countdownInterval);
@@ -292,6 +329,15 @@
 
     if (titleEl) {
       titleEl.textContent = PREORDER_TITLE_LABELS[key] || "Formulaire de souscription anticipée";
+    }
+
+    // Gérer l'affichage des détails du pack
+    qsa(".preorder-details").forEach(function (el) {
+      el.classList.add("hidden");
+    });
+    var detailsEl = qs("#preorderModalDetails-" + key);
+    if (detailsEl) {
+      detailsEl.classList.remove("hidden");
     }
 
     if (iframe) {
