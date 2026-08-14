@@ -62,7 +62,6 @@ if (in_array($ipHash, $submittedIps) && !$forceAllow) {
 
 // Fichier CSV compatible Excel
 $csvFile = $dataDir . '/reponses-barometre-2026.csv';
-$isNewFile = !file_exists($csvFile);
 
 $file = fopen($csvFile, 'a');
 if (!$file) {
@@ -71,25 +70,38 @@ if (!$file) {
     exit;
 }
 
-// Si nouveau fichier, écrire le BOM UTF-8 (pour qu'Excel ouvre le fichier en UTF-8 sans problème d'accents) et les en-têtes
-if ($isNewFile) {
-    fwrite($file, "\xEF\xBB\BF"); // BOM UTF-8
-    fputcsv($file, ['Horodatage', 'Identifiant Reponse', 'Banque', 'Service Utilise', 'Satisfaction'], ';');
-}
-
-$now = date('Y-m-d H:i:s');
-$responseId = bin2hex(random_bytes(8));
 $savedCount = 0;
+$responseId = bin2hex(random_bytes(8));
 
-foreach ($data['responses'] as $item) {
-    $bank = isset($item['bank']) ? trim((string)$item['bank']) : '';
-    $service = isset($item['service']) ? trim((string)$item['service']) : '';
-    $satisfaction = isset($item['satisfaction']) ? trim((string)$item['satisfaction']) : '';
-
-    if (!empty($bank) && !empty($service) && !empty($satisfaction)) {
-        fputcsv($file, [$now, $responseId, $bank, $service, $satisfaction], ';');
-        $savedCount++;
+// Acquisition d'un verrou exclusif pour empêcher les écritures concurrentes de se chevaucher ou corrompre le fichier
+if (flock($file, LOCK_EX)) {
+    // fstat contourne le cache PHP et nous indique si le fichier est réellement vide après obtention du verrou
+    $fileStats = fstat($file);
+    if (isset($fileStats['size']) && $fileStats['size'] === 0) {
+        fwrite($file, "\xEF\xBB\BF"); // BOM UTF-8
+        fputcsv($file, ['Horodatage', 'Identifiant Reponse', 'Banque', 'Service Utilise', 'Satisfaction'], ';');
     }
+
+    $now = date('Y-m-d H:i:s');
+
+    foreach ($data['responses'] as $item) {
+        $bank = isset($item['bank']) ? trim((string)$item['bank']) : '';
+        $service = isset($item['service']) ? trim((string)$item['service']) : '';
+        $satisfaction = isset($item['satisfaction']) ? trim((string)$item['satisfaction']) : '';
+
+        if (!empty($bank) && !empty($service) && !empty($satisfaction)) {
+            fputcsv($file, [$now, $responseId, $bank, $service, $satisfaction], ';');
+            $savedCount++;
+        }
+    }
+
+    // Libération du verrou
+    flock($file, LOCK_UN);
+} else {
+    fclose($file);
+    http_response_code(500);
+    echo json_encode(['ok' => false, 'error' => 'Impossible d\'obtenir le verrou d\'écriture sur le fichier.']);
+    exit;
 }
 
 fclose($file);
