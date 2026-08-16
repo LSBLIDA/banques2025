@@ -1,4 +1,8 @@
+
+
+
 # HTML
+bash /root/deploy-abix.sh
 
 A modern HTML project utilizing Tailwind CSS for building responsive web applications with minimal setup.
 
