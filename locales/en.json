@@ -1343,7 +1343,9 @@
     },
     "step1": {
       "title": "Step 1: Select Your Banks",
-      "hint": "Select at least one bank whose services you use."
+      "hint": "You can select multiple banks. Check all the ones whose services you use.",
+      "selectedBanks": "Selected banks",
+      "multipleBadge": "Multiple choice"
     },
     "step2": {
       "title": "Step 2: Rate Services",

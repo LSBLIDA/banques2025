@@ -1341,7 +1341,9 @@
     },
     "step1": {
       "title": "Étape 1 : Choisissez vos banques",
-      "hint": "Cochez au moins une banque dont vous utilisez les services."
+      "hint": "Vous pouvez sélectionner plusieurs banques. Cochez toutes celles dont vous utilisez les services.",
+      "selectedBanks": "Banques sélectionnées",
+      "multipleBadge": "Choix multiples"
     },
     "step2": {
       "title": "Étape 2 : Évaluez les services",
