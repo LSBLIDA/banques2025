@@ -3640,6 +3640,10 @@ video {
   border-color: rgb(254 202 202 / var(--tw-border-opacity, 1));
 }
 
+.hover\:border-primary\/50:hover{
+  border-color: rgb(30 58 138 / 0.5);
+}
+
 .hover\:bg-accent:hover{
   --tw-bg-opacity: 1;
   background-color: rgb(6 182 212 / var(--tw-bg-opacity, 1));
@@ -3761,6 +3765,12 @@ video {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
+.hover\:shadow-lg:hover{
+  --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
 .focus\:border-primary:focus{
   --tw-border-opacity: 1;
   border-color: rgb(30 58 138 / var(--tw-border-opacity, 1));
@@ -3802,6 +3812,10 @@ video {
 
 .group:hover .group-hover\:border-primary\/20{
   border-color: rgb(30 58 138 / 0.2);
+}
+
+.group:hover .group-hover\:border-primary\/30{
+  border-color: rgb(30 58 138 / 0.3);
 }
 
 .group:hover .group-hover\:bg-slate-50\/80{

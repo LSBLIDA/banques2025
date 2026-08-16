@@ -383,17 +383,57 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Rendu de la grille de sélection des banques
   grid.innerHTML = BANKS.map(bank => `
-    <label class="bank-card relative flex flex-col items-center justify-between p-3.5 sm:p-4 rounded-xl border border-gray-200/90 bg-white hover:border-primary hover:shadow-md cursor-pointer transition-all duration-200 select-none group">
+    <label class="bank-card relative flex flex-col items-center justify-between p-3.5 sm:p-4 rounded-xl border-2 border-gray-200/80 bg-white hover:border-primary/50 hover:shadow-lg cursor-pointer transition-all duration-200 select-none group">
       <input type="checkbox" value="${bank.id}" data-bank-name="${bank.fullName}" class="bank-checkbox sr-only" />
-      <div class="w-full h-16 sm:h-20 flex items-center justify-center p-2 mb-2 bg-white rounded-lg border border-gray-100 group-hover:border-primary/20 group-hover:bg-slate-50/80 transition-colors shadow-2xs">
+      <div class="bank-logo-wrapper w-full h-16 sm:h-20 flex items-center justify-center p-2 mb-2 bg-white rounded-lg border border-gray-100 group-hover:border-primary/30 transition-colors shadow-2xs">
         <img src="${bank.logo}" alt="${bank.name}" class="h-12 sm:h-14 w-full object-contain" />
       </div>
-      <span class="text-xs sm:text-sm font-bold text-gray-800 text-center line-clamp-1 group-hover:text-primary transition-colors">${bank.name}</span>
-      <div class="checkbox-indicator absolute top-2 right-2 w-5 h-5 rounded border border-gray-300 flex items-center justify-center bg-white transition-all shadow-2xs">
-        <svg class="w-3 h-3 text-white opacity-0 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
+      <span class="bank-name text-xs sm:text-sm font-bold text-gray-700 text-center line-clamp-1 transition-colors">${bank.name}</span>
+      <div class="checkbox-indicator absolute top-2 right-2 w-5 h-5 rounded border-2 border-gray-300 flex items-center justify-center bg-white transition-all duration-150">
+        <svg class="w-3 h-3 text-white opacity-0 transition-opacity" fill="currentColor" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
       </div>
     </label>
   `).join("");
+
+  // Inject selection keyframe animation once
+  if (!document.getElementById('bank-select-anim')) {
+    const style = document.createElement('style');
+    style.id = 'bank-select-anim';
+    style.textContent = `
+      @keyframes bankSelectPop {
+        0%   { transform: scale(1); }
+        40%  { transform: scale(1.06); }
+        70%  { transform: scale(0.97); }
+        100% { transform: scale(1); }
+      }
+      .bank-card-selected {
+        border-color: #2563eb !important;
+        background: linear-gradient(135deg, #eff6ff 0%, #eef2ff 100%) !important;
+        box-shadow: 0 0 0 3px rgba(37,99,235,0.15), 0 4px 12px rgba(37,99,235,0.12) !important;
+        animation: bankSelectPop 0.25s ease-out;
+      }
+      .bank-card-selected .bank-logo-wrapper {
+        border-color: #bfdbfe !important;
+        background: white !important;
+      }
+      .bank-card-selected .bank-name {
+        color: #2563eb !important;
+      }
+      .bank-card-selected .checkbox-indicator {
+        background: #2563eb !important;
+        border-color: #1d4ed8 !important;
+        box-shadow: 0 0 0 2px rgba(37,99,235,0.3);
+        width: 22px !important;
+        height: 22px !important;
+      }
+      .bank-card-selected .checkbox-indicator svg {
+        opacity: 1 !important;
+        color: white !important;
+        fill: white !important;
+      }
+    `;
+    document.head.appendChild(style);
+  }
 
   function toggleBank(bankId, isChecked) {
     const checkbox = grid.querySelector(`input[value="${bankId}"]`);
@@ -408,13 +448,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (isChecked) {
       selectedBankIds.add(bankId);
-      card.classList.add("border-primary", "bg-primary/5", "shadow-sm");
-      indicator.classList.add("bg-primary", "border-primary");
+      card.classList.add("bank-card-selected");
       icon.classList.remove("opacity-0");
     } else {
       selectedBankIds.delete(bankId);
-      card.classList.remove("border-primary", "bg-primary/5", "shadow-sm");
-      indicator.classList.remove("bg-primary", "border-primary");
+      card.classList.remove("bank-card-selected");
       icon.classList.add("opacity-0");
     }
 
