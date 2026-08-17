@@ -286,7 +286,7 @@
         "title": "Pack Pro",
         "tagline": "Exploiter les données",
         "badge": "Plus populaire",
-        "userLicensesText": "Jusqu'à 3 utilisateurs · Données Excel incluses",
+        "userLicensesText": "Jusqu’à 3 utilisateurs · Excel + Data Explorer 2025",
         "regularPrice": "120 000 DA HT",
         "earlyBirdPrice": "108 000 DA HT",
         "saving": "Économisez 12 000 DA HT",
@@ -294,24 +294,18 @@
         "ctaAfterAvailable": "Commander le Pack Pro",
         "ctaAfterPreorder": "Demander une réservation",
         "f1": "Tout le Pack Essentiel",
-        "f2": "Fichier Excel structuré contenant les données de l’étude",
-        "f3": "Tableaux comparatifs détaillés",
-        "f4": "Ratios et parts de marché",
-        "f5": "Historique des données 2023–2025",
+        "f2": "Fichier Excel structuré contenant les données 2025",
+        "de_title": "ABIX DATA EXPLORER",
+        "de_f1": "Accès pendant 12 mois à ABIX Data Explorer",
+        "de_f2": "Données 2025 incluses dans l’application",
+        "de_f3": "Visualisation interactive, ratios et comparaisons bancaires",
         "f6": "Jusqu’à 3 utilisateurs appartenant à la même entité",
-        "features": [
-          "Tout le Pack Essentiel",
-          "Fichier Excel structuré contenant les données de l’étude",
-          "Tableaux comparatifs détaillés",
-          "Ratios et parts de marché",
-          "Historique des données 2023–2025",
-          "Jusqu’à 3 utilisateurs appartenant à la même entité"
-        ]
+        "option_note": "Les éditions historiques 2022, 2023 et 2024 de ABIX Data Explorer sont disponibles en option."
       },
       "corporate": {
         "title": "Pack Corporate Executive",
-        "tagline": "Explorer et partager les données",
-        "userLicensesText": "Jusqu'à 20 utilisateurs · ABIX Data Explorer & PPT inclus",
+        "tagline": "Analyser, comparer et partager",
+        "userLicensesText": "Jusqu’à 20 utilisateurs · Data Explorer Executive 2024–2025",
         "regularPrice": "180 000 DA HT",
         "earlyBirdPrice": "162 000 DA HT",
         "saving": "Économisez 18 000 DA HT",
@@ -319,15 +313,15 @@
         "ctaAfterAvailable": "Commander le Pack Corporate Executive",
         "ctaAfterPreorder": "Demander une réservation",
         "f1": "Tout le Pack Pro",
-        "f2": "Accès à ABIX Data Explorer — application interactive de visualisation et de comparaison des données de l’étude",
-        "f3": "Présentation exécutive de l’étude au format PowerPoint",
+        "de_title": "ABIX DATA EXPLORER — CORPORATE",
+        "de_f1": "Licence ABIX Data Explorer incluse pendant 12 mois",
+        "de_f2": "Données 2024 et 2025 incluses dans l’application",
+        "de_f3": "Analyse multidimensionnelle & profils bancaires",
+        "de_f4": "Executive Dashboard & Key Insights",
+        "de_f5": "Groupes de pairs & benchmarks avancés",
+        "de_f6": "Rapports Executive PDF & exports Excel",
         "f4": "Jusqu’à 20 utilisateurs appartenant à la même entité",
-        "features": [
-          "Tout le Pack Pro",
-          "Accès à ABIX Data Explorer — application interactive de visualisation et de comparaison des données de l’étude",
-          "Présentation exécutive de l’étude au format PowerPoint",
-          "Jusqu’à 20 utilisateurs appartenant à la même entité"
-        ]
+        "option_note": "Les éditions historiques 2022 et 2023 de ABIX Data Explorer sont disponibles en option."
       }
     },
     "preorderForm": {
