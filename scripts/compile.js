@@ -50,6 +50,7 @@ const PAGES = [
   { template: "banques.html", output: "banques/index.html", titleKey: "banks" },
   { template: "mentions-legales.html", output: "mentions-legales/index.html", titleKey: "legal" },
   { template: "politique-confidentialite.html", output: "politique-confidentialite/index.html", titleKey: "privacy" },
+  { template: "data-explorer.html", output: "data-explorer/index.html", titleKey: "dataExplorer" },
 ];
 
 // ── Fonctions utilitaires ──────────────────────────────────────────────────────
@@ -168,6 +169,7 @@ function buildMainNav(lang, pageKey, translations, langSwitcher, mobileLangSwitc
   const isEditionsActive = (pageKey === "edition2026" || pageKey === "edition2025" || pageKey === "rapport2023" || pageKey === "rankings" || pageKey === "banks") ? " nav-link--active" : "";
   const isStudyActive = (pageKey === "methodology" || pageKey === "questionnaire") ? " nav-link--active" : "";
   const isAbixIndexActive = pageKey === "abixIndex" ? " nav-link--active" : "";
+  const isDataExplorerActive = pageKey === "dataExplorer" ? " nav-link--active" : "";
   const isServicesActive = pageKey === "services" ? " nav-link--active" : "";
   const isAboutActive = (pageKey === "about" || pageKey === "contact") ? " nav-link--active" : "";
 
@@ -247,6 +249,9 @@ function buildMainNav(lang, pageKey, translations, langSwitcher, mobileLangSwitc
           </div>
         </div>
 
+        <!-- Menu 3 : Data Explorer -->
+        <a href="${BASE_PATH}/${lang}/data-explorer/" class="nav-link whitespace-nowrap${isDataExplorerActive}">${tNav.dataExplorer || "ABIX Data Explorer"}</a>
+
         <!-- Menu 4 : Services -->
         <a href="${BASE_PATH}/${lang}/services/" class="nav-link whitespace-nowrap${isServicesActive}">${tNav.services || "Services"}</a>
 
@@ -310,6 +315,9 @@ function buildMainNav(lang, pageKey, translations, langSwitcher, mobileLangSwitc
           <a href="${BASE_PATH}/${lang}/questionnaire/" class="mobile-nav-link${pageKey === 'questionnaire' ? ' mobile-nav-link--active' : ''}">${tNav.barometer2026 || "Baromètre e-banking 2026"}</a>
         </div>
       </div>
+
+      <!-- Item 3 : Data Explorer -->
+      <a href="${BASE_PATH}/${lang}/data-explorer/" class="mobile-nav-link${pageKey === 'dataExplorer' ? ' mobile-nav-link--active' : ''}">${tNav.dataExplorer || "ABIX Data Explorer"}</a>
 
       <!-- Item 4 : Services -->
       <a href="${BASE_PATH}/${lang}/services/" class="mobile-nav-link${pageKey === 'services' ? ' mobile-nav-link--active' : ''}">${tNav.services || "Services"}</a>

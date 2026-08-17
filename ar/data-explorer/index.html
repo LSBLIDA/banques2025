@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ABIX Data Explorer | تحليل البنوك الجزائرية</title>
+  <meta name="description" content="استكشف وقارن وحلل الأداء المالي للبنوك الجزائرية مع ABIX Data Explorer: مؤشرات الأداء، الحصص السوقية، المقارنات المرجعية، البيانات التاريخية والتحليلات المتقدمة." />
+  <link rel="canonical" href="https://algeriabankingindex.com/ar/data-explorer/index.html" />
+  <link rel="alternate" hreflang="fr" href="https://algeriabankingindex.com/fr/data-explorer/index.html" />
+    <link rel="alternate" hreflang="en" href="https://algeriabankingindex.com/en/data-explorer/index.html" />
+    <link rel="alternate" hreflang="ar" href="https://algeriabankingindex.com/ar/data-explorer/index.html" />
+    <link rel="alternate" hreflang="x-default" href="https://algeriabankingindex.com/fr/data-explorer/index.html" />
+  <meta property="og:title" content="ABIX Data Explorer | تحليل البنوك الجزائرية" /><meta property="og:description" content="استكشف وقارن وحلل الأداء المالي للبنوك الجزائرية مع ABIX Data Explorer: مؤشرات الأداء، الحصص السوقية، المقارنات المرجعية، البيانات التاريخية والتحليلات المتقدمة." /><meta property="og:image" content="/public/og-abix.png" />
+  <link rel="icon" type="image/png" href="/public/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap" />
+  <link rel="stylesheet" href="/css/main.css" />
+  <script src="/js/site-config.js" defer></script><script src="/js/main.js" defer></script>
+  <style>
+    .dex-container{max-width:1380px;width:calc(100% - 48px);margin-left:auto;margin-right:auto}
+    @media(min-width:1536px){.dex-container{max-width:1440px;width:calc(100% - 64px)}}
+    .dex-text-col{max-width:560px}
+    .dex-section{padding-top:96px;padding-bottom:96px}
+    @media(max-width:767px){.dex-section{padding-top:56px;padding-bottom:56px}}
+    .dex-screenshot-frame{background:linear-gradient(135deg,#f8fafc 0%,#f1f5f9 100%);border:1px solid #e2e8f0;border-radius:16px;padding:12px;box-shadow:0 4px 6px -1px rgba(0,0,0,.06),0 10px 15px -3px rgba(0,0,0,.08);position:relative;overflow:hidden}
+    .dex-screenshot-frame::before{content:'';display:block;height:28px;background:linear-gradient(to bottom,#f1f5f9,#e8edf2);border-radius:8px 8px 0 0;margin:-12px -12px 10px -12px;border-bottom:1px solid #e2e8f0;position:relative}
+    .dex-screenshot-frame::after{content:'● ● ●';position:absolute;top:4px;left:16px;font-size:8px;letter-spacing:4px;color:#cbd5e1}
+    [dir="rtl"] .dex-screenshot-frame::after{left:auto;right:16px}
+    .dex-screenshot-frame img{border-radius:8px;width:100%;height:auto;display:block}
+    .dex-img-fallback{display:flex;align-items:center;justify-content:center;min-height:340px;background:linear-gradient(135deg,#f1f5f9 0%,#e2e8f0 100%);border-radius:8px;color:#94a3b8;font-size:13px;font-family:'Inter',sans-serif}
+    .dex-bento{display:grid;gap:20px;grid-template-columns:repeat(3,1fr);grid-template-rows:auto auto}
+    .dex-bento-lg{grid-column:span 2}
+    @media(max-width:767px){.dex-bento{grid-template-columns:1fr}.dex-bento-lg{grid-column:span 1}}
+  </style>
+</head>
+<body class="font-inter bg-white antialiased text-gray-800">
+<nav id="main-nav" class="fixed top-0 w-full bg-white/95 backdrop-blur-sm z-50 border-b border-gray-100 transition-all duration-300">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center h-16">
+      <a href="/ar/" class="flex items-center py-1 flex-shrink-0" aria-label="الرئيسية">
+        <img src="/public/logo.png" alt="ABIX — Tadjeddine & Partners" class="h-10 sm:h-12 w-auto object-contain" />
+      </a>
+      <div class="hidden md:flex items-center gap-5 lg:gap-6">
+        <!-- Menu 0 : Accueil -->
+        <a href="/ar/" class="nav-link whitespace-nowrap">الرئيسية</a>
+
+        <!-- Menu 1 : Éditions -->
+        <div class="relative group">
+          <button class="nav-link flex items-center gap-1 whitespace-nowrap" aria-expanded="false" aria-haspopup="true">
+            الإصدارات
+            <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="dropdown-menu">
+            <a href="/ar/editions/2026/" class="dropdown-item">
+              <span class="dropdown-badge dropdown-badge--prep">اشتراك مسبق</span>
+              إصدار 2026
+            </a>
+            <a href="/ar/editions/2025/" class="dropdown-item">
+              <span class="dropdown-badge dropdown-badge--avail">متاح</span>
+              إصدار 2025
+            </a>
+            <a href="/ar/editions/report-2023/" class="dropdown-item">
+              <span class="dropdown-badge dropdown-badge--free">مجاني</span>
+              تقرير 2023
+            </a>
+          </div>
+        </div>
+
+        <!-- Menu 2 : L'étude -->
+        <div class="relative group">
+          <button class="nav-link flex items-center gap-1 whitespace-nowrap" aria-expanded="false" aria-haspopup="true">
+            الدراسة
+            <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="dropdown-menu">
+            <a href="/ar/methodologie/" class="dropdown-item">
+              المنهجية
+            </a>
+            <a href="/ar/questionnaire/" class="dropdown-item">
+              مؤشر الخدمات المصرفية 2026
+            </a>
+          </div>
+        </div>
+
+        <!-- Menu 3 : Data Explorer -->
+        <a href="/ar/data-explorer/" class="nav-link whitespace-nowrap nav-link--active">ABIX Data Explorer</a>
+
+        <!-- Menu 4 : Services -->
+        <a href="/ar/services/" class="nav-link whitespace-nowrap">الخدمات</a>
+
+        <!-- Menu 5 : À propos -->
+        <div class="relative group">
+          <button class="nav-link flex items-center gap-1 whitespace-nowrap" aria-expanded="false" aria-haspopup="true">
+            من نحن
+            <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="dropdown-menu">
+            <a href="/ar/a-propos/" class="dropdown-item">
+              من نحن
+            </a>
+            <a href="/ar/contact/" class="dropdown-item">
+              اتصل بنا
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="hidden md:flex items-center gap-4">
+        <div class="lang-switcher" aria-label="اللغة">
+          
+    <div class="relative group inline-block text-left lang-switcher-container">
+      <button type="button" class="lang-switcher-btn inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-gray-200 bg-white text-xs font-semibold text-gray-700 hover:border-gray-300 hover:bg-gray-50 focus:outline-none transition-all shadow-sm" aria-expanded="false" aria-haspopup="true">
+        <svg class="w-3.5 h-3.5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/></svg>
+        <span>العربية</span>
+        <svg class="w-3.5 h-3.5 text-gray-400 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+      </button>
+      <div class="lang-dropdown-menu dropdown-menu absolute end-0 top-full mt-1 w-44 rounded-xl bg-white shadow-xl ring-1 ring-black/5 p-1.5 hidden group-hover:block [.is-open_&]:block transition-all z-50 before:absolute before:-top-3 before:inset-x-0 before:h-3">
+        <a href="/fr/data-explorer/" class="flex items-center gap-2 px-3 py-2 text-xs font-medium text-gray-700 hover:bg-gray-50 hover:text-primary rounded-lg transition-colors" hreflang="fr" lang="fr">
+        <span class="w-5 text-center font-bold text-[10px] text-gray-400 uppercase">fr</span>
+        <span>Français</span>
+        
+      </a><a href="/en/data-explorer/" class="flex items-center gap-2 px-3 py-2 text-xs font-medium text-gray-700 hover:bg-gray-50 hover:text-primary rounded-lg transition-colors" hreflang="en" lang="en">
+        <span class="w-5 text-center font-bold text-[10px] text-gray-400 uppercase">en</span>
+        <span>English</span>
+        
+      </a><a href="/ar/data-explorer/" class="flex items-center gap-2 px-3 py-2 text-xs font-medium text-gray-700 hover:bg-gray-50 hover:text-primary rounded-lg transition-colors bg-primary/5 text-primary font-bold" hreflang="ar" lang="ar">
+        <span class="w-5 text-center font-bold text-[10px] text-gray-400 uppercase">ar</span>
+        <span>العربية</span>
+        
+      </a>
+      </div>
+    </div>
+  
+        </div>
+        <a href="/ar/editions/2026/#tarifs" data-track="click_preorder_2026" class="btn-cta-sm whitespace-nowrap">الاشتراك في إصدار 2026</a>
+      </div>
+      <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors" aria-expanded="false" aria-controls="mobile-menu" aria-label="Menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 shadow-lg">
+    <div class="px-4 py-4 space-y-2">
+      <!-- Item 0 : Accueil -->
+      <a href="/ar/" class="mobile-nav-link">الرئيسية</a>
+
+      <!-- Section 1 : Éditions -->
+      <div>
+        <span class="block px-3 py-1 text-xs font-bold uppercase tracking-wider text-gray-400">الإصدارات</span>
+        <div class="ps-3 border-s-2 border-primary/20 space-y-1 my-1">
+          <a href="/ar/editions/2026/" class="mobile-nav-link flex items-center justify-between">
+            <span>إصدار 2026</span>
+            <span class="dropdown-badge dropdown-badge--prep">اشتراك مسبق</span>
+          </a>
+          <a href="/ar/editions/2025/" class="mobile-nav-link flex items-center justify-between">
+            <span>إصدار 2025</span>
+            <span class="dropdown-badge dropdown-badge--avail">متاح</span>
+          </a>
+          <a href="/ar/editions/report-2023/" class="mobile-nav-link flex items-center justify-between">
+            <span>تقرير 2023</span>
+            <span class="dropdown-badge dropdown-badge--free">مجاني</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Section 2 : L'étude -->
+      <div>
+        <span class="block px-3 py-1 text-xs font-bold uppercase tracking-wider text-gray-400">الدراسة</span>
+        <div class="ps-3 border-s-2 border-primary/20 space-y-1 my-1">
+          <a href="/ar/methodologie/" class="mobile-nav-link">المنهجية</a>
+          <a href="/ar/questionnaire/" class="mobile-nav-link">مؤشر الخدمات المصرفية 2026</a>
+        </div>
+      </div>
+
+      <!-- Item 3 : Data Explorer -->
+      <a href="/ar/data-explorer/" class="mobile-nav-link mobile-nav-link--active">ABIX Data Explorer</a>
+
+      <!-- Item 4 : Services -->
+      <a href="/ar/services/" class="mobile-nav-link">الخدمات</a>
+
+      <!-- Section 5 : À propos -->
+      <div>
+        <span class="block px-3 py-1 text-xs font-bold uppercase tracking-wider text-gray-400">من نحن</span>
+        <div class="ps-3 border-s-2 border-primary/20 space-y-1 my-1">
+          <a href="/ar/a-propos/" class="mobile-nav-link">من نحن</a>
+          <a href="/ar/contact/" class="mobile-nav-link">اتصل بنا</a>
+        </div>
+      </div>
+
+      <div class="pt-3 border-t border-gray-100">
+        <p class="text-xs text-gray-400 mb-2 px-2">اللغة</p>
+        <div class="lang-switcher-mobile"><div class="flex items-center gap-2 px-1"><a href="/fr/data-explorer/" class="flex-1 text-center py-2 px-3 rounded-lg text-xs font-semibold border transition-all bg-white text-gray-700 border-gray-200 hover:bg-gray-50" hreflang="fr" lang="fr">
+        Français
+      </a><a href="/en/data-explorer/" class="flex-1 text-center py-2 px-3 rounded-lg text-xs font-semibold border transition-all bg-white text-gray-700 border-gray-200 hover:bg-gray-50" hreflang="en" lang="en">
+        English
+      </a><a href="/ar/data-explorer/" class="flex-1 text-center py-2 px-3 rounded-lg text-xs font-semibold border transition-all bg-primary text-white border-primary shadow-sm" hreflang="ar" lang="ar">
+        العربية
+      </a></div></div>
+      </div>
+      <div class="pt-2">
+        <a href="/ar/editions/2026/#tarifs" data-track="click_preorder_2026" class="btn-cta w-full text-center block">الاشتراك في إصدار 2026</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<div class="pt-16">
+
+  <!-- ═══════════════════════════════════════════ SECTION 1 : HERO ═══════════ -->
+  <section class="bg-banking-gradient text-white relative overflow-hidden" style="padding-top:72px;padding-bottom:88px;">
+    <div class="absolute inset-0 opacity-[.07]" style="background-image:radial-gradient(circle at 1px 1px, rgba(255,255,255,.15) 1px, transparent 0); background-size:40px 40px;"></div>
+    <div class="dex-container relative z-10">
+      <div class="grid lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+        <!-- Left : Text -->
+        <div class="lg:col-span-5 space-y-6">
+          <span class="inline-flex items-center gap-2 py-1.5 px-4 rounded-full bg-white/10 border border-white/20 text-sm font-semibold tracking-wide text-blue-100">
+            <svg class="w-4 h-4 text-blue-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+            ABIX Data Explorer
+          </span>
+          <h1 class="text-3xl sm:text-4xl lg:text-[2.75rem] xl:text-5xl font-bold font-playfair leading-[1.15] text-white">حوّل البيانات المالية للبنوك الجزائرية إلى تحليلات مقارنة وقرارات.</h1>
+          <p class="text-lg lg:text-xl text-blue-100 font-medium leading-relaxed">حلّل بنكاً. قارنه بنظرائه. تتبّع مساره. افهم موقعه في السوق.</p>
+          <p class="text-base text-blue-200/80 leading-relaxed dex-text-col">يحوّل ABIX Data Explorer البيانات المالية المصرفية إلى قراءة منظّمة للسوق: النشاط، الودائع، الائتمان، الربحية، الكفاءة، النمو، رسملة الأسهم، هيكل الميزانية والموقف التنافسي.</p>
+          <div class="flex flex-col sm:flex-row gap-4 pt-4">
+            <a href="#features" class="btn-cta text-base px-7 py-3.5 shadow-xl hover:shadow-2xl transition-all hover:-translate-y-0.5">اكتشف الميزات</a>
+            <a href="#pricing" class="inline-flex items-center justify-center text-base px-7 py-3.5 rounded-lg bg-white/10 text-white border border-white/20 hover:bg-white/20 transition-all font-semibold">عرض الباقات</a>
+          </div>
+        </div>
+        <!-- Right : Screenshot -->
+        <div class="lg:col-span-7">
+          <div class="dex-screenshot-frame" style="transform:perspective(1800px) rotateY(-2deg);box-shadow:0 25px 50px -12px rgba(0,0,0,.35);">
+            <img src="/public/ui-mockups/data-explorer-hero.webp" alt="ABIX Data Explorer — Dashboard" fetchpriority="high"
+                 onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+            <div class="dex-img-fallback" style="display:none;">
+              <svg class="w-16 h-16 text-slate-300 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════ SECTION 2 : KEY STATS ═══════ -->
+  <section class="bg-white border-b border-gray-100 relative z-20 -mt-7">
+    <div class="dex-container">
+      <div class="bg-white rounded-2xl shadow-lg border border-gray-100 grid grid-cols-2 md:grid-cols-4 divide-x divide-y md:divide-y-0 divide-gray-100" style="min-height:130px;">
+        <div class="flex flex-col items-center justify-center p-6 md:p-8 text-center">
+          <p class="text-3xl md:text-4xl font-extrabold text-primary font-playfair">21 بنكاً</p>
+          <p class="text-sm text-gray-500 mt-2 leading-snug">كتالوج البنوك المغطاة حالياً</p>
+        </div>
+        <div class="flex flex-col items-center justify-center p-6 md:p-8 text-center">
+          <p class="text-3xl md:text-4xl font-extrabold text-primary font-playfair">بيانات متعددة السنوات</p>
+          <p class="text-sm text-gray-500 mt-2 leading-snug">يتوفر السجل التاريخي حسب الإصدار والترخيص</p>
+        </div>
+        <div class="flex flex-col items-center justify-center p-6 md:p-8 text-center">
+          <p class="text-3xl md:text-4xl font-extrabold text-primary font-playfair">عشرات المؤشرات</p>
+          <p class="text-sm text-gray-500 mt-2 leading-snug">بيانات المصدر والنسب والمؤشرات المشتقة</p>
+        </div>
+        <div class="flex flex-col items-center justify-center p-6 md:p-8 text-center">
+          <p class="text-3xl md:text-4xl font-extrabold text-primary font-playfair">4 أبعاد مالية</p>
+          <p class="text-sm text-gray-500 mt-2 leading-snug">الربحية · النمو · الكفاءة · الرسملة</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════ SECTION 3 : SINGLE INTERFACE ═ -->
+  <section id="features" class="dex-section bg-slate-50/60">
+    <div class="dex-container">
+      <div class="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+        <div class="lg:col-span-5 space-y-6">
+          <h2 class="text-3xl md:text-4xl lg:text-[2.5rem] font-bold font-playfair text-gray-900 leading-tight">القطاع المصرفي بأكمله في واجهة واحدة</h2>
+          <p class="text-lg text-gray-600 leading-relaxed">انتقل من نظرة القطاع إلى تحليل بنك واحد في ثوانٍ. استكشف البيانات والاتجاهات والتصنيفات والمقارنات دون التعامل مع ملفات Excel أو تقارير متعددة.</p>
+          <div class="grid grid-cols-2 gap-4 pt-4">
+            <div class="bg-white rounded-xl p-4 border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+              <h3 class="font-bold text-gray-900 text-[15px] mb-1">رؤية القطاع</h3>
+              <p class="text-gray-500 text-sm leading-relaxed">المجاميع المالية والتطور السنوي وتكوين السوق واللاعبين الرئيسيين.</p>
+            </div>
+            <div class="bg-white rounded-xl p-4 border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+              <h3 class="font-bold text-gray-900 text-[15px] mb-1">التصنيفات</h3>
+              <p class="text-gray-500 text-sm leading-relaxed">موقف البنوك حسب المؤشر وحسب السنة.</p>
+            </div>
+            <div class="bg-white rounded-xl p-4 border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+              <h3 class="font-bold text-gray-900 text-[15px] mb-1">البيانات التاريخية</h3>
+              <p class="text-gray-500 text-sm leading-relaxed">القيم والتغيرات السنوية والأساس 100 ومعدل النمو السنوي المركب.</p>
+            </div>
+            <div class="bg-white rounded-xl p-4 border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+              <h3 class="font-bold text-gray-900 text-[15px] mb-1">المقارنة</h3>
+              <p class="text-gray-500 text-sm leading-relaxed">تحليل متزامن لبنوك أو مؤشرات أو أبعاد متعددة.</p>
+            </div>
+          </div>
+        </div>
+        <div class="lg:col-span-7">
+          <div class="dex-screenshot-frame">
+            <img src="/public/ui-mockups/data-explorer-sector.webp" alt="القطاع المصرفي بأكمله في واجهة واحدة" loading="lazy"
+                 onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+            <div class="dex-img-fallback" style="display:none;">
+              <svg class="w-12 h-12 text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 10h16M4 14h16M4 18h16"/></svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════ SECTION 4 : PROFILE 360° ════ -->
+  <section class="dex-section bg-white">
+    <div class="dex-container">
+      <div class="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+        <div class="lg:col-span-7 order-2 lg:order-1">
+          <div class="dex-screenshot-frame">
+            <img src="/public/ui-mockups/data-explorer-bank-360.webp" alt="بنك واحد. نظرة واحدة. جميع المؤشرات الأساسية." loading="lazy"
+                 onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+            <div class="dex-img-fallback" style="display:none;">
+              <svg class="w-12 h-12 text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
+            </div>
+          </div>
+        </div>
+        <div class="lg:col-span-5 order-1 lg:order-2 space-y-6">
+          <span class="inline-block text-xs font-bold uppercase tracking-widest text-primary/80 bg-primary/5 border border-primary/15 px-3 py-1 rounded-full">الملف المصرفي 360 درجة</span>
+          <h2 class="text-3xl md:text-4xl lg:text-[2.5rem] font-bold font-playfair text-gray-900 leading-tight">بنك واحد. نظرة واحدة. جميع المؤشرات الأساسية.</h2>
+          <p class="text-lg text-gray-600 leading-relaxed">يجمع ABIX Data Explorer في ملف واحد المسار المالي للبنك والموقف التنافسي والمقارنات المرجعية وإشارات الانتباه الرئيسية.</p>
+          <div class="flex flex-wrap gap-2 pt-2">
+            <span class="px-3 py-1.5 bg-slate-50 border border-gray-200 text-gray-700 text-sm rounded-lg font-medium">النشاط</span>
+            <span class="px-3 py-1.5 bg-slate-50 border border-gray-200 text-gray-700 text-sm rounded-lg font-medium">الربحية</span>
+            <span class="px-3 py-1.5 bg-slate-50 border border-gray-200 text-gray-700 text-sm rounded-lg font-medium">الكفاءة</span>
+            <span class="px-3 py-1.5 bg-slate-50 border border-gray-200 text-gray-700 text-sm rounded-lg font-medium">الوساطة</span>
+            <span class="px-3 py-1.5 bg-slate-50 border border-gray-200 text-gray-700 text-sm rounded-lg font-medium">الرسملة المحاسبية</span>
+            <span class="px-3 py-1.5 bg-slate-50 border border-gray-200 text-gray-700 text-sm rounded-lg font-medium">المخصصات</span>
+            <span class="px-3 py-1.5 bg-slate-50 border border-gray-200 text-gray-700 text-sm rounded-lg font-medium">هيكل الأصول</span>
+            <span class="px-3 py-1.5 bg-slate-50 border border-gray-200 text-gray-700 text-sm rounded-lg font-medium">موقف السوق</span>
+            <span class="px-3 py-1.5 bg-slate-50 border border-gray-200 text-gray-700 text-sm rounded-lg font-medium">النمو</span>
+          </div>
+          <p class="text-sm text-gray-500 italic pt-2 border-t border-gray-100">يربط الملف بناءً على البيانات المتاحة: القيمة الحالية والتطور السنوي والتاريخ ومعدل النمو السنوي المركب والمقارنة المرجعية والمتوسط والوسيط والنسبة المئوية والربيعية والتصنيف والحصة السوقية.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════ SECTION 5 : COMPARE / BENCHMARKS ═ -->
+  <section class="dex-section bg-blue-50/40">
+    <div class="dex-container">
+      <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+        <h2 class="text-3xl md:text-4xl lg:text-[2.5rem] font-bold font-playfair text-gray-900 leading-tight">قارن البنك ببيئته الحقيقية</h2>
+        <p class="text-lg text-gray-600 leading-relaxed">لا تقتصر المقارنة ذات الصلة على مقارنة جميع البنوك معاً فحسب. يسمح ABIX Data Explorer بوضع النتائج في سياقها وبناء مجموعات نظراء أكثر ملاءمة.</p>
+      </div>
+      <div class="flex flex-col md:flex-row items-stretch gap-0 bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
+        <div class="flex-1 p-6 md:p-8 border-b md:border-b-0 md:border-r border-gray-100 text-center">
+          <div class="w-10 h-10 mx-auto rounded-full bg-primary/10 text-primary flex items-center justify-center mb-3 font-bold text-sm">1</div>
+          <h3 class="font-bold text-gray-900 text-base mb-2">السوق</h3>
+          <p class="text-sm text-gray-500 leading-relaxed">التموضع العام مقابل القطاع المصرفي الجزائري بأكمله.</p>
+        </div>
+        <div class="flex-1 p-6 md:p-8 border-b md:border-b-0 md:border-r border-gray-100 text-center">
+          <div class="w-10 h-10 mx-auto rounded-full bg-primary/10 text-primary flex items-center justify-center mb-3 font-bold text-sm">2</div>
+          <h3 class="font-bold text-gray-900 text-base mb-2">الوضع / الفئة</h3>
+          <p class="text-sm text-gray-500 leading-relaxed">مقارنة متجانسة بين البنوك العامة والخاصة.</p>
+        </div>
+        <div class="flex-1 p-6 md:p-8 border-b md:border-b-0 md:border-r border-gray-100 text-center">
+          <div class="w-10 h-10 mx-auto rounded-full bg-primary/10 text-primary flex items-center justify-center mb-3 font-bold text-sm">3</div>
+          <h3 class="font-bold text-gray-900 text-base mb-2">الحجم</h3>
+          <p class="text-sm text-gray-500 leading-relaxed">التجميع حسب حجم الأصول لمقارنة اللاعبين المماثلين.</p>
+        </div>
+        <div class="flex-1 p-6 md:p-8 border-b md:border-b-0 md:border-r border-gray-100 text-center">
+          <div class="w-10 h-10 mx-auto rounded-full bg-primary/10 text-primary flex items-center justify-center mb-3 font-bold text-sm">4</div>
+          <h3 class="font-bold text-gray-900 text-base mb-2">ملف الأصول</h3>
+          <p class="text-sm text-gray-500 leading-relaxed">وضع السياق حسب هيكل وتوجه الميزانية العمومية.</p>
+        </div>
+        <div class="flex-1 p-6 md:p-8 text-center">
+          <div class="w-10 h-10 mx-auto rounded-full bg-primary/10 text-primary flex items-center justify-center mb-3 font-bold text-sm">5</div>
+          <h3 class="font-bold text-gray-900 text-base mb-2">مجموعة النظراء</h3>
+          <p class="text-sm text-gray-500 leading-relaxed">بناء مجموعة مخصصة عندما تسمح البيانات بذلك.</p>
+        </div>
+      </div>
+      <div class="mt-10 bg-primary/5 border border-primary/15 rounded-xl p-5 text-center">
+        <p class="text-primary font-semibold text-lg">الأداء يكون له معنى فقط عند وضعه في سياقه.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════ SECTION 6 : MARKET SHARES & CONCENTRATION ═ -->
+  <section class="dex-section bg-white">
+    <div class="dex-container">
+      <div class="grid lg:grid-cols-2 gap-8 lg:gap-10">
+        <!-- Market Shares -->
+        <div class="bg-gradient-to-br from-white to-blue-50/60 rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
+          <div class="p-8 lg:p-10 space-y-6">
+            <h2 class="text-2xl md:text-3xl font-bold font-playfair text-gray-900">من يكتسب أرضاً حقاً؟</h2>
+            <p class="text-base text-gray-600 leading-relaxed">يمكن أن يُظهر البنك نمواً إيجابياً بينما يفقد حصة في السوق. يميز ABIX بين النمو المطلق والموقف النسبي والمساهمة في ديناميكيات القطاع.</p>
+            <ul class="space-y-3">
+              <li class="flex items-start gap-3"><div class="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0"></div><div><strong class="text-gray-900 text-sm">حصة السوق</strong><p class="text-gray-500 text-sm">محسوبة على المجاميع الرئيسية</p></div></li>
+              <li class="flex items-start gap-3"><div class="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0"></div><div><strong class="text-gray-900 text-sm">مكسب أو خسارة</strong><p class="text-gray-500 text-sm">تطور الحصة بالنقاط المئوية</p></div></li>
+              <li class="flex items-start gap-3"><div class="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0"></div><div><strong class="text-gray-900 text-sm">المساهمة</strong><p class="text-gray-500 text-sm">حصة البنك في نمو القطاع</p></div></li>
+              <li class="flex items-start gap-3"><div class="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0"></div><div><strong class="text-gray-900 text-sm">فجوة النمو</strong><p class="text-gray-500 text-sm">الأداء النسبي مقابل متوسط السوق</p></div></li>
+            </ul>
+          </div>
+          <div class="px-8 pb-8 lg:px-10 lg:pb-10">
+            <div class="dex-screenshot-frame" style="padding:8px;">
+              <img src="/public/ui-mockups/data-explorer-market-share.webp" alt="من يكتسب أرضاً حقاً؟" loading="lazy"
+                   onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+              <div class="dex-img-fallback" style="display:none;min-height:200px;">
+                <svg class="w-10 h-10 text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z"/></svg>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Concentration -->
+        <div class="bg-gradient-to-br from-white to-slate-50/80 rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
+          <div class="p-8 lg:p-10 space-y-6">
+            <h2 class="text-2xl md:text-3xl font-bold font-playfair text-gray-900">قياس تركيز السوق المصرفية</h2>
+            <p class="text-base text-gray-600 leading-relaxed">تتبع تطور وزن القادة وتحول الهيكل التنافسي للسوق.</p>
+            <ul class="space-y-3">
+              <li class="flex items-start gap-3"><div class="w-2 h-2 rounded-full bg-slate-400 mt-2 flex-shrink-0"></div><div><strong class="text-gray-900 text-sm">CR1, CR3, CR5, CR10</strong><p class="text-gray-500 text-sm">الوزن التراكمي لأكبر اللاعبين في القطاع.</p></div></li>
+              <li class="flex items-start gap-3"><div class="w-2 h-2 rounded-full bg-slate-400 mt-2 flex-shrink-0"></div><div><strong class="text-gray-900 text-sm">HHI (Herfindahl-Hirschman)</strong><p class="text-gray-500 text-sm">مؤشر تركيز معتمد دولياً.</p></div></li>
+              <li class="flex items-start gap-3"><div class="w-2 h-2 rounded-full bg-slate-400 mt-2 flex-shrink-0"></div><div><strong class="text-gray-900 text-sm">العدد الفعلي للبنوك</strong><p class="text-gray-500 text-sm">مؤشر لتنوع اللاعبين الحقيقيين في السوق.</p></div></li>
+              <li class="flex items-start gap-3"><div class="w-2 h-2 rounded-full bg-slate-400 mt-2 flex-shrink-0"></div><div><strong class="text-gray-900 text-sm">اللاعبون الرئيسيون المتراكمون</strong><p class="text-gray-500 text-sm">عدد البنوك اللازمة للوصول إلى 50٪ أو 75٪ أو 90٪ من السوق.</p></div></li>
+            </ul>
+          </div>
+          <div class="px-8 pb-8 lg:px-10 lg:pb-10">
+            <div class="dex-screenshot-frame" style="padding:8px;">
+              <img src="/public/ui-mockups/data-explorer-concentration.webp" alt="قياس تركيز السوق المصرفية" loading="lazy"
+                   onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+              <div class="dex-img-fallback" style="display:none;min-height:200px;">
+                <svg class="w-10 h-10 text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════ SECTION 7 : ADVANCED ANALYSES (BENTO) ═ -->
+  <section class="dex-section bg-slate-50/60">
+    <div class="dex-container">
+      <div class="text-center max-w-3xl mx-auto mb-14 space-y-4">
+        <h2 class="text-3xl md:text-4xl lg:text-[2.5rem] font-bold font-playfair text-gray-900 leading-tight">تجاوز الجداول والتصنيفات</h2>
+      </div>
+      <div class="dex-bento">
+        <!-- Large: Heatmap -->
+        <div class="dex-bento-lg bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
+          <div class="p-6 pb-4"><h3 class="font-bold text-gray-900 text-lg mb-1">الخرائط الحرارية (Heatmaps)</h3><p class="text-sm text-gray-500">تحديد فجوات الأداء والنمو والهيكل بسرعة.</p></div>
+          <div class="px-4 pb-4">
+            <div class="dex-screenshot-frame" style="padding:6px;">
+              <img src="/public/ui-mockups/data-explorer-heatmap.webp" alt="الخرائط الحرارية (Heatmaps)" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+              <div class="dex-img-fallback" style="display:none;min-height:220px;"><svg class="w-10 h-10 text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg></div>
+            </div>
+          </div>
+        </div>
+        <!-- Small: Matrices -->
+        <div class="bg-white rounded-2xl border border-gray-100 shadow-sm p-6 space-y-3 flex flex-col">
+          <h3 class="font-bold text-gray-900 text-lg">المصفوفات الاستراتيجية</h3>
+          <p class="text-sm text-gray-500 leading-relaxed flex-1">تقاطع الأبعاد الرئيسية: الحجم × الربحية، النمو × الربحية، الوساطة × الربحية، الائتمان × الخزينة، المخصصات × الربحية، نمو الناتج البنكي الصافي × الكفاءة.</p>
+          <div class="dex-screenshot-frame" style="padding:6px;">
+            <img src="/public/ui-mockups/data-explorer-matrix.webp" alt="المصفوفات الاستراتيجية" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+            <div class="dex-img-fallback" style="display:none;min-height:140px;"><svg class="w-8 h-8 text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3" stroke-width="1.5"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 2v4m0 12v4m10-10h-4M6 12H2"/></svg></div>
+          </div>
+        </div>
+        <!-- Small: Momentum -->
+        <div class="bg-white rounded-2xl border border-gray-100 shadow-sm p-6 space-y-3 flex flex-col">
+          <h3 class="font-bold text-gray-900 text-lg">الزخم</h3>
+          <p class="text-sm text-gray-500 leading-relaxed flex-1">تحديد التسارع والتباطؤ وتحولات المسار.</p>
+          <div class="bg-slate-50 rounded-lg p-4 border border-gray-100">
+            <div class="flex items-end gap-1 h-16">
+              <div class="w-full bg-primary/20 rounded-sm" style="height:40%"></div>
+              <div class="w-full bg-primary/30 rounded-sm" style="height:55%"></div>
+              <div class="w-full bg-primary/40 rounded-sm" style="height:45%"></div>
+              <div class="w-full bg-primary/50 rounded-sm" style="height:70%"></div>
+              <div class="w-full bg-primary/60 rounded-sm" style="height:85%"></div>
+              <div class="w-full bg-primary rounded-sm" style="height:100%"></div>
+            </div>
+          </div>
+        </div>
+        <!-- Small: Rank history -->
+        <div class="bg-white rounded-2xl border border-gray-100 shadow-sm p-6 space-y-3 flex flex-col">
+          <h3 class="font-bold text-gray-900 text-lg">تاريخ التصنيف</h3>
+          <p class="text-sm text-gray-500 leading-relaxed flex-1">مراقبة التقدم والتراجع واستقرار تموضع البنك.</p>
+          <div class="bg-slate-50 rounded-lg p-4 border border-gray-100">
+            <div class="space-y-2">
+              <div class="flex items-center gap-2"><span class="text-xs text-gray-400 w-8">#1</span><div class="h-2 rounded-full bg-emerald-400" style="width:90%"></div></div>
+              <div class="flex items-center gap-2"><span class="text-xs text-gray-400 w-8">#3</span><div class="h-2 rounded-full bg-blue-400" style="width:70%"></div></div>
+              <div class="flex items-center gap-2"><span class="text-xs text-gray-400 w-8">#2</span><div class="h-2 rounded-full bg-primary" style="width:80%"></div></div>
+              <div class="flex items-center gap-2"><span class="text-xs text-gray-400 w-8">#1</span><div class="h-2 rounded-full bg-emerald-400" style="width:95%"></div></div>
+            </div>
+          </div>
+        </div>
+        <!-- Large: Outliers -->
+        <div class="dex-bento-lg bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
+          <div class="p-6 pb-4"><h3 class="font-bold text-gray-900 text-lg mb-1">القيم المتطرفة</h3><p class="text-sm text-gray-500">اكتشاف الملاحظات التي تتطلب مزيداً من التحقيق.</p></div>
+          <div class="px-4 pb-4">
+            <div class="dex-screenshot-frame" style="padding:6px;">
+              <img src="/public/ui-mockups/data-explorer-outliers.webp" alt="القيم المتطرفة" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+              <div class="dex-img-fallback" style="display:none;min-height:180px;"><svg class="w-10 h-10 text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════ SECTION 8 : FOUR DIMENSIONS ══ -->
+  <section class="dex-section bg-white">
+    <div class="dex-container">
+      <div class="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+        <div class="lg:col-span-5 space-y-8">
+          <h2 class="text-3xl md:text-4xl lg:text-[2.5rem] font-bold font-playfair text-gray-900 leading-tight">أربعة أبعاد لفهم ملف البنك</h2>
+          <div class="grid grid-cols-2 gap-4">
+            <div class="bg-slate-50 border border-gray-100 rounded-xl p-5"><h3 class="font-bold text-primary text-base mb-2">الربحية</h3><p class="text-sm text-gray-600 leading-relaxed">قدرة البنك على تحويل نشاطه وموارده إلى أرباح.</p></div>
+            <div class="bg-slate-50 border border-gray-100 rounded-xl p-5"><h3 class="font-bold text-primary text-base mb-2">النمو</h3><p class="text-sm text-gray-600 leading-relaxed">ديناميكيات التطور على مدى عدة سنوات مالية.</p></div>
+            <div class="bg-slate-50 border border-gray-100 rounded-xl p-5"><h3 class="font-bold text-primary text-base mb-2">الكفاءة</h3><p class="text-sm text-gray-600 leading-relaxed">السيطرة التشغيلية والقدرة على تحويل الدخل التشغيلي.</p></div>
+            <div class="bg-slate-50 border border-gray-100 rounded-xl p-5"><h3 class="font-bold text-primary text-base mb-2">الرسملة المحاسبية</h3><p class="text-sm text-gray-600 leading-relaxed">الوضع النسبي لحقوق الملكية في الميزانية العمومية وهيكل الائتمان.</p></div>
+          </div>
+          <div class="bg-amber-50/80 border border-amber-200/60 rounded-xl p-4 text-sm text-amber-800 leading-relaxed">
+            لا يصدر ABIX Data Explorer درجة إجمالية رسمية. يتم إبقاء الأبعاد منفصلة للحفاظ على المعلومات المالية وتجنب أن يخفي متوسط واحد ملفات شخصية مختلفة للغاية.
+          </div>
+        </div>
+        <div class="lg:col-span-7">
+          <div class="dex-screenshot-frame">
+            <img src="/public/ui-mockups/data-explorer-dimensions.webp" alt="أربعة أبعاد لفهم ملف البنك" loading="lazy"
+                 onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+            <div class="dex-img-fallback" style="display:none;">
+              <svg class="w-12 h-12 text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><line x1="12" y1="22" x2="12" y2="15.5" stroke-width="1.5"/><polyline points="22 8.5 12 15.5 2 8.5" stroke-width="1.5"/></svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════ SECTION 9 : EXECUTIVE DASHBOARD ══ -->
+  <section class="dex-section bg-slate-900 text-white relative overflow-hidden" style="padding-top:104px;padding-bottom:104px;">
+    <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/10 rounded-full blur-[120px] -mr-48 -mt-48 pointer-events-none"></div>
+    <div class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-blue-600/10 rounded-full blur-[100px] -ml-32 -mb-32 pointer-events-none"></div>
+    <div class="dex-container relative z-10">
+      <div class="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+        <div class="lg:col-span-5 space-y-6">
+          <h2 class="text-3xl md:text-4xl lg:text-[2.5rem] font-bold font-playfair leading-tight">من البيانات إلى الرسالة التنفيذية</h2>
+          <p class="text-lg text-slate-300 leading-relaxed">يسلط ABIX Data Explorer الضوء تلقائياً على التطورات التي تستحق اهتمام صانع القرار.</p>
+          <div class="bg-slate-800/80 rounded-xl border border-slate-700 p-5 space-y-2">
+            <div class="flex items-center gap-2 text-emerald-400 text-sm font-medium">
+              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+              Scanning data...
+            </div>
+            <div class="border-t border-slate-700 pt-2 space-y-1.5">
+              <div class="text-amber-400/90 text-sm truncate flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-amber-400 flex-shrink-0"></span>انخفاض صافي الدخل</div>
+              <div class="text-amber-400/90 text-sm truncate flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-amber-400 flex-shrink-0"></span>زيادة كبيرة في المخصصات</div>
+              <div class="text-amber-400/90 text-sm truncate flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-amber-400 flex-shrink-0"></span>اختلاف بين نمو الودائع والائتمان</div>
+              <div class="text-amber-400/90 text-sm truncate flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-amber-400 flex-shrink-0"></span>ارتفاع الناتج البنكي الصافي ولكن انخفاض صافي الدخل</div>
+              <div class="text-amber-400/90 text-sm truncate flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-amber-400 flex-shrink-0"></span>ارتفاع الأصول ولكن انخفاض العائد على حقوق الملكية</div>
+              <div class="text-amber-400/90 text-sm truncate flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-amber-400 flex-shrink-0"></span>تحول كبير في نسبة التكلفة إلى الدخل</div>
+              <div class="text-amber-400/90 text-sm truncate flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-amber-400 flex-shrink-0"></span>تغييرات في المركز أو الربيعية</div>
+            </div>
+          </div>
+          <div class="bg-white/5 border border-white/10 rounded-xl p-5 space-y-2">
+            <h3 class="text-white font-bold text-base">نتائج قابلة للتفسير والتتبع</h3>
+            <p class="text-slate-400 text-sm leading-relaxed">تعتمد النتائج على قواعد تحليلية محددة ومسجلة. يمكن تتبع كل رسالة إلى البيانات والتحليل الذي أدى إليها.</p>
+          </div>
+        </div>
+        <div class="lg:col-span-7">
+          <div class="dex-screenshot-frame" style="background:linear-gradient(135deg,#1e293b 0%,#0f172a 100%);border-color:#334155;">
+            <img src="/public/ui-mockups/data-explorer-executive.webp" alt="من البيانات إلى الرسالة التنفيذية" loading="lazy"
+                 onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+            <div class="dex-img-fallback" style="display:none;background:linear-gradient(135deg,#1e293b,#0f172a);">
+              <svg class="w-14 h-14 text-slate-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════ SECTION 10 : PERSONAS ══ -->
+  <section class="dex-section bg-white">
+    <div class="dex-container">
+      <div class="text-center max-w-3xl mx-auto mb-14 space-y-4">
+        <h2 class="text-3xl md:text-4xl lg:text-[2.5rem] font-bold font-playfair text-gray-900 leading-tight">مصمم لأولئك الذين يجب عليهم فهم السوق المصرفية</h2>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="bg-slate-50/80 border border-gray-100 rounded-xl p-6 hover:shadow-md hover:-translate-y-0.5 transition-all">
+          <div class="w-9 h-9 rounded-lg bg-primary/10 text-primary flex items-center justify-center mb-4"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg></div>
+          <h3 class="font-bold text-gray-900 text-base mb-2">الإدارة العامة</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">التحديد السريع للتطورات الهامة وتموضع البنك.</p>
+        </div>
+        <div class="bg-slate-50/80 border border-gray-100 rounded-xl p-6 hover:shadow-md hover:-translate-y-0.5 transition-all">
+          <div class="w-9 h-9 rounded-lg bg-primary/10 text-primary flex items-center justify-center mb-4"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg></div>
+          <h3 class="font-bold text-gray-900 text-base mb-2">الإدارة المالية</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">تحليل الربحية والكفاءة والنمو وهيكل الميزانية العمومية والرسملة.</p>
+        </div>
+        <div class="bg-slate-50/80 border border-gray-100 rounded-xl p-6 hover:shadow-md hover:-translate-y-0.5 transition-all">
+          <div class="w-9 h-9 rounded-lg bg-primary/10 text-primary flex items-center justify-center mb-4"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg></div>
+          <h3 class="font-bold text-gray-900 text-base mb-2">إدارة الاستراتيجية</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">تتبع الحصص السوقية والمنافسين والمسارات وتغييرات المواقف.</p>
+        </div>
+        <div class="bg-slate-50/80 border border-gray-100 rounded-xl p-6 hover:shadow-md hover:-translate-y-0.5 transition-all">
+          <div class="w-9 h-9 rounded-lg bg-primary/10 text-primary flex items-center justify-center mb-4"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg></div>
+          <h3 class="font-bold text-gray-900 text-base mb-2">المحللون الماليون</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">استكشاف البيانات والنسب والسجلات والمقارنات.</p>
+        </div>
+        <div class="bg-slate-50/80 border border-gray-100 rounded-xl p-6 hover:shadow-md hover:-translate-y-0.5 transition-all">
+          <div class="w-9 h-9 rounded-lg bg-primary/10 text-primary flex items-center justify-center mb-4"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg></div>
+          <h3 class="font-bold text-gray-900 text-base mb-2">الائتمان والطرف المقابل</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">إعداد السياق المالي للبنك قبل تحليل احترازي ونوعي أكمل.</p>
+        </div>
+        <div class="bg-slate-50/80 border border-gray-100 rounded-xl p-6 hover:shadow-md hover:-translate-y-0.5 transition-all">
+          <div class="w-9 h-9 rounded-lg bg-primary/10 text-primary flex items-center justify-center mb-4"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg></div>
+          <h3 class="font-bold text-gray-900 text-base mb-2">الاستشارات والبحوث</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">إنتاج تحليلات مقارنة منظمة للسوق المصرفي الجزائري بسرعة.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════ SECTION 11 : METHODOLOGY ══ -->
+  <section class="bg-slate-50/60 py-16">
+    <div class="dex-container">
+      <div class="grid lg:grid-cols-12 gap-10 items-start">
+        <div class="lg:col-span-5 space-y-4">
+          <h2 class="text-2xl md:text-3xl font-bold font-playfair text-gray-900">تحليلات مصممة لتكون قابلة للتحقق</h2>
+          <a href="/ar/methodologie/" class="inline-flex items-center gap-2 text-primary font-semibold text-sm hover:underline">
+            اكتشف المنهجية
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+        <div class="lg:col-span-7 grid sm:grid-cols-2 gap-5">
+          <div class="bg-white border border-gray-100 rounded-xl p-5 shadow-sm"><h3 class="font-bold text-gray-900 text-sm mb-1">بيانات مسجلة الإصدار</h3><p class="text-sm text-gray-500 leading-relaxed">منظمة حسب البنك والمؤشر والسنة والإصدار.</p></div>
+          <div class="bg-white border border-gray-100 rounded-xl p-5 shadow-sm"><h3 class="font-bold text-gray-900 text-sm mb-1">معالجة صارمة للبيانات المفقودة</h3><p class="text-sm text-gray-500 leading-relaxed">تظل البيانات الغائبة غير متوفرة (N/A) ولا يتم التعامل معها مطلقاً على أنها صفر.</p></div>
+          <div class="bg-white border border-gray-100 rounded-xl p-5 shadow-sm"><h3 class="font-bold text-gray-900 text-sm mb-1">حسابات مركزية</h3><p class="text-sm text-gray-500 leading-relaxed">تعتمد النسب ومعدلات النمو السنوي المركب والحصص السوقية والنسب المئوية والمقارنات المرجعية على قواعد متجانسة.</p></div>
+          <div class="bg-white border border-gray-100 rounded-xl p-5 shadow-sm"><h3 class="font-bold text-gray-900 text-sm mb-1">إمكانية التتبع</h3><p class="text-sm text-gray-500 leading-relaxed">يمكن ربط النتائج بمصدرها التحليلي ومعلماتها.</p></div>
+        </div>
+      </div>
+      <div class="mt-10 bg-gray-100 border border-gray-200 rounded-xl p-5 text-sm text-gray-600 leading-relaxed text-center max-w-4xl mx-auto">
+        <strong>أداة للتحليل المقارن، وليست تصنيفاً احترازياً :</strong> يوفر ABIX Data Explorer تحليلاً مالياً مقارناً بناءً على البيانات المتاحة. وهو لا يحل محل تحليل الائتمان الكامل، أو النسب الاحترازية التنظيمية، أو المعلومات حول جودة الأصول والسيولة التنظيمية عندما لا تكون متاحة للجمهور. وهذا يعزز المصداقية المنهجية للمنتج.
+      </div>
+      <p class="text-center text-xs text-gray-400 mt-4 max-w-3xl mx-auto">يتم توفير هذه الأبعاد والتحليلات لأغراض المقارنة والمنهجية. يجب ألا يتم تفسيرها مطلقاً على أنها تصنيف ائتماني أو تصنيف تنظيمي أو مقياس ملاءة رسمي أو احتمالية التخلف عن السداد.</p>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════ SECTION 12 : FINAL CTA ══════ -->
+  <section id="pricing" class="relative overflow-hidden" style="padding-top:104px;padding-bottom:104px;background:linear-gradient(135deg,#0f172a 0%,#1e3a5f 50%,#0c1d36 100%);">
+    <div class="absolute inset-0 opacity-[.05]" style="background-image:radial-gradient(circle at 1px 1px, rgba(255,255,255,.2) 1px, transparent 0); background-size:32px 32px;"></div>
+    <div class="max-w-4xl mx-auto px-6 text-center space-y-8 relative z-10">
+      <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold font-playfair leading-tight text-white">لا ينبغي الاطلاع على البيانات المصرفية فحسب. بل يجب استكشافها.</h2>
+      <p class="text-xl text-blue-200/90 leading-relaxed max-w-3xl mx-auto">مع ABIX Data Explorer، انتقل من الأرقام الأولية إلى المقارنة، ومن التصنيف إلى المسار، ومن البيانات إلى فهم السوق.</p>
+      <div class="pt-6 flex flex-col sm:flex-row justify-center items-center gap-4">
+        <a href="/ar/editions/2026/#tarifs" class="btn-cta text-lg px-10 py-4 shadow-xl hover:-translate-y-1 transition-all">عرض الباقات</a>
+        <a href="/ar/editions/2026/" class="inline-flex items-center justify-center text-lg px-10 py-4 rounded-lg bg-white/10 text-white border border-white/20 hover:bg-white/20 transition-all font-semibold">الوصول إلى ABIX Data Explorer</a>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+
+</body>
+</html>

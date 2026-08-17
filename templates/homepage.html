@@ -158,6 +158,55 @@
   </div>
 </section>
 
+<!-- ════════════════════════════════════════════════ BLOC PROMOTION DATA EXPLORER -->
+<section class="py-16 bg-white relative overflow-hidden border-b border-gray-100">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <div class="bg-gradient-to-br from-slate-50 to-blue-50/50 rounded-3xl p-8 lg:p-12 border border-gray-200 shadow-sm">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div class="space-y-6">
+          <div class="inline-flex items-center gap-2 bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">
+            ABIX Data Explorer
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-bold font-playfair text-gray-900">
+            {{dataExplorer.promoHome.title}}
+          </h2>
+          <p class="text-lg text-gray-600 leading-relaxed">
+            {{dataExplorer.promoHome.text}}
+          </p>
+          <ul class="space-y-3 pt-2">
+            <li class="flex items-center gap-3 text-gray-700">
+              <svg class="w-5 h-5 text-primary flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              <span>{{dataExplorer.promoHome.bullets.0}}</span>
+            </li>
+            <li class="flex items-center gap-3 text-gray-700">
+              <svg class="w-5 h-5 text-primary flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              <span>{{dataExplorer.promoHome.bullets.1}}</span>
+            </li>
+            <li class="flex items-center gap-3 text-gray-700">
+              <svg class="w-5 h-5 text-primary flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              <span>{{dataExplorer.promoHome.bullets.2}}</span>
+            </li>
+          </ul>
+          <div class="pt-4">
+            <a href="{{__basePath}}/{{__lang}}/data-explorer/" class="btn-primary inline-flex items-center">
+              {{dataExplorer.promoHome.cta}}
+              <svg class="w-4 h-4 ms-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="relative">
+          <div class="rounded-xl shadow-lg border border-gray-200 overflow-hidden bg-slate-900">
+            <img src="{{__basePath}}/public/ui-mockups/data-explorer-hero.webp" alt="ABIX Data Explorer Interface" class="w-full h-auto block" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+            <div style="display:none;min-height:260px;" class="flex items-center justify-center bg-slate-800 text-slate-400 text-sm">
+              <svg class="w-12 h-12 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ════════════════════════════════════════════════ BLOC COMMERCIAL EARLY BIRD -->
 <section id="early-bird" data-track="view_early_bird_offer" class="py-16 bg-slate-900 text-white relative overflow-hidden border-y border-amber-400/20">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">

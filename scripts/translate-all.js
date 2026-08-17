@@ -29,6 +29,7 @@ const enData = {
     "barometer2026": "2026 Banking Services Barometer",
     "methodology": "Methodology",
     "abixIndex": "ABIX Project",
+    "dataExplorer": "ABIX Data Explorer",
     "services": "Services",
     "rankings": "Rankings",
     "banks": "Banks",
@@ -957,6 +958,251 @@ const enData = {
       "bannerText": "Share your opinion on your bank's mobile app, web service, and branch services in under 2 minutes.",
       "button": "Answer Survey"
     }
+  },
+  "dataExplorer": {
+    "meta": {
+      "title": "ABIX Data Explorer | Algerian Banks Analysis",
+      "description": "Explore, compare and analyse the financial performance of Algerian banks with ABIX Data Explorer: KPIs, market shares, benchmarks, history and advanced analyses."
+    },
+    "hero": {
+      "eyebrow": "ABIX Data Explorer",
+      "title": "Turn Algerian banks' financial data into comparative analyses and decisions.",
+      "subtitle": "Analyse a bank. Compare it to peers. Track its trajectory. Understand its market position.",
+      "description": "ABIX Data Explorer transforms banking financial data into a structured reading of the market: activity, deposits, credit, profitability, efficiency, growth, equity capitalization, balance sheet structure and competitive position.",
+      "ctaDiscover": "Discover Features",
+      "ctaOffers": "View Offers"
+    },
+    "keyStats": {
+      "banksCount": "21 banks",
+      "banksLabel": "Current covered banking catalogue",
+      "history": "Multi-year data",
+      "historyLabel": "History available depending on edition and license",
+      "kpis": "Dozens of KPIs",
+      "kpisLabel": "Source data, ratios and derived indicators",
+      "dimensions": "4 financial dimensions",
+      "dimensionsLabel": "Profitability · Growth · Efficiency · Capitalization"
+    },
+    "singleInterface": {
+      "title": "The entire banking sector in a single interface",
+      "text": "Switch from a sector view to a single bank analysis in seconds. Explore data, trends, rankings and comparisons without handling multiple Excel files or reports.",
+      "items": [
+        {
+          "title": "Sector view",
+          "body": "Financial aggregates, annual evolution, market composition and main players."
+        },
+        {
+          "title": "Rankings",
+          "body": "Banks' position by indicator and by year."
+        },
+        {
+          "title": "History",
+          "body": "Values, annual variations, Base 100 and CAGR."
+        },
+        {
+          "title": "Comparison",
+          "body": "Simultaneous analysis of multiple banks, indicators or dimensions."
+        }
+      ]
+    },
+    "profile360": {
+      "title": "One bank. One view. All essential indicators.",
+      "subtitle": "360° Banking Profile",
+      "text": "ABIX Data Explorer gathers in a single profile a bank's financial trajectory, competitive positioning, benchmarks and main attention signals.",
+      "domains": [
+        "Activity",
+        "Profitability",
+        "Efficiency",
+        "Intermediation",
+        "Equity Capitalization",
+        "Provisioning",
+        "Asset Structure",
+        "Market Position",
+        "Growth"
+      ],
+      "associationText": "The profile associates depending on available data: current value, annual evolution, history, CAGR, benchmark, mean and median, percentile, quartile, rank and market share."
+    },
+    "compare": {
+      "title": "Compare a bank to its true environment",
+      "text": "A relevant comparison is not just about comparing all banks together. ABIX Data Explorer allows contextualizing results and building more relevant peer groups.",
+      "axes": [
+        { "title": "Market", "body": "Overall positioning against the entire Algerian banking sector." },
+        { "title": "Status / Category", "body": "Homogeneous comparison between public and private banks." },
+        { "title": "Size", "body": "Grouping by asset volume to compare comparable players." },
+        { "title": "Asset Profile", "body": "Contextualization by balance sheet structure and orientation." },
+        { "title": "Peer Group", "body": "Custom group building when data allows." }
+      ],
+      "strongMessage": "Performance only makes sense when placed in context.",
+      "disclaimer": "Benchmarks and comparative analyses in ABIX Data Explorer are provided as financial analysis tools. They do not constitute regulatory ratings or credit ratings."
+    },
+    "marketShares": {
+      "title": "Who is really gaining ground?",
+      "text": "A bank can show positive growth while losing market share. ABIX distinguishes absolute growth, relative position and contribution to sector dynamics.",
+      "strongMessage": "Growing doesn't necessarily mean gaining ground.",
+      "kpis": [
+        { "title": "Market share", "desc": "Calculated on main aggregates" },
+        { "title": "Gain or loss", "desc": "Share evolution in percentage points" },
+        { "title": "Contribution", "desc": "Bank's share in sector growth" },
+        { "title": "Growth gap", "desc": "Relative performance vs market average" }
+      ],
+      "bullets": [
+        "Market share",
+        "Rank",
+        "Gap to leader",
+        "Market share gain/loss",
+        "Relative share evolution",
+        "Contribution to sector growth",
+        "Growth gap with market",
+        "Rank evolution"
+      ]
+    },
+    "concentration": {
+      "title": "Measure banking market concentration",
+      "text": "Track the evolution of leaders' weight and the transformation of the market's competitive structure.",
+      "kpis": [
+        { "title": "CR1, CR3, CR5, CR10", "desc": "Cumulative weight of the largest sector players." },
+        { "title": "HHI (Herfindahl-Hirschman)", "desc": "Internationally referenced concentration index." },
+        { "title": "Effective number of banks", "desc": "Indicator of true market player diversity." },
+        { "title": "Cumulative key players", "desc": "Number of banks needed to reach 50%, 75% or 90% of the market." }
+      ]
+    },
+    "advancedAnalyses": {
+      "title": "Go beyond tables and rankings",
+      "items": [
+        {
+          "title": "Heatmaps",
+          "body": "Quickly identify performance, growth and structure gaps."
+        },
+        {
+          "title": "Strategic matrices",
+          "body": "Cross key dimensions: Size × Profitability, Growth × Profitability, Intermediation × Profitability, Credit × Treasury, Provisioning × Profitability, NBI Growth × Efficiency."
+        },
+        {
+          "title": "Momentum",
+          "body": "Identify accelerations, decelerations and trajectory shifts."
+        },
+        {
+          "title": "Rank history",
+          "body": "Observe progressions, declines and stability of a bank's positioning."
+        },
+        {
+          "title": "Outliers",
+          "body": "Detect observations requiring further investigation."
+        }
+      ]
+    },
+    "fourDimensions": {
+      "title": "Four dimensions to understand a bank's profile",
+      "strongMessage": "ABIX Data Explorer does not produce an official overall score. Dimensions are kept separate to preserve financial information and avoid a single average masking very different profiles.",
+      "disclaimer": "These dimensions and analyses are provided for comparative and methodological purposes. They should never be interpreted as a credit rating, regulatory rating, official solvency measure, or probability of default.",
+      "items": [
+        {
+          "title": "Profitability",
+          "body": "The bank's ability to turn its activity and resources into profit."
+        },
+        {
+          "title": "Growth",
+          "body": "Development dynamics over several fiscal years."
+        },
+        {
+          "title": "Efficiency",
+          "body": "Operational mastery and operating income conversion capacity."
+        },
+        {
+          "title": "Equity Capitalization",
+          "body": "Relative position of equity in the balance sheet and credit structure."
+        }
+      ]
+    },
+    "executiveDashboard": {
+      "title": "From data to executive message",
+      "text": "ABIX Data Explorer automatically highlights evolutions deserving decision-maker attention.",
+      "alerts": [
+        "Net income decline",
+        "Significant increase in provisioning",
+        "Divergence between deposit and credit growth",
+        "NBI up but net income down",
+        "Assets up but RoE down",
+        "Significant cost-to-income ratio shift",
+        "Position or quartile changes"
+      ],
+      "traceabilityTitle": "Explainable and traceable findings",
+      "traceabilityText": "Findings rely on deterministic, versioned analytical rules. Each message can be traced back to the data and analysis that triggered it."
+    },
+    "personas": {
+      "title": "Designed for those who must understand the banking market",
+      "items": [
+        {
+          "title": "General Management",
+          "body": "Quickly identify important evolutions and the bank's positioning."
+        },
+        {
+          "title": "Finance Department",
+          "body": "Analyse profitability, efficiency, growth, balance sheet structure and capitalization."
+        },
+        {
+          "title": "Strategy Department",
+          "body": "Track market shares, competitors, trajectories and position changes."
+        },
+        {
+          "title": "Financial Analysts",
+          "body": "Explore data, ratios, histories and comparisons."
+        },
+        {
+          "title": "Credit & Counterparty",
+          "body": "Prepare the financial context of a bank before a fuller prudential and qualitative analysis."
+        },
+        {
+          "title": "Consulting & Research",
+          "body": "Quickly produce structured comparative analyses of the Algerian banking market."
+        }
+      ]
+    },
+    "methodology": {
+      "title": "Analyses designed to be verifiable",
+      "cta": "Discover the methodology",
+      "items": [
+        {
+          "title": "Versioned data",
+          "body": "Organized by bank, indicator, year and edition."
+        },
+        {
+          "title": "Rigorous missing data handling",
+          "body": "Absent data remains N/A and is never automatically treated as zero."
+        },
+        {
+          "title": "Centralized calculations",
+          "body": "Ratios, CAGRs, market shares, percentiles and benchmarks rely on homogeneous rules."
+        },
+        {
+          "title": "Traceability",
+          "body": "Results can be linked to their analytical source and parameters."
+        }
+      ]
+    },
+    "limitations": {
+      "title": "A comparative analysis tool, not a prudential rating",
+      "text": "ABIX Data Explorer provides comparative financial analysis based on available data. It does not replace a full credit analysis, regulatory prudential ratios, or information on asset quality and regulatory liquidity when not publicly available. This reinforces the product's methodological credibility."
+    },
+    "pricing": {
+      "title": "Choose the access suited to your needs",
+      "cta": "Choose this offer"
+    },
+    "finalCta": {
+      "title": "Banking data shouldn't just be viewed. It should be explored.",
+      "text": "With ABIX Data Explorer, move from raw numbers to comparison, from ranking to trajectory, and from data to market understanding.",
+      "ctaOffers": "View Offers",
+      "ctaApp": "Access ABIX Data Explorer"
+    },
+    "promoHome": {
+      "title": "Discover ABIX Data Explorer",
+      "text": "The study brings you the analysis. Data Explorer lets you explore the data yourself.",
+      "cta": "Discover ABIX Data Explorer",
+      "bullets": [
+        "Analyse banks",
+        "Compare performances",
+        "Track market shares"
+      ]
+    }
   }
 };
 
@@ -982,6 +1228,7 @@ const arData = {
     "barometer2026": "مؤشر الخدمات المصرفية 2026",
     "methodology": "المنهجية",
     "abixIndex": "مشروع ABIX",
+    "dataExplorer": "ABIX Data Explorer",
     "services": "الخدمات",
     "rankings": "التصنيفات",
     "banks": "البنوك",
@@ -1909,6 +2156,251 @@ const arData = {
       "bannerTitle": "شارك في مؤشر الخدمات المصرفية 2026",
       "bannerText": "قدّم رأيك حول تطبيق الهاتف والخدمات عبر الإنترنت وخدمات الفروع لبنكك في أقل من دقيقتين.",
       "button": "الإجابة على الاستبيان"
+    }
+  },
+  "dataExplorer": {
+    "meta": {
+      "title": "ABIX Data Explorer | تحليل البنوك الجزائرية",
+      "description": "استكشف وقارن وحلل الأداء المالي للبنوك الجزائرية مع ABIX Data Explorer: مؤشرات الأداء، الحصص السوقية، المقارنات المرجعية، البيانات التاريخية والتحليلات المتقدمة."
+    },
+    "hero": {
+      "eyebrow": "ABIX Data Explorer",
+      "title": "حوّل البيانات المالية للبنوك الجزائرية إلى تحليلات مقارنة وقرارات.",
+      "subtitle": "حلّل بنكاً. قارنه بنظرائه. تتبّع مساره. افهم موقعه في السوق.",
+      "description": "يحوّل ABIX Data Explorer البيانات المالية المصرفية إلى قراءة منظّمة للسوق: النشاط، الودائع، الائتمان، الربحية، الكفاءة، النمو، رسملة الأسهم، هيكل الميزانية والموقف التنافسي.",
+      "ctaDiscover": "اكتشف الميزات",
+      "ctaOffers": "عرض الباقات"
+    },
+    "keyStats": {
+      "banksCount": "21 بنكاً",
+      "banksLabel": "كتالوج البنوك المغطاة حالياً",
+      "history": "بيانات متعددة السنوات",
+      "historyLabel": "يتوفر السجل التاريخي حسب الإصدار والترخيص",
+      "kpis": "عشرات المؤشرات",
+      "kpisLabel": "بيانات المصدر والنسب والمؤشرات المشتقة",
+      "dimensions": "4 أبعاد مالية",
+      "dimensionsLabel": "الربحية · النمو · الكفاءة · الرسملة"
+    },
+    "singleInterface": {
+      "title": "القطاع المصرفي بأكمله في واجهة واحدة",
+      "text": "انتقل من نظرة القطاع إلى تحليل بنك واحد في ثوانٍ. استكشف البيانات والاتجاهات والتصنيفات والمقارنات دون التعامل مع ملفات Excel أو تقارير متعددة.",
+      "items": [
+        {
+          "title": "رؤية القطاع",
+          "body": "المجاميع المالية والتطور السنوي وتكوين السوق واللاعبين الرئيسيين."
+        },
+        {
+          "title": "التصنيفات",
+          "body": "موقف البنوك حسب المؤشر وحسب السنة."
+        },
+        {
+          "title": "البيانات التاريخية",
+          "body": "القيم والتغيرات السنوية والأساس 100 ومعدل النمو السنوي المركب."
+        },
+        {
+          "title": "المقارنة",
+          "body": "تحليل متزامن لبنوك أو مؤشرات أو أبعاد متعددة."
+        }
+      ]
+    },
+    "profile360": {
+      "title": "بنك واحد. نظرة واحدة. جميع المؤشرات الأساسية.",
+      "subtitle": "الملف المصرفي 360 درجة",
+      "text": "يجمع ABIX Data Explorer في ملف واحد المسار المالي للبنك والموقف التنافسي والمقارنات المرجعية وإشارات الانتباه الرئيسية.",
+      "domains": [
+        "النشاط",
+        "الربحية",
+        "الكفاءة",
+        "الوساطة",
+        "الرسملة المحاسبية",
+        "المخصصات",
+        "هيكل الأصول",
+        "موقف السوق",
+        "النمو"
+      ],
+      "associationText": "يربط الملف بناءً على البيانات المتاحة: القيمة الحالية والتطور السنوي والتاريخ ومعدل النمو السنوي المركب والمقارنة المرجعية والمتوسط والوسيط والنسبة المئوية والربيعية والتصنيف والحصة السوقية."
+    },
+    "compare": {
+      "title": "قارن البنك ببيئته الحقيقية",
+      "text": "لا تقتصر المقارنة ذات الصلة على مقارنة جميع البنوك معاً فحسب. يسمح ABIX Data Explorer بوضع النتائج في سياقها وبناء مجموعات نظراء أكثر ملاءمة.",
+      "axes": [
+        { "title": "السوق", "body": "التموضع العام مقابل القطاع المصرفي الجزائري بأكمله." },
+        { "title": "الوضع / الفئة", "body": "مقارنة متجانسة بين البنوك العامة والخاصة." },
+        { "title": "الحجم", "body": "التجميع حسب حجم الأصول لمقارنة اللاعبين المماثلين." },
+        { "title": "ملف الأصول", "body": "وضع السياق حسب هيكل وتوجه الميزانية العمومية." },
+        { "title": "مجموعة النظراء", "body": "بناء مجموعة مخصصة عندما تسمح البيانات بذلك." }
+      ],
+      "strongMessage": "الأداء يكون له معنى فقط عند وضعه في سياقه.",
+      "disclaimer": "يتم توفير المقارنات المرجعية والتحليلات المقارنة في ABIX Data Explorer كأدوات للتحليل المالي. وهي لا تشكل تصنيفات تنظيمية أو تصنيفات ائتمانية."
+    },
+    "marketShares": {
+      "title": "من يكتسب أرضاً حقاً؟",
+      "text": "يمكن أن يُظهر البنك نمواً إيجابياً بينما يفقد حصة في السوق. يميز ABIX بين النمو المطلق والموقف النسبي والمساهمة في ديناميكيات القطاع.",
+      "strongMessage": "النمو لا يعني بالضرورة اكتساب الأرض.",
+      "kpis": [
+        { "title": "حصة السوق", "desc": "محسوبة على المجاميع الرئيسية" },
+        { "title": "مكسب أو خسارة", "desc": "تطور الحصة بالنقاط المئوية" },
+        { "title": "المساهمة", "desc": "حصة البنك في نمو القطاع" },
+        { "title": "فجوة النمو", "desc": "الأداء النسبي مقابل متوسط السوق" }
+      ],
+      "bullets": [
+        "حصة السوق",
+        "التصنيف",
+        "الفجوة إلى المتصدر",
+        "مكسب/خسارة حصة السوق",
+        "تطور الحصة النسبي",
+        "المساهمة في نمو القطاع",
+        "فجوة النمو مع السوق",
+        "تطور التصنيف"
+      ]
+    },
+    "concentration": {
+      "title": "قياس تركيز السوق المصرفية",
+      "text": "تتبع تطور وزن القادة وتحول الهيكل التنافسي للسوق.",
+      "kpis": [
+        { "title": "CR1, CR3, CR5, CR10", "desc": "الوزن التراكمي لأكبر اللاعبين في القطاع." },
+        { "title": "HHI (Herfindahl-Hirschman)", "desc": "مؤشر تركيز معتمد دولياً." },
+        { "title": "العدد الفعلي للبنوك", "desc": "مؤشر لتنوع اللاعبين الحقيقيين في السوق." },
+        { "title": "اللاعبون الرئيسيون المتراكمون", "desc": "عدد البنوك اللازمة للوصول إلى 50٪ أو 75٪ أو 90٪ من السوق." }
+      ]
+    },
+    "advancedAnalyses": {
+      "title": "تجاوز الجداول والتصنيفات",
+      "items": [
+        {
+          "title": "الخرائط الحرارية (Heatmaps)",
+          "body": "تحديد فجوات الأداء والنمو والهيكل بسرعة."
+        },
+        {
+          "title": "المصفوفات الاستراتيجية",
+          "body": "تقاطع الأبعاد الرئيسية: الحجم × الربحية، النمو × الربحية، الوساطة × الربحية، الائتمان × الخزينة، المخصصات × الربحية، نمو الناتج البنكي الصافي × الكفاءة."
+        },
+        {
+          "title": "الزخم",
+          "body": "تحديد التسارع والتباطؤ وتحولات المسار."
+        },
+        {
+          "title": "تاريخ التصنيف",
+          "body": "مراقبة التقدم والتراجع واستقرار تموضع البنك."
+        },
+        {
+          "title": "القيم المتطرفة",
+          "body": "اكتشاف الملاحظات التي تتطلب مزيداً من التحقيق."
+        }
+      ]
+    },
+    "fourDimensions": {
+      "title": "أربعة أبعاد لفهم ملف البنك",
+      "strongMessage": "لا يصدر ABIX Data Explorer درجة إجمالية رسمية. يتم إبقاء الأبعاد منفصلة للحفاظ على المعلومات المالية وتجنب أن يخفي متوسط واحد ملفات شخصية مختلفة للغاية.",
+      "disclaimer": "يتم توفير هذه الأبعاد والتحليلات لأغراض المقارنة والمنهجية. يجب ألا يتم تفسيرها مطلقاً على أنها تصنيف ائتماني أو تصنيف تنظيمي أو مقياس ملاءة رسمي أو احتمالية التخلف عن السداد.",
+      "items": [
+        {
+          "title": "الربحية",
+          "body": "قدرة البنك على تحويل نشاطه وموارده إلى أرباح."
+        },
+        {
+          "title": "النمو",
+          "body": "ديناميكيات التطور على مدى عدة سنوات مالية."
+        },
+        {
+          "title": "الكفاءة",
+          "body": "السيطرة التشغيلية والقدرة على تحويل الدخل التشغيلي."
+        },
+        {
+          "title": "الرسملة المحاسبية",
+          "body": "الوضع النسبي لحقوق الملكية في الميزانية العمومية وهيكل الائتمان."
+        }
+      ]
+    },
+    "executiveDashboard": {
+      "title": "من البيانات إلى الرسالة التنفيذية",
+      "text": "يسلط ABIX Data Explorer الضوء تلقائياً على التطورات التي تستحق اهتمام صانع القرار.",
+      "alerts": [
+        "انخفاض صافي الدخل",
+        "زيادة كبيرة في المخصصات",
+        "اختلاف بين نمو الودائع والائتمان",
+        "ارتفاع الناتج البنكي الصافي ولكن انخفاض صافي الدخل",
+        "ارتفاع الأصول ولكن انخفاض العائد على حقوق الملكية",
+        "تحول كبير في نسبة التكلفة إلى الدخل",
+        "تغييرات في المركز أو الربيعية"
+      ],
+      "traceabilityTitle": "نتائج قابلة للتفسير والتتبع",
+      "traceabilityText": "تعتمد النتائج على قواعد تحليلية محددة ومسجلة. يمكن تتبع كل رسالة إلى البيانات والتحليل الذي أدى إليها."
+    },
+    "personas": {
+      "title": "مصمم لأولئك الذين يجب عليهم فهم السوق المصرفية",
+      "items": [
+        {
+          "title": "الإدارة العامة",
+          "body": "التحديد السريع للتطورات الهامة وتموضع البنك."
+        },
+        {
+          "title": "الإدارة المالية",
+          "body": "تحليل الربحية والكفاءة والنمو وهيكل الميزانية العمومية والرسملة."
+        },
+        {
+          "title": "إدارة الاستراتيجية",
+          "body": "تتبع الحصص السوقية والمنافسين والمسارات وتغييرات المواقف."
+        },
+        {
+          "title": "المحللون الماليون",
+          "body": "استكشاف البيانات والنسب والسجلات والمقارنات."
+        },
+        {
+          "title": "الائتمان والطرف المقابل",
+          "body": "إعداد السياق المالي للبنك قبل تحليل احترازي ونوعي أكمل."
+        },
+        {
+          "title": "الاستشارات والبحوث",
+          "body": "إنتاج تحليلات مقارنة منظمة للسوق المصرفي الجزائري بسرعة."
+        }
+      ]
+    },
+    "methodology": {
+      "title": "تحليلات مصممة لتكون قابلة للتحقق",
+      "cta": "اكتشف المنهجية",
+      "items": [
+        {
+          "title": "بيانات مسجلة الإصدار",
+          "body": "منظمة حسب البنك والمؤشر والسنة والإصدار."
+        },
+        {
+          "title": "معالجة صارمة للبيانات المفقودة",
+          "body": "تظل البيانات الغائبة غير متوفرة (N/A) ولا يتم التعامل معها مطلقاً على أنها صفر."
+        },
+        {
+          "title": "حسابات مركزية",
+          "body": "تعتمد النسب ومعدلات النمو السنوي المركب والحصص السوقية والنسب المئوية والمقارنات المرجعية على قواعد متجانسة."
+        },
+        {
+          "title": "إمكانية التتبع",
+          "body": "يمكن ربط النتائج بمصدرها التحليلي ومعلماتها."
+        }
+      ]
+    },
+    "limitations": {
+      "title": "أداة للتحليل المقارن، وليست تصنيفاً احترازياً",
+      "text": "يوفر ABIX Data Explorer تحليلاً مالياً مقارناً بناءً على البيانات المتاحة. وهو لا يحل محل تحليل الائتمان الكامل، أو النسب الاحترازية التنظيمية، أو المعلومات حول جودة الأصول والسيولة التنظيمية عندما لا تكون متاحة للجمهور. وهذا يعزز المصداقية المنهجية للمنتج."
+    },
+    "pricing": {
+      "title": "اختر الوصول المناسب لاحتياجاتك",
+      "cta": "اختر هذا العرض"
+    },
+    "finalCta": {
+      "title": "لا ينبغي الاطلاع على البيانات المصرفية فحسب. بل يجب استكشافها.",
+      "text": "مع ABIX Data Explorer، انتقل من الأرقام الأولية إلى المقارنة، ومن التصنيف إلى المسار، ومن البيانات إلى فهم السوق.",
+      "ctaOffers": "عرض الباقات",
+      "ctaApp": "الوصول إلى ABIX Data Explorer"
+    },
+    "promoHome": {
+      "title": "اكتشف ABIX Data Explorer",
+      "text": "توفر لك الدراسة التحليل. يتيح لك Data Explorer استكشاف البيانات بنفسك.",
+      "cta": "اكتشف ABIX Data Explorer",
+      "bullets": [
+        "حلل البنوك",
+        "قارن الأداء",
+        "تتبع الحصص السوقية"
+      ]
     }
   }
 };
