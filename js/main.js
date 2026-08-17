@@ -308,9 +308,9 @@
 
   // ══════════════════════════════════════════════════════════ MODAUX DE COMMANDE & PRÉCOMMANDE
   var PREORDER_IFRAMES = {
-    essential: "https://fenekio.com/tandp/ps/forms/wtl/5ba23a9399dbe1484beb72b52e95593f",
-    pro: "https://fenekio.com/tandp/ps/forms/wtl/9c18a26196a5b5630df381113da3d4b2",
-    corporate: "https://fenekio.com/tandp/ps/forms/wtl/79e33d8596a4c5f745648a74fe76c5c5"
+    essential: "https://fenekio.com/tandp/ps/forms/wtl/5ba23a9399dbe1484beb72b52e95593f?styled=1",
+    pro: "https://fenekio.com/tandp/ps/forms/wtl/9c18a26196a5b5630df381113da3d4b2?styled=1",
+    corporate: "https://fenekio.com/tandp/ps/forms/wtl/79e33d8596a4c5f745648a74fe76c5c5?styled=1"
   };
 
   var PREORDER_TITLE_LABELS = {
@@ -381,7 +381,7 @@
     };
     if (labelEl) labelEl.textContent = packLabels[pack] || "";
 
-    var formUrl = ORDER_FORMS[pack] || null;
+    var formUrl = (typeof SITE_CONFIG !== "undefined" && SITE_CONFIG.editions && SITE_CONFIG.editions["2025"] && SITE_CONFIG.editions["2025"].orderForms) ? SITE_CONFIG.editions["2025"].orderForms[pack] : null;
     if (formUrl) {
       frame.src = formUrl;
     } else {

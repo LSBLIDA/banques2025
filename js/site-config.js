@@ -45,9 +45,9 @@ const SITE_CONFIG = {
       previewPdfUrl: "/public/apercu-etude-bancaire-2025.pdf", // Aperçu déjà public (teaser diffusé)
       orderEnabled: true,
       orderForms: {
-        essential:  "https://fenekio.com/tandp/ps/forms/wtl/0bccc65018b199f02aaa3c4480417faa",
-        pro:        "https://fenekio.com/tandp/ps/forms/wtl/2f4348a8582cd25ba9b432a05d0f0fea",
-        corporate:  "https://fenekio.com/tandp/ps/forms/wtl/4ef2febf12076dca8bd2ff812cf9a824"
+        essential:  "https://fenekio.com/tandp/ps/forms/wtl/0bccc65018b199f02aaa3c4480417faa?styled=1",
+        pro:        "https://fenekio.com/tandp/ps/forms/wtl/2f4348a8582cd25ba9b432a05d0f0fea?styled=1",
+        corporate:  "https://fenekio.com/tandp/ps/forms/wtl/4ef2febf12076dca8bd2ff812cf9a824?styled=1"
       },
       pricing: {
         essential:  { label: "Pack Essentiel",          price: "84 000 DA HT",  users: 1  },
