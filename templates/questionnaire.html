@@ -75,7 +75,13 @@
             <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-cyan-500/15 text-cyan-700 flex items-center justify-center flex-shrink-0 mt-0.5">
               <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
             </div>
-            <div class="space-y-1">
+            <div class="space-y-1.5 flex-1">
+              <div class="flex items-center gap-2">
+                <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-2xs sm:text-xs font-bold bg-emerald-100/90 text-emerald-800 border border-emerald-300/80 shadow-2xs">
+                  <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                  {{questionnaire.results.realtimeBadge}}
+                </span>
+              </div>
               <h3 class="text-sm sm:text-base font-bold text-cyan-950">
                 <strong id="info-eval-count" class="font-extrabold text-cyan-900">--</strong> {{questionnaire.results.goalBoxTitle}}
               </h3>
