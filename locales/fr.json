@@ -1140,6 +1140,7 @@
     ]
   },
   "dataExplorer": {
+    "illustrationNotice": "Illustration – données fictives à des fins de démonstration.",
     "meta": {
       "title": "ABIX Data Explorer | Analyse des banques algériennes",
       "description": "Explorez, comparez et analysez les performances financières des banques algériennes avec ABIX Data Explorer : KPI, parts de marché, benchmarks, historiques et analyses avancées."

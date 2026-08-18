@@ -1140,6 +1140,7 @@
     }
   },
   "dataExplorer": {
+    "illustrationNotice": "Illustration – fictitious data for demonstration purposes.",
     "meta": {
       "title": "ABIX Data Explorer | Algerian Banks Analysis",
       "description": "Explore, compare and analyse the financial performance of Algerian banks with ABIX Data Explorer: KPIs, market shares, benchmarks, history and advanced analyses."
