@@ -1118,6 +1118,9 @@
       "participateUrl": "algeriabankingindex.com/ar/questionnaire/",
       "colRank": "الترتيب",
       "colBank": "البنك",
+      "colVoters": "المصوتون",
+      "votersPlural": "مصوت",
+      "votersSingle": "مصوت",
       "colScore": "النتيجة العامة / 5",
       "colScoreChannel": "النتيجة / 5",
       "filterAllChannels": "جميع القنوات مجمعة",
@@ -1130,6 +1133,8 @@
       "tags": "#ABIX2026 #بنوك #الجزائر #تجربة_العميل",
       "refreshBtn": "تحديث البيانات",
       "noDataTitle": "لا توجد تقييمات متاحة حالياً",
+      "noQualifiedBanksTitle": "لم يصل أي بنك بعد إلى الحد الأدنى البالغ 5 تقييمات.",
+      "noQualifiedBanksText": "بمجرد أن يجمع أي بنك 5 تقييمات أو أكثر، سيظهر تلقائياً في هذا الترتيب.",
       "ctaStudy": "اكتشف المنهجية ودراسة ABIX 2026",
       "ctaHome": "العودة إلى الرئيسية"
     }

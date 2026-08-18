@@ -241,56 +241,18 @@
         <!-- ══════════════════════════════════════════════════════════════════ -->
         <div class="bg-white border-2 border-slate-200/90 rounded-3xl p-6 sm:p-8 md:p-10 shadow-lg space-y-6">
           
-          <!-- En-tête Infographie (Logo ABIX + Titre + Boîte Objectif) -->
-          <div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 border-b border-gray-100 pb-6">
-            <!-- Left Branding & Titles -->
-            <div class="flex items-center gap-4 sm:gap-6">
-              <div class="border-e-2 border-primary/20 pe-4 sm:pe-6 hidden sm:block">
-                <div class="text-2xl sm:text-3xl font-extrabold font-playfair tracking-tight text-primary">ABIX</div>
-                <div class="text-[10px] font-bold tracking-widest uppercase text-slate-500">ALGERIA BANKING INDEX</div>
-                <div class="text-sm font-extrabold text-cyan-600">2026</div>
-              </div>
-              <div class="space-y-1">
-                <h3 class="text-2xl sm:text-3xl font-extrabold font-playfair tracking-tight text-slate-900">
-                  ABIX 2026 RANKING
-                </h3>
-                <p id="ranking-subtitle-text" class="text-xs sm:text-sm font-extrabold uppercase tracking-wide text-cyan-700">
-                  OVERALL SATISFACTION – ALL CHANNELS COMBINED
-                </p>
-                <p id="ranking-detail-text" class="text-xs text-gray-500 font-medium">
-                  (MOBILE APP, E-BANKING AND BRANCHES)
-                </p>
-              </div>
+          <!-- Bloc Objectif & Total Évaluations -->
+          <div class="bg-cyan-50/60 border border-cyan-200/80 rounded-2xl p-4 sm:p-5 flex items-start gap-3.5 shadow-2xs">
+            <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-cyan-500/15 text-cyan-700 flex items-center justify-center flex-shrink-0 mt-0.5">
+              <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
             </div>
-
-            <!-- Right Goal / Count Box -->
-            <div class="w-full lg:w-auto bg-cyan-50/50 border border-cyan-200/80 rounded-2xl p-4 sm:p-5 max-w-md space-y-1.5 shadow-2xs">
-              <div class="flex items-center gap-2.5 text-cyan-900 font-bold text-xs sm:text-sm">
-                <span class="w-7 h-7 rounded-full bg-cyan-500/15 text-cyan-700 flex items-center justify-center flex-shrink-0">
-                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
-                </span>
-                <span><strong id="info-eval-count">--</strong> evaluations already collected. Goal: 5,000.</span>
-              </div>
-              <p class="text-xs text-slate-600 leading-relaxed ps-9.5">
+            <div class="space-y-1">
+              <h3 class="text-sm sm:text-base font-bold text-cyan-950">
+                <strong id="info-eval-count" class="font-extrabold text-cyan-900">--</strong> evaluations already collected. Goal: 5,000.
+              </h3>
+              <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
                 The more responses we receive, the more representative and useful the results will be to improve banking services.
               </p>
-            </div>
-          </div>
-
-          <!-- Bandeau d'information / Appel à participation -->
-          <div class="bg-cyan-50/40 border border-cyan-200/70 rounded-2xl p-4 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs sm:text-sm">
-            <div class="flex items-center gap-3">
-              <div class="w-9 h-9 rounded-full bg-teal-500 text-white flex items-center justify-center flex-shrink-0 shadow-xs">
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
-              </div>
-              <p class="text-slate-700 leading-relaxed">
-                In 2 minutes, you can contribute to the ABIX 2026 Barometer and help measure the quality of banking services in Algeria.
-              </p>
-            </div>
-            <div class="flex items-center gap-2 flex-shrink-0 text-cyan-800 font-semibold">
-              <svg class="w-4 h-4 text-cyan-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/></svg>
-              <span class="text-xs">Participate here:</span>
-              <span class="text-xs font-bold underline">algeriabankingindex.com/en/questionnaire/</span>
             </div>
           </div>
 
@@ -314,11 +276,14 @@
           <div class="space-y-3 pt-2">
             
             <!-- Entêtes de colonnes -->
-            <div class="grid grid-cols-12 gap-3 px-3 py-2 text-xs font-extrabold uppercase tracking-wider text-slate-500 border-b border-gray-100">
+            <div class="grid grid-cols-12 gap-3 px-3 py-2 text-xs font-extrabold uppercase tracking-wider text-slate-500 border-b border-gray-100 items-center">
               <div class="col-span-1 text-center">RANK</div>
               <div class="col-span-4 sm:col-span-3">BANK</div>
-              <div class="col-span-5 sm:col-span-6"></div>
-              <div class="col-span-2 text-end">OVERALL SCORE / 5</div>
+              <div class="col-span-3 sm:col-span-4"></div>
+              <div class="col-span-4 sm:col-span-4 flex items-center justify-end gap-2 sm:gap-4 text-end">
+                <span class="text-2xs sm:text-xs text-slate-500 font-extrabold uppercase tracking-wider">VOTERS</span>
+                <span class="text-2xs sm:text-xs text-slate-500 font-extrabold uppercase tracking-wider min-w-[3rem] text-end">OVERALL SCORE / 5</span>
+              </div>
             </div>
 
             <!-- Liste des barres horizontales générées dynamiquement -->
@@ -486,19 +451,37 @@ document.addEventListener("DOMContentLoaded", () => {
     { id: "ziraat", name: "Ziraat Bank", fullName: "Ziraat Bankası Algérie", logo: basePath + "/public/logos/ziraat.jpg" }
   ];
 
-  // Palette de couleurs pour les rangs et barres du classement
+  // Palette de couleurs pour les rangs et barres du classement (21 banques)
   const RANK_COLORS = [
-    { bg: "#059669", bar: "#059669" }, // Rang 1 (Vert Foncé Émeraude)
+    { bg: "#059669", bar: "#059669" }, // Rang 1 (Émeraude)
     { bg: "#16a34a", bar: "#22c55e" }, // Rang 2 (Vert Vif)
-    { bg: "#0d9488", bar: "#0d9488" }, // Rang 3 (Teal / Cyan Foncé)
+    { bg: "#0d9488", bar: "#0d9488" }, // Rang 3 (Teal)
     { bg: "#0284c7", bar: "#0284c7" }, // Rang 4 (Bleu Océan)
     { bg: "#2563eb", bar: "#2563eb" }, // Rang 5 (Bleu Roi)
     { bg: "#3b82f6", bar: "#3b82f6" }, // Rang 6 (Bleu Ciel)
     { bg: "#6366f1", bar: "#6366f1" }, // Rang 7 (Indigo)
-    { bg: "#7c3aed", bar: "#7c3aed" }, // Rang 8 (Violet / Mauve)
+    { bg: "#7c3aed", bar: "#7c3aed" }, // Rang 8 (Violet)
     { bg: "#8b5cf6", bar: "#8b5cf6" }, // Rang 9 (Violet Clair)
-    { bg: "#9333ea", bar: "#9333ea" }  // Rang 10 (Pourpre)
+    { bg: "#9333ea", bar: "#9333ea" }, // Rang 10 (Pourpre)
+    { bg: "#a855f7", bar: "#a855f7" }, // Rang 11
+    { bg: "#c026d3", bar: "#c026d3" }, // Rang 12
+    { bg: "#db2777", bar: "#db2777" }, // Rang 13
+    { bg: "#e11d48", bar: "#e11d48" }, // Rang 14
+    { bg: "#ea580c", bar: "#ea580c" }, // Rang 15
+    { bg: "#d97706", bar: "#d97706" }, // Rang 16
+    { bg: "#0891b2", bar: "#0891b2" }, // Rang 17
+    { bg: "#4f46e5", bar: "#4f46e5" }, // Rang 18
+    { bg: "#475569", bar: "#475569" }, // Rang 19
+    { bg: "#64748b", bar: "#64748b" }, // Rang 20
+    { bg: "#94a3b8", bar: "#94a3b8" }  // Rang 21
   ];
+
+  const I18N_VOTERS_PLURAL = "voters";
+  const I18N_VOTERS_SINGLE = "voter";
+
+  function normBankStr(str) {
+    return (str || "").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[^a-z0-9]/g, "");
+  }
 
   const RATINGS = [
     { value: "Very Unsatisfied", label: "Very Unsatisfied" },
@@ -631,10 +614,14 @@ document.addEventListener("DOMContentLoaded", () => {
           count = b.services[activeChannelFilter].count || 0;
         }
         evaluatedMap.set(b.name, { score, count });
+        evaluatedMap.set(normBankStr(b.name), { score, count });
       });
 
       displayList = BANKS.map(b => {
-        const found = evaluatedMap.get(b.fullName) || evaluatedMap.get(b.name);
+        const found = evaluatedMap.get(b.fullName) 
+          || evaluatedMap.get(b.name) 
+          || evaluatedMap.get(normBankStr(b.fullName)) 
+          || evaluatedMap.get(normBankStr(b.name));
         return {
           id: b.id,
           name: b.name,
@@ -645,40 +632,49 @@ document.addEventListener("DOMContentLoaded", () => {
         };
       });
 
-      // Trier : les banques ayant des votes en tête par score décroissant
+      // Filtrer : exclure les banques ayant moins de 5 votants
+      displayList = displayList.filter(b => b.count >= 5);
+
+      // Trier : par score décroissant, puis par nombre de votes, puis par ordre alphabétique
       displayList.sort((a, b) => {
-        if (a.count > 0 && b.count === 0) return -1;
-        if (b.count > 0 && a.count === 0) return 1;
         if (b.score !== a.score) return b.score - a.score;
-        return b.count - a.count;
+        if (b.count !== a.count) return b.count - a.count;
+        return a.name.localeCompare(b.name);
       });
     } else {
-      displayList = BANKS.map(b => ({
-        id: b.id,
-        name: b.name,
-        fullName: b.fullName,
-        logo: b.logo,
-        score: 0,
-        count: 0
-      }));
+      displayList = [];
     }
 
-    // Limiter aux 10 premiers rangs
-    const top10 = displayList.slice(0, 10);
+    if (displayList.length === 0) {
+      rankingContainer.innerHTML = `
+        <div class="text-center py-10 px-4 bg-slate-50 border border-slate-200/80 rounded-2xl space-y-2">
+          <div class="w-12 h-12 mx-auto rounded-full bg-slate-100 flex items-center justify-center text-slate-400">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          </div>
+          <p class="text-sm font-semibold text-slate-700">No bank has reached the minimum threshold of 5 evaluations yet.</p>
+          <p class="text-xs text-slate-500 max-w-md mx-auto">As soon as a bank gathers 5 evaluations or more, it will automatically appear in this ranking.</p>
+        </div>
+      `;
+      return;
+    }
 
-    rankingContainer.innerHTML = top10.map((item, index) => {
-      const colorScheme = RANK_COLORS[index] || RANK_COLORS[RANK_COLORS.length - 1];
+    rankingContainer.innerHTML = displayList.map((item, index) => {
+      const hasVotes = item.count > 0;
+      const colorScheme = hasVotes 
+        ? (RANK_COLORS[index] || RANK_COLORS[RANK_COLORS.length - 1])
+        : { bg: "#94a3b8", bar: "#e2e8f0" };
       const rankNum = index + 1;
-      const scoreVal = item.score > 0 ? item.score.toFixed(2).replace(".", ",") : "0,00";
+      const scoreVal = hasVotes ? item.score.toFixed(2).replace(".", ",") : "0,00";
       // Calculer le pourcentage de la barre horizontale (score / 5) * 100%
-      const barWidthPct = item.score > 0 ? Math.min(100, Math.max(5, (item.score / 5) * 100)) : 4;
+      const barWidthPct = hasVotes ? Math.min(100, Math.max(5, (item.score / 5) * 100)) : 2;
+      const votersLabel = item.count > 1 ? I18N_VOTERS_PLURAL : I18N_VOTERS_SINGLE;
 
       return `
-        <div class="grid grid-cols-12 gap-3 items-center p-2 rounded-2xl hover:bg-slate-50/80 transition-colors">
+        <div class="grid grid-cols-12 gap-3 items-center p-2.5 rounded-2xl hover:bg-slate-50/80 transition-colors border border-transparent hover:border-slate-100">
           
           <!-- Rang Badge -->
           <div class="col-span-1 flex items-center justify-center">
-            <span class="w-8 h-8 rounded-full text-white font-extrabold text-xs sm:text-sm flex items-center justify-center shadow-xs" style="background-color: ${colorScheme.bg};">
+            <span class="w-8 h-8 rounded-full text-white font-extrabold text-xs sm:text-sm flex items-center justify-center shadow-xs ${!hasVotes ? 'opacity-75' : ''}" style="background-color: ${colorScheme.bg};">
               ${rankNum}
             </span>
           </div>
@@ -692,15 +688,20 @@ document.addEventListener("DOMContentLoaded", () => {
           </div>
 
           <!-- Barre Horizontale Proportionnelle -->
-          <div class="col-span-5 sm:col-span-6 flex items-center">
+          <div class="col-span-3 sm:col-span-4 flex items-center">
             <div class="w-full bg-slate-100 rounded-full h-5 sm:h-6 p-0.5 overflow-hidden flex items-center">
-              <div class="infographic-bar h-full rounded-full shadow-2xs" style="width: ${barWidthPct}%; background-color: ${colorScheme.bar};"></div>
+              <div class="infographic-bar h-full rounded-full shadow-2xs transition-all duration-500" style="width: ${barWidthPct}%; background-color: ${colorScheme.bar};"></div>
             </div>
           </div>
 
-          <!-- Score Global / 5 -->
-          <div class="col-span-2 text-end">
-            <span class="text-base sm:text-lg font-extrabold font-playfair tracking-tight text-slate-900">
+          <!-- Nombre de Votants + Score Global / 5 -->
+          <div class="col-span-4 sm:col-span-4 flex items-center justify-end gap-2 sm:gap-3 text-end">
+            <span class="inline-flex items-center gap-1 text-2xs sm:text-xs font-semibold px-2 py-0.5 rounded-full ${hasVotes ? 'bg-slate-100 text-slate-700 border border-slate-200' : 'bg-slate-50 text-slate-400 border border-slate-100'} shrink-0" title="${item.count} ${votersLabel}">
+              <svg class="w-3 h-3 ${hasVotes ? 'text-slate-500' : 'text-slate-300'} shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
+              <span>${item.count}</span>
+              <span class="hidden md:inline">${votersLabel}</span>
+            </span>
+            <span class="text-base sm:text-lg font-extrabold font-playfair tracking-tight ${hasVotes ? 'text-slate-900' : 'text-slate-400'} min-w-[3rem] text-end">
               ${scoreVal}
             </span>
           </div>

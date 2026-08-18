@@ -19,6 +19,9 @@ const frResults = {
   participateUrl: "algeriabankingindex.com/fr/questionnaire/",
   colRank: "RANG",
   colBank: "BANQUE",
+  colVoters: "VOTANTS",
+  votersPlural: "votants",
+  votersSingle: "votant",
   colScore: "SCORE GLOBAL / 5",
   colScoreChannel: "SCORE / 5",
   filterAllChannels: "Tous canaux confondus",
@@ -31,6 +34,8 @@ const frResults = {
   tags: "#ABIX2026 #Banques #Algérie #ExpérienceClient",
   refreshBtn: "Actualiser les données",
   noDataTitle: "Aucune évaluation disponible pour le moment",
+  noQualifiedBanksTitle: "Aucune banque n'a encore atteint le seuil minimum de 5 évaluations.",
+  noQualifiedBanksText: "Dès qu'une banque recueille 5 évaluations ou plus, elle apparaîtra automatiquement dans ce classement.",
   ctaStudy: "Découvrir la méthodologie et l'étude ABIX 2026",
   ctaHome: "Retour à l'accueil"
 };
@@ -53,6 +58,9 @@ const enResults = {
   participateUrl: "algeriabankingindex.com/en/questionnaire/",
   colRank: "RANK",
   colBank: "BANK",
+  colVoters: "VOTERS",
+  votersPlural: "voters",
+  votersSingle: "voter",
   colScore: "OVERALL SCORE / 5",
   colScoreChannel: "SCORE / 5",
   filterAllChannels: "All channels combined",
@@ -65,6 +73,8 @@ const enResults = {
   tags: "#ABIX2026 #Banks #Algeria #CustomerExperience",
   refreshBtn: "Refresh data",
   noDataTitle: "No evaluations available at this time",
+  noQualifiedBanksTitle: "No bank has reached the minimum threshold of 5 evaluations yet.",
+  noQualifiedBanksText: "As soon as a bank gathers 5 evaluations or more, it will automatically appear in this ranking.",
   ctaStudy: "Discover the methodology & ABIX 2026 study",
   ctaHome: "Back to Home"
 };
@@ -87,6 +97,9 @@ const arResults = {
   participateUrl: "algeriabankingindex.com/ar/questionnaire/",
   colRank: "الترتيب",
   colBank: "البنك",
+  colVoters: "المصوتون",
+  votersPlural: "مصوت",
+  votersSingle: "مصوت",
   colScore: "النتيجة العامة / 5",
   colScoreChannel: "النتيجة / 5",
   filterAllChannels: "جميع القنوات مجمعة",
@@ -99,6 +112,8 @@ const arResults = {
   tags: "#ABIX2026 #بنوك #الجزائر #تجربة_العميل",
   refreshBtn: "تحديث البيانات",
   noDataTitle: "لا توجد تقييمات متاحة حالياً",
+  noQualifiedBanksTitle: "لم يصل أي بنك بعد إلى الحد الأدنى البالغ 5 تقييمات.",
+  noQualifiedBanksText: "بمجرد أن يجمع أي بنك 5 تقييمات أو أكثر، سيظهر تلقائياً في هذا الترتيب.",
   ctaStudy: "اكتشف المنهجية ودراسة ABIX 2026",
   ctaHome: "العودة إلى الرئيسية"
 };

@@ -1118,6 +1118,9 @@
       "participateUrl": "algeriabankingindex.com/en/questionnaire/",
       "colRank": "RANK",
       "colBank": "BANK",
+      "colVoters": "VOTERS",
+      "votersPlural": "voters",
+      "votersSingle": "voter",
       "colScore": "OVERALL SCORE / 5",
       "colScoreChannel": "SCORE / 5",
       "filterAllChannels": "All channels combined",
@@ -1130,6 +1133,8 @@
       "tags": "#ABIX2026 #Banks #Algeria #CustomerExperience",
       "refreshBtn": "Refresh data",
       "noDataTitle": "No evaluations available at this time",
+      "noQualifiedBanksTitle": "No bank has reached the minimum threshold of 5 evaluations yet.",
+      "noQualifiedBanksText": "As soon as a bank gathers 5 evaluations or more, it will automatically appear in this ranking.",
       "ctaStudy": "Discover the methodology & ABIX 2026 study",
       "ctaHome": "Back to Home"
     }
