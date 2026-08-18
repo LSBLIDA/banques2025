@@ -15,10 +15,15 @@
   <link rel="icon" type="image/png" href="/public/favicon.png"/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap"/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700;800&display=swap"/>
   <link rel="stylesheet" href="/css/main.css"/>
   <script src="/js/site-config.js" defer></script>
   <script src="/js/main.js" defer></script>
+  <style>
+    .infographic-bar {
+      transition: width 0.9s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+  </style>
 </head>
 <body class="font-inter bg-slate-50 text-gray-900 antialiased min-h-screen flex flex-col justify-between">
 <nav id="main-nav" class="fixed top-0 w-full bg-white/95 backdrop-blur-sm z-50 border-b border-gray-100 transition-all duration-300">
@@ -193,41 +198,176 @@
 
 <div class="pt-16 flex-grow">
   <!-- Hero Section -->
-  <section class="bg-banking-gradient text-white py-12 md:py-16 relative overflow-hidden">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4 relative z-10">
-      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cyan-500/20 text-cyan-300 border border-cyan-400/30 text-xs sm:text-sm font-medium backdrop-blur-sm">
+  <section class="bg-banking-gradient text-white py-10 md:py-14 relative overflow-hidden">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-3 relative z-10">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-cyan-500/20 text-cyan-300 border border-cyan-400/30 text-xs sm:text-sm font-medium backdrop-blur-sm">
         <span>ABIX — Baromètre des services bancaires 2026</span>
       </div>
-      <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold font-playfair tracking-tight leading-tight">
+      <h1 class="text-2xl sm:text-3xl md:text-4xl font-extrabold font-playfair tracking-tight leading-tight">
         Votre avis sur les services bancaires en Algérie
       </h1>
-      <p class="text-base sm:text-lg text-blue-100/90 max-w-2xl mx-auto leading-relaxed">
+      <p class="text-sm sm:text-base text-blue-100/90 max-w-2xl mx-auto leading-relaxed">
         Évaluez l’application mobile, le service web et les services en agence des banques que vous utilisez. Vos réponses alimenteront l’étude indépendante ABIX 2026.
       </p>
     </div>
   </section>
 
-  <!-- Container Formulaire -->
-  <section class="py-10 md:py-14">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <!-- Écran Déjà participé -->
-      <div id="already-completed-card" class="hidden bg-white border border-gray-200/90 rounded-2xl p-8 md:p-12 shadow-sm text-center space-y-6 my-6">
-        <div class="w-20 h-20 bg-emerald-100/80 text-emerald-600 rounded-full flex items-center justify-center mx-auto shadow-inner">
-          <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+  <!-- Container Formulaire & Résultats -->
+  <section class="py-8 md:py-12">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Écran Déjà voté / Résultat sous forme d'infographie graphique -->
+      <div id="already-completed-card" class="hidden space-y-6 my-2">
+        
+        <!-- Confirmation Top Pill -->
+        <div class="bg-emerald-50 border border-emerald-200/80 rounded-2xl p-4 sm:p-5 flex flex-col sm:flex-row items-center justify-between gap-3 shadow-2xs">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 bg-emerald-500 text-white rounded-full flex items-center justify-center flex-shrink-0 shadow-sm">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+            </div>
+            <div>
+              <h2 class="text-base font-bold text-emerald-900 font-playfair">Merci pour votre participation !</h2>
+              <p class="text-xs sm:text-sm text-emerald-700">Vous avez déjà rempli le Baromètre e-Banking Algérie 2026. Vos réponses ont bien été enregistrées.</p>
+            </div>
+          </div>
+          <button id="refresh-results-btn" type="button" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white border border-emerald-200 text-emerald-800 text-xs font-semibold hover:bg-emerald-100/60 transition-colors shadow-2xs">
+            <svg id="refresh-icon" class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+            <span>Actualiser les données</span>
+          </button>
         </div>
-        <h2 class="text-2xl sm:text-3xl font-bold font-playfair text-gray-900">
-          Merci pour votre participation !
-        </h2>
-        <p class="text-base text-gray-600 max-w-lg mx-auto leading-relaxed">
-          Vous avez déjà rempli le Baromètre e-Banking Algérie 2026. Vos réponses ont bien été enregistrées.
-        </p>
-        <div class="pt-4">
-          <a href="/fr/" class="btn-outline inline-flex items-center gap-2">
-            ← Accueil
+
+        <!-- ══════════════════════════════════════════════════════════════════ -->
+        <!-- POSTER / INFOGRAPHIE GRAPHIQUE OFFICIELLE CLASSEMENT ABIX 2026 -->
+        <!-- ══════════════════════════════════════════════════════════════════ -->
+        <div class="bg-white border-2 border-slate-200/90 rounded-3xl p-6 sm:p-8 md:p-10 shadow-lg space-y-6">
+          
+          <!-- En-tête Infographie (Logo ABIX + Titre + Boîte Objectif) -->
+          <div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 border-b border-gray-100 pb-6">
+            <!-- Left Branding & Titles -->
+            <div class="flex items-center gap-4 sm:gap-6">
+              <div class="border-e-2 border-primary/20 pe-4 sm:pe-6 hidden sm:block">
+                <div class="text-2xl sm:text-3xl font-extrabold font-playfair tracking-tight text-primary">ABIX</div>
+                <div class="text-[10px] font-bold tracking-widest uppercase text-slate-500">ALGERIA BANKING INDEX</div>
+                <div class="text-sm font-extrabold text-cyan-600">2026</div>
+              </div>
+              <div class="space-y-1">
+                <h3 class="text-2xl sm:text-3xl font-extrabold font-playfair tracking-tight text-slate-900">
+                  CLASSEMENT ABIX 2026
+                </h3>
+                <p id="ranking-subtitle-text" class="text-xs sm:text-sm font-extrabold uppercase tracking-wide text-cyan-700">
+                  SATISFACTION GLOBALE – TOUS CANAUX CONFONDUS
+                </p>
+                <p id="ranking-detail-text" class="text-xs text-gray-500 font-medium">
+                  (APPLICATION MOBILE, E-BANKING ET AGENCES)
+                </p>
+              </div>
+            </div>
+
+            <!-- Right Goal / Count Box -->
+            <div class="w-full lg:w-auto bg-cyan-50/50 border border-cyan-200/80 rounded-2xl p-4 sm:p-5 max-w-md space-y-1.5 shadow-2xs">
+              <div class="flex items-center gap-2.5 text-cyan-900 font-bold text-xs sm:text-sm">
+                <span class="w-7 h-7 rounded-full bg-cyan-500/15 text-cyan-700 flex items-center justify-center flex-shrink-0">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+                </span>
+                <span><strong id="info-eval-count">--</strong> évaluations déjà recueillies. Objectif : 5 000.</span>
+              </div>
+              <p class="text-xs text-slate-600 leading-relaxed ps-9.5">
+                Plus nous aurons de réponses, plus les résultats seront représentatifs et utiles pour améliorer votre quotidien bancaire.
+              </p>
+            </div>
+          </div>
+
+          <!-- Bandeau d'information / Appel à participation -->
+          <div class="bg-cyan-50/40 border border-cyan-200/70 rounded-2xl p-4 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs sm:text-sm">
+            <div class="flex items-center gap-3">
+              <div class="w-9 h-9 rounded-full bg-teal-500 text-white flex items-center justify-center flex-shrink-0 shadow-xs">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
+              </div>
+              <p class="text-slate-700 leading-relaxed">
+                En 2 minutes, vous pouvez contribuer au Baromètre ABIX 2026 et aider à mieux mesurer la qualité des services bancaires en Algérie. Votre avis permettra aux banques d'identifier les priorités d'amélioration de votre quotidien bancaire.
+              </p>
+            </div>
+            <div class="flex items-center gap-2 flex-shrink-0 text-cyan-800 font-semibold">
+              <svg class="w-4 h-4 text-cyan-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/></svg>
+              <span class="text-xs">Participez ici :</span>
+              <span class="text-xs font-bold underline">algeriabankingindex.com/fr/questionnaire/</span>
+            </div>
+          </div>
+
+          <!-- Filtres par canal bancaire (Tabs interactifs) -->
+          <div class="flex items-center gap-2 overflow-x-auto pb-1 pt-2">
+            <button type="button" data-filter="all" class="channel-filter-btn px-4 py-2 rounded-xl text-xs font-bold transition-all bg-primary text-white shadow-xs">
+              Tous canaux confondus
+            </button>
+            <button type="button" data-filter="mobile" class="channel-filter-btn px-4 py-2 rounded-xl text-xs font-bold transition-all bg-slate-100 text-slate-600 hover:bg-slate-200">
+              Application mobile
+            </button>
+            <button type="button" data-filter="web" class="channel-filter-btn px-4 py-2 rounded-xl text-xs font-bold transition-all bg-slate-100 text-slate-600 hover:bg-slate-200">
+              E-banking web
+            </button>
+            <button type="button" data-filter="branch" class="channel-filter-btn px-4 py-2 rounded-xl text-xs font-bold transition-all bg-slate-100 text-slate-600 hover:bg-slate-200">
+              Services en agence
+            </button>
+          </div>
+
+          <!-- Tableau / Graphique de classement en barres horizontales -->
+          <div class="space-y-3 pt-2">
+            
+            <!-- Entêtes de colonnes -->
+            <div class="grid grid-cols-12 gap-3 px-3 py-2 text-xs font-extrabold uppercase tracking-wider text-slate-500 border-b border-gray-100">
+              <div class="col-span-1 text-center">RANG</div>
+              <div class="col-span-4 sm:col-span-3">BANQUE</div>
+              <div class="col-span-5 sm:col-span-6"></div>
+              <div class="col-span-2 text-end">SCORE GLOBAL / 5</div>
+            </div>
+
+            <!-- Liste des barres horizontales générées dynamiquement -->
+            <div id="infographic-ranking-container" class="space-y-3">
+              <!-- Dynamically populated via JS -->
+            </div>
+
+          </div>
+
+          <!-- Pied d'infographie (Méthodologie & Social) -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-6 border-t border-gray-100">
+            <!-- Méthodologie Box -->
+            <div class="bg-slate-50 border border-slate-200/80 rounded-2xl p-4 flex items-start gap-3">
+              <div class="w-8 h-8 rounded-full bg-cyan-500/15 text-cyan-700 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+              </div>
+              <div class="space-y-1">
+                <h4 class="text-xs font-bold uppercase tracking-wider text-slate-800">MÉTHODOLOGIE</h4>
+                <p class="text-xs text-slate-600 leading-relaxed">Score calculé sur la base des évaluations collectées en ligne. Échelle de satisfaction convertie sur 5 niveaux : de « Très insatisfait » à « Très satisfait ».</p>
+              </div>
+            </div>
+
+            <!-- Social & Engagement Box -->
+            <div class="bg-slate-50 border border-slate-200/80 rounded-2xl p-4 flex items-start gap-3">
+              <div class="w-8 h-8 rounded-full bg-cyan-500/15 text-cyan-700 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
+              </div>
+              <div class="space-y-1">
+                <h4 class="text-xs font-bold text-slate-800">Votre avis compte. Faites-le entendre.</h4>
+                <p class="text-xs font-semibold text-cyan-700">#ABIX2026 #Banques #Algérie #ExpérienceClient</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Liens d'action -->
+        <div class="flex flex-col sm:flex-row items-center justify-between gap-4 p-4">
+          <a href="/fr/" class="btn-outline text-xs sm:text-sm">
+            ← Retour à l'accueil
+          </a>
+          <a href="/fr/methodologie/" class="text-xs sm:text-sm font-semibold text-primary hover:underline">
+            Découvrir la méthodologie et l'étude ABIX 2026 →
           </a>
         </div>
+
       </div>
 
+      <!-- Formulaire de Vote (Affiché si non encore soumis) -->
       <form id="questionnaire-form" class="space-y-10">
         
         <!-- Étape 1 : Sélection des banques -->
@@ -320,29 +460,44 @@
 <script>
 document.addEventListener("DOMContentLoaded", () => {
   const basePath = "";
+  const currentLang = "fr";
   
   const BANKS = [
-    { id: "bea", name: "BEA", fullName: "Banque Extérieure d'Algérie", logo: basePath + "/public/logos/bea.png" },
     { id: "bna", name: "BNA", fullName: "Banque Nationale d'Algérie", logo: basePath + "/public/logos/bna.png" },
-    { id: "cpa", name: "CPA", fullName: "Crédit Populaire d'Algérie", logo: basePath + "/public/logos/cpa.png" },
-    { id: "bdl", name: "BDL", fullName: "Banque du Développement Local", logo: basePath + "/public/logos/bdl.jpg" },
+    { id: "cnep", name: "CNEP Banque", fullName: "CNEP-Banque", logo: basePath + "/public/logos/cnep.png" },
+    { id: "cpa", name: "Crédit Populaire d'Algérie", fullName: "Crédit Populaire d'Algérie", logo: basePath + "/public/logos/cpa.png" },
+    { id: "albaraka", name: "Al Baraka Bank Algeria", fullName: "Al Baraka Bank Algeria", logo: basePath + "/public/logos/albaraka.png" },
+    { id: "bdl", name: "Banque de Développement Local", fullName: "Banque du Développement Local", logo: basePath + "/public/logos/bdl.jpg" },
+    { id: "agb", name: "Algérie Gulf Bank", fullName: "Gulf Bank Algérie", logo: basePath + "/public/logos/agb.jpg" },
+    { id: "natixis", name: "Natixis Algérie", fullName: "Natixis Algérie", logo: basePath + "/public/logos/natixis.jpg" },
+    { id: "sga", name: "Société Générale Algérie", fullName: "Société Générale Algérie", logo: basePath + "/public/logos/sga.jpg" },
+    { id: "bea", name: "BEA", fullName: "Banque Extérieure d'Algérie", logo: basePath + "/public/logos/bea.png" },
+    { id: "abc", name: "Arab Banking Corporation (ABC) Algérie", fullName: "Bank ABC Algérie", logo: basePath + "/public/logos/abc.png" },
     { id: "badr", name: "BADR", fullName: "Banque de l'Agriculture et du Développement Rural", logo: basePath + "/public/logos/badr.png" },
-    { id: "cnep", name: "CNEP-Banque", fullName: "CNEP-Banque", logo: basePath + "/public/logos/cnep.png" },
-    { id: "agb", name: "AGB", fullName: "Gulf Bank Algérie", logo: basePath + "/public/logos/agb.jpg" },
-    { id: "sga", name: "Société Générale", fullName: "Société Générale Algérie", logo: basePath + "/public/logos/sga.jpg" },
-    { id: "natixis", name: "Natixis", fullName: "Natixis Algérie", logo: basePath + "/public/logos/natixis.jpg" },
     { id: "bnp", name: "BNP Paribas", fullName: "BNP Paribas El Djazaïr", logo: basePath + "/public/logos/bnp.jpg" },
-    { id: "albaraka", name: "Al Baraka Bank", fullName: "Al Baraka Bank Algeria", logo: basePath + "/public/logos/albaraka.png" },
     { id: "alsalam", name: "Alsalam Bank", fullName: "Alsalam Bank Algeria", logo: basePath + "/public/logos/alsalam.png" },
     { id: "housing", name: "Housing Bank", fullName: "Housing Bank Algeria", logo: basePath + "/public/logos/housing.png" },
     { id: "arab-bank", name: "Arab Bank", fullName: "Arab Bank Algeria", logo: basePath + "/public/logos/arab-bank.jpg" },
-    { id: "abc", name: "Bank ABC", fullName: "Bank ABC Algérie", logo: basePath + "/public/logos/abc.png" },
     { id: "fransabank", name: "Fransabank", fullName: "Fransabank El Djazaïr", logo: basePath + "/public/logos/fransabank.jpg" },
     { id: "trust", name: "Trust Bank", fullName: "Trust Bank Algeria", logo: basePath + "/public/logos/trust.jpg" },
     { id: "bnh", name: "BNH", fullName: "Banque Nationale de l'Habitat", logo: basePath + "/public/logos/bnh.jpg" },
     { id: "citi", name: "Citibank", fullName: "Citibank N.A. Algeria", logo: basePath + "/public/logos/citi.png" },
     { id: "hsbc", name: "HSBC", fullName: "HSBC Algeria", logo: basePath + "/public/logos/hsbc.png" },
     { id: "ziraat", name: "Ziraat Bank", fullName: "Ziraat Bankası Algérie", logo: basePath + "/public/logos/ziraat.jpg" }
+  ];
+
+  // Palette de couleurs pour les rangs et barres du classement
+  const RANK_COLORS = [
+    { bg: "#059669", bar: "#059669" }, // Rang 1 (Vert Foncé Émeraude)
+    { bg: "#16a34a", bar: "#22c55e" }, // Rang 2 (Vert Vif)
+    { bg: "#0d9488", bar: "#0d9488" }, // Rang 3 (Teal / Cyan Foncé)
+    { bg: "#0284c7", bar: "#0284c7" }, // Rang 4 (Bleu Océan)
+    { bg: "#2563eb", bar: "#2563eb" }, // Rang 5 (Bleu Roi)
+    { bg: "#3b82f6", bar: "#3b82f6" }, // Rang 6 (Bleu Ciel)
+    { bg: "#6366f1", bar: "#6366f1" }, // Rang 7 (Indigo)
+    { bg: "#7c3aed", bar: "#7c3aed" }, // Rang 8 (Violet / Mauve)
+    { bg: "#8b5cf6", bar: "#8b5cf6" }, // Rang 9 (Violet Clair)
+    { bg: "#9333ea", bar: "#9333ea" }  // Rang 10 (Pourpre)
   ];
 
   const RATINGS = [
@@ -360,8 +515,13 @@ document.addEventListener("DOMContentLoaded", () => {
   const submitBtn = document.getElementById("submit-btn");
   const messageEl = document.getElementById("form-message");
   const alreadyCompletedCard = document.getElementById("already-completed-card");
+  const refreshBtn = document.getElementById("refresh-results-btn");
+  const refreshIcon = document.getElementById("refresh-icon");
+  const rankingContainer = document.getElementById("infographic-ranking-container");
 
   let selectedBankIds = new Set();
+  let cachedResultsData = null;
+  let activeChannelFilter = "all";
 
   function isAlreadySubmitted() {
     return localStorage.getItem("abix_survey_completed_2026") === "true" ||
@@ -377,10 +537,177 @@ document.addEventListener("DOMContentLoaded", () => {
   function showAlreadyCompletedUI() {
     if (form) form.classList.add("hidden");
     if (alreadyCompletedCard) alreadyCompletedCard.classList.remove("hidden");
+    loadAndRenderInfographic();
   }
 
   if (isAlreadySubmitted()) {
     showAlreadyCompletedUI();
+  }
+
+  // --- Gestion des filtres de canaux ---
+  const channelFilterBtns = document.querySelectorAll(".channel-filter-btn");
+  channelFilterBtns.forEach(btn => {
+    btn.addEventListener("click", () => {
+      activeChannelFilter = btn.dataset.filter;
+      channelFilterBtns.forEach(b => {
+        b.classList.remove("bg-primary", "text-white", "shadow-xs");
+        b.classList.add("bg-slate-100", "text-slate-600");
+      });
+      btn.classList.add("bg-primary", "text-white", "shadow-xs");
+      btn.classList.remove("bg-slate-100", "text-slate-600");
+
+      updateSubtitleForChannel(activeChannelFilter);
+      if (cachedResultsData) {
+        renderInfographicRows(cachedResultsData);
+      }
+    });
+  });
+
+  function updateSubtitleForChannel(filter) {
+    const subEl = document.getElementById("ranking-subtitle-text");
+    const detEl = document.getElementById("ranking-detail-text");
+    if (!subEl) return;
+
+    if (filter === "mobile") {
+      subEl.textContent = "Application mobile".toUpperCase();
+      if (detEl) detEl.textContent = "Baromètre des services bancaires 2026 — ABIX | Algeria Banking Index";
+    } else if (filter === "web") {
+      subEl.textContent = "E-banking web".toUpperCase();
+      if (detEl) detEl.textContent = "Baromètre des services bancaires 2026 — ABIX | Algeria Banking Index";
+    } else if (filter === "branch") {
+      subEl.textContent = "Services en agence".toUpperCase();
+      if (detEl) detEl.textContent = "Baromètre des services bancaires 2026 — ABIX | Algeria Banking Index";
+    } else {
+      subEl.textContent = "SATISFACTION GLOBALE – TOUS CANAUX CONFONDUS";
+      if (detEl) detEl.textContent = "(APPLICATION MOBILE, E-BANKING ET AGENCES)";
+    }
+  }
+
+  // --- Chargement et rendu de l'infographie ---
+  async function loadAndRenderInfographic() {
+    if (refreshIcon) refreshIcon.classList.add("animate-spin");
+
+    try {
+      const res = await fetch(basePath + "/api/questionnaire-results.php?t=" + Date.now());
+      if (!res.ok) throw new Error("Erreur de chargement");
+      const data = await res.json();
+      cachedResultsData = data;
+
+      const evalCount = (data.summary && data.summary.totalEvaluations) || 0;
+      const evalCountEl = document.getElementById("info-eval-count");
+      if (evalCountEl) evalCountEl.textContent = evalCount.toLocaleString();
+
+      renderInfographicRows(data);
+    } catch (err) {
+      console.error("Erreur lors de la récupération des données :", err);
+    } finally {
+      if (refreshIcon) {
+        setTimeout(() => refreshIcon.classList.remove("animate-spin"), 400);
+      }
+    }
+  }
+
+  if (refreshBtn) {
+    refreshBtn.addEventListener("click", () => {
+      loadAndRenderInfographic();
+    });
+  }
+
+  function renderInfographicRows(data) {
+    if (!rankingContainer) return;
+
+    const dataBankList = (data.byBank || []).slice();
+    let displayList = [];
+
+    if (dataBankList.length > 0) {
+      const evaluatedMap = new Map();
+      dataBankList.forEach(b => {
+        let score = 0;
+        let count = b.count || 0;
+        if (activeChannelFilter === "all") {
+          score = b.averageScoreOutOf5 || (b.averageScore ? (b.averageScore / 20) : 0);
+        } else if (b.services && b.services[activeChannelFilter]) {
+          score = b.services[activeChannelFilter].averageScoreOutOf5 || 0;
+          count = b.services[activeChannelFilter].count || 0;
+        }
+        evaluatedMap.set(b.name, { score, count });
+      });
+
+      displayList = BANKS.map(b => {
+        const found = evaluatedMap.get(b.fullName) || evaluatedMap.get(b.name);
+        return {
+          id: b.id,
+          name: b.name,
+          fullName: b.fullName,
+          logo: b.logo,
+          score: found ? found.score : 0,
+          count: found ? found.count : 0
+        };
+      });
+
+      // Trier : les banques ayant des votes en tête par score décroissant
+      displayList.sort((a, b) => {
+        if (a.count > 0 && b.count === 0) return -1;
+        if (b.count > 0 && a.count === 0) return 1;
+        if (b.score !== a.score) return b.score - a.score;
+        return b.count - a.count;
+      });
+    } else {
+      displayList = BANKS.map(b => ({
+        id: b.id,
+        name: b.name,
+        fullName: b.fullName,
+        logo: b.logo,
+        score: 0,
+        count: 0
+      }));
+    }
+
+    // Limiter aux 10 premiers rangs
+    const top10 = displayList.slice(0, 10);
+
+    rankingContainer.innerHTML = top10.map((item, index) => {
+      const colorScheme = RANK_COLORS[index] || RANK_COLORS[RANK_COLORS.length - 1];
+      const rankNum = index + 1;
+      const scoreVal = item.score > 0 ? item.score.toFixed(2).replace(".", ",") : "0,00";
+      // Calculer le pourcentage de la barre horizontale (score / 5) * 100%
+      const barWidthPct = item.score > 0 ? Math.min(100, Math.max(5, (item.score / 5) * 100)) : 4;
+
+      return `
+        <div class="grid grid-cols-12 gap-3 items-center p-2 rounded-2xl hover:bg-slate-50/80 transition-colors">
+          
+          <!-- Rang Badge -->
+          <div class="col-span-1 flex items-center justify-center">
+            <span class="w-8 h-8 rounded-full text-white font-extrabold text-xs sm:text-sm flex items-center justify-center shadow-xs" style="background-color: ${colorScheme.bg};">
+              ${rankNum}
+            </span>
+          </div>
+
+          <!-- Banque Logo + Nom -->
+          <div class="col-span-4 sm:col-span-3 flex items-center gap-2.5 min-w-0">
+            <div class="w-10 h-8 sm:w-12 sm:h-9 bg-white border border-gray-200 rounded-lg p-1 flex items-center justify-center flex-shrink-0 shadow-2xs">
+              <img src="${item.logo}" alt="${item.name}" class="h-6 w-full object-contain" />
+            </div>
+            <span class="text-xs sm:text-sm font-bold text-slate-800 truncate" title="${item.name}">${item.name}</span>
+          </div>
+
+          <!-- Barre Horizontale Proportionnelle -->
+          <div class="col-span-5 sm:col-span-6 flex items-center">
+            <div class="w-full bg-slate-100 rounded-full h-5 sm:h-6 p-0.5 overflow-hidden flex items-center">
+              <div class="infographic-bar h-full rounded-full shadow-2xs" style="width: ${barWidthPct}%; background-color: ${colorScheme.bar};"></div>
+            </div>
+          </div>
+
+          <!-- Score Global / 5 -->
+          <div class="col-span-2 text-end">
+            <span class="text-base sm:text-lg font-extrabold font-playfair tracking-tight text-slate-900">
+              ${scoreVal}
+            </span>
+          </div>
+
+        </div>
+      `;
+    }).join("");
   }
 
   const selectedSummary = document.getElementById("selected-banks-summary");

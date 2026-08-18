@@ -1136,8 +1136,7 @@
         "fullName": "El Djazaïr Dawli (ex-Housing Bank)",
         "type": "private"
       },
-      {
-      }
+      {}
     ]
   },
   "dataExplorer": {
@@ -1206,11 +1205,26 @@
       "title": "Comparez une banque à son véritable environnement",
       "text": "Une comparaison pertinente ne consiste pas seulement à comparer toutes les banques entre elles. ABIX Data Explorer permet de contextualiser les résultats et de construire des groupes de comparaison plus pertinents.",
       "axes": [
-        { "title": "Marché", "body": "Positionnement global par rapport à l'ensemble du secteur bancaire algérien." },
-        { "title": "Statut / catégorie", "body": "Comparaison homogène entre banques publiques et banques privées." },
-        { "title": "Taille", "body": "Regroupement par volume d'actifs pour comparer des acteurs comparables." },
-        { "title": "Profil d'actifs", "body": "Contextualisation selon la structure et l'orientation du bilan." },
-        { "title": "Groupe de pairs", "body": "Constitution de groupes personnalisés lorsque les données le permettent." }
+        {
+          "title": "Marché",
+          "body": "Positionnement global par rapport à l'ensemble du secteur bancaire algérien."
+        },
+        {
+          "title": "Statut / catégorie",
+          "body": "Comparaison homogène entre banques publiques et banques privées."
+        },
+        {
+          "title": "Taille",
+          "body": "Regroupement par volume d'actifs pour comparer des acteurs comparables."
+        },
+        {
+          "title": "Profil d'actifs",
+          "body": "Contextualisation selon la structure et l'orientation du bilan."
+        },
+        {
+          "title": "Groupe de pairs",
+          "body": "Constitution de groupes personnalisés lorsque les données le permettent."
+        }
       ],
       "strongMessage": "Une performance n'a de sens que replacée dans son contexte.",
       "disclaimer": "Les benchmarks et analyses comparatives présentés dans ABIX Data Explorer sont fournis à titre d'outil d'analyse financière. Ils ne constituent en aucun cas une notation réglementaire ou une notation de crédit des établissements."
@@ -1220,10 +1234,22 @@
       "text": "Une banque peut afficher une croissance positive tout en perdant de la part de marché. ABIX distingue croissance absolue, position relative et contribution à la dynamique du secteur.",
       "strongMessage": "Croître ne signifie pas nécessairement gagner du terrain.",
       "kpis": [
-        { "title": "Part de marché", "desc": "Calculée sur les principaux agrégats" },
-        { "title": "Gain ou perte", "desc": "Évolution de la part en points de pourcentage" },
-        { "title": "Contribution", "desc": "Part de la banque dans la croissance du secteur" },
-        { "title": "Écart de croissance", "desc": "Performance relative par rapport à la moyenne du marché" }
+        {
+          "title": "Part de marché",
+          "desc": "Calculée sur les principaux agrégats"
+        },
+        {
+          "title": "Gain ou perte",
+          "desc": "Évolution de la part en points de pourcentage"
+        },
+        {
+          "title": "Contribution",
+          "desc": "Part de la banque dans la croissance du secteur"
+        },
+        {
+          "title": "Écart de croissance",
+          "desc": "Performance relative par rapport à la moyenne du marché"
+        }
       ],
       "bullets": [
         "Part de marché",
@@ -1240,10 +1266,22 @@
       "title": "Mesurez la concentration du marché bancaire",
       "text": "Suivez l'évolution du poids des leaders et la transformation de la structure concurrentielle du marché.",
       "kpis": [
-        { "title": "CR1, CR3, CR5, CR10", "desc": "Poids cumulé des plus grands acteurs du secteur." },
-        { "title": "HHI (Herfindahl-Hirschman)", "desc": "Indice de concentration de référence internationale." },
-        { "title": "Nombre effectif de banques", "desc": "Indicateur de la diversité réelle des acteurs du marché." },
-        { "title": "Acteurs clés cumulés", "desc": "Nombre de banques nécessaires pour atteindre 50 %, 75 % ou 90 % du marché." }
+        {
+          "title": "CR1, CR3, CR5, CR10",
+          "desc": "Poids cumulé des plus grands acteurs du secteur."
+        },
+        {
+          "title": "HHI (Herfindahl-Hirschman)",
+          "desc": "Indice de concentration de référence internationale."
+        },
+        {
+          "title": "Nombre effectif de banques",
+          "desc": "Indicateur de la diversité réelle des acteurs du marché."
+        },
+        {
+          "title": "Acteurs clés cumulés",
+          "desc": "Nombre de banques nécessaires pour atteindre 50 %, 75 % ou 90 % du marché."
+        }
       ]
     },
     "advancedAnalyses": {
@@ -1620,6 +1658,39 @@
       "bannerTitle": "Participez au Baromètre e-Banking 2026",
       "bannerText": "Donnez votre avis sur l'application mobile et l'espace web de votre banque en moins de 2 minutes.",
       "button": "Répondre au questionnaire"
+    },
+    "results": {
+      "badge": "Baromètre 2026 en direct",
+      "title": "Résultats et tendances des votes",
+      "subtitle": "Voici les premiers enseignements issus des évaluations collectées auprès des usagers des banques en Algérie.",
+      "statParticipants": "Participants",
+      "statEvaluations": "Évaluations",
+      "statSatisfaction": "Satisfaction globale",
+      "statAvgScore": "Score moyen",
+      "rankingHeaderTitle": "CLASSEMENT ABIX 2026",
+      "rankingHeaderSubtitle": "SATISFACTION GLOBALE – TOUS CANAUX CONFONDUS",
+      "rankingChannelsDetail": "(APPLICATION MOBILE, E-BANKING ET AGENCES)",
+      "goalBoxTitle": "évaluations déjà recueillies. Objectif : 5 000.",
+      "goalBoxText": "Plus nous aurons de réponses, plus les résultats seront représentatifs et utiles pour améliorer votre quotidien bancaire.",
+      "infoBannerText": "En 2 minutes, vous pouvez contribuer au Baromètre ABIX 2026 et aider à mieux mesurer la qualité des services bancaires en Algérie. Votre avis permettra aux banques d'identifier les priorités d'amélioration de votre quotidien bancaire.",
+      "participateHere": "Participez ici :",
+      "participateUrl": "algeriabankingindex.com/fr/questionnaire/",
+      "colRank": "RANG",
+      "colBank": "BANQUE",
+      "colScore": "SCORE GLOBAL / 5",
+      "colScoreChannel": "SCORE / 5",
+      "filterAllChannels": "Tous canaux confondus",
+      "channelMobile": "Application mobile",
+      "channelWeb": "E-banking web",
+      "channelBranch": "Services en agence",
+      "methodologyTitle": "MÉTHODOLOGIE",
+      "methodologyText": "Score calculé sur la base des évaluations collectées en ligne. Échelle de satisfaction convertie sur 5 niveaux : de « Très insatisfait » à « Très satisfait ».",
+      "yourOpinionCounts": "Votre avis compte. Faites-le entendre.",
+      "tags": "#ABIX2026 #Banques #Algérie #ExpérienceClient",
+      "refreshBtn": "Actualiser les données",
+      "noDataTitle": "Aucune évaluation disponible pour le moment",
+      "ctaStudy": "Découvrir la méthodologie et l'étude ABIX 2026",
+      "ctaHome": "Retour à l'accueil"
     }
   }
 }
