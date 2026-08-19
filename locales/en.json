@@ -29,7 +29,8 @@
     "questionnaire": "2026 Barometer",
     "ctaStudy": "Get the Report",
     "ctaNotify": "Be notified of 2026 release",
-    "langSelectLabel": "Language"
+    "langSelectLabel": "Language",
+    "report2023Path": "editions/report-2023/"
   },
   "home": {
     "meta": {
@@ -123,6 +124,35 @@
       "title": "A Rigorous and Transparent Methodology",
       "body": "Algeria Banking Index relies on analysis based on financial and operational data from institutions. Historical data may integrate subsequent reclassifications and restatements published by institutions to ensure consistency of comparisons.",
       "cta": "Learn More About Methodology"
+    },
+    "history": {
+      "title": "An Initiative Started in 2023",
+      "subtitle": "From the first sector report published in 2023 to Algeria Banking Index 2026, our approach has continuously expanded in data, methodology, and analytical tools.",
+      "conclusion": "An initiative built over time, with increasing analytical depth, comparability, and decision-support tools.",
+      "c2023": {
+        "year": "2023",
+        "title": "Report on the Banking Sector in Algeria",
+        "subtitle": "2021–2022 Data",
+        "description": "Tadjeddine & Partners' first comparative publication dedicated to the Algerian banking sector.",
+        "badge": "Foundational Publication",
+        "cta": "Download for Free"
+      },
+      "c2025": {
+        "year": "2025",
+        "title": "Comparative Study of the Algerian Banking Sector",
+        "subtitle": "2023–2024 Data",
+        "description": "An in-depth analysis of performances, dynamics, and key indicators of the Algerian banking sector.",
+        "badge": "Available",
+        "cta": "Discover 2025 Edition"
+      },
+      "c2026": {
+        "year": "2026",
+        "title": "Algeria Banking Index",
+        "subtitle": "2024–2025 Comparative Analysis",
+        "description": "A new generation of the study, enriched with new indicators, comparative analyses, and interactive tools.",
+        "badge": "New Edition",
+        "cta": "Subscribe to 2026 Edition"
+      }
     }
   },
   "edition2026": {
@@ -160,6 +190,32 @@
         {
           "title": "Forward-Looking & Regulatory Analyses",
           "body": "Insights into prudential and strategic evolutions within the Algerian banking market."
+        }
+      ],
+      "cards": [
+        {
+          "title": "2024–2025 Sector Performance",
+          "body": "Evolution of balance sheet, deposits, credits, NBI, profitability, provisions, and key financial balances of the sector."
+        },
+        {
+          "title": "2023–2025 Trends",
+          "body": "Perspective across three fiscal years to identify structural trends, accelerations, and trajectory shifts."
+        },
+        {
+          "title": "21 Banks Analysis",
+          "body": "Individual profile sheets, evolution of key indicators, positioning of each institution, and comparison with sector performance."
+        },
+        {
+          "title": "Benchmarks & Market Shares",
+          "body": "Public vs. private banks comparison, indicator rankings, market shares, and competitive dynamics."
+        },
+        {
+          "title": "Off-Balance Sheet, Network & Operational Performance",
+          "body": "Analysis of off-balance sheet commitments, headcount, branch network, productivity, and new operational indicators."
+        },
+        {
+          "title": "Digital & Sector Perspectives",
+          "body": "Banking Services Barometer: mobile app, web e-banking, and branch services. Subject to confirmation, contributions from executives and experts."
         }
       ]
     },
@@ -205,7 +261,7 @@
         "title": "Pro Pack",
         "tagline": "Leverage data",
         "badge": "Most Popular",
-        "userLicensesText": "Up to 3 users · Excel dataset included",
+        "userLicensesText": "Up to 3 users · Excel + Data Explorer 2025",
         "regularPrice": "120,000 DA HT",
         "earlyBirdPrice": "108,000 DA HT",
         "saving": "Save 12,000 DA HT",
@@ -213,24 +269,18 @@
         "ctaAfterAvailable": "Order Pro Pack",
         "ctaAfterPreorder": "Request Reservation",
         "f1": "All Essential Pack features",
-        "f2": "Structured Excel database with study data",
-        "f3": "Detailed comparative tables",
-        "f4": "Historical data 2023–2025",
-        "f5": "Ratios and market shares",
-        "f6": "Up to 3 users within the same organization",
-        "features": [
-          "All Essential Pack features",
-          "Structured Excel database with study data",
-          "Detailed comparative tables",
-          "Historical data 2023–2025",
-          "Ratios and market shares",
-          "Up to 3 users within the same organization"
-        ]
+        "f2": "Structured Excel file containing 2025 data",
+        "de_title": "ABIX DATA EXPLORER",
+        "de_f1": "12-month access to ABIX Data Explorer",
+        "de_f2": "2025 data included in the application",
+        "de_f3": "Interactive visualization, ratios and bank comparisons",
+        "f6": "Up to 3 users belonging to the same entity",
+        "option_note": "Historical editions 2022, 2023, and 2024 of ABIX Data Explorer are available as options."
       },
       "corporate": {
         "title": "Corporate Executive Pack",
-        "tagline": "Explore and share data",
-        "userLicensesText": "Up to 20 users · Executive PPT presentation included",
+        "tagline": "Analyze, compare and share",
+        "userLicensesText": "Up to 20 users · Data Explorer Executive 2024–2025",
         "regularPrice": "180,000 DA HT",
         "earlyBirdPrice": "162,000 DA HT",
         "saving": "Save 18,000 DA HT",
@@ -238,17 +288,15 @@
         "ctaAfterAvailable": "Order Corporate Executive Pack",
         "ctaAfterPreorder": "Request Reservation",
         "f1": "All Pro Pack features",
-        "f2": "Executive presentation of the study",
-        "f3": "Briefing session with experts",
-        "f4": "Custom benchmark",
-        "f5": "Up to 20 users within the same organization",
-        "features": [
-          "All Pro Pack features",
-          "Executive presentation of the study",
-          "Briefing session with experts",
-          "Custom benchmark",
-          "Up to 20 users within the same organization"
-        ]
+        "de_title": "ABIX DATA EXPLORER — CORPORATE",
+        "de_f1": "ABIX Data Explorer license included for 12 months",
+        "de_f2": "2024 and 2025 data included in the application",
+        "de_f3": "Multidimensional analysis & banking profiles",
+        "de_f4": "Executive Dashboard & Key Insights",
+        "de_f5": "Peer groups & advanced benchmarks",
+        "de_f6": "Executive PDF reports & Excel exports",
+        "f4": "Up to 20 users belonging to the same entity",
+        "option_note": "Historical editions 2022 and 2023 of ABIX Data Explorer are available as options."
       }
     },
     "preorderForm": {
@@ -383,6 +431,29 @@
           "a": "Yes.\n\nThe Corporate Executive Pack includes a briefing session and a custom benchmark.\n\nAdditional advisory services, such as a presentation to a board of directors or an in-depth analysis, can also be offered separately."
         }
       ]
+    },
+    "enriched": {
+      "badge": "Evolutions & Novelties",
+      "title": "An Enriched 2026 Edition",
+      "subtitle": "Beyond updating financial data, the 2026 edition expands its scope of analysis to provide a more comprehensive view of performance, organization, and transformation among banks operating in Algeria.",
+      "items": [
+        {
+          "title": "21 Covered Banks",
+          "body": "An expanded scope including institutions operating in the Algerian banking market."
+        },
+        {
+          "title": "New Operational Indicators",
+          "body": "Headcount, branch network, off-balance sheet commitments, and productivity indicators complement financial analysis."
+        },
+        {
+          "title": "Banking Experience — Digital & Branch Services",
+          "body": "The ABIX 2026 Barometer measures user satisfaction: mobile app, web e-banking, and branch services."
+        },
+        {
+          "title": "Executive Perspectives",
+          "body": "Contributions from banking leaders and experts will complement independent study analyses, subject to editorial confirmation."
+        }
+      ]
     }
   },
   "edition2025": {
@@ -405,7 +476,43 @@
       "subtitle": "Options tailored to your analysis, intelligence, and strategic decision-making needs.",
       "popular": "Most Popular",
       "ctaOrder": "Order",
-      "paymentNote": "Secure payment · EUR & DZD accepted · Access provided after order processing"
+      "paymentNote": "Secure payment · EUR & DZD accepted · Access provided after order processing",
+      "packs": {
+        "essential": {
+          "title": "Essential Pack",
+          "price": "84,000 DA HT",
+          "features": [
+            "Complete study (104 pages, PDF via secured access)",
+            "Public vs. private comparison + 20 banks",
+            "Individual license (1 user)",
+            "Minor errata updates"
+          ]
+        },
+        "pro": {
+          "title": "Pro Pack",
+          "price": "120,000 DA HT",
+          "features": [
+            "Everything in the Essential Pack",
+            "Interactive Excel file",
+            "7-day email support",
+            "Access to major updates",
+            "Up to 3 users (same entity)"
+          ]
+        },
+        "corporate": {
+          "title": "Corporate Executive Pack",
+          "price": "180,000 DA HT",
+          "features": [
+            "Everything in the Pro Pack",
+            "Executive PowerPoint deliverable",
+            "Exclusive webinar: Deep Dive with Mr. Rachid Sekak",
+            "Up to 20 users (same entity)"
+          ]
+        }
+      },
+      "securePayment": "Secure payment",
+      "acceptedCurrencies": "EUR & DZD accepted",
+      "accessNote": "Access after processing"
     },
     "methodology": {
       "tabs": {
@@ -414,7 +521,47 @@
         "sample": "Sample"
       },
       "body": "Discover the approach for collecting, consolidating, and analysing Algeria Banking Index studies.",
-      "cta": "Learn More About Methodology"
+      "cta": "Learn More About Methodology",
+      "tabMethodology": {
+        "items": [
+          "Quantitative analysis of 20 banks operating in Algeria",
+          "Exploitation of published annual financial statements for 2023 and 2024",
+          "Consolidation and structuring for sector comparison",
+          "Analysis assisted by modeling tools"
+        ]
+      },
+      "tabContent": {
+        "items": [
+          {
+            "label": "Overall evolution of the banking sector (2023–2024)",
+            "pages": "15 pages"
+          },
+          {
+            "label": "Public vs. private banks comparison",
+            "pages": "10 pages"
+          },
+          {
+            "label": "Individual analysis of the 20 local banks",
+            "pages": "61 pages"
+          },
+          {
+            "label": "Comparative analysis across multiple indices",
+            "pages": "17 pages"
+          }
+        ]
+      },
+      "tabSample": {
+        "items": [
+          {
+            "label": "Treasury Bills / Total Assets",
+            "value": "34.12%"
+          },
+          {
+            "label": "Net Banking Income — 2024 growth",
+            "value": "+17.3%"
+          }
+        ]
+      }
     },
     "challenges": {
       "title": "Challenges Facing Banking Leaders",
@@ -503,6 +650,11 @@
       "title": "Go Beyond the Study",
       "body": "Need a specific analysis for your institution? The experts at Tadjeddine & Partners can turn ABIX data into diagnostic reports, recommendations, and strategic roadmaps.",
       "cta": "Request a Personalised Diagnostic"
+    },
+    "stats": {
+      "banksAnalysed": "Banks analysed",
+      "analysisPages": "Analysis pages",
+      "coveredYears": "Covered fiscal years"
     }
   },
   "methodology": {
@@ -522,7 +674,38 @@
     },
     "approach": {
       "title": "Our 6-Step Analytical Approach",
-      "description": "Algeria Banking Index studies rest on structured collection of publicly available information, followed by consolidation, consistency verification, comparison, and interpretation."
+      "description": "Algeria Banking Index studies rest on structured collection of publicly available information, followed by consolidation, consistency verification, comparison, and interpretation.",
+      "steps": [
+        {
+          "title": "Scope & Data Collection",
+          "body": "Identification and extraction of information published by banks and available institutional sources: financial statements, annual reports, and other relevant financial or operational disclosures."
+        },
+        {
+          "title": "Consolidation, Consistency & Restatements",
+          "body": "Data consistency verification, reconciliation of aggregates, and standardized treatment of information across institutions and fiscal years.",
+          "note": "When banks subsequently publish restated or reclassified historical data, studies adopt the latest available revised data to preserve comparative consistency."
+        },
+        {
+          "title": "Definition & Standardization of Indicators",
+          "body": "Standardized definition of indicators used, distinguishing between stock data, flow data, and financial ratios.",
+          "note": "Calculations cover growth, profitability, efficiency, market shares, and indicators enabling the comparison of institutional trajectories."
+        },
+        {
+          "title": "Sector Comparisons & Positioning",
+          "body": "Analysis of sector aggregates, public vs. private bank comparisons, evolution of market shares, and relative positioning of institutions across studied indicators.",
+          "badge": "Methodological Principle: Comparisons are conducted on an identical methodological basis across all covered institutions."
+        },
+        {
+          "title": "Individual Analyses & Operational Dimensions",
+          "body": "Each institution undergoes an individual review of its evolution, positioning, and core performance indicators.",
+          "note": "Subject to data availability and comparability, analysis may also integrate operational metrics such as off-balance sheet commitments, workforce, branch network, and operational productivity."
+        },
+        {
+          "title": "Review, Analysis & Interpretation",
+          "body": "Consolidated data is analyzed and interpreted by Mr. Rachid Sekak and Tadjeddine & Partners to identify meaningful shifts, industry trends, and factors explaining observed trajectories.",
+          "note": "Factual findings, calculations, and interpretations are distinguished wherever possible in the study deliverables."
+        }
+      ]
     },
     "revisions": {
       "title": "Historical Data and Revisions",
@@ -549,7 +732,9 @@
       "p1": "Analyses are prepared from public information available at the closing date of each edition.",
       "p2": "Data availability, detail level, and presentation format may vary across institutions.",
       "p3": "When data is unavailable or cannot be homogenously compared, it may be excluded from specific indicators or flagged explicitly."
-    }
+    },
+    "ctaTitle": "Discover Study Results & Analyses",
+    "ctaSubtitle": "The 2026 edition is open for early subscription at a preferential rate valid until August 31, 2026."
   },
   "services": {
     "meta": {
@@ -603,7 +788,9 @@
       "body": "Every advisory engagement is custom-designed to match your institution's specific goals.",
       "primary": "Request a Quote",
       "secondary": "Learn More About Tadjeddine & Partners"
-    }
+    },
+    "sectionTitle": "Our Offerings",
+    "sectionSubtitle": "Each engagement is tailored to the specific needs and profile of your institution."
   },
   "abixIndex": {
     "meta": {
@@ -650,7 +837,8 @@
     ],
     "warningTitle": "Important — Project in Development",
     "warning": "Methodology, indicators, weightings, and calculation formulas are currently undergoing testing and validation. No final ABIX scores or rankings are published at this stage.",
-    "cta": "Be Notified of ABIX Index Launch"
+    "cta": "Be Notified of ABIX Index Launch",
+    "ctaBody": "Subscribe to receive project updates and be notified upon the official launch of the ABIX index."
   },
   "about": {
     "meta": {
@@ -673,8 +861,12 @@
     "author": {
       "name": "Mr. Rachid Sekak",
       "role": "Banking Expert",
-      "bio": "A leading expert on the Algerian banking sector, Mr. Rachid Sekak contributes his deep market knowledge to the annual ABIX edition based on published financial records and extensive field experience."
-    }
+      "bio": "A leading expert on the Algerian banking sector, Mr. Rachid Sekak contributes his deep market knowledge to the annual ABIX edition based on published financial records and extensive field experience.",
+      "body": "A recognized specialist in the Algerian banking sector, Mr. Rachid Sekak brings his market knowledge and expertise to the annual edition of ABIX. His analysis is founded on a rigorous examination of published financial statements and first-hand industry insight."
+    },
+    "introP1": "ABIX — Algeria Banking Index — is an index and an annual comparative study of banks operating in Algeria. It analyzes financial performance based on published disclosures to provide leaders, analysts, and investors with an objective, structured benchmark.",
+    "introP2": "ABIX does not constitute a regulatory or prudential rating. It is a strategic decision-support tool grounded in transparency and methodological rigor.",
+    "tagline": "Annual Analysis of the Algerian Banking Sector"
   },
   "contact": {
     "meta": {
@@ -711,7 +903,14 @@
       "address": "Cité Naimi Rue G N°1, Blida, Algeria",
       "email": "info@tadjeddine-partners.com",
       "phone": "+213 (0) 560 403 405 / 0560 349 059"
-    }
+    },
+    "order2025Title": "Interested in the 2025 Edition?",
+    "order2025Body": "The 2025 edition is available for immediate ordering.",
+    "order2025Cta": "Order 2025 Edition →",
+    "formTitle": "Contact us",
+    "infoTitle": "Contact Information",
+    "successTitle": "Message Sent",
+    "successMessage": "Thank you for contacting us. We will get back to you shortly."
   },
   "rankings": {
     "meta": {
@@ -1058,7 +1257,9 @@
     },
     "step1": {
       "title": "Step 1: Select Your Banks",
-      "hint": "Select at least one bank whose services you use."
+      "hint": "Select at least one bank whose services you use.",
+      "selectedBanks": "Selected Banks",
+      "multipleBadge": "Multiple Choices"
     },
     "step2": {
       "title": "Step 2: Rate Services",
@@ -1423,6 +1624,80 @@
         "Compare performances",
         "Track market shares"
       ]
+    }
+  },
+  "rapport2023": {
+    "meta": {
+      "title": "Algeria Banking Sector Report 2023 | Algeria Banking Index",
+      "description": "Download the 2023 Algerian Banking Sector Report by Tadjeddine & Partners for free, based on 2021–2022 financial data."
+    },
+    "hero": {
+      "badge": "Foundational Publication · Free Access",
+      "title": "Algerian Banking Sector Report — 2023",
+      "subtitle": "An initial comparative snapshot of the Algerian banking sector based on 2021–2022 financial data.",
+      "cta": "Download Free PDF Report",
+      "ctaSubtitle": "Open Access · PDF · 50 pages"
+    },
+    "intro": {
+      "title": "The First Publication at the Origin of the Initiative",
+      "body1": "Published in 2023, this report represents Tadjeddine & Partners' first publication dedicated to comparative observation of the Algerian banking sector.",
+      "body2": "Using 2021 and 2022 financial data, it provides an overview of key indicators of banks operating in Algeria, institutional comparisons, and key market observations.",
+      "body3": "This initial initiative progressively evolved toward more structured in-depth analyses, leading to subsequent studies and the creation of Algeria Banking Index."
+    },
+    "stats": {
+      "period": "2021–2022",
+      "periodLabel": "Analyzed Period",
+      "banks": "20 banks",
+      "banksLabel": "Presented and Compared",
+      "pages": "50 pages",
+      "pagesLabel": "Of data, charts and findings",
+      "year": "2023",
+      "yearLabel": "First Publication"
+    },
+    "content": {
+      "title": "What the Report Contains",
+      "items": [
+        "Bank-by-bank financial indicators",
+        "Total Assets",
+        "Customer Deposits",
+        "Customer Loans",
+        "Net Banking Income",
+        "Gross Operating Income",
+        "Net Profit",
+        "Shareholders' Equity",
+        "Net Provisions",
+        "Cost-to-Income Ratio",
+        "Return on Equity",
+        "Interbank Comparisons",
+        "Key Banking Sector Findings",
+        "Insights on Financial Inclusion",
+        "Capital Opening of Public Banks",
+        "Banking Governance"
+      ]
+    },
+    "timeline": {
+      "title": "Progression of Our Approach",
+      "subtitle": "From a first sector report in 2023 to Algeria Banking Index, our approach has steadily expanded in data, methodology, and analytical tools.",
+      "t2023": {
+        "title": "2023",
+        "name": "Banking Sector Report",
+        "desc": "First comparative publication · 2021–2022 Data"
+      },
+      "t2025": {
+        "title": "2025",
+        "name": "Comparative Banking Sector Study",
+        "desc": "In-depth analysis · 2023–2024 Data"
+      },
+      "t2026": {
+        "title": "2026",
+        "name": "Algeria Banking Index",
+        "desc": "New generation of the study · Enriched analysis, data, rankings, and interactive tools"
+      }
+    },
+    "footerCta": {
+      "title": "Freely Access Our First Publication",
+      "text": "The 2023 Algerian Banking Sector Report remains freely accessible in its entirety.",
+      "cta": "Download 2023 Report"
     }
   }
 }

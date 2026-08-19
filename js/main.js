@@ -314,9 +314,24 @@
   };
 
   var PREORDER_TITLE_LABELS = {
-    essential: "Souscription — Pack Essentiel (Édition 2026)",
-    pro: "Souscription — Pack Pro (Édition 2026)",
-    corporate: "Souscription — Pack Corporate Executive (Édition 2026)"
+    fr: {
+      essential: "Souscription — Pack Essentiel (Édition 2026)",
+      pro: "Souscription — Pack Pro (Édition 2026)",
+      corporate: "Souscription — Pack Corporate Executive (Édition 2026)",
+      default: "Formulaire de souscription anticipée"
+    },
+    en: {
+      essential: "Subscription — Essential Pack (2026 Edition)",
+      pro: "Subscription — Pro Pack (2026 Edition)",
+      corporate: "Subscription — Corporate Executive Pack (2026 Edition)",
+      default: "Early Subscription Form"
+    },
+    ar: {
+      essential: "الاشتراك — الباقة الأساسية (إصدار 2026)",
+      pro: "الاشتراك — الباقة الاحترافية (إصدار 2026)",
+      corporate: "الاشتراك — الباقة التنفيذية المؤسسية (إصدار 2026)",
+      default: "استمارة الاشتراك المسبق"
+    }
   };
 
   window.openPreorder = function (packKey) {
@@ -328,7 +343,9 @@
     var titleEl = qs("#preorderModalTitle");
 
     if (titleEl) {
-      titleEl.textContent = PREORDER_TITLE_LABELS[key] || "Formulaire de souscription anticipée";
+      var lang = getLang();
+      var titles = PREORDER_TITLE_LABELS[lang] || PREORDER_TITLE_LABELS.fr;
+      titleEl.textContent = titles[key] || titles.default;
     }
 
     // Gérer l'affichage des détails du pack
@@ -374,19 +391,39 @@
     const labelEl = qs("#orderPlanLabel");
     if (!modal || !frame) return;
 
+    var lang = getLang();
     var packLabels = {
-      essential: "Pack Essentiel",
-      pro: "Pack Pro",
-      corporate: "Pack Corporate Executive"
+      fr: {
+        essential: "Pack Essentiel",
+        pro: "Pack Pro",
+        corporate: "Pack Corporate Executive"
+      },
+      en: {
+        essential: "Essential Pack",
+        pro: "Pro Pack",
+        corporate: "Corporate Executive Pack"
+      },
+      ar: {
+        essential: "الباقة الأساسية",
+        pro: "الباقة الاحترافية",
+        corporate: "الباقة التنفيذية المؤسسية"
+      }
     };
-    if (labelEl) labelEl.textContent = packLabels[pack] || "";
+    var currentPackLabels = packLabels[lang] || packLabels.fr;
+    if (labelEl) labelEl.textContent = currentPackLabels[pack] || "";
+
+    var fallbackMsgs = {
+      fr: '<p style="font-family:Inter,sans-serif;padding:24px;color:#374151">Formulaire en cours de configuration. Contactez-nous à <a href="mailto:info@tadjeddine-partners.com">info@tadjeddine-partners.com</a></p>',
+      en: '<p style="font-family:Inter,sans-serif;padding:24px;color:#374151">Form currently being configured. Contact us at <a href="mailto:info@tadjeddine-partners.com">info@tadjeddine-partners.com</a></p>',
+      ar: '<p style="font-family:Inter,sans-serif;padding:24px;color:#374151" dir="rtl">الاستمارة قيد الإعداد. اتصل بنا على <a href="mailto:info@tadjeddine-partners.com">info@tadjeddine-partners.com</a></p>'
+    };
 
     var formUrl = (typeof SITE_CONFIG !== "undefined" && SITE_CONFIG.editions && SITE_CONFIG.editions["2025"] && SITE_CONFIG.editions["2025"].orderForms) ? SITE_CONFIG.editions["2025"].orderForms[pack] : null;
     if (formUrl) {
       frame.src = formUrl;
     } else {
       frame.src = "about:blank";
-      frame.srcdoc = '<p style="font-family:Inter,sans-serif;padding:24px;color:#374151">Formulaire en cours de configuration. Contactez-nous à <a href="mailto:info@tadjeddine-partners.com">info@tadjeddine-partners.com</a></p>';
+      frame.srcdoc = fallbackMsgs[lang] || fallbackMsgs.fr;
     }
 
     modal.classList.remove("hidden");
