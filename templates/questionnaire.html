@@ -107,6 +107,50 @@
             </button>
           </div>
 
+          <!-- Encadré Méthode de classement (présent pour les 4 onglets) -->
+          <div class="bg-gradient-to-br from-slate-50 to-blue-50/50 border border-blue-200/80 rounded-2xl p-4 sm:p-5 shadow-2xs space-y-3.5 mt-4">
+            <!-- Header avec icône et titre -->
+            <div class="flex items-start gap-3">
+              <div class="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-primary/10 text-primary flex items-center justify-center flex-shrink-0 mt-0.5 shadow-2xs">
+                <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"/>
+                </svg>
+              </div>
+              <div class="space-y-1 flex-1 min-w-0">
+                <div class="flex flex-wrap items-center justify-between gap-2">
+                  <h4 class="text-xs sm:text-sm font-bold uppercase tracking-wider text-slate-800 font-playfair flex items-center gap-2">
+                    {{questionnaire.results.rankingMethodologyTitle}}
+                  </h4>
+                  <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-2xs font-bold bg-blue-100/80 text-blue-800 border border-blue-200 shadow-2xs">
+                    {{questionnaire.results.rankingMethodologyFormulaLabel}}
+                  </span>
+                </div>
+                <p class="text-xs sm:text-sm text-slate-700 leading-relaxed">
+                  {{questionnaire.results.rankingMethodologyPrinciple}}
+                </p>
+              </div>
+            </div>
+
+            <!-- Formule mathématique mise en valeur -->
+            <div class="bg-white/95 border border-blue-200/90 rounded-xl p-3 sm:p-3.5 shadow-2xs">
+              <div class="font-mono text-xs sm:text-sm font-bold text-slate-900 text-center sm:text-start overflow-x-auto py-0.5 leading-relaxed">
+                {{questionnaire.results.rankingMethodologyFormula}}
+              </div>
+            </div>
+
+            <!-- Notes explicatives -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-2xs sm:text-xs text-slate-600 pt-0.5">
+              <div class="flex items-center gap-1.5">
+                <svg class="w-3.5 h-3.5 text-primary flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                <span>{{questionnaire.results.rankingMethodologyNoteN}}</span>
+              </div>
+              <div class="flex items-center gap-1.5">
+                <svg class="w-3.5 h-3.5 text-amber-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
+                <span class="font-semibold text-slate-700">{{questionnaire.results.rankingMethodologyNoteExclusion}}</span>
+              </div>
+            </div>
+          </div>
+
           <!-- Tableau / Graphique de classement en barres horizontales -->
           <div class="space-y-3 pt-2">
             
@@ -313,6 +357,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const I18N_VOTERS_PLURAL = "{{questionnaire.results.votersPlural}}";
   const I18N_VOTERS_SINGLE = "{{questionnaire.results.votersSingle}}";
+  const I18N_SCORE_DETAILS_TITLE = "{{questionnaire.results.scoreDetailsTitle}}";
+  const I18N_TOOLTIP_ADJUSTED_SCORE = "{{questionnaire.results.tooltipAdjustedScore}}";
+  const I18N_TOOLTIP_RAW_SCORE = "{{questionnaire.results.tooltipRawScore}}";
+  const I18N_TOOLTIP_VOTERS = "{{questionnaire.results.tooltipVoters}}";
+  const I18N_TOOLTIP_MARKET_AVG = "{{questionnaire.results.tooltipMarketAvg}}";
 
   function normBankStr(str) {
     return (str || "").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[^a-z0-9]/g, "");
@@ -437,19 +486,36 @@ document.addEventListener("DOMContentLoaded", () => {
     const dataBankList = (data.byBank || []).slice();
     let displayList = [];
 
+    // Déterminer la moyenne du marché pour le filtre de canal actif
+    let marketAvg = 0;
+    if (activeChannelFilter === "all") {
+      marketAvg = (data.summary && data.summary.overallAverageScoreOutOf5) || 0;
+    } else if (data.byService && data.byService[activeChannelFilter]) {
+      marketAvg = data.byService[activeChannelFilter].averageScoreOutOf5 || 0;
+    }
+
     if (dataBankList.length > 0) {
       const evaluatedMap = new Map();
       dataBankList.forEach(b => {
-        let score = 0;
-        let count = b.count || 0;
+        let rawScore = 0;
+        let count = 0;
         if (activeChannelFilter === "all") {
-          score = b.averageScoreOutOf5 || (b.averageScore ? (b.averageScore / 20) : 0);
+          rawScore = b.averageScoreOutOf5 || (b.averageScore ? (b.averageScore / 20) : 0);
+          count = b.count || 0;
         } else if (b.services && b.services[activeChannelFilter]) {
-          score = b.services[activeChannelFilter].averageScoreOutOf5 || 0;
+          rawScore = b.services[activeChannelFilter].averageScoreOutOf5 || 0;
           count = b.services[activeChannelFilter].count || 0;
         }
-        evaluatedMap.set(b.name, { score, count });
-        evaluatedMap.set(normBankStr(b.name), { score, count });
+
+        // Formule du score ajusté : (n / (n + 20)) * score + (20 / (n + 20)) * moyenne_marché
+        let adjustedScore = rawScore;
+        if (count >= 5 && marketAvg > 0) {
+          adjustedScore = ((count / (count + 20)) * rawScore) + ((20 / (count + 20)) * marketAvg);
+        }
+
+        const bankData = { rawScore, adjustedScore, count, marketAvg };
+        evaluatedMap.set(b.name, bankData);
+        evaluatedMap.set(normBankStr(b.name), bankData);
       });
 
       displayList = BANKS.map(b => {
@@ -462,17 +528,19 @@ document.addEventListener("DOMContentLoaded", () => {
           name: b.name,
           fullName: b.fullName,
           logo: b.logo,
-          score: found ? found.score : 0,
-          count: found ? found.count : 0
+          rawScore: found ? found.rawScore : 0,
+          adjustedScore: found ? found.adjustedScore : 0,
+          count: found ? found.count : 0,
+          marketAvg: marketAvg
         };
       });
 
-      // Filtrer : exclure les banques ayant moins de 5 votants
+      // Filtrer : exclure les banques ayant moins de 5 répondants
       displayList = displayList.filter(b => b.count >= 5);
 
-      // Trier : par score décroissant, puis par nombre de votes, puis par ordre alphabétique
+      // Trier : par score ajusté décroissant, puis par nombre de votes, puis par ordre alphabétique
       displayList.sort((a, b) => {
-        if (b.score !== a.score) return b.score - a.score;
+        if (b.adjustedScore !== a.adjustedScore) return b.adjustedScore - a.adjustedScore;
         if (b.count !== a.count) return b.count - a.count;
         return a.name.localeCompare(b.name);
       });
@@ -499,9 +567,11 @@ document.addEventListener("DOMContentLoaded", () => {
         ? (RANK_COLORS[index] || RANK_COLORS[RANK_COLORS.length - 1])
         : { bg: "#94a3b8", bar: "#e2e8f0" };
       const rankNum = index + 1;
-      const scoreVal = hasVotes ? item.score.toFixed(2).replace(".", ",") : "0,00";
-      // Calculer le pourcentage de la barre horizontale (score / 5) * 100%
-      const barWidthPct = hasVotes ? Math.min(100, Math.max(5, (item.score / 5) * 100)) : 2;
+      const scoreAdjVal = hasVotes ? item.adjustedScore.toFixed(2).replace(".", ",") : "0,00";
+      const scoreRawVal = hasVotes ? item.rawScore.toFixed(2).replace(".", ",") : "0,00";
+      const marketAvgVal = marketAvg > 0 ? marketAvg.toFixed(2).replace(".", ",") : "0,00";
+      // Calculer le pourcentage de la barre horizontale (score ajusté / 5) * 100%
+      const barWidthPct = hasVotes ? Math.min(100, Math.max(5, (item.adjustedScore / 5) * 100)) : 2;
       const votersLabel = item.count > 1 ? I18N_VOTERS_PLURAL : I18N_VOTERS_SINGLE;
 
       return `
@@ -522,23 +592,57 @@ document.addEventListener("DOMContentLoaded", () => {
             <span class="text-xs sm:text-sm font-bold text-slate-800 truncate" title="${item.name}">${item.name}</span>
           </div>
 
-          <!-- Barre Horizontale Proportionnelle -->
+          <!-- Barre Horizontale Proportionnelle (Score Ajusté) -->
           <div class="col-span-3 sm:col-span-4 flex items-center">
             <div class="w-full bg-slate-100 rounded-full h-5 sm:h-6 p-0.5 overflow-hidden flex items-center">
               <div class="infographic-bar h-full rounded-full shadow-2xs transition-all duration-500" style="width: ${barWidthPct}%; background-color: ${colorScheme.bar};"></div>
             </div>
           </div>
 
-          <!-- Nombre de Votants + Score Global / 5 -->
-          <div class="col-span-4 sm:col-span-4 flex items-center justify-end gap-2 sm:gap-3 text-end">
+          <!-- Nombre de Votants + Score Ajusté / 5 avec Détail au survol / focus -->
+          <div class="col-span-4 sm:col-span-4 flex items-center justify-end gap-2 sm:gap-3 text-end relative">
             <span class="inline-flex items-center gap-1 text-2xs sm:text-xs font-semibold px-2 py-0.5 rounded-full ${hasVotes ? 'bg-slate-100 text-slate-700 border border-slate-200' : 'bg-slate-50 text-slate-400 border border-slate-100'} shrink-0" title="${item.count} ${votersLabel}">
               <svg class="w-3 h-3 ${hasVotes ? 'text-slate-500' : 'text-slate-300'} shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
               <span>${item.count}</span>
               <span class="hidden md:inline">${votersLabel}</span>
             </span>
-            <span class="text-base sm:text-lg font-extrabold font-playfair tracking-tight ${hasVotes ? 'text-slate-900' : 'text-slate-400'} min-w-[3rem] text-end">
-              ${scoreVal}
-            </span>
+
+            <div class="group/score relative inline-flex items-center cursor-help" tabindex="0" aria-label="${I18N_SCORE_DETAILS_TITLE}">
+              <span class="text-base sm:text-lg font-extrabold font-playfair tracking-tight ${hasVotes ? 'text-slate-900' : 'text-slate-400'} min-w-[3rem] text-end hover:text-primary transition-colors underline decoration-dotted decoration-slate-300 underline-offset-4">
+                ${scoreAdjVal}
+              </span>
+
+              <!-- Tooltip Popover au survol / focus -->
+              <div class="absolute bottom-full end-0 mb-2 w-56 sm:w-64 p-3 bg-slate-900/95 backdrop-blur-sm text-white rounded-xl shadow-2xl border border-slate-700/80 text-start z-50 pointer-events-none opacity-0 group-hover/score:opacity-100 group-focus/score:opacity-100 group-hover/score:pointer-events-auto transition-all duration-200 transform translate-y-1 group-hover/score:translate-y-0 group-focus/score:translate-y-0">
+                <div class="font-bold text-xs text-cyan-400 border-b border-slate-700/80 pb-1.5 mb-2 flex items-center justify-between">
+                  <span class="flex items-center gap-1.5">
+                    <svg class="w-3.5 h-3.5 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
+                    ${I18N_SCORE_DETAILS_TITLE}
+                  </span>
+                  <span class="text-2xs font-normal text-slate-400">/ 5</span>
+                </div>
+                <div class="space-y-1.5 text-2xs sm:text-xs">
+                  <div class="flex items-center justify-between gap-2">
+                    <span class="text-slate-300 font-semibold">${I18N_TOOLTIP_ADJUSTED_SCORE} :</span>
+                    <span class="font-bold font-mono text-cyan-300 bg-cyan-950/80 px-1.5 py-0.5 rounded border border-cyan-800/80">${scoreAdjVal}</span>
+                  </div>
+                  <div class="flex items-center justify-between gap-2">
+                    <span class="text-slate-400">${I18N_TOOLTIP_RAW_SCORE} :</span>
+                    <span class="font-medium font-mono text-slate-200">${scoreRawVal}</span>
+                  </div>
+                  <div class="flex items-center justify-between gap-2">
+                    <span class="text-slate-400">${I18N_TOOLTIP_VOTERS} :</span>
+                    <span class="font-medium font-mono text-slate-200">${item.count}</span>
+                  </div>
+                  <div class="flex items-center justify-between gap-2">
+                    <span class="text-slate-400">${I18N_TOOLTIP_MARKET_AVG} :</span>
+                    <span class="font-medium font-mono text-slate-300">${marketAvgVal}</span>
+                  </div>
+                </div>
+                <div class="absolute top-full end-4 -mt-1 border-4 border-transparent border-t-slate-900/95"></div>
+              </div>
+            </div>
+
           </div>
 
         </div>

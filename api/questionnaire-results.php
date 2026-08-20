@@ -199,6 +199,10 @@ foreach ($byService as $sKey => $sData) {
     ];
 }
 
+$overallAvgScore5 = $totalEvaluations > 0 ? round($totalScoreSum / $totalEvaluations, 2) : 0;
+$overallAvgScore = $totalEvaluations > 0 ? round(($totalScoreSum / ($totalEvaluations * 5)) * 100, 1) : 0;
+$overallSatisfactionRate = $totalEvaluations > 0 ? round(($totalPositive / $totalEvaluations) * 100, 1) : 0;
+
 // Banks processed and ranked
 $bankList = [];
 foreach ($byBank as $bName => $bData) {
@@ -207,13 +211,26 @@ foreach ($byBank as $bName => $bData) {
     $avgScore100 = $cnt > 0 ? round(($bData['sumScore'] / ($cnt * 5)) * 100, 1) : 0;
     $satRate = $cnt > 0 ? round(($bData['positive'] / $cnt) * 100, 1) : 0;
 
+    // Score ajusté Bayesian shrinkage : (n / (n + 20)) * bank_score + (20 / (n + 20)) * market_avg
+    $adjScore5 = ($cnt >= 5 && $overallAvgScore5 > 0)
+        ? round((($cnt / ($cnt + 20)) * $avgScore5) + ((20 / ($cnt + 20)) * $overallAvgScore5), 2)
+        : $avgScore5;
+
     $bankServices = [];
     foreach ($bData['services'] as $sKey => $sVal) {
         $sCnt = $sVal['count'];
+        $sAvgScore5 = $sCnt > 0 ? round($sVal['sumScore'] / $sCnt, 2) : null;
+        $sMarketAvg5 = isset($processedServices[$sKey]) ? $processedServices[$sKey]['averageScoreOutOf5'] : 0;
+        $sAdjScore5 = ($sCnt >= 5 && $sAvgScore5 !== null && $sMarketAvg5 > 0)
+            ? round((($sCnt / ($sCnt + 20)) * $sAvgScore5) + ((20 / ($sCnt + 20)) * $sMarketAvg5), 2)
+            : $sAvgScore5;
+
         $bankServices[$sKey] = [
             'count' => $sCnt,
             'averageScore' => $sCnt > 0 ? round(($sVal['sumScore'] / ($sCnt * 5)) * 100, 1) : null,
-            'averageScoreOutOf5' => $sCnt > 0 ? round($sVal['sumScore'] / $sCnt, 2) : null
+            'averageScoreOutOf5' => $sAvgScore5,
+            'adjustedScoreOutOf5' => $sAdjScore5,
+            'marketAverageOutOf5' => $sMarketAvg5
         ];
     }
 
@@ -222,21 +239,22 @@ foreach ($byBank as $bName => $bData) {
         'count' => $cnt,
         'averageScore' => $avgScore100,
         'averageScoreOutOf5' => $avgScore5,
+        'adjustedScoreOutOf5' => $adjScore5,
+        'marketAverageOutOf5' => $overallAvgScore5,
         'satisfactionRate' => $satRate,
         'services' => $bankServices
     ];
 }
 
 usort($bankList, function($a, $b) {
-    if ($a['averageScoreOutOf5'] === $b['averageScoreOutOf5']) {
+    if ($a['adjustedScoreOutOf5'] === $b['adjustedScoreOutOf5']) {
+        if ($a['count'] === $b['count']) {
+            return strcmp($a['name'], $b['name']);
+        }
         return $b['count'] <=> $a['count'];
     }
-    return $b['averageScoreOutOf5'] <=> $a['averageScoreOutOf5'];
+    return $b['adjustedScoreOutOf5'] <=> $a['adjustedScoreOutOf5'];
 });
-
-$overallAvgScore5 = $totalEvaluations > 0 ? round($totalScoreSum / $totalEvaluations, 2) : 0;
-$overallAvgScore = $totalEvaluations > 0 ? round(($totalScoreSum / ($totalEvaluations * 5)) * 100, 1) : 0;
-$overallSatisfactionRate = $totalEvaluations > 0 ? round(($totalPositive / $totalEvaluations) * 100, 1) : 0;
 
 echo json_encode([
     'ok' => true,
