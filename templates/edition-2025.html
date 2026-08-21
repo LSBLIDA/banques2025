@@ -427,9 +427,15 @@
       <div><h3 class="text-sm font-semibold mb-4">{{footer.servicesLinks.title}}</h3><ul class="space-y-2 text-sm text-gray-400"><li><a href="{{__basePath}}/{{__lang}}/services/" class="hover:text-accent">{{services.offerings.0.title}}</a></li><li><a href="{{__basePath}}/{{__lang}}/contact/" class="hover:text-accent">{{nav.contact}}</a></li><li><a href="{{__basePath}}/{{__lang}}/mentions-legales/" class="hover:text-accent">{{legal.hero.title}}</a></li></ul></div>
       <div><h3 class="text-sm font-semibold mb-4">{{footer.contact.title}}</h3><div class="space-y-2 text-sm text-gray-400"><div class="flex items-center gap-2"><svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg><a href="mailto:{{footer.contact.email}}" class="hover:text-accent">{{footer.contact.email}}</a></div></div></div>
     </div>
-    <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-gray-500">
+    <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-gray-500 border-t border-gray-800/80">
       <p>{{site.copyright}}</p>
-      <div class="flex gap-4"><a href="{{__basePath}}/{{__lang}}/mentions-legales/" class="hover:text-gray-300">{{legal.hero.title}}</a><a href="{{__basePath}}/{{__lang}}/politique-confidentialite/" class="hover:text-gray-300">{{privacy.hero.title}}</a></div>
+      <div class="flex flex-wrap items-center justify-center gap-4 sm:gap-6 text-xs sm:text-sm">
+        <a href="{{__basePath}}/{{__lang}}/mentions-legales/" class="hover:text-white transition-colors">{{nav.legal}}</a>
+        <span class="text-gray-600">·</span>
+        <a href="{{__basePath}}/{{__lang}}/conditions-utilisation/" class="hover:text-white transition-colors">{{nav.terms}}</a>
+        <span class="text-gray-600">·</span>
+        <a href="{{__basePath}}/{{__lang}}/politique-confidentialite/" class="hover:text-white transition-colors">{{nav.privacy}}</a>
+      </div>
     </div>
   </div>
 </footer>

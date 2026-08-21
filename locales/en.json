@@ -9,7 +9,7 @@
     "fullName": "Algeria Banking Index",
     "publisher": "Tadjeddine & Partners",
     "tagline": "Studies, benchmarks and strategic analyses of the Algerian banking sector",
-    "copyright": "© 2025 Tadjeddine & Partners. All rights reserved."
+    "copyright": "© 2026 Tadjeddine & Partners — Algeria Banking Index"
   },
   "nav": {
     "home": "Home",
@@ -26,6 +26,9 @@
     "banks": "Banks",
     "about": "About",
     "contact": "Contact",
+    "legal": "Legal Notice",
+    "terms": "Terms of Use",
+    "privacy": "Privacy Policy",
     "questionnaire": "2026 Barometer",
     "ctaStudy": "Get the Report",
     "ctaNotify": "Be notified of 2026 release",
@@ -1081,27 +1084,27 @@
         {
           "label": "Law 18-07 Compliance",
           "url": "https://tadjeddine-partners.com/services/"
-        },
-        {
-          "label": "Training",
-          "url": "https://tadjeddine-partners.com/services/"
         }
       ]
     },
     "supportLinks": {
-      "title": "Support",
+      "title": "Legal & Support",
       "items": [
         {
           "label": "Contact",
-          "url": "https://tadjeddine-partners.com/contact/"
+          "url": "{{__basePath}}/{{__lang}}/contact/"
         },
         {
-          "label": "Legal Notices",
-          "url": "https://tadjeddine-partners.com/mentions-legales/"
+          "label": "Legal Notice",
+          "url": "{{__basePath}}/{{__lang}}/mentions-legales/"
+        },
+        {
+          "label": "Terms of Use",
+          "url": "{{__basePath}}/{{__lang}}/terms-of-use/"
         },
         {
           "label": "Privacy Policy",
-          "url": "https://tadjeddine-partners.com/politique-confidentialite/"
+          "url": "{{__basePath}}/{{__lang}}/privacy-policy/"
         }
       ]
     },
@@ -1129,7 +1132,7 @@
   },
   "legal": {
     "meta": {
-      "title": "Legal Notices — ABIX | Algeria Banking Index",
+      "title": "Legal Notices | ABIX Data Explorer",
       "description": "Legal notices, publisher information, hosting, intellectual property, and terms of use for ABIX — Tadjeddine & Partners."
     },
     "hero": {
@@ -1181,68 +1184,70 @@
       "title": "Contact"
     }
   },
-  "privacy": {
+  "cgu": {
     "meta": {
-      "title": "Privacy Policy — ABIX | Algeria Banking Index",
-      "description": "Privacy policy and personal data protection under Law No. 18-07 — EURL Tadjeddine & Partners."
+      "title": "Terms of Use | ABIX Data Explorer",
+      "description": "Terms of use of the ABIX Data Explorer platform, published by Tadjeddine & Partners."
     },
     "hero": {
-      "badge": "Law No. 18-07 of June 10, 2018",
+      "badge": "ABIX Data Explorer",
+      "title": "Terms of Use",
+      "subtitle": "ABIX Data Explorer — Algeria Banking Index",
+      "lastUpdate": "Last updated: August 21, 2026"
+    },
+    "toc": {
+      "title": "Table of Contents",
+      "s1": "1. Purpose",
+      "s2": "2. Publisher",
+      "s3": "3. Service Description",
+      "s4": "4. Account Creation and Use",
+      "s5": "5. Demo Access",
+      "s6": "6. Subscriptions and Access Rights",
+      "s7": "7. Authorized Use",
+      "s8": "8. Data Sources and Nature",
+      "s9": "9. No Financial Advice",
+      "s10": "10. Indicators and Methodologies",
+      "s11": "11. Intellectual Property",
+      "s12": "12. Service Availability",
+      "s13": "13. Access Suspension or Termination",
+      "s14": "14. Liability",
+      "s15": "15. Personal Data Protection",
+      "s16": "16. Third-Party Services",
+      "s17": "17. Changes to Terms",
+      "s18": "18. Governing Law and Jurisdiction",
+      "s19": "19. Contact"
+    }
+  },
+  "privacy": {
+    "meta": {
+      "title": "Privacy Policy | ABIX Data Explorer",
+      "description": "Policy regarding personal data protection for users of ABIX Data Explorer."
+    },
+    "hero": {
+      "badge": "Law No. 18-07 on Personal Data Protection",
       "title": "Privacy Policy",
-      "subtitle": "Personal data protection and confidentiality commitments of EURL Tadjeddine & Partners."
+      "subtitle": "Protection of Personal Data — ABIX Data Explorer",
+      "lastUpdate": "Last updated: August 21, 2026"
     },
-    "sec1": {
-      "title": "1. Data Controller Identity",
-      "p1": "In accordance with Law No. 18-07 of June 10, 2018 on personal data protection, the data controller is TADJEDDINE AND PARTNERS, RC 10B0981001, Cité Naimi, Rue G N° 1, Zabana, Blida, represented by Managing Director Mr. Tadjeddine BACHIR.",
-      "p2": "As data controller, TADJEDDINE AND PARTNERS complies with all applicable personal data protection laws."
-    },
-    "sec2": {
-      "title": "2. Collected Data",
-      "intro": "TADJEDDINE AND PARTNERS collects and processes the following user data:",
-      "item1": "First and last name",
-      "item2": "Professional email address",
-      "item3": "Phone number",
-      "item4": "Organization / bank / company name",
-      "item5": "Job title / Position",
-      "item6": "Website and stated requirements"
-    },
-    "sec3": {
-      "title": "3. Purposes of Processing",
-      "intro": "Collected data is processed exclusively to:",
-      "item1": "Respond to user inquiries, order requests, and information demands",
-      "item2": "Send commercial proposals tailored to stated needs (ABIX study, advisory, benchmarks)",
-      "item3": "Manage pre-contractual and contractual relationships",
-      "item4": "Perform internal business statistics and analyses"
-    },
-    "sec4": {
-      "title": "4. Data Recipients",
-      "p1": "Personal data is processed exclusively by authorized staff of TADJEDDINE AND PARTNERS and is never sold or rented to third parties.",
-      "p2": "Any technical sub-processor engagements (e.g. hosting, email dispatch) are governed by strict confidentiality agreements conforming to Law No. 18-07."
-    },
-    "sec5": {
-      "title": "5. Data Retention Period",
-      "body": "Personal data is retained for up to three (3) years following the last interaction, unless consent is withdrawn or erased per legal rights."
-    },
-    "sec6": {
-      "title": "6. Security Measures",
-      "body": "TADJEDDINE AND PARTNERS implements appropriate technical and organizational safeguards to ensure confidentiality, integrity, and availability of processed personal data."
-    },
-    "sec7": {
-      "title": "7. Rights of Data Subjects",
-      "intro": "Under Articles 7 and 34–36 of Law No. 18-07, individuals have the following rights:",
-      "right1": "Right of access to personal data",
-      "right2": "Right to rectify inaccurate or incomplete data",
-      "right3": "Right to object on legitimate grounds",
-      "right4": "Right to withdraw consent at any time",
-      "exerciseTitle": "To exercise these rights, contact us at:"
-    },
-    "sec8": {
-      "title": "8. International Data Transfers",
-      "body": "No personal data is transferred abroad without prior authorization under Law No. 18-07."
-    },
-    "sec9": {
-      "title": "9. Policy Updates",
-      "body": "TADJEDDINE AND PARTNERS reserves the right to update this policy to maintain regulatory compliance."
+    "toc": {
+      "title": "Table of Contents",
+      "s1": "1. Purpose",
+      "s2": "2. Data Controller",
+      "s3": "3. Data Processed",
+      "s4": "4. Purposes of Processing",
+      "s5": "5. Banking Data in ABIX",
+      "s6": "6. Recipients",
+      "s7": "7. Hosting and Data Transfers",
+      "s8": "8. Retention Period",
+      "s9": "9. Security",
+      "s10": "10. Electronic Communications",
+      "s11": "11. Cookies and Similar Technologies",
+      "s12": "12. Rights of Data Subjects",
+      "s13": "13. Organization Users' Data",
+      "s14": "14. Account Deletion or Deactivation",
+      "s15": "15. Third-Party Sites and Services",
+      "s16": "16. Policy Updates",
+      "s17": "17. Contact"
     }
   },
   "questionnaire": {
@@ -1353,18 +1358,25 @@
     }
   },
   "dataExplorer": {
-    "illustrationNotice": "Illustration – fictitious data for demonstration purposes.",
+    "illustrationNotice": "Illustration — fictitious data used for demonstration purposes.",
     "meta": {
-      "title": "ABIX Data Explorer | Algerian Banks Analysis",
-      "description": "Explore, compare and analyse the financial performance of Algerian banks with ABIX Data Explorer: KPIs, market shares, benchmarks, history and advanced analyses."
+      "title": "ABIX Data Explorer — Analysis and comparison of Algerian banks",
+      "description": "Test ABIX Data Explorer for free with demonstration data, then access real financial data of Algerian banks with Pro and Corporate plans."
     },
     "hero": {
       "eyebrow": "ABIX Data Explorer",
       "title": "Turn Algerian banks' financial data into comparative analyses and decisions.",
       "subtitle": "Analyse a bank. Compare it to peers. Track its trajectory. Understand its market position.",
       "description": "ABIX Data Explorer transforms banking financial data into a structured reading of the market: activity, deposits, credit, profitability, efficiency, growth, equity capitalization, balance sheet structure and competitive position.",
+      "ctaTestFree": "Test for Free",
+      "ctaOffers": "View Offers",
       "ctaDiscover": "Discover Features",
-      "ctaOffers": "View Offers"
+      "noticeNoCard": "Immediate access to DEMO mode with fictitious data — no credit card required."
+    },
+    "demoBadge": {
+      "label": "DEMO MODE",
+      "sub": "Fictitious data",
+      "illustration": "Illustration — fictitious data used for demonstration purposes."
     },
     "keyStats": {
       "banksCount": "21 banks",
@@ -1429,28 +1441,28 @@
         },
         {
           "title": "Size",
-          "body": "Grouping by asset volume to compare comparable players."
+          "body": "Grouping by asset volume to compare comparable institutions."
         },
         {
-          "title": "Asset Profile",
-          "body": "Contextualization by balance sheet structure and orientation."
+          "title": "Asset profile",
+          "body": "Contextualization according to balance sheet structure and orientation."
         },
         {
-          "title": "Peer Group",
-          "body": "Custom group building when data allows."
+          "title": "Peer group",
+          "body": "Custom group creation when data permits."
         }
       ],
-      "strongMessage": "Performance only makes sense when placed in context.",
-      "disclaimer": "Benchmarks and comparative analyses in ABIX Data Explorer are provided as financial analysis tools. They do not constitute regulatory ratings or credit ratings."
+      "strongMessage": "Performance is only meaningful when put in context.",
+      "disclaimer": "Benchmarks and comparative analyses presented in ABIX Data Explorer are provided as a financial analysis tool. They do not constitute regulatory ratings or credit ratings."
     },
     "marketShares": {
-      "title": "Who is really gaining ground?",
+      "title": "Who is truly gaining ground?",
       "text": "A bank can show positive growth while losing market share. ABIX distinguishes absolute growth, relative position and contribution to sector dynamics.",
-      "strongMessage": "Growing doesn't necessarily mean gaining ground.",
+      "strongMessage": "Growing does not necessarily mean gaining ground.",
       "kpis": [
         {
           "title": "Market share",
-          "desc": "Calculated on main aggregates"
+          "desc": "Calculated on major financial aggregates"
         },
         {
           "title": "Gain or loss",
@@ -1462,35 +1474,35 @@
         },
         {
           "title": "Growth gap",
-          "desc": "Relative performance vs market average"
+          "desc": "Relative performance compared to market average"
         }
       ],
       "bullets": [
         "Market share",
         "Rank",
         "Gap to leader",
-        "Market share gain/loss",
+        "Market share gain or loss",
         "Relative share evolution",
         "Contribution to sector growth",
-        "Growth gap with market",
+        "Growth gap with the market",
         "Rank evolution"
       ]
     },
     "concentration": {
       "title": "Measure banking market concentration",
-      "text": "Track the evolution of leaders' weight and the transformation of the market's competitive structure.",
+      "text": "Track the evolving weight of leaders and the transformation of the competitive market structure.",
       "kpis": [
         {
           "title": "CR1, CR3, CR5, CR10",
-          "desc": "Cumulative weight of the largest sector players."
+          "desc": "Cumulative weight of the sector's largest players."
         },
         {
           "title": "HHI (Herfindahl-Hirschman)",
-          "desc": "Internationally referenced concentration index."
+          "desc": "International benchmark concentration index."
         },
         {
           "title": "Effective number of banks",
-          "desc": "Indicator of true market player diversity."
+          "desc": "Indicator of the actual diversity of market players."
         },
         {
           "title": "Cumulative key players",
@@ -1511,7 +1523,7 @@
         },
         {
           "title": "Momentum",
-          "body": "Identify accelerations, decelerations and trajectory shifts."
+          "body": "Identify accelerations, decelerations and trajectory changes."
         },
         {
           "title": "Rank history",
@@ -1519,30 +1531,30 @@
         },
         {
           "title": "Outliers",
-          "body": "Detect observations requiring further investigation."
+          "body": "Detect observations that deserve further investigation."
         }
       ]
     },
     "fourDimensions": {
       "title": "Four dimensions to understand a bank's profile",
-      "strongMessage": "ABIX Data Explorer does not produce an official overall score. Dimensions are kept separate to preserve financial information and avoid a single average masking very different profiles.",
-      "disclaimer": "These dimensions and analyses are provided for comparative and methodological purposes. They should never be interpreted as a credit rating, regulatory rating, official solvency measure, or probability of default.",
+      "strongMessage": "ABIX Data Explorer does not produce an official overall score. Dimensions remain separated to preserve financial information and avoid masking distinct profiles with a single average.",
+      "disclaimer": "These dimensions and analyses are provided for comparative and methodological purposes. They must never be interpreted as a credit rating, regulatory rating, official solvency measure or probability of default.",
       "items": [
         {
           "title": "Profitability",
-          "body": "The bank's ability to turn its activity and resources into profit."
+          "body": "Ability of the bank to turn activity and resources into net results."
         },
         {
           "title": "Growth",
-          "body": "Development dynamics over several fiscal years."
+          "body": "Development dynamics across multiple fiscal years."
         },
         {
           "title": "Efficiency",
-          "body": "Operational mastery and operating income conversion capacity."
+          "body": "Operational control and conversion capacity of operating income."
         },
         {
-          "title": "Equity Capitalization",
-          "body": "Relative position of equity in the balance sheet and credit structure."
+          "title": "Accounting Capitalization",
+          "body": "Relative position of equity in balance sheet and credit structure."
         }
       ]
     },
@@ -1590,6 +1602,27 @@
         }
       ]
     },
+    "freeTrialSection": {
+      "badge": "FREE DEMO ACCESS",
+      "title": "Test ABIX Data Explorer before subscribing",
+      "text": "Create your free account and explore the main features of ABIX Data Explorer with real Algerian banks and a fully fictitious dataset.",
+      "benefits": [
+        {
+          "title": "Explore multiple years",
+          "desc": "Access DEMO 2022, 2023, 2024 and 2025 editions."
+        },
+        {
+          "title": "Compare banks",
+          "desc": "Test rankings, ratios, bank profiles, comparisons and history."
+        },
+        {
+          "title": "Switch to real data whenever you want",
+          "desc": "Subscribe to Pro or Corporate to unlock real ABIX financial data."
+        }
+      ],
+      "cta": "Create my DEMO access",
+      "noCardNotice": "Free — no credit card required."
+    },
     "methodology": {
       "title": "Analyses designed to be verifiable",
       "cta": "Discover the methodology",
@@ -1617,8 +1650,122 @@
       "text": "ABIX Data Explorer provides comparative financial analysis based on available data. It does not replace a full credit analysis, regulatory prudential ratios, or information on asset quality and regulatory liquidity when not publicly available. This reinforces the product's methodological credibility."
     },
     "pricing": {
-      "title": "Choose the access suited to your needs",
-      "cta": "Choose this offer"
+      "title": "Choose the offer suited to your organization",
+      "subtitle": "Access certified real financial data of the Algerian banking sector.",
+      "demoBanner": {
+        "title": "Try before subscribing",
+        "text": "Access ABIX Data Explorer for free with a fictitious dataset and discover the experience before choosing your plan.",
+        "cta": "Test for free",
+        "mention": "DEMO access 2022–2025 — fictitious data"
+      },
+      "plans": {
+        "pro": {
+          "badge": "Professionals & Analysts",
+          "title": "Pack Pro",
+          "description": "Ideal for financial teams and analysts looking to leverage real 2025 data.",
+          "price": "120,000 DA HT",
+          "users": "Up to 3 users",
+          "duration": "12-month access",
+          "items": [
+            "Up to 3 users",
+            "Structured Excel file 2025",
+            "ABIX Data Explorer",
+            "12-month access",
+            "Real 2025 data only"
+          ],
+          "cta": "Choose Pack Pro"
+        },
+        "corporate": {
+          "badge": "Recommended — Decision Makers & Executives",
+          "title": "Pack Corporate Executive",
+          "description": "Complete and unlimited access for general management, executive committees and banks.",
+          "price": "180,000 DA HT",
+          "users": "Up to 20 users",
+          "duration": "12-month access",
+          "items": [
+            "Up to 20 users",
+            "ABIX Data Explorer Executive",
+            "12-month access",
+            "Real data from 2022 to 2025",
+            "Multidimensional analysis",
+            "360° Bank Profiles",
+            "Peer groups & advanced benchmarks",
+            "Executive PDF Reports",
+            "Excel Exports"
+          ],
+          "cta": "Choose Pack Corporate"
+        }
+      }
+    },
+    "comparison": {
+      "title": "Access level comparison",
+      "subtitle": "Full transparency on features and scope for each plan.",
+      "columns": {
+        "feature": "Feature",
+        "demo": "DEMO",
+        "pro": "PRO",
+        "corporate": "CORPORATE"
+      },
+      "rows": [
+        {
+          "name": "Data Explorer Access",
+          "demo": "Yes",
+          "pro": "Yes",
+          "corporate": "Yes"
+        },
+        {
+          "name": "Data used",
+          "demo": "Fictitious (100%)",
+          "pro": "Real",
+          "corporate": "Real"
+        },
+        {
+          "name": "Covered years",
+          "demo": "DEMO 2022–2025",
+          "pro": "2025",
+          "corporate": "2022–2025"
+        },
+        {
+          "name": "Included users",
+          "demo": "1 user",
+          "pro": "Up to 3",
+          "corporate": "Up to 20"
+        },
+        {
+          "name": "Comparisons & ratios",
+          "demo": "Yes",
+          "pro": "Yes",
+          "corporate": "Yes"
+        },
+        {
+          "name": "Structured Excel file",
+          "demo": "No",
+          "pro": "Yes (2025)",
+          "corporate": "Yes (2022–2025)"
+        },
+        {
+          "name": "Executive Dashboard",
+          "demo": "No",
+          "pro": "No",
+          "corporate": "Yes"
+        },
+        {
+          "name": "Advanced Benchmarks & Peers",
+          "demo": "No",
+          "pro": "No",
+          "corporate": "Yes"
+        },
+        {
+          "name": "Executive PDF Reports",
+          "demo": "No",
+          "pro": "Depending on offer",
+          "corporate": "Yes"
+        }
+      ]
+    },
+    "authenticatedDemo": {
+      "ctaAccessDemo": "Access my DEMO",
+      "ctaUpgrade": "Switch to real data"
     },
     "finalCta": {
       "title": "Banking data shouldn't just be viewed. It should be explored.",

@@ -49,6 +49,7 @@ const PAGES = [
   { template: "classements.html", output: "classements/index.html", titleKey: "rankings" },
   { template: "banques.html", output: "banques/index.html", titleKey: "banks" },
   { template: "mentions-legales.html", output: "mentions-legales/index.html", titleKey: "legal" },
+  { template: "conditions-utilisation.html", output: "conditions-utilisation/index.html", titleKey: "cgu" },
   { template: "politique-confidentialite.html", output: "politique-confidentialite/index.html", titleKey: "privacy" },
   { template: "data-explorer.html", output: "data-explorer/index.html", titleKey: "dataExplorer" },
 ];
@@ -103,29 +104,49 @@ function resolveTranslations(html, translations) {
   });
 }
 
+function resolvePageOutputPath(pageKey, lang, defaultOutput) {
+  if (pageKey === "rapport2023") {
+    return lang === "fr" ? "editions/rapport-2023/index.html" : "editions/report-2023/index.html";
+  }
+  if (pageKey === "cgu") {
+    return lang === "en" ? "terms-of-use/index.html" : "conditions-utilisation/index.html";
+  }
+  if (pageKey === "privacy") {
+    return lang === "en" ? "privacy-policy/index.html" : "politique-confidentialite/index.html";
+  }
+  return defaultOutput;
+}
+
+function resolvePageSlug(pageSlug, targetLang) {
+  if (pageSlug.includes("rapport-2023") || pageSlug.includes("report-2023")) {
+    return targetLang === "fr" ? "editions/rapport-2023/" : "editions/report-2023/";
+  }
+  if (pageSlug.includes("conditions-utilisation") || pageSlug.includes("terms-of-use")) {
+    return targetLang === "en" ? "terms-of-use/" : "conditions-utilisation/";
+  }
+  if (pageSlug.includes("politique-confidentialite") || pageSlug.includes("privacy-policy")) {
+    return targetLang === "en" ? "privacy-policy/" : "politique-confidentialite/";
+  }
+  return pageSlug;
+}
+
 /**
  * Génère les balises hreflang à partir des langues actives.
  */
-function buildHreflang(lang, outputPath) {
+function buildHreflang(lang, outputPath, pageKey) {
   const domain = SITE_CONFIG.domain;
   const lines = [];
 
   for (const [l, conf] of Object.entries(SITE_CONFIG.languages)) {
     if (conf.enabled) {
-      let targetOutputPath = outputPath;
-      if (outputPath.includes("rapport-2023") || outputPath.includes("report-2023")) {
-        targetOutputPath = l === "fr" ? "editions/rapport-2023/index.html" : "editions/report-2023/index.html";
-      }
+      const targetOutputPath = resolvePageOutputPath(pageKey, l, outputPath);
       const url = `${domain}/${l}/${targetOutputPath}`.replace(/\/+/g, "/").replace(":/", "://");
       lines.push(`<link rel="alternate" hreflang="${l}" href="${url}" />`);
     }
   }
   // x-default pointe vers la langue par défaut
   const defaultLang = SITE_CONFIG.defaultLanguage;
-  let defaultOutputPath = outputPath;
-  if (outputPath.includes("rapport-2023") || outputPath.includes("report-2023")) {
-    defaultOutputPath = defaultLang === "fr" ? "editions/rapport-2023/index.html" : "editions/report-2023/index.html";
-  }
+  const defaultOutputPath = resolvePageOutputPath(pageKey, defaultLang, outputPath);
   const defaultUrl = `${domain}/${defaultLang}/${defaultOutputPath}`.replace(/\/+/g, "/").replace(":/", "://");
   lines.push(`<link rel="alternate" hreflang="x-default" href="${defaultUrl}" />`);
   return lines.join("\n    ");
@@ -137,11 +158,12 @@ function buildHreflang(lang, outputPath) {
 function injectConfigVars(html, lang, outputPath, pageKey, translations) {
   const langConf = SITE_CONFIG.languages[lang];
   const dir = langConf ? langConf.dir : "ltr";
-  const hreflang = buildHreflang(lang, outputPath);
+  const hreflang = buildHreflang(lang, outputPath, pageKey);
   const langClass = lang === "ar" ? "font-arabic" : "";
   const langSwitcher = buildLangSwitcher(lang, outputPath);
   const mobileLangSwitcher = buildMobileLangSwitcher(lang, outputPath);
   const mainNavHtml = buildMainNav(lang, pageKey, translations, langSwitcher, mobileLangSwitcher);
+  const canonicalPath = outputPath.endsWith("index.html") ? outputPath.replace("index.html", "") : outputPath;
 
   return html
     .replace(/<nav id="main-nav"[\s\S]*?<\/nav>/gi, mainNavHtml)
@@ -150,7 +172,7 @@ function injectConfigVars(html, lang, outputPath, pageKey, translations) {
     .replace(/\{\{__dir\}\}/g, dir)
     .replace(/\{\{__langClass\}\}/g, langClass)
     .replace(/\{\{__hreflang\}\}/g, hreflang)
-    .replace(/\{\{__canonical\}\}/g, `${SITE_CONFIG.domain}/${lang}/${outputPath}`.replace(/\/+/g, "/").replace(":/", "://"))
+    .replace(/\{\{__canonical\}\}/g, `${SITE_CONFIG.domain}/${lang}/${canonicalPath}`.replace(/\/+/g, "/").replace(":/", "://"))
     .replace(/\{\{__langSwitcher\}\}/g, langSwitcher)
     .replace(/\{\{__currentEdition\}\}/g, SITE_CONFIG.currentEdition)
     .replace(/\{\{__basePath\}\}/g, BASE_PATH);
@@ -354,10 +376,7 @@ function buildLangSwitcher(currentLang, currentPath) {
   const options = Object.entries(allLangs)
     .filter(([, conf]) => conf.enabled || conf.status === "draft")
     .map(([l, conf]) => {
-      let targetPageSlug = pageSlug;
-      if (pageSlug.includes("rapport-2023") || pageSlug.includes("report-2023")) {
-        targetPageSlug = l === "fr" ? "editions/rapport-2023/" : "editions/report-2023/";
-      }
+      const targetPageSlug = resolvePageSlug(pageSlug, l);
       const href = `${BASE_PATH}/${l}/${targetPageSlug}`.replace(/\/+/g, "/");
       const isActive = l === currentLang;
       const statusBadge = conf.status === "draft" ? '<span class="ms-auto text-[9px] font-semibold text-amber-700 bg-amber-50 px-1.5 py-0.5 rounded border border-amber-200/80">Brouillon</span>' : '';
@@ -393,10 +412,7 @@ function buildMobileLangSwitcher(currentLang, currentPath) {
   const options = Object.entries(allLangs)
     .filter(([, conf]) => conf.enabled || conf.status === "draft")
     .map(([l, conf]) => {
-      let targetPageSlug = pageSlug;
-      if (pageSlug.includes("rapport-2023") || pageSlug.includes("report-2023")) {
-        targetPageSlug = l === "fr" ? "editions/rapport-2023/" : "editions/report-2023/";
-      }
+      const targetPageSlug = resolvePageSlug(pageSlug, l);
       const href = `${BASE_PATH}/${l}/${targetPageSlug}`.replace(/\/+/g, "/");
       const isActive = l === currentLang;
       return `<a href="${href}" class="flex-1 text-center py-2 px-3 rounded-lg text-xs font-semibold border transition-all ${
@@ -445,11 +461,7 @@ function buildAll(targetLang = null) {
     for (const page of PAGES) {
       try {
         const templateHtml = loadTemplate(page.template);
-
-        let pageOutput = page.output;
-        if (page.titleKey === "rapport2023") {
-          pageOutput = lang === "fr" ? "editions/rapport-2023/index.html" : "editions/report-2023/index.html";
-        }
+        const pageOutput = resolvePageOutputPath(page.titleKey, lang, page.output);
 
         // Injection des variables de configuration, hreflang et menu principal unifié
         let html = injectConfigVars(templateHtml, lang, pageOutput, page.titleKey, translations);
@@ -464,8 +476,21 @@ function buildAll(targetLang = null) {
 
         console.log(`[compile] ✓ ${lang}/${pageOutput}`);
         generatedCount++;
+
+        // Génération des alias en anglais si nécessaire pour éviter les 404
+        if (lang === "en") {
+          if (page.titleKey === "cgu") {
+            const aliasPath = path.join(OUTPUT_ROOT, lang, "conditions-utilisation/index.html");
+            ensureDir(aliasPath);
+            fs.writeFileSync(aliasPath, html, "utf8");
+          } else if (page.titleKey === "privacy") {
+            const aliasPath = path.join(OUTPUT_ROOT, lang, "politique-confidentialite/index.html");
+            ensureDir(aliasPath);
+            fs.writeFileSync(aliasPath, html, "utf8");
+          }
+        }
       } catch (err) {
-        const pageOutput = page.titleKey === "rapport2023" ? (lang === "fr" ? "editions/rapport-2023/index.html" : "editions/report-2023/index.html") : page.output;
+        const pageOutput = resolvePageOutputPath(page.titleKey, lang, page.output);
         const errMsg = `[compile] ✗ ${lang}/${pageOutput} → ${err.message}`;
         console.error(errMsg);
         errors.push(errMsg);

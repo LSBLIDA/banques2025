@@ -83,7 +83,7 @@
     "fullName": "Algeria Banking Index",
     "publisher": "Tadjeddine & Partners",
     "tagline": "Études, benchmarks et analyses stratégiques du secteur bancaire algérien",
-    "copyright": "© 2025 Tadjeddine & Partners. Tous droits réservés."
+    "copyright": "© 2026 Tadjeddine & Partners — Algeria Banking Index"
   },
   "nav": {
     "home": "Accueil",
@@ -100,6 +100,9 @@
     "banks": "Banques",
     "about": "À propos",
     "contact": "Contact",
+    "legal": "Mentions légales",
+    "terms": "Conditions d’utilisation",
+    "privacy": "Politique de confidentialité",
     "questionnaire": "Baromètre 2026",
     "ctaStudy": "Obtenir l'étude",
     "ctaNotify": "Être informé de la parution 2026",
@@ -1140,18 +1143,25 @@
     ]
   },
   "dataExplorer": {
-    "illustrationNotice": "Illustration – données fictives à des fins de démonstration.",
+    "illustrationNotice": "Illustration — données fictives utilisées à des fins de démonstration.",
     "meta": {
-      "title": "ABIX Data Explorer | Analyse des banques algériennes",
-      "description": "Explorez, comparez et analysez les performances financières des banques algériennes avec ABIX Data Explorer : KPI, parts de marché, benchmarks, historiques et analyses avancées."
+      "title": "ABIX Data Explorer — Analyse et comparaison des banques algériennes",
+      "description": "Testez gratuitement ABIX Data Explorer avec des données de démonstration, puis accédez aux données financières réelles des banques algériennes avec les offres Pro et Corporate."
     },
     "hero": {
       "eyebrow": "ABIX Data Explorer",
       "title": "Transformez les données financières des banques algériennes en analyses comparatives et en décisions.",
       "subtitle": "Analysez une banque. Comparez-la à ses pairs. Suivez sa trajectoire. Comprenez sa position dans le marché.",
       "description": "ABIX Data Explorer transforme les données financières bancaires en une lecture structurée du marché : activité, collecte, crédit, rentabilité, efficacité, croissance, capitalisation comptable, structure de bilan et position concurrentielle.",
+      "ctaTestFree": "Tester gratuitement",
+      "ctaOffers": "Voir les offres",
       "ctaDiscover": "Découvrir les fonctionnalités",
-      "ctaOffers": "Voir les offres"
+      "noticeNoCard": "Accès immédiat au mode DEMO avec données fictives — aucune carte bancaire requise."
+    },
+    "demoBadge": {
+      "label": "MODE DEMO",
+      "sub": "Données fictives",
+      "illustration": "Illustration — données fictives utilisées à des fins de démonstration."
     },
     "keyStats": {
       "banksCount": "21 banques",
@@ -1377,6 +1387,27 @@
         }
       ]
     },
+    "freeTrialSection": {
+      "badge": "ACCÈS DEMO GRATUIT",
+      "title": "Testez ABIX Data Explorer avant de souscrire",
+      "text": "Créez gratuitement votre compte et explorez les principales fonctionnalités d’ABIX Data Explorer avec les vraies banques algériennes et un jeu de données entièrement fictif.",
+      "benefits": [
+        {
+          "title": "Explorez plusieurs années",
+          "desc": "Accédez aux éditions DEMO 2022, 2023, 2024 et 2025."
+        },
+        {
+          "title": "Comparez les banques",
+          "desc": "Testez les classements, ratios, profils bancaires, comparaisons et historiques."
+        },
+        {
+          "title": "Passez aux données réelles quand vous le souhaitez",
+          "desc": "Souscrivez à Pro ou Corporate pour débloquer les vraies données financières ABIX."
+        }
+      ],
+      "cta": "Créer mon accès DEMO",
+      "noCardNotice": "Gratuit — aucune carte bancaire requise."
+    },
     "methodology": {
       "title": "Des analyses conçues pour être vérifiables",
       "cta": "Découvrir la méthodologie",
@@ -1404,8 +1435,122 @@
       "text": "ABIX Data Explorer fournit une analyse financière comparative à partir des données disponibles. Il ne remplace ni une analyse de crédit complète, ni les ratios prudentiels réglementaires, ni les informations relatives à la qualité des actifs et à la liquidité réglementaire lorsqu'elles ne sont pas publiquement disponibles. Elle renforce ainsi la crédibilité méthodologique du produit."
     },
     "pricing": {
-      "title": "Choisissez l'accès adapté à vos besoins",
-      "cta": "Choisir cette offre"
+      "title": "Choisissez l'offre adaptée à votre organisation",
+      "subtitle": "Accédez aux véritables données financières certifiées du secteur bancaire algérien.",
+      "demoBanner": {
+        "title": "Essayez avant de souscrire",
+        "text": "Accédez gratuitement à ABIX Data Explorer avec un jeu de données fictif et découvrez l’expérience avant de choisir votre offre.",
+        "cta": "Tester gratuitement",
+        "mention": "Accès DEMO 2022–2025 — données fictives"
+      },
+      "plans": {
+        "pro": {
+          "badge": "Professionnels & Analystes",
+          "title": "Pack Pro",
+          "description": "Idéal pour les équipes financières et analystes souhaitant exploiter les données réelles 2025.",
+          "price": "120 000 DA HT",
+          "users": "Jusqu'à 3 utilisateurs",
+          "duration": "Accès pendant 12 mois",
+          "items": [
+            "Jusqu’à 3 utilisateurs",
+            "Fichier Excel structuré 2025",
+            "ABIX Data Explorer",
+            "Accès pendant 12 mois",
+            "Vraies données 2025 uniquement"
+          ],
+          "cta": "Choisir le Pack Pro"
+        },
+        "corporate": {
+          "badge": "Recommandé — Décideurs & Directions",
+          "title": "Pack Corporate Executive",
+          "description": "L'accès complet et illimité pour les directions générales, comités de direction et banques.",
+          "price": "180 000 DA HT",
+          "users": "Jusqu'à 20 utilisateurs",
+          "duration": "Accès pendant 12 mois",
+          "items": [
+            "Jusqu’à 20 utilisateurs",
+            "ABIX Data Explorer Executive",
+            "Accès pendant 12 mois",
+            "Vraies données de 2022 à 2025",
+            "Analyse multidimensionnelle",
+            "Profils bancaires 360°",
+            "Groupes de pairs et benchmarks avancés",
+            "Rapports Executive PDF",
+            "Exports Excel"
+          ],
+          "cta": "Choisir le Pack Corporate"
+        }
+      }
+    },
+    "comparison": {
+      "title": "Comparatif des niveaux d'accès",
+      "subtitle": "Une transparence totale sur les fonctionnalités et périmètres de chaque offre.",
+      "columns": {
+        "feature": "Fonctionnalité",
+        "demo": "DEMO",
+        "pro": "PRO",
+        "corporate": "CORPORATE"
+      },
+      "rows": [
+        {
+          "name": "Accès Data Explorer",
+          "demo": "Oui",
+          "pro": "Oui",
+          "corporate": "Oui"
+        },
+        {
+          "name": "Données utilisées",
+          "demo": "Fictives (100 %)",
+          "pro": "Réelles",
+          "corporate": "Réelles"
+        },
+        {
+          "name": "Années couvertes",
+          "demo": "DEMO 2022–2025",
+          "pro": "2025",
+          "corporate": "2022–2025"
+        },
+        {
+          "name": "Utilisateurs inclus",
+          "demo": "1 utilisateur",
+          "pro": "Jusqu’à 3",
+          "corporate": "Jusqu’à 20"
+        },
+        {
+          "name": "Comparaisons & ratios",
+          "demo": "Oui",
+          "pro": "Oui",
+          "corporate": "Oui"
+        },
+        {
+          "name": "Fichier Excel structuré",
+          "demo": "Non",
+          "pro": "Oui (2025)",
+          "corporate": "Oui (2022–2025)"
+        },
+        {
+          "name": "Executive Dashboard",
+          "demo": "Non",
+          "pro": "Non",
+          "corporate": "Oui"
+        },
+        {
+          "name": "Benchmarks avancés & pairs",
+          "demo": "Non",
+          "pro": "Non",
+          "corporate": "Oui"
+        },
+        {
+          "name": "Rapports Executive PDF",
+          "demo": "Non",
+          "pro": "Selon offre",
+          "corporate": "Oui"
+        }
+      ]
+    },
+    "authenticatedDemo": {
+      "ctaAccessDemo": "Accéder à ma DEMO",
+      "ctaUpgrade": "Passer aux données réelles"
     },
     "finalCta": {
       "title": "Les données bancaires ne doivent pas seulement être consultées. Elles doivent pouvoir être explorées.",
@@ -1448,25 +1593,29 @@
       ]
     },
     "supportLinks": {
-      "title": "Support",
+      "title": "Espace juridique & Support",
       "items": [
         {
           "label": "Contact",
-          "url": "https://tadjeddine-partners.com/contact/"
+          "url": "{{__basePath}}/{{__lang}}/contact/"
         },
         {
           "label": "Mentions légales",
-          "url": "https://tadjeddine-partners.com/mentions-legales/"
+          "url": "{{__basePath}}/{{__lang}}/mentions-legales/"
+        },
+        {
+          "label": "Conditions d’utilisation",
+          "url": "{{__basePath}}/{{__lang}}/conditions-utilisation/"
         },
         {
           "label": "Politique de confidentialité",
-          "url": "https://tadjeddine-partners.com/politique-confidentialite/"
+          "url": "{{__basePath}}/{{__lang}}/politique-confidentialite/"
         }
       ]
     },
     "contact": {
       "title": "Contact",
-      "address": "Cité Naii Rue G N°1, Blida, Algérie",
+      "address": "Cité Naimi Rue G N°1, Blida, Algérie",
       "email": "info@tadjeddine-partners.com",
       "phone": "+213 (0) 560 403 405 / 0560 349 059"
     }
@@ -1488,7 +1637,7 @@
   },
   "legal": {
     "meta": {
-      "title": "Mentions légales — ABIX | Algeria Banking Index",
+      "title": "Mentions légales | ABIX Data Explorer",
       "description": "Mentions légales, éditeur du site, hébergeur, propriété intellectuelle et conditions d'utilisation d'ABIX — Tadjeddine & Partners."
     },
     "hero": {
@@ -1540,68 +1689,70 @@
       "title": "Contact"
     }
   },
-  "privacy": {
+  "cgu": {
     "meta": {
-      "title": "Politique de Confidentialité — ABIX | Algeria Banking Index",
-      "description": "Politique de confidentialité et de protection des données à caractère personnel conformément à la loi n° 18-07 — EURL Tadjeddine & Partners."
+      "title": "Conditions d’utilisation | ABIX Data Explorer",
+      "description": "Conditions d’utilisation de la plateforme ABIX Data Explorer, éditée par Tadjeddine & Partners."
     },
     "hero": {
-      "badge": "Loi n° 18-07 du 10 juin 2018",
-      "title": "Politique de Confidentialité",
-      "subtitle": "Protection des données à caractère personnel et engagements de confidentialité d'EURL Tadjeddine & Partners."
+      "badge": "ABIX Data Explorer",
+      "title": "Conditions d’utilisation",
+      "subtitle": "ABIX Data Explorer — Algeria Banking Index",
+      "lastUpdate": "Dernière mise à jour : 21 août 2026"
     },
-    "sec1": {
-      "title": "1. Identité du responsable du traitement",
-      "p1": "Conformément aux dispositions de la loi n° 18-07 du 10 juin 2018 relative à la protection des données à caractère personnel, le responsable du traitement des données collectées est TADJEDDINE AND PARTNERS, société immatriculée au Registre du Commerce sous le numéro 10B0981001, dont le siège social est situé à Cité Naimi, Rue G N° 1, Zabana, Blida, représentée par son gérant légal M. Tadjeddine BACHIR.",
-      "p2": "En sa qualité de responsable du traitement, TADJEDDINE AND PARTNERS s'engage à se conformer à l'ensemble des obligations légales et réglementaires applicables en matière de protection des données à caractère personnel."
+    "toc": {
+      "title": "Sommaire",
+      "s1": "1. Objet",
+      "s2": "2. Éditeur",
+      "s3": "3. Description du service",
+      "s4": "4. Création et utilisation du compte",
+      "s5": "5. Accès Démo",
+      "s6": "6. Abonnements et droits d’accès",
+      "s7": "7. Utilisation autorisée",
+      "s8": "8. Sources et nature des données",
+      "s9": "9. Absence de conseil financier",
+      "s10": "10. Indicateurs, classements et méthodologies",
+      "s11": "11. Propriété intellectuelle",
+      "s12": "12. Disponibilité du service",
+      "s13": "13. Suspension ou suppression d’un accès",
+      "s14": "14. Responsabilité",
+      "s15": "15. Protection des données personnelles",
+      "s16": "16. Liens vers des services tiers",
+      "s17": "17. Modification des CGU",
+      "s18": "18. Droit applicable et juridiction compétente",
+      "s19": "19. Contact"
+    }
+  },
+  "privacy": {
+    "meta": {
+      "title": "Politique de confidentialité | ABIX Data Explorer",
+      "description": "Politique relative à la protection des données personnelles des utilisateurs d’ABIX Data Explorer."
     },
-    "sec2": {
-      "title": "2. Données collectées",
-      "intro": "Dans le cadre de ses activités commerciales et de la gestion du portail ABIX, TADJEDDINE AND PARTNERS collecte et traite les données suivantes concernant ses utilisateurs et prospects :",
-      "item1": "Nom et prénom",
-      "item2": "Adresse e-mail professionnelle",
-      "item3": "Numéro de téléphone",
-      "item4": "Nom de l'organisme / banque / entreprise",
-      "item5": "Fonction / Poste occupé",
-      "item6": "Site web et besoins exprimés"
+    "hero": {
+      "badge": "Loi n° 18-07 relative à la protection des données",
+      "title": "Politique de confidentialité",
+      "subtitle": "Protection des données personnelles — ABIX Data Explorer",
+      "lastUpdate": "Dernière mise à jour : 21 août 2026"
     },
-    "sec3": {
-      "title": "3. Finalités du traitement",
-      "intro": "Les données collectées sont traitées exclusivement aux fins suivantes :",
-      "item1": "Répondre aux demandes de contact, de commande ou d'information formulées par les utilisateurs",
-      "item2": "Adresser des offres commerciales adaptées aux besoins exprimés (étude ABIX, conseils, benchmarks)",
-      "item3": "Assurer le suivi de la relation commerciale précontractuelle et contractuelle",
-      "item4": "Réaliser des analyses et des statistiques commerciales internes"
-    },
-    "sec4": {
-      "title": "4. Destinataires des données",
-      "p1": "Les données à caractère personnel sont traitées exclusivement par le personnel habilité de TADJEDDINE AND PARTNERS et ne font l'objet d'aucune cession ni vente à des tiers.",
-      "p2": "Toute transmission éventuelle à des sous-traitants techniques (notamment prestataires d'hébergement ou d'envoi d'e-mails) est encadrée par un contrat intégrant des obligations strictes de confidentialité et de conformité aux dispositions de la loi n° 18-07."
-    },
-    "sec5": {
-      "title": "5. Durée de conservation",
-      "body": "Les données collectées sont conservées pendant une durée maximale de trois (3) ans à compter du dernier contact ou de la dernière interaction de la part du prospect, sauf opposition ou retrait de consentement exercé conformément aux dispositions légales."
-    },
-    "sec6": {
-      "title": "6. Mesures de sécurité",
-      "body": "TADJEDDINE AND PARTNERS met en place toutes les mesures techniques et organisationnelles appropriées pour garantir la confidentialité, l'intégrité et la disponibilité des données à caractère personnel traitées."
-    },
-    "sec7": {
-      "title": "7. Droits des personnes concernées",
-      "intro": "Conformément aux articles 7 et 34 à 36 de la loi n° 18-07, toute personne concernée bénéficie des droits suivants :",
-      "right1": "Droit d'accès à ses données à caractère personnel",
-      "right2": "Droit de rectification des données inexactes ou incomplètes",
-      "right3": "Droit d'opposition au traitement pour motifs légitimes",
-      "right4": "Droit de retrait du consentement à tout moment",
-      "exerciseTitle": "Pour exercer ces droits, toute demande peut être adressée :"
-    },
-    "sec8": {
-      "title": "8. Transferts internationaux de données",
-      "body": "Aucun transfert de données à caractère personnel vers l'étranger n'est effectué sans l'obtention des autorisations préalables requises par la loi n° 18-07."
-    },
-    "sec9": {
-      "title": "9. Mise à jour de la politique",
-      "body": "TADJEDDINE AND PARTNERS se réserve le droit de modifier la présente politique de confidentialité à tout moment, notamment pour tenir compte de toute évolution législative ou réglementaire."
+    "toc": {
+      "title": "Sommaire",
+      "s1": "1. Objet",
+      "s2": "2. Responsable du traitement",
+      "s3": "3. Données susceptibles d’être traitées",
+      "s4": "4. Finalités des traitements",
+      "s5": "5. Données bancaires présentées dans ABIX",
+      "s6": "6. Destinataires",
+      "s7": "7. Hébergement et transferts de données",
+      "s8": "8. Durée de conservation",
+      "s9": "9. Sécurité",
+      "s10": "10. Communications électroniques",
+      "s11": "11. Cookies et technologies similaires",
+      "s12": "12. Droits des personnes concernées",
+      "s13": "13. Données des utilisateurs rattachés à une organisation",
+      "s14": "14. Suppression ou désactivation d’un compte",
+      "s15": "15. Sites et services tiers",
+      "s16": "16. Évolution de la politique",
+      "s17": "17. Contact"
     }
   },
   "questionnaire": {

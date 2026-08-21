@@ -40,29 +40,50 @@
     <div class="dex-container relative z-10">
       <div class="grid lg:grid-cols-12 gap-10 lg:gap-16 items-center">
         <!-- Left : Text -->
-        <div class="lg:col-span-5 space-y-6">
-          <span class="inline-flex items-center gap-2 py-1.5 px-4 rounded-full bg-white/10 border border-white/20 text-sm font-semibold tracking-wide text-blue-100">
+        <div class="lg:col-span-5 space-y-6 flex flex-col justify-center">
+          <span class="inline-flex items-center gap-2 py-1.5 px-4 rounded-full bg-white/10 border border-white/20 text-sm font-semibold tracking-wide text-blue-100 self-start">
             <svg class="w-4 h-4 text-blue-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
             {{dataExplorer.hero.eyebrow}}
           </span>
           <h1 class="text-3xl sm:text-4xl lg:text-[2.75rem] xl:text-5xl font-bold font-playfair leading-[1.15] text-white">{{dataExplorer.hero.title}}</h1>
           <p class="text-lg lg:text-xl text-blue-100 font-medium leading-relaxed">{{dataExplorer.hero.subtitle}}</p>
           <p class="text-base text-blue-200/80 leading-relaxed dex-text-col">{{dataExplorer.hero.description}}</p>
-          <div class="flex flex-col sm:flex-row gap-4 pt-4">
-            <a href="#features" class="btn-cta text-base px-7 py-3.5 shadow-xl hover:shadow-2xl transition-all hover:-translate-y-0.5">{{dataExplorer.hero.ctaDiscover}}</a>
-            <a href="#pricing" class="inline-flex items-center justify-center text-base px-7 py-3.5 rounded-lg bg-white/10 text-white border border-white/20 hover:bg-white/20 transition-all font-semibold">{{dataExplorer.hero.ctaOffers}}</a>
-          </div>
-        </div>
-        <!-- Right : Screenshot -->
-        <div class="lg:col-span-7">
-          <div class="dex-screenshot-frame" style="transform:perspective(1800px) rotateY(-2deg);box-shadow:0 25px 50px -12px rgba(0,0,0,.35);">
-            <img src="{{__basePath}}/public/ui-mockups/data-explorer-hero.webp" alt="ABIX Data Explorer — Dashboard" fetchpriority="high"
-                 onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
-            <div class="dex-img-fallback" style="display:none;">
-              <svg class="w-16 h-16 text-slate-300 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+          
+          <div class="pt-2 space-y-3">
+            <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
+              <a href="http://localhost:5173/register" data-track="click_test_free_hero" data-action="demo-cta" class="btn-cta text-base px-7 py-3.5 shadow-xl hover:shadow-2xl transition-all hover:-translate-y-0.5 text-center font-bold">{{dataExplorer.hero.ctaTestFree}}</a>
+              <a href="#pricing" data-track="click_view_offers" class="inline-flex items-center justify-center text-base px-6 py-3.5 rounded-lg bg-white/10 text-white border border-white/20 hover:bg-white/20 transition-all font-semibold text-center">{{dataExplorer.hero.ctaOffers}}</a>
+            </div>
+            <p class="text-xs text-blue-200/85 flex items-center gap-1.5 pt-1">
+              <svg class="w-4 h-4 text-emerald-300 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+              <span>{{dataExplorer.hero.noticeNoCard}}</span>
+            </p>
+            <div class="pt-1">
+              <a href="#features" class="inline-flex items-center gap-1 text-xs text-blue-200 hover:text-white transition-colors underline underline-offset-4">{{dataExplorer.hero.ctaDiscover}} <svg class="w-3 h-3 rtl:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></a>
             </div>
           </div>
-          <p class="text-xs text-blue-200/70 mt-2.5 text-center italic">{{dataExplorer.illustrationNotice}}</p>
+        </div>
+
+        <!-- Right : Screenshot with Mode DEMO badge -->
+        <div class="lg:col-span-7">
+          <div class="relative">
+            <!-- Mode DEMO Badge -->
+            <div class="absolute top-4 start-4 z-20 flex items-center gap-2 rounded-full bg-slate-900/90 backdrop-blur-md border border-emerald-500/40 px-3.5 py-1.5 text-xs shadow-xl shadow-black/40">
+              <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
+              <span class="font-bold text-emerald-300 tracking-wider uppercase text-[11px]">{{dataExplorer.demoBadge.label}}</span>
+              <span class="text-slate-500">|</span>
+              <span class="text-slate-300 text-[11px] font-medium">{{dataExplorer.demoBadge.sub}}</span>
+            </div>
+            
+            <div class="dex-screenshot-frame" style="transform:perspective(1800px) rotateY(-2deg);box-shadow:0 25px 50px -12px rgba(0,0,0,.35);">
+              <img src="{{__basePath}}/public/ui-mockups/data-explorer-hero.webp" alt="ABIX Data Explorer — Dashboard" fetchpriority="high"
+                   onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+              <div class="dex-img-fallback" style="display:none;">
+                <svg class="w-16 h-16 text-slate-300 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2m0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+              </div>
+            </div>
+          </div>
+          <p class="text-xs text-blue-200/70 mt-2.5 text-center italic">{{dataExplorer.demoBadge.illustration}}</p>
         </div>
       </div>
     </div>
@@ -454,7 +475,7 @@
           <h2 class="text-2xl md:text-3xl font-bold font-playfair text-gray-900">{{dataExplorer.methodology.title}}</h2>
           <a href="{{__basePath}}/{{__lang}}/methodologie/" class="inline-flex items-center gap-2 text-primary font-semibold text-sm hover:underline">
             {{dataExplorer.methodology.cta}}
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            <svg class="w-4 h-4 rtl:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
           </a>
         </div>
         <div class="lg:col-span-7 grid sm:grid-cols-2 gap-5">
@@ -471,21 +492,327 @@
     </div>
   </section>
 
-  <!-- ═══════════════════════════════════════════ SECTION 12 : FINAL CTA ══════ -->
-  <section id="pricing" class="relative overflow-hidden" style="padding-top:104px;padding-bottom:104px;background:linear-gradient(135deg,#0f172a 0%,#1e3a5f 50%,#0c1d36 100%);">
+  <!-- ═══════════════════════════════════════════ SECTION : TEST GRATUIT (DEMO) ══ -->
+  <section id="demo-access" class="dex-section bg-gradient-to-b from-blue-50/50 via-white to-slate-50/70 relative overflow-hidden border-y border-blue-100/60">
+    <div class="dex-container relative z-10">
+      <div class="text-center max-w-3xl mx-auto mb-14 space-y-4">
+        <span class="inline-flex items-center gap-2 py-1 px-3.5 rounded-full bg-emerald-50 border border-emerald-200 text-xs font-bold uppercase tracking-wider text-emerald-700">
+          <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+          {{dataExplorer.freeTrialSection.badge}}
+        </span>
+        <h2 class="text-3xl md:text-4xl lg:text-[2.5rem] font-bold font-playfair text-gray-900 leading-tight">{{dataExplorer.freeTrialSection.title}}</h2>
+        <p class="text-lg text-gray-600 leading-relaxed">{{dataExplorer.freeTrialSection.text}}</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6 lg:gap-8 mb-12">
+        <!-- Benefit 1 -->
+        <div class="bg-white rounded-2xl border border-gray-100 p-7 shadow-sm hover:shadow-md transition-shadow relative overflow-hidden group">
+          <div class="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+          </div>
+          <div class="text-xs font-bold text-primary mb-1 uppercase tracking-wider">01</div>
+          <h3 class="text-xl font-bold text-gray-900 mb-2.5">{{dataExplorer.freeTrialSection.benefits.0.title}}</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">{{dataExplorer.freeTrialSection.benefits.0.desc}}</p>
+        </div>
+
+        <!-- Benefit 2 -->
+        <div class="bg-white rounded-2xl border border-gray-100 p-7 shadow-sm hover:shadow-md transition-shadow relative overflow-hidden group">
+          <div class="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+          </div>
+          <div class="text-xs font-bold text-primary mb-1 uppercase tracking-wider">02</div>
+          <h3 class="text-xl font-bold text-gray-900 mb-2.5">{{dataExplorer.freeTrialSection.benefits.1.title}}</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">{{dataExplorer.freeTrialSection.benefits.1.desc}}</p>
+        </div>
+
+        <!-- Benefit 3 -->
+        <div class="bg-white rounded-2xl border border-gray-100 p-7 shadow-sm hover:shadow-md transition-shadow relative overflow-hidden group">
+          <div class="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+          </div>
+          <div class="text-xs font-bold text-primary mb-1 uppercase tracking-wider">03</div>
+          <h3 class="text-xl font-bold text-gray-900 mb-2.5">{{dataExplorer.freeTrialSection.benefits.2.title}}</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">{{dataExplorer.freeTrialSection.benefits.2.desc}}</p>
+        </div>
+      </div>
+
+      <!-- CTA Box -->
+      <div class="text-center bg-white rounded-2xl border border-blue-100 p-8 shadow-md max-w-xl mx-auto space-y-3">
+        <a href="http://localhost:5173/register" data-track="click_test_free_section" data-action="demo-cta" class="btn-cta text-lg px-9 py-4 shadow-lg hover:shadow-xl transition-all hover:-translate-y-0.5 inline-block font-bold">
+          {{dataExplorer.freeTrialSection.cta}}
+        </a>
+        <p class="text-xs text-gray-500 flex items-center justify-center gap-1.5">
+          <svg class="w-4 h-4 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+          <span>{{dataExplorer.freeTrialSection.noCardNotice}}</span>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════ SECTION 12 : PRICING & OFFERS ══ -->
+  <section id="pricing" class="dex-section bg-slate-50 relative overflow-hidden" style="padding-top:88px;padding-bottom:96px;">
+    <div class="dex-container relative z-10">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-12 space-y-3">
+        <h2 class="text-3xl md:text-4xl lg:text-[2.5rem] font-bold font-playfair text-gray-900 leading-tight">{{dataExplorer.pricing.title}}</h2>
+        <p class="text-lg text-gray-600 leading-relaxed">{{dataExplorer.pricing.subtitle}}</p>
+      </div>
+
+      <!-- Horizontal Light Banner for DEMO -->
+      <div class="mb-12 bg-gradient-to-r from-blue-50 via-white to-slate-50 rounded-2xl border border-blue-200/70 p-6 md:p-8 shadow-sm flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="space-y-2 text-center md:text-start flex-1">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100 text-blue-800 text-xs font-bold uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-blue-600"></span>
+            {{dataExplorer.pricing.demoBanner.title}}
+          </div>
+          <h3 class="text-xl font-bold text-gray-900">{{dataExplorer.pricing.demoBanner.text}}</h3>
+          <p class="text-xs text-gray-500 font-medium">{{dataExplorer.pricing.demoBanner.mention}}</p>
+        </div>
+        <div class="flex-shrink-0">
+          <a href="http://localhost:5173/register" data-track="click_test_free_pricing" data-action="demo-cta" class="inline-flex items-center justify-center text-sm md:text-base px-6 py-3.5 rounded-xl bg-slate-900 text-white hover:bg-slate-800 font-semibold shadow-md transition-all hover:-translate-y-0.5">
+            {{dataExplorer.pricing.demoBanner.cta}}
+          </a>
+        </div>
+      </div>
+
+      <!-- 2 Main Pricing Cards: PRO & CORPORATE -->
+      <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto mb-16 items-stretch">
+        
+        <!-- PRO CARD -->
+        <div class="bg-white rounded-2xl border border-gray-200 p-8 shadow-sm hover:shadow-lg transition-all flex flex-col justify-between relative">
+          <div>
+            <span class="inline-block text-xs font-bold uppercase tracking-wider text-primary bg-primary/10 px-3 py-1 rounded-full mb-4">
+              {{dataExplorer.pricing.plans.pro.badge}}
+            </span>
+            <h3 class="text-2xl font-bold text-gray-900 mb-2">{{dataExplorer.pricing.plans.pro.title}}</h3>
+            <p class="text-sm text-gray-600 mb-6 leading-relaxed">{{dataExplorer.pricing.plans.pro.description}}</p>
+            
+            <div class="mb-6 pb-6 border-b border-gray-100">
+              <div class="text-3xl font-extrabold text-gray-900 font-playfair">{{dataExplorer.pricing.plans.pro.price}}</div>
+              <p class="text-xs text-gray-500 mt-1">{{dataExplorer.pricing.plans.pro.duration}} · {{dataExplorer.pricing.plans.pro.users}}</p>
+            </div>
+
+            <ul class="space-y-3 mb-8">
+              <li class="flex items-center gap-3 text-sm text-gray-700">
+                <svg class="w-4 h-4 text-emerald-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                <span>{{dataExplorer.pricing.plans.pro.items.0}}</span>
+              </li>
+              <li class="flex items-center gap-3 text-sm text-gray-700">
+                <svg class="w-4 h-4 text-emerald-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                <span>{{dataExplorer.pricing.plans.pro.items.1}}</span>
+              </li>
+              <li class="flex items-center gap-3 text-sm text-gray-700">
+                <svg class="w-4 h-4 text-emerald-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                <span>{{dataExplorer.pricing.plans.pro.items.2}}</span>
+              </li>
+              <li class="flex items-center gap-3 text-sm text-gray-700">
+                <svg class="w-4 h-4 text-emerald-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                <span>{{dataExplorer.pricing.plans.pro.items.3}}</span>
+              </li>
+              <li class="flex items-center gap-3 text-sm text-gray-700">
+                <svg class="w-4 h-4 text-emerald-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                <span><strong>{{dataExplorer.pricing.plans.pro.items.4}}</strong></span>
+              </li>
+            </ul>
+          </div>
+
+          <a href="{{__basePath}}/{{__lang}}/editions/2026/#tarifs" data-track="click_offer_pro" class="w-full text-center py-3.5 px-6 rounded-xl border-2 border-primary text-primary font-bold hover:bg-primary hover:text-white transition-all shadow-sm">
+            {{dataExplorer.pricing.plans.pro.cta}}
+          </a>
+        </div>
+
+        <!-- CORPORATE CARD -->
+        <div class="bg-gradient-to-b from-slate-900 to-slate-950 text-white rounded-2xl border-2 border-primary/40 p-8 shadow-xl flex flex-col justify-between relative overflow-hidden">
+          <div class="absolute top-0 right-0 w-64 h-64 bg-primary/20 rounded-full blur-3xl -mr-20 -mt-20 pointer-events-none"></div>
+          
+          <div class="relative z-10">
+            <span class="inline-block text-xs font-bold uppercase tracking-wider text-amber-300 bg-amber-400/10 border border-amber-400/20 px-3 py-1 rounded-full mb-4">
+              {{dataExplorer.pricing.plans.corporate.badge}}
+            </span>
+            <h3 class="text-2xl font-bold text-white mb-2">{{dataExplorer.pricing.plans.corporate.title}}</h3>
+            <p class="text-sm text-slate-300 mb-6 leading-relaxed">{{dataExplorer.pricing.plans.corporate.description}}</p>
+            
+            <div class="mb-6 pb-6 border-b border-slate-800">
+              <div class="text-3xl font-extrabold text-white font-playfair">{{dataExplorer.pricing.plans.corporate.price}}</div>
+              <p class="text-xs text-slate-400 mt-1">{{dataExplorer.pricing.plans.corporate.duration}} · {{dataExplorer.pricing.plans.corporate.users}}</p>
+            </div>
+
+            <ul class="space-y-3 mb-8">
+              <li class="flex items-center gap-3 text-sm text-slate-200">
+                <svg class="w-4 h-4 text-emerald-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                <span>{{dataExplorer.pricing.plans.corporate.items.0}}</span>
+              </li>
+              <li class="flex items-center gap-3 text-sm text-slate-200">
+                <svg class="w-4 h-4 text-emerald-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                <span><strong>{{dataExplorer.pricing.plans.corporate.items.1}}</strong></span>
+              </li>
+              <li class="flex items-center gap-3 text-sm text-slate-200">
+                <svg class="w-4 h-4 text-emerald-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                <span>{{dataExplorer.pricing.plans.corporate.items.2}}</span>
+              </li>
+              <li class="flex items-center gap-3 text-sm text-slate-200">
+                <svg class="w-4 h-4 text-emerald-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                <span><strong>{{dataExplorer.pricing.plans.corporate.items.3}}</strong></span>
+              </li>
+              <li class="flex items-center gap-3 text-sm text-slate-200">
+                <svg class="w-4 h-4 text-emerald-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                <span>{{dataExplorer.pricing.plans.corporate.items.4}}</span>
+              </li>
+              <li class="flex items-center gap-3 text-sm text-slate-200">
+                <svg class="w-4 h-4 text-emerald-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                <span>{{dataExplorer.pricing.plans.corporate.items.5}}</span>
+              </li>
+              <li class="flex items-center gap-3 text-sm text-slate-200">
+                <svg class="w-4 h-4 text-emerald-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                <span>{{dataExplorer.pricing.plans.corporate.items.6}}</span>
+              </li>
+              <li class="flex items-center gap-3 text-sm text-slate-200">
+                <svg class="w-4 h-4 text-emerald-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                <span>{{dataExplorer.pricing.plans.corporate.items.7}}</span>
+              </li>
+              <li class="flex items-center gap-3 text-sm text-slate-200">
+                <svg class="w-4 h-4 text-emerald-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                <span>{{dataExplorer.pricing.plans.corporate.items.8}}</span>
+              </li>
+            </ul>
+          </div>
+
+          <a href="{{__basePath}}/{{__lang}}/editions/2026/#tarifs" data-track="click_offer_corporate" class="relative z-10 w-full text-center py-3.5 px-6 rounded-xl btn-cta font-bold shadow-lg transition-all hover:shadow-2xl">
+            {{dataExplorer.pricing.plans.corporate.cta}}
+          </a>
+        </div>
+      </div>
+
+      <!-- Plan Comparison Table -->
+      <div class="max-w-5xl mx-auto bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden">
+        <div class="p-6 sm:p-8 bg-slate-50/70 border-b border-gray-200 text-center sm:text-start">
+          <h3 class="text-xl font-bold text-gray-900">{{dataExplorer.comparison.title}}</h3>
+          <p class="text-sm text-gray-500 mt-1">{{dataExplorer.comparison.subtitle}}</p>
+        </div>
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm text-start">
+            <thead>
+              <tr class="border-b border-gray-200 bg-slate-100/60 text-gray-700">
+                <th class="py-3.5 px-6 font-semibold text-start">{{dataExplorer.comparison.columns.feature}}</th>
+                <th class="py-3.5 px-4 font-semibold text-center text-slate-600 bg-blue-50/40">{{dataExplorer.comparison.columns.demo}}</th>
+                <th class="py-3.5 px-4 font-semibold text-center text-primary">{{dataExplorer.comparison.columns.pro}}</th>
+                <th class="py-3.5 px-4 font-semibold text-center text-slate-900 bg-amber-50/40">{{dataExplorer.comparison.columns.corporate}}</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-100">
+              <tr class="hover:bg-slate-50/50 transition">
+                <td class="py-3.5 px-6 font-medium text-gray-900">{{dataExplorer.comparison.rows.0.name}}</td>
+                <td class="py-3.5 px-4 text-center bg-blue-50/20 text-emerald-600 font-semibold">{{dataExplorer.comparison.rows.0.demo}}</td>
+                <td class="py-3.5 px-4 text-center text-emerald-600 font-semibold">{{dataExplorer.comparison.rows.0.pro}}</td>
+                <td class="py-3.5 px-4 text-center bg-amber-50/20 text-emerald-600 font-semibold">{{dataExplorer.comparison.rows.0.corporate}}</td>
+              </tr>
+              <tr class="hover:bg-slate-50/50 transition">
+                <td class="py-3.5 px-6 font-medium text-gray-900">{{dataExplorer.comparison.rows.1.name}}</td>
+                <td class="py-3.5 px-4 text-center bg-blue-50/20 text-amber-600 font-medium">{{dataExplorer.comparison.rows.1.demo}}</td>
+                <td class="py-3.5 px-4 text-center text-gray-700">{{dataExplorer.comparison.rows.1.pro}}</td>
+                <td class="py-3.5 px-4 text-center bg-amber-50/20 text-gray-700 font-medium">{{dataExplorer.comparison.rows.1.corporate}}</td>
+              </tr>
+              <tr class="hover:bg-slate-50/50 transition">
+                <td class="py-3.5 px-6 font-medium text-gray-900">{{dataExplorer.comparison.rows.2.name}}</td>
+                <td class="py-3.5 px-4 text-center bg-blue-50/20 text-gray-700">{{dataExplorer.comparison.rows.2.demo}}</td>
+                <td class="py-3.5 px-4 text-center text-gray-700">{{dataExplorer.comparison.rows.2.pro}}</td>
+                <td class="py-3.5 px-4 text-center bg-amber-50/20 text-gray-900 font-bold">{{dataExplorer.comparison.rows.2.corporate}}</td>
+              </tr>
+              <tr class="hover:bg-slate-50/50 transition">
+                <td class="py-3.5 px-6 font-medium text-gray-900">{{dataExplorer.comparison.rows.3.name}}</td>
+                <td class="py-3.5 px-4 text-center bg-blue-50/20 text-gray-700">{{dataExplorer.comparison.rows.3.demo}}</td>
+                <td class="py-3.5 px-4 text-center text-gray-700">{{dataExplorer.comparison.rows.3.pro}}</td>
+                <td class="py-3.5 px-4 text-center bg-amber-50/20 text-gray-900 font-bold">{{dataExplorer.comparison.rows.3.corporate}}</td>
+              </tr>
+              <tr class="hover:bg-slate-50/50 transition">
+                <td class="py-3.5 px-6 font-medium text-gray-900">{{dataExplorer.comparison.rows.4.name}}</td>
+                <td class="py-3.5 px-4 text-center bg-blue-50/20 text-emerald-600 font-semibold">{{dataExplorer.comparison.rows.4.demo}}</td>
+                <td class="py-3.5 px-4 text-center text-emerald-600 font-semibold">{{dataExplorer.comparison.rows.4.pro}}</td>
+                <td class="py-3.5 px-4 text-center bg-amber-50/20 text-emerald-600 font-semibold">{{dataExplorer.comparison.rows.4.corporate}}</td>
+              </tr>
+              <tr class="hover:bg-slate-50/50 transition">
+                <td class="py-3.5 px-6 font-medium text-gray-900">{{dataExplorer.comparison.rows.5.name}}</td>
+                <td class="py-3.5 px-4 text-center bg-blue-50/20 text-gray-400">{{dataExplorer.comparison.rows.5.demo}}</td>
+                <td class="py-3.5 px-4 text-center text-emerald-600 font-semibold">{{dataExplorer.comparison.rows.5.pro}}</td>
+                <td class="py-3.5 px-4 text-center bg-amber-50/20 text-emerald-600 font-semibold">{{dataExplorer.comparison.rows.5.corporate}}</td>
+              </tr>
+              <tr class="hover:bg-slate-50/50 transition">
+                <td class="py-3.5 px-6 font-medium text-gray-900">{{dataExplorer.comparison.rows.6.name}}</td>
+                <td class="py-3.5 px-4 text-center bg-blue-50/20 text-gray-400">{{dataExplorer.comparison.rows.6.demo}}</td>
+                <td class="py-3.5 px-4 text-center text-gray-400">{{dataExplorer.comparison.rows.6.pro}}</td>
+                <td class="py-3.5 px-4 text-center bg-amber-50/20 text-emerald-600 font-semibold">{{dataExplorer.comparison.rows.6.corporate}}</td>
+              </tr>
+              <tr class="hover:bg-slate-50/50 transition">
+                <td class="py-3.5 px-6 font-medium text-gray-900">{{dataExplorer.comparison.rows.7.name}}</td>
+                <td class="py-3.5 px-4 text-center bg-blue-50/20 text-gray-400">{{dataExplorer.comparison.rows.7.demo}}</td>
+                <td class="py-3.5 px-4 text-center text-gray-400">{{dataExplorer.comparison.rows.7.pro}}</td>
+                <td class="py-3.5 px-4 text-center bg-amber-50/20 text-emerald-600 font-semibold">{{dataExplorer.comparison.rows.7.corporate}}</td>
+              </tr>
+              <tr class="hover:bg-slate-50/50 transition">
+                <td class="py-3.5 px-6 font-medium text-gray-900">{{dataExplorer.comparison.rows.8.name}}</td>
+                <td class="py-3.5 px-4 text-center bg-blue-50/20 text-gray-400">{{dataExplorer.comparison.rows.8.demo}}</td>
+                <td class="py-3.5 px-4 text-center text-gray-700">{{dataExplorer.comparison.rows.8.pro}}</td>
+                <td class="py-3.5 px-4 text-center bg-amber-50/20 text-emerald-600 font-semibold">{{dataExplorer.comparison.rows.8.corporate}}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════ SECTION 13 : FINAL CTA ══════ -->
+  <section class="relative overflow-hidden" style="padding-top:104px;padding-bottom:104px;background:linear-gradient(135deg,#0f172a 0%,#1e3a5f 50%,#0c1d36 100%);">
     <div class="absolute inset-0 opacity-[.05]" style="background-image:radial-gradient(circle at 1px 1px, rgba(255,255,255,.2) 1px, transparent 0); background-size:32px 32px;"></div>
     <div class="max-w-4xl mx-auto px-6 text-center space-y-8 relative z-10">
       <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold font-playfair leading-tight text-white">{{dataExplorer.finalCta.title}}</h2>
       <p class="text-xl text-blue-200/90 leading-relaxed max-w-3xl mx-auto">{{dataExplorer.finalCta.text}}</p>
       <div class="pt-6 flex flex-col sm:flex-row justify-center items-center gap-4">
-        <a href="{{__basePath}}/{{__lang}}/editions/2026/#tarifs" class="btn-cta text-lg px-10 py-4 shadow-xl hover:-translate-y-1 transition-all">{{dataExplorer.finalCta.ctaOffers}}</a>
-        <a href="{{__basePath}}/{{__lang}}/editions/2026/" class="inline-flex items-center justify-center text-lg px-10 py-4 rounded-lg bg-white/10 text-white border border-white/20 hover:bg-white/20 transition-all font-semibold">{{dataExplorer.finalCta.ctaApp}}</a>
+        <a href="http://localhost:5173/register" data-track="click_test_free_final" data-action="demo-cta" class="btn-cta text-lg px-10 py-4 shadow-xl hover:-translate-y-1 transition-all">{{dataExplorer.hero.ctaTestFree}}</a>
+        <a href="{{__basePath}}/{{__lang}}/editions/2026/#tarifs" data-track="click_offers_final" class="inline-flex items-center justify-center text-lg px-10 py-4 rounded-lg bg-white/10 text-white border border-white/20 hover:bg-white/20 transition-all font-semibold">{{dataExplorer.finalCta.ctaOffers}}</a>
       </div>
     </div>
   </section>
-
 </div>
 
-{{__footer}}
+<!-- Global Footer -->
+<footer class="bg-gray-900 text-white py-12 border-t border-gray-800">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-gray-400">
+    <p>{{site.copyright}}</p>
+    <div class="flex flex-wrap items-center justify-center gap-4 sm:gap-6 text-xs sm:text-sm">
+      <a href="{{__basePath}}/{{__lang}}/mentions-legales/" class="hover:text-white transition-colors">{{nav.legal}}</a>
+      <span class="text-gray-600">·</span>
+      <a href="{{__basePath}}/{{__lang}}/conditions-utilisation/" class="hover:text-white transition-colors">{{nav.terms}}</a>
+      <span class="text-gray-600">·</span>
+      <a href="{{__basePath}}/{{__lang}}/politique-confidentialite/" class="hover:text-white transition-colors">{{nav.privacy}}</a>
+    </div>
+  </div>
+</footer>
+
+<!-- Dynamic Authentication State Detection -->
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    try {
+      var authData = localStorage.getItem('auth-storage');
+      var token = localStorage.getItem('access_token');
+      var user = null;
+      if (authData) {
+        var parsed = JSON.parse(authData);
+        if (parsed && parsed.state && parsed.state.isAuthenticated && parsed.state.user) {
+          user = parsed.state.user;
+        }
+      }
+      if (token || user) {
+        var demoCtaElements = document.querySelectorAll('[data-action="demo-cta"]');
+        demoCtaElements.forEach(function (btn) {
+          btn.textContent = "{{dataExplorer.authenticatedDemo.ctaAccessDemo}}";
+          btn.href = "http://localhost:5173/";
+        });
+      }
+    } catch (e) {}
+  });
+</script>
 </body>
 </html>

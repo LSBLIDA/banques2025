@@ -128,6 +128,7 @@ const SITE_CONFIG = {
     servicesPage:     "https://tadjeddine-partners.com/services/",
     contactPage:      "https://tadjeddine-partners.com/contact/",
     legalPage:        "/banques2025/fr/mentions-legales/",
+    termsPage:        "/banques2025/fr/conditions-utilisation/",
     privacyPage:      "/banques2025/fr/politique-confidentialite/"
   },
   questionnaire: {
