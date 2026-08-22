@@ -304,8 +304,7 @@
         "de_f4": "Analyse des évolutions entre exercices",
         "de_f5": "Visualisations interactives",
         "de_f6": "Ratios et comparaisons bancaires",
-        "de_f7": "Classements et benchmarks",
-        "de_f8": "Exports des données et analyses disponibles dans le niveau Pro"
+        "de_f7": "Classements et benchmarks"
       },
       "corporate": {
         "title": "Pack Corporate Executive",
@@ -1467,7 +1466,7 @@
         "pro": {
           "badge": "Professionnels & Analystes",
           "title": "Pack Pro",
-          "description": "Idéal pour les équipes financières et analystes souhaitant exploiter et comparer les données 2024 et 2025.",
+          "description": "Idéal pour les équipes financières et analystes souhaitant explorer et comparer les données 2024 et 2025.",
           "price": "120 000 DA HT",
           "earlyBirdPrice": "108 000 DA HT",
           "users": "Jusqu'à 3 utilisateurs",
@@ -1484,7 +1483,7 @@
         "corporate": {
           "badge": "Recommandé — Décideurs & Directions",
           "title": "Pack Corporate Executive",
-          "description": "L'accès complet et illimité pour les directions générales, comités de direction et banques.",
+          "description": "L’accès complet pour les directions générales, comités de direction, banques et institutions souhaitant analyser l’historique 2022 à 2025.",
           "price": "180 000 DA HT",
           "earlyBirdPrice": "162 000 DA HT",
           "users": "Jusqu'à 20 utilisateurs",

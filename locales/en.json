@@ -278,8 +278,7 @@
         "de_f4": "Period-over-period trend analysis",
         "de_f5": "Interactive visualizations",
         "de_f6": "Banking ratios and comparisons",
-        "de_f7": "Rankings and benchmarks",
-        "de_f8": "Data and analysis exports available at Pro level"
+        "de_f7": "Rankings and benchmarks"
       },
       "corporate": {
         "title": "Corporate Executive Pack",
@@ -1682,7 +1681,7 @@
         "pro": {
           "badge": "Professionals & Analysts",
           "title": "Pack Pro",
-          "description": "Ideal for financial teams and analysts looking to leverage and compare 2024 and 2025 data.",
+          "description": "Ideal for financial teams and analysts looking to explore and compare 2024 and 2025 data.",
           "price": "120,000 DA HT",
           "earlyBirdPrice": "108,000 DA HT",
           "users": "Up to 3 users",
@@ -1699,7 +1698,7 @@
         "corporate": {
           "badge": "Recommended — Decision Makers & Executives",
           "title": "Pack Corporate Executive",
-          "description": "Complete and unlimited access for general management, executive committees and banks.",
+          "description": "Complete access for executive management, board committees, banks and institutions wishing to analyze historical data from 2022 to 2025.",
           "price": "180,000 DA HT",
           "earlyBirdPrice": "162,000 DA HT",
           "users": "Up to 20 users",
