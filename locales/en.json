@@ -238,7 +238,7 @@
       "essential": {
         "title": "Essential Pack",
         "tagline": "Understand the market",
-        "userLicensesText": "1 user · Secured PDF",
+        "userLicensesText": "1 user · Secured PDF · Data Explorer 2025",
         "regularPrice": "84,000 DA HT",
         "earlyBirdPrice": "75,600 DA HT",
         "saving": "Save 8,400 DA HT",
@@ -250,21 +250,19 @@
         "f3": "Public vs private banks comparison",
         "f4": "Individual analysis of covered banks",
         "f5": "Rankings and benchmarks by indicator",
-        "f6": "Individual license for 1 user",
-        "features": [
-          "Complete study of 2026 edition in secured PDF format",
-          "Consolidated banking sector analysis",
-          "Public vs private banks comparison",
-          "Individual analysis of covered banks",
-          "Rankings and benchmarks by indicator",
-          "Individual license for 1 user"
-        ]
+        "de_title": "ABIX DATA EXPLORER — ESSENTIAL",
+        "de_f1": "ABIX Data Explorer license included for 12 months",
+        "de_f2": "1 user",
+        "de_f3": "2025 Data",
+        "de_f4": "Interactive visualizations",
+        "de_f5": "Banking ratios and rankings",
+        "de_f6": "Bank comparisons on fiscal year 2025"
       },
       "pro": {
         "title": "Pro Pack",
         "tagline": "Leverage data",
         "badge": "Most Popular",
-        "userLicensesText": "Up to 3 users · Excel + Data Explorer 2025",
+        "userLicensesText": "Up to 3 users · Excel · Data Explorer 2024–2025",
         "regularPrice": "120,000 DA HT",
         "earlyBirdPrice": "108,000 DA HT",
         "saving": "Save 12,000 DA HT",
@@ -272,13 +270,16 @@
         "ctaAfterAvailable": "Order Pro Pack",
         "ctaAfterPreorder": "Request Reservation",
         "f1": "All Essential Pack features",
-        "f2": "Structured Excel file containing 2025 data",
-        "de_title": "ABIX DATA EXPLORER",
+        "f2": "Structured Excel file containing the data",
+        "de_title": "ABIX DATA EXPLORER — PRO",
         "de_f1": "12-month access to ABIX Data Explorer",
-        "de_f2": "2025 data included in the application",
-        "de_f3": "Interactive visualization, ratios and bank comparisons",
-        "f6": "Up to 3 users belonging to the same entity",
-        "option_note": "Historical editions 2022, 2023, and 2024 of ABIX Data Explorer are available as options."
+        "de_f2": "Up to 3 users belonging to the same entity",
+        "de_f3": "2024 and 2025 Data",
+        "de_f4": "Period-over-period trend analysis",
+        "de_f5": "Interactive visualizations",
+        "de_f6": "Banking ratios and comparisons",
+        "de_f7": "Rankings and benchmarks",
+        "de_f8": "Data and analysis exports available at Pro level"
       },
       "corporate": {
         "title": "Corporate Executive Pack",
@@ -293,12 +294,14 @@
         "f1": "All Pro Pack features",
         "de_title": "ABIX DATA EXPLORER — CORPORATE",
         "de_f1": "ABIX Data Explorer license included for 12 months",
-        "de_f2": "2022 to 2025 data included in the application",
-        "de_f3": "Multidimensional analysis & banking profiles",
-        "de_f4": "Executive Dashboard & Key Insights",
-        "de_f5": "Peer groups & advanced benchmarks",
-        "de_f6": "Executive PDF reports & Excel exports",
-        "f4": "Up to 20 users belonging to the same entity",
+        "de_f2": "Up to 20 users belonging to the same entity",
+        "de_f3": "Historical data 2022, 2023, 2024 and 2025",
+        "de_f4": "Multidimensional analysis and banking profiles",
+        "de_f5": "Executive Dashboard & Key Insights",
+        "de_f6": "Peer groups & advanced benchmarks",
+        "de_f7": "Executive PDF reports",
+        "de_f8": "Excel exports",
+        "de_f9": "Historical trend analysis over 4 fiscal years",
         "option_note": "Full historical access 2022–2025 to ABIX Data Explorer included."
       }
     },
@@ -399,7 +402,7 @@
         },
         {
           "q": "What are the different offer levels?",
-          "a": "Three offers are available:\n\nEssential Pack:\n- Complete study in PDF format;\n- Sector analyses;\n- Individual bank analyses;\n- Benchmarks and rankings;\n- License for 1 user.\n\nPro Pack:\n- All Essential Pack features;\n- Excel dataset;\n- Detailed comparative tables;\n- 2023–2025 historical data;\n- Ratios and market shares;\n- Up to 3 users from the same organization.\n\nCorporate Executive Pack:\n- All Pro Pack features;\n- Executive presentation;\n- Briefing session with experts;\n- Custom benchmark;\n- Up to 20 users from the same organization."
+          "a": "Three offers are available:\n\nEssential Pack:\n- Complete study of 2026 edition in secured PDF format;\n- Consolidated and individual analysis of 21 banks;\n- Rankings and benchmarks by indicator;\n- ABIX Data Explorer 2025 license included for 12 months;\n- 1 user.\n\nPro Pack:\n- All Essential Pack features;\n- Structured Excel file containing the data;\n- ABIX Data Explorer license (2024 and 2025 data) for 12 months;\n- Period-over-period trend analysis and interactive visualizations;\n- Data and analysis exports;\n- Up to 3 users belonging to the same entity.\n\nCorporate Executive Pack:\n- All Pro Pack features;\n- ABIX Data Explorer Executive license (historical data 2022, 2023, 2024 and 2025);\n- Multidimensional analysis & 360° bank profiles;\n- Executive Dashboard & Key Insights;\n- Peer groups & advanced benchmarks;\n- Executive PDF reports & Excel exports;\n- Up to 20 users belonging to the same entity."
         },
         {
           "q": "Can I receive a pro forma invoice?",
@@ -407,7 +410,7 @@
         },
         {
           "q": "Can I subscribe for multiple users?",
-          "a": "Yes.\n\nThe Pro Pack allows access for up to 3 users from the same organization.\n\nThe Corporate Executive Pack allows access for up to 20 users from the same organization."
+          "a": "Yes.\n\nThe Essential Pack is designed for 1 user.\n\nThe Pro Pack allows access for up to 3 users belonging to the same entity.\n\nThe Corporate Executive Pack allows access for up to 20 users belonging to the same entity."
         },
         {
           "q": "Are the 2024 data identical to those in the previous edition?",
@@ -1659,19 +1662,37 @@
         "mention": "DEMO access 2022–2025 — fictitious data"
       },
       "plans": {
+        "essential": {
+          "badge": "Discovery & Essential",
+          "title": "Essential Pack",
+          "description": "Ideal for exploring and analyzing banking sector performance on fiscal year 2025.",
+          "price": "84,000 DA HT",
+          "earlyBirdPrice": "75,600 DA HT",
+          "users": "1 user",
+          "duration": "12-month access",
+          "items": [
+            "1 user",
+            "Complete study in secured PDF",
+            "ABIX Data Explorer",
+            "12-month access",
+            "Real 2025 data"
+          ],
+          "cta": "Choose Essential Pack"
+        },
         "pro": {
           "badge": "Professionals & Analysts",
           "title": "Pack Pro",
-          "description": "Ideal for financial teams and analysts looking to leverage real 2025 data.",
+          "description": "Ideal for financial teams and analysts looking to leverage and compare 2024 and 2025 data.",
           "price": "120,000 DA HT",
+          "earlyBirdPrice": "108,000 DA HT",
           "users": "Up to 3 users",
           "duration": "12-month access",
           "items": [
             "Up to 3 users",
-            "Structured Excel file 2025",
+            "Structured Excel file",
             "ABIX Data Explorer",
             "12-month access",
-            "Real 2025 data only"
+            "Real 2024 and 2025 data"
           ],
           "cta": "Choose Pack Pro"
         },
@@ -1680,6 +1701,7 @@
           "title": "Pack Corporate Executive",
           "description": "Complete and unlimited access for general management, executive committees and banks.",
           "price": "180,000 DA HT",
+          "earlyBirdPrice": "162,000 DA HT",
           "users": "Up to 20 users",
           "duration": "12-month access",
           "items": [
@@ -1703,6 +1725,7 @@
       "columns": {
         "feature": "Feature",
         "demo": "DEMO",
+        "essential": "ESSENTIAL",
         "pro": "PRO",
         "corporate": "CORPORATE"
       },
@@ -1710,54 +1733,63 @@
         {
           "name": "Data Explorer Access",
           "demo": "Yes",
+          "essential": "Yes",
           "pro": "Yes",
           "corporate": "Yes"
         },
         {
           "name": "Data used",
           "demo": "Fictitious (100%)",
+          "essential": "Real",
           "pro": "Real",
           "corporate": "Real"
         },
         {
           "name": "Covered years",
           "demo": "DEMO 2022–2025",
-          "pro": "2025",
+          "essential": "2025",
+          "pro": "2024–2025",
           "corporate": "2022–2025"
         },
         {
           "name": "Included users",
           "demo": "1 user",
+          "essential": "1 user",
           "pro": "Up to 3",
           "corporate": "Up to 20"
         },
         {
           "name": "Comparisons & ratios",
           "demo": "Yes",
+          "essential": "Yes",
           "pro": "Yes",
           "corporate": "Yes"
         },
         {
           "name": "Structured Excel file",
           "demo": "No",
-          "pro": "Yes (2025)",
+          "essential": "No",
+          "pro": "Yes (2024–2025)",
           "corporate": "Yes (2022–2025)"
         },
         {
           "name": "Executive Dashboard",
           "demo": "No",
+          "essential": "No",
           "pro": "No",
           "corporate": "Yes"
         },
         {
           "name": "Advanced Benchmarks & Peers",
           "demo": "No",
+          "essential": "No",
           "pro": "No",
           "corporate": "Yes"
         },
         {
           "name": "Executive PDF Reports",
           "demo": "No",
+          "essential": "No",
           "pro": "Depending on offer",
           "corporate": "Yes"
         }
