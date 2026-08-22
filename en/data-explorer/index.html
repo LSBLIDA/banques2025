@@ -222,7 +222,7 @@
           
           <div class="pt-2 space-y-3">
             <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
-              <a href="http://localhost:5173/register" data-track="click_test_free_hero" data-action="demo-cta" class="btn-cta text-base px-7 py-3.5 shadow-xl hover:shadow-2xl transition-all hover:-translate-y-0.5 text-center font-bold">Test for Free</a>
+              <a href="https://explorer.algeriabankingindex.com/register" target="_blank" rel="noopener noreferrer" data-track="click_test_free_hero" data-action="demo-cta" class="btn-cta text-base px-7 py-3.5 shadow-xl hover:shadow-2xl transition-all hover:-translate-y-0.5 text-center font-bold">Test for Free</a>
               <a href="#pricing" data-track="click_view_offers" class="inline-flex items-center justify-center text-base px-6 py-3.5 rounded-lg bg-white/10 text-white border border-white/20 hover:bg-white/20 transition-all font-semibold text-center">View Offers</a>
             </div>
             <p class="text-xs text-blue-200/85 flex items-center gap-1.5 pt-1">
@@ -709,7 +709,7 @@
 
       <!-- CTA Box -->
       <div class="text-center bg-white rounded-2xl border border-blue-100 p-8 shadow-md max-w-xl mx-auto space-y-3">
-        <a href="http://localhost:5173/register" data-track="click_test_free_section" data-action="demo-cta" class="btn-cta text-lg px-9 py-4 shadow-lg hover:shadow-xl transition-all hover:-translate-y-0.5 inline-block font-bold">
+        <a href="https://explorer.algeriabankingindex.com/register" target="_blank" rel="noopener noreferrer" data-track="click_test_free_section" data-action="demo-cta" class="btn-cta text-lg px-9 py-4 shadow-lg hover:shadow-xl transition-all hover:-translate-y-0.5 inline-block font-bold">
           Create my DEMO access
         </a>
         <p class="text-xs text-gray-500 flex items-center justify-center gap-1.5">
@@ -741,7 +741,7 @@
           <p class="text-xs text-gray-500 font-medium">DEMO access 2022–2025 — fictitious data</p>
         </div>
         <div class="flex-shrink-0">
-          <a href="http://localhost:5173/register" data-track="click_test_free_pricing" data-action="demo-cta" class="inline-flex items-center justify-center text-sm md:text-base px-6 py-3.5 rounded-xl bg-slate-900 text-white hover:bg-slate-800 font-semibold shadow-md transition-all hover:-translate-y-0.5">
+          <a href="https://explorer.algeriabankingindex.com/register" target="_blank" rel="noopener noreferrer" data-track="click_test_free_pricing" data-action="demo-cta" class="inline-flex items-center justify-center text-sm md:text-base px-6 py-3.5 rounded-xl bg-slate-900 text-white hover:bg-slate-800 font-semibold shadow-md transition-all hover:-translate-y-0.5">
             Test for free
           </a>
         </div>
@@ -788,9 +788,10 @@
             </ul>
           </div>
 
-          <a href="/en/editions/2026/#tarifs" data-track="click_offer_essential" class="w-full text-center py-3.5 px-6 rounded-xl border-2 border-slate-700 text-slate-800 font-bold hover:bg-slate-800 hover:text-white transition-all shadow-sm">
-            Choose Essential Pack
-          </a>
+          <button onclick="openSubscriptionPopup('essential')" data-pack="essential" data-iframe="https://fenekio.com/tandp/ps/forms/wtl/5ba23a9399dbe1484beb72b52e95593f" class="cta-pricing-btn w-full text-center py-3.5 px-6 rounded-xl border-2 border-slate-700 text-slate-800 font-bold hover:bg-slate-800 hover:text-white transition-all shadow-sm flex items-center justify-center gap-2">
+            <svg class="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
+            <span class="cta-text">Choose Essential Pack</span>
+          </button>
         </div>
 
         <!-- PRO CARD -->
@@ -831,9 +832,10 @@
             </ul>
           </div>
 
-          <a href="/en/editions/2026/#tarifs" data-track="click_offer_pro" class="w-full text-center py-3.5 px-6 rounded-xl border-2 border-primary text-primary font-bold hover:bg-primary hover:text-white transition-all shadow-sm">
-            Choose Pack Pro
-          </a>
+          <button onclick="openSubscriptionPopup('pro')" data-pack="pro" data-iframe="https://fenekio.com/tandp/ps/forms/wtl/9c18a26196a5b5630df381113da3d4b2" class="cta-pricing-btn w-full text-center py-3.5 px-6 rounded-xl border-2 border-primary text-primary font-bold hover:bg-primary hover:text-white transition-all shadow-sm flex items-center justify-center gap-2">
+            <svg class="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
+            <span class="cta-text">Choose Pack Pro</span>
+          </button>
         </div>
 
         <!-- CORPORATE CARD -->
@@ -892,9 +894,10 @@
             </ul>
           </div>
 
-          <a href="/en/editions/2026/#tarifs" data-track="click_offer_corporate" class="relative z-10 w-full text-center py-3.5 px-6 rounded-xl btn-cta font-bold shadow-lg transition-all hover:shadow-2xl">
-            Choose Pack Corporate
-          </a>
+          <button onclick="openSubscriptionPopup('corporate')" data-pack="corporate" data-iframe="https://fenekio.com/tandp/ps/forms/wtl/79e33d8596a4c5f745648a74fe76c5c5" class="cta-pricing-btn relative z-10 w-full text-center py-3.5 px-6 rounded-xl btn-cta font-bold shadow-lg transition-all hover:shadow-2xl flex items-center justify-center gap-2">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
+            <span class="cta-text">Choose Pack Corporate</span>
+          </button>
         </div>
       </div>
 
@@ -994,7 +997,7 @@
       <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold font-playfair leading-tight text-white">Banking data shouldn't just be viewed. It should be explored.</h2>
       <p class="text-xl text-blue-200/90 leading-relaxed max-w-3xl mx-auto">With ABIX Data Explorer, move from raw numbers to comparison, from ranking to trajectory, and from data to market understanding.</p>
       <div class="pt-6 flex flex-col sm:flex-row justify-center items-center gap-4">
-        <a href="http://localhost:5173/register" data-track="click_test_free_final" data-action="demo-cta" class="btn-cta text-lg px-10 py-4 shadow-xl hover:-translate-y-1 transition-all">Test for Free</a>
+        <a href="https://explorer.algeriabankingindex.com/register" target="_blank" rel="noopener noreferrer" data-track="click_test_free_final" data-action="demo-cta" class="btn-cta text-lg px-10 py-4 shadow-xl hover:-translate-y-1 transition-all">Test for Free</a>
         <a href="/en/editions/2026/#tarifs" data-track="click_offers_final" class="inline-flex items-center justify-center text-lg px-10 py-4 rounded-lg bg-white/10 text-white border border-white/20 hover:bg-white/20 transition-all font-semibold">View Offers</a>
       </div>
     </div>
@@ -1015,6 +1018,71 @@
   </div>
 </footer>
 
+<!-- MODAL PRÉCOMMANDE 2026 -->
+<div id="preorderModal" class="fixed inset-0 bg-slate-950/80 backdrop-blur-sm z-50 hidden flex items-center justify-center p-2 sm:p-4" role="dialog" aria-modal="true" aria-labelledby="preorderModalTitle">
+  <div class="bg-slate-900 text-white rounded-3xl max-w-2xl w-full max-h-[95vh] flex flex-col border border-amber-400/30 shadow-2xl relative overflow-hidden">
+    <div class="p-4 sm:p-5 border-b border-gray-800 flex items-center justify-between bg-slate-900/90 flex-shrink-0">
+      <div>
+        <span class="inline-block bg-amber-400/20 text-amber-300 text-[11px] font-bold px-3 py-0.5 rounded-full border border-amber-400/30 mb-1">-10% until Aug 31</span>
+        <h3 id="preorderModalTitle" class="text-lg font-bold text-white font-playfair">Early Subscription Form</h3>
+        <!-- Détails dynamiques de l'offre (i18n) -->
+        <div id="preorderModalDetails-essential" class="preorder-details hidden mt-2 text-sm text-gray-300">
+          <p class="text-xs text-gray-400">1 user · Secured PDF · Data Explorer 2025</p>
+          <div class="flex items-center gap-2 mt-1">
+            <span class="line-through text-xs text-gray-500">84,000 DA HT</span>
+            <span class="text-[11px] font-bold bg-amber-400/20 text-amber-300 px-2 py-0.5 rounded border border-amber-400/30">-10% until Aug 31</span>
+          </div>
+          <p class="text-lg font-bold text-amber-300 mt-1">75,600 DA HT</p>
+          <p class="text-xs text-emerald-400 font-semibold">Save 8,400 DA HT</p>
+        </div>
+        <div id="preorderModalDetails-pro" class="preorder-details hidden mt-2 text-sm text-gray-300">
+          <p class="text-xs text-gray-400">Up to 3 users · Excel · Data Explorer 2024–2025</p>
+          <div class="flex items-center gap-2 mt-1">
+            <span class="line-through text-xs text-gray-500">120,000 DA HT</span>
+            <span class="text-[11px] font-bold bg-amber-400/20 text-amber-300 px-2 py-0.5 rounded border border-amber-400/30">-10% until Aug 31</span>
+          </div>
+          <p class="text-lg font-bold text-amber-300 mt-1">108,000 DA HT</p>
+          <p class="text-xs text-emerald-400 font-semibold">Save 12,000 DA HT</p>
+        </div>
+        <div id="preorderModalDetails-corporate" class="preorder-details hidden mt-2 text-sm text-gray-300">
+          <p class="text-xs text-gray-400">Up to 20 users · Data Explorer Executive 2022–2025</p>
+          <div class="flex items-center gap-2 mt-1">
+            <span class="line-through text-xs text-gray-500">180,000 DA HT</span>
+            <span class="text-[11px] font-bold bg-amber-400/20 text-amber-300 px-2 py-0.5 rounded border border-amber-400/30">-10% until Aug 31</span>
+          </div>
+          <p class="text-lg font-bold text-amber-300 mt-1">162,000 DA HT</p>
+          <p class="text-xs text-emerald-400 font-semibold">Save 18,000 DA HT</p>
+        </div>
+      </div>
+      <button onclick="closePreorder()" class="text-gray-400 hover:text-white transition-colors p-2 rounded-xl hover:bg-slate-800" aria-label="Close">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <div class="flex-1 w-full bg-white overflow-y-auto min-h-[600px]">
+      <iframe id="preorderIframe" width="600" height="850" src="" frameborder="0" sandbox="allow-top-navigation allow-forms allow-scripts allow-same-origin allow-popups" allowfullscreen class="w-full h-full min-h-[850px] border-0"></iframe>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL POLITIQUE DE CONFIDENTIALITÉ -->
+<div id="privacyModal" class="fixed inset-0 bg-slate-950/70 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden" role="dialog" aria-modal="true">
+  <div class="bg-white text-gray-900 rounded-2xl p-6 sm:p-8 max-w-3xl w-full border border-gray-200 shadow-2xl relative max-h-[90vh] flex flex-col space-y-4">
+    <div class="flex items-center justify-between border-b border-gray-100 pb-4">
+      <h3 class="text-xl font-bold font-playfair text-gray-900">Privacy Policy — Tadjeddine & Partners</h3>
+      <button onclick="closePrivacyModal()" class="text-gray-400 hover:text-gray-600 transition-colors p-1 rounded-lg hover:bg-gray-100" aria-label="Close">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <div class="flex-1 overflow-y-auto min-h-[350px]">
+      <iframe src="https://tadjeddine-partners.com/politique-confidentialite/" class="w-full h-[450px] border border-gray-200 rounded-xl"></iframe>
+    </div>
+    <div class="pt-4 border-t border-gray-100 flex items-center justify-between gap-3">
+      <a href="https://tadjeddine-partners.com/politique-confidentialite/" target="_blank" rel="noopener" class="text-xs font-semibold text-primary hover:underline flex items-center gap-1">Ouvrir dans un nouvel onglet ↗</a>
+      <button onclick="closePrivacyModal()" class="btn-cta-sm py-2 px-5">Close</button>
+    </div>
+  </div>
+</div>
+
 <!-- Dynamic Authentication State Detection -->
 <script>
   document.addEventListener('DOMContentLoaded', function () {
@@ -1032,7 +1100,9 @@
         var demoCtaElements = document.querySelectorAll('[data-action="demo-cta"]');
         demoCtaElements.forEach(function (btn) {
           btn.textContent = "Access my DEMO";
-          btn.href = "http://localhost:5173/";
+          btn.href = "https://explorer.algeriabankingindex.com/";
+          btn.target = "_blank";
+          btn.rel = "noopener noreferrer";
         });
       }
     } catch (e) {}
