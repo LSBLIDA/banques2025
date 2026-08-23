@@ -1,5 +1,5 @@
 /**
- * ABIX — Script de validation et de test automatisé pour la page Transparence 2025
+ * ABIX — Script de validation et de test automatisé pour la page Disponibilité 2025
  */
 
 const fs = require('fs');
@@ -20,7 +20,7 @@ function assert(condition, message) {
 }
 
 console.log("=================================================================");
-console.log("ABIX — Exécution de la suite de validation Transparence 2025");
+console.log("ABIX — Validation éditoriale & technique : Disponibilité 2025");
 console.log("=================================================================\n");
 
 // ── 1. TEST DU FICHIER SOURCE DATA ─────────────────────────────────────────────
@@ -72,12 +72,13 @@ locales.forEach(lang => {
   assert(t.meta && t.meta.title && t.meta.description, `transparency2025.meta complet en ${lang}.`);
   assert(t.hero && t.hero.title && t.hero.subtitle && t.hero.kpiDistinction, `transparency2025.hero complet en ${lang}.`);
   assert(t.why && t.why.title && t.why.collaboration, `transparency2025.why complet en ${lang}.`);
-  assert(t.methodology && t.methodology.title && t.methodology.disclaimerText, `transparency2025.methodology complet en ${lang}.`);
+  assert(t.methodology && t.methodology.title && t.methodology.disclaimerText && t.methodology.stateAtDateText, `transparency2025.methodology complet en ${lang}.`);
   assert(t.stats && t.stats.avgScoreLabel && t.stats.zeroScoreExplanation, `transparency2025.stats complet en ${lang}.`);
   assert(t.ranking && t.ranking.title && t.ranking.notScoredBadge, `transparency2025.ranking complet en ${lang}.`);
   assert(t.table && t.table.title && t.table.colBank, `transparency2025.table complet en ${lang}.`);
+  assert(t.updateReport && t.updateReport.title && t.updateReport.cta, `transparency2025.updateReport complet en ${lang}.`);
   assert(t.insights && t.insights.title && t.insights.paragraph1, `transparency2025.insights complet en ${lang}.`);
-  assert(t.future && t.future.title && t.future.teaser2026, `transparency2025.future complet en ${lang}.`);
+  assert(t.future && t.future.title && t.future.paragraph1, `transparency2025.future complet en ${lang}.`);
   assert(t.cta && t.cta.title && t.cta.ctaExplorer, `transparency2025.cta complet en ${lang}.`);
 });
 
@@ -103,7 +104,6 @@ compiledTargets.forEach(({ lang, relPath }) => {
   // Pas de "null", "undefined", "NaN"
   assert(!html.includes('undefined'), `Pas de "undefined" visible dans ${relPath}.`);
   assert(!html.includes('NaN'), `Pas de "NaN" dans ${relPath}.`);
-  // Vérifier qu'il n'y a pas "null" comme texte textuel dans les cellules
   assert(!html.includes('>null<') && !html.includes('> null <'), `Pas de ">null<" dans ${relPath}.`);
 
   // Vérification de Ziraat
@@ -114,15 +114,20 @@ compiledTargets.forEach(({ lang, relPath }) => {
   assert(!html.includes('Sekak Conseils'), `Absence de "Sekak Conseils" dans ${relPath}.`);
   assert(!html.includes('SEKAK CONSEILS'), `Absence de "SEKAK CONSEILS" dans ${relPath}.`);
   assert(!html.includes('banque opaque') && !html.includes('banques opaques'), `Absence de "banque opaque" dans ${relPath}.`);
+  assert(!html.includes('non transparente') && !html.includes('manque de transparence'), `Absence de "non transparente/manque de transparence" dans ${relPath}.`);
   assert(!html.includes('non conforme'), `Absence de "non conforme" dans ${relPath}.`);
-  assert(!html.includes('meilleure banque'), `Absence de "meilleure banque" dans ${relPath}.`);
-  assert(!html.includes('pire banque'), `Absence de "pire banque" dans ${relPath}.`);
-  assert(!html.includes('qualité des comptes'), `Absence de "qualité des comptes" dans ${relPath}.`);
+  assert(!html.includes('meilleure banque') && !html.includes('meilleures banques'), `Absence de "meilleure banque" dans ${relPath}.`);
+  assert(!html.includes('pire banque') && !html.includes('pires banques'), `Absence de "pire banque" dans ${relPath}.`);
+  assert(!html.includes('qualité des comptes') && !html.includes('qualité de l’information'), `Absence de "qualité des comptes" dans ${relPath}.`);
+  assert(!html.includes('mauvaise gouvernance'), `Absence de "mauvaise gouvernance" dans ${relPath}.`);
+  assert(!html.includes('mauvaise transparence'), `Absence de "mauvaise transparence" dans ${relPath}.`);
+  assert(!html.includes('classement des banques'), `Absence de "classement des banques" dans ${relPath}.`);
   assert(!html.includes('FinancialReport'), `Absence de "FinancialReport" dans ${relPath} (Article et Dataset privilégiés).`);
 
-  // Termes obligatoires
+  // Termes et composants obligatoires
   assert(html.includes('Sekak Rachid') || html.includes('سكاك رشيد'), `Attribution de la collaboration à M. Sekak Rachid dans ${relPath}.`);
   assert(html.includes('20') && html.includes('1'), `Distinction 20 scorés / 1 non scoré présente dans ${relPath}.`);
+  assert(html.includes('mailto:info@tadjeddine-partners.com'), `Bloc de mise à jour / rectification présent dans ${relPath}.`);
 });
 
 console.log("\n=================================================================");

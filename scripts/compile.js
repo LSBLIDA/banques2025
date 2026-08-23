@@ -286,7 +286,7 @@ function buildMainNav(lang, pageKey, translations, langSwitcher, mobileLangSwitc
             </a>
             <a href="${BASE_PATH}/${lang}/insights/transparence-information-financiere-2025/" class="dropdown-item${isTransparencyActive}">
               <span class="dropdown-badge dropdown-badge--avail">${insightBadge}</span>
-              ${tNav.transparency2025 || "Transparence financière 2025"}
+              ${tNav.transparency2025 || "Disponibilité financière 2025"}
             </a>
           </div>
         </div>
@@ -356,7 +356,7 @@ function buildMainNav(lang, pageKey, translations, langSwitcher, mobileLangSwitc
           <a href="${BASE_PATH}/${lang}/methodologie/" class="mobile-nav-link${pageKey === 'methodology' ? ' mobile-nav-link--active' : ''}">${tNav.methodology || "Méthodologie"}</a>
           <a href="${BASE_PATH}/${lang}/questionnaire/" class="mobile-nav-link${pageKey === 'questionnaire' ? ' mobile-nav-link--active' : ''}">${tNav.barometer2026 || "Baromètre e-banking 2026"}</a>
           <a href="${BASE_PATH}/${lang}/insights/transparence-information-financiere-2025/" class="mobile-nav-link flex items-center justify-between${pageKey === 'transparency2025' ? ' mobile-nav-link--active' : ''}">
-            <span>${tNav.transparency2025 || "Transparence financière 2025"}</span>
+            <span>${tNav.transparency2025 || "Disponibilité de l’information financière 2025"}</span>
             <span class="dropdown-badge dropdown-badge--avail">${insightBadge}</span>
           </a>
         </div>

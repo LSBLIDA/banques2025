@@ -272,7 +272,7 @@ function buildStructuredData(lang, translations, canonicalUrl) {
           "name": "ABIX — Algeria Banking Index",
           "url": "https://algeriabankingindex.com"
         },
-        "headline": meta.title || "Transparence de l'information financière des banques algériennes 2025",
+        "headline": meta.title || "Disponibilité de l'information financière des banques algériennes 2025",
         "description": meta.description || "",
         "inLanguage": lang,
         "datePublished": "2025-01-01",
@@ -290,7 +290,7 @@ function buildStructuredData(lang, translations, canonicalUrl) {
       {
         "@type": "Dataset",
         "@id": `${canonicalUrl}#dataset`,
-        "name": meta.title || "Indice ABIX de transparence de l'information financière 2025",
+        "name": meta.title || "Indice ABIX de disponibilité de l'information financière 2025",
         "description": meta.description || "",
         "inLanguage": lang,
         "license": "https://algeriabankingindex.com/fr/conditions-utilisation/",

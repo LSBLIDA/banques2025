@@ -108,7 +108,7 @@
     "ctaNotify": "Être informé de la parution 2026",
     "langSelectLabel": "Langue",
     "report2023Path": "editions/rapport-2023/",
-    "transparency2025": "Transparence financière 2025"
+    "transparency2025": "Disponibilité de l’information financière 2025"
   },
   "home": {
     "meta": {
@@ -1896,13 +1896,13 @@
   },
   "transparency2025": {
     "meta": {
-      "title": "Transparence de l'information financière des banques algériennes 2025 | ABIX",
-      "description": "Analyse ABIX de la disponibilité et de l'actualité des états financiers et rapports d’activité publiés par les banques algériennes sur leurs sites officiels."
+      "title": "Disponibilité de l'information financière des banques algériennes 2025 | ABIX",
+      "description": "État des lieux ABIX de la disponibilité et de l'actualité des états financiers et rapports d'activité publiés sur les sites officiels des banques algériennes."
     },
     "hero": {
       "badge": "Édition 2025 · Insight ABIX",
       "brandMention": "Une analyse ABIX – Algeria Banking Index",
-      "title": "Transparence de l’information financière des banques algériennes",
+      "title": "Disponibilité de l’information financière des banques algériennes",
       "subtitle": "Disponibilité et actualité des états financiers et rapports d’activité publiés sur les sites officiels des établissements bancaires.",
       "kpiAnalyzed": "21",
       "kpiAnalyzedLabel": "Banques analysées",
@@ -1916,9 +1916,9 @@
     },
     "why": {
       "title": "Pourquoi cette analyse ?",
-      "paragraph1": "La disponibilité de l’information financière constitue une dimension importante de la transparence d’un établissement bancaire.",
+      "paragraph1": "La disponibilité de l’information financière constitue une dimension importante de l'observation d’un établissement bancaire.",
       "paragraph2": "Au-delà de l’analyse des performances financières, ABIX s’intéresse également à la manière dont les établissements mettent à disposition du public leurs comptes et leurs rapports d’activité.",
-      "paragraph3": "Cette analyse examine leur disponibilité et leur niveau d’actualité sur les sites officiels des banques étudiées.",
+      "paragraph3": "Cette analyse dresse un état des lieux de leur disponibilité et de leur niveau d’actualité sur les sites officiels des banques étudiées.",
       "collaboration": "Analyse réalisée dans le cadre d’ABIX – Algeria Banking Index, avec la contribution de M. Sekak Rachid."
     },
     "methodology": {
@@ -1935,9 +1935,11 @@
       "globalScoreTitle": "Score global",
       "globalScoreFormula": "Comptes + Rapport d’activité = score sur 6",
       "globalScoreNote": "Le score vise à mesurer la disponibilité digitale de l’information observée, et non la qualité intrinsèque du contenu publié.",
-      "disclaimerTitle": "À propos de l’interprétation des résultats",
-      "disclaimerText": "Cette analyse porte exclusivement sur les informations identifiées sur les sites officiels des établissements lors de la période d’observation. L’absence d’un document sur le site internet ne signifie pas nécessairement qu’il n’a pas été produit, transmis aux autorités compétentes ou publié par un autre canal. Le score mesure donc la disponibilité et l’accessibilité digitale de l’information, et non la qualité intrinsèque des comptes ou la conformité réglementaire de l’établissement.",
-      "observationPeriod": "Périmètre d’analyse : édition 2025"
+      "disclaimerTitle": "Comment lire ces résultats ?",
+      "disclaimerText": "Cette analyse porte exclusivement sur les informations identifiées sur les sites officiels des établissements dans le cadre de la revue menée par ABIX. L’absence d’un document identifié sur le site ne signifie pas nécessairement que celui-ci n’a pas été produit, transmis aux autorités compétentes ou diffusé par un autre canal. Le score mesure la disponibilité et l’actualité de l’information accessible en ligne. Il ne constitue ni une appréciation de la qualité intrinsèque des comptes, ni une évaluation de la conformité réglementaire, de la gouvernance ou de la solidité financière de l’établissement.",
+      "stateAtDateTitle": "État des lieux au moment de l'analyse",
+      "stateAtDateText": "Les résultats constituent un état des lieux des informations identifiées sur les sites officiels des établissements au moment de l’analyse. Les sites bancaires étant susceptibles d’évoluer, les résultats peuvent être actualisés lorsqu’un établissement met à disposition de nouveaux documents ou nous signale une information qui n’aurait pas été identifiée lors de la revue.",
+      "observationPeriod": "État des lieux — édition 2025"
     },
     "stats": {
       "title": "Statistiques de synthèse",
@@ -1952,12 +1954,12 @@
       "highScoreLabel": "Établissements avec au moins 5 / 6",
       "zeroScoreCount": "9",
       "zeroScoreLabel": "Établissements sans document identifié dans les deux dimensions (0/6)",
-      "zeroScoreExplanation": "Pour ces 9 établissements, aucun document correspondant aux dimensions étudiées n'a été identifié sur leur site officiel dans le cadre de l'analyse."
+      "zeroScoreExplanation": "Pour ces 9 établissements, aucun document correspondant aux deux dimensions étudiées n’a été identifié sur le site officiel dans le cadre de l’analyse."
     },
     "ranking": {
       "title": "Résultats 2025",
-      "subtitle": "Classement graphique des établissements scorés selon leur indice global de disponibilité digitale.",
-      "equalScoreNote": "Les établissements ayant obtenu un score identique sont présentés à égalité sans hiérarchisation qualitative.",
+      "subtitle": "Niveau de disponibilité observé pour les établissements scorés selon leur indice global de disponibilité digitale.",
+      "equalScoreNote": "Les établissements ayant obtenu un score identique présentent le même niveau de disponibilité observé et sont affichés à égalité sans hiérarchisation qualitative.",
       "outOfSix": "/ 6",
       "notScoredSectionTitle": "Établissement non scoré",
       "notScoredBankName": "Ziraat Bankası Algeria",
@@ -1966,7 +1968,7 @@
     },
     "distribution": {
       "title": "Distribution des scores",
-      "subtitle": "Répartition des 20 établissements scorés selon le score global obtenu sur 6 points.",
+      "subtitle": "Répartition des 20 établissements scorés selon le niveau de score obtenu sur 6 points.",
       "scoreLabel": "Score obtenu",
       "banksLabel": "Nombre d'établissements",
       "item0": "9 banques (Score 0 / 6)",
@@ -1976,13 +1978,13 @@
       "item6": "3 banques (Score 6 / 6)"
     },
     "table": {
-      "title": "Tableau détaillé des résultats",
+      "title": "Résultats par établissement",
       "subtitle": "Détail des scores par dimension et observations relevées pour l'ensemble des 21 établissements analysés.",
       "searchPlaceholder": "Rechercher une banque...",
       "filterAll": "Toutes les banques (21)",
       "filterScored": "Banques scorées (20)",
       "filterMax": "Score maximal 6/6 (3)",
-      "colBank": "Banque",
+      "colBank": "Établissement",
       "colStatements": "Comptes sur site",
       "colActivityReport": "Rapport d’activité",
       "colGlobalScore": "Score global",
@@ -1992,18 +1994,23 @@
       "notScored": "Non scorée",
       "noObservation": "—"
     },
+    "updateReport": {
+      "title": "Une information à compléter ou à actualiser ?",
+      "text": "ABIX souhaite maintenir cet état des lieux aussi précis et actualisé que possible. Les établissements concernés peuvent nous signaler toute publication, mise à jour ou information qui n’aurait pas été identifiée lors de notre analyse.",
+      "cta": "Signaler une mise à jour",
+      "emailSubject": "Mise à jour — Disponibilité de l’information financière ABIX 2025"
+    },
     "insights": {
-      "title": "Ce que révèlent les résultats",
-      "paragraph1": "Les résultats montrent une forte hétérogénéité dans la disponibilité de l’information financière en ligne.",
-      "paragraph2": "Plusieurs établissements mettent à disposition des documents récents et relativement accessibles, tandis que d’autres présentent une information plus limitée ou plus ancienne sur leur site officiel.",
-      "paragraph3": "L’analyse fait également apparaître un groupe d’établissements pour lesquels aucun document correspondant aux deux dimensions étudiées n’a été identifié sur leur site dans le cadre de la revue."
+      "title": "Ce que montrent les résultats",
+      "paragraph1": "Les résultats font apparaître des pratiques hétérogènes en matière de mise à disposition de l’information financière sur les sites des établissements bancaires.",
+      "paragraph2": "Plusieurs banques proposent des états financiers et rapports d’activité récents facilement accessibles, tandis que pour d’autres établissements, l’information identifiée est plus ancienne, partielle ou n’a pas été retrouvée dans le cadre de la revue.",
+      "paragraph3": "Cet état des lieux illustre l’intérêt d’intégrer la disponibilité de l’information publiée parmi les nouvelles dimensions d’observation du secteur bancaire algérien."
     },
     "future": {
       "title": "ABIX élargit son champ d’analyse",
       "paragraph1": "ABIX – Algeria Banking Index ne se limite plus à l’analyse des performances financières des établissements.",
-      "paragraph2": "L’écosystème évolue progressivement vers une lecture plus large du secteur bancaire algérien, intégrant également des dimensions liées à l’information publiée et à l’expérience des utilisateurs des services bancaires.",
-      "paragraph3": "Cette analyse de la disponibilité de l’information financière constitue l’une de ces nouvelles dimensions.",
-      "teaser2026": "Ces nouveaux travaux viendront enrichir l’édition 2026 de l’étude sectorielle ABIX."
+      "paragraph2": "L’écosystème évolue vers une lecture plus large du secteur bancaire algérien, intégrant progressivement de nouvelles dimensions d’analyse, notamment la disponibilité de l’information publiée et l’expérience des utilisateurs des services bancaires.",
+      "paragraph3": "Ce nouvel état des lieux constitue l’une des dimensions qui viendront enrichir l’édition 2026."
     },
     "cta": {
       "title": "Poursuivre l’exploration avec ABIX",

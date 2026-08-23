@@ -178,7 +178,7 @@
       </div>
 
       <!-- Encadré méthodologique obligatoire (Disclaimer) -->
-      <div class="bg-blue-50/70 border border-blue-200 rounded-2xl p-6 sm:p-8 space-y-3">
+      <div class="bg-blue-50/70 border border-blue-200 rounded-2xl p-6 sm:p-8 space-y-4">
         <div class="flex items-center gap-3 text-blue-950 font-bold text-lg">
           <svg class="w-6 h-6 text-blue-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
           <h3>{{transparency2025.methodology.disclaimerTitle}}</h3>
@@ -186,7 +186,13 @@
         <p class="text-xs sm:text-sm text-blue-900/90 leading-relaxed">
           {{transparency2025.methodology.disclaimerText}}
         </p>
-        <div class="pt-2">
+        <div class="pt-3 border-t border-blue-200/60 space-y-1.5">
+          <h4 class="text-xs sm:text-sm font-bold text-blue-950">{{transparency2025.methodology.stateAtDateTitle}}</h4>
+          <p class="text-xs sm:text-sm text-blue-900/80 leading-relaxed">
+            {{transparency2025.methodology.stateAtDateText}}
+          </p>
+        </div>
+        <div class="pt-1">
           <span class="text-xs font-semibold text-blue-700 bg-white/80 px-2.5 py-1 rounded border border-blue-200">
             {{transparency2025.methodology.observationPeriod}}
           </span>
@@ -327,6 +333,22 @@
             </tbody>
           </table>
         </div>
+      </div>
+
+      <!-- Bloc signalement d'une mise à jour -->
+      <div class="bg-white rounded-2xl p-6 sm:p-8 border border-gray-200/80 shadow-xs flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+        <div class="space-y-2 max-w-2xl">
+          <h3 class="text-lg sm:text-xl font-bold font-playfair text-gray-900">
+            {{transparency2025.updateReport.title}}
+          </h3>
+          <p class="text-xs sm:text-sm text-gray-600 leading-relaxed">
+            {{transparency2025.updateReport.text}}
+          </p>
+        </div>
+        <a href="mailto:info@tadjeddine-partners.com?subject={{transparency2025.updateReport.emailSubject}}" class="btn-outline text-xs sm:text-sm whitespace-nowrap inline-flex items-center gap-2 flex-shrink-0">
+          <svg class="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+          {{transparency2025.updateReport.cta}}
+        </a>
       </div>
     </div>
   </section>
