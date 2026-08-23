@@ -33,7 +33,8 @@
     "ctaStudy": "Get the Report",
     "ctaNotify": "Be notified of 2026 release",
     "langSelectLabel": "Language",
-    "report2023Path": "editions/report-2023/"
+    "report2023Path": "editions/report-2023/",
+    "transparency2025": "Financial Transparency 2025"
   },
   "home": {
     "meta": {
@@ -1887,6 +1888,133 @@
       "title": "Freely Access Our First Publication",
       "text": "The 2023 Algerian Banking Sector Report remains freely accessible in its entirety.",
       "cta": "Download 2023 Report"
+    }
+  },
+  "transparency2025": {
+    "meta": {
+      "title": "Financial Information Transparency of Algerian Banks 2025 | ABIX",
+      "description": "ABIX analysis of the availability and timeliness of financial statements and annual activity reports published by Algerian banks on their official websites."
+    },
+    "hero": {
+      "badge": "2025 Edition · ABIX Insight",
+      "brandMention": "An ABIX Analysis – Algeria Banking Index",
+      "title": "Financial Information Transparency of Algerian Banks",
+      "subtitle": "Availability and timeliness of financial statements and annual activity reports published on official banking websites.",
+      "kpiAnalyzed": "21",
+      "kpiAnalyzedLabel": "Banks Analyzed",
+      "kpiDimensions": "2",
+      "kpiDimensionsLabel": "Observed Dimensions",
+      "kpiMaxScore": "6 points",
+      "kpiMaxScoreLabel": "Maximum Score",
+      "kpiDistinction": "20 scored institutions • 1 not scored institution",
+      "ctaDiscover": "View Results",
+      "ctaMethodology": "Methodology"
+    },
+    "why": {
+      "title": "Why this analysis?",
+      "paragraph1": "The availability of financial information represents a significant dimension of a banking institution's transparency.",
+      "paragraph2": "Beyond the analysis of financial performance, ABIX also examines how institutions make their financial statements and activity reports accessible to the general public.",
+      "paragraph3": "This analysis reviews their availability and level of timeliness on the official websites of the surveyed banks.",
+      "collaboration": "Analysis carried out within the framework of ABIX – Algeria Banking Index, with the contribution of Mr. Sekak Rachid."
+    },
+    "methodology": {
+      "title": "Methodology",
+      "subtitle": "A standardized assessment measuring the public accessibility of two core benchmark documents on official websites.",
+      "dim1Num": "01",
+      "dim1Title": "Publication of financial statements on website",
+      "dim1Max": "Maximum score: 3 points",
+      "dim1Body": "Evaluation of the availability and timeliness of financial statements published on the institution's official website.",
+      "dim2Num": "02",
+      "dim2Title": "Publication of activity report on website",
+      "dim2Max": "Maximum score: 3 points",
+      "dim2Body": "Evaluation of the availability and timeliness of the annual activity report accessible on the institution's official website.",
+      "globalScoreTitle": "Overall score",
+      "globalScoreFormula": "Financial Statements + Activity Report = score out of 6",
+      "globalScoreNote": "The score aims to measure the digital availability of the observed information, and not the intrinsic quality of the published content.",
+      "disclaimerTitle": "Regarding the interpretation of results",
+      "disclaimerText": "This analysis focuses exclusively on information identified on the official websites of the institutions during the observation period. The absence of a document on a website does not necessarily mean that it has not been produced, submitted to competent authorities, or published through other channels. The score thus measures digital availability and accessibility, and not the intrinsic quality of accounts or regulatory compliance.",
+      "observationPeriod": "Scope of analysis: 2025 Edition"
+    },
+    "stats": {
+      "title": "Summary Statistics",
+      "subtitle": "Key indicators derived from the observation of the 20 scored banking institutions.",
+      "avgScore": "2.7 / 6",
+      "avgScoreLabel": "Average score of scored institutions",
+      "medianScore": "3.0 / 6",
+      "medianScoreLabel": "Median of scored institutions",
+      "maxScoreCount": "3",
+      "maxScoreLabel": "Institutions with maximum score (6/6)",
+      "highScoreCount": "9",
+      "highScoreLabel": "Institutions with at least 5 / 6",
+      "zeroScoreCount": "9",
+      "zeroScoreLabel": "Institutions with no document identified in both dimensions (0/6)",
+      "zeroScoreExplanation": "For these 9 institutions, no document corresponding to the surveyed dimensions was identified on their official website as part of the review."
+    },
+    "ranking": {
+      "title": "2025 Results",
+      "subtitle": "Visual ranking of scored banking institutions sorted by descending overall digital availability score.",
+      "equalScoreNote": "Institutions with identical scores are presented equally without artificial qualitative ranking.",
+      "outOfSix": "/ 6",
+      "notScoredSectionTitle": "Not Scored Institution",
+      "notScoredBankName": "Ziraat Bankası Algeria",
+      "notScoredBadge": "Not Scored",
+      "notScoredNote": "Not significant within the scope of the source analysis."
+    },
+    "distribution": {
+      "title": "Score Distribution",
+      "subtitle": "Breakdown of the 20 scored institutions across the 6-point overall scoring scale.",
+      "scoreLabel": "Obtained Score",
+      "banksLabel": "Number of Institutions",
+      "item0": "9 banks (Score 0 / 6)",
+      "item2": "1 bank (Score 2 / 6)",
+      "item4": "1 bank (Score 4 / 6)",
+      "item5": "6 banks (Score 5 / 6)",
+      "item6": "3 banks (Score 6 / 6)"
+    },
+    "table": {
+      "title": "Detailed Results Table",
+      "subtitle": "Breakdown of scores by dimension and recorded observations for all 21 analyzed institutions.",
+      "searchPlaceholder": "Search for a bank...",
+      "filterAll": "All banks (21)",
+      "filterScored": "Scored banks (20)",
+      "filterMax": "Max score 6/6 (3)",
+      "colBank": "Bank",
+      "colStatements": "Statements on site",
+      "colActivityReport": "Activity Report",
+      "colGlobalScore": "Overall Score",
+      "colObservation": "Observation",
+      "outOfThree": "/ 3",
+      "outOfSix": "/ 6",
+      "notScored": "Not Scored",
+      "noObservation": "—"
+    },
+    "insights": {
+      "title": "What the results reveal",
+      "paragraph1": "The results demonstrate substantial heterogeneity in the online availability of financial information.",
+      "paragraph2": "Several institutions provide recent and relatively accessible documents, while others present more limited or older information on their official website.",
+      "paragraph3": "The analysis also highlights a group of institutions for which no document corresponding to the two studied dimensions was identified on their website during the review."
+    },
+    "future": {
+      "title": "ABIX expands its scope of analysis",
+      "paragraph1": "ABIX – Algeria Banking Index is no longer limited solely to the analysis of financial performance.",
+      "paragraph2": "The ecosystem is progressively evolving towards a broader perspective on the Algerian banking sector, integrating dimensions related to published information and customer experience.",
+      "paragraph3": "This analysis of financial information availability constitutes one of these new dimensions.",
+      "teaser2026": "These new research dimensions will enrich the 2026 edition of the ABIX sector study."
+    },
+    "cta": {
+      "title": "Continue exploring with ABIX",
+      "subtitle": "Discover our interactive banking data platform and flagship sector research studies.",
+      "ctaExplorer": "Discover ABIX Data Explorer",
+      "ctaStudy": "Discover ABIX Sector Study",
+      "ctaNotify": "Be notified of 2026 release"
+    },
+    "observations": {
+      "retard": "Delay",
+      "retard1year": "Delay over 1 year",
+      "slightDelay": "Slight delay",
+      "downloadPossible": "Download available",
+      "lastReport2021": "Latest identified report: 2021",
+      "notSignificant": "Not significant within the scope of the source analysis."
     }
   }
 }

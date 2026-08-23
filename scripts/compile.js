@@ -26,6 +26,7 @@ const basePathArg = hasBasePath ? args[args.indexOf("--basePath") + 1] : "";
 const BASE_PATH = (basePathArg || "").replace(/\/$/, ""); // Supprime le slash final si présent
 
 const SITE_CONFIG = require("../js/site-config.js");
+const transparencyBuilder = require("./transparency-builder.js");
 
 
 // ── Chemins de base ────────────────────────────────────────────────────────────
@@ -52,6 +53,7 @@ const PAGES = [
   { template: "conditions-utilisation.html", output: "conditions-utilisation/index.html", titleKey: "cgu" },
   { template: "politique-confidentialite.html", output: "politique-confidentialite/index.html", titleKey: "privacy" },
   { template: "data-explorer.html", output: "data-explorer/index.html", titleKey: "dataExplorer" },
+  { template: "transparence-information-financiere-2025.html", output: "insights/transparence-information-financiere-2025/index.html", titleKey: "transparency2025" },
 ];
 
 // ── Fonctions utilitaires ──────────────────────────────────────────────────────
@@ -164,18 +166,30 @@ function injectConfigVars(html, lang, outputPath, pageKey, translations) {
   const mobileLangSwitcher = buildMobileLangSwitcher(lang, outputPath);
   const mainNavHtml = buildMainNav(lang, pageKey, translations, langSwitcher, mobileLangSwitcher);
   const canonicalPath = outputPath.endsWith("index.html") ? outputPath.replace("index.html", "") : outputPath;
+  const canonicalUrl = `${SITE_CONFIG.domain}/${lang}/${canonicalPath}`.replace(/\/+/g, "/").replace(":/", "://");
 
-  return html
+  let res = html
     .replace(/<nav id="main-nav"[\s\S]*?<\/nav>/gi, mainNavHtml)
     .replace(/\{\{__mainNav\}\}/g, mainNavHtml)
     .replace(/\{\{__lang\}\}/g, lang)
     .replace(/\{\{__dir\}\}/g, dir)
     .replace(/\{\{__langClass\}\}/g, langClass)
     .replace(/\{\{__hreflang\}\}/g, hreflang)
-    .replace(/\{\{__canonical\}\}/g, `${SITE_CONFIG.domain}/${lang}/${canonicalPath}`.replace(/\/+/g, "/").replace(":/", "://"))
+    .replace(/\{\{__canonical\}\}/g, canonicalUrl)
     .replace(/\{\{__langSwitcher\}\}/g, langSwitcher)
     .replace(/\{\{__currentEdition\}\}/g, SITE_CONFIG.currentEdition)
     .replace(/\{\{__basePath\}\}/g, BASE_PATH);
+
+  if (pageKey === "transparency2025") {
+    res = res
+      .replace(/\{\{__transparencyRankingHtml\}\}/g, transparencyBuilder.buildRankingHtml(lang, translations, BASE_PATH))
+      .replace(/\{\{__transparencyNotScoredHtml\}\}/g, transparencyBuilder.buildNotScoredHtml(lang, translations, BASE_PATH))
+      .replace(/\{\{__transparencyDistributionHtml\}\}/g, transparencyBuilder.buildDistributionHtml(lang, translations))
+      .replace(/\{\{__transparencyTableHtml\}\}/g, transparencyBuilder.buildTableHtml(lang, translations, BASE_PATH))
+      .replace(/\{\{__transparencyStructuredData\}\}/g, transparencyBuilder.buildStructuredData(lang, translations, canonicalUrl));
+  }
+
+  return res;
 }
 
 /**
@@ -189,7 +203,7 @@ function buildMainNav(lang, pageKey, translations, langSwitcher, mobileLangSwitc
 
   const isHomeActive = pageKey === "home" ? " nav-link--active" : "";
   const isEditionsActive = (pageKey === "edition2026" || pageKey === "edition2025" || pageKey === "rapport2023" || pageKey === "rankings" || pageKey === "banks") ? " nav-link--active" : "";
-  const isStudyActive = (pageKey === "methodology" || pageKey === "questionnaire") ? " nav-link--active" : "";
+  const isStudyActive = (pageKey === "methodology" || pageKey === "questionnaire" || pageKey === "transparency2025") ? " nav-link--active" : "";
   const isAbixIndexActive = pageKey === "abixIndex" ? " nav-link--active" : "";
   const isDataExplorerActive = pageKey === "dataExplorer" ? " nav-link--active" : "";
   const isServicesActive = pageKey === "services" ? " nav-link--active" : "";
@@ -200,6 +214,7 @@ function buildMainNav(lang, pageKey, translations, langSwitcher, mobileLangSwitc
   const isReportActive = pageKey === "rapport2023" ? " nav-link--active" : "";
   const isMethodologyActive = pageKey === "methodology" ? " nav-link--active" : "";
   const isQuestionnaireActive = pageKey === "questionnaire" ? " nav-link--active" : "";
+  const isTransparencyActive = pageKey === "transparency2025" ? " nav-link--active" : "";
   const isAboutPageActive = pageKey === "about" ? " nav-link--active" : "";
   const isContactPageActive = pageKey === "contact" ? " nav-link--active" : "";
 
@@ -220,6 +235,7 @@ function buildMainNav(lang, pageKey, translations, langSwitcher, mobileLangSwitc
   const prepBadge = lang === 'en' ? 'Early Subscription' : lang === 'ar' ? 'اشتراك مسبق' : 'Souscription';
   const availBadge = lang === 'en' ? 'Available' : lang === 'ar' ? 'متاح' : (tEd2025.hero?.badge || 'Disponible');
   const freeBadge = lang === 'en' ? 'Free' : lang === 'ar' ? 'مجاني' : 'Gratuit';
+  const insightBadge = lang === 'en' ? 'Insight' : lang === 'ar' ? 'دراسة' : 'Insight';
   const report2023Label = lang === 'en' ? '2023 Report' : lang === 'ar' ? 'تقرير 2023' : 'Rapport 2023';
   const reportPath = lang === 'fr' ? 'editions/rapport-2023/' : 'editions/report-2023/';
 
@@ -267,6 +283,10 @@ function buildMainNav(lang, pageKey, translations, langSwitcher, mobileLangSwitc
             </a>
             <a href="${BASE_PATH}/${lang}/questionnaire/" class="dropdown-item${isQuestionnaireActive}">
               ${tNav.barometer2026 || "Baromètre e-banking 2026"}
+            </a>
+            <a href="${BASE_PATH}/${lang}/insights/transparence-information-financiere-2025/" class="dropdown-item${isTransparencyActive}">
+              <span class="dropdown-badge dropdown-badge--avail">${insightBadge}</span>
+              ${tNav.transparency2025 || "Transparence financière 2025"}
             </a>
           </div>
         </div>
@@ -335,6 +355,10 @@ function buildMainNav(lang, pageKey, translations, langSwitcher, mobileLangSwitc
         <div class="ps-3 border-s-2 border-primary/20 space-y-1 my-1">
           <a href="${BASE_PATH}/${lang}/methodologie/" class="mobile-nav-link${pageKey === 'methodology' ? ' mobile-nav-link--active' : ''}">${tNav.methodology || "Méthodologie"}</a>
           <a href="${BASE_PATH}/${lang}/questionnaire/" class="mobile-nav-link${pageKey === 'questionnaire' ? ' mobile-nav-link--active' : ''}">${tNav.barometer2026 || "Baromètre e-banking 2026"}</a>
+          <a href="${BASE_PATH}/${lang}/insights/transparence-information-financiere-2025/" class="mobile-nav-link flex items-center justify-between${pageKey === 'transparency2025' ? ' mobile-nav-link--active' : ''}">
+            <span>${tNav.transparency2025 || "Transparence financière 2025"}</span>
+            <span class="dropdown-badge dropdown-badge--avail">${insightBadge}</span>
+          </a>
         </div>
       </div>
 

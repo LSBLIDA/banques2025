@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="{{__lang}}" dir="{{__dir}}" class="{{__langClass}}">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{transparency2025.meta.title}}</title>
+  <meta name="description" content="{{transparency2025.meta.description}}" />
+  <link rel="canonical" href="{{__canonical}}" />
+  {{__hreflang}}
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="{{__canonical}}" />
+  <meta property="og:title" content="{{transparency2025.meta.title}}" />
+  <meta property="og:description" content="{{transparency2025.meta.description}}" />
+  <meta property="og:image" content="{{__basePath}}/public/og-abix.png" />
+  <meta property="og:site_name" content="{{site.fullName}}" />
+  <meta property="og:locale" content="{{__lang}}" />
+  <link rel="icon" type="image/png" href="{{__basePath}}/public/favicon.png" />
+  <link rel="icon" type="image/x-icon" href="{{__basePath}}/public/favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap" />
+  <link rel="stylesheet" href="{{__basePath}}/css/main.css" />
+  <script src="{{__basePath}}/js/site-config.js" defer></script>
+  <script src="{{__basePath}}/js/main.js" defer></script>
+  {{__transparencyStructuredData}}
+</head>
+<body class="font-inter bg-white antialiased text-gray-800">
+{{__mainNav}}
+
+<div class="pt-16">
+
+  <!-- ═══════════════════════════════════════════ SECTION 1 : HERO ═══════════ -->
+  <section class="bg-banking-gradient text-white relative overflow-hidden py-16 lg:py-24">
+    <div class="absolute inset-0 opacity-[.08]" style="background-image:radial-gradient(circle at 1px 1px, rgba(255,255,255,.2) 1px, transparent 0); background-size:32px 32px;"></div>
+    
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="text-center max-w-4xl mx-auto space-y-6">
+        <!-- Badge -->
+        <div class="inline-flex items-center gap-2 py-1.5 px-4 rounded-full bg-white/10 border border-white/20 text-xs sm:text-sm font-semibold tracking-wide text-blue-100">
+          <span class="w-2 h-2 rounded-full bg-accent animate-pulse"></span>
+          {{transparency2025.hero.badge}}
+        </div>
+
+        <!-- Titre principal -->
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-playfair text-white leading-tight">
+          {{transparency2025.hero.title}}
+        </h1>
+
+        <!-- Sous-titre -->
+        <p class="text-lg sm:text-xl text-blue-100/90 leading-relaxed font-normal max-w-3xl mx-auto">
+          {{transparency2025.hero.subtitle}}
+        </p>
+
+        <!-- Signature ABIX -->
+        <p class="text-xs sm:text-sm text-blue-200/80 font-medium tracking-wide uppercase">
+          {{transparency2025.hero.brandMention}}
+        </p>
+
+        <!-- KPI Hero Cards -->
+        <div class="pt-6 grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-3xl mx-auto">
+          <div class="bg-white/10 backdrop-blur-md border border-white/15 rounded-2xl p-5 sm:p-6 text-center transition-transform hover:-translate-y-0.5">
+            <div class="text-3xl sm:text-4xl font-extrabold font-playfair text-white">{{transparency2025.hero.kpiAnalyzed}}</div>
+            <div class="text-xs sm:text-sm text-blue-100 font-medium mt-1.5">{{transparency2025.hero.kpiAnalyzedLabel}}</div>
+          </div>
+          <div class="bg-white/10 backdrop-blur-md border border-white/15 rounded-2xl p-5 sm:p-6 text-center transition-transform hover:-translate-y-0.5">
+            <div class="text-3xl sm:text-4xl font-extrabold font-playfair text-white">{{transparency2025.hero.kpiDimensions}}</div>
+            <div class="text-xs sm:text-sm text-blue-100 font-medium mt-1.5">{{transparency2025.hero.kpiDimensionsLabel}}</div>
+          </div>
+          <div class="bg-white/10 backdrop-blur-md border border-white/15 rounded-2xl p-5 sm:p-6 text-center transition-transform hover:-translate-y-0.5">
+            <div class="text-3xl sm:text-4xl font-extrabold font-playfair text-accent-300">{{transparency2025.hero.kpiMaxScore}}</div>
+            <div class="text-xs sm:text-sm text-blue-100 font-medium mt-1.5">{{transparency2025.hero.kpiMaxScoreLabel}}</div>
+          </div>
+        </div>
+
+        <!-- Précision distinction sous les KPI -->
+        <div class="pt-1">
+          <p class="text-xs sm:text-sm text-blue-200/90 font-medium inline-flex items-center gap-2 bg-slate-900/30 backdrop-blur-xs px-4 py-1.5 rounded-full border border-white/10">
+            <svg class="w-4 h-4 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            {{transparency2025.hero.kpiDistinction}}
+          </p>
+        </div>
+
+        <!-- Boutons d'action rapide -->
+        <div class="pt-4 flex flex-wrap items-center justify-center gap-4">
+          <a href="#resultats" class="btn-cta text-sm sm:text-base px-6 py-3 shadow-lg hover:shadow-xl font-bold">
+            {{transparency2025.hero.ctaDiscover}}
+          </a>
+          <a href="#methodologie" class="inline-flex items-center justify-center text-sm sm:text-base px-6 py-3 rounded-lg bg-white/10 text-white border border-white/20 hover:bg-white/20 transition-all font-semibold">
+            {{transparency2025.hero.ctaMethodology}}
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════ SECTION 2 : POURQUOI CETTE ANALYSE ═══════ -->
+  <section class="py-16 bg-white border-b border-gray-100">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+      <div class="space-y-4">
+        <div class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-accent-700 bg-accent-50 px-3 py-1 rounded-md">
+          ABIX Insights
+        </div>
+        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold font-playfair text-gray-900 leading-snug">
+          {{transparency2025.why.title}}
+        </h2>
+      </div>
+
+      <div class="space-y-4 text-base sm:text-lg text-gray-700 leading-relaxed">
+        <p>{{transparency2025.why.paragraph1}}</p>
+        <p>{{transparency2025.why.paragraph2}}</p>
+        <p>{{transparency2025.why.paragraph3}}</p>
+      </div>
+
+      <!-- Mention de collaboration sobre -->
+      <div class="bg-slate-50 border-l-4 border-primary rounded-r-xl p-4 sm:p-5 flex items-start gap-3.5">
+        <svg class="w-5 h-5 text-primary mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        <p class="text-xs sm:text-sm text-gray-700 leading-relaxed font-medium">
+          {{transparency2025.why.collaboration}}
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════ SECTION 3 : MÉTHODOLOGIE ═══════ -->
+  <section id="methodologie" class="py-16 lg:py-20 bg-slate-50/60 border-b border-gray-100">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      <div class="text-center max-w-3xl mx-auto space-y-3">
+        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold font-playfair text-gray-900">
+          {{transparency2025.methodology.title}}
+        </h2>
+        <p class="text-base sm:text-lg text-gray-600">
+          {{transparency2025.methodology.subtitle}}
+        </p>
+      </div>
+
+      <!-- Grille des 2 dimensions -->
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white rounded-2xl p-7 border border-gray-200/80 shadow-xs space-y-4 relative overflow-hidden">
+          <div class="w-10 h-10 rounded-xl bg-primary/10 text-primary font-bold font-playfair flex items-center justify-center text-lg">
+            {{transparency2025.methodology.dim1Num}}
+          </div>
+          <div class="space-y-1.5">
+            <h3 class="font-bold text-gray-900 text-lg sm:text-xl">{{transparency2025.methodology.dim1Title}}</h3>
+            <span class="inline-block text-xs font-bold text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-md border border-emerald-200/60">
+              {{transparency2025.methodology.dim1Max}}
+            </span>
+          </div>
+          <p class="text-sm text-gray-600 leading-relaxed">
+            {{transparency2025.methodology.dim1Body}}
+          </p>
+        </div>
+
+        <div class="bg-white rounded-2xl p-7 border border-gray-200/80 shadow-xs space-y-4 relative overflow-hidden">
+          <div class="w-10 h-10 rounded-xl bg-primary/10 text-primary font-bold font-playfair flex items-center justify-center text-lg">
+            {{transparency2025.methodology.dim2Num}}
+          </div>
+          <div class="space-y-1.5">
+            <h3 class="font-bold text-gray-900 text-lg sm:text-xl">{{transparency2025.methodology.dim2Title}}</h3>
+            <span class="inline-block text-xs font-bold text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-md border border-emerald-200/60">
+              {{transparency2025.methodology.dim2Max}}
+            </span>
+          </div>
+          <p class="text-sm text-gray-600 leading-relaxed">
+            {{transparency2025.methodology.dim2Body}}
+          </p>
+        </div>
+      </div>
+
+      <!-- Score global callout -->
+      <div class="bg-white rounded-2xl p-6 sm:p-8 border border-gray-200/80 shadow-xs text-center max-w-3xl mx-auto space-y-3">
+        <h3 class="font-bold text-gray-900 text-lg">{{transparency2025.methodology.globalScoreTitle}}</h3>
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-primary/5 border border-primary/20 text-primary font-bold text-base sm:text-lg">
+          <code>{{transparency2025.methodology.globalScoreFormula}}</code>
+        </div>
+        <p class="text-xs sm:text-sm text-gray-500 leading-relaxed max-w-xl mx-auto">
+          {{transparency2025.methodology.globalScoreNote}}
+        </p>
+      </div>
+
+      <!-- Encadré méthodologique obligatoire (Disclaimer) -->
+      <div class="bg-blue-50/70 border border-blue-200 rounded-2xl p-6 sm:p-8 space-y-3">
+        <div class="flex items-center gap-3 text-blue-950 font-bold text-lg">
+          <svg class="w-6 h-6 text-blue-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
+          <h3>{{transparency2025.methodology.disclaimerTitle}}</h3>
+        </div>
+        <p class="text-xs sm:text-sm text-blue-900/90 leading-relaxed">
+          {{transparency2025.methodology.disclaimerText}}
+        </p>
+        <div class="pt-2">
+          <span class="text-xs font-semibold text-blue-700 bg-white/80 px-2.5 py-1 rounded border border-blue-200">
+            {{transparency2025.methodology.observationPeriod}}
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════ SECTION 4 : STATISTIQUES DE SYNTHÈSE ═══════ -->
+  <section class="py-16 bg-white border-b border-gray-100">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+      <div class="text-center max-w-2xl mx-auto space-y-2">
+        <h2 class="text-2xl sm:text-3xl font-bold font-playfair text-gray-900">
+          {{transparency2025.stats.title}}
+        </h2>
+        <p class="text-sm sm:text-base text-gray-500">
+          {{transparency2025.stats.subtitle}}
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div class="bg-slate-50 border border-gray-100 rounded-2xl p-6 text-center space-y-2 hover:shadow-xs transition-shadow">
+          <p class="text-3xl sm:text-4xl font-extrabold font-playfair text-primary">{{transparency2025.stats.avgScore}}</p>
+          <p class="text-xs sm:text-sm text-gray-600 font-medium leading-snug">{{transparency2025.stats.avgScoreLabel}}</p>
+        </div>
+
+        <div class="bg-slate-50 border border-gray-100 rounded-2xl p-6 text-center space-y-2 hover:shadow-xs transition-shadow">
+          <p class="text-3xl sm:text-4xl font-extrabold font-playfair text-primary">{{transparency2025.stats.medianScore}}</p>
+          <p class="text-xs sm:text-sm text-gray-600 font-medium leading-snug">{{transparency2025.stats.medianScoreLabel}}</p>
+        </div>
+
+        <div class="bg-slate-50 border border-gray-100 rounded-2xl p-6 text-center space-y-2 hover:shadow-xs transition-shadow">
+          <p class="text-3xl sm:text-4xl font-extrabold font-playfair text-primary">{{transparency2025.stats.maxScoreCount}}</p>
+          <p class="text-xs sm:text-sm text-gray-600 font-medium leading-snug">{{transparency2025.stats.maxScoreLabel}}</p>
+        </div>
+
+        <div class="bg-slate-50 border border-gray-100 rounded-2xl p-6 text-center space-y-2 hover:shadow-xs transition-shadow">
+          <p class="text-3xl sm:text-4xl font-extrabold font-playfair text-gray-700">{{transparency2025.stats.zeroScoreCount}}</p>
+          <p class="text-xs sm:text-sm text-gray-600 font-medium leading-snug">{{transparency2025.stats.zeroScoreLabel}}</p>
+        </div>
+      </div>
+
+      <!-- Explication prudente pour les scores 0/6 -->
+      <div class="bg-slate-50 rounded-xl p-4 border border-gray-200/70 text-center">
+        <p class="text-xs sm:text-sm text-gray-600 leading-relaxed max-w-2xl mx-auto">
+          {{transparency2025.stats.zeroScoreExplanation}}
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════ SECTION 5 : RÉSULTATS 2025 (CLASSEMENT) ═══════ -->
+  <section id="resultats" class="py-16 lg:py-20 bg-slate-50/60 border-b border-gray-100">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+      <div class="space-y-2">
+        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold font-playfair text-gray-900">
+          {{transparency2025.ranking.title}}
+        </h2>
+        <p class="text-sm sm:text-base text-gray-600">
+          {{transparency2025.ranking.subtitle}}
+        </p>
+        <p class="text-xs text-gray-500 italic">
+          {{transparency2025.ranking.equalScoreNote}}
+        </p>
+      </div>
+
+      <!-- Classement graphique horizontal des 20 banques scorées -->
+      <div class="space-y-3" role="list">
+        {{__transparencyRankingHtml}}
+      </div>
+
+      <!-- Établissement non scoré (Ziraat Bankası) -->
+      <div class="pt-6 space-y-3">
+        <h3 class="text-lg font-bold text-gray-900 font-playfair">
+          {{transparency2025.ranking.notScoredSectionTitle}}
+        </h3>
+        {{__transparencyNotScoredHtml}}
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════ SECTION 6 : DISTRIBUTION DES SCORES ═══════ -->
+  <section class="py-16 bg-white border-b border-gray-100">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+      <div class="space-y-2 text-center max-w-2xl mx-auto">
+        <h2 class="text-2xl sm:text-3xl font-bold font-playfair text-gray-900">
+          {{transparency2025.distribution.title}}
+        </h2>
+        <p class="text-sm sm:text-base text-gray-500">
+          {{transparency2025.distribution.subtitle}}
+        </p>
+      </div>
+
+      <!-- Visualisation de la distribution -->
+      <div class="bg-slate-50 border border-gray-100 rounded-2xl p-6 sm:p-8 space-y-5 max-w-2xl mx-auto">
+        {{__transparencyDistributionHtml}}
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════ SECTION 7 : TABLEAU DÉTAILLÉ ═══════ -->
+  <section id="tableau" class="py-16 lg:py-20 bg-slate-50/60 border-b border-gray-100">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+        <div class="space-y-2">
+          <h2 class="text-2xl sm:text-3xl font-bold font-playfair text-gray-900">
+            {{transparency2025.table.title}}
+          </h2>
+          <p class="text-sm text-gray-600">
+            {{transparency2025.table.subtitle}}
+          </p>
+        </div>
+
+        <!-- Recherche dans le tableau -->
+        <div class="w-full md:w-72">
+          <div class="relative">
+            <input type="text" id="bankTableSearch" placeholder="{{transparency2025.table.searchPlaceholder}}" class="w-full pl-9 pr-4 py-2 rounded-xl border border-gray-200 text-xs sm:text-sm bg-white focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all shadow-2xs" />
+            <svg class="w-4 h-4 text-gray-400 absolute left-3 top-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+          </div>
+        </div>
+      </div>
+
+      <!-- Table Container -->
+      <div class="bg-white rounded-2xl border border-gray-200/80 shadow-xs overflow-hidden">
+        <div class="overflow-x-auto">
+          <table class="w-full text-left border-collapse" id="banksTable">
+            <thead>
+              <tr class="bg-slate-100/80 border-b border-gray-200 text-[11px] sm:text-xs font-bold text-gray-600 uppercase tracking-wider">
+                <th scope="col" class="py-3.5 px-4 sm:px-6">{{transparency2025.table.colBank}}</th>
+                <th scope="col" class="py-3.5 px-4 text-center">{{transparency2025.table.colStatements}}</th>
+                <th scope="col" class="py-3.5 px-4 text-center">{{transparency2025.table.colActivityReport}}</th>
+                <th scope="col" class="py-3.5 px-4 text-center">{{transparency2025.table.colGlobalScore}}</th>
+                <th scope="col" class="py-3.5 px-4 sm:px-6">{{transparency2025.table.colObservation}}</th>
+              </tr>
+            </thead>
+            <tbody>
+              {{__transparencyTableHtml}}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════ SECTION 8 : CE QUE RÉVÈLENT LES RÉSULTATS ═══════ -->
+  <section class="py-16 bg-white border-b border-gray-100">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
+      <h2 class="text-2xl sm:text-3xl font-bold font-playfair text-gray-900">
+        {{transparency2025.insights.title}}
+      </h2>
+      <div class="space-y-4 text-base sm:text-lg text-gray-700 leading-relaxed">
+        <p>{{transparency2025.insights.paragraph1}}</p>
+        <p>{{transparency2025.insights.paragraph2}}</p>
+        <p>{{transparency2025.insights.paragraph3}}</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════ SECTION 9 : ABIX ÉLARGIT SON CHAMP D'ANALYSE ═══════ -->
+  <section class="py-16 lg:py-20 bg-slate-900 text-white relative overflow-hidden">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8 relative z-10">
+      <div class="space-y-3">
+        <span class="inline-block px-3 py-1 bg-accent/20 text-accent-300 text-xs font-semibold rounded-full border border-accent/30 uppercase tracking-wider">
+          Vision ABIX 2026
+        </span>
+        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold font-playfair text-white">
+          {{transparency2025.future.title}}
+        </h2>
+      </div>
+
+      <div class="space-y-4 text-base sm:text-lg text-slate-300 leading-relaxed font-normal">
+        <p>{{transparency2025.future.paragraph1}}</p>
+        <p>{{transparency2025.future.paragraph2}}</p>
+        <p>{{transparency2025.future.paragraph3}}</p>
+      </div>
+
+      <div class="bg-white/10 backdrop-blur-sm border border-white/15 rounded-2xl p-6 sm:p-7">
+        <p class="text-base sm:text-lg text-blue-100 font-semibold leading-relaxed">
+          {{transparency2025.future.teaser2026}}
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════ SECTION 10 : CTAs ═══════ -->
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+      <div class="text-center max-w-2xl mx-auto space-y-2">
+        <h2 class="text-2xl sm:text-3xl font-bold font-playfair text-gray-900">
+          {{transparency2025.cta.title}}
+        </h2>
+        <p class="text-sm sm:text-base text-gray-600">
+          {{transparency2025.cta.subtitle}}
+        </p>
+      </div>
+
+      <div class="grid sm:grid-cols-3 gap-5">
+        <a href="{{__basePath}}/{{__lang}}/data-explorer/" class="bg-white rounded-2xl p-6 border border-gray-200/80 shadow-2xs hover:shadow-md transition-all flex flex-col justify-between group">
+          <div class="space-y-3">
+            <div class="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center group-hover:scale-105 transition-transform">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+            </div>
+            <h3 class="font-bold text-gray-900 text-base">{{transparency2025.cta.ctaExplorer}}</h3>
+          </div>
+          <span class="text-accent text-xs font-semibold mt-4 inline-flex items-center gap-1">Explorer →</span>
+        </a>
+
+        <a href="{{__basePath}}/{{__lang}}/editions/2025/" class="bg-white rounded-2xl p-6 border border-gray-200/80 shadow-2xs hover:shadow-md transition-all flex flex-col justify-between group">
+          <div class="space-y-3">
+            <div class="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center group-hover:scale-105 transition-transform">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+            </div>
+            <h3 class="font-bold text-gray-900 text-base">{{transparency2025.cta.ctaStudy}}</h3>
+          </div>
+          <span class="text-accent text-xs font-semibold mt-4 inline-flex items-center gap-1">Découvrir →</span>
+        </a>
+
+        <a href="{{__basePath}}/{{__lang}}/editions/2026/#tarifs" class="bg-white rounded-2xl p-6 border border-gray-200/80 shadow-2xs hover:shadow-md transition-all flex flex-col justify-between group">
+          <div class="space-y-3">
+            <div class="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center group-hover:scale-105 transition-transform">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/></svg>
+            </div>
+            <h3 class="font-bold text-gray-900 text-base">{{transparency2025.cta.ctaNotify}}</h3>
+          </div>
+          <span class="text-accent text-xs font-semibold mt-4 inline-flex items-center gap-1">S'inscrire →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<footer class="bg-gray-900 text-white py-12 border-t border-gray-800">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-gray-400">
+    <p>{{site.copyright}}</p>
+    <div class="flex flex-wrap items-center justify-center gap-4 sm:gap-6 text-xs sm:text-sm">
+      <a href="{{__basePath}}/{{__lang}}/mentions-legales/" class="hover:text-white transition-colors">{{nav.legal}}</a>
+      <span class="text-gray-600">·</span>
+      <a href="{{__basePath}}/{{__lang}}/conditions-utilisation/" class="hover:text-white transition-colors">{{nav.terms}}</a>
+      <span class="text-gray-600">·</span>
+      <a href="{{__basePath}}/{{__lang}}/politique-confidentialite/" class="hover:text-white transition-colors">{{nav.privacy}}</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Recherche dynamique dans le tableau des banques
+  document.addEventListener('DOMContentLoaded', function() {
+    const searchInput = document.getElementById('bankTableSearch');
+    const tableRows = document.querySelectorAll('.bank-table-row');
+
+    if (searchInput && tableRows.length) {
+      searchInput.addEventListener('input', function(e) {
+        const query = (e.target.value || '').toLowerCase().trim();
+        tableRows.forEach(function(row) {
+          const bankName = row.getAttribute('data-name') || '';
+          if (!query || bankName.includes(query)) {
+            row.style.display = '';
+          } else {
+            row.style.display = 'none';
+          }
+        });
+      });
+    }
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,284 @@
+{
+  "dataset": {
+    "slug": "transparence-information-financiere-2025",
+    "year": 2025,
+    "title": "Transparence de l'information financière des banques algériennes — 2025",
+    "subtitle": "Disponibilité et actualité de l’information financière publiée sur les sites officiels des établissements bancaires",
+    "source_label": "SEKAK CONSEILS 2026",
+    "source_note": "SEKAK CONSEILS après examen des sites internet des banques de la place",
+    "source_file_heading": "QUALITE DE L'INFORMATION FINANCIERE DESTINEE AU PUBLIC",
+    "scope_note": "Le fichier source porte sur la publication des comptes et du rapport d’activité sur les sites des banques.",
+    "observation_date": null,
+    "observation_date_note": "La date précise d’observation n’est pas indiquée dans le fichier source.",
+    "methodology": {
+      "dimensions": [
+        {
+          "key": "financial_statements_score",
+          "label": "Publication des comptes sur le site",
+          "max_points": 3
+        },
+        {
+          "key": "activity_report_score",
+          "label": "Publication du rapport d’activité sur le site",
+          "max_points": 3
+        }
+      ],
+      "global_score_label": "Indice global",
+      "max_global_points": 6,
+      "detailed_scoring_grid_available_in_source": false,
+      "methodology_note": "Le fichier source indique un maximum de 3 points par dimension et 6 points au total, mais ne détaille pas la grille complète d’attribution des scores. Ne pas inventer de seuils ou de règles supplémentaires."
+    },
+    "summary": {
+      "banks_analyzed": 21,
+      "banks_scored": 20,
+      "banks_not_scored": 1,
+      "dimensions": 2,
+      "max_score_per_dimension": 3,
+      "max_global_score": 6,
+      "average_global_score_scored_banks": 2.7,
+      "median_global_score_scored_banks": 3.0,
+      "banks_with_6_of_6": 3,
+      "banks_with_at_least_5_of_6": 9,
+      "banks_with_0_of_6": 9
+    },
+    "banks": [
+      {
+        "id": "bea",
+        "name": "Banque Extérieure d’Algérie",
+        "source_name": "BANQUE EXTERIEURE ALGERIE",
+        "financial_statements_score": 2.5,
+        "activity_report_score": 2.5,
+        "global_score": 5.0,
+        "comment": "retard",
+        "additional_note": null
+      },
+      {
+        "id": "bna",
+        "name": "Banque Nationale d’Algérie",
+        "source_name": "BANQUE NATIONALE ALGERIE",
+        "financial_statements_score": 2.0,
+        "activity_report_score": 2.0,
+        "global_score": 4.0,
+        "comment": "retard supérieur à 1 année",
+        "additional_note": null
+      },
+      {
+        "id": "cpa",
+        "name": "Crédit Populaire d’Algérie",
+        "source_name": "CREDIT POPULAIRE ALGERIE",
+        "financial_statements_score": 3.0,
+        "activity_report_score": 3.0,
+        "global_score": 6.0,
+        "comment": null,
+        "additional_note": null
+      },
+      {
+        "id": "badr",
+        "name": "Banque de l’Agriculture et du Développement Rural",
+        "source_name": "BANQUE AGRICULTURE ET DEV RURAL",
+        "financial_statements_score": 0.0,
+        "activity_report_score": 0.0,
+        "global_score": 0.0,
+        "comment": null,
+        "additional_note": null
+      },
+      {
+        "id": "bdl",
+        "name": "Banque de Développement Local",
+        "source_name": "BANQUE DEVELOPPEMENT LOCAL",
+        "financial_statements_score": 3.0,
+        "activity_report_score": 3.0,
+        "global_score": 6.0,
+        "comment": null,
+        "additional_note": null
+      },
+      {
+        "id": "cnep",
+        "name": "CNEP-Banque",
+        "source_name": "CNEP",
+        "financial_statements_score": 0.0,
+        "activity_report_score": 0.0,
+        "global_score": 0.0,
+        "comment": null,
+        "additional_note": null
+      },
+      {
+        "id": "bnh",
+        "name": "Banque Nationale de l’Habitat",
+        "source_name": "BNH",
+        "financial_statements_score": 0.0,
+        "activity_report_score": 0.0,
+        "global_score": 0.0,
+        "comment": null,
+        "additional_note": null
+      },
+      {
+        "id": "sga",
+        "name": "Société Générale Algérie",
+        "source_name": "SOCIETE GENERALE ALGERIE",
+        "financial_statements_score": 2.5,
+        "activity_report_score": 2.5,
+        "global_score": 5.0,
+        "comment": "léger retard",
+        "additional_note": null
+      },
+      {
+        "id": "bnp",
+        "name": "BNP Paribas El Djazaïr",
+        "source_name": "BNP PARIBAS EL DJAZAIR",
+        "financial_statements_score": 2.5,
+        "activity_report_score": 2.5,
+        "global_score": 5.0,
+        "comment": "léger retard",
+        "additional_note": "Téléchargement possible"
+      },
+      {
+        "id": "natixis",
+        "name": "Natixis Algérie",
+        "source_name": "NATIXIS ALGERIE",
+        "financial_statements_score": 0.0,
+        "activity_report_score": 0.0,
+        "global_score": 0.0,
+        "comment": null,
+        "additional_note": null
+      },
+      {
+        "id": "agb",
+        "name": "Gulf Bank Algérie",
+        "source_name": "GULF BANK ALGERIE",
+        "financial_statements_score": 0.0,
+        "activity_report_score": 0.0,
+        "global_score": 0.0,
+        "comment": null,
+        "additional_note": null
+      },
+      {
+        "id": "arab-bank",
+        "name": "Arab Bank",
+        "source_name": "ARAB BANK",
+        "financial_statements_score": 0.0,
+        "activity_report_score": 0.0,
+        "global_score": 0.0,
+        "comment": null,
+        "additional_note": null
+      },
+      {
+        "id": "citibank",
+        "name": "Citibank Algeria",
+        "source_name": "CITIBANK ALGERIA",
+        "financial_statements_score": 0.0,
+        "activity_report_score": 0.0,
+        "global_score": 0.0,
+        "comment": null,
+        "additional_note": null
+      },
+      {
+        "id": "hsbc",
+        "name": "HSBC Algeria",
+        "source_name": "HSBC ALGERIA",
+        "financial_statements_score": 0.0,
+        "activity_report_score": 0.0,
+        "global_score": 0.0,
+        "comment": null,
+        "additional_note": null
+      },
+      {
+        "id": "trust",
+        "name": "Trust Bank Algeria",
+        "source_name": "TRUST BANK ALGERIA",
+        "financial_statements_score": 1.0,
+        "activity_report_score": 1.0,
+        "global_score": 2.0,
+        "comment": null,
+        "additional_note": "Dernier rapport identifié : 2021"
+      },
+      {
+        "id": "fransabank",
+        "name": "Fransabank El Djazaïr",
+        "source_name": "FRANSABANK EL DJAZAIR",
+        "financial_statements_score": 2.5,
+        "activity_report_score": 2.5,
+        "global_score": 5.0,
+        "comment": "léger retard",
+        "additional_note": null
+      },
+      {
+        "id": "housing-bank",
+        "name": "Housing Bank Algeria",
+        "source_name": "HOUSING BANK ALGERIA",
+        "financial_statements_score": 0.0,
+        "activity_report_score": 0.0,
+        "global_score": 0.0,
+        "comment": null,
+        "additional_note": null
+      },
+      {
+        "id": "al-baraka",
+        "name": "Al Baraka Bank Algeria",
+        "source_name": "AL BARAKA",
+        "financial_statements_score": 2.5,
+        "activity_report_score": 2.5,
+        "global_score": 5.0,
+        "comment": "léger retard",
+        "additional_note": null
+      },
+      {
+        "id": "al-salam",
+        "name": "Al Salam Bank Algeria",
+        "source_name": "AL SALAM BANK",
+        "financial_statements_score": 3.0,
+        "activity_report_score": 3.0,
+        "global_score": 6.0,
+        "comment": null,
+        "additional_note": null
+      },
+      {
+        "id": "abc",
+        "name": "Arab Banking Corporation Algeria (ABC)",
+        "source_name": "ARAB BANK CORPORATION ABC",
+        "financial_statements_score": 2.5,
+        "activity_report_score": 2.5,
+        "global_score": 5.0,
+        "comment": "léger retard",
+        "additional_note": null
+      },
+      {
+        "id": "ziraat",
+        "name": "Ziraat Bankası Algeria",
+        "source_name": "ZIRAAT BANKASI",
+        "financial_statements_score": null,
+        "activity_report_score": null,
+        "global_score": null,
+        "comment": "Pas significatif",
+        "additional_note": null,
+        "not_scored": true
+      }
+    ]
+  },
+  "frontend_recommendations": {
+    "status": "recommended_copy_not_from_source_file",
+    "hero_kpis": [
+      {
+        "label": "Banques analysées",
+        "value": 21
+      },
+      {
+        "label": "Dimensions observées",
+        "value": 2
+      },
+      {
+        "label": "Score maximal",
+        "value": "6 points"
+      }
+    ],
+    "disclaimer": "Cette analyse porte exclusivement sur les informations identifiées sur les sites officiels des établissements lors de la période d’observation. L’absence d’un document sur le site internet ne signifie pas nécessairement qu’il n’a pas été produit, transmis aux autorités compétentes ou publié par un autre canal. Le score mesure la disponibilité et l’accessibilité digitale de l’information, et non la qualité intrinsèque des comptes ou la conformité réglementaire de l’établissement.",
+    "collaboration_copy": "Analyse réalisée dans le cadre d’ABIX – Algeria Banking Index, avec la contribution de M. Sekak Rachid.",
+    "implementation_notes": [
+      "Ne pas afficher de date précise d’observation tant qu’elle n’a pas été confirmée.",
+      "Ne pas qualifier les banques de « transparentes » ou « opaques » : le score porte sur la disponibilité de l’information sur le site.",
+      "Ne pas inventer de grille d’interprétation qualitative des scores.",
+      "Ziraat Bankası est présente dans le périmètre mais non scorée dans le fichier source ('ns' / 'Pas significatif').",
+      "Trier le classement par score décroissant et afficher Ziraat séparément comme 'Non scorée'."
+    ]
+  }
+}
