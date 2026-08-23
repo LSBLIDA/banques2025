@@ -1,0 +1,15 @@
+# ══════════════════════════════════════════════════════════════════════════════
+# ABIX — Netlify / Cloudflare Pages / Jamstack Redirects (301)
+# ══════════════════════════════════════════════════════════════════════════════
+
+# Alias court : Transparence de l'information financière 2025
+/transparence   /fr/insights/transparence-information-financiere-2025/   301
+/transparence/  /fr/insights/transparence-information-financiere-2025/   301
+
+# Alias historiques
+/edition-2025   /fr/editions/2025/   301
+/edition-2025/  /fr/editions/2025/   301
+/etude          /fr/editions/2025/   301
+/etude/         /fr/editions/2025/   301
+/study          /fr/editions/2025/   301
+/study/         /fr/editions/2025/   301

@@ -62,6 +62,9 @@ AddCharset UTF-8 .html .css .js .json .xml
   RewriteRule ^etude/?$ /fr/editions/2025/ [R=301,L]
   RewriteRule ^study/?$ /fr/editions/2025/ [R=301,L]
 
+  # ── Règle 3bis : Alias court /transparence → /fr/insights/transparence-information-financiere-2025/ ──
+  RewriteRule ^transparence/?$ /fr/insights/transparence-information-financiere-2025/ [R=301,L]
+
   # ── Règle 4 : Barre oblique sur les répertoires de langue ────────────────
   # Assure que /fr, /en, /ar pointent vers /fr/, /en/, /ar/
   RewriteRule ^(fr|en|ar)$ /$1/ [R=301,L]
