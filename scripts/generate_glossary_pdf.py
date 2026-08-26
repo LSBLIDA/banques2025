@@ -1,14 +1,14 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-ABIX — Générateur de Livret Méthodologique & Glossaire PDF
-Génère un document PDF institutionnel A4 multi-pages de haute qualité
-pour le Glossaire complet d'ABIX Data Explorer (Versions FR et EN).
+ABIX -- Generateur de Livret Methodologique & Glossaire PDF Premium
+Une fiche par page, rendu institutionnel haute qualite, charte ABIX.
 """
 
 import os
 import sys
 import json
+import shutil
 
 if hasattr(sys.stdout, 'reconfigure'):
     sys.stdout.reconfigure(encoding='utf-8')
@@ -19,41 +19,93 @@ from datetime import datetime
 from reportlab.lib.pagesizes import A4
 from reportlab.lib import colors
 from reportlab.platypus import (
-    SimpleDocTemplate, Paragraph, Spacer, Table, TableStyle, PageBreak, KeepTogether, HRFlowable
+    SimpleDocTemplate, Paragraph, Spacer, Table, TableStyle,
+    PageBreak, KeepTogether, HRFlowable
 )
 from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
-from reportlab.lib.units import mm, cm
+from reportlab.lib.units import mm
 from reportlab.pdfgen import canvas
-from reportlab.graphics.shapes import Drawing, Rect, Line, Circle, String
+from reportlab.lib.enums import TA_LEFT
 
-# ── Répertoires ─────────────────────────────────────────────────────────────
+# -- Repertoires
 ROOT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA_FILE = os.path.join(ROOT_DIR, "data", "glossary.json")
 OUTPUT_DIR = os.path.join(ROOT_DIR, "public", "documents", "glossaire")
-
-# ── Couleurs de la charte ABIX ──────────────────────────────────────────────
-PRIMARY_NAVY = colors.HexColor("#0D3B66")     # Bleu institutionnel ABIX
-NAVY_DARK = colors.HexColor("#081426")        # Fond sombre
-BG_CARD = colors.HexColor("#F8FAFC")          # Fond carte gris/bleuté très clair
-BORDER_COLOR = colors.HexColor("#E2E8F0")     # Bordure subtile
-ACCENT_GOLD = colors.HexColor("#F59E0B")      # Jaune doré
-ACCENT_TEAL = colors.HexColor("#0D9488")      # Turquoise
-ACCENT_BLUE = colors.HexColor("#2563EB")      # Bleu primaire
-TEXT_DARK = colors.HexColor("#0F172A")        # Texte sombre principal
-TEXT_MUTED = colors.HexColor("#475569")       # Texte secondaire
-TEXT_LIGHT = colors.HexColor("#64748B")       # Texte tertiaire
-BADGE_BG = colors.HexColor("#EEF2F6")         # Fond badge
-FORMULA_BG = colors.HexColor("#0F172A")       # Fond bloc formule (Dark Slate)
-FORMULA_TEXT = colors.HexColor("#34D399")     # Texte vert émeraude formule
-INTERP_BG = colors.HexColor("#F0FDF4")        # Fond interprétation (vert clair)
-INTERP_BORDER = colors.HexColor("#BBF7D0")
-EXAMPLE_BG = colors.HexColor("#FFFBEB")       # Fond exemple (ambre très clair)
-EXAMPLE_BORDER = colors.HexColor("#FDE68A")
+ABIX_FRONT_DOCS = r'C:/laragon/www/ABIX/ABIX_front/public/docs/glossaire'
 
 PAGE_WIDTH, PAGE_HEIGHT = A4
+MARGIN = 16 * mm
+CONTENT_W = PAGE_WIDTH - 2 * MARGIN
 
-class GlossaryCanvas(canvas.Canvas):
-    """Canvas personnalisé avec en-têtes et pieds de page numérotés"""
+# -- Palette ABIX
+C_NAVY      = colors.HexColor("#0D3B66")
+C_NAVY_DARK = colors.HexColor("#081D37")
+C_GOLD      = colors.HexColor("#F59E0B")
+C_TEAL      = colors.HexColor("#0D9488")
+C_BLUE      = colors.HexColor("#2563EB")
+C_RED       = colors.HexColor("#DC2626")
+C_VIOLET    = colors.HexColor("#7C3AED")
+C_WHITE     = colors.white
+C_SLATE_100 = colors.HexColor("#F1F5F9")
+C_SLATE_200 = colors.HexColor("#E2E8F0")
+C_SLATE_400 = colors.HexColor("#94A3B8")
+C_SLATE_600 = colors.HexColor("#475569")
+C_SLATE_800 = colors.HexColor("#1E293B")
+C_SLATE_900 = colors.HexColor("#0F172A")
+C_GREEN_50  = colors.HexColor("#F0FDF4")
+C_GREEN_200 = colors.HexColor("#BBF7D0")
+C_GREEN_800 = colors.HexColor("#065F46")
+C_AMBER_50  = colors.HexColor("#FFFBEB")
+C_AMBER_200 = colors.HexColor("#FDE68A")
+C_AMBER_800 = colors.HexColor("#92400E")
+C_BLUE_50   = colors.HexColor("#EFF6FF")
+C_BLUE_200  = colors.HexColor("#BFDBFE")
+
+
+def get_styles():
+    return {
+        'CoverTitle': ParagraphStyle('CoverTitle',
+            fontName='Helvetica-Bold', fontSize=28, leading=34, textColor=C_WHITE, spaceAfter=6),
+        'CoverSubtitle': ParagraphStyle('CoverSubtitle',
+            fontName='Helvetica', fontSize=13, leading=19,
+            textColor=colors.HexColor("#93C5FD"), spaceAfter=18),
+        'CoverMeta': ParagraphStyle('CoverMeta',
+            fontName='Helvetica', fontSize=9, leading=14, textColor=colors.HexColor("#CBD5E1")),
+        'CoverBadge': ParagraphStyle('CoverBadge',
+            fontName='Helvetica-Bold', fontSize=10, leading=14, textColor=C_GOLD, spaceAfter=10),
+        'SectionLabel': ParagraphStyle('SectionLabel',
+            fontName='Helvetica-Bold', fontSize=7.5, leading=9,
+            textColor=C_SLATE_400, spaceBefore=0, spaceAfter=2),
+        'TermName': ParagraphStyle('TermName',
+            fontName='Helvetica-Bold', fontSize=18, leading=23, textColor=C_WHITE, spaceAfter=2),
+        'TermAliases': ParagraphStyle('TermAliases',
+            fontName='Helvetica-Oblique', fontSize=8.5, leading=12,
+            textColor=colors.HexColor("#94A3B8")),
+        'ShortDef': ParagraphStyle('ShortDef',
+            fontName='Helvetica-Bold', fontSize=9.5, leading=14, textColor=C_SLATE_800, spaceAfter=0),
+        'DetailedDef': ParagraphStyle('DetailedDef',
+            fontName='Helvetica', fontSize=8.5, leading=13, textColor=C_SLATE_600, spaceAfter=0),
+        'FormulaText': ParagraphStyle('FormulaText',
+            fontName='Courier-Bold', fontSize=8.5, leading=12,
+            textColor=colors.HexColor("#34D399")),
+        'InterpText': ParagraphStyle('InterpText',
+            fontName='Helvetica', fontSize=8.5, leading=13, textColor=C_GREEN_800),
+        'ExampleText': ParagraphStyle('ExampleText',
+            fontName='Helvetica', fontSize=8.5, leading=13, textColor=C_AMBER_800),
+        'ThreshRegText': ParagraphStyle('ThreshRegText',
+            fontName='Helvetica', fontSize=8.5, leading=13, textColor=C_RED),
+        'ThreshAbixText': ParagraphStyle('ThreshAbixText',
+            fontName='Helvetica', fontSize=8.5, leading=13, textColor=C_BLUE),
+        'ModulesText': ParagraphStyle('ModulesText',
+            fontName='Helvetica', fontSize=8, leading=11, textColor=C_SLATE_600),
+        'TOCCatName': ParagraphStyle('TOCCatName',
+            fontName='Helvetica-Bold', fontSize=10, leading=14, textColor=C_NAVY),
+        'TOCTermName': ParagraphStyle('TOCTermName',
+            fontName='Helvetica', fontSize=8.5, leading=13, textColor=C_SLATE_600),
+    }
+
+
+class ABIXCanvas(canvas.Canvas):
     def __init__(self, *args, **kwargs):
         self.lang = kwargs.pop("lang", "fr")
         super().__init__(*args, **kwargs)
@@ -64,441 +116,391 @@ class GlossaryCanvas(canvas.Canvas):
         self._startPage()
 
     def save(self):
-        num_pages = len(self._saved_page_states)
+        total = len(self._saved_page_states)
         for i, state in enumerate(self._saved_page_states):
             self.__dict__.update(state)
-            # Ne pas afficher en-tête/pied sur la page de couverture (page 1)
             if i > 0:
-                self.draw_page_decorations(i + 1, num_pages)
+                self._draw_decorations(i + 1, total)
             super().showPage()
         super().save()
 
-    def draw_page_decorations(self, current_page, total_pages):
+    def _draw_decorations(self, page_num, total):
         self.saveState()
-        
-        # En-tête (Header)
-        self.setStrokeColor(BORDER_COLOR)
-        self.setLineWidth(0.5)
-        self.line(18*mm, PAGE_HEIGHT - 16*mm, PAGE_WIDTH - 18*mm, PAGE_HEIGHT - 16*mm)
-        
-        self.setFont("Helvetica-Bold", 8)
-        self.setFillColor(PRIMARY_NAVY)
-        header_title = "ABIX DATA EXPLORER — RÉFÉRENTIEL MÉTHODOLOGIQUE & GLOSSAIRE" if self.lang == "fr" else "ABIX DATA EXPLORER — METHODOLOGICAL GLOSSARY & REFERENCE GUIDE"
-        self.drawString(18*mm, PAGE_HEIGHT - 13*mm, header_title)
-        
-        self.setFont("Helvetica", 8)
-        self.setFillColor(TEXT_LIGHT)
-        self.drawRightString(PAGE_WIDTH - 18*mm, PAGE_HEIGHT - 13*mm, "Édition 2025/2026")
-
-        # Pied de page (Footer)
-        self.line(18*mm, 15*mm, PAGE_WIDTH - 18*mm, 15*mm)
-        
+        # Header band
+        self.setFillColor(C_NAVY)
+        self.rect(0, PAGE_HEIGHT - 11*mm, PAGE_WIDTH, 11*mm, fill=1, stroke=0)
+        self.setFont("Helvetica-Bold", 7.5)
+        self.setFillColor(C_WHITE)
+        title = ("ABIX DATA EXPLORER \u2014 REFERENTIEL METHODOLOGIQUE & GLOSSAIRE" if self.lang == "fr"
+                 else "ABIX DATA EXPLORER \u2014 METHODOLOGICAL GLOSSARY & REFERENCE GUIDE")
+        self.drawString(MARGIN, PAGE_HEIGHT - 7*mm, title)
         self.setFont("Helvetica", 7.5)
-        self.setFillColor(TEXT_LIGHT)
-        footer_text = "© 2025 ABIX — Tadjeddine & Partners. Tous droits réservés. Reproduction et diffusion réglementées." if self.lang == "fr" else "© 2025 ABIX — Tadjeddine & Partners. All rights reserved."
-        self.drawString(18*mm, 10*mm, footer_text)
-        
-        page_str = f"Page {current_page} / {total_pages}"
-        self.setFont("Helvetica-Bold", 8)
-        self.setFillColor(PRIMARY_NAVY)
-        self.drawRightString(PAGE_WIDTH - 18*mm, 10*mm, page_str)
-
+        self.setFillColor(colors.HexColor("#93C5FD"))
+        self.drawRightString(PAGE_WIDTH - MARGIN, PAGE_HEIGHT - 7*mm, "Edition 2025/2026")
+        # Footer
+        self.setStrokeColor(C_SLATE_200)
+        self.setLineWidth(0.4)
+        self.line(MARGIN, 13*mm, PAGE_WIDTH - MARGIN, 13*mm)
+        self.setFont("Helvetica", 7)
+        self.setFillColor(C_SLATE_400)
+        footer = ("(c) 2025 ABIX \u2014 Tadjeddine & Partners. Tous droits reserves." if self.lang == "fr"
+                  else "(c) 2025 ABIX \u2014 Tadjeddine & Partners. All rights reserved.")
+        self.drawString(MARGIN, 9*mm, footer)
+        self.setFont("Helvetica-Bold", 7.5)
+        self.setFillColor(C_NAVY)
+        self.drawRightString(PAGE_WIDTH - MARGIN, 9*mm, f"Page {page_num} / {total}")
         self.restoreState()
 
 
-def get_styles():
-    """Définit les styles typographiques ReportLab"""
-    base_styles = getSampleStyleSheet()
-    
-    styles = {
-        'CoverTitle': ParagraphStyle(
-            'CoverTitle',
-            fontName='Helvetica-Bold',
-            fontSize=26,
-            leading=32,
-            textColor=TEXT_DARK,
-            alignment=0,
-            spaceAfter=8
-        ),
-        'CoverSubtitle': ParagraphStyle(
-            'CoverSubtitle',
-            fontName='Helvetica',
-            fontSize=13,
-            leading=18,
-            textColor=PRIMARY_NAVY,
-            spaceAfter=15
-        ),
-        'CoverMeta': ParagraphStyle(
-            'CoverMeta',
-            fontName='Helvetica',
-            fontSize=9.5,
-            leading=14,
-            textColor=TEXT_MUTED,
-            spaceAfter=6
-        ),
-        'CategoryHeader': ParagraphStyle(
-            'CategoryHeader',
-            fontName='Helvetica-Bold',
-            fontSize=15,
-            leading=20,
-            textColor=PRIMARY_NAVY,
-            spaceBefore=14,
-            spaceAfter=8,
-            keepWithNext=True
-        ),
-        'TermTitle': ParagraphStyle(
-            'TermTitle',
-            fontName='Helvetica-Bold',
-            fontSize=12,
-            leading=15,
-            textColor=TEXT_DARK,
-            spaceBefore=0,
-            spaceAfter=3,
-            keepWithNext=True
-        ),
-        'TermAcronym': ParagraphStyle(
-            'TermAcronym',
-            fontName='Helvetica-Bold',
-            fontSize=9,
-            leading=11,
-            textColor=ACCENT_TEAL
-        ),
-        'ShortDef': ParagraphStyle(
-            'ShortDef',
-            fontName='Helvetica-Bold',
-            fontSize=8.5,
-            leading=12,
-            textColor=TEXT_DARK,
-            spaceAfter=4
-        ),
-        'DetailedDef': ParagraphStyle(
-            'DetailedDef',
-            fontName='Helvetica',
-            fontSize=8,
-            leading=11.5,
-            textColor=TEXT_MUTED,
-            spaceAfter=5
-        ),
-        'FormulaLabel': ParagraphStyle(
-            'FormulaLabel',
-            fontName='Helvetica-Bold',
-            fontSize=7.5,
-            leading=9,
-            textColor=TEXT_MUTED
-        ),
-        'FormulaText': ParagraphStyle(
-            'FormulaText',
-            fontName='Courier-Bold',
-            fontSize=7.5,
-            leading=10,
-            textColor=FORMULA_TEXT
-        ),
-        'InterpText': ParagraphStyle(
-            'InterpText',
-            fontName='Helvetica-Oblique',
-            fontSize=7.5,
-            leading=10.5,
-            textColor=colors.HexColor("#065F46")
-        ),
-        'ExampleText': ParagraphStyle(
-            'ExampleText',
-            fontName='Helvetica',
-            fontSize=7.5,
-            leading=10.5,
-            textColor=colors.HexColor("#92400E")
-        ),
-        'MetaBadge': ParagraphStyle(
-            'MetaBadge',
-            fontName='Helvetica-Bold',
-            fontSize=7,
-            leading=8.5,
-            textColor=PRIMARY_NAVY
-        ),
-        'TOCItem': ParagraphStyle(
-            'TOCItem',
-            fontName='Helvetica',
-            fontSize=8.5,
-            leading=13,
-            textColor=TEXT_DARK
-        ),
+def make_box(content_list, bg, border, pad_top=6, pad_bot=6, pad_lr=10, width=None):
+    w = width or CONTENT_W
+    t = Table([[content_list]], colWidths=[w])
+    t.setStyle(TableStyle([
+        ('BACKGROUND', (0, 0), (-1, -1), bg),
+        ('BOX', (0, 0), (-1, -1), 0.6, border),
+        ('TOPPADDING', (0, 0), (-1, -1), pad_top),
+        ('BOTTOMPADDING', (0, 0), (-1, -1), pad_bot),
+        ('LEFTPADDING', (0, 0), (-1, -1), pad_lr),
+        ('RIGHTPADDING', (0, 0), (-1, -1), pad_lr),
+        ('VALIGN', (0, 0), (-1, -1), 'TOP'),
+    ]))
+    return t
+
+
+def perf_info(higher_b, perf_dir, lang):
+    if higher_b is True or perf_dir == "higher_is_better":
+        return (("\u25b2  Plus eleve generalement favorable" if lang == "fr"
+                 else "\u25b2  Higher generally better"),
+                colors.HexColor("#059669"))
+    elif higher_b is False or perf_dir == "lower_is_better":
+        return (("\u25bc  Plus faible generalement favorable" if lang == "fr"
+                 else "\u25bc  Lower generally better"),
+                colors.HexColor("#D97706"))
+    else:
+        return (("\u25c6  Interpretation contextuelle" if lang == "fr"
+                 else "\u25c6  Contextual interpretation"),
+                colors.HexColor("#475569"))
+
+
+def thresh_info(thresh_type, lang):
+    m = {
+        "REGULATORY":         ("Norme Reglementaire" if lang == "fr" else "Regulatory Standard", "#DC2626"),
+        "ABIX_BENCHMARK":     ("Benchmark ABIX", "#2563EB"),
+        "ACADEMIC_REFERENCE": ("Ref. Academique" if lang == "fr" else "Academic Reference", "#7C3AED"),
+        "MARKET_REFERENCE":   ("Pratique Marche" if lang == "fr" else "Market Reference", "#0D9488"),
     }
-    return styles
+    pair = m.get(thresh_type)
+    return (pair[0], pair[1]) if pair else (None, None)
+
+
+def build_cover(story, lang, n_entries, styles):
+    cover_inner = [
+        Spacer(1, 22*mm),
+        Paragraph("REFERENTIEL METHODOLOGIQUE OFFICIEL" if lang == "fr"
+                  else "OFFICIAL METHODOLOGICAL REFERENCE", styles['CoverBadge']),
+        Paragraph("Glossaire Financier &amp; Bancaire" if lang == "fr"
+                  else "Banking &amp; Financial Glossary", styles['CoverTitle']),
+        Paragraph(
+            ("ABIX Data Explorer \u2014 Algorithmes, Ratios, Indicateurs &amp; Concepts Metiers"
+             "<br/>du Secteur Bancaire Algerien" if lang == "fr" else
+             "ABIX Data Explorer \u2014 Financial Metrics, Ratios, Algorithms &amp; Banking Concepts in Algeria"),
+            styles['CoverSubtitle']),
+        HRFlowable(width=CONTENT_W - 28, thickness=1.5, color=C_GOLD, spaceBefore=6, spaceAfter=16),
+        Paragraph(
+            (f"Ce document constitue le referentiel methodologique exhaustif des <b>{n_entries} notions</b> "
+             f"mises en oeuvre dans la plateforme ABIX Data Explorer, couvrant les banques commerciales "
+             f"actives en Algerie. Chaque fiche documente la methode reellement utilisee par le moteur de calcul ABIX."
+             if lang == "fr" else
+             f"This document provides the comprehensive methodological reference for all <b>{n_entries} concepts</b> "
+             f"implemented in the ABIX Data Explorer platform across commercial banks in Algeria."),
+            styles['CoverMeta']),
+        Spacer(1, 12*mm),
+        Table([
+            [Paragraph(f"<b>{'Perimetre :' if lang == 'fr' else 'Scope:'}</b> 21 banques commerciales algeriennes",
+                       styles['CoverMeta']),
+             Paragraph(f"<b>{'Notions :' if lang == 'fr' else 'Terms:'}</b> {n_entries}",
+                       styles['CoverMeta'])],
+            [Paragraph(f"<b>{'Edition :' if lang == 'fr' else 'Edition:'}</b> 2025 / 2026",
+                       styles['CoverMeta']),
+             Paragraph(f"<b>{'Genere :' if lang == 'fr' else 'Generated:'}</b> {datetime.now().strftime('%d/%m/%Y')}",
+                       styles['CoverMeta'])],
+        ], colWidths=[CONTENT_W / 2, CONTENT_W / 2]),
+    ]
+    cover_t = Table([[cover_inner]], colWidths=[CONTENT_W])
+    cover_t.setStyle(TableStyle([
+        ('BACKGROUND', (0, 0), (-1, -1), C_NAVY_DARK),
+        ('LEFTPADDING', (0, 0), (-1, -1), 14),
+        ('RIGHTPADDING', (0, 0), (-1, -1), 14),
+        ('TOPPADDING', (0, 0), (-1, -1), 0),
+        ('BOTTOMPADDING', (0, 0), (-1, -1), 30),
+    ]))
+    story.append(cover_t)
+    story.append(PageBreak())
+
+
+def build_toc(story, entries, categories, lang, styles):
+    story.append(Paragraph("SOMMAIRE" if lang == "fr" else "TABLE OF CONTENTS",
+        ParagraphStyle('TOCTitle', fontName='Helvetica-Bold', fontSize=18,
+                       leading=24, textColor=C_NAVY, spaceAfter=4)))
+    story.append(HRFlowable(width=CONTENT_W, thickness=1.5, color=C_GOLD, spaceBefore=4, spaceAfter=10))
+    by_cat = {}
+    for e in entries:
+        by_cat.setdefault(e.get("category", "other"), []).append(e)
+    for cat_id, cat_data in categories.items():
+        cat_name = (cat_data.get("name") or {}).get(lang) or (cat_data.get("name") or {}).get("fr", cat_id)
+        cat_terms = by_cat.get(cat_id, [])
+        if not cat_terms:
+            continue
+        story.append(Paragraph(f"<b>{cat_name}</b>  <font color='#94A3B8'>({len(cat_terms)})</font>",
+                                styles['TOCCatName']))
+        terms_str = "  \u00b7  ".join([
+            ((e.get("term") or {}).get(lang) or (e.get("term") or {}).get("fr", "?"))
+            + (f" ({e['acronym']})" if e.get("acronym") else "")
+            for e in cat_terms
+        ])
+        story.append(Paragraph(terms_str, styles['TOCTermName']))
+        story.append(Spacer(1, 4*mm))
+    story.append(PageBreak())
+
+
+def build_term_card(item, lang, styles, cat_name):
+    blocks = []
+    term_str  = (item.get("term") or {}).get(lang) or (item.get("term") or {}).get("fr", "")
+    acronym   = item.get("acronym", "") or ""
+    aliases_d = item.get("aliases") or {}
+    aliases   = aliases_d.get(lang) or aliases_d.get("fr") or []
+    short_def = (item.get("short_definition") or {}).get(lang) or (item.get("short_definition") or {}).get("fr", "")
+    detailed  = (item.get("detailed_definition") or {}).get(lang) or (item.get("detailed_definition") or {}).get("fr", "")
+    formula   = item.get("formula") or ""
+    interp    = (item.get("interpretation") or {}).get(lang) or (item.get("interpretation") or {}).get("fr", "")
+    example   = (item.get("example") or {}).get(lang) or (item.get("example") or {}).get("fr", "")
+    vintage   = item.get("example_vintage") or ""
+    unit      = item.get("unit") or ""
+    modules   = item.get("modules") or []
+    related   = item.get("related_terms") or []
+    higher_b  = item.get("higher_is_better")
+    perf_dir  = item.get("performance_direction") or "neutral"
+    thresh_t  = item.get("threshold_type") or "NONE"
+    reg_thresh= item.get("regulatory_threshold") or ""
+    abix_bench= item.get("abix_benchmark") or ""
+
+    perf_txt, perf_fg = perf_info(higher_b, perf_dir, lang)
+    thresh_lbl, thresh_col = thresh_info(thresh_t, lang)
+
+    # Badge line
+    badge_parts = [f"<font color='#93C5FD'><b>{cat_name.upper()}</b></font>"]
+    if thresh_lbl:
+        badge_parts.append(f"<font color='{thresh_col}'><b>{thresh_lbl}</b></font>")
+    if unit:
+        badge_parts.append(f"<font color='#CBD5E1'>{'Unite :' if lang == 'fr' else 'Unit:'} {unit}</font>")
+
+    header_inner = [
+        Paragraph("  \u00b7  ".join(badge_parts),
+                  ParagraphStyle('hdr_meta', fontName='Helvetica', fontSize=8,
+                                 leading=11, textColor=C_WHITE)),
+        Spacer(1, 3*mm),
+        Paragraph(f"<b>{term_str}</b>" + (f"  <font color='#34D399'>({acronym})</font>" if acronym else ""),
+                  styles['TermName']),
+    ]
+    if aliases:
+        header_inner.append(Paragraph(
+            ("Alias : " if lang == "fr" else "Aliases: ") + ", ".join(aliases),
+            styles['TermAliases']))
+    header_inner.append(Spacer(1, 4*mm))
+    header_inner.append(Paragraph(perf_txt,
+        ParagraphStyle('perf', fontName='Helvetica-Bold', fontSize=8.5, leading=11, textColor=perf_fg)))
+
+    hdr_t = Table([[header_inner]], colWidths=[CONTENT_W])
+    hdr_t.setStyle(TableStyle([
+        ('BACKGROUND', (0, 0), (-1, -1), C_NAVY),
+        ('LEFTPADDING', (0, 0), (-1, -1), 12),
+        ('RIGHTPADDING', (0, 0), (-1, -1), 12),
+        ('TOPPADDING', (0, 0), (-1, -1), 10),
+        ('BOTTOMPADDING', (0, 0), (-1, -1), 10),
+        ('VALIGN', (0, 0), (-1, -1), 'TOP'),
+    ]))
+    blocks.append(hdr_t)
+    blocks.append(Spacer(1, 3*mm))
+
+    # Def synthétique
+    if short_def:
+        blocks.append(Paragraph(("DEFINITION SYNTHETIQUE" if lang == "fr" else "SUMMARY DEFINITION"),
+                                 styles['SectionLabel']))
+        blocks.append(make_box([Paragraph(short_def, styles['ShortDef'])],
+                                C_SLATE_100, C_SLATE_200, pad_top=8, pad_bot=8, pad_lr=10))
+        blocks.append(Spacer(1, 2.5*mm))
+
+    # Def détaillée
+    if detailed:
+        blocks.append(Paragraph(("EXPLICATION DETAILLEE" if lang == "fr" else "DETAILED EXPLANATION"),
+                                 styles['SectionLabel']))
+        blocks.append(make_box([Paragraph(detailed, styles['DetailedDef'])],
+                                C_WHITE, C_SLATE_200, pad_top=6, pad_bot=6, pad_lr=10))
+        blocks.append(Spacer(1, 2.5*mm))
+
+    # Formule
+    if formula:
+        blocks.append(Paragraph(("FORMULE DE CALCUL ABIX" if lang == "fr" else "ABIX CALCULATION FORMULA"),
+                                 styles['SectionLabel']))
+        blocks.append(make_box([Paragraph(formula, styles['FormulaText'])],
+                                C_SLATE_900, colors.HexColor("#334155"),
+                                pad_top=8, pad_bot=8, pad_lr=10))
+        blocks.append(Spacer(1, 2.5*mm))
+
+    # Interprétation
+    if interp:
+        blocks.append(Paragraph(("COMMENT INTERPRETER ?" if lang == "fr" else "HOW TO INTERPRET?"),
+                                 styles['SectionLabel']))
+        blocks.append(make_box([Paragraph(interp, styles['InterpText'])],
+                                C_GREEN_50, C_GREEN_200, pad_top=7, pad_bot=7, pad_lr=10))
+        blocks.append(Spacer(1, 2.5*mm))
+
+    # Seuils & Benchmarks
+    if reg_thresh or abix_bench:
+        blocks.append(Paragraph(("CLASSIFICATION & SEUILS" if lang == "fr" else "CLASSIFICATION & THRESHOLDS"),
+                                 styles['SectionLabel']))
+        thresh_rows = []
+        if reg_thresh:
+            thresh_rows.append(Paragraph(
+                f"<font color='#DC2626'><b>{'Cadre Reglementaire Obligatoire' if lang == 'fr' else 'Mandatory Regulatory Framework'} :</b></font>  {reg_thresh}",
+                styles['ThreshRegText']))
+        if abix_bench:
+            if thresh_rows:
+                thresh_rows.append(Spacer(1, 3*mm))
+            thresh_rows.append(Paragraph(
+                f"<font color='#2563EB'><b>{'Benchmark &amp; Repere ABIX' if lang == 'fr' else 'ABIX Comfort Benchmark'} :</b></font>  {abix_bench}",
+                styles['ThreshAbixText']))
+        blocks.append(make_box(thresh_rows, colors.HexColor("#F8FAFC"), C_SLATE_200,
+                                pad_top=7, pad_bot=7, pad_lr=10))
+        blocks.append(Spacer(1, 2.5*mm))
+
+    # Exemple
+    if example:
+        lbl = ("EXEMPLE CONCRET" if lang == "fr" else "CONCRETE EXAMPLE")
+        if vintage:
+            lbl += f"  ({vintage})"
+        blocks.append(Paragraph(lbl, styles['SectionLabel']))
+        blocks.append(make_box([Paragraph(example, styles['ExampleText'])],
+                                C_AMBER_50, C_AMBER_200, pad_top=7, pad_bot=7, pad_lr=10))
+        blocks.append(Spacer(1, 2.5*mm))
+
+    # Modules & Related
+    footer_cols = []
+    if modules:
+        col_w = (CONTENT_W / 2 - 2*mm) if related else CONTENT_W
+        footer_cols.append([
+            Paragraph("MODULES ABIX" if lang == "fr" else "ABIX MODULES", styles['SectionLabel']),
+            make_box([Paragraph(", ".join(modules), styles['ModulesText'])],
+                      C_SLATE_100, C_SLATE_200, pad_top=5, pad_bot=5, pad_lr=8, width=col_w),
+        ])
+    if related:
+        col_w = (CONTENT_W / 2 - 2*mm) if modules else CONTENT_W
+        footer_cols.append([
+            Paragraph("NOTIONS CONNEXES" if lang == "fr" else "RELATED TERMS", styles['SectionLabel']),
+            make_box([Paragraph(", ".join(related), styles['ModulesText'])],
+                      C_SLATE_100, C_SLATE_200, pad_top=5, pad_bot=5, pad_lr=8, width=col_w),
+        ])
+    if len(footer_cols) == 2:
+        col_w = CONTENT_W / 2 - 1*mm
+        ft = Table([footer_cols], colWidths=[col_w, col_w])
+        ft.setStyle(TableStyle([
+            ('VALIGN', (0, 0), (-1, -1), 'TOP'),
+            ('LEFTPADDING', (0, 0), (-1, -1), 0),
+            ('RIGHTPADDING', (0, 0), (-1, -1), 0),
+            ('TOPPADDING', (0, 0), (-1, -1), 0),
+            ('BOTTOMPADDING', (0, 0), (-1, -1), 0),
+        ]))
+        blocks.append(ft)
+    elif len(footer_cols) == 1:
+        for el in footer_cols[0]:
+            blocks.append(el)
+
+    return blocks
 
 
 def generate_pdf(lang="fr"):
-    """Génère le document PDF pour la langue demandée ('fr' ou 'en')"""
     os.makedirs(OUTPUT_DIR, exist_ok=True)
-    filename = "glossaire-abix-banques-algerie-fr.pdf" if lang == "fr" else "glossary-abix-algerian-banking-en.pdf"
+    filename = ("glossaire-abix-banques-algerie-fr.pdf" if lang == "fr"
+                else "glossary-abix-algerian-banking-en.pdf")
     pdf_path = os.path.join(OUTPUT_DIR, filename)
 
     with open(DATA_FILE, "r", encoding="utf-8") as f:
         data = json.load(f)
 
-    entries = data.get("terms") or data.get("entries", [])
+    entries    = data.get("terms") or data.get("entries", [])
     categories = data.get("categories", {})
-    styles = get_styles()
-    story = []
+    styles     = get_styles()
+    story      = []
 
-    doc = SimpleDocTemplate(
-        pdf_path,
-        pagesize=A4,
-        leftMargin=18*mm,
-        rightMargin=18*mm,
-        topMargin=20*mm,
-        bottomMargin=20*mm
-    )
+    build_cover(story, lang, len(entries), styles)
+    build_toc(story, entries, categories, lang, styles)
 
-    # ── 1. Page de Couverture Institutionnelle ───────────────────────────────
-    story.append(Spacer(1, 15*mm))
+    by_cat = {}
+    for e in entries:
+        by_cat.setdefault(e.get("category", "other"), []).append(e)
 
-    # Badge Supérieur
-    badge_label = "RÉFÉRENTIEL MÉTHODOLOGIQUE OFFICIEL" if lang == "fr" else "OFFICIAL METHODOLOGICAL REFERENCE"
-    story.append(Paragraph(f"<font color='#0D3B66'><b>{badge_label}</b></font>", styles['MetaBadge']))
-    story.append(Spacer(1, 4*mm))
-
-    # Titre Principal
-    main_title = "Glossaire Financier & Bancaire" if lang == "fr" else "Banking & Financial Glossary"
-    story.append(Paragraph(main_title, styles['CoverTitle']))
-    
-    sub_title = "ABIX Data Explorer — Algorithmes, Ratios, Indicateurs & Concepts Métiers du Secteur Bancaire Algérien" if lang == "fr" else "ABIX Data Explorer — Financial Metrics, Ratios, Algorithms & Banking Concepts in Algeria"
-    story.append(Paragraph(sub_title, styles['CoverSubtitle']))
-
-    story.append(HRFlowable(width="100%", thickness=2, color=ACCENT_GOLD, spaceBefore=4, spaceAfter=14))
-
-    # Bloc de présentation & Métadonnées
-    desc_p = "Ce document constitue le référentiel méthodologique exhaustif des notions, agrégats comptables, formules déterministes et méthodes statistiques mis en œuvre dans la plateforme ABIX Data Explorer. Il couvre l'ensemble des 21 banques commerciales actives en Algérie et documente la méthode réellement utilisée pour le calcul et l'interprétation des performances." if lang == "fr" else "This document provides the comprehensive methodological reference for all accounting aggregates, formulas, and statistical methods implemented in the ABIX Data Explorer platform across the 21 commercial banks in Algeria."
-    story.append(Paragraph(desc_p, styles['DetailedDef']))
-    story.append(Spacer(1, 6*mm))
-
-    meta_table_data = [
-        [
-            Paragraph("<b>Périmètre :</b> 21 banques commerciales (6 publiques, 15 privées)", styles['CoverMeta']) if lang == "fr" else Paragraph("<b>Scope:</b> 21 Commercial Banks in Algeria", styles['CoverMeta']),
-            Paragraph(f"<b>Notions indexées :</b> {len(entries)} notions", styles['CoverMeta']) if lang == "fr" else Paragraph(f"<b>Indexed Terms:</b> {len(entries)} concepts", styles['CoverMeta'])
-        ],
-        [
-            Paragraph("<b>Édition :</b> 2025 / 2026", styles['CoverMeta']) if lang == "fr" else Paragraph("<b>Edition:</b> 2025 / 2026", styles['CoverMeta']),
-            Paragraph(f"<b>Date d'export :</b> {datetime.now().strftime('%d/%m/%Y')}", styles['CoverMeta']) if lang == "fr" else Paragraph(f"<b>Export Date:</b> {datetime.now().strftime('%Y-%m-%d')}", styles['CoverMeta'])
-        ],
-        [
-            Paragraph("<b>Éditeur :</b> Tadjeddine & Partners", styles['CoverMeta']) if lang == "fr" else Paragraph("<b>Publisher:</b> Tadjeddine & Partners", styles['CoverMeta']),
-            Paragraph("<b>Format :</b> Normalisation déterministe & auditée", styles['CoverMeta']) if lang == "fr" else Paragraph("<b>Standard:</b> Deterministic & Auditable", styles['CoverMeta'])
-        ]
-    ]
-    meta_table = Table(meta_table_data, colWidths=[90*mm, 84*mm])
-    meta_table.setStyle(TableStyle([
-        ('BACKGROUND', (0, 0), (-1, -1), BG_CARD),
-        ('BOX', (0, 0), (-1, -1), 0.5, BORDER_COLOR),
-        ('VALIGN', (0, 0), (-1, -1), 'MIDDLE'),
-        ('TOPPADDING', (0, 0), (-1, -1), 6),
-        ('BOTTOMPADDING', (0, 0), (-1, -1), 6),
-        ('LEFTPADDING', (0, 0), (-1, -1), 8),
-        ('RIGHTPADDING', (0, 0), (-1, -1), 8),
-    ]))
-    story.append(meta_table)
-    story.append(Spacer(1, 10*mm))
-
-    # Sommaire des 8 Catégories
-    toc_title = "Sommaire des 8 Catégories Analytiques" if lang == "fr" else "Summary of the 8 Analytical Categories"
-    story.append(Paragraph(f"<b>{toc_title}</b>", styles['CategoryHeader']))
-    story.append(Spacer(1, 3*mm))
-
-    cat_items = []
-    for cat_id, cat_obj in categories.items():
-        cat_name = cat_obj.get("name", {}).get(lang, cat_obj.get("name", {}).get("fr", cat_id))
-        count = sum(1 for e in entries if e.get("category") == cat_id)
-        cat_items.append([
-            Paragraph(f"• <b>{cat_name}</b>", styles['TOCItem']),
-            Paragraph(f"{count} {'notions' if lang == 'fr' else 'terms'}", styles['TOCItem'])
-        ])
-    
-    cat_table = Table(cat_items, colWidths=[140*mm, 34*mm])
-    cat_table.setStyle(TableStyle([
-        ('VALIGN', (0, 0), (-1, -1), 'MIDDLE'),
-        ('TOPPADDING', (0, 0), (-1, -1), 3),
-        ('BOTTOMPADDING', (0, 0), (-1, -1), 3),
-        ('LEFTPADDING', (0, 0), (-1, -1), 0),
-        ('RIGHTPADDING', (0, 0), (-1, -1), 0),
-    ]))
-    story.append(cat_table)
-
-    story.append(PageBreak())
-
-    # ── 2. Corps du Glossaire : Par Catégorie ────────────────────────────────
-    # Groupement par catégorie
-    by_category = {}
-    for entry in entries:
-        c = entry.get("category", "other")
-        by_category.setdefault(c, []).append(entry)
-
-    for cat_id, cat_obj in categories.items():
-        cat_entries = by_category.get(cat_id, [])
-        if not cat_entries:
+    for cat_id, cat_data in categories.items():
+        cat_terms = by_cat.get(cat_id, [])
+        if not cat_terms:
             continue
+        cat_name = (cat_data.get("name") or {}).get(lang) or (cat_data.get("name") or {}).get("fr", cat_id)
 
-        cat_name = cat_obj.get("name", {}).get(lang, cat_obj.get("name", {}).get("fr", cat_id))
+        # Page titre de categorie
+        cat_inner = [
+            Spacer(1, 28*mm),
+            Paragraph("CATEGORIE" if lang == "fr" else "CATEGORY",
+                ParagraphStyle('catlbl', fontName='Helvetica-Bold', fontSize=9, leading=12,
+                               textColor=colors.HexColor("#93C5FD"), spaceAfter=4)),
+            Paragraph(cat_name,
+                ParagraphStyle('catname', fontName='Helvetica-Bold', fontSize=24, leading=30,
+                               textColor=C_WHITE, spaceAfter=8)),
+            HRFlowable(width=CONTENT_W - 28, thickness=1.5, color=C_GOLD, spaceBefore=0, spaceAfter=8),
+            Paragraph(f"{len(cat_terms)} {'notions dans cette categorie' if lang == 'fr' else 'terms in this category'}",
+                ParagraphStyle('catcnt', fontName='Helvetica', fontSize=12, leading=16,
+                               textColor=colors.HexColor("#CBD5E1"))),
+        ]
+        cat_t = Table([[cat_inner]], colWidths=[CONTENT_W])
+        cat_t.setStyle(TableStyle([
+            ('BACKGROUND', (0, 0), (-1, -1), C_NAVY_DARK),
+            ('LEFTPADDING', (0, 0), (-1, -1), 14),
+            ('RIGHTPADDING', (0, 0), (-1, -1), 14),
+            ('TOPPADDING', (0, 0), (-1, -1), 0),
+            ('BOTTOMPADDING', (0, 0), (-1, -1), 60),
+        ]))
+        story.append(cat_t)
+        story.append(PageBreak())
 
-        # En-tête de catégorie
-        story.append(Spacer(1, 4*mm))
-        cat_title_p = Paragraph(f"<b>{cat_name.upper()}</b>", styles['CategoryHeader'])
-        story.append(cat_title_p)
-        story.append(HRFlowable(width="100%", thickness=1, color=PRIMARY_NAVY, spaceBefore=2, spaceAfter=8))
+        for item in cat_terms:
+            card = build_term_card(item, lang, styles, cat_name)
+            # Les premiers elements restent ensemble (header + def)
+            story.append(KeepTogether(card[:4] if len(card) > 4 else card))
+            for block in (card[4:] if len(card) > 4 else []):
+                story.append(block)
+            story.append(PageBreak())
 
-        for item in cat_entries:
-            term_str = item.get("term", {}).get(lang, item.get("term", {}).get("fr", ""))
-            acronym = item.get("acronym", "")
-            short_def = item.get("short_definition", {}).get(lang, item.get("short_definition", {}).get("fr", ""))
-            detailed_def = item.get("detailed_definition", {}).get(lang, item.get("detailed_definition", {}).get("fr", ""))
-            formula = item.get("formula", "")
-            interp = item.get("interpretation", {}).get(lang, item.get("interpretation", {}).get("fr", ""))
-            example = item.get("example", {}).get(lang, item.get("example", {}).get("fr", ""))
-            unit = item.get("unit", "")
-            higher_better = item.get("higher_is_better")
-            modules = item.get("modules", [])
-
-            # Construction de la carte de la notion
-            card_content = []
-
-            # Titre & Acronyme
-            title_text = f"<b>{term_str}</b>"
-            if acronym:
-                title_text += f" <font color='#0D9488'>({acronym})</font>"
-            card_content.append(Paragraph(title_text, styles['TermTitle']))
-
-            # Badges métadonnées (Unité, Sens de performance, Seuil)
-            badges = []
-            thresh_type = item.get("threshold_type", "NONE")
-            if thresh_type == "REGULATORY":
-                badges.append("<font color='#DC2626'><b>" + ("Norme Réglementaire" if lang == "fr" else "Regulatory Standard") + "</b></font>")
-            elif thresh_type == "ABIX_BENCHMARK":
-                badges.append("<font color='#2563EB'><b>" + ("Benchmark ABIX" if lang == "fr" else "ABIX Benchmark") + "</b></font>")
-            elif thresh_type == "ACADEMIC_REFERENCE":
-                badges.append("<font color='#7C3AED'><b>" + ("Réf. Académique" if lang == "fr" else "Academic Reference") + "</b></font>")
-            elif thresh_type == "MARKET_REFERENCE":
-                badges.append("<font color='#0D9488'><b>" + ("Pratique Marché" if lang == "fr" else "Market Reference") + "</b></font>")
-
-            if unit:
-                badges.append(f"<b>{'Unité :' if lang == 'fr' else 'Unit:'}</b> {unit}")
-            
-            perf_dir = item.get("performance_direction")
-            if higher_better is True or perf_dir == "higher_is_better":
-                badges.append("▲ " + ("Élevé généralement favorable" if lang == "fr" else "Higher generally better"))
-            elif higher_better is False or perf_dir == "lower_is_better":
-                badges.append("▼ " + ("Faible généralement favorable" if lang == "fr" else "Lower generally better"))
-            else:
-                badges.append("◆ " + ("Interprétation contextuelle" if lang == "fr" else "Contextual interpretation"))
-            
-            if badges:
-                card_content.append(Paragraph(" &nbsp;|&nbsp; ".join(badges), styles['MetaBadge']))
-                card_content.append(Spacer(1, 1.5*mm))
-
-            # Définition courte
-            if short_def:
-                card_content.append(Paragraph(short_def, styles['ShortDef']))
-
-            # Définition détaillée
-            if detailed_def:
-                card_content.append(Paragraph(detailed_def, styles['DetailedDef']))
-
-            # Formule
-            if formula:
-                f_box_content = [
-                    Paragraph(f"<b>{'FORMULE ABIX :' if lang == 'fr' else 'ABIX FORMULA:'}</b>", styles['FormulaLabel']),
-                    Paragraph(formula, styles['FormulaText'])
-                ]
-                f_table = Table([[f_box_content]], colWidths=[166*mm])
-                f_table.setStyle(TableStyle([
-                    ('BACKGROUND', (0, 0), (-1, -1), FORMULA_BG),
-                    ('BOX', (0, 0), (-1, -1), 0.5, colors.HexColor("#334155")),
-                    ('TOPPADDING', (0, 0), (-1, -1), 4),
-                    ('BOTTOMPADDING', (0, 0), (-1, -1), 4),
-                    ('LEFTPADDING', (0, 0), (-1, -1), 6),
-                    ('RIGHTPADDING', (0, 0), (-1, -1), 6),
-                ]))
-                card_content.append(f_table)
-                card_content.append(Spacer(1, 1.5*mm))
-
-            # Interprétation
-            if interp:
-                interp_p = Paragraph(f"<b>{'Interprétation :' if lang == 'fr' else 'Interpretation:'}</b> {interp}", styles['InterpText'])
-                interp_table = Table([[interp_p]], colWidths=[166*mm])
-                interp_table.setStyle(TableStyle([
-                    ('BACKGROUND', (0, 0), (-1, -1), INTERP_BG),
-                    ('BOX', (0, 0), (-1, -1), 0.5, INTERP_BORDER),
-                    ('TOPPADDING', (0, 0), (-1, -1), 4),
-                    ('BOTTOMPADDING', (0, 0), (-1, -1), 4),
-                    ('LEFTPADDING', (0, 0), (-1, -1), 6),
-                    ('RIGHTPADDING', (0, 0), (-1, -1), 6),
-                ]))
-                card_content.append(interp_table)
-                card_content.append(Spacer(1, 1.5*mm))
-
-            # Cadre Réglementaire & Benchmarks ABIX
-            reg_thresh = item.get("regulatory_threshold")
-            abix_bench = item.get("abix_benchmark")
-            if reg_thresh or abix_bench:
-                thresh_boxes = []
-                if reg_thresh:
-                    thresh_boxes.append(Paragraph(f"<b><font color='#DC2626'>{'Cadre Réglementaire Obligatoire :' if lang == 'fr' else 'Mandatory Regulatory Framework:'}</font></b> {reg_thresh}", styles['InterpText']))
-                if abix_bench:
-                    thresh_boxes.append(Paragraph(f"<b><font color='#2563EB'>{'Benchmark & Repère ABIX :' if lang == 'fr' else 'ABIX Comfort Benchmark:'}</font></b> {abix_bench}", styles['InterpText']))
-                
-                t_table = Table([[Paragraph("<br/>".join([p.text for p in thresh_boxes]), styles['InterpText'])]], colWidths=[166*mm])
-                t_table.setStyle(TableStyle([
-                    ('BACKGROUND', (0, 0), (-1, -1), colors.HexColor("#F8FAFC")),
-                    ('BOX', (0, 0), (-1, -1), 0.5, colors.HexColor("#CBD5E1")),
-                    ('TOPPADDING', (0, 0), (-1, -1), 4),
-                    ('BOTTOMPADDING', (0, 0), (-1, -1), 4),
-                    ('LEFTPADDING', (0, 0), (-1, -1), 6),
-                    ('RIGHTPADDING', (0, 0), (-1, -1), 6),
-                ]))
-                card_content.append(t_table)
-                card_content.append(Spacer(1, 1.5*mm))
-
-            # Exemple
-            if example:
-                example_p = Paragraph(f"<b>{'Exemple concret :' if lang == 'fr' else 'Concrete example:'}</b> {example}", styles['ExampleText'])
-                example_table = Table([[example_p]], colWidths=[166*mm])
-                example_table.setStyle(TableStyle([
-                    ('BACKGROUND', (0, 0), (-1, -1), EXAMPLE_BG),
-                    ('BOX', (0, 0), (-1, -1), 0.5, EXAMPLE_BORDER),
-                    ('TOPPADDING', (0, 0), (-1, -1), 4),
-                    ('BOTTOMPADDING', (0, 0), (-1, -1), 4),
-                    ('LEFTPADDING', (0, 0), (-1, -1), 6),
-                    ('RIGHTPADDING', (0, 0), (-1, -1), 6),
-                ]))
-                card_content.append(example_table)
-                card_content.append(Spacer(1, 1.5*mm))
-
-            # Modules ABIX associés
-            if modules:
-                mod_str = f"<b>{'Modules ABIX :' if lang == 'fr' else 'ABIX Modules:'}</b> " + ", ".join(modules)
-                card_content.append(Paragraph(mod_str, styles['MetaBadge']))
-
-            # Encapsulation dans un bloc Table
-            term_table = Table([[card_content]], colWidths=[174*mm])
-            term_table.setStyle(TableStyle([
-                ('BACKGROUND', (0, 0), (-1, -1), BG_CARD),
-                ('BOX', (0, 0), (-1, -1), 0.5, BORDER_COLOR),
-                ('TOPPADDING', (0, 0), (-1, -1), 6),
-                ('BOTTOMPADDING', (0, 0), (-1, -1), 6),
-                ('LEFTPADDING', (0, 0), (-1, -1), 8),
-                ('RIGHTPADDING', (0, 0), (-1, -1), 8),
-            ]))
-
-            story.append(KeepTogether([term_table, Spacer(1, 4*mm)]))
-
-    # Construction du document avec le Canvas personnalisé
     def make_canvas(*args, **kwargs):
         kwargs["lang"] = lang
-        return GlossaryCanvas(*args, **kwargs)
+        return ABIXCanvas(*args, **kwargs)
 
+    doc = SimpleDocTemplate(
+        pdf_path, pagesize=A4,
+        leftMargin=MARGIN, rightMargin=MARGIN,
+        topMargin=14*mm, bottomMargin=16*mm,
+    )
     doc.build(story, canvasmaker=make_canvas)
-    print(f"[generate_glossary_pdf] ✓ Document PDF généré : {pdf_path} ({os.path.getsize(pdf_path)} octets)")
+    size = os.path.getsize(pdf_path)
+    print(f"[generate_glossary_pdf] OK  {os.path.basename(pdf_path)} ({size:,} octets)")
     return pdf_path
 
 
 if __name__ == "__main__":
-    print("─── Génération des livrets PDF du Glossaire ABIX ───")
-    fr_pdf = generate_pdf("fr")
-    en_pdf = generate_pdf("en")
-    print("\n✓ Tous les documents PDF ont été générés avec succès !")
+    print("--- Generation des livrets PDF Premium du Glossaire ABIX ---")
+    generate_pdf("fr")
+    generate_pdf("en")
+    if os.path.exists(ABIX_FRONT_DOCS):
+        for fname in os.listdir(OUTPUT_DIR):
+            if fname.endswith(".pdf"):
+                shutil.copy2(os.path.join(OUTPUT_DIR, fname),
+                             os.path.join(ABIX_FRONT_DOCS, fname))
+        print(f"OK  PDFs synchronises vers {ABIX_FRONT_DOCS}")
+    print("\nGeneration terminee avec succes !")
