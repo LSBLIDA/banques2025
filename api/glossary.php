@@ -40,7 +40,7 @@ if (!file_exists($dataFile)) {
 $jsonContent = file_get_contents($dataFile);
 $glossaryData = json_decode($jsonContent, true);
 
-if (!$glossaryData || !isset($glossaryData['entries'])) {
+if (!$glossaryData || (!isset($glossaryData['entries']) && !isset($glossaryData['terms']))) {
     http_response_code(500);
     echo json_encode([
         'success' => false,
@@ -48,6 +48,9 @@ if (!$glossaryData || !isset($glossaryData['entries'])) {
     ], JSON_UNESCAPED_UNICODE);
     exit;
 }
+
+// Support both 'terms' and 'entries' as root key
+$glossaryEntries = $glossaryData['terms'] ?? $glossaryData['entries'] ?? [];
 
 $lang = isset($_GET['lang']) && in_array(strtolower($_GET['lang']), ['fr', 'en', 'ar']) ? strtolower($_GET['lang']) : 'fr';
 $category = isset($_GET['category']) ? trim($_GET['category']) : null;
@@ -59,7 +62,7 @@ $letter = isset($_GET['letter']) ? mb_strtoupper(trim($_GET['letter']), 'UTF-8')
 // Préparation des entrées localisées
 $localizedEntries = [];
 
-foreach ($glossaryData['entries'] as $entry) {
+foreach ($glossaryEntries as $entry) {
     if (isset($entry['is_active']) && !$entry['is_active']) {
         continue;
     }
@@ -176,7 +179,7 @@ if (isset($glossaryData['categories'])) {
 echo json_encode([
     'success' => true,
     'lang' => $lang,
-    'total_count' => count($glossaryData['entries']),
+    'total_count' => count($glossaryEntries),
     'filtered_count' => count($localizedEntries),
     'categories' => $categoriesOut,
     'entries' => $localizedEntries
