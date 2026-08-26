@@ -65,6 +65,15 @@ AddCharset UTF-8 .html .css .js .json .xml
   # ── Règle 3bis : Alias court /transparence → /fr/insights/transparence-information-financiere-2025/ ──
   RewriteRule ^transparence/?$ /fr/insights/transparence-information-financiere-2025/ [R=301,L]
 
+  # ── Règle 3ter : Confirmation de souscription (ABIX 2026) ─────────────────
+  RewriteRule ^souscription/confirmation/essentiel/?$ /fr/souscription/confirmation/essentiel/ [R=301,L]
+  RewriteRule ^souscription/confirmation/essential/?$ /fr/souscription/confirmation/essentiel/ [R=301,L]
+  RewriteRule ^souscription/confirmation/pro/?$ /fr/souscription/confirmation/pro/ [R=301,L]
+  RewriteRule ^souscription/confirmation/corporate/?$ /fr/souscription/confirmation/corporate/ [R=301,L]
+  RewriteRule ^subscription/confirmation/essential/?$ /en/subscription/confirmation/essential/ [R=301,L]
+  RewriteRule ^subscription/confirmation/pro/?$ /en/subscription/confirmation/pro/ [R=301,L]
+  RewriteRule ^subscription/confirmation/corporate/?$ /en/subscription/confirmation/corporate/ [R=301,L]
+
   # ── Règle 4 : Barre oblique sur les répertoires de langue ────────────────
   # Assure que /fr, /en, /ar pointent vers /fr/, /en/, /ar/
   RewriteRule ^(fr|en|ar)$ /$1/ [R=301,L]

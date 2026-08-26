@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="{{__lang}}" dir="{{__dir}}">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{confirmation.meta.title}} — {{__planName}}</title>
+  <meta name="description" content="{{confirmation.meta.description}}" />
+  <link rel="canonical" href="{{__canonical}}" />
+  {{__hreflang}}
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="{{__canonical}}" />
+  <meta property="og:title" content="{{confirmation.meta.title}} — {{__planName}}" />
+  <meta property="og:description" content="{{confirmation.meta.description}}" />
+  <meta property="og:image" content="{{__basePath}}/public/couverture-2026.jpg" />
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="icon" type="image/png" href="{{__basePath}}/public/favicon.png" />
+  <link rel="icon" type="image/x-icon" href="{{__basePath}}/public/favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap" />
+  <link rel="stylesheet" href="{{__basePath}}/css/main.css" />
+  <script src="{{__basePath}}/js/site-config.js" defer></script>
+  <script src="{{__basePath}}/js/main.js" defer></script>
+</head>
+<body class="font-inter bg-slate-900 text-white antialiased min-h-screen flex flex-col">
+
+<!-- ═══════════════════════════════════════════════════════════════ NAVIGATION -->
+{{__mainNav}}
+
+<!-- ═══════════════════════════════════════════════════════════════ CONTENU PRINCIPAL -->
+<main class="flex-grow pt-24 pb-16 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto w-full">
+
+  <!-- En-tête de confirmation -->
+  <div class="text-center space-y-4 mb-10">
+    <div class="inline-flex items-center gap-2 bg-emerald-500/20 text-emerald-400 px-4 py-2 rounded-full text-xs sm:text-sm font-bold border border-emerald-500/30">
+      <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+      </svg>
+      {{confirmation.badge}}
+    </div>
+
+    <h1 class="text-2xl sm:text-3xl lg:text-4xl font-bold font-playfair tracking-tight text-white">
+      {{confirmation.title}}
+    </h1>
+
+    <p class="text-slate-300 max-w-2xl mx-auto text-sm sm:text-base leading-relaxed">
+      {{confirmation.subtitle}}
+    </p>
+  </div>
+
+  <!-- Carte Centrale de l'Offre -->
+  <div class="bg-slate-800/80 border border-slate-700/80 rounded-2xl shadow-2xl overflow-hidden backdrop-blur-sm mb-10">
+    
+    <!-- Bannière supérieure du Pack -->
+    <div class="bg-gradient-to-r from-primary/90 via-slate-800 to-primary/90 p-6 sm:p-8 border-b border-slate-700 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+      <div>
+        <span class="text-xs uppercase tracking-wider font-bold text-amber-400">{{confirmation.labelPlan}}</span>
+        <h2 class="text-2xl sm:text-3xl font-bold text-white font-playfair mt-1">{{__planName}}</h2>
+        <p class="text-sm text-cyan-300 font-medium mt-1">« {{__planPositioning}} »</p>
+      </div>
+
+      <!-- Tarifs -->
+      <div class="bg-slate-900/90 border border-amber-400/30 rounded-xl p-4 text-start md:text-end">
+        <div class="text-xs text-slate-400 line-through">{{confirmation.labelPriceNormal}} : {{__planRegularPrice}}</div>
+        <div class="text-2xl sm:text-3xl font-extrabold text-amber-400 tracking-tight">{{__planPromoPrice}}</div>
+        <div class="text-xs font-semibold text-emerald-400 mt-0.5">{{confirmation.labelSaving}} : {{__planDiscount}}</div>
+        <div class="text-xs text-slate-300 mt-1 border-t border-slate-700/60 pt-1">
+          <span>{{confirmation.labelTotalTtc}} : <b>{{__planTotalTTC}}</b></span>
+          <span class="text-slate-400 text-[10px]"> ({{confirmation.labelVat}})</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="p-6 sm:p-8 space-y-8">
+      
+      <!-- Résumé du contenu inclus -->
+      <div class="space-y-4">
+        <h3 class="text-base sm:text-lg font-bold text-amber-400 flex items-center gap-2">
+          <svg class="w-5 h-5 text-amber-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+          </svg>
+          {{confirmation.summaryTitle}}
+        </h3>
+        
+        <p class="text-sm sm:text-base text-slate-200 leading-relaxed bg-slate-900/60 p-4 rounded-xl border border-slate-700/60">
+          {{__planSummary}}
+        </p>
+
+        <!-- Métadonnées du pack (utilisateurs, période, durée) -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2">
+          <div class="bg-slate-900/40 border border-slate-700/40 p-3 rounded-xl text-center">
+            <span class="block text-xs text-slate-400">{{confirmation.labelUsers}}</span>
+            <span class="text-sm font-bold text-white mt-1 block">{{__planUsers}}</span>
+          </div>
+          <div class="bg-slate-900/40 border border-slate-700/40 p-3 rounded-xl text-center">
+            <span class="block text-xs text-slate-400">{{confirmation.labelPeriod}}</span>
+            <span class="text-sm font-bold text-cyan-300 mt-1 block">{{__planPeriod}}</span>
+          </div>
+          <div class="bg-slate-900/40 border border-slate-700/40 p-3 rounded-xl text-center">
+            <span class="block text-xs text-slate-400">{{confirmation.labelDuration}}</span>
+            <span class="text-sm font-bold text-amber-400 mt-1 block">{{confirmation.valueDuration}}</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Boutons d'action principaux pour le PDF standard -->
+      <div class="pt-4 border-t border-slate-700 space-y-4">
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <!-- Bouton Télécharger -->
+          <a href="{{__planPdfUrl}}" download="{{__planPdfFilename}}" data-track="download_offer_pdf" class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-xl font-bold text-sm sm:text-base bg-amber-400 hover:bg-amber-300 text-slate-950 transition-all shadow-lg hover:shadow-amber-400/20 active:scale-98">
+            <svg class="w-5 h-5 text-slate-950 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+            </svg>
+            <span>{{confirmation.btnDownload}}</span>
+          </a>
+
+          <!-- Bouton Consulter dans un nouvel onglet -->
+          <a href="{{__planPdfUrl}}" target="_blank" rel="noopener noreferrer" data-track="view_offer_pdf" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl font-bold text-sm sm:text-base bg-slate-700/80 hover:bg-slate-700 text-white border border-slate-600 transition-all">
+            <svg class="w-5 h-5 text-cyan-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+            </svg>
+            <span>{{confirmation.btnView}}</span>
+          </a>
+        </div>
+
+        <!-- Mention de suivi commercial -->
+        <div class="bg-primary/20 border border-primary/30 rounded-xl p-4 flex items-start gap-3 mt-4">
+          <svg class="w-5 h-5 text-cyan-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+          </svg>
+          <p class="text-xs sm:text-sm text-cyan-100 font-medium">
+            {{confirmation.commercialContact}}
+          </p>
+        </div>
+      </div>
+
+      <!-- Formulaire Autonome d'Envoi par Email -->
+      <div class="pt-6 border-t border-slate-700">
+        <div class="bg-slate-900/90 border border-slate-700/80 rounded-xl p-5 sm:p-6 space-y-4">
+          <div>
+            <h4 class="text-sm sm:text-base font-bold text-white flex items-center gap-2">
+              <svg class="w-4 h-4 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+              </svg>
+              {{confirmation.emailSectionTitle}}
+            </h4>
+            <p class="text-xs text-slate-400 mt-1">
+              {{confirmation.emailSectionDesc}}
+            </p>
+          </div>
+
+          <form id="send-offer-email-form" data-plan="{{__planId}}" class="space-y-3">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <div>
+                <label for="offer-email-input" class="sr-only">{{confirmation.emailPlaceholder}}</label>
+                <input type="email" id="offer-email-input" name="email" required placeholder="{{confirmation.emailPlaceholder}}" class="w-full px-4 py-2.5 bg-slate-800 border border-slate-600 rounded-lg text-sm text-white placeholder-slate-400 focus:outline-none focus:border-amber-400 focus:ring-1 focus:ring-amber-400 transition-colors" />
+              </div>
+              <div>
+                <label for="offer-name-input" class="sr-only">{{confirmation.namePlaceholder}}</label>
+                <input type="text" id="offer-name-input" name="name" placeholder="{{confirmation.namePlaceholder}}" class="w-full px-4 py-2.5 bg-slate-800 border border-slate-600 rounded-lg text-sm text-white placeholder-slate-400 focus:outline-none focus:border-amber-400 focus:ring-1 focus:ring-amber-400 transition-colors" />
+              </div>
+            </div>
+
+            <!-- Messages d'état -->
+            <div id="email-send-status" class="hidden text-xs py-2 px-3 rounded-lg"></div>
+
+            <div class="flex justify-end">
+              <button type="submit" id="btn-submit-offer-email" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-xs sm:text-sm font-bold bg-accent hover:bg-accent/90 text-white transition-all">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/>
+                </svg>
+                <span id="btn-submit-offer-text">{{confirmation.btnSendEmail}}</span>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Navigation complémentaire (Data Explorer / Tarifs) -->
+  <div class="flex flex-col sm:flex-row items-center justify-between gap-4 text-center">
+    <a href="{{__basePath}}/{{__lang}}/" class="text-xs sm:text-sm text-slate-400 hover:text-white transition-colors flex items-center gap-1.5">
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/>
+      </svg>
+      {{confirmation.btnHome}}
+    </a>
+
+    <div class="flex items-center gap-4">
+      <a href="{{__basePath}}/{{__lang}}/editions/2026/#tarifs" class="text-xs sm:text-sm text-slate-400 hover:text-amber-400 transition-colors">
+        {{confirmation.btnPricing}}
+      </a>
+      <span class="text-slate-600">•</span>
+      <a href="{{__basePath}}/{{__lang}}/data-explorer/" class="text-xs sm:text-sm text-cyan-400 hover:text-cyan-300 font-semibold transition-colors">
+        {{confirmation.btnDataExplorer}} →
+      </a>
+    </div>
+  </div>
+
+</main>
+
+<!-- ═══════════════════════════════════════════════════════════════ PIED DE PAGE -->
+<footer class="bg-slate-950 border-t border-slate-800 text-slate-400 text-xs py-8 px-4 sm:px-6 lg:px-8 mt-auto">
+  <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+    <div class="flex items-center gap-3">
+      <img src="{{__basePath}}/public/logo.png" alt="ABIX" class="h-7 w-auto object-contain opacity-80" />
+      <span>&copy; 2026 Tadjeddine & Partners. Tous droits réservés.</span>
+    </div>
+    <div class="flex items-center gap-6">
+      <a href="{{__basePath}}/{{__lang}}/mentions-legales/" class="hover:text-white transition-colors">Mentions légales</a>
+      <a href="{{__basePath}}/{{__lang}}/conditions-utilisation/" class="hover:text-white transition-colors">Conditions d'utilisation</a>
+      <a href="{{__basePath}}/{{__lang}}/politique-confidentialite/" class="hover:text-white transition-colors">Politique de confidentialité</a>
+      <a href="{{__basePath}}/{{__lang}}/contact/" class="hover:text-white transition-colors">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  var form = document.getElementById("send-offer-email-form");
+  if (!form) return;
+
+  var statusEl = document.getElementById("email-send-status");
+  var submitBtn = document.getElementById("btn-submit-offer-email");
+  var btnText = document.getElementById("btn-submit-offer-text");
+  var originalBtnText = btnText ? btnText.textContent : "";
+
+  form.addEventListener("submit", async function(e) {
+    e.preventDefault();
+    if (!form.checkValidity()) return;
+
+    var emailInput = document.getElementById("offer-email-input");
+    var nameInput = document.getElementById("offer-name-input");
+    var email = emailInput ? emailInput.value.trim() : "";
+    var name = nameInput ? nameInput.value.trim() : "";
+    var plan = form.getAttribute("data-plan") || "essentiel";
+
+    if (!email) return;
+
+    // Loading state
+    if (submitBtn) submitBtn.disabled = true;
+    if (btnText) btnText.textContent = "{{confirmation.emailSending}}";
+    if (statusEl) {
+      statusEl.className = "hidden";
+      statusEl.textContent = "";
+    }
+
+    var basePath = (window.SITE_CONFIG && window.SITE_CONFIG.basePath) ? window.SITE_CONFIG.basePath : "{{__basePath}}";
+    var endpoint = (basePath || "") + "/api/subscriptions/send-plan-offer.php";
+
+    try {
+      var res = await fetch(endpoint, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          email: email,
+          name: name,
+          plan: plan,
+          request_id: "req_" + Date.now() + "_" + Math.random().toString(36).substring(2, 8)
+        })
+      });
+
+      var data = await res.json().catch(function() { return {}; });
+
+      if (res.ok && data.ok) {
+        if (statusEl) {
+          statusEl.className = "text-xs py-2.5 px-3.5 rounded-lg bg-emerald-500/20 text-emerald-300 border border-emerald-500/30";
+          statusEl.textContent = data.message || "{{confirmation.emailSuccess}}";
+        }
+        if (submitBtn) {
+          submitBtn.disabled = true;
+          if (btnText) btnText.textContent = "✔ Envoyé";
+        }
+      } else {
+        if (statusEl) {
+          statusEl.className = "text-xs py-2.5 px-3.5 rounded-lg bg-rose-500/20 text-rose-300 border border-rose-500/30";
+          statusEl.textContent = data.error || "{{confirmation.emailError}}";
+        }
+        if (submitBtn) submitBtn.disabled = false;
+        if (btnText) btnText.textContent = originalBtnText;
+      }
+    } catch(err) {
+      if (statusEl) {
+        statusEl.className = "text-xs py-2.5 px-3.5 rounded-lg bg-rose-500/20 text-rose-300 border border-rose-500/30";
+        statusEl.textContent = "{{confirmation.emailError}}";
+      }
+      if (submitBtn) submitBtn.disabled = false;
+      if (btnText) btnText.textContent = originalBtnText;
+    }
+  });
+});
+</script>
+
+</body>
+</html>

@@ -2027,5 +2027,60 @@
       "lastReport2021": "Dernier rapport identifié : 2021",
       "notSignificant": "Pas significatif dans le périmètre de l’analyse source."
     }
+  },
+  "confirmation": {
+    "meta": {
+      "title": "Confirmation de souscription — ABIX 2026",
+      "description": "Votre demande de souscription pour l’édition ABIX 2026 a bien été enregistrée. Téléchargez et consultez votre offre commerciale officielle."
+    },
+    "badge": "Souscription enregistrée",
+    "title": "Votre demande de souscription a bien été enregistrée",
+    "subtitle": "Nous vous remercions de votre intérêt pour Algeria Banking Index 2026. Votre offre commerciale standardisée est immédiatement accessible ci-dessous.",
+    "commercialContact": "Notre équipe commerciale vous contactera prochainement pour finaliser votre souscription.",
+    "btnDownload": "Télécharger mon offre PDF",
+    "btnView": "Consulter l’offre",
+    "btnDataExplorer": "Accéder à ABIX Data Explorer",
+    "btnHome": "Retour à l’accueil",
+    "btnPricing": "Voir tous les packs",
+    "emailSectionTitle": "Recevoir une copie par email",
+    "emailSectionDesc": "Renseignez votre adresse email professionnelle pour recevoir immédiatement une copie de cette offre officielle en pièce jointe.",
+    "emailPlaceholder": "Votre adresse email professionnelle",
+    "namePlaceholder": "Votre prénom et nom (facultatif)",
+    "btnSendEmail": "M’envoyer l’offre par email",
+    "emailSending": "Envoi en cours…",
+    "emailSuccess": "L’offre commerciale a été transmise avec succès à votre adresse email.",
+    "emailError": "Une erreur est survenue lors de l’envoi de l’email. Vous pouvez télécharger directement votre offre ci-dessus.",
+    "detailsTitle": "Récapitulatif financier du pack choisi",
+    "labelPlan": "Pack sélectionné",
+    "labelPositioning": "Positionnement",
+    "labelPriceHt": "Prix promotionnel HT",
+    "labelPriceNormal": "Prix catalogue HT",
+    "labelDiscount": "Remise appliquée (10 %)",
+    "labelSaving": "Économie réalisée",
+    "labelVat": "TVA 19 %",
+    "labelTotalTtc": "Total TTC",
+    "labelUsers": "Utilisateurs inclus",
+    "labelPeriod": "Période ABIX Data Explorer",
+    "labelDuration": "Durée d'accès",
+    "valueDuration": "12 mois complets",
+    "summaryTitle": "Contenu inclus dans votre pack",
+    "validityNotice": "Offre promotionnelle Early Bird valable jusqu’au 31 août 2026.",
+    "plans": {
+      "essentiel": {
+        "name": "Pack Essentiel",
+        "positioning": "Comprendre le marché",
+        "summary": "Étude complète de l’édition 2026 au format PDF sécurisé, analyse consolidée du secteur bancaire, comparaison banques publiques / privées, fiches individuelles des 21 banques, classements et benchmarks par indicateur, licence ABIX Data Explorer pendant 12 mois pour 1 utilisateur (données 2025)."
+      },
+      "pro": {
+        "name": "Pack Pro",
+        "positioning": "Exploiter les données",
+        "summary": "Tout le Pack Essentiel + fichier Excel structuré contenant les données, licence ABIX Data Explorer (données 2024 et 2025) jusqu’à 3 utilisateurs d’une même entité, analyse des évolutions entre exercices et visualisations interactives."
+      },
+      "corporate": {
+        "name": "Pack Corporate Executive",
+        "positioning": "Analyser, comparer et partager",
+        "summary": "Tout le Pack Pro + licence ABIX Data Explorer Executive jusqu’à 20 utilisateurs, données historiques 2022, 2023, 2024 et 2025, analyse multidimensionnelle, profils bancaires 360°, Executive Dashboard & Key Insights, groupes de pairs et benchmarks avancés, rapports Executive PDF et exports Excel."
+      }
+    }
   }
 }

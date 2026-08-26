@@ -54,6 +54,9 @@ const PAGES = [
   { template: "politique-confidentialite.html", output: "politique-confidentialite/index.html", titleKey: "privacy" },
   { template: "data-explorer.html", output: "data-explorer/index.html", titleKey: "dataExplorer" },
   { template: "transparence-information-financiere-2025.html", output: "insights/transparence-information-financiere-2025/index.html", titleKey: "transparency2025" },
+  { template: "confirmation.html", output: "souscription/confirmation/essentiel/index.html", titleKey: "confirmation_essentiel", planKey: "essentiel" },
+  { template: "confirmation.html", output: "souscription/confirmation/pro/index.html", titleKey: "confirmation_pro", planKey: "pro" },
+  { template: "confirmation.html", output: "souscription/confirmation/corporate/index.html", titleKey: "confirmation_corporate", planKey: "corporate" },
 ];
 
 // ── Fonctions utilitaires ──────────────────────────────────────────────────────
@@ -116,6 +119,15 @@ function resolvePageOutputPath(pageKey, lang, defaultOutput) {
   if (pageKey === "privacy") {
     return lang === "en" ? "privacy-policy/index.html" : "politique-confidentialite/index.html";
   }
+  if (pageKey === "confirmation_essentiel") {
+    return lang === "en" ? "subscription/confirmation/essential/index.html" : "souscription/confirmation/essentiel/index.html";
+  }
+  if (pageKey === "confirmation_pro") {
+    return lang === "en" ? "subscription/confirmation/pro/index.html" : "souscription/confirmation/pro/index.html";
+  }
+  if (pageKey === "confirmation_corporate") {
+    return lang === "en" ? "subscription/confirmation/corporate/index.html" : "souscription/confirmation/corporate/index.html";
+  }
   return defaultOutput;
 }
 
@@ -128,6 +140,15 @@ function resolvePageSlug(pageSlug, targetLang) {
   }
   if (pageSlug.includes("politique-confidentialite") || pageSlug.includes("privacy-policy")) {
     return targetLang === "en" ? "privacy-policy/" : "politique-confidentialite/";
+  }
+  if (pageSlug.includes("confirmation/essentiel") || pageSlug.includes("confirmation/essential")) {
+    return targetLang === "en" ? "subscription/confirmation/essential/" : "souscription/confirmation/essentiel/";
+  }
+  if (pageSlug.includes("confirmation/pro")) {
+    return targetLang === "en" ? "subscription/confirmation/pro/" : "souscription/confirmation/pro/";
+  }
+  if (pageSlug.includes("confirmation/corporate")) {
+    return targetLang === "en" ? "subscription/confirmation/corporate/" : "souscription/confirmation/corporate/";
   }
   return pageSlug;
 }
@@ -190,6 +211,63 @@ function injectConfigVars(html, lang, outputPath, pageKey, translations) {
   }
 
   return res;
+}
+
+function injectPlanVars(html, planKey, lang, translations) {
+  const planData = {
+    essentiel: {
+      id: "essentiel",
+      pdfFilename: "offre-abix-pack-essentiel-2026.pdf",
+      regularPrice: { fr: "84 000 DA HT", en: "84,000 DA excl. tax", ar: "84,000 د.ج قبل الضريبة" },
+      discount: { fr: "-8 400 DA", en: "-8,400 DA", ar: "-8,400 د.ج" },
+      promoPrice: { fr: "75 600 DA HT", en: "75,600 DA excl. tax", ar: "75,600 د.ج قبل الضريبة" },
+      vat: { fr: "14 364 DA", en: "14,364 DA", ar: "14,364 د.ج" },
+      totalTTC: { fr: "89 964 DA TTC", en: "89,964 DA incl. tax", ar: "89,964 د.ج شامل الضريبة" },
+      users: { fr: "1 utilisateur", en: "1 user", ar: "مستخدم واحد" },
+      period: { fr: "Données 2025", en: "2025 Data", ar: "بيانات 2025" }
+    },
+    pro: {
+      id: "pro",
+      pdfFilename: "offre-abix-pack-pro-2026.pdf",
+      regularPrice: { fr: "120 000 DA HT", en: "120,000 DA excl. tax", ar: "120,000 د.ج قبل الضريبة" },
+      discount: { fr: "-12 000 DA", en: "-12,000 DA", ar: "-12,000 د.ج" },
+      promoPrice: { fr: "108 000 DA HT", en: "108,000 DA excl. tax", ar: "108,000 د.ج قبل الضريبة" },
+      vat: { fr: "20 520 DA", en: "20,520 DA", ar: "20,520 د.ج" },
+      totalTTC: { fr: "128 520 DA TTC", en: "128,520 DA incl. tax", ar: "128,520 د.ج شامل الضريبة" },
+      users: { fr: "Jusqu’à 3 utilisateurs", en: "Up to 3 users", ar: "حتى 3 مستخدمين" },
+      period: { fr: "Données 2024 et 2025", en: "2024 & 2025 Data", ar: "بيانات 2024 و2025" }
+    },
+    corporate: {
+      id: "corporate",
+      pdfFilename: "offre-abix-pack-corporate-executive-2026.pdf",
+      regularPrice: { fr: "180 000 DA HT", en: "180,000 DA excl. tax", ar: "180,000 د.ج قبل الضريبة" },
+      discount: { fr: "-18 000 DA", en: "-18,000 DA", ar: "-18,000 د.ج" },
+      promoPrice: { fr: "162 000 DA HT", en: "162,000 DA excl. tax", ar: "162,000 د.ج قبل الضريبة" },
+      vat: { fr: "30 780 DA", en: "30,780 DA", ar: "30,780 د.ج" },
+      totalTTC: { fr: "192 780 DA TTC", en: "192,780 DA incl. tax", ar: "192,780 د.ج شامل الضريبة" },
+      users: { fr: "Jusqu’à 20 utilisateurs", en: "Up to 20 users", ar: "حتى 20 مستخدمًا" },
+      period: { fr: "Données historiques 2022–2025", en: "2022–2025 Historical Data", ar: "بيانات تاريخية 2022–2025" }
+    }
+  };
+
+  const p = planData[planKey] || planData.essentiel;
+  const tPlan = translations.confirmation?.plans?.[planKey] || {};
+  const pdfUrl = `${BASE_PATH}/public/documents/offres/${p.pdfFilename}`;
+
+  return html
+    .replace(/\{\{__planId\}\}/g, p.id)
+    .replace(/\{\{__planName\}\}/g, tPlan.name || p.id)
+    .replace(/\{\{__planPositioning\}\}/g, tPlan.positioning || "")
+    .replace(/\{\{__planSummary\}\}/g, tPlan.summary || "")
+    .replace(/\{\{__planRegularPrice\}\}/g, p.regularPrice[lang] || p.regularPrice.fr)
+    .replace(/\{\{__planDiscount\}\}/g, p.discount[lang] || p.discount.fr)
+    .replace(/\{\{__planPromoPrice\}\}/g, p.promoPrice[lang] || p.promoPrice.fr)
+    .replace(/\{\{__planVat\}\}/g, p.vat[lang] || p.vat.fr)
+    .replace(/\{\{__planTotalTTC\}\}/g, p.totalTTC[lang] || p.totalTTC.fr)
+    .replace(/\{\{__planUsers\}\}/g, p.users[lang] || p.users.fr)
+    .replace(/\{\{__planPeriod\}\}/g, p.period[lang] || p.period.fr)
+    .replace(/\{\{__planPdfUrl\}\}/g, pdfUrl)
+    .replace(/\{\{__planPdfFilename\}\}/g, p.pdfFilename);
 }
 
 /**
@@ -490,6 +568,11 @@ function buildAll(targetLang = null) {
         // Injection des variables de configuration, hreflang et menu principal unifié
         let html = injectConfigVars(templateHtml, lang, pageOutput, page.titleKey, translations);
 
+        // Injection des variables spécifiques au plan si applicable
+        if (page.planKey) {
+          html = injectPlanVars(html, page.planKey, lang, translations);
+        }
+
         // Résolution des clés de traduction {{key.subkey}}
         html = resolveTranslations(html, translations);
 
@@ -511,7 +594,16 @@ function buildAll(targetLang = null) {
             const aliasPath = path.join(OUTPUT_ROOT, lang, "politique-confidentialite/index.html");
             ensureDir(aliasPath);
             fs.writeFileSync(aliasPath, html, "utf8");
+          } else if (page.planKey) {
+            const frAliasPath = path.join(OUTPUT_ROOT, lang, `souscription/confirmation/${page.planKey}/index.html`);
+            ensureDir(frAliasPath);
+            fs.writeFileSync(frAliasPath, html, "utf8");
           }
+        } else if (lang === "fr" && page.planKey) {
+          // Alias racine pour accès direct /souscription/confirmation/{plan}/
+          const rootAliasPath = path.join(OUTPUT_ROOT, `souscription/confirmation/${page.planKey}/index.html`);
+          ensureDir(rootAliasPath);
+          fs.writeFileSync(rootAliasPath, html, "utf8");
         }
       } catch (err) {
         const pageOutput = resolvePageOutputPath(page.titleKey, lang, page.output);
