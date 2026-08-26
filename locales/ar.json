@@ -34,7 +34,8 @@
     "ctaNotify": "الإخطار بصدور إصدار 2026",
     "langSelectLabel": "اللغة",
     "report2023Path": "editions/report-2023/",
-    "transparency2025": "توفر المعلومات المالية 2025"
+    "transparency2025": "توفر المعلومات المالية 2025",
+    "glossary": "المعجم"
   },
   "home": {
     "meta": {
@@ -2088,5 +2089,1676 @@
         "summary": "جميع مزايا الباقة الاحترافية + رخصة ABIX Data Explorer التنفيذية لغاية 20 مستخدمًا، بيانات تاريخية كاملة 2022–2025، بروفايلات بنكية 360°، لوحة القيادة التنفيذية ورؤى مفتاحية، مجموعات النظراء، تقارير PDF تنفيذية وتصدير Excel غير محدود."
       }
     }
+  },
+  "glossary": {
+    "meta": {
+      "title": "معجم المصطلحات المصرفية والمالية | ABIX Data Explorer",
+      "description": "تعرف على تعريفات وصيغ وتفسيرات كافة المؤشرات والنسب والمفاهيم الإحصائية والمصرفية المعتمدة في منصة ABIX Data Explorer."
+    },
+    "hero": {
+      "badge": "المرجع المنهجي لمؤشر ABIX",
+      "title": "معجم ABIX",
+      "subtitle": "تعرف على تعريفات وصيغ المؤشرات والنسب والأساليب الإحصائية والمفاهيم المصرفية المعتمدة في منصة ABIX Data Explorer.",
+      "searchPlaceholder": "ابحث عن مصطلح، اختصار أو مفهوم (مثل: CAGR, ROE, HHI, Quantile, LDR)...",
+      "searchAriaLabel": "حقل البحث في المعجم",
+      "statsLabel": "مفهوماً مفهرساً",
+      "categoriesLabel": "تصنيفات تحليلية",
+      "quickTip": "تلميح: اضغط على المفتاح « / » للبحث الفوري.",
+      "downloadPdf": "تحميل دليل المعجم (PDF)",
+      "downloadPdfFilename": "glossaire-abix-banques-algerie-fr.pdf"
+    },
+    "filters": {
+      "all": "الكل",
+      "allCountLabel": "كافة المفاهيم",
+      "filterByCategory": "تصفية حسب التصنيف",
+      "alphabetLabel": "التصفح الأبجدي",
+      "clearSearch": "مسح البحث",
+      "noResultsTitle": "لم يتم العثور على نتائج",
+      "noResultsDesc": "لا توجد نتائج تطابق بحثك « {query} ». جرب استخدام اختصار أو مرادف أو كلمة مفتاحية أخرى.",
+      "resetFilters": "إعادة ضبط الفلاتر",
+      "showingCount": "عرض {count} من أصل {total} مفهوماً"
+    },
+    "card": {
+      "viewDefinition": "عرض البطاقة المفصلة",
+      "formulaBadge": "الصيغة",
+      "higherBetterTrue": "الأعلى = أفضل",
+      "higherBetterFalse": "الأقل = أفضل",
+      "usedInModules": "مستخدم في منصة ABIX:"
+    },
+    "drawer": {
+      "shortDefTitle": "تعريف مختصر",
+      "detailedDefTitle": "شرح تفصيلي",
+      "formulaTitle": "صيغة الحساب في ABIX",
+      "interpretationTitle": "كيفية قراءة وتفسير النتيجة؟",
+      "exampleTitle": "مثال رقمي",
+      "unitTitle": "وحدة القياس",
+      "directionTitle": "اتجاه القراءة",
+      "modulesTitle": "مستخدم في وحدات ABIX",
+      "relatedTitle": "المفاهيم ذات الصلة",
+      "closeBtn": "إغلاق البطاقة",
+      "copyLink": "نسخ الرابط المباشر",
+      "copiedToast": "تم نسخ الرابط المباشر إلى الحافظة!",
+      "exportPdf": "طباعة / تصدير كـ PDF"
+    },
+    "contextualHelp": {
+      "tooltipSeeMore": "عرض التعريف في المعجم ←",
+      "badgeHelp": "مساعدة سياقية"
+    },
+    "categories": {
+      "financial_indicators": {
+        "id": "financial_indicators",
+        "name": "المؤشرات المالية والميزانية",
+        "icon": "M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
+      },
+      "ratios_profitability": {
+        "id": "ratios_profitability",
+        "name": "النسب المالية والمردودية",
+        "icon": "M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"
+      },
+      "risk_solvency": {
+        "id": "risk_solvency",
+        "name": "المخاطر، الملاءة المالية والحذر",
+        "icon": "M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+      },
+      "liquidity_intermediation": {
+        "id": "liquidity_intermediation",
+        "name": "السيولة والوساطة المصرفية",
+        "icon": "M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"
+      },
+      "statistics_methods": {
+        "id": "statistics_methods",
+        "name": "الإحصاء والأساليب الكمية",
+        "icon": "M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z"
+      },
+      "sector_analysis": {
+        "id": "sector_analysis",
+        "name": "التحليل القطاعي وديناميكية السوق",
+        "icon": "M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z"
+      },
+      "concentration_market": {
+        "id": "concentration_market",
+        "name": "التركيز والمنافسة",
+        "icon": "M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"
+      },
+      "abix_framework": {
+        "id": "abix_framework",
+        "name": "منهجية وإطار مؤشر ABIX",
+        "icon": "M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"
+      }
+    },
+    "items": [
+      {
+        "id": "total-bilan",
+        "slug": "total-bilan",
+        "term": "إجمالي الميزانية (إجمالي الأصول)",
+        "acronym": "TB",
+        "aliases": [
+          "إجمالي الأصول",
+          "حجم الميزانية"
+        ],
+        "category": "financial_indicators",
+        "short_definition": "يقيس الحجم المالي الإجمالي للبنك من خلال جمع كافة أصوله وموجوداته.",
+        "detailed_definition": "يمثل إجمالي الميزانية مجموع كافة عناصر الأصول المسجلة في الميزانية في 31 ديسمبر. في ABIX، يمثل المؤشر الأساسي لقياس وزن وحصة البنك في السوق.",
+        "formula": "Total Actifs = Caisse & Banques centrales + Titres & Bons du Trésor + Crédits clientèle + Autres actifs",
+        "formula_latex": "\\text{Total Bilan} = \\sum \\text{Actifs Bilanciels}",
+        "interpretation": "يعكس إجمالي الميزانية المرتفع القوة السوقية والقدرة التمويلية للبنك في الساحة المصرفية.",
+        "example": "يصل إجمالي ميزانية البنوك الـ 21 إلى حوالي 22,000 مليار دج، حيث تستحوذ البنوك العمومية على نحو 88% منها.",
+        "unit": "Mds DZD",
+        "higher_is_better": null,
+        "modules": [
+          "Vue Secteur",
+          "Classements",
+          "Profil Banque",
+          "Historique",
+          "Parts de marché",
+          "Executive Dashboard"
+        ],
+        "related_terms": [
+          "depots-clientele",
+          "credits-clientele",
+          "fonds-propres",
+          "part-de-marche"
+        ]
+      },
+      {
+        "id": "depots-clientele",
+        "slug": "depots-clientele",
+        "term": "ودائع العملاء",
+        "acronym": "DEP",
+        "aliases": [
+          "الودائع المجمعة",
+          "موارد العملاء"
+        ],
+        "category": "financial_indicators",
+        "short_definition": "إجمالي الأموال المودعة لدى البنك من طرف الأفراد والمؤسسات في شكل حسابات جارية أو لأجل أو دفاتر ادخار.",
+        "detailed_definition": "تعد ودائع العملاء المورد الرئيسي لخصوم البنك وتقيس قدرة التجميع وثقة المتعاملين. في ABIX، تتم مقارنة تطور الودائع بالقروض لتقييم سيولة القطاع.",
+        "formula": "Dépôts Totaux = Dépôts à vue + Dépôts à terme + Comptes d'épargne + Autres dépôts clientèle",
+        "formula_latex": "\\text{Dépôts} = \\sum \\text{Ressources Clientèle}",
+        "interpretation": "يعزز النمو المستمر للودائع استقرار تمويل البنك دون الاعتماد المفرط على السوق النقدية.",
+        "example": "في 2022-2023، نمت الودائع المجمعة بنسبة +6.2% لتتجاوز 14,600 مليار دج.",
+        "unit": "Mds DZD",
+        "higher_is_better": true,
+        "modules": [
+          "Vue Secteur",
+          "Classements",
+          "Profil Banque",
+          "Historique",
+          "Parts de marché",
+          "Comparateur"
+        ],
+        "related_terms": [
+          "credits-clientele",
+          "ldr",
+          "total-bilan"
+        ]
+      },
+      {
+        "id": "credits-clientele",
+        "slug": "credits-clientele",
+        "term": "القروض الممنوحة للعملاء",
+        "acronym": "CRED",
+        "aliases": [
+          "القروض الممنوحة",
+          "تمويلات العملاء",
+          "الذمم الدائنة على العملاء"
+        ],
+        "category": "financial_indicators",
+        "short_definition": "إجمالي المبلغ الخام للتمويلات والتسهيلات الائتمانية الممنوحة للأفراد والشركات والقطاع العام.",
+        "detailed_definition": "تمثل قروض العملاء الأصل الإنتاجي الأساسي للبنك الشامل. يحلل ABIX وتيرة المنح والتحول المصرفي وتمويل الاقتصاد الحقيقي.",
+        "formula": "Crédits Bruts = Crédits d'exploitation + Crédits d'investissement + Crédits immobiliers + Crédits aux particuliers",
+        "formula_latex": "\\text{Crédits} = \\sum \\text{Créances brutes clientèle}",
+        "interpretation": "يعكس الدعم المباشر للاقتصاد ويولد الجزء الأكبر من الفوائد المحصلة.",
+        "example": "بلغ حجم القروض الإجمالي للاقتصاد حوالي 8,840 مليار دج في 2023 مع معدل تحول إجمالي يقارب 60%.",
+        "unit": "Mds DZD",
+        "higher_is_better": null,
+        "modules": [
+          "Vue Secteur",
+          "Classements",
+          "Profil Banque",
+          "Historique",
+          "Parts de marché",
+          "Comparateur"
+        ],
+        "related_terms": [
+          "depots-clientele",
+          "ldr",
+          "cout-du-risque",
+          "npl-ratio"
+        ]
+      },
+      {
+        "id": "pnb",
+        "slug": "pnb",
+        "term": "الناتج البنكي الصافي (PNB)",
+        "acronym": "PNB / NBI",
+        "aliases": [
+          "الدخل البنكي الصافي",
+          "رقم أعمال البنك"
+        ],
+        "category": "financial_indicators",
+        "short_definition": "المعادل لرقم أعمال البنك، ويحسب كفارق الفوائد الصافية مضافاً إليه صافي العمولات ونتائج العمليات المالية.",
+        "detailed_definition": "يقيس الناتج البنكي الصافي القيمة الخام الناتجة عن مجمل الأنشطة المصرفية والوساطة، وهو المقام المرجعي لحساب معامل الاستغلال.",
+        "formula": "PNB = (Produits d'intérêts - Charges d'intérêts) + (Commissions perçues - Commissions payées) + Gains/pertes de change et titres",
+        "formula_latex": "\\text{PNB} = \\text{Marge d'Intérêt Nette} + \\text{Commissions Nettes} + \\text{Autres Produits Bancaires}",
+        "interpretation": "يدل النمو المنتظم للناتج البنكي الصافي على حركية تجارية وتسعير متوازن للخدمات المصرفية.",
+        "example": "حققت BEA ناتجاً بنكياً صافياً قدره 112.4 مليار دج محتلة المرتبة الثانية وطنياً بعد BNA.",
+        "unit": "Mds DZD",
+        "higher_is_better": true,
+        "modules": [
+          "Vue Secteur",
+          "Classements",
+          "Profil Banque",
+          "Historique",
+          "Parts de marché",
+          "Comparateur",
+          "Scores financiers"
+        ],
+        "related_terms": [
+          "rbe",
+          "resultat-net",
+          "coefficient-exploitation",
+          "productivite-agent"
+        ]
+      },
+      {
+        "id": "rbe",
+        "slug": "rbe",
+        "term": "النتيجة الإجمالية للاستغلال (RBE)",
+        "acronym": "RBE / GOI",
+        "aliases": [
+          "هامش الاستغلال الإجمالي",
+          "الربح التشغيلي قبل المخصصات"
+        ],
+        "category": "financial_indicators",
+        "short_definition": "الفارق بين الناتج البنكي الصافي ومصاريف الاستغلال العامة (تكاليف المستخدمين، الأعباء العامة، الإهتلاكات).",
+        "detailed_definition": "يقيس الربحية التشغيلية الصرفة للبنك قبل خصم تكلفة المخاطر (مخصصات القروض) والضرائب.",
+        "formula": "RBE = Produit Net Bancaire - Frais de personnel - Autres charges générales d'exploitation - Dotations aux amortissements",
+        "formula_latex": "\\text{RBE} = \\text{PNB} - \\text{Charges Générales d'Exploitation} - \\text{Amortissements}",
+        "interpretation": "تشير النتيجة الإجمالية للاستغلال الموجبة والمتنامية إلى قدرة الدخل على تغطية أعباء شبكة الفروع والمستخدمين بارتياح.",
+        "example": "بالنسبة لناتج بنكي صافٍ قدره 100 مليون دج وأعباء عامة قدرها 40 مليون دج، تكون النتيجة الإجمالية للاستغلال 60 مليون دج.",
+        "unit": "Mds DZD",
+        "higher_is_better": true,
+        "modules": [
+          "Vue Secteur",
+          "Classements",
+          "Profil Banque",
+          "Historique"
+        ],
+        "related_terms": [
+          "pnb",
+          "resultat-net",
+          "coefficient-exploitation"
+        ]
+      },
+      {
+        "id": "resultat-net",
+        "slug": "resultat-net",
+        "term": "النتيجة الصافية (صافي الأرباح)",
+        "acronym": "RN / NI",
+        "aliases": [
+          "صافي الربح",
+          "نتيجة السنة المالية"
+        ],
+        "category": "financial_indicators",
+        "short_definition": "الربح أو الخسارة النهائية المتبقية للبنك بعد خصم كافة المصاريف ومخصصات المؤونات والضرائب على الأرباح.",
+        "detailed_definition": "الرصيد الختامي لجدول حسابات النتائج، ويستخدم لتوزيع أرباح المساهمين وتدعيم الأموال الخاصة للبنك.",
+        "formula": "Résultat Net = RBE - Dotations nettes aux provisions pour créances + Produits/charges exceptionnels - Impôts sur les bénéfices (IBS)",
+        "formula_latex": "\\text{Résultat Net} = \\text{RBE} - \\text{Coût du Risque} \\pm \\text{Exceptionnel} - \\text{Impôts}",
+        "interpretation": "القدرة النهائية على تحقيق الربح، ويمثل البسط لحساب مردودية الأموال الخاصة ومردودية الأصول.",
+        "example": "ارتفع صافي الأرباح المجمع للقطاع بنسبة +14.8% ليبلغ 225.6 مليار دج في 2023.",
+        "unit": "Mds DZD",
+        "higher_is_better": true,
+        "modules": [
+          "Vue Secteur",
+          "Classements",
+          "Profil Banque",
+          "Historique",
+          "Scores financiers",
+          "Executive Dashboard"
+        ],
+        "related_terms": [
+          "roe",
+          "roa",
+          "roae",
+          "roaa",
+          "fonds-propres"
+        ]
+      },
+      {
+        "id": "fonds-propres",
+        "slug": "fonds-propres",
+        "term": "الأموال الخاصة (حقوق الملكية)",
+        "acronym": "FP / EQ",
+        "aliases": [
+          "الأموال الذاتية",
+          "حقوق المساهمين",
+          "رأس المال الصافي"
+        ],
+        "category": "financial_indicators",
+        "short_definition": "الموارد المالية الدائمة للبنك وتتكون من رأس المال الاجتماعي والاحتياطيات المتراكمة والأرباح غير الموزعة.",
+        "detailed_definition": "تشكل الأموال الخاصة صمام الأمان المالي لامتصاص الخسائر المحتملة، وتُحلل في ABIX عبر نسبة الأموال الخاصة إلى إجمالي الأصول.",
+        "formula": "Fonds Propres = Capital Social + Primes d'émission + Réserves légales et statutaires + Report à nouveau + Résultat de l'exercice",
+        "formula_latex": "\\text{Fonds Propres} = \\text{Capital} + \\text{Réserves} + \\text{Report à Nouveau} + \\text{Résultat}",
+        "interpretation": "يضمن المستوى المرتفع متانة مالية أمام الصدمات الاقتصادية ويتيح تمويل مشاريع كبرى.",
+        "example": "يستقر الوسيط القطاعي لنسبة الأموال الخاصة إلى الميزانية عند حوالي 8.3%.",
+        "unit": "Mds DZD",
+        "higher_is_better": true,
+        "modules": [
+          "Vue Secteur",
+          "Classements",
+          "Profil Banque",
+          "Historique",
+          "Scores financiers",
+          "Quatre Dimensions"
+        ],
+        "related_terms": [
+          "roe",
+          "ratio-solvabilite",
+          "ratio-fonds-propres-actifs",
+          "levier-financier"
+        ]
+      },
+      {
+        "id": "bons-du-tresor",
+        "slug": "bons-du-tresor",
+        "term": "سندات الخزينة والأوراق السيادية",
+        "acronym": "BDT / OAT",
+        "aliases": [
+          "السندات الحكومية",
+          "أذونات الخزينة العمومية"
+        ],
+        "category": "financial_indicators",
+        "short_definition": "سندات الدين الصادرة عن الدولة الجزائرية والمكتتبة والمملوكة في أصول البنوك التجارية.",
+        "detailed_definition": "تمثل سندات الخزينة جزءاً هاماً من أصول البنوك في الجزائر خاصة العمومية، وتوفر عائداً آمناً بوزن مخاطر صفري.",
+        "formula": "BDT = Bons du Trésor à court terme (BTCT) + Bons du Trésor assimilables (OAT)",
+        "formula_latex": "\\text{Portefeuille Titres Souverains}",
+        "interpretation": "تؤمن الحصة المرتفعة من سندات الخزينة السيولة والملاءة لكنها قد تعطي عائداً أقل من قروض الشركات الخاصة.",
+        "example": "تستحوذ البنوك العمومية على الغالبية العظمى من سندات الخزينة المكتتبة في السوق.",
+        "unit": "Mds DZD",
+        "higher_is_better": null,
+        "modules": [
+          "Vue Secteur",
+          "Profil Banque",
+          "Comparateur"
+        ],
+        "related_terms": [
+          "total-bilan",
+          "credits-clientele",
+          "ratio-solvabilite"
+        ]
+      },
+      {
+        "id": "hors-bilan",
+        "slug": "hors-bilan",
+        "term": "الالتزامات خارج الميزانية",
+        "acronym": "HB / OBS",
+        "aliases": [
+          "الضمانات والاعتمادات المستندية",
+          "الالتزامات بالتوقيع"
+        ],
+        "category": "financial_indicators",
+        "short_definition": "الالتزامات المالية المعطاة أو المستلمة التي لا تظهر مباشرة في الأصول أو الخصوم كالضمانات والكفالات والاعتمادات المستندية.",
+        "detailed_definition": "يعكس النشاط المالي المرافق للتجارة الخارجية والصفقات العمومية كالكفالات والاعتمادات المستندية مما يولد عمولات دون صرف فوري للسيولة.",
+        "formula": "Engagements Hors-Bilan = Cautions et avals donnés + Engagements de financement accordés + Crédits documentaires ouverts",
+        "formula_latex": "\\text{Hors-Bilan} = \\sum \\text{Engagements par Signature}",
+        "interpretation": "يدل الحجم المرتفع لخارج الميزانية على مساهمة قوية في تمويل التجارة الخارجية ومشاريع البنية التحتية.",
+        "example": "تسجل BEA وBNA أحجاماً معتبرة خارج الميزانية بفضل دورهما في عمليات التجارة الخارجية النفطية والصناعية.",
+        "unit": "Mds DZD",
+        "higher_is_better": null,
+        "modules": [
+          "Profil Banque",
+          "Comparateur",
+          "Classements"
+        ],
+        "related_terms": [
+          "pnb",
+          "total-bilan"
+        ]
+      },
+      {
+        "id": "roe",
+        "slug": "roe",
+        "term": "مردودية الأموال الخاصة (ROE)",
+        "acronym": "ROE / RCP",
+        "aliases": [
+          "مردودية حقوق الملكية",
+          "عائد الأموال الخاصة"
+        ],
+        "category": "ratios_profitability",
+        "short_definition": "يقيس قدرة البنك على توليد أرباح صافية انطلاقاً من رؤوس الأموال المستثمرة من المساهمين.",
+        "detailed_definition": "يعد ROE المقياس المرجعي للربحية المالية. في ABIX يحسب على أموال الإقفال أو الأموال المتوسطة (ROAE) لتحييد تغيرات رأس المال خلال السنة.",
+        "formula": "ROE = (Résultat Net / Fonds Propres Comptables) × 100",
+        "formula_latex": "\\text{ROE} = \\frac{\\text{Résultat Net}}{\\text{Fonds Propres}} \\times 100",
+        "interpretation": "تعتبر نسبة ROE التي تتجاوز 12-14% أداءً ممتازاً في القطاع المصرفي الجزائري.",
+        "example": "بنسبة ROE تبلغ 14.8%، تأتي BEA والبركة (16.4%) في الربع الأعلى (Q4) لمردودية الأموال الخاصة.",
+        "unit": "%",
+        "higher_is_better": true,
+        "modules": [
+          "Vue Secteur",
+          "Classements",
+          "Profil Banque",
+          "Matrice Stratégique",
+          "Heatmap",
+          "Scores financiers",
+          "Quatre Dimensions"
+        ],
+        "related_terms": [
+          "roae",
+          "roa",
+          "resultat-net",
+          "fonds-propres"
+        ]
+      },
+      {
+        "id": "roae",
+        "slug": "roae",
+        "term": "مردودية متوسط الأموال الخاصة (ROAE)",
+        "acronym": "ROAE",
+        "aliases": [
+          "عائد متوسط الأموال الخاصة"
+        ],
+        "category": "ratios_profitability",
+        "short_definition": "صيغة معدلة لـ ROE تقسم صافي الربح على متوسط الأموال الخاصة بين بداية ونهاية السنة المالية.",
+        "detailed_definition": "يعد ROAE أكثر دقة من ROE البسيط عندما يجري البنك زيادة في رأس المال أو توزيعات خلال السنة.",
+        "formula": "ROAE = Résultat Net / ((Fonds Propres t + Fonds Propres t-1) / 2) × 100",
+        "formula_latex": "\\text{ROAE} = \\frac{\\text{Résultat Net}_t}{\\frac{\\text{FP}_t + \\text{FP}_{t-1}}{2}} \\times 100",
+        "interpretation": "يعطي قياساً دقيقاً لفعالية رأس المال المستخدم على مدار السنة بأكملها.",
+        "example": "لصافي ربح 15 مليار دج مع ارتفاع الأموال الخاصة من 100 إلى 110 مليار: ROAE = 15 / 105 = 14.29%.",
+        "unit": "%",
+        "higher_is_better": true,
+        "modules": [
+          "Profil Banque",
+          "Scores financiers",
+          "Comparateur"
+        ],
+        "related_terms": [
+          "roe",
+          "roa",
+          "roaa",
+          "fonds-propres"
+        ]
+      },
+      {
+        "id": "roa",
+        "slug": "roa",
+        "term": "مردودية الأصول (ROA)",
+        "acronym": "ROA / RA",
+        "aliases": [
+          "عائد الأصول",
+          "المردودية الاقتصادية للأصول"
+        ],
+        "category": "ratios_profitability",
+        "short_definition": "يقيس قدرة البنك على تحقيق أرباح صافية لكل دينار من الأصول المدارة.",
+        "detailed_definition": "يقيم ROA الكفاءة الاقتصادية للأصول بمعزل عن هيكل المديونية، ويعتبر تحقيق 1 إلى 2% مؤشراً على كفاءة ممتازة في البنوك.",
+        "formula": "ROA = (Résultat Net / Total Actifs) × 100",
+        "formula_latex": "\\text{ROA} = \\frac{\\text{Résultat Net}}{\\text{Total Bilan}} \\times 100",
+        "interpretation": "يدل ROA المرتفع على استغلال فعال للميزانية دون الاعتماد على رافعة مالية مفرطة.",
+        "example": "تسجل البنوك الخاصة غالباً ROA أعلى (1.8% إلى 2.3%) مقارنة بالبنوك العمومية الكبرى (1.2% إلى 1.6%) بفضل هوامش أعلى.",
+        "unit": "%",
+        "higher_is_better": true,
+        "modules": [
+          "Vue Secteur",
+          "Classements",
+          "Profil Banque",
+          "Heatmap",
+          "Scores financiers",
+          "Quatre Dimensions"
+        ],
+        "related_terms": [
+          "roaa",
+          "roe",
+          "total-bilan",
+          "resultat-net"
+        ]
+      },
+      {
+        "id": "roaa",
+        "slug": "roaa",
+        "term": "مردودية متوسط الأصول (ROAA)",
+        "acronym": "ROAA",
+        "aliases": [
+          "عائد متوسط الأصول"
+        ],
+        "category": "ratios_profitability",
+        "short_definition": "صيغة معدلة لـ ROA تقسم صافي الربح على متوسط إجمالي الأصول بين بداية ونهاية السنة المالية.",
+        "detailed_definition": "يحيد ROAA التوسع السريع في الميزانية خلال السنة ليعكس المردود المتوسط الفعلي للأصول المستعملة.",
+        "formula": "ROAA = Résultat Net / ((Total Actifs t + Total Actifs t-1) / 2) × 100",
+        "formula_latex": "\\text{ROAA} = \\frac{\\text{Résultat Net}_t}{\\frac{\\text{Actifs}_t + \\text{Actifs}_{t-1}}{2}} \\times 100",
+        "interpretation": "المؤشر المفضل لدى المحللين الدوليين لمقارنة البنوك التي تشهد نمواً كبيراً في الميزانية.",
+        "example": "يبلغ وسيط مردودية متوسط الأصول في الجزائر حوالي 1.52%.",
+        "unit": "%",
+        "higher_is_better": true,
+        "modules": [
+          "Profil Banque",
+          "Scores financiers",
+          "Comparateur"
+        ],
+        "related_terms": [
+          "roa",
+          "roe",
+          "roae",
+          "total-bilan"
+        ]
+      },
+      {
+        "id": "coefficient-exploitation",
+        "slug": "coefficient-exploitation",
+        "term": "معامل الاستغلال (نسبة التكاليف إلى الدخل)",
+        "acronym": "CE / CIR",
+        "aliases": [
+          "نسبة الكفاءة التشغيلية",
+          "معامل المصاريف العامة"
+        ],
+        "category": "ratios_profitability",
+        "short_definition": "نسبة الناتج البنكي الصافي التي تستهلكها مصاريف الاستغلال العامة والإهتلاكات.",
+        "detailed_definition": "يعتبر معامل الاستغلال المعيار الأساسي للكفاءة التشغيلية، وكلما انخفض دل على كفاءة أعلى وتحكم أفضل في النفقات.",
+        "formula": "Coefficient d'Exploitation = (Frais Généraux d'Exploitation + Amortissements) / Produit Net Bancaire × 100",
+        "formula_latex": "\\text{Coeff. Exploitation} = \\frac{\\text{Charges Générales} + \\text{Amortissements}}{\\text{PNB}} \\times 100",
+        "interpretation": "أقل من 45% يدل على كفاءة ممتازة، بين 45% و60% كفاءة عادية، وأكثر من 65% يعني ثقل المصاريف على الربحية.",
+        "example": "تسجل BEA معامل استغلال قدره 34.2% (ضمن الربع الأول الأفضل) مقارنة بمتوسط السوق البالغ 42.6%.",
+        "unit": "%",
+        "higher_is_better": false,
+        "modules": [
+          "Vue Secteur",
+          "Classements",
+          "Profil Banque",
+          "Heatmap",
+          "Scores financiers",
+          "Quatre Dimensions",
+          "Executive Dashboard"
+        ],
+        "related_terms": [
+          "pnb",
+          "rbe",
+          "productivite-agent"
+        ]
+      },
+      {
+        "id": "marge-interet-nette",
+        "slug": "marge-interet-nette",
+        "term": "هامش الفائدة الصافي (NIM)",
+        "acronym": "MIN / NIM",
+        "aliases": [
+          "هامش الفائدة الصافي",
+          "هامش الوساطة المصرفية"
+        ],
+        "category": "ratios_profitability",
+        "short_definition": "النسبة بين صافي دخل الفوائد المحصلة من القروض والسندات وإجمالي الأصول المنتجة للفوائد.",
+        "detailed_definition": "يقيس هامش الفائدة الصافي الربحية الأساسية لنشاط الوساطة التقليدي (جمع الودائع ومنح القروض).",
+        "formula": "Marge Nette d'Intérêt = (Produits d'intérêts - Charges d'intérêts) / Actifs Productifs Moyens × 100",
+        "formula_latex": "\\text{NIM} = \\frac{\\text{Intérêts Reçus} - \\text{Intérêts Versés}}{\\text{Actifs Productifs}} \\times 100",
+        "interpretation": "يدل الهامش المرتفع على قدرة تسعير القروض أو وفرة الودائع الجارية غير المكلفة.",
+        "example": "يبلغ متوسط هامش الفائدة الصافي للقطاع حوالي 3.40% في السوق الجزائري.",
+        "unit": "%",
+        "higher_is_better": true,
+        "modules": [
+          "Vue Secteur",
+          "Profil Banque",
+          "Heatmap",
+          "Scores financiers"
+        ],
+        "related_terms": [
+          "pnb",
+          "credits-clientele",
+          "depots-clientele"
+        ]
+      },
+      {
+        "id": "productivite-agent",
+        "slug": "productivite-agent",
+        "term": "إنتاجية الموظف (الناتج الصافي / العدد)",
+        "acronym": "PNB / Agent",
+        "aliases": [
+          "الناتج الصافي لكل عامل",
+          "معدل الإنتاجية الفردية"
+        ],
+        "category": "ratios_profitability",
+        "short_definition": "متوسط الناتج البنكي الصافي المحقق من طرف كل موظف في البنك خلال السنة.",
+        "detailed_definition": "يقيس هذا المؤشر مردودية الموارد البشرية ومستوى الرقمنة والأتمتة في المعاملات المصرفية.",
+        "formula": "Productivité = Produit Net Bancaire / Effectif Total de la Banque (ETP)",
+        "formula_latex": "\\text{Productivité} = \\frac{\\text{PNB}}{\\text{Effectif Total}}",
+        "interpretation": "تسجل البنوك الخاصة والموجهة للشركات إنتاجية تتجاوز 20-30 مليون دج/موظف بفضل قلة الفروع والتركيز على كبار العملاء.",
+        "example": "تسجل BEA ما مقداره 18.2 مليون دج ناتج/موظف (في المئين 92 للقطاع) مقابل متوسط سوقي يبلغ 14.8 مليون دج.",
+        "unit": "M DZD / agent",
+        "higher_is_better": true,
+        "modules": [
+          "Profil Banque",
+          "Quatre Dimensions",
+          "Scores financiers"
+        ],
+        "related_terms": [
+          "pnb",
+          "coefficient-exploitation"
+        ]
+      },
+      {
+        "id": "ratio-solvabilite",
+        "slug": "ratio-solvabilite",
+        "term": "نسبة الملاءة المالية (CAR)",
+        "acronym": "CAR / Cooke",
+        "aliases": [
+          "معدل كفاية رأس المال",
+          "نسبة الملاءة الحذرة"
+        ],
+        "category": "risk_solvency",
+        "short_definition": "نسبة الأموال الخاصة التنظيمية للبنك مقارنة بإجمالي أصوله المرجحة بالمخاطر.",
+        "detailed_definition": "معيار حذر دولي منبثق عن اتفاقيات بازل ومطبق من بنك الجزائر، ويفرض حداً أدنى إجمالياً يتراوح بين 9.5% و12% من الأصول المرجحة بالمخاطر.",
+        "formula": "Ratio de Solvabilité = (Fonds Propres Réglementaires / Actifs Pondérés des Risques - RWA) × 100",
+        "formula_latex": "\\text{CAR} = \\frac{\\text{Fonds Propres Réglementaires}}{\\text{RWA}} \\times 100",
+        "interpretation": "تشير النسبة التي تفوق 15-18% إلى قاعدة أمان مريحة تسمح بمواصلة منح القروض دون قيود تنظيمية.",
+        "example": "يبلغ متوسط نسبة الملاءة للقطاع المصرفي الجزائري 17.8%، وهو أعلى بكثير من الحدود الدنيا المطلوبة.",
+        "unit": "%",
+        "higher_is_better": true,
+        "modules": [
+          "Vue Secteur",
+          "Profil Banque",
+          "Quatre Dimensions",
+          "Scores financiers"
+        ],
+        "related_terms": [
+          "fonds-propres",
+          "ratio-fonds-propres-actifs",
+          "z-score-bancaire",
+          "camels"
+        ]
+      },
+      {
+        "id": "cout-du-risque",
+        "slug": "cout-du-risque",
+        "term": "تكلفة المخاطر",
+        "acronym": "CdR / CoR",
+        "aliases": [
+          "معدل مخصصات المخاطر",
+          "أعباء مخاطر القروض"
+        ],
+        "category": "risk_solvency",
+        "short_definition": "صافي المخصصات المكونة من البنك لتغطية الخسائر المحتملة في القروض منسوباً إلى متوسط رصيد القروض.",
+        "detailed_definition": "تعكس تكلفة المخاطر جودة محفظة القروض ومدى صرامة سياسة تكوين المؤونات لمواجهة الديون المتعثرة.",
+        "formula": "Coût du Risque = (Dotations nettes aux provisions pour créances / Encours moyen de crédits bruts) × 100",
+        "formula_latex": "\\text{Coût du Risque} = \\frac{\\text{Dotations Nettes aux Provisions}}{\\text{Encours Moyen de Crédits}} \\times 100",
+        "interpretation": "تدل تكلفة المخاطر المنخفضة (< 0.5%) على محفظة سليمة، بينما يشير الارتفاع المفاجئ إلى تعثر فئات من المقترضين.",
+        "example": "تسجل BEA تكلفة مخاطر متحكم فيها عند 0.65%، بينما تصل في بنوك متخصصة فلاحية إلى 1.45%.",
+        "unit": "%",
+        "higher_is_better": false,
+        "modules": [
+          "Profil Banque",
+          "Heatmap",
+          "Outliers",
+          "Scores financiers",
+          "Quatre Dimensions",
+          "Executive Dashboard"
+        ],
+        "related_terms": [
+          "credits-clientele",
+          "taux-couverture-npl",
+          "npl-ratio"
+        ]
+      },
+      {
+        "id": "npl-ratio",
+        "slug": "npl-ratio",
+        "term": "نسبة القروض المتعثرة (NPL)",
+        "acronym": "NPL / CDL",
+        "aliases": [
+          "نسبة الديون المشكوك فيها",
+          "القروض غير المنتجة"
+        ],
+        "category": "risk_solvency",
+        "short_definition": "نسبة القروض التي تسجل تأخيراً في السداد أو احتمالاً كبيراً لعدم التحصيل مقارنة بإجمالي القروض الخام.",
+        "detailed_definition": "يعد مؤشر NPL المقياس الشامل لجودة أصول البنك، ويشمل الديون دون المستوى والمشكوك فيها والميؤوس منها وفق تصنيف بنك الجزائر.",
+        "formula": "Taux NPL = (Créances Non Performantes / Total des Crédits Bruts) × 100",
+        "formula_latex": "\\text{Ratio NPL} = \\frac{\\text{Créances Douteuses et Litigieuses}}{\\text{Total Crédits Bruts}} \\times 100",
+        "interpretation": "تدل نسبة NPL المنخفضة على صرامة في دراسة ملفات التمويل وفعالية في التحصيل.",
+        "example": "تتم متابعة نسبة NPL للقطاع لتقييم أثر التقلبات الاقتصادية على الشركات المقترضة.",
+        "unit": "%",
+        "higher_is_better": false,
+        "modules": [
+          "Profil Banque",
+          "Quatre Dimensions",
+          "Scores financiers"
+        ],
+        "related_terms": [
+          "cout-du-risque",
+          "taux-couverture-npl",
+          "credits-clientele"
+        ]
+      },
+      {
+        "id": "taux-couverture-npl",
+        "slug": "taux-couverture-npl",
+        "term": "نسبة تغطية الديون المتعثرة بالمؤونات",
+        "acronym": "TCP / PCR",
+        "aliases": [
+          "معدل تغطية المخصصات",
+          "تغطية الديون المشكوك فيها"
+        ],
+        "category": "risk_solvency",
+        "short_definition": "النسبة المئوية للقروض المتعثرة المغطاة فعلياً بمخصصات مؤونات مسجلة في الميزانية.",
+        "detailed_definition": "يقيس هذا المؤشر الحماية المسبقة ضد الخسائر، فإذا كانت الديون مغطاة بمؤونات لا يتأثر حساب النتائج عند شطبها.",
+        "formula": "Taux de Couverture = (Provisions Cumulées pour Dépréciation de Crédits / Total Créances Non Performantes) × 100",
+        "formula_latex": "\\text{Couverture NPL} = \\frac{\\text{Provisions Totales}}{\\text{NPL}} \\times 100",
+        "interpretation": "تعد نسبة التغطية التي تتجاوز 75-80% علامة واضحة على الحذر والمتانة المالية للبنك.",
+        "example": "يصل متوسط تغطية المؤونات للقطاع المصرفي في الجزائر إلى 84.2%.",
+        "unit": "%",
+        "higher_is_better": true,
+        "modules": [
+          "Profil Banque",
+          "Quatre Dimensions",
+          "Scores financiers"
+        ],
+        "related_terms": [
+          "npl-ratio",
+          "cout-du-risque",
+          "fonds-propres"
+        ]
+      },
+      {
+        "id": "ratio-fonds-propres-actifs",
+        "slug": "ratio-fonds-propres-actifs",
+        "term": "نسبة الأموال الخاصة إلى إجمالي الميزانية",
+        "acronym": "FP / Actifs",
+        "aliases": [
+          "نسبة الرسملة المحاسبية",
+          "معدل الاستقلال المالي"
+        ],
+        "category": "risk_solvency",
+        "short_definition": "حصة أصول البنك الممولة بأمواله الذاتية دون اللجوء إلى الديون أو الودائع.",
+        "detailed_definition": "مؤشر غير مرجح بالمخاطر للرافعة المالية، ويعطي صورة مباشرة وصريحة لرسملة البنك بعيداً عن نماذج الترجيع.",
+        "formula": "Ratio FP / Bilan = (Fonds Propres Comptables / Total Bilan) × 100",
+        "formula_latex": "\\frac{\\text{Fonds Propres}}{\\text{Total Bilan}} \\times 100",
+        "interpretation": "تحمي النسبة المرتفعة المودعين وتقلل بشكل كبير من مخاطر الإعسار.",
+        "example": "وسيط نسبة الأموال الخاصة إلى الميزانية في البنوك الجزائرية: 8.32%.",
+        "unit": "%",
+        "higher_is_better": true,
+        "modules": [
+          "Vue Secteur",
+          "Profil Banque",
+          "Quatre Dimensions",
+          "Comparateur"
+        ],
+        "related_terms": [
+          "fonds-propres",
+          "total-bilan",
+          "levier-financier",
+          "ratio-solvabilite"
+        ]
+      },
+      {
+        "id": "levier-financier",
+        "slug": "levier-financier",
+        "term": "الرافعة المالية للميزانية",
+        "acronym": "Levier / FLR",
+        "aliases": [
+          "مضاعف الأموال الخاصة",
+          "أثر الرافعة المصرفية"
+        ],
+        "category": "risk_solvency",
+        "short_definition": "عدد المرات التي يمثل فيها إجمالي الميزانية حجم الأموال الخاصة للبنك.",
+        "detailed_definition": "تضاعف الرافعة المالية عائد الأصول (ROA) للحصول على مردودية الأموال الخاصة (ROE)، غير أن ارتفاعها الزائد يزيد من المخاطر عند تعثر الأصول.",
+        "formula": "Levier = Total Bilan / Fonds Propres = 1 / (Ratio Fonds Propres / Bilan)",
+        "formula_latex": "\\text{Levier} = \\frac{\\text{Total Bilan}}{\\text{Fonds Propres}}",
+        "interpretation": "تعتبر رافعة مالية بين 10x و12x معتادة في البنوك الشاملة الحذرة.",
+        "example": "لميزانية قدرها 1000 مليار دج وأموال خاصة بقيمة 100 مليار دج، تكون الرافعة المالية 10.0x.",
+        "unit": "x",
+        "higher_is_better": null,
+        "modules": [
+          "Profil Banque",
+          "Quatre Dimensions",
+          "Scores financiers"
+        ],
+        "related_terms": [
+          "fonds-propres",
+          "total-bilan",
+          "roe",
+          "roa"
+        ]
+      },
+      {
+        "id": "z-score-bancaire",
+        "slug": "z-score-bancaire",
+        "term": "مؤشر Z البنكي (المسافة إلى التعثر)",
+        "acronym": "Bank Z-Score",
+        "aliases": [
+          "مؤشر متانة البنك",
+          "مقياس الأمان المالي لـ Roy"
+        ],
+        "category": "risk_solvency",
+        "short_definition": "مؤشر إحصائي يقيس عدد الانحرافات المعيارية لتراجع المردودية التي يمكن للبنك امتصاصها قبل نفاد أمواله الخاصة.",
+        "detailed_definition": "يجمع مؤشر Z البنكي بين المردودية (ROA) والرسملة (الأموال الخاصة/الأصول) وتقلبات العائد، وكلما ارتفع المؤشر انخفض احتمال التعثر.",
+        "formula": "Z-Score = (ROA moyen + (Fonds Propres / Total Actifs)) / Écart-type(ROA)",
+        "formula_latex": "Z_{\\text{bank}} = \\frac{\\overline{\\text{ROA}} + \\frac{\\text{FP}}{\\text{Actifs}}}{\\sigma(\\text{ROA})}",
+        "interpretation": "يدل مؤشر Z المرتفع على استقرار كبير في النتائج وقاعدة أموال خاصة قوية.",
+        "example": "يستخدم في المقارنات المتقدمة لمؤشر ABIX لتقييم متانة البنوك في مواجهة الدورات الاقتصادية.",
+        "unit": "score",
+        "higher_is_better": true,
+        "modules": [
+          "Scores financiers",
+          "Profil Banque",
+          "Quatre Dimensions"
+        ],
+        "related_terms": [
+          "roa",
+          "ratio-fonds-propres-actifs",
+          "ratio-solvabilite"
+        ]
+      },
+      {
+        "id": "camels",
+        "slug": "camels",
+        "term": "إطار التقييم المصرفي CAMELS",
+        "acronym": "CAMELS",
+        "aliases": [
+          "نظام التصنيف المصرفي CAMELS",
+          "شبكة التقييم الرقابي"
+        ],
+        "category": "risk_solvency",
+        "short_definition": "منهجية رقابية دولية لتقييم سلامة البنوك وفق 6 محاور: كفاية رأس المال، جودة الأصول، الإدارة، المردودية، السيولة، والحساسية لمخاطر السوق.",
+        "detailed_definition": "يعد نموذج CAMELS المرجع للبنوك المركزية ووكالات التصنيف لمراجعة المتانة الشاملة للبنوك التجارية.",
+        "formula": "Évaluation multicritère des 6 dimensions (Capital, Asset quality, Management, Earnings, Liquidity, Sensitivity)",
+        "formula_latex": "\\text{C (Capital)} + \\text{A (Actifs)} + \\text{M (Management)} + \\text{E (Earnings)} + \\text{L (Liquidité)} + \\text{S (Sensibilité)}",
+        "interpretation": "يتيح تشخيصاً شاملاً بزاوية 360 درجة لسلامة البنك دون الاقتصار على حجم الميزانية فقط.",
+        "example": "يستلهم ABIX المبادئ الأساسية لـ CAMELS في ملف البنك 360 درجة وأبعاده الأربعة.",
+        "unit": "cadre",
+        "higher_is_better": null,
+        "modules": [
+          "Profil Banque",
+          "Quatre Dimensions",
+          "Méthodologie"
+        ],
+        "related_terms": [
+          "cadre-4-dimensions",
+          "ratio-solvabilite",
+          "npl-ratio",
+          "ldr"
+        ]
+      },
+      {
+        "id": "ldr",
+        "slug": "ldr",
+        "term": "نسبة القروض إلى الودائع (معدل التحول LDR)",
+        "acronym": "LDR / RPD",
+        "aliases": [
+          "نسبة الائتمان إلى الودائع",
+          "معدل التحويل البنكي"
+        ],
+        "category": "liquidity_intermediation",
+        "short_definition": "نسبة الودائع المجمعة من العملاء التي يعاد ضخها على شكل قروض في الاقتصاد.",
+        "detailed_definition": "يقيس LDR شدة التحول المصرفي ووفرة السيولة، وأقل من 70-80% يدل على سيولة فائضة، بينما أكثر من 100% يعني اعتماد البنك على التمويل الخارجي.",
+        "formula": "LDR = (Total Crédits Bruts Clientèle / Total Dépôts Clientèle) × 100",
+        "formula_latex": "\\text{LDR} = \\frac{\\text{Crédits Clientèle}}{\\text{Dépôts Clientèle}} \\times 100",
+        "interpretation": "في الجزائر يبلغ متوسط LDR حوالي 60.4%، مما يعكس سيولة هيكلية وفيرة في القطاع المصرفي وهامشاً كبيراً لتمويل المشاريع.",
+        "example": "يسجل بنك البركة نسبة LDR تبلغ 94.1% (نموذج تمويل إسلامي نشط) مقابل 58.2% لبنك BNA.",
+        "unit": "%",
+        "higher_is_better": null,
+        "modules": [
+          "Vue Secteur",
+          "Classements",
+          "Profil Banque",
+          "Heatmap",
+          "Outliers",
+          "Quatre Dimensions",
+          "Executive Dashboard"
+        ],
+        "related_terms": [
+          "credits-clientele",
+          "depots-clientele",
+          "total-bilan"
+        ]
+      },
+      {
+        "id": "cagr",
+        "slug": "cagr",
+        "term": "معدل النمو السنوي المركب (CAGR)",
+        "acronym": "CAGR / TCAC",
+        "aliases": [
+          "معدل النمو السنوي التراكمي",
+          "النمو المركب"
+        ],
+        "category": "statistics_methods",
+        "short_definition": "يقيس متوسط وتيرة النمو السنوي لقيمة مالية على مدى عدة سنوات مع تحييد التقلبات السنوية.",
+        "detailed_definition": "يحسب معدل النمو المنتظم والثابت اللازم لانتقال القيمة من البداية إلى النهاية خلال n سنة. يحسب في ABIX على 3 و5 سنوات للأصول والودائع والقروض والدخل.",
+        "formula": "CAGR = ((Valeur Finale / Valeur Initiale)^(1 / n)) - 1",
+        "formula_latex": "\\text{CAGR} = \\left( \\frac{V_n}{V_0} \\right)^{\\frac{1}{n}} - 1",
+        "interpretation": "يعني CAGR بنسبة 8% أن القيمة نمت بمتوسط سنوي يقارب 8% على مدار كامل الفترة المدروسة.",
+        "example": "ارتفاع الأصول من 100 مليار دج في 2020 إلى 125.97 مليار دج في 2023 (3 سنوات): CAGR = (125.97/100)^(1/3) - 1 = +8.0% سنوياً.",
+        "unit": "%",
+        "higher_is_better": true,
+        "modules": [
+          "Vue Secteur",
+          "Historique",
+          "Profil Banque",
+          "Quatre Dimensions",
+          "Executive Dashboard"
+        ],
+        "related_terms": [
+          "croissance-yoy",
+          "base-100",
+          "part-de-marche"
+        ]
+      },
+      {
+        "id": "croissance-yoy",
+        "slug": "croissance-yoy",
+        "term": "النمو السنوي (YoY)",
+        "acronym": "YoY",
+        "aliases": [
+          "التغير السنوي",
+          "التطور مقارنة بالسنة السابقة"
+        ],
+        "category": "statistics_methods",
+        "short_definition": "النسبة المئوية لتغير المؤشر المالي مقارنة بنفس الفترة من السنة السابقة.",
+        "detailed_definition": "يقيس الحركية السنوية المباشرة للأصول أو الدخل أو الودائع بين سنتين ماليتين متتاليتين.",
+        "formula": "YoY = ((Valeur t - Valeur t-1) / Valeur t-1) × 100",
+        "formula_latex": "\\text{YoY} = \\frac{V_t - V_{t-1}}{V_{t-1}} \\times 100",
+        "interpretation": "يسمح برصد تسارع أو تباطؤ النشاط من سنة إلى أخرى.",
+        "example": "إجمالي أصول البنوك: +8.4% YoY في 2023.",
+        "unit": "%",
+        "higher_is_better": true,
+        "modules": [
+          "Vue Secteur",
+          "Classements",
+          "Profil Banque",
+          "Historique"
+        ],
+        "related_terms": [
+          "cagr",
+          "base-100"
+        ]
+      },
+      {
+        "id": "mediane",
+        "slug": "mediane",
+        "term": "الوسيط الإحصائي (المئين 50 / Q2)",
+        "acronym": "Med / Q2",
+        "aliases": [
+          "الوسيط",
+          "الربيع الثاني"
+        ],
+        "category": "statistics_methods",
+        "short_definition": "القيمة التي تقسم التوزيع المرتب للبنوك إلى نصفين متساويين: 50% من البنوك أدنى منها و50% أعلى منها.",
+        "detailed_definition": "في القطاع المصرفي الجزائري الذي يتميز بضخامة البنوك العمومية، يعتبر الوسيط أكثر دقة وتمثيلاً من المتوسط الحسابي لأنه لا يتأثر بالقيم المتطرفة للرواد.",
+        "formula": "Valeur au rang central (N+1)/2 d'une série ordonnée de N banques",
+        "formula_latex": "\\text{Médiane} = X_{(N+1)/2}",
+        "interpretation": "يمثل المستوى المرجعي الحقيقي لمركز السوق المصرفي في الجزائر.",
+        "example": "يبلغ وسيط مردودية الأموال الخاصة للقطاع المصرفي 11.8%.",
+        "unit": "selon indicateur",
+        "higher_is_better": null,
+        "modules": [
+          "Vue Secteur",
+          "Profil Banque",
+          "Matrice Stratégique",
+          "Outliers",
+          "Quatre Dimensions"
+        ],
+        "related_terms": [
+          "quartile",
+          "percentile",
+          "moyenne",
+          "outlier"
+        ]
+      },
+      {
+        "id": "quartile",
+        "slug": "quartile",
+        "term": "الربيعيات الإحصائية (Q1, Q2, Q3, Q4)",
+        "acronym": "Q1 / Q2 / Q3 / Q4",
+        "aliases": [
+          "الأرباع الإحصائية",
+          "التوزيع الربيعي"
+        ],
+        "category": "statistics_methods",
+        "short_definition": "قيم تقسم مجموعة البنوك المرتبة إلى 4 مجموعات متساوية تضم كل منها 25% من البنوك.",
+        "detailed_definition": "يمثل Q1 المئين 25 (حد الـ 25% الأدنى)، وQ2 يمثل الوسيط (50%)، وQ3 يمثل المئين 75 (حد الـ 25% الأعلى).",
+        "formula": "Q1 = 25e percentile, Q2 = 50e percentile (médiane), Q3 = 75e percentile",
+        "formula_latex": "Q_1 = P_{25}, \\quad Q_2 = \\text{Médiane}, \\quad Q_3 = P_{75}",
+        "interpretation": "التواجد في الربع الأول في معامل الاستغلال يعني التواجد ضمن 25% من البنوك الأكثر كفاءة (لأن النسبة الأقل أفضل).",
+        "example": "تتمركز BEA في أعلى 15% (Q4) في مردودية الأموال وفي الربع الأول (الأكفأ) في معامل الاستغلال.",
+        "unit": "quartile",
+        "higher_is_better": null,
+        "modules": [
+          "Profil Banque",
+          "Classements",
+          "Heatmap",
+          "Scores financiers"
+        ],
+        "related_terms": [
+          "mediane",
+          "percentile",
+          "ecart-type"
+        ]
+      },
+      {
+        "id": "percentile",
+        "slug": "percentile",
+        "term": "المئين الإحصائي (Percentile)",
+        "acronym": "P_x / Centile",
+        "aliases": [
+          "الرتبة المئينية",
+          "المئين"
+        ],
+        "category": "statistics_methods",
+        "short_definition": "يوضح النسبة المئوية الدقيقة لبنوك القطاع التي تسجل أداءً أقل من قيمة بنك معين.",
+        "detailed_definition": "يسمح المئين بتحديد موقع البنك فورياً على سلم من 0 إلى 100 بين البنوك الـ 21 مهما كان المقياس المستخدم.",
+        "formula": "Percentile = (Nombre de banques avec valeur inférieure / Nombre total de banques) × 100",
+        "formula_latex": "\\text{Percentile} = \\frac{\\text{Rang}_i - 0.5}{N} \\times 100",
+        "interpretation": "تعني رتبة المئين 88 أن البنك يتفوق على 88% من بنوك الساحة في ذلك المعيار.",
+        "example": "في إنتاجية الموظف، يحتل بنك BEA المئين 92 في الساحة المصرفية.",
+        "unit": "%ile",
+        "higher_is_better": true,
+        "modules": [
+          "Profil Banque",
+          "Classements",
+          "Scores financiers"
+        ],
+        "related_terms": [
+          "quartile",
+          "mediane",
+          "normalisation-min-max"
+        ]
+      },
+      {
+        "id": "ecart-type",
+        "slug": "ecart-type",
+        "term": "الانحراف المعياري (سيغما Sigma)",
+        "acronym": "σ / Sigma",
+        "aliases": [
+          "الانحراف المعياري",
+          "التشتت الإحصائي"
+        ],
+        "category": "statistics_methods",
+        "short_definition": "يقيس مدى تشتت وتباعد قيم البنوك عن المتوسط القطاعي.",
+        "detailed_definition": "كلما كبر الانحراف المعياري زادت الفوارق في الأداء بين البنوك، ويستخدم في ABIX لتحديد مجالات التنبيه ورصد القيم الشاذة.",
+        "formula": "Écart-type = Racine carrée de la moyenne des écarts au carré par rapport à la moyenne",
+        "formula_latex": "\\sigma = \\sqrt{ \\frac{1}{N} \\sum_{i=1}^{N} (x_i - \\mu)^2 }",
+        "interpretation": "في التوزيع الطبيعي، يقع حوالي 68% من البنوك ضمن ±1.0σ من المتوسط و95% ضمن ±2.0σ.",
+        "example": "يستخدم لضبط حدود رصد الشذوذ الإحصائي في تكلفة المخاطر أو معدلات التحول LDR.",
+        "unit": "selon indicateur",
+        "higher_is_better": null,
+        "modules": [
+          "Outliers",
+          "Scores financiers",
+          "Méthodologie"
+        ],
+        "related_terms": [
+          "z-score",
+          "outlier",
+          "mediane"
+        ]
+      },
+      {
+        "id": "outlier",
+        "slug": "outlier",
+        "term": "القيمة الشاذة إحصائياً (Outlier)",
+        "acronym": "Outlier",
+        "aliases": [
+          "قيمة شاذة",
+          "انحراف إحصائي دال"
+        ],
+        "category": "statistics_methods",
+        "short_definition": "ملاحظة تنحرف بشكل دال إحصائياً عن المعدل المعتاد المسجل في مجمل القطاع المصرفي.",
+        "detailed_definition": "يرصد ABIX القيم الشاذة آلياً باستخدام Z-Score (> ±2.0σ تحذير، > ±3.0σ حرج) ومجال الأرباع. وغالباً ما تشير إلى تخصص مصرفي نوعي كالبنوك الإسلامية.",
+        "formula": "|Z| = |(X - Moyenne) / Écart-type| > 2.0 ou X hors de [Q1 - 1.5×IQR, Q3 + 1.5×IQR]",
+        "formula_latex": "|Z| = \\left| \\frac{X - \\mu}{\\sigma} \\right| > 2.0",
+        "interpretation": "القيمة الشاذة ليست سلبية بالضرورة، بل تعكس تموضعاً خاصاً يتطلب تحليلاً نوعياً معمقاً.",
+        "example": "يبرز بنك البركة كقيمة شاذة في نسبة القروض/الودائع (+3.1σ، 94.1% مقابل وسيط 64.1%) بسبب طبيعة صيغ التمويل الإسلامي.",
+        "unit": "sigma (σ)",
+        "higher_is_better": null,
+        "modules": [
+          "Outliers",
+          "Executive Dashboard",
+          "Profil Banque"
+        ],
+        "related_terms": [
+          "ecart-type",
+          "z-score",
+          "mediane",
+          "scanning-deterministe"
+        ]
+      },
+      {
+        "id": "z-score",
+        "slug": "z-score",
+        "term": "الدرجة المعيارية (Z-Score)",
+        "acronym": "Z-Score",
+        "aliases": [
+          "الدرجة المعيارية Z",
+          "التحويل المعياري"
+        ],
+        "category": "statistics_methods",
+        "short_definition": "يقيس عدد الانحرافات المعيارية التي تبتعد بها قيمة معينة أعلى أو أسفل متوسط المجموعة.",
+        "detailed_definition": "يتيح Z-Score مقارنة متغيرات مالية بوحدات مختلفة (الدينار، النسب المئوية، عدد العمال) بتحويلها إلى مقياس موحد مركزه الصفر.",
+        "formula": "Z = (Valeur observée - Moyenne) / Écart-type",
+        "formula_latex": "Z = \\frac{X - \\mu}{\\sigma}",
+        "interpretation": "Z = 0 يطابق المتوسط، وZ = +2.0 يعني أن البنك يقع ضمن أعلى 2.5% من بنوك الساحة.",
+        "example": "يسجل AGB درجة Z تبلغ +2.6σ في نمو الناتج البنكي الصافي مشيراً إلى أداء لافت.",
+        "unit": "score",
+        "higher_is_better": null,
+        "modules": [
+          "Outliers",
+          "Scores financiers",
+          "Méthodologie"
+        ],
+        "related_terms": [
+          "ecart-type",
+          "outlier",
+          "normalisation-min-max"
+        ]
+      },
+      {
+        "id": "normalisation-min-max",
+        "slug": "normalisation-min-max",
+        "term": "التطبيع الأدنى والأعلى (سلم 0-100)",
+        "acronym": "Min-Max",
+        "aliases": [
+          "التقييس من 0 إلى 100",
+          "التطبيع الخطي"
+        ],
+        "category": "statistics_methods",
+        "short_definition": "تحويل رياضي يحول أي مؤشر مالي إلى سلم موحد بين 0 (أدنى أداء) و100 (أفضل أداء).",
+        "detailed_definition": "تستخدم في الرادارات 360 درجة لدمج معايير مختلفة (الربحية، الملاءة، الكفاءة) في علامات متجانسة.",
+        "formula": "Score = ((Valeur - Valeur Min) / (Valeur Max - Valeur Min)) × 100",
+        "formula_latex": "\\text{Score}_{0-100} = \\frac{X - X_{\\min}}{X_{\\max} - X_{\\min}} \\times 100",
+        "interpretation": "يتيح قراءة بصرية فورية لنقاط القوة ومجالات التحسين على الرادار.",
+        "example": "تمنح الدرجة 100 للبنك صاحب أفضل نسبة، والدرجة 0 لصاحب أدنى نسبة.",
+        "unit": "score 0-100",
+        "higher_is_better": true,
+        "modules": [
+          "Profil Banque",
+          "Quatre Dimensions",
+          "Scores financiers"
+        ],
+        "related_terms": [
+          "z-score",
+          "percentile",
+          "cadre-4-dimensions"
+        ]
+      },
+      {
+        "id": "base-100",
+        "slug": "base-100",
+        "term": "المؤشر الأساس 100 (Base 100)",
+        "acronym": "Base 100",
+        "aliases": [
+          "المؤشر الأساسي 100",
+          "تطبيع التطور الزمني"
+        ],
+        "category": "statistics_methods",
+        "short_definition": "طريقة قياس تحدد قيمة سنة الأساس عند 100 لمقارنة وتيرة نمو بنوك ذات أحجام متباينة.",
+        "detailed_definition": "يتيح الأساس 100 مقارنة سرعة نمو بنك عمومي ضخم وبنك خاص متوسط على نفس الرسم البياني دون التأثر بالحجم المطلق.",
+        "formula": "Indice Année t = (Valeur Année t / Valeur Année de Base) × 100",
+        "formula_latex": "\\text{Indice}_t = \\frac{V_t}{V_0} \\times 100",
+        "interpretation": "يشير المؤشر 135 في 2024 (أساس 100 في 2020) إلى نمو تراكمي قدره +35% خلال الفترة.",
+        "example": "يستخدم في وحدتي السجل والمقارن في ABIX لتحليل مسارات النمو متعددة السنوات.",
+        "unit": "indice",
+        "higher_is_better": true,
+        "modules": [
+          "Historique",
+          "Comparateur",
+          "Vue Secteur"
+        ],
+        "related_terms": [
+          "cagr",
+          "croissance-yoy"
+        ]
+      },
+      {
+        "id": "correlation-pearson",
+        "slug": "correlation-pearson",
+        "term": "معامل ارتباط بيرسون (Pearson)",
+        "acronym": "r de Pearson",
+        "aliases": [
+          "معامل الارتباط الخطي",
+          "مصفوفة الارتباط"
+        ],
+        "category": "statistics_methods",
+        "short_definition": "يقيس قوة واتجاه العلاقة الخطية بين مؤشرين ماليين (مثل حجم الميزانية والربحية).",
+        "detailed_definition": "يتراوح المعامل بين -1 (ارتباط عكسي تام) و+1 (ارتباط طردي تام)، وتشير القيمة القريبة من 0 إلى انعدام العلاقة الخطية.",
+        "formula": "r = Covariance(X, Y) / (Écart-type(X) × Écart-type(Y))",
+        "formula_latex": "r = \\frac{\\sum (x_i - \\bar{x})(y_i - \\bar{y})}{\\sqrt{\\sum (x_i - \\bar{x})^2 \\sum (y_i - \\bar{y})^2}}",
+        "interpretation": "يسمح بالتحقق عملياً مما إذا كانت البنوك ذات الميزانيات الأكبر تحقق مردودية أعلى أم لا.",
+        "example": "الارتباط بين إجمالي الميزانية وROE متوسط في القطاع الجزائري، مما يؤكد أن الحجم لا يضمن تلقائياً ربحية أعلى.",
+        "unit": "[-1 ; +1]",
+        "higher_is_better": null,
+        "modules": [
+          "Analyse Transversale",
+          "Matrice Stratégique",
+          "Méthodologie"
+        ],
+        "related_terms": [
+          "z-score",
+          "ecart-type"
+        ]
+      },
+      {
+        "id": "part-de-marche",
+        "slug": "part-de-marche",
+        "term": "حصة السوق (Part de Marché)",
+        "acronym": "PDM / MS",
+        "aliases": [
+          "الحصة السوقية",
+          "الوزن النسبي في القطاع"
+        ],
+        "category": "sector_analysis",
+        "short_definition": "النسبة المئوية التي يمثلها البنك من إجمالي القطاع في مجمع مالي معين (الأصول، الودائع، القروض أو الناتج البنكي).",
+        "detailed_definition": "تقيس الحصة السوقية الوزن التنافسي للبنك في الساحة المصرفية، ويحلل ABIX الحصص عبر الأصول والودائع والقروض والدخل.",
+        "formula": "Part de Marché = (Agrégat de la Banque / Total Agrégat des 21 Banques) × 100",
+        "formula_latex": "\\text{PDM}_i = \\frac{X_i}{\\sum_{j=1}^{N} X_j} \\times 100",
+        "interpretation": "تستحوذ البنوك العمومية الـ 6 على نحو 88% من إجمالي الأصول، مقابل 12% لمجمل البنوك الخاصة.",
+        "example": "يستحوذ بنكا BNA (26.8%) وBEA (21.9%) معاً على ما يقارب نصف السوق المصرفي الجزائري.",
+        "unit": "%",
+        "higher_is_better": true,
+        "modules": [
+          "Parts de marché",
+          "Vue Secteur",
+          "Profil Banque",
+          "Classements",
+          "Concentration",
+          "Executive Dashboard"
+        ],
+        "related_terms": [
+          "variation-pdm",
+          "cr3",
+          "cr5",
+          "hhi"
+        ]
+      },
+      {
+        "id": "variation-pdm",
+        "slug": "variation-pdm",
+        "term": "تغير الحصة السوقية (مكاسب وخسائر)",
+        "acronym": "Δ PDM",
+        "aliases": [
+          "تطور الحصة السوقية",
+          "الفارق في نقاط الحصة"
+        ],
+        "category": "sector_analysis",
+        "short_definition": "الفارق بالنقاط المئوية بين حصة البنك في السوق خلال السنة الحالية وحصته في السنة السابقة.",
+        "detailed_definition": "يسمح بمعرفة البنوك التي تكسب أو تفقد حصصاً في الودائع أو القروض بمعزل عن النمو الإجمالي للسوق.",
+        "formula": "Variation PDM = Part de Marché t - Part de Marché t-1 (en points de %)",
+        "formula_latex": "\\Delta \\text{PDM} = \\text{PDM}_t - \\text{PDM}_{t-1}",
+        "interpretation": "يعني كسب +0.82 نقطة مئوية تحقيق نمو أسرع من متوسط وتيرة السوق.",
+        "example": "حقق بنك BEA زيادة قدرها +0.82 نقطة مئوية في حصته من الأصول في 2022 مسجلاً أعلى تقدم في القطاع.",
+        "unit": "pts de %",
+        "higher_is_better": true,
+        "modules": [
+          "Parts de marché",
+          "Vue Secteur",
+          "Profil Banque",
+          "Executive Dashboard"
+        ],
+        "related_terms": [
+          "part-de-marche",
+          "cagr"
+        ]
+      },
+      {
+        "id": "peer-group",
+        "slug": "peer-group",
+        "term": "مجموعة الأقران (Peer Group)",
+        "acronym": "Peer Group",
+        "aliases": [
+          "مجموعة المقارنة",
+          "البنوك النظيرة"
+        ],
+        "category": "sector_analysis",
+        "short_definition": "مجموعة فرعية من البنوك تشترك في خصائص متجانسة (الحجم، الملكية، النموذج التشغيلي) لإجراء مقارنات موضوعية.",
+        "detailed_definition": "تتيح مجموعة الأقران في ABIX عزل فئات متجانسة (بنوك عمومية، بنوك خاصة دولية، بنوك إسلامية) لتقييم الأداء دون تشويه.",
+        "formula": "Segmentation par critères : Statut (Public/Privé), Taille (Top 5 / Intermédiaires), Modèle (Universel / Islamique)",
+        "formula_latex": "\\text{Segment} = \\{ \\text{Banques avec critères communs} \\}",
+        "interpretation": "يسمح بمعرفة ما إذا كان البنك يتفوق على منافسيه المباشرين الخاضعين لنفس الظروف والقيود.",
+        "example": "تتم مقارنة بنك البركة مع مجموعة البنوك الإسلامية والخاصة المماثلة.",
+        "unit": "segment",
+        "higher_is_better": null,
+        "modules": [
+          "Comparateur",
+          "Profil Banque",
+          "Quatre Dimensions",
+          "Executive Dashboard"
+        ],
+        "related_terms": [
+          "cluster",
+          "public-vs-prive",
+          "part-de-marche"
+        ]
+      },
+      {
+        "id": "cluster",
+        "slug": "cluster",
+        "term": "العنقود المصرفي (المجموعة الإستراتيجية)",
+        "acronym": "Cluster",
+        "aliases": [
+          "المجموعة الإستراتيجية",
+          "التصنيف العنقودي"
+        ],
+        "category": "sector_analysis",
+        "short_definition": "تجميع إحصائي للبنوك التي تظهر ملامح مالية متشابهة في عدة أبعاد (الربحية، الرافعة، الكفاءة والنمو).",
+        "detailed_definition": "يحدد ABIX عناقيد واضحة في الجزائر: 1) كبار البنوك العمومية الشاملة، 2) البنوك الخاصة عالية المردودية، 3) البنوك الساعية للنمو، 4) البنوك المتخصصة والإسلامية.",
+        "formula": "Classification par analyse en composantes principales (ACP) et K-Means sur les ratios clés",
+        "formula_latex": "\\text{Cluster}_k = \\arg\\min \\sum \\| x_i - \\mu_k \\|^2",
+        "interpretation": "يبرز تنوع النماذج التشغيلية والاقتصادية في الساحة المصرفية الجزائرية.",
+        "example": "يظهر بوضوح في مصفوفة النمو مقابل الربحية في منصة ABIX.",
+        "unit": "typologie",
+        "higher_is_better": null,
+        "modules": [
+          "Matrice Stratégique",
+          "Profil Banque",
+          "Analyse Transversale"
+        ],
+        "related_terms": [
+          "peer-group",
+          "matrice-croissance-rentabilite"
+        ]
+      },
+      {
+        "id": "perimetre-observe",
+        "slug": "perimetre-observe",
+        "term": "النطاق المدروس (العينة القطاعية)",
+        "acronym": "Scope",
+        "aliases": [
+          "نطاق الملاحظة",
+          "عينة البنوك المشمولة"
+        ],
+        "category": "sector_analysis",
+        "short_definition": "مجموع المؤسسات المصرفية المعتمدة من بنك الجزائر والتي تملك قوائم مالية معتمدة ومدرجة في التحليل.",
+        "detailed_definition": "يغطي ABIX كافة البنوك التجارية الناشطة في الجزائر: 20 بنكاً في طبعة 2025 و21 بنكاً في طبعة 2026.",
+        "formula": "Périmètre = 6 Banques Publiques + 15 Banques Privées / Mixtes = 21 Banques",
+        "formula_latex": "N = 21 \\text{ Banques}",
+        "interpretation": "يضمن تمثيلاً شاملاً للسوق المصرفي الجزائري دون أي انتقائية جزئية.",
+        "example": "21 بنكاً تم تحليلها تمثل 100% من الأصول المصرفية التجارية في الجزائر.",
+        "unit": "banques",
+        "higher_is_better": null,
+        "modules": [
+          "Vue Secteur",
+          "Méthodologie",
+          "Data Explorer",
+          "Classements"
+        ],
+        "related_terms": [
+          "perimetre-constant",
+          "public-vs-prive"
+        ]
+      },
+      {
+        "id": "perimetre-constant",
+        "slug": "perimetre-constant",
+        "term": "النطاق الثابت (Périmètre Constant)",
+        "acronym": "LFL",
+        "aliases": [
+          "على أساس ثابت",
+          "العينة الثابتة للمقارنة"
+        ],
+        "category": "sector_analysis",
+        "short_definition": "طريقة تحليل متعددة السنوات تعتمد على نفس مجموعة البنوك لتفادي تشوهات دخول أو خروج مؤسسات من السوق.",
+        "detailed_definition": "تضمن أن النمو المسجل في القطاع هو نمو فعلي وليس ناتجاً عن إضافة بنك جديد إلى قاعدة البيانات.",
+        "formula": "Agrégat Constant = Somme des grandeurs des banques présentes à la fois en Année t et en Année t-1",
+        "formula_latex": "\\text{Total}_{\\text{constant}} = \\sum_{i \\in S_t \\cap S_{t-1}} X_{i,t}",
+        "interpretation": "تضمن الدقة العلمية للمقارنات الزمنية في دراسة مؤشر ABIX.",
+        "example": "مطبق في حساب معدلات نمو القطاع للفترة 2022-2025.",
+        "unit": "méthode",
+        "higher_is_better": null,
+        "modules": [
+          "Historique",
+          "Méthodologie",
+          "Vue Secteur"
+        ],
+        "related_terms": [
+          "perimetre-observe",
+          "cagr"
+        ]
+      },
+      {
+        "id": "public-vs-prive",
+        "slug": "public-vs-prive",
+        "term": "التقسيم بين القطاعين العام والخاص",
+        "acronym": "PUB / PRIV",
+        "aliases": [
+          "البنوك العمومية مقابل الخاصة",
+          "تقسيم الملكية المصرفية"
+        ],
+        "category": "sector_analysis",
+        "short_definition": "مقارنة هيكلية للأداء والميزانيات والنماذج التشغيلية بين البنوك العمومية (المملوكة للدولة) والبنوك الخاصة.",
+        "detailed_definition": "تتميز الساحة المصرفية في الجزائر بنظام مزدوج: 6 بنوك عمومية تستحوذ على 88% من الأصول بشبكة فروع كبرى، بينما تسجل 15 بنكاً خاصاً مردودية أعلى في فئات مستهدفة.",
+        "formula": "Agrégat Public = Σ Banques Publiques | Agrégat Privé = Σ Banques Privées",
+        "formula_latex": "\\text{Part Publique} = \\frac{\\sum \\text{Pub}}{\\text{Total Secteur}}, \\quad \\text{Part Privée} = \\frac{\\sum \\text{Priv}}{\\text{Total Secteur}}",
+        "interpretation": "يبرز التكامل بين الحجم التمويلي للقطاع العام والمرونة التشغيلية للقطاع الخاص.",
+        "example": "تحتفظ البنوك الخاصة بأفضلية في المردودية (ROE 14.6% مقابل 11.4% للعمومي) رغم قلة شبكة الفروع.",
+        "unit": "% de part",
+        "higher_is_better": null,
+        "modules": [
+          "Vue Secteur",
+          "Parts de marché",
+          "Profil Banque",
+          "Executive Dashboard"
+        ],
+        "related_terms": [
+          "part-de-marche",
+          "peer-group",
+          "total-bilan"
+        ]
+      },
+      {
+        "id": "hhi",
+        "slug": "hhi",
+        "term": "مؤشر هيرفيندال-هيرشمان (HHI)",
+        "acronym": "HHI",
+        "aliases": [
+          "مؤشر HHI",
+          "مؤشر هيرفيندال للتركيز"
+        ],
+        "category": "concentration_market",
+        "short_definition": "المقياس المرجعي العالمي لقياس درجة تركيز السوق من خلال جمع مربعات الحصص السوقية لكافة البنوك.",
+        "detailed_definition": "يتراوح مؤشر HHI من 0 إلى 10000 نقطة: أقل من 1500 سوق تنافسي، بين 1500 و2500 تركيز معتدل، وأكثر من 2500 تركيز مرتفع وهيمنة قوية.",
+        "formula": "HHI = Somme des (Part de marché de chaque banque en %)^2",
+        "formula_latex": "\\text{HHI} = \\sum_{i=1}^{N} (s_i \\times 100)^2",
+        "interpretation": "بمؤشر HHI يقارب 1742 نقطة على الأصول، يقع السوق المصرفي الجزائري في فئة التركيز المعتدل حول نواة عمومية قوية.",
+        "example": "تساهم BNA وBEA وCPA وحدها بأكثر من 80% من إجمالي نقاط مؤشر HHI.",
+        "unit": "points / 10 000",
+        "higher_is_better": null,
+        "modules": [
+          "Concentration",
+          "Vue Secteur",
+          "Data Explorer",
+          "Executive Dashboard"
+        ],
+        "related_terms": [
+          "nombre-effectif-banques",
+          "cr3",
+          "cr5",
+          "part-de-marche"
+        ]
+      },
+      {
+        "id": "nombre-effectif-banques",
+        "slug": "nombre-effectif-banques",
+        "term": "العدد الفعلي للبنوك (معادل HHI)",
+        "acronym": "N_eff",
+        "aliases": [
+          "المعادل الفعلي للمنافسين",
+          "عدد البنوك المكافئة"
+        ],
+        "category": "concentration_market",
+        "short_definition": "العدد النظري للبنوك المتساوية الحجم تماماً والتي تعطي نفس مستوى تركيز مؤشر HHI المسجل في السوق.",
+        "detailed_definition": "يترجم قيمة HHI إلى رقم بديهي: رغم وجود 21 بنكاً في الساحة، إلا أن توزيع الحصص يجعل السوق يعمل اقتصادياً وكأنه يضم ~5.7 بنوك متساوية الحجم.",
+        "formula": "Nombre Effectif = 10 000 / HHI",
+        "formula_latex": "N_{\\text{eff}} = \\frac{10\\,000}{\\text{HHI}}",
+        "interpretation": "كلما اقترب الرقم من 21 كان السوق أكثر توازناً، وقيمة 5.7 تعكس التباين في الحجم بين الكبار والبنوك الصغرى.",
+        "example": "لمؤشر HHI قدره 1742، يكون العدد الفعلي للبنوك: 10,000 / 1742 = 5.74 بنكاً مكافئاً.",
+        "unit": "banques",
+        "higher_is_better": true,
+        "modules": [
+          "Concentration",
+          "Vue Secteur",
+          "Executive Dashboard"
+        ],
+        "related_terms": [
+          "hhi",
+          "cr3",
+          "cr5"
+        ]
+      },
+      {
+        "id": "cr3",
+        "slug": "cr3",
+        "term": "نسبة التركيز الثلاثية (CR3 - أعلى 3 بنوك)",
+        "acronym": "CR3",
+        "aliases": [
+          "نسبة تركيز أكبر 3 بنوك",
+          "حصة الرواد الثلاثة"
+        ],
+        "category": "concentration_market",
+        "short_definition": "الحصة السوقية التراكمية لأكبر 3 بنوك في القطاع (BNA + BEA + CPA).",
+        "detailed_definition": "تقيس درجة الاحتكار الثلاثي في قمة النظام المصرفي، ونسبة تفوق 60% تدل على تأثير حاسم للبنوك الثلاثة على مجمل السوق.",
+        "formula": "CR3 = Part de Marché Rang 1 + Part de Marché Rang 2 + Part de Marché Rang 3",
+        "formula_latex": "\\text{CR}_3 = s_1 + s_2 + s_3",
+        "interpretation": "في الجزائر، تبلغ نسبة CR3 حوالي 63.9% من إجمالي الميزانية، مما يؤكد الوزن المحوري للبنوك العمومية الثلاثة الكبرى.",
+        "example": "BNA (26.8%) + BEA (21.9%) + CPA (15.2%) = 63.9% من الأصول.",
+        "unit": "%",
+        "higher_is_better": null,
+        "modules": [
+          "Concentration",
+          "Vue Secteur",
+          "Executive Dashboard"
+        ],
+        "related_terms": [
+          "cr5",
+          "hhi",
+          "part-de-marche"
+        ]
+      },
+      {
+        "id": "cr5",
+        "slug": "cr5",
+        "term": "نسبة التركيز الخماسية (CR5 - أعلى 5 بنوك)",
+        "acronym": "CR5",
+        "aliases": [
+          "نسبة تركيز أكبر 5 بنوك",
+          "حصة الرواد الخمسة"
+        ],
+        "category": "concentration_market",
+        "short_definition": "الحصة السوقية التراكمية لأكبر 5 بنوك في القطاع (BNA, BEA, CPA, BADR, CNEP).",
+        "detailed_definition": "يقيس نسبة هيمنة مجموعة البنوك الخمسة الأولى في تمويل الاقتصاد الوطني.",
+        "formula": "CR5 = Somme des parts de marché des 5 premières banques",
+        "formula_latex": "\\text{CR}_5 = \\sum_{i=1}^{5} s_i",
+        "interpretation": "تبلغ نسبة CR5 ما مقداره 82.0% من إجمالي الميزانية في الجزائر.",
+        "example": "تجمع أكبر 5 بنوك أكثر من 18,000 مليار دج من أصل 22,000 مليار دج في السوق.",
+        "unit": "%",
+        "higher_is_better": null,
+        "modules": [
+          "Concentration",
+          "Vue Secteur",
+          "Executive Dashboard"
+        ],
+        "related_terms": [
+          "cr3",
+          "hhi",
+          "part-de-marche"
+        ]
+      },
+      {
+        "id": "cadre-4-dimensions",
+        "slug": "cadre-4-dimensions",
+        "term": "إطار الأبعاد الأربعة لمؤشر ABIX",
+        "acronym": "4D ABIX",
+        "aliases": [
+          "الأبعاد الأربعة",
+          "الإطار التحليلي الرباعي"
+        ],
+        "category": "abix_framework",
+        "short_definition": "إطار تقييم منهجي يبتعد عن العلامات الإجمالية الاعتباطية ويقوم على 4 محاور: 1. المردودية، 2. النمو، 3. الكفاءة، 4. الرسملة.",
+        "detailed_definition": "يرفض ABIX الترتيب الغامض بنقطة موحدة، ويقدم قراءة موضوعية متعددة الأبعاد قابلة للتدقيق على قوائم البنوك الرسمية.",
+        "formula": "Piliers : 1. Rentabilité (ROE, ROA, NIM) | 2. Croissance (CAGR Actifs, Dépôts, PNB) | 3. Efficacité (CIR, PNB/Agent) | 4. Capitalisation (FP/Actifs, Solvabilité)",
+        "formula_latex": "\\text{Cadre 4D} = \\{ \\text{Rentabilité}, \\text{Croissance}, \\text{Efficacité}, \\text{Capitalisation} \\}",
+        "interpretation": "يتيح للمسؤولين والمحللين الفهم الفوري لملف البنك دون اختزال مخل.",
+        "example": "يمكن للبنك أن يتفوق في المردودية بينما يكون في مرحلة تدعيم هادئة في جانب النمو.",
+        "unit": "cadre",
+        "higher_is_better": null,
+        "modules": [
+          "Quatre Dimensions",
+          "Profil Banque",
+          "Méthodologie",
+          "Data Explorer"
+        ],
+        "related_terms": [
+          "matrice-croissance-rentabilite",
+          "roe",
+          "cagr",
+          "coefficient-exploitation"
+        ]
+      },
+      {
+        "id": "matrice-croissance-rentabilite",
+        "slug": "matrice-croissance-rentabilite",
+        "term": "مصفوفة النمو مقابل المردودية (4 أرباع)",
+        "acronym": "Matrice 2D",
+        "aliases": [
+          "المصفوفة الإستراتيجية",
+          "تموضع الأرباع الأربعة"
+        ],
+        "category": "abix_framework",
+        "short_definition": "خريطة بصرية تقاطع معدل نمو الناتج البنكي الصافي (المحور الأفقي) ومردودية الأموال الخاصة ROE (المحور الرأسي) مقارنة بالوسيط القطاعي.",
+        "detailed_definition": "تقسم المصفوفة البنوك إلى 4 مربعات: 1) الرواد الديناميكيون، 2) الربحية الصامدة، 3) الاستثمار والتوسع، 4) في طور التحول.",
+        "formula": "Axes centrés sur la Médiane Secteur : Axe X = Croissance PNB % | Axe Y = Rentabilité ROE % | Taille bulle = Total Bilan",
+        "formula_latex": "(X - \\text{Médiane}_{\\text{PNB}}, \\; Y - \\text{Médiane}_{\\text{ROE}})",
+        "interpretation": "يتيح رؤية فورية للحركية التجارية والمالية لكل بنك في السوق.",
+        "example": "يتموضع بنكا BEA والبركة في مربع الرواد الديناميكيين.",
+        "unit": "matrice",
+        "higher_is_better": null,
+        "modules": [
+          "Matrice Stratégique",
+          "Profil Banque",
+          "Executive Dashboard"
+        ],
+        "related_terms": [
+          "cagr",
+          "roe",
+          "pnb",
+          "cluster"
+        ]
+      },
+      {
+        "id": "score-transparence",
+        "slug": "score-transparence",
+        "term": "مؤشر الشفافية وتوفر المعلومات المالية",
+        "acronym": "Transparence",
+        "aliases": [
+          "مؤشر الشفافية المالية",
+          "إتاحة الحسابات والتقارير للجمهور"
+        ],
+        "category": "abix_framework",
+        "short_definition": "تقييم موضوعي لمدى إتاحة وحداثة القوائم المالية وتقارير النشاط المنشورة على المواقع الرسمية للبنوك.",
+        "detailed_definition": "يقوم على بعدين (نشر القوائم المالية /3 نقاط ونشر تقرير النشاط /3 نقاط) بمجموع إجمالي من 6 نقاط.",
+        "formula": "Score Global (0 à 6) = Score Publication des Comptes (0 à 3) + Score Rapport d'Activité (0 à 3)",
+        "formula_latex": "\\text{Score Transparence} = \\text{Score Comptes} + \\text{Score Rapport}",
+        "interpretation": "يقيس مدى الالتزام بأفضل ممارسات الإفصاح المالي والتواصل مع الجمهور والمستثمرين.",
+        "example": "تحصل 3 بنوك على العلامة الكاملة 6/6 (CPA, BDL, ABC) بينما يبلغ المتوسط القطاعي 2.7/6.",
+        "unit": "/ 6 pts",
+        "higher_is_better": true,
+        "modules": [
+          "Disponibilité Financière",
+          "Méthodologie"
+        ],
+        "related_terms": [
+          "perimetre-observe",
+          "scanning-deterministe"
+        ]
+      },
+      {
+        "id": "scanning-deterministe",
+        "slug": "scanning-deterministe",
+        "term": "المسح القطاعي الدقيق والتنبيهات الإستراتيجية",
+        "acronym": "Scanning ABIX",
+        "aliases": [
+          "محرك المسح الحتمي",
+          "التنبيهات الإستراتيجية الذكية"
+        ],
+        "category": "abix_framework",
+        "short_definition": "محرك خوارزمي يمسح ميزانيات البنوك الـ 21 آلياً لرصد الانقطاعات في المسارات والتباينات الهيكلية والتنبيهات الإستراتيجية.",
+        "detailed_definition": "على عكس نماذج الذكاء الاصطناعي الغامضة، تتميز تنبيهات ABIX بكونها حتمية 100% وقابلة للتدقيق والربط المباشر بالقوائم المالية المعتمدة.",
+        "formula": "Règles déterministes : Divergence Dépôts/Crédits, Rupture de Marge, Écart de Provisionnement (> ±2σ), Érosion PNB vs Résultat",
+        "formula_latex": "\\text{Alerte} = f(\\text{Écarts Statistiques}, \\text{Divergences Agrégats})",
+        "interpretation": "يقدم للإدارات العامة ومجالس الإدارة ملخصاً تنفيذياً فورياً حول أهم نقاط اليقظة في السوق.",
+        "example": "تنبيه مرصود: نمو ودائع القطاع (+6.2%) أسرع من القروض (+5.1%) مما يعزز فائض السيولة المتاحة.",
+        "unit": "alertes",
+        "higher_is_better": null,
+        "modules": [
+          "Executive Dashboard",
+          "Vue Secteur",
+          "Profil Banque"
+        ],
+        "related_terms": [
+          "outlier",
+          "cadre-4-dimensions",
+          "executive"
+        ]
+      },
+      {
+        "id": "barometre-ebanking",
+        "slug": "barometre-ebanking",
+        "term": "بارومتر الخدمات المصرفية الرقمية (e-Banking)",
+        "acronym": "Baromètre",
+        "aliases": [
+          "بارومتر الصيرفة الإلكترونية",
+          "استبيان الخدمات المصرفية الرقمية"
+        ],
+        "category": "abix_framework",
+        "short_definition": "استبيان دوري يقيس مدى استخدام ورضا العملاء عن الخدمات المصرفية عبر الويب وتطبيقات الهاتف وشبكة الفروع.",
+        "detailed_definition": "مكمل تشغيلي للقوائم المالية، يربط البيانات المحاسبية بالاستخدام الفعلي للخدمات المصرفية الرقمية في الجزائر.",
+        "formula": "Enquête quantitative et qualitative : Canaux digitaux, Ergonomie, Disponibilité, Tarification, Sécurité",
+        "formula_latex": "\\text{Score Baromètre} = f(\\text{Usage}, \\text{Satisfaction}, \\text{Disponibilité})",
+        "interpretation": "يسلط الضوء على تطلعات العملاء ومستوى النضج التكنولوجي للبنوك العاملة في الساحة.",
+        "example": "طبعة 2026: تحليل معمق لخصائص وتجربة تطبيقات الهاتف المصرفية في الجزائر.",
+        "unit": "baromètre",
+        "higher_is_better": null,
+        "modules": [
+          "Baromètre 2026",
+          "Méthodologie",
+          "Édition 2026"
+        ],
+        "related_terms": [
+          "score-transparence",
+          "cadre-4-dimensions"
+        ]
+      }
+    ]
   }
 }

@@ -49,6 +49,7 @@ const PAGES = [
   { template: "questionnaire.html", output: "questionnaire/index.html", titleKey: "questionnaire" },
   { template: "classements.html", output: "classements/index.html", titleKey: "rankings" },
   { template: "banques.html", output: "banques/index.html", titleKey: "banks" },
+  { template: "glossaire.html", output: "glossaire/index.html", titleKey: "glossary" },
   { template: "mentions-legales.html", output: "mentions-legales/index.html", titleKey: "legal" },
   { template: "conditions-utilisation.html", output: "conditions-utilisation/index.html", titleKey: "cgu" },
   { template: "politique-confidentialite.html", output: "politique-confidentialite/index.html", titleKey: "privacy" },
@@ -110,6 +111,9 @@ function resolveTranslations(html, translations) {
 }
 
 function resolvePageOutputPath(pageKey, lang, defaultOutput) {
+  if (pageKey === "glossary") {
+    return lang === "en" ? "glossary/index.html" : "glossaire/index.html";
+  }
   if (pageKey === "rapport2023") {
     return lang === "fr" ? "editions/rapport-2023/index.html" : "editions/report-2023/index.html";
   }
@@ -132,6 +136,9 @@ function resolvePageOutputPath(pageKey, lang, defaultOutput) {
 }
 
 function resolvePageSlug(pageSlug, targetLang) {
+  if (pageSlug.includes("glossaire") || pageSlug.includes("glossary")) {
+    return targetLang === "en" ? "glossary/" : "glossaire/";
+  }
   if (pageSlug.includes("rapport-2023") || pageSlug.includes("report-2023")) {
     return targetLang === "fr" ? "editions/rapport-2023/" : "editions/report-2023/";
   }
@@ -281,7 +288,7 @@ function buildMainNav(lang, pageKey, translations, langSwitcher, mobileLangSwitc
 
   const isHomeActive = pageKey === "home" ? " nav-link--active" : "";
   const isEditionsActive = (pageKey === "edition2026" || pageKey === "edition2025" || pageKey === "rapport2023" || pageKey === "rankings" || pageKey === "banks") ? " nav-link--active" : "";
-  const isStudyActive = (pageKey === "methodology" || pageKey === "questionnaire" || pageKey === "transparency2025") ? " nav-link--active" : "";
+  const isStudyActive = (pageKey === "methodology" || pageKey === "questionnaire" || pageKey === "transparency2025" || pageKey === "glossary") ? " nav-link--active" : "";
   const isAbixIndexActive = pageKey === "abixIndex" ? " nav-link--active" : "";
   const isDataExplorerActive = pageKey === "dataExplorer" ? " nav-link--active" : "";
   const isServicesActive = pageKey === "services" ? " nav-link--active" : "";
@@ -291,6 +298,7 @@ function buildMainNav(lang, pageKey, translations, langSwitcher, mobileLangSwitc
   const isEd2025Active = pageKey === "edition2025" ? " nav-link--active" : "";
   const isReportActive = pageKey === "rapport2023" ? " nav-link--active" : "";
   const isMethodologyActive = pageKey === "methodology" ? " nav-link--active" : "";
+  const isGlossaryActive = pageKey === "glossary" ? " nav-link--active" : "";
   const isQuestionnaireActive = pageKey === "questionnaire" ? " nav-link--active" : "";
   const isTransparencyActive = pageKey === "transparency2025" ? " nav-link--active" : "";
   const isAboutPageActive = pageKey === "about" ? " nav-link--active" : "";
@@ -316,6 +324,7 @@ function buildMainNav(lang, pageKey, translations, langSwitcher, mobileLangSwitc
   const insightBadge = lang === 'en' ? 'Insight' : lang === 'ar' ? 'دراسة' : 'Insight';
   const report2023Label = lang === 'en' ? '2023 Report' : lang === 'ar' ? 'تقرير 2023' : 'Rapport 2023';
   const reportPath = lang === 'fr' ? 'editions/rapport-2023/' : 'editions/report-2023/';
+  const glossaryPath = lang === 'en' ? 'glossary/' : 'glossaire/';
 
   return `<nav id="main-nav" class="fixed top-0 w-full bg-white/95 backdrop-blur-sm z-50 border-b border-gray-100 transition-all duration-300">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -358,6 +367,9 @@ function buildMainNav(lang, pageKey, translations, langSwitcher, mobileLangSwitc
           <div class="dropdown-menu">
             <a href="${BASE_PATH}/${lang}/methodologie/" class="dropdown-item${isMethodologyActive}">
               ${tNav.methodology || "Méthodologie"}
+            </a>
+            <a href="${BASE_PATH}/${lang}/${glossaryPath}" class="dropdown-item${isGlossaryActive}">
+              ${tNav.glossary || "Glossaire"}
             </a>
             <a href="${BASE_PATH}/${lang}/questionnaire/" class="dropdown-item${isQuestionnaireActive}">
               ${tNav.barometer2026 || "Baromètre e-banking 2026"}
@@ -432,6 +444,7 @@ function buildMainNav(lang, pageKey, translations, langSwitcher, mobileLangSwitc
         <span class="block px-3 py-1 text-xs font-bold uppercase tracking-wider text-gray-400">${tNav.study || "L’étude"}</span>
         <div class="ps-3 border-s-2 border-primary/20 space-y-1 my-1">
           <a href="${BASE_PATH}/${lang}/methodologie/" class="mobile-nav-link${pageKey === 'methodology' ? ' mobile-nav-link--active' : ''}">${tNav.methodology || "Méthodologie"}</a>
+          <a href="${BASE_PATH}/${lang}/${glossaryPath}" class="mobile-nav-link${pageKey === 'glossary' ? ' mobile-nav-link--active' : ''}">${tNav.glossary || "Glossaire"}</a>
           <a href="${BASE_PATH}/${lang}/questionnaire/" class="mobile-nav-link${pageKey === 'questionnaire' ? ' mobile-nav-link--active' : ''}">${tNav.barometer2026 || "Baromètre e-banking 2026"}</a>
           <a href="${BASE_PATH}/${lang}/insights/transparence-information-financiere-2025/" class="mobile-nav-link flex items-center justify-between${pageKey === 'transparency2025' ? ' mobile-nav-link--active' : ''}">
             <span>${tNav.transparency2025 || "Disponibilité de l’information financière 2025"}</span>
@@ -592,6 +605,10 @@ function buildAll(targetLang = null) {
             fs.writeFileSync(aliasPath, html, "utf8");
           } else if (page.titleKey === "privacy") {
             const aliasPath = path.join(OUTPUT_ROOT, lang, "politique-confidentialite/index.html");
+            ensureDir(aliasPath);
+            fs.writeFileSync(aliasPath, html, "utf8");
+          } else if (page.titleKey === "glossary") {
+            const aliasPath = path.join(OUTPUT_ROOT, lang, "glossaire/index.html");
             ensureDir(aliasPath);
             fs.writeFileSync(aliasPath, html, "utf8");
           } else if (page.planKey) {
