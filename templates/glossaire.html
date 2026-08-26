@@ -405,9 +405,33 @@
         </div>
       </div>
 
+      <!-- Thresholds & Benchmarks -->
+      <div id="modal-thresholds-section" class="space-y-2.5">
+        <h3 class="text-xs font-bold uppercase tracking-wider text-gray-400">{{glossary.drawer.thresholdTitle}}</h3>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div id="modal-reg-threshold-box" class="bg-red-50/70 border border-red-200/80 rounded-xl p-3.5 space-y-1">
+            <span class="text-[10px] font-extrabold uppercase tracking-wider text-red-700 bg-red-100/80 px-2 py-0.5 rounded flex items-center gap-1 w-max">
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+              {{glossary.drawer.regulatoryThresholdTitle}}
+            </span>
+            <p id="modal-reg-threshold-text" class="text-xs text-red-950 font-medium leading-snug pt-1"></p>
+          </div>
+          <div id="modal-abix-benchmark-box" class="bg-blue-50/70 border border-blue-200/80 rounded-xl p-3.5 space-y-1">
+            <span class="text-[10px] font-extrabold uppercase tracking-wider text-blue-700 bg-blue-100/80 px-2 py-0.5 rounded flex items-center gap-1 w-max">
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+              {{glossary.drawer.abixBenchmarkTitle}}
+            </span>
+            <p id="modal-abix-benchmark-text" class="text-xs text-blue-950 font-medium leading-snug pt-1"></p>
+          </div>
+        </div>
+      </div>
+
       <!-- Example -->
       <div id="modal-example-section" class="space-y-1.5">
-        <h3 class="text-xs font-bold uppercase tracking-wider text-gray-400">{{glossary.drawer.exampleTitle}}</h3>
+        <div class="flex items-center justify-between gap-2">
+          <h3 class="text-xs font-bold uppercase tracking-wider text-gray-400">{{glossary.drawer.exampleTitle}}</h3>
+          <span id="modal-example-vintage" class="text-[11px] font-medium text-slate-500 bg-slate-100 px-2 py-0.5 rounded"></span>
+        </div>
         <div class="bg-amber-50/60 border border-amber-100 rounded-xl p-4 text-sm text-amber-950 leading-relaxed flex items-start gap-3">
           <svg class="w-5 h-5 text-amber-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
           <p id="modal-example-text"></p>
@@ -434,7 +458,6 @@
         <button
           type="button"
           id="modal-print-btn"
-          onclick="window.print()"
           class="inline-flex items-center gap-2 text-xs font-bold text-gray-700 hover:text-primary transition-colors py-2 px-3 rounded-lg border border-gray-200 bg-white hover:bg-gray-50 shadow-sm"
         >
           <svg class="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"/></svg>
@@ -506,9 +529,14 @@
         formulaBadge: "{{glossary.card.formulaBadge}}",
         higherBetterTrue: "{{glossary.card.higherBetterTrue}}",
         higherBetterFalse: "{{glossary.card.higherBetterFalse}}",
+        higherBetterNeutral: "{{glossary.card.higherBetterNeutral}}",
         usedInModules: "{{glossary.card.usedInModules}}",
         showingCount: "{{glossary.filters.showingCount}}",
-        noResultsDesc: "{{glossary.filters.noResultsDesc}}"
+        noResultsDesc: "{{glossary.filters.noResultsDesc}}",
+        thresholdTitle: "{{glossary.drawer.thresholdTitle}}",
+        regulatoryThresholdTitle: "{{glossary.drawer.regulatoryThresholdTitle}}",
+        abixBenchmarkTitle: "{{glossary.drawer.abixBenchmarkTitle}}",
+        vintageTitle: "{{glossary.drawer.vintageTitle}}"
       }
     };
 
@@ -668,18 +696,22 @@
         var unitBadge = item.unit ? '<span class="text-[11px] font-mono-math text-slate-500 bg-slate-50 border border-slate-200 px-2 py-0.5 rounded font-medium">' + item.unit + '</span>' : '';
 
         var higherBadge = '';
-        if (item.higher_is_better === true) {
+        if (item.higher_is_better === true || item.performance_direction === 'higher_is_better') {
           higherBadge = '<span class="text-[10px] font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200/80">▲ ' + GLOSSARY_DATA.ui.higherBetterTrue + '</span>';
-        } else if (item.higher_is_better === false) {
+        } else if (item.higher_is_better === false || item.performance_direction === 'lower_is_better') {
           higherBadge = '<span class="text-[10px] font-bold text-amber-700 bg-amber-50 px-2 py-0.5 rounded border border-amber-200/80">▼ ' + GLOSSARY_DATA.ui.higherBetterFalse + '</span>';
+        } else {
+          higherBadge = '<span class="text-[10px] font-bold text-slate-700 bg-slate-100 px-2 py-0.5 rounded border border-slate-200">◆ ' + GLOSSARY_DATA.ui.higherBetterNeutral + '</span>';
         }
+
+        var regBadge = (item.threshold_type === 'REGULATORY') ? '<span class="text-[10px] font-extrabold text-red-700 bg-red-50 px-2 py-0.5 rounded border border-red-200">Réglementaire</span>' : '';
 
         html += [
           '<div id="term-' + item.slug + '" class="glossary-card bg-white rounded-2xl border border-gray-200/90 p-6 flex flex-col justify-between cursor-pointer group" onclick="window.ABIX_OPEN_GLOSSARY_MODAL(\'' + item.slug + '\')">',
           '  <div class="space-y-3">',
           '    <div class="flex items-center justify-between gap-2">',
           '      <span class="text-[11px] font-bold uppercase tracking-wider text-primary/80 bg-primary/5 px-2.5 py-1 rounded-full border border-primary/10">' + catName + '</span>',
-          '      <div class="flex items-center gap-1.5">' + acronymBadge + '</div>',
+          '      <div class="flex items-center gap-1.5">' + regBadge + acronymBadge + '</div>',
           '    </div>',
           '    <h3 class="text-lg sm:text-xl font-bold font-playfair text-gray-900 group-hover:text-primary transition-colors leading-snug">' + item.term + '</h3>',
           '    <p class="text-xs sm:text-sm text-gray-600 leading-relaxed line-clamp-3">' + item.short_definition + '</p>',
@@ -708,16 +740,18 @@
 
       // Direction Badge
       var dirBadge = document.getElementById('modal-direction-badge');
-      if (item.higher_is_better === true) {
+      if (item.higher_is_better === true || item.performance_direction === 'higher_is_better') {
         dirBadge.textContent = '▲ ' + GLOSSARY_DATA.ui.higherBetterTrue;
         dirBadge.className = 'px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30';
         dirBadge.classList.remove('hidden');
-      } else if (item.higher_is_better === false) {
+      } else if (item.higher_is_better === false || item.performance_direction === 'lower_is_better') {
         dirBadge.textContent = '▼ ' + GLOSSARY_DATA.ui.higherBetterFalse;
         dirBadge.className = 'px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-amber-500/20 text-amber-300 border border-amber-500/30';
         dirBadge.classList.remove('hidden');
       } else {
-        dirBadge.classList.add('hidden');
+        dirBadge.textContent = '◆ ' + GLOSSARY_DATA.ui.higherBetterNeutral;
+        dirBadge.className = 'px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-700/60 text-slate-300 border border-slate-600';
+        dirBadge.classList.remove('hidden');
       }
 
       // Unit Badge
@@ -765,10 +799,45 @@
         interpSec.classList.add('hidden');
       }
 
+      // Thresholds Section (Regulatory & ABIX Benchmarks)
+      var thresholdsSec = document.getElementById('modal-thresholds-section');
+      var regBox = document.getElementById('modal-reg-threshold-box');
+      var regText = document.getElementById('modal-reg-threshold-text');
+      var abixBox = document.getElementById('modal-abix-benchmark-box');
+      var abixText = document.getElementById('modal-abix-benchmark-text');
+
+      var hasReg = Boolean(item.regulatory_threshold);
+      var hasAbix = Boolean(item.abix_benchmark);
+
+      if (hasReg || hasAbix) {
+        thresholdsSec.classList.remove('hidden');
+        if (hasReg) {
+          regText.textContent = item.regulatory_threshold;
+          regBox.classList.remove('hidden');
+        } else {
+          regBox.classList.add('hidden');
+        }
+        if (hasAbix) {
+          abixText.textContent = item.abix_benchmark;
+          abixBox.classList.remove('hidden');
+        } else {
+          abixBox.classList.add('hidden');
+        }
+      } else {
+        thresholdsSec.classList.add('hidden');
+      }
+
       // Example
       var exampleSec = document.getElementById('modal-example-section');
+      var vintageEl = document.getElementById('modal-example-vintage');
       if (item.example) {
         document.getElementById('modal-example-text').textContent = item.example;
+        if (item.example_vintage) {
+          vintageEl.textContent = item.example_vintage;
+          vintageEl.classList.remove('hidden');
+        } else {
+          vintageEl.classList.add('hidden');
+        }
         exampleSec.classList.remove('hidden');
       } else {
         exampleSec.classList.add('hidden');
@@ -807,6 +876,27 @@
           navigator.clipboard.writeText(url).then(function () {
             showToast();
           });
+        };
+      }
+
+      // Print / Export PDF with dynamic term title
+      var modalPrintBtn = document.getElementById('modal-print-btn');
+      if (modalPrintBtn) {
+        modalPrintBtn.onclick = function () {
+          var originalTitle = document.title;
+          var termName = item.term + (item.acronym ? ' (' + item.acronym + ')' : '');
+          var printTitle = 'ABIX - Fiche - ' + termName;
+          document.title = printTitle;
+          window.print();
+
+          var restore = function () {
+            document.title = originalTitle;
+            window.removeEventListener('afterprint', restore);
+          };
+          window.addEventListener('afterprint', restore);
+          setTimeout(function () {
+            document.title = originalTitle;
+          }, 2000);
         };
       }
 

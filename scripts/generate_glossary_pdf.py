@@ -234,7 +234,7 @@ def generate_pdf(lang="fr"):
     with open(DATA_FILE, "r", encoding="utf-8") as f:
         data = json.load(f)
 
-    entries = data.get("entries", [])
+    entries = data.get("terms") or data.get("entries", [])
     categories = data.get("categories", {})
     styles = get_styles()
     story = []
@@ -364,14 +364,28 @@ def generate_pdf(lang="fr"):
                 title_text += f" <font color='#0D9488'>({acronym})</font>"
             card_content.append(Paragraph(title_text, styles['TermTitle']))
 
-            # Badges métadonnées (Unité, Sens de lecture)
+            # Badges métadonnées (Unité, Sens de performance, Seuil)
             badges = []
+            thresh_type = item.get("threshold_type", "NONE")
+            if thresh_type == "REGULATORY":
+                badges.append("<font color='#DC2626'><b>" + ("Norme Réglementaire" if lang == "fr" else "Regulatory Standard") + "</b></font>")
+            elif thresh_type == "ABIX_BENCHMARK":
+                badges.append("<font color='#2563EB'><b>" + ("Benchmark ABIX" if lang == "fr" else "ABIX Benchmark") + "</b></font>")
+            elif thresh_type == "ACADEMIC_REFERENCE":
+                badges.append("<font color='#7C3AED'><b>" + ("Réf. Académique" if lang == "fr" else "Academic Reference") + "</b></font>")
+            elif thresh_type == "MARKET_REFERENCE":
+                badges.append("<font color='#0D9488'><b>" + ("Pratique Marché" if lang == "fr" else "Market Reference") + "</b></font>")
+
             if unit:
                 badges.append(f"<b>{'Unité :' if lang == 'fr' else 'Unit:'}</b> {unit}")
-            if higher_better is True:
-                badges.append("▲ " + ("Élevé = Favorable" if lang == "fr" else "Higher = Better"))
-            elif higher_better is False:
-                badges.append("▼ " + ("Faible = Favorable" if lang == "fr" else "Lower = Better"))
+            
+            perf_dir = item.get("performance_direction")
+            if higher_better is True or perf_dir == "higher_is_better":
+                badges.append("▲ " + ("Élevé généralement favorable" if lang == "fr" else "Higher generally better"))
+            elif higher_better is False or perf_dir == "lower_is_better":
+                badges.append("▼ " + ("Faible généralement favorable" if lang == "fr" else "Lower generally better"))
+            else:
+                badges.append("◆ " + ("Interprétation contextuelle" if lang == "fr" else "Contextual interpretation"))
             
             if badges:
                 card_content.append(Paragraph(" &nbsp;|&nbsp; ".join(badges), styles['MetaBadge']))
@@ -416,6 +430,28 @@ def generate_pdf(lang="fr"):
                     ('RIGHTPADDING', (0, 0), (-1, -1), 6),
                 ]))
                 card_content.append(interp_table)
+                card_content.append(Spacer(1, 1.5*mm))
+
+            # Cadre Réglementaire & Benchmarks ABIX
+            reg_thresh = item.get("regulatory_threshold")
+            abix_bench = item.get("abix_benchmark")
+            if reg_thresh or abix_bench:
+                thresh_boxes = []
+                if reg_thresh:
+                    thresh_boxes.append(Paragraph(f"<b><font color='#DC2626'>{'Cadre Réglementaire Obligatoire :' if lang == 'fr' else 'Mandatory Regulatory Framework:'}</font></b> {reg_thresh}", styles['InterpText']))
+                if abix_bench:
+                    thresh_boxes.append(Paragraph(f"<b><font color='#2563EB'>{'Benchmark & Repère ABIX :' if lang == 'fr' else 'ABIX Comfort Benchmark:'}</font></b> {abix_bench}", styles['InterpText']))
+                
+                t_table = Table([[Paragraph("<br/>".join([p.text for p in thresh_boxes]), styles['InterpText'])]], colWidths=[166*mm])
+                t_table.setStyle(TableStyle([
+                    ('BACKGROUND', (0, 0), (-1, -1), colors.HexColor("#F8FAFC")),
+                    ('BOX', (0, 0), (-1, -1), 0.5, colors.HexColor("#CBD5E1")),
+                    ('TOPPADDING', (0, 0), (-1, -1), 4),
+                    ('BOTTOMPADDING', (0, 0), (-1, -1), 4),
+                    ('LEFTPADDING', (0, 0), (-1, -1), 6),
+                    ('RIGHTPADDING', (0, 0), (-1, -1), 6),
+                ]))
+                card_content.append(t_table)
                 card_content.append(Spacer(1, 1.5*mm))
 
             # Exemple

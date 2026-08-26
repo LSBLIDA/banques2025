@@ -2115,26 +2115,31 @@
       "showingCount": "Showing {count} of {total} concepts"
     },
     "card": {
-      "viewDefinition": "View detailed sheet",
+      "viewDefinition": "View full term sheet",
       "formulaBadge": "Formula",
-      "higherBetterTrue": "Higher = Better",
-      "higherBetterFalse": "Lower = Better",
-      "usedInModules": "Used in ABIX:"
+      "higherBetterTrue": "Higher generally better",
+      "higherBetterFalse": "Lower generally better",
+      "usedInModules": "Used in ABIX:",
+      "higherBetterNeutral": "Contextual interpretation"
     },
     "drawer": {
-      "shortDefTitle": "Short Definition",
-      "detailedDefTitle": "Detailed Explanation",
-      "formulaTitle": "ABIX Calculation Formula",
-      "interpretationTitle": "How to interpret the result?",
-      "exampleTitle": "Numerical Example",
-      "unitTitle": "Unit of Measurement",
-      "directionTitle": "Directional Reading",
-      "modulesTitle": "Used in ABIX Modules",
-      "relatedTitle": "Related Terms",
+      "shortDefTitle": "Short definition",
+      "detailedDefTitle": "Detailed explanation",
+      "formulaTitle": "ABIX calculation formula",
+      "interpretationTitle": "How to interpret this result?",
+      "exampleTitle": "Numerical example",
+      "unitTitle": "Measurement unit",
+      "directionTitle": "Performance direction",
+      "modulesTitle": "Used in ABIX modules",
+      "relatedTitle": "Related concepts",
       "closeBtn": "Close sheet",
       "copyLink": "Copy direct link",
-      "copiedToast": "Direct link copied to clipboard!",
-      "exportPdf": "Print / Export as PDF"
+      "copiedToast": "Link copied to clipboard!",
+      "exportPdf": "Print / Export to PDF",
+      "thresholdTitle": "Classification & Thresholds",
+      "regulatoryThresholdTitle": "Mandatory regulatory framework",
+      "abixBenchmarkTitle": "ABIX benchmark & comfort range",
+      "vintageTitle": "Example vintage & scope"
     },
     "contextualHelp": {
       "tooltipSeeMore": "View definition in glossary →",
@@ -2193,14 +2198,19 @@
           "Balance Sheet Size"
         ],
         "category": "financial_indicators",
-        "short_definition": "Measures the overall financial size of a bank by aggregating all its assets and uses of funds.",
-        "detailed_definition": "Total Assets represents the sum of all asset items on the balance sheet as of December 31 (cash, securities, customer loans, fixed assets). In ABIX, it serves as the primary metric for measuring bank size and market share.",
-        "formula": "Total Actifs = Caisse & Banques centrales + Titres & Bons du Trésor + Crédits clientèle + Autres actifs",
-        "formula_latex": "\\text{Total Bilan} = \\sum \\text{Actifs Bilanciels}",
-        "interpretation": "A high balance sheet indicates market scale and intermediation capacity within the banking system.",
-        "example": "The aggregate balance sheet of the 21 banks reaches around 22,000 billion DZD, with nearly 88% held by public banks.",
+        "short_definition": "Measures the overall balance sheet scale of a bank by summing all its assets as of December 31.",
+        "detailed_definition": "Total Assets represents total closing accounting assets. In ABIX Data Explorer, it serves as the benchmark aggregate for market share calculations, bank size grouping, and sector weighting.",
+        "formula": "Total Bilan = Caisse & Banques centrales + Titres & Bons du Trésor + Crédits clientèle + Autres actifs",
+        "formula_latex": "\\\\text{Total Bilan} = \\\\sum \\\\text{Actifs Bilanciels}",
+        "interpretation": "An indicator of relative size and institutional presence. It does not by itself measure profitability or solvency.",
+        "example": "2024 data, ABIX 2025 edition, 20-bank scope: Consolidated sector total assets of approx. 18,500 billion DZD, ~87% held by public banks.",
         "unit": "Mds DZD",
+        "performance_direction": "neutral",
         "higher_is_better": null,
+        "threshold_type": "NONE",
+        "regulatory_threshold": null,
+        "abix_benchmark": null,
+        "example_vintage": "Données 2024, Édition ABIX 2025, périmètre de 20 banques",
         "modules": [
           "Vue Secteur",
           "Classements",
@@ -2226,14 +2236,19 @@
           "Customer resources"
         ],
         "category": "financial_indicators",
-        "short_definition": "Total funds entrusted to the bank by households, corporates, and institutions as demand, term, or savings deposits.",
-        "detailed_definition": "As the primary liability resource, customer deposits measure deposit collection capacity and customer trust. In ABIX, multi-year deposit growth is compared against loans to assess liquidity dynamics.",
-        "formula": "Dépôts Totaux = Dépôts à vue + Dépôts à terme + Comptes d'épargne + Autres dépôts clientèle",
-        "formula_latex": "\\text{Dépôts} = \\sum \\text{Ressources Clientèle}",
-        "interpretation": "Steady deposit growth strengthens bank funding stability without excessive reliance on money markets.",
-        "example": "In 2022-2023, customer deposits grew by +6.2% exceeding 14,600 billion DZD.",
+        "short_definition": "Total financial resources entrusted to the bank by customers in checking, term, or savings accounts.",
+        "detailed_definition": "Customer deposits aggregate demand, term, savings, and collateral deposits from households, corporates, and institutions. They represent the primary funding base for intermediation.",
+        "formula": "Dépôts = Dépôts à vue + Dépôts à terme + Livrets d'épargne + Autres dépôts clientèle",
+        "formula_latex": "\\\\text{Dépôts} = \\\\sum \\\\text{Ressources Clientèle}",
+        "interpretation": "Measures funding capture and customer loyalty. A high share of demand deposits lowers overall cost of funding.",
+        "example": "2024 data, ABIX 2025 edition, 20-bank scope: Total deposit volume of 14,200 billion DZD.",
         "unit": "Mds DZD",
-        "higher_is_better": true,
+        "performance_direction": "neutral",
+        "higher_is_better": null,
+        "threshold_type": "NONE",
+        "regulatory_threshold": null,
+        "abix_benchmark": null,
+        "example_vintage": "Données 2024, Édition ABIX 2025, périmètre de 20 banques",
         "modules": [
           "Vue Secteur",
           "Classements",
@@ -2243,30 +2258,36 @@
           "Comparateur"
         ],
         "related_terms": [
+          "total-bilan",
           "credits-clientele",
-          "ldr",
-          "total-bilan"
+          "ratio-prets-depots",
+          "depots-total-passif"
         ]
       },
       {
         "id": "credits-clientele",
         "slug": "credits-clientele",
-        "term": "Customer Loans (Gross Loans)",
-        "acronym": "CRED",
+        "term": "Customer Loans",
+        "acronym": "CRE",
         "aliases": [
-          "Customer Loans",
-          "Gross Loans",
-          "Lending Portfolio"
+          "Customer loans",
+          "Gross loans",
+          "Credit portfolio"
         ],
         "category": "financial_indicators",
-        "short_definition": "Total gross amount of financings, overdrafts, and credit facilities extended to households, businesses, and public entities.",
-        "detailed_definition": "Customer loans represent the core earning asset of a universal bank. ABIX monitors lending growth, transformation ratios, and relative financing to the real economy.",
-        "formula": "Crédits Bruts = Crédits d'exploitation + Crédits d'investissement + Crédits immobiliers + Crédits aux particuliers",
-        "formula_latex": "\\text{Crédits} = \\sum \\text{Créances brutes clientèle}",
-        "interpretation": "Reflects direct financing of economic activity and generates the majority of interest revenues.",
-        "example": "Total loan stock to the economy reached approx. 8,840 billion DZD in 2023, with an overall transformation ratio of ~60%.",
+        "short_definition": "Total outstanding financings and credit facilities granted to the economy (enterprises, professionals, retail).",
+        "detailed_definition": "Represents total gross lending facilities extended by the bank across overdrafts, corporate working capital, equipment loans, mortgages, and consumer credit.",
+        "formula": "Crédits = Crédits d'exploitation + Crédits d'investissement + Crédits immobiliers + Crédits aux particuliers",
+        "formula_latex": "\\\\text{Crédits} = \\\\sum \\\\text{Engagements Clientèle}",
+        "interpretation": "Reflects the bank's active contribution to economic financing and counterparty risk exposure.",
+        "example": "2024 data, ABIX 2025 edition, 20-bank scope: Gross customer loans of 11,100 billion DZD.",
         "unit": "Mds DZD",
+        "performance_direction": "neutral",
         "higher_is_better": null,
+        "threshold_type": "NONE",
+        "regulatory_threshold": null,
+        "abix_benchmark": null,
+        "example_vintage": "Données 2024, Édition ABIX 2025, périmètre de 20 banques",
         "modules": [
           "Vue Secteur",
           "Classements",
@@ -2276,330 +2297,338 @@
           "Comparateur"
         ],
         "related_terms": [
+          "total-bilan",
           "depots-clientele",
-          "ldr",
-          "cout-du-risque",
-          "npl-ratio"
+          "ratio-prets-depots",
+          "prets-total-actif",
+          "taux-npl"
         ]
       },
       {
-        "id": "pnb",
-        "slug": "pnb",
-        "term": "Net Banking Income (NBI)",
-        "acronym": "PNB / NBI",
+        "id": "fonds-propres",
+        "slug": "fonds-propres",
+        "term": "Accounting Equity",
+        "acronym": "FP",
         "aliases": [
-          "Net Banking Income",
-          "Total Banking Revenue",
-          "NBI"
+          "Total Equity",
+          "Book Value",
+          "Shareholders Equity"
         ],
         "category": "financial_indicators",
-        "short_definition": "Equivalent to a bank's net operating revenue, calculated as net interest margin plus net fee income and trading gains.",
-        "detailed_definition": "Net Banking Income measures the gross revenue generated across all banking and intermediation operations. It serves as the denominator for the Cost-to-Income ratio and operational efficiency metrics.",
-        "formula": "PNB = (Produits d'intérêts - Charges d'intérêts) + (Commissions perçues - Commissions payées) + Gains/pertes de change et titres",
-        "formula_latex": "\\text{PNB} = \\text{Marge d'Intérêt Nette} + \\text{Commissions Nettes} + \\text{Autres Produits Bancaires}",
-        "interpretation": "Consistent NBI growth highlights commercial vitality and balanced asset/service pricing.",
-        "example": "BEA generated 112.4 billion DZD of NBI, ranking 2nd nationally behind BNA.",
+        "short_definition": "Stable resources belonging to shareholders, comprising share capital, reserves, and retained earnings.",
+        "detailed_definition": "Accounting Equity represents the net book value on the balance sheet. It acts as the financial cushion against unexpected losses. ABIX note: book equity is distinct from regulatory capital (Tier 1/Tier 2) under Bank of Algeria Regulation 2014-01.",
+        "formula": "Fonds Propres = Capital social + Primes d'émission + Réserves + Report à nouveau + Résultat net",
+        "formula_latex": "\\\\text{Fonds Propres} = \\\\text{Capital} + \\\\text{Réserves} + \\\\text{Report} + \\\\text{Résultat Net}",
+        "interpretation": "A high equity buffer enhances financial autonomy and shock absorption capacity.",
+        "example": "2024 data, ABIX 2025 edition, 20-bank scope: Sector accounting equity of 2,450 billion DZD.",
         "unit": "Mds DZD",
+        "performance_direction": "higher_is_better",
         "higher_is_better": true,
+        "threshold_type": "NONE",
+        "regulatory_threshold": null,
+        "abix_benchmark": null,
+        "example_vintage": "Données 2024, Édition ABIX 2025, périmètre de 20 banques",
         "modules": [
           "Vue Secteur",
-          "Classements",
           "Profil Banque",
-          "Historique",
-          "Parts de marché",
-          "Comparateur",
-          "Scores financiers"
+          "Classements",
+          "Scores ABIX (Capitalisation)"
         ],
         "related_terms": [
-          "rbe",
-          "resultat-net",
-          "coefficient-exploitation",
-          "productivite-agent"
+          "total-bilan",
+          "return-on-equity",
+          "fonds-propres-total-bilan",
+          "ratio-solvabilite"
         ]
       },
       {
-        "id": "rbe",
-        "slug": "rbe",
-        "term": "Gross Operating Income (GOI)",
-        "acronym": "RBE / GOI",
+        "id": "produit-net-bancaire",
+        "slug": "produit-net-bancaire",
+        "term": "Net Banking Income",
+        "acronym": "PNB",
         "aliases": [
-          "Gross Operating Income",
-          "Operating Profit before provisions"
+          "Net Banking Income",
+          "NBI",
+          "Banking Operating Revenue"
         ],
         "category": "financial_indicators",
-        "short_definition": "Difference between NBI and operating expenses (personnel costs, admin overhead, depreciation).",
-        "detailed_definition": "GOI measures pure operational profitability prior to any loan impairment charges (cost of risk) or tax expenses.",
-        "formula": "RBE = Produit Net Bancaire - Frais de personnel - Autres charges générales d'exploitation - Dotations aux amortissements",
-        "formula_latex": "\\text{RBE} = \\text{PNB} - \\text{Charges Générales d'Exploitation} - \\text{Amortissements}",
-        "interpretation": "A growing positive GOI shows revenues comfortably absorb infrastructure, branch, and staff operating expenses.",
-        "example": "For an NBI of 100M DZD and 40M DZD operating expenses, GOI stands at 60M DZD.",
+        "short_definition": "Gross banking operational margin measuring revenue creation before operating expenses.",
+        "detailed_definition": "NBI is the banking equivalent of gross revenue. It consists of net interest income, net fee and commission income, and net trading and FX gains.",
+        "formula": "PNB = (Intérêts reçus − Intérêts versés) + (Commissions reçues − Commissions payées) + Gains de change & titres",
+        "formula_latex": "\\\\text{PNB} = \\\\text{Marge d\\'intérêt} + \\\\text{Commissions nettes} + \\\\text{Résultat financier & change}",
+        "interpretation": "Reflects commercial dynamism and the bank's capacity to monetize intermediation and payment services.",
+        "example": "2024 data, ABIX 2025 edition, 20-bank scope: Sector Net Banking Income of 430 billion DZD.",
         "unit": "Mds DZD",
+        "performance_direction": "higher_is_better",
         "higher_is_better": true,
+        "threshold_type": "NONE",
+        "regulatory_threshold": null,
+        "abix_benchmark": null,
+        "example_vintage": "Données 2024, Édition ABIX 2025, périmètre de 20 banques",
         "modules": [
           "Vue Secteur",
-          "Classements",
           "Profil Banque",
+          "Classements",
+          "Scores ABIX (Dynamique)",
           "Historique"
         ],
         "related_terms": [
-          "pnb",
+          "resultat-brut-exploitation",
           "resultat-net",
-          "coefficient-exploitation"
+          "coefficient-exploitation",
+          "marge-interet-nette"
+        ]
+      },
+      {
+        "id": "resultat-brut-exploitation",
+        "slug": "resultat-brut-exploitation",
+        "term": "Gross Operating Income",
+        "acronym": "RBE",
+        "aliases": [
+          "Gross Operating Profit",
+          "GOI",
+          "Operating Profit before provisions"
+        ],
+        "category": "financial_indicators",
+        "short_definition": "Surplus generated by core operations after deducting general operating expenses and depreciation.",
+        "detailed_definition": "GOI measures the pure operational profitability before credit risk provisions and non-recurring items. It equals NBI minus operating costs and depreciation.",
+        "formula": "RBE = Produit Net Bancaire − Frais généraux d'exploitation − Dotations aux amortissements",
+        "formula_latex": "\\\\text{RBE} = \\\\text{PNB} - \\\\text{Frais généraux} - \\\\text{Amortissements}",
+        "interpretation": "A solid and growing GOI demonstrates disciplined cost management relative to commercial revenue.",
+        "example": "2024 data, ABIX 2025 edition, 20-bank scope: Sector Gross Operating Income of 245 billion DZD.",
+        "unit": "Mds DZD",
+        "performance_direction": "higher_is_better",
+        "higher_is_better": true,
+        "threshold_type": "NONE",
+        "regulatory_threshold": null,
+        "abix_benchmark": null,
+        "example_vintage": "Données 2024, Édition ABIX 2025, périmètre de 20 banques",
+        "modules": [
+          "Vue Secteur",
+          "Profil Banque",
+          "Classements",
+          "Scores ABIX (Efficience)"
+        ],
+        "related_terms": [
+          "produit-net-bancaire",
+          "resultat-net",
+          "coefficient-exploitation",
+          "conversion-rbe-rn"
         ]
       },
       {
         "id": "resultat-net",
         "slug": "resultat-net",
         "term": "Net Profit (Net Income)",
-        "acronym": "RN / NI",
+        "acronym": "RN",
         "aliases": [
           "Net Income",
           "Net Profit",
           "Bottom Line"
         ],
         "category": "financial_indicators",
-        "short_definition": "Final profit or loss remaining after deducting all expenses, loan loss provisions, and corporate income taxes.",
-        "detailed_definition": "The bottom-line figure of the income statement, Net Profit serves to pay dividends to shareholders and strengthen regulatory equity capital via retained earnings.",
-        "formula": "Résultat Net = RBE - Dotations nettes aux provisions pour créances + Produits/charges exceptionnels - Impôts sur les bénéfices (IBS)",
-        "formula_latex": "\\text{Résultat Net} = \\text{RBE} - \\text{Coût du Risque} \\pm \\text{Exceptionnel} - \\text{Impôts}",
-        "interpretation": "Measures overall profit generation and forms the numerator for Return on Equity (ROE) and Return on Assets (ROA).",
-        "example": "Aggregate banking sector net income increased by +14.8% reaching 225.6 billion DZD in 2023.",
+        "short_definition": "Bottom-line profit or loss attributable to the bank after credit risk provisions and corporate taxes.",
+        "detailed_definition": "Net Income represents final net earnings after cost of risk (loan provisions), corporate income tax (IBS), and non-operating gains/losses.",
+        "formula": "Résultat Net = RBE − Coût net du risque (Provisions nettes) + Résultat exceptionnel − Impôts (IBS)",
+        "formula_latex": "\\\\text{RN} = \\\\text{RBE} - \\\\text{Coût du risque} \\\\pm \\\\text{Exceptionnel} - \\\\text{Impôts}",
+        "interpretation": "Ultimate measure of financial return. It directly builds equity through retained earnings or funds dividend distribution.",
+        "example": "2024 data, ABIX 2025 edition, 20-bank scope: Consolidated sector net profit of 185 billion DZD.",
         "unit": "Mds DZD",
+        "performance_direction": "higher_is_better",
         "higher_is_better": true,
+        "threshold_type": "NONE",
+        "regulatory_threshold": null,
+        "abix_benchmark": null,
+        "example_vintage": "Données 2024, Édition ABIX 2025, périmètre de 20 banques",
         "modules": [
           "Vue Secteur",
-          "Classements",
           "Profil Banque",
-          "Historique",
-          "Scores financiers",
-          "Executive Dashboard"
+          "Classements",
+          "Scores ABIX (Rentabilité)",
+          "Historique"
         ],
         "related_terms": [
-          "roe",
-          "roa",
-          "roae",
-          "roaa",
-          "fonds-propres"
-        ]
-      },
-      {
-        "id": "fonds-propres",
-        "slug": "fonds-propres",
-        "term": "Total Equity (Shareholders' Funds)",
-        "acronym": "FP / EQ",
-        "aliases": [
-          "Equity Capital",
-          "Book Equity",
-          "Shareholders' Equity"
-        ],
-        "category": "financial_indicators",
-        "short_definition": "Permanent capital belonging to shareholders, including share capital, retained earnings, reserves, and current profit.",
-        "detailed_definition": "Shareholders' Equity acts as the primary solvency buffer absorbing potential loan losses. In ABIX, it is evaluated through the Equity-to-Assets ratio and leverage capacity.",
-        "formula": "Fonds Propres = Capital Social + Primes d'émission + Réserves légales et statutaires + Report à nouveau + Résultat de l'exercice",
-        "formula_latex": "\\text{Fonds Propres} = \\text{Capital} + \\text{Réserves} + \\text{Report à Nouveau} + \\text{Résultat}",
-        "interpretation": "High equity cushions ensure resilience against macroeconomic shocks and enable financing larger syndications.",
-        "example": "The median Equity-to-Assets ratio across Algerian banks stands around 8.3%.",
-        "unit": "Mds DZD",
-        "higher_is_better": true,
-        "modules": [
-          "Vue Secteur",
-          "Classements",
-          "Profil Banque",
-          "Historique",
-          "Scores financiers",
-          "Quatre Dimensions"
-        ],
-        "related_terms": [
-          "roe",
-          "ratio-solvabilite",
-          "ratio-fonds-propres-actifs",
-          "levier-financier"
+          "produit-net-bancaire",
+          "resultat-brut-exploitation",
+          "return-on-equity",
+          "return-on-assets"
         ]
       },
       {
         "id": "bons-du-tresor",
         "slug": "bons-du-tresor",
-        "term": "Treasury Bills & Sovereign Securities",
-        "acronym": "BDT / OAT",
+        "term": "Treasury Securities & Sovereign Bonds",
+        "acronym": "BDT",
         "aliases": [
-          "Government Bonds",
-          "Sovereign Debt Holdings",
-          "T-Bills"
+          "Treasury Bonds",
+          "Sovereign Debt",
+          "Government Securities"
         ],
         "category": "financial_indicators",
-        "short_definition": "Sovereign debt securities issued by the Algerian State and held as assets by commercial banks.",
-        "detailed_definition": "Treasury bills constitute a major asset holding for Algerian banks, especially state-owned banks. They provide secure interest yields with zero regulatory risk-weighting.",
-        "formula": "BDT = Bons du Trésor à court terme (BTCT) + Bons du Trésor assimilables (OAT)",
-        "formula_latex": "\\text{Portefeuille Titres Souverains}",
-        "interpretation": "High sovereign bond holdings boost liquidity and regulatory ratios but may yield lower returns than private corporate lending.",
-        "example": "State-owned banks hold the vast majority of the sovereign bond portfolio in the domestic market.",
+        "short_definition": "Outstanding stock of sovereign debt securities issued by the Algerian Treasury held by the bank.",
+        "detailed_definition": "Includes short-term and medium/long-term sovereign paper issued by the State Treasury. In Algeria, Treasury paper represents a core asset allocation pillar. Prudential note: Sovereign exposures may benefit from preferential prudential treatment in accordance with applicable regulatory frameworks and qualifying criteria.",
+        "formula": "Bons du Trésor = Bons du Trésor à Court Terme + Bons du Trésor à Moyen et Long Terme + Titres assimilés",
+        "formula_latex": "\\\\text{BDT} = \\\\sum \\\\text{Titres d\\'État}",
+        "interpretation": "A high share reflects a conservative asset allocation strategy or surplus liquidity invested in sovereign debt.",
+        "example": "2024 data, ABIX 2025 edition, 20-bank scope: Sector Treasury securities portfolio of 3,800 billion DZD.",
         "unit": "Mds DZD",
+        "performance_direction": "neutral",
         "higher_is_better": null,
+        "threshold_type": "NONE",
+        "regulatory_threshold": null,
+        "abix_benchmark": null,
+        "example_vintage": "Données 2024, Édition ABIX 2025, périmètre de 20 banques",
         "modules": [
           "Vue Secteur",
           "Profil Banque",
-          "Comparateur"
+          "Classements",
+          "Historique",
+          "Allocation d'actifs"
         ],
         "related_terms": [
           "total-bilan",
           "credits-clientele",
-          "ratio-solvabilite"
+          "bdt-total-actif"
         ]
       },
       {
-        "id": "hors-bilan",
-        "slug": "hors-bilan",
-        "term": "Off-Balance Sheet Commitments",
-        "acronym": "HB / OBS",
-        "aliases": [
-          "Off-Balance Sheet",
-          "Guarantees & Letters of Credit",
-          "Contingent Liabilities"
-        ],
-        "category": "financial_indicators",
-        "short_definition": "Financial commitments given or received by the bank not immediately recorded on the balance sheet (guarantees, letters of credit).",
-        "detailed_definition": "Off-balance sheet operations capture foreign trade financing and public procurement support (bid bonds, performance bonds), generating fee income without upfront cash outlay.",
-        "formula": "Engagements Hors-Bilan = Cautions et avals donnés + Engagements de financement accordés + Crédits documentaires ouverts",
-        "formula_latex": "\\text{Hors-Bilan} = \\sum \\text{Engagements par Signature}",
-        "interpretation": "High off-balance sheet volume signals strong positioning in trade finance and major infrastructure projects.",
-        "example": "BEA and BNA record massive off-balance sheet exposures due to their central role in oil and industrial import-export transactions.",
-        "unit": "Mds DZD",
-        "higher_is_better": null,
-        "modules": [
-          "Profil Banque",
-          "Comparateur",
-          "Classements"
-        ],
-        "related_terms": [
-          "pnb",
-          "total-bilan"
-        ]
-      },
-      {
-        "id": "roe",
-        "slug": "roe",
+        "id": "return-on-equity",
+        "slug": "return-on-equity",
         "term": "Return on Equity (ROE)",
-        "acronym": "ROE / RCP",
+        "acronym": "ROE",
         "aliases": [
-          "Return on Equity",
           "ROE",
-          "Equity Return"
+          "Return on Equity",
+          "Shareholders Return"
         ],
         "category": "ratios_profitability",
-        "short_definition": "Measures a bank's ability to generate net income per unit of equity capital invested by shareholders.",
-        "detailed_definition": "ROE is the benchmark metric for financial profitability. In ABIX, it is computed on closing equity as well as average equity (ROAE) to smooth capital variations during the financial year.",
-        "formula": "ROE = (Résultat Net / Fonds Propres Comptables) × 100",
-        "formula_latex": "\\text{ROE} = \\frac{\\text{Résultat Net}}{\\text{Fonds Propres}} \\times 100",
-        "interpretation": "An ROE exceeding 12-14% is considered strong performance in the Algerian banking environment.",
-        "example": "With an ROE of 14.8%, BEA and Al Baraka (16.4%) rank in the top quartile (Q4) for equity returns.",
+        "short_definition": "Ratio of net income to closing equity, measuring financial return generated for shareholders.",
+        "detailed_definition": "In ABIX Data Explorer, standard ROE is calculated by dividing net profit by closing book equity as of December 31. It measures the return generated on invested capital. Methodology note: for multi-year dynamic analyses, refer also to ROAE based on average equity.",
+        "formula": "ROE = (Résultat Net ÷ Fonds Propres de clôture) × 100",
+        "formula_latex": "\\\\text{ROE} = \\\\frac{\\\\text{Résultat Net}}{\\\\text{Fonds Propres}_{\\\\text{clôture}}} \\\\times 100",
+        "interpretation": "A higher ROE reflects strong financial profitability, but must be evaluated alongside leverage and underlying risk profile.",
+        "example": "2024 data, ABIX 2025 edition, 20-bank scope: Sector median ROE of 9.8%, ranging from 3.5% to over 22%.",
         "unit": "%",
+        "performance_direction": "higher_is_better",
         "higher_is_better": true,
+        "threshold_type": "ABIX_BENCHMARK",
+        "regulatory_threshold": null,
+        "abix_benchmark": "Modéré < 8 %, Standard sectoriel 8-15 %, Élevé > 15 %",
+        "example_vintage": "Données 2024, Édition ABIX 2025, périmètre de 20 banques",
         "modules": [
           "Vue Secteur",
           "Classements",
           "Profil Banque",
-          "Matrice Stratégique",
-          "Heatmap",
-          "Scores financiers",
-          "Quatre Dimensions"
+          "Scores ABIX (Rentabilité)",
+          "Matrice Rentabilité vs Risque"
         ],
         "related_terms": [
-          "roae",
-          "roa",
-          "resultat-net",
-          "fonds-propres"
+          "return-on-average-equity",
+          "return-on-assets",
+          "fonds-propres",
+          "resultat-net"
         ]
       },
       {
-        "id": "roae",
-        "slug": "roae",
+        "id": "return-on-average-equity",
+        "slug": "return-on-average-equity",
         "term": "Return on Average Equity (ROAE)",
         "acronym": "ROAE",
         "aliases": [
-          "Return on Average Equity",
-          "Average ROE"
+          "ROAE",
+          "Return on Average Equity"
         ],
         "category": "ratios_profitability",
-        "short_definition": "Smoothed variation of ROE calculating net income relative to the average equity between start and end of the period.",
-        "detailed_definition": "ROAE provides a more accurate metric than simple ROE when a bank undergoes capital increases or major dividend payouts during the year.",
-        "formula": "ROAE = Résultat Net / ((Fonds Propres t + Fonds Propres t-1) / 2) × 100",
-        "formula_latex": "\\text{ROAE} = \\frac{\\text{Résultat Net}_t}{\\frac{\\text{FP}_t + \\text{FP}_{t-1}}{2}} \\times 100",
-        "interpretation": "Delivers an unbiased measure of equity efficiency throughout the entire financial period.",
-        "example": "With 15 billion DZD net income and equity rising from 100 to 110 billion: ROAE = 15 / 105 = 14.29%.",
+        "short_definition": "Ratio of net income to average equity between the beginning and end of the fiscal year.",
+        "detailed_definition": "ROAE neutralizes intra-year capital variations (equity injections, dividend payouts). It provides a refined economic measurement of returns on capital employed throughout the year.",
+        "formula": "ROAE = [Résultat Net ÷ ((Fonds Propres t + Fonds Propres t-1) ÷ 2)] × 100",
+        "formula_latex": "\\\\text{ROAE} = \\\\frac{\\\\text{Résultat Net}}{\\\\frac{\\\\text{Fonds Propres}_t + \\\\text{Fonds Propres}_{t-1}}{2}} \\\\times 100",
+        "interpretation": "Preferred for rigorous multi-year analysis when material intra-year equity changes occur.",
+        "example": "2024 data, ABIX 2025 edition, constant scope: For 12B DZD profit and equity moving from 100B to 120B DZD, ROAE is 10.9% (vs 10.0% closing ROE).",
         "unit": "%",
+        "performance_direction": "higher_is_better",
         "higher_is_better": true,
+        "threshold_type": "ABIX_BENCHMARK",
+        "regulatory_threshold": null,
+        "abix_benchmark": "Standard sectoriel 8-15 %",
+        "example_vintage": "Données 2024, Édition ABIX 2025, périmètre constant",
         "modules": [
-          "Profil Banque",
-          "Scores financiers",
-          "Comparateur"
+          "Profil Banque (Analytique)",
+          "Comparateur Avancé"
         ],
         "related_terms": [
-          "roe",
-          "roa",
-          "roaa",
+          "return-on-equity",
+          "return-on-assets",
           "fonds-propres"
         ]
       },
       {
-        "id": "roa",
-        "slug": "roa",
+        "id": "return-on-assets",
+        "slug": "return-on-assets",
         "term": "Return on Assets (ROA)",
-        "acronym": "ROA / RA",
+        "acronym": "ROA",
         "aliases": [
-          "Return on Assets",
-          "Asset Return"
+          "ROA",
+          "Return on Total Assets"
         ],
         "category": "ratios_profitability",
-        "short_definition": "Measures how effectively a bank converts its total asset base into net profit.",
-        "detailed_definition": "ROA measures macroeconomic asset efficiency independently of leverage or capitalization structure. In banking, a ROA of 1 to 2% represents high asset productivity.",
-        "formula": "ROA = (Résultat Net / Total Actifs) × 100",
-        "formula_latex": "\\text{ROA} = \\frac{\\text{Résultat Net}}{\\text{Total Bilan}} \\times 100",
-        "interpretation": "A high ROA indicates the bank optimizes earnings per balance-sheet unit without relying on unsafe leverage.",
-        "example": "Private banks often post higher ROA (1.8% to 2.3%) than large public lenders (1.2% to 1.6%) driven by wider loan spreads.",
+        "short_definition": "Ratio of net income to closing total assets, measuring overall asset productivity.",
+        "detailed_definition": "In ABIX Data Explorer, ROA is computed on closing balance sheet assets as of December 31. It measures the bank's ability to generate earnings per unit of asset managed.",
+        "formula": "ROA = (Résultat Net ÷ Total Bilan de clôture) × 100",
+        "formula_latex": "\\\\text{ROA} = \\\\frac{\\\\text{Résultat Net}}{\\\\text{Total Bilan}_{\\\\text{clôture}}} \\\\times 100",
+        "interpretation": "A key indicator of operational profitability. In banking, a ROA above 1.5% reflects strong underlying earning power.",
+        "example": "2024 data, ABIX 2025 edition, 20-bank scope: Sector average ROA of 1.12%, with peaks above 2.5% among private specialized institutions.",
         "unit": "%",
+        "performance_direction": "higher_is_better",
         "higher_is_better": true,
+        "threshold_type": "ABIX_BENCHMARK",
+        "regulatory_threshold": null,
+        "abix_benchmark": "Modéré < 0,8 %, Moyen 0,8-1,5 %, Élevé > 1,5 %",
+        "example_vintage": "Données 2024, Édition ABIX 2025, périmètre de 20 banques",
         "modules": [
           "Vue Secteur",
           "Classements",
           "Profil Banque",
-          "Heatmap",
-          "Scores financiers",
-          "Quatre Dimensions"
+          "Scores ABIX (Rentabilité)",
+          "Matrice 4 Quadrants"
         ],
         "related_terms": [
-          "roaa",
-          "roe",
+          "return-on-average-assets",
+          "return-on-equity",
           "total-bilan",
           "resultat-net"
         ]
       },
       {
-        "id": "roaa",
-        "slug": "roaa",
+        "id": "return-on-average-assets",
+        "slug": "return-on-average-assets",
         "term": "Return on Average Assets (ROAA)",
         "acronym": "ROAA",
         "aliases": [
-          "Return on Average Assets",
-          "Average ROA"
+          "ROAA",
+          "Return on Average Assets"
         ],
         "category": "ratios_profitability",
-        "short_definition": "Smoothed version of ROA calculating net income over average total assets across the financial year.",
-        "detailed_definition": "ROAA neutralizes intra-year balance sheet expansion to accurately capture average asset productivity.",
-        "formula": "ROAA = Résultat Net / ((Total Actifs t + Total Actifs t-1) / 2) × 100",
-        "formula_latex": "\\text{ROAA} = \\frac{\\text{Résultat Net}_t}{\\frac{\\text{Actifs}_t + \\text{Actifs}_{t-1}}{2}} \\times 100",
-        "interpretation": "Preferred indicator by international credit analysts to benchmark banks undergoing rapid asset expansion.",
-        "example": "Algerian banking median ROAA stands at approximately 1.52%.",
+        "short_definition": "Ratio of net income to average total assets across the fiscal year.",
+        "detailed_definition": "ROAA smooths out intra-year balance sheet expansions (rapid deposit growth, refinancing). It represents the academic standard for measuring asset efficiency over time.",
+        "formula": "ROAA = [Résultat Net ÷ ((Total Bilan t + Total Bilan t-1) ÷ 2)] × 100",
+        "formula_latex": "\\\\text{ROAA} = \\\\frac{\\\\text{Résultat Net}}{\\\\frac{\\\\text{Total Bilan}_t + \\\\text{Total Bilan}_{t-1}}{2}} \\\\times 100",
+        "interpretation": "International benchmark standard to neutralize year-end balance sheet seasonality.",
+        "example": "2024 data, ABIX 2025 edition, constant scope: 5B DZD profit on assets expanding from 400B to 500B DZD: ROAA is 1.11% (vs 1.00% closing ROA).",
         "unit": "%",
+        "performance_direction": "higher_is_better",
         "higher_is_better": true,
+        "threshold_type": "ABIX_BENCHMARK",
+        "regulatory_threshold": null,
+        "abix_benchmark": "Standard sectoriel 0,8-1,5 %",
+        "example_vintage": "Données 2024, Édition ABIX 2025, périmètre constant",
         "modules": [
           "Profil Banque",
-          "Scores financiers",
-          "Comparateur"
+          "Comparateur Avancé"
         ],
         "related_terms": [
-          "roa",
-          "roe",
-          "roae",
+          "return-on-assets",
+          "return-on-equity",
           "total-bilan"
         ]
       },
@@ -2607,241 +2636,386 @@
         "id": "coefficient-exploitation",
         "slug": "coefficient-exploitation",
         "term": "Cost-to-Income Ratio (CIR)",
-        "acronym": "CE / CIR",
+        "acronym": "CIR",
         "aliases": [
           "Cost-to-Income Ratio",
           "CIR",
-          "Efficiency Ratio"
+          "Efficiency Ratio",
+          "Operating Expense Ratio"
         ],
         "category": "ratios_profitability",
-        "short_definition": "Percentage of Net Banking Income consumed by operating expenses and depreciation.",
-        "detailed_definition": "The Cost-to-Income ratio is the central benchmark of bank operational efficiency. A lower percentage reflects leaner operations and superior cost discipline.",
-        "formula": "Coefficient d'Exploitation = (Frais Généraux d'Exploitation + Amortissements) / Produit Net Bancaire × 100",
-        "formula_latex": "\\text{Coeff. Exploitation} = \\frac{\\text{Charges Générales} + \\text{Amortissements}}{\\text{PNB}} \\times 100",
-        "interpretation": "Under 45% signifies superior efficiency; 45% to 60% indicates standard cost control; above 65% signals heavy overhead eating into margins.",
-        "example": "BEA records a Cost-to-Income ratio of 34.2% (Top Q1), while the market average is 42.6%.",
+        "short_definition": "Share of Net Banking Income consumed by operating overhead and depreciation.",
+        "detailed_definition": "The CIR measures operational efficiency. A lower ratio indicates higher operational productivity in converting revenues to gross profit. In ABIX scoring models, it operates as an inverted metric (lower is better).",
+        "formula": "Coefficient d'Exploitation = [(Frais généraux + Amortissements) ÷ Produit Net Bancaire] × 100",
+        "formula_latex": "\\\\text{CIR} = \\\\frac{\\\\text{Frais généraux} + \\\\text{Amortissements}}{\\\\text{PNB}} \\\\times 100",
+        "interpretation": "A lower ratio reflects lean operations. A ratio above 60-65% indicates elevated structural overhead.",
+        "example": "2024 data, ABIX 2025 edition, 20-bank scope: Sector median CIR of 43.5%, top-tier efficient banks standing below 35%.",
         "unit": "%",
+        "performance_direction": "lower_is_better",
         "higher_is_better": false,
+        "threshold_type": "ABIX_BENCHMARK",
+        "regulatory_threshold": null,
+        "abix_benchmark": "Excellente efficience < 40 %, Moyen 40-55 %, Faible efficience > 60 %",
+        "example_vintage": "Données 2024, Édition ABIX 2025, périmètre de 20 banques",
         "modules": [
           "Vue Secteur",
           "Classements",
           "Profil Banque",
-          "Heatmap",
-          "Scores financiers",
-          "Quatre Dimensions",
-          "Executive Dashboard"
+          "Scores ABIX (Efficience)",
+          "Historique"
         ],
         "related_terms": [
-          "pnb",
-          "rbe",
-          "productivite-agent"
+          "produit-net-bancaire",
+          "resultat-brut-exploitation",
+          "conversion-rbe-rn"
         ]
       },
       {
         "id": "marge-interet-nette",
         "slug": "marge-interet-nette",
         "term": "Net Interest Margin (NIM)",
-        "acronym": "MIN / NIM",
+        "acronym": "NIM",
         "aliases": [
           "Net Interest Margin",
           "NIM",
-          "Interest Spread"
+          "Interest Spread Margin"
         ],
         "category": "ratios_profitability",
-        "short_definition": "Ratio comparing net interest earnings on loans and bonds against total interest-bearing assets.",
-        "detailed_definition": "NIM measures the core unit profitability of traditional lending and deposit intermediation activities.",
-        "formula": "Marge Nette d'Intérêt = (Produits d'intérêts - Charges d'intérêts) / Actifs Productifs Moyens × 100",
-        "formula_latex": "\\text{NIM} = \\frac{\\text{Intérêts Reçus} - \\text{Intérêts Versés}}{\\text{Actifs Productifs}} \\times 100",
-        "interpretation": "A high NIM indicates pricing power on loans or a strong base of zero-cost demand deposits.",
-        "example": "Average sector NIM stands around 3.40% in the Algerian market.",
+        "short_definition": "Ratio of net interest income earned to interest-earning assets.",
+        "detailed_definition": "NIM measures the core spread profitability of financial intermediation. ABIX methodology note: Where detailed average earning assets are not homogeneously reported across all banks, ABIX applies the NBI / Total Assets proxy ratio.",
+        "formula": "NIM théorique = (Marge d'intérêt nette ÷ Actifs productifs moyens) × 100 | Proxy ABIX = (PNB ÷ Total Bilan) × 100",
+        "formula_latex": "\\\\text{NIM} = \\\\frac{\\\\text{Marge d\\'intérêt}}{\\\\text{Actifs productifs}} \\\\times 100",
+        "interpretation": "A healthy margin reflects loan pricing discipline combined with low-cost customer funding.",
+        "example": "2024 data, ABIX 2025 edition, 20-bank scope: Sector average NBI / Total Assets proxy of 2.35%.",
         "unit": "%",
+        "performance_direction": "higher_is_better",
         "higher_is_better": true,
+        "threshold_type": "ABIX_BENCHMARK",
+        "regulatory_threshold": null,
+        "abix_benchmark": "Standard sectoriel 2,0-3,5 %",
+        "example_vintage": "Données 2024, Édition ABIX 2025, périmètre de 20 banques",
         "modules": [
           "Vue Secteur",
           "Profil Banque",
-          "Heatmap",
-          "Scores financiers"
+          "Historique"
         ],
         "related_terms": [
-          "pnb",
-          "credits-clientele",
-          "depots-clientele"
+          "produit-net-bancaire",
+          "total-bilan",
+          "ratio-prets-depots"
         ]
       },
       {
-        "id": "productivite-agent",
-        "slug": "productivite-agent",
-        "term": "NBI per Employee (Productivity)",
-        "acronym": "PNB / Agent",
+        "id": "marge-nette-pnb",
+        "slug": "marge-nette-pnb",
+        "term": "Net Profit Margin on NBI",
+        "acronym": "NPM",
         "aliases": [
-          "NBI per FTE",
-          "Revenue per Employee"
+          "Net Margin",
+          "Net Profit Margin",
+          "Net Income to NBI"
         ],
         "category": "ratios_profitability",
-        "short_definition": "Average Net Banking Income generated per full-time bank employee over the year.",
-        "detailed_definition": "This indicator measures the return on human capital and the degree of branch/back-office automation.",
-        "formula": "Productivité = Produit Net Bancaire / Effectif Total de la Banque (ETP)",
-        "formula_latex": "\\text{Productivité} = \\frac{\\text{PNB}}{\\text{Effectif Total}}",
-        "interpretation": "Private and corporate banks frequently exceed 20-30M DZD/employee due to streamlined headcount and corporate focus.",
-        "example": "BEA posts 18.2M DZD NBI/employee (92nd sector percentile) against a market average of 14.8M DZD.",
-        "unit": "M DZD / agent",
+        "short_definition": "Percentage of Net Banking Income successfully converted into final net profit.",
+        "detailed_definition": "Net Profit Margin assesses the overall capacity of the bank to retain revenues after operating costs, loan impairment provisions, and corporate taxes.",
+        "formula": "Marge Nette sur PNB = (Résultat Net ÷ Produit Net Bancaire) × 100",
+        "formula_latex": "\\\\text{Marge Nette} = \\\\frac{\\\\text{Résultat Net}}{\\\\text{PNB}} \\\\times 100",
+        "interpretation": "A higher margin indicates a highly profitable and resilient operating model.",
+        "example": "2024 data, ABIX 2025 edition, 20-bank scope: Sector median net profit margin of 42.8%.",
+        "unit": "%",
+        "performance_direction": "higher_is_better",
         "higher_is_better": true,
+        "threshold_type": "ABIX_BENCHMARK",
+        "regulatory_threshold": null,
+        "abix_benchmark": "Standard sectoriel 35-50 %",
+        "example_vintage": "Données 2024, Édition ABIX 2025, périmètre de 20 banques",
         "modules": [
+          "Vue Secteur",
           "Profil Banque",
-          "Quatre Dimensions",
-          "Scores financiers"
+          "Scores ABIX (Rentabilité)"
         ],
         "related_terms": [
-          "pnb",
-          "coefficient-exploitation"
+          "produit-net-bancaire",
+          "resultat-net",
+          "conversion-rbe-rn"
+        ]
+      },
+      {
+        "id": "conversion-rbe-rn",
+        "slug": "conversion-rbe-rn",
+        "term": "GOI to Net Profit Conversion Rate",
+        "acronym": "RBE_RN",
+        "aliases": [
+          "GOI Conversion Rate",
+          "Operating Profit Retention"
+        ],
+        "category": "ratios_profitability",
+        "short_definition": "Share of Gross Operating Income retained as net profit after credit risk provisions and taxes.",
+        "detailed_definition": "Measures the resilience of operational income against provisions and taxes. A conversion rate near 100% indicates that gross operating profit was not impaired by credit loss charges.",
+        "formula": "Taux de Conversion RBE → RN = (Résultat Net ÷ RBE) × 100",
+        "formula_latex": "\\\\text{Taux de Conversion} = \\\\frac{\\\\text{Résultat Net}}{\\\\text{RBE}} \\\\times 100",
+        "interpretation": "A sharp drop signals an acceleration in credit loss provisioning or non-operating write-offs.",
+        "example": "2024 data, ABIX 2025 edition, 20-bank scope: Sector median conversion rate of 75.5%.",
+        "unit": "%",
+        "performance_direction": "higher_is_better",
+        "higher_is_better": true,
+        "threshold_type": "ABIX_BENCHMARK",
+        "regulatory_threshold": null,
+        "abix_benchmark": "Standard sectoriel 65-85 %",
+        "example_vintage": "Données 2024, Édition ABIX 2025, périmètre de 20 banques",
+        "modules": [
+          "Vue Secteur",
+          "Profil Banque",
+          "Scores ABIX (Efficience)"
+        ],
+        "related_terms": [
+          "resultat-brut-exploitation",
+          "resultat-net",
+          "pression-provision-rbe"
         ]
       },
       {
         "id": "ratio-solvabilite",
         "slug": "ratio-solvabilite",
         "term": "Capital Adequacy Ratio (CAR)",
-        "acronym": "CAR / Cooke",
+        "acronym": "CAR",
         "aliases": [
           "Capital Adequacy Ratio",
           "CAR",
-          "Capital Ratio"
+          "Solvency Ratio",
+          "Regulatory Capital to RWA"
         ],
         "category": "risk_solvency",
-        "short_definition": "Ratio comparing regulatory capital against the bank's total risk-weighted assets (RWA).",
-        "detailed_definition": "Core international Basel prudential standard implemented by the Bank of Algeria, requiring minimum total regulatory capital above 9.5% - 12% of risk-weighted assets.",
-        "formula": "Ratio de Solvabilité = (Fonds Propres Réglementaires / Actifs Pondérés des Risques - RWA) × 100",
-        "formula_latex": "\\text{CAR} = \\frac{\\text{Fonds Propres Réglementaires}}{\\text{RWA}} \\times 100",
-        "interpretation": "A ratio above 15-18% reflects a solid safety buffer supporting credit expansion without capital constraints.",
-        "example": "The average capital adequacy ratio across Algerian banks stands at 17.8%, well above regulatory floors.",
+        "short_definition": "Ratio of regulatory capital to risk-weighted assets (credit, market, operational risks).",
+        "detailed_definition": "Measures the prudential capital cushion against risk-weighted assets. Algerian regulatory framework: Pursuant to Bank of Algeria Regulation No. 2014-01 of February 16, 2014, mandatory requirements are: 1) Minimum global capital adequacy ratio: at least 9.5% of risk-weighted assets; 2) Tier 1 capital: at least 7.0% of risk-weighted assets. ABIX comfort benchmark: An indicative comfort range in the local market is generally situated between 14% and 18%.",
+        "formula": "Ratio de Solvabilité = (Fonds Propres Réglementaires Globaux ÷ Actifs Pondérés par les Risques) × 100",
+        "formula_latex": "\\\\text{CAR} = \\\\frac{\\\\text{Fonds Propres Réglementaires}}{\\\\text{RWA}} \\\\times 100",
+        "interpretation": "A ratio exceeding the 9.5% legal minimum confirms regulatory compliance. A very high ratio (> 20%) ensures maximum safety but may signal under-deployed credit capacity.",
+        "example": "2024 data, ABIX 2025 edition: Sector average CAR estimated at ~16.2%, well above the 9.5% regulatory floor.",
         "unit": "%",
+        "performance_direction": "higher_is_better",
         "higher_is_better": true,
+        "threshold_type": "REGULATORY",
+        "regulatory_threshold": "Solvabilité globale >= 9,5 % | Tier 1 >= 7,0 % (Règlement BA n° 2014-01)",
+        "abix_benchmark": "Repère de confort ABIX >= 14-18 %",
+        "example_vintage": "Données 2024, Édition ABIX 2025, périmètre bancaire algérien",
         "modules": [
           "Vue Secteur",
           "Profil Banque",
-          "Quatre Dimensions",
-          "Scores financiers"
+          "Scores ABIX (Solvabilité)",
+          "Fiche Prudentielle"
         ],
         "related_terms": [
+          "tier-1-ratio",
           "fonds-propres",
-          "ratio-fonds-propres-actifs",
-          "z-score-bancaire",
-          "camels"
+          "fonds-propres-total-bilan",
+          "taux-npl"
         ]
       },
       {
-        "id": "cout-du-risque",
-        "slug": "cout-du-risque",
-        "term": "Cost of Risk (CoR)",
-        "acronym": "CdR / CoR",
+        "id": "tier-1-ratio",
+        "slug": "tier-1-ratio",
+        "term": "Tier 1 Capital Ratio",
+        "acronym": "Tier1",
         "aliases": [
-          "Cost of Risk",
-          "Loan Loss Provisioning Rate"
+          "Tier 1 Ratio",
+          "Core Capital Ratio",
+          "Going-Concern Capital"
         ],
         "category": "risk_solvency",
-        "short_definition": "Net impairment charges set aside by the bank to cover potential loan defaults relative to total average loan portfolio.",
-        "detailed_definition": "The cost of risk gauges the underlying quality of the credit book and provisioning prudence against non-performing loans.",
-        "formula": "Coût du Risque = (Dotations nettes aux provisions pour créances / Encours moyen de crédits bruts) × 100",
-        "formula_latex": "\\text{Coût du Risque} = \\frac{\\text{Dotations Nettes aux Provisions}}{\\text{Encours Moyen de Crédits}} \\times 100",
-        "interpretation": "A low cost of risk (< 0.5%) reflects clean credit quality. A spike signals rising borrower distress.",
-        "example": "BEA posts a controlled cost of risk of 0.65%, whereas specialized agricultural lenders reach 1.45%.",
+        "short_definition": "Ratio of highest quality core capital (paid-up capital and retained earnings) to risk-weighted assets.",
+        "detailed_definition": "Tier 1 ratio evaluates the bank's capacity to absorb immediate losses on a going-concern basis. Algerian regulation: BA Regulation No. 2014-01 mandates a minimum Tier 1 capital ratio of 7.0% of risk-weighted assets.",
+        "formula": "Ratio Tier 1 = (Fonds Propres de Base Tier 1 ÷ Actifs Pondérés par les Risques) × 100",
+        "formula_latex": "\\\\text{Ratio Tier 1} = \\\\frac{\\\\text{Tier 1 Capital}}{\\\\text{RWA}} \\\\times 100",
+        "interpretation": "A strong Tier 1 ratio ensures long-term viability without requiring emergency capital injections in stress scenarios.",
+        "example": "2024 data, ABIX 2025 edition: Average Tier 1 ratio of major Algerian banks estimated above 13.5%, compliant with regulations.",
         "unit": "%",
-        "higher_is_better": false,
+        "performance_direction": "higher_is_better",
+        "higher_is_better": true,
+        "threshold_type": "REGULATORY",
+        "regulatory_threshold": ">= 7,0 % (Règlement Banque d'Algérie n° 2014-01)",
+        "abix_benchmark": "Repère de confort ABIX >= 11-14 %",
+        "example_vintage": "Données 2024, Édition ABIX 2025, banques algériennes",
         "modules": [
           "Profil Banque",
-          "Heatmap",
-          "Outliers",
-          "Scores financiers",
-          "Quatre Dimensions",
-          "Executive Dashboard"
+          "Fiche Prudentielle"
         ],
         "related_terms": [
-          "credits-clientele",
-          "taux-couverture-npl",
-          "npl-ratio"
+          "ratio-solvabilite",
+          "fonds-propres",
+          "fonds-propres-total-bilan"
         ]
       },
       {
-        "id": "npl-ratio",
-        "slug": "npl-ratio",
+        "id": "taux-npl",
+        "slug": "taux-npl",
         "term": "Non-Performing Loans Ratio (NPL Ratio)",
-        "acronym": "NPL / CDL",
+        "acronym": "NPL",
         "aliases": [
           "NPL Ratio",
-          "Bad Loans Ratio",
-          "Impaired Loans Ratio"
+          "Bad Loan Ratio",
+          "Impaired Loans Ratio",
+          "Non-Performing Assets"
         ],
         "category": "risk_solvency",
-        "short_definition": "Share of loans with delayed repayments or high default probability relative to total gross loans.",
-        "detailed_definition": "The NPL ratio is the standard measure of bank asset quality, encompassing substandard, doubtful, and loss classifications under Bank of Algeria rules.",
-        "formula": "Taux NPL = (Créances Non Performantes / Total des Crédits Bruts) × 100",
-        "formula_latex": "\\text{Ratio NPL} = \\frac{\\text{Créances Douteuses et Litigieuses}}{\\text{Total Crédits Bruts}} \\times 100",
-        "interpretation": "A lower NPL ratio indicates disciplined underwriting and active debt recovery.",
-        "example": "The sector NPL ratio is closely tracked to assess macroeconomic cycle impacts on corporate borrowers.",
+        "short_definition": "Proportion of loans with payments past due (typically > 90 days) or presenting recognized default risk.",
+        "detailed_definition": "The NPL ratio is the primary indicator of asset quality. It measures impaired and doubtful loans relative to total gross credit portfolio. In ABIX, it is an inverted metric (lower is better).",
+        "formula": "Taux NPL = (Créances Non Performantes brutes ÷ Encours Total des Crédits bruts) × 100",
+        "formula_latex": "\\\\text{Taux NPL} = \\\\frac{\\\\text{Créances Douteuses}}{\\\\text{Total Crédits Bruts}} \\\\times 100",
+        "interpretation": "A low ratio reflects strict underwriting standards and efficient recovery. A high ratio necessitates heavy provisioning that weighs on profit.",
+        "example": "Indicative sector data: Average sector NPL ratio around 10-12%, with marked divergence between public banks (legacy exposures) and private subsidiaries (often < 5%).",
         "unit": "%",
+        "performance_direction": "lower_is_better",
         "higher_is_better": false,
+        "threshold_type": "MARKET_REFERENCE",
+        "regulatory_threshold": null,
+        "abix_benchmark": "Qualité excellente < 4 %, Modérée 4-8 %, Vigilance > 10 %",
+        "example_vintage": "Données sectorielles indicatives, Édition ABIX 2025",
         "modules": [
           "Profil Banque",
-          "Quatre Dimensions",
-          "Scores financiers"
+          "Comparateur",
+          "Matrice Rentabilité vs Risque"
         ],
         "related_terms": [
-          "cout-du-risque",
           "taux-couverture-npl",
+          "effort-provisionnement",
           "credits-clientele"
         ]
       },
       {
         "id": "taux-couverture-npl",
         "slug": "taux-couverture-npl",
-        "term": "Provision Coverage Ratio",
-        "acronym": "TCP / PCR",
+        "term": "NPL Coverage Ratio",
+        "acronym": "COV",
         "aliases": [
-          "Provision Coverage Ratio",
-          "NPL Coverage Ratio"
+          "NPL Coverage Ratio",
+          "Provisioning Coverage",
+          "Impairment Coverage"
         ],
         "category": "risk_solvency",
-        "short_definition": "Percentage of non-performing loans already covered by accumulated loss provisions on the balance sheet.",
-        "detailed_definition": "This ratio measures balance sheet protection against realized loan defaults: fully provisioned bad debts prevent surprise income hits upon write-off.",
-        "formula": "Taux de Couverture = (Provisions Cumulées pour Dépréciation de Crédits / Total Créances Non Performantes) × 100",
-        "formula_latex": "\\text{Couverture NPL} = \\frac{\\text{Provisions Totales}}{\\text{NPL}} \\times 100",
-        "interpretation": "A coverage ratio above 75-80% reflects prudent balance sheet management and strong loss absorption capacity.",
-        "example": "The average provision coverage ratio across the Algerian banking market stands at 84.2%.",
+        "short_definition": "Ratio of accumulated loan loss provisions to total non-performing loans.",
+        "detailed_definition": "Assesses the degree of balance sheet protection against anticipated credit losses on impaired loans. A high coverage ratio means that the bulk of bad debt is already provisioned.",
+        "formula": "Taux de Couverture = (Stock de Provisions pour Dépréciation ÷ Encours Brut des NPL) × 100",
+        "formula_latex": "\\\\text{Taux de Couverture} = \\\\frac{\\\\text{Stock de Provisions}}{\\\\text{Créances NPL}} \\\\times 100",
+        "interpretation": "A coverage ratio above 70-80% is widely regarded as a prudential comfort benchmark in emerging banking markets.",
+        "example": "Methodological example: For 50B DZD in impaired loans with 40B DZD in cumulative provisions, the coverage ratio stands at 80.0%.",
         "unit": "%",
+        "performance_direction": "higher_is_better",
         "higher_is_better": true,
+        "threshold_type": "MARKET_REFERENCE",
+        "regulatory_threshold": null,
+        "abix_benchmark": "Couverture prudente recommandée >= 70-80 %",
+        "example_vintage": "Exemple méthodologique calibré",
         "modules": [
           "Profil Banque",
-          "Quatre Dimensions",
-          "Scores financiers"
+          "Comparateur",
+          "Fiche Prudentielle"
         ],
         "related_terms": [
-          "npl-ratio",
-          "cout-du-risque",
-          "fonds-propres"
+          "taux-npl",
+          "effort-provisionnement",
+          "credits-clientele"
         ]
       },
       {
-        "id": "ratio-fonds-propres-actifs",
-        "slug": "ratio-fonds-propres-actifs",
-        "term": "Equity-to-Assets Ratio (Capitalization)",
-        "acronym": "FP / Actifs",
+        "id": "effort-provisionnement",
+        "slug": "effort-provisionnement",
+        "term": "Provisioning Effort to Loans (Cost of Risk Proxy)",
+        "acronym": "PROV_CRE",
         "aliases": [
-          "Equity-to-Assets Ratio",
-          "Financial Autonomy Ratio"
+          "Net Provisions to Loans",
+          "Cost of Risk to Lending",
+          "Provisioning Rate"
         ],
         "category": "risk_solvency",
-        "short_definition": "Proportion of total assets financed directly by equity without borrowing or customer deposits.",
-        "detailed_definition": "Unweighted leverage metric. Unlike risk-weighted CAR, it provides a straightforward, unmodeled view of true capital strength.",
-        "formula": "Ratio FP / Bilan = (Fonds Propres Comptables / Total Bilan) × 100",
-        "formula_latex": "\\frac{\\text{Fonds Propres}}{\\text{Total Bilan}} \\times 100",
-        "interpretation": "A higher ratio shields depositors and significantly curtails insolvency risk.",
-        "example": "Median Equity-to-Assets ratio across the Algerian banking sector: 8.32%.",
+        "short_definition": "Annual net loan loss provisioning charges divided by total loan portfolio.",
+        "detailed_definition": "Serves as the direct proxy for cost of risk in ABIX Data Explorer. It measures the annual P&L charge required to absorb credit deterioration across the loan book.",
+        "formula": "Effort de Provisionnement = (Dotations Nettes aux Provisions ÷ Encours des Prêts) × 100",
+        "formula_latex": "\\\\text{Effort Provisions} = \\\\frac{\\\\text{Dotations Nettes aux Provisions}}{\\\\text{Crédits Clientèle}} \\\\times 100",
+        "interpretation": "A low and steady provisioning effort indicates disciplined underwriting and low default incidence.",
+        "example": "2024 data, ABIX 2025 edition, 20-bank scope: Sector median provisioning effort of 0.55% of total loans.",
         "unit": "%",
-        "higher_is_better": true,
+        "performance_direction": "lower_is_better",
+        "higher_is_better": false,
+        "threshold_type": "ABIX_BENCHMARK",
+        "regulatory_threshold": null,
+        "abix_benchmark": "Faible < 0,5 %, Moyen 0,5-1,2 %, Élevé > 1,5 %",
+        "example_vintage": "Données 2024, Édition ABIX 2025, périmètre de 20 banques",
         "modules": [
           "Vue Secteur",
           "Profil Banque",
-          "Quatre Dimensions",
-          "Comparateur"
+          "Scores ABIX (Risque)",
+          "Historique"
+        ],
+        "related_terms": [
+          "taux-npl",
+          "pression-provision-rbe",
+          "credits-clientele"
+        ]
+      },
+      {
+        "id": "pression-provision-rbe",
+        "slug": "pression-provision-rbe",
+        "term": "Provision Burden on Gross Operating Income",
+        "acronym": "PROV_RBE",
+        "aliases": [
+          "Provisions to GOI",
+          "Operating Profit Absorption by Risk"
+        ],
+        "category": "risk_solvency",
+        "short_definition": "Percentage of Gross Operating Income consumed by net credit loss provisioning charges.",
+        "detailed_definition": "Measures the proportion of operating income absorbed by credit loss provisioning. ABIX note: An increase may reflect deteriorating borrower quality or a proactive, conservative provisioning stance.",
+        "formula": "Pression Provisions / RBE = (Dotations Nettes aux Provisions ÷ RBE) × 100",
+        "formula_latex": "\\\\text{Pression Provisions} = \\\\frac{\\\\text{Dotations Nettes}}{\\\\text{RBE}} \\\\times 100",
+        "interpretation": "A ratio below 20-25% preserves the bulk of operating surplus for net bottom-line profit.",
+        "example": "2024 data, ABIX 2025 edition, 20-bank scope: Sector median provision burden on GOI of 18.4%.",
+        "unit": "%",
+        "performance_direction": "lower_is_better",
+        "higher_is_better": false,
+        "threshold_type": "ABIX_BENCHMARK",
+        "regulatory_threshold": null,
+        "abix_benchmark": "Confortable < 20 %, Modéré 20-35 %, Pression forte > 40 %",
+        "example_vintage": "Données 2024, Édition ABIX 2025, périmètre de 20 banques",
+        "modules": [
+          "Vue Secteur",
+          "Profil Banque",
+          "Scores ABIX (Efficience & Risque)"
+        ],
+        "related_terms": [
+          "resultat-brut-exploitation",
+          "conversion-rbe-rn",
+          "effort-provisionnement"
+        ]
+      },
+      {
+        "id": "fonds-propres-total-bilan",
+        "slug": "fonds-propres-total-bilan",
+        "term": "Equity to Total Assets (Accounting Capitalization)",
+        "acronym": "FP_TB",
+        "aliases": [
+          "Equity-to-Assets Ratio",
+          "Capitalization Ratio",
+          "Equity Cushion"
+        ],
+        "category": "risk_solvency",
+        "short_definition": "Share of the balance sheet financed by book equity.",
+        "detailed_definition": "Direct accounting metric of balance sheet equity backing. ABIX note: This is a simplified accounting capitalization ratio and does not substitute for regulatory solvency ratios based on risk-weighted assets (RWA).",
+        "formula": "Fonds Propres / Total Bilan = (Fonds Propres Comptables ÷ Total Bilan) × 100",
+        "formula_latex": "\\\\text{FP / Bilan} = \\\\frac{\\\\text{Fonds Propres}}{\\\\text{Total Bilan}} \\\\times 100",
+        "interpretation": "A high ratio (> 12-15%) indicates strong capital backing and high financial safety.",
+        "example": "2024 data, ABIX 2025 edition, 20-bank scope: Sector average ratio of 13.2%, reflecting strong equity backing.",
+        "unit": "%",
+        "performance_direction": "higher_is_better",
+        "higher_is_better": true,
+        "threshold_type": "ABIX_BENCHMARK",
+        "regulatory_threshold": null,
+        "abix_benchmark": "Standard sectoriel 10-16 %",
+        "example_vintage": "Données 2024, Édition ABIX 2025, périmètre de 20 banques",
+        "modules": [
+          "Vue Secteur",
+          "Profil Banque",
+          "Scores ABIX (Capitalisation)",
+          "Classements"
         ],
         "related_terms": [
           "fonds-propres",
@@ -2853,931 +3027,1031 @@
       {
         "id": "levier-financier",
         "slug": "levier-financier",
-        "term": "Financial Leverage Ratio",
-        "acronym": "Levier / FLR",
+        "term": "Accounting Leverage (Assets / Equity)",
+        "acronym": "LEV",
         "aliases": [
-          "Leverage Multiple",
-          "Equity Multiplier"
+          "Accounting Leverage",
+          "Equity Multiplier",
+          "Assets to Equity"
         ],
         "category": "risk_solvency",
-        "short_definition": "Number of times a bank's total assets exceed its equity capital base.",
-        "detailed_definition": "Financial leverage multiplies asset return (ROA) into equity return (ROE). High leverage amplifies gains during good years but heightens insolvency risk under asset deterioration.",
-        "formula": "Levier = Total Bilan / Fonds Propres = 1 / (Ratio Fonds Propres / Bilan)",
-        "formula_latex": "\\text{Levier} = \\frac{\\text{Total Bilan}}{\\text{Fonds Propres}}",
-        "interpretation": "A multiple of 10x to 12x is standard for prudent commercial banking institutions.",
-        "example": "For a balance sheet of 1,000B DZD and 100B DZD equity, the leverage multiple is 10.0x.",
+        "short_definition": "Number of times total assets exceed the bank's book equity.",
+        "detailed_definition": "Measures balance sheet asset scale relative to equity backing. ABIX note: This is a simplified accounting leverage multiple and does not constitute the Basel III regulatory leverage ratio (which includes off-balance sheet items and prudential deductions).",
+        "formula": "Levier Comptable = Total Bilan ÷ Fonds Propres Comptables",
+        "formula_latex": "\\\\text{Levier} = \\\\frac{\\\\text{Total Bilan}}{\\\\text{Fonds Propres}}",
+        "interpretation": "A moderate leverage (6x to 9x) ensures strong safety. Elevated leverage (> 15x) heightens solvency vulnerability.",
+        "example": "2024 data, ABIX 2025 edition, 20-bank scope: Sector median accounting leverage of 7.6x.",
         "unit": "x",
+        "performance_direction": "neutral",
         "higher_is_better": null,
-        "modules": [
-          "Profil Banque",
-          "Quatre Dimensions",
-          "Scores financiers"
-        ],
-        "related_terms": [
-          "fonds-propres",
-          "total-bilan",
-          "roe",
-          "roa"
-        ]
-      },
-      {
-        "id": "z-score-bancaire",
-        "slug": "z-score-bancaire",
-        "term": "Bank Z-Score (Distance to Default)",
-        "acronym": "Bank Z-Score",
-        "aliases": [
-          "Bank Z-Score",
-          "Roy's Safety-First Metric",
-          "Insolvency Risk Index"
-        ],
-        "category": "risk_solvency",
-        "short_definition": "Statistical metric measuring how many standard deviations of return decline a bank can withstand before exhausting equity.",
-        "detailed_definition": "The Bank Z-Score combines return on assets (ROA), capitalization (Equity/Assets), and historical return volatility. A higher score reflects greater distance to insolvency.",
-        "formula": "Z-Score = (ROA moyen + (Fonds Propres / Total Actifs)) / Écart-type(ROA)",
-        "formula_latex": "Z_{\\text{bank}} = \\frac{\\overline{\\text{ROA}} + \\frac{\\text{FP}}{\\text{Actifs}}}{\\sigma(\\text{ROA})}",
-        "interpretation": "A high Z-score signifies superior earnings stability and stout equity protection against volatility.",
-        "example": "Utilized in ABIX advanced benchmarks to evaluate bank stability across macroeconomic cycles.",
-        "unit": "score",
-        "higher_is_better": true,
-        "modules": [
-          "Scores financiers",
-          "Profil Banque",
-          "Quatre Dimensions"
-        ],
-        "related_terms": [
-          "roa",
-          "ratio-fonds-propres-actifs",
-          "ratio-solvabilite"
-        ]
-      },
-      {
-        "id": "camels",
-        "slug": "camels",
-        "term": "CAMELS Rating Framework",
-        "acronym": "CAMELS",
-        "aliases": [
-          "CAMELS Supervisory Framework",
-          "CAMELS Rating System"
-        ],
-        "category": "risk_solvency",
-        "short_definition": "International supervisory framework evaluating banks across 6 pillars: Capital adequacy, Asset quality, Management, Earnings, Liquidity, Sensitivity to market risk.",
-        "detailed_definition": "The CAMELS model serves as the benchmark framework for central bank supervisors and credit rating agencies assessing financial institutions.",
-        "formula": "Évaluation multicritère des 6 dimensions (Capital, Asset quality, Management, Earnings, Liquidity, Sensitivity)",
-        "formula_latex": "\\text{C (Capital)} + \\text{A (Actifs)} + \\text{M (Management)} + \\text{E (Earnings)} + \\text{L (Liquidité)} + \\text{S (Sensibilité)}",
-        "interpretation": "Provides a holistic 360° health check without overemphasizing pure asset volume.",
-        "example": "ABIX incorporates the core principles of CAMELS into its 360° Bank Profile and Four Dimensions framework.",
-        "unit": "cadre",
-        "higher_is_better": null,
-        "modules": [
-          "Profil Banque",
-          "Quatre Dimensions",
-          "Méthodologie"
-        ],
-        "related_terms": [
-          "cadre-4-dimensions",
-          "ratio-solvabilite",
-          "npl-ratio",
-          "ldr"
-        ]
-      },
-      {
-        "id": "ldr",
-        "slug": "ldr",
-        "term": "Loan-to-Deposit Ratio (LDR)",
-        "acronym": "LDR / RPD",
-        "aliases": [
-          "Loan-to-Deposit Ratio",
-          "LDR",
-          "Credit-to-Deposit Ratio"
-        ],
-        "category": "liquidity_intermediation",
-        "short_definition": "Percentage of total customer deposits redeployed into customer loans.",
-        "detailed_definition": "LDR measures bank transformation intensity and liquidity cushioning. Below 70-80% reflects excess liquidity, while over 100% indicates the bank relies on external wholesale funding.",
-        "formula": "LDR = (Total Crédits Bruts Clientèle / Total Dépôts Clientèle) × 100",
-        "formula_latex": "\\text{LDR} = \\frac{\\text{Crédits Clientèle}}{\\text{Dépôts Clientèle}} \\times 100",
-        "interpretation": "In Algeria, the average LDR is moderate (~60.4%), highlighting structural sector liquidity and substantial lending headroom.",
-        "example": "Al Baraka posts an LDR of 94.1% (active participatory banking model) compared to 58.2% for BNA.",
-        "unit": "%",
-        "higher_is_better": null,
+        "threshold_type": "ABIX_BENCHMARK",
+        "regulatory_threshold": null,
+        "abix_benchmark": "Repère prudentiel indicatif 6x à 10x",
+        "example_vintage": "Données 2024, Édition ABIX 2025, périmètre de 20 banques",
         "modules": [
           "Vue Secteur",
-          "Classements",
           "Profil Banque",
-          "Heatmap",
-          "Outliers",
-          "Quatre Dimensions",
-          "Executive Dashboard"
+          "Comparateur"
         ],
         "related_terms": [
-          "credits-clientele",
-          "depots-clientele",
+          "fonds-propres-total-bilan",
+          "fonds-propres",
           "total-bilan"
         ]
       },
       {
-        "id": "cagr",
-        "slug": "cagr",
-        "term": "Compound Annual Growth Rate (CAGR)",
-        "acronym": "CAGR / TCAC",
+        "id": "ratio-prets-depots",
+        "slug": "ratio-prets-depots",
+        "term": "Loan-to-Deposit Ratio (LDR)",
+        "acronym": "LDR",
         "aliases": [
-          "Compound Annual Growth Rate",
-          "CAGR",
-          "Annualized Growth Rate"
+          "Loan-to-Deposit Ratio",
+          "LDR",
+          "Transformation Ratio",
+          "LTD Ratio"
         ],
-        "category": "statistics_methods",
-        "short_definition": "Measures the mean annualized growth rate of a financial metric over a multi-year period, smoothing out year-to-year swings.",
-        "detailed_definition": "CAGR computes the constant annualized rate required for a metric to grow from its initial value to its ending balance over n periods. In ABIX, 3-year and 5-year CAGRs are tracked across balance sheet and P&L aggregates.",
-        "formula": "CAGR = ((Valeur Finale / Valeur Initiale)^(1 / n)) - 1",
-        "formula_latex": "\\text{CAGR} = \\left( \\frac{V_n}{V_0} \\right)^{\\frac{1}{n}} - 1",
-        "interpretation": "A CAGR of 8% means the aggregate expanded at an annualized average rate of 8% throughout the analyzed timeframe.",
-        "example": "Total Assets expanding from 100B DZD in 2020 to 125.97B DZD in 2023 (3 years): CAGR = (125.97 / 100)^(1/3) - 1 = +8.0% per annum.",
+        "category": "liquidity_intermediation",
+        "short_definition": "Proportion of customer deposits that is actively transformed and lent out as customer loans.",
+        "detailed_definition": "The LDR measures the bank's financial intermediation depth. It compares net loans to customer deposits. A balanced ratio ensures that lending is funded by stable customer deposits without excessive reliance on wholesale funding.",
+        "formula": "Ratio Prêts / Dépôts = (Crédits Nets à la Clientèle ÷ Dépôts de la Clientèle) × 100",
+        "formula_latex": "\\\\text{LDR} = \\\\frac{\\\\text{Crédits Clientèle}}{\\\\text{Dépôts Clientèle}} \\\\times 100",
+        "interpretation": "An LDR between 70% and 90% indicates balanced intermediation. Below 60%, resources are under-deployed; above 100%, the bank relies on external funding.",
+        "example": "2024 data, ABIX 2025 edition, 20-bank scope: Sector average LDR of 78.2%, reflecting solid deposit backing.",
         "unit": "%",
-        "higher_is_better": true,
+        "performance_direction": "neutral",
+        "higher_is_better": null,
+        "threshold_type": "MARKET_REFERENCE",
+        "regulatory_threshold": null,
+        "abix_benchmark": "Sous-intermédiation < 60 %, Équilibré 70-90 %, Tension liquidité > 100 %",
+        "example_vintage": "Données 2024, Édition ABIX 2025, périmètre de 20 banques",
         "modules": [
           "Vue Secteur",
-          "Historique",
           "Profil Banque",
-          "Quatre Dimensions",
-          "Executive Dashboard"
+          "Comparateur",
+          "Historique"
         ],
         "related_terms": [
-          "croissance-yoy",
-          "base-100",
-          "part-de-marche"
+          "depots-clientele",
+          "credits-clientele",
+          "ratio-lcr"
         ]
       },
       {
-        "id": "croissance-yoy",
-        "slug": "croissance-yoy",
-        "term": "Year-over-Year Growth (YoY)",
-        "acronym": "YoY",
+        "id": "prets-total-actif",
+        "slug": "prets-total-actif",
+        "term": "Loans to Total Assets",
+        "acronym": "CRE_TB",
         "aliases": [
-          "Year-over-Year Growth",
-          "YoY Change",
-          "Annual Growth"
+          "Loans to Assets",
+          "Loan Asset Share",
+          "Credit Intensity"
         ],
-        "category": "statistics_methods",
-        "short_definition": "Percentage change in a financial metric compared directly against the previous year's figure.",
-        "detailed_definition": "Measures short-term annual trajectory across financial aggregates from one financial close to the next.",
-        "formula": "YoY = ((Valeur t - Valeur t-1) / Valeur t-1) × 100",
-        "formula_latex": "\\text{YoY} = \\frac{V_t - V_{t-1}}{V_{t-1}} \\times 100",
-        "interpretation": "Helps identify rapid market accelerations or operational slowdowns between consecutive financial periods.",
-        "example": "Total banking assets: +8.4% YoY in 2023.",
+        "category": "liquidity_intermediation",
+        "short_definition": "Percentage of total bank assets allocated to customer loans.",
+        "detailed_definition": "Reflects the bank's asset allocation profile. A high loan share characterizes a commercial lending bank, whereas a lower share indicates a sovereign paper or cash management focus.",
+        "formula": "Prêts / Total Bilan = (Encours des Crédits Clientèle ÷ Total Bilan) × 100",
+        "formula_latex": "\\\\text{Prêts / Bilan} = \\\\frac{\\\\text{Crédits Clientèle}}{\\\\text{Total Bilan}} \\\\times 100",
+        "interpretation": "Measures core lending intensity. A higher ratio correlates with greater revenue sensitivity to private credit risk.",
+        "example": "2024 data, ABIX 2025 edition, 20-bank scope: Sector average loan share of total assets of 60.0%.",
         "unit": "%",
-        "higher_is_better": true,
+        "performance_direction": "neutral",
+        "higher_is_better": null,
+        "threshold_type": "NONE",
+        "regulatory_threshold": null,
+        "abix_benchmark": null,
+        "example_vintage": "Données 2024, Édition ABIX 2025, périmètre de 20 banques",
         "modules": [
           "Vue Secteur",
-          "Classements",
+          "Profil Banque",
+          "Allocation d'actifs",
+          "Comparateur"
+        ],
+        "related_terms": [
+          "credits-clientele",
+          "total-bilan",
+          "bdt-total-actif",
+          "ratio-prets-depots"
+        ]
+      },
+      {
+        "id": "bdt-total-actif",
+        "slug": "bdt-total-actif",
+        "term": "Treasury Securities to Total Assets",
+        "acronym": "BDT_TB",
+        "aliases": [
+          "Treasury to Assets",
+          "Sovereign Debt Exposure",
+          "Government Securities Share"
+        ],
+        "category": "liquidity_intermediation",
+        "short_definition": "Percentage of total assets invested in sovereign debt securities issued by the Algerian State Treasury.",
+        "detailed_definition": "Measures the sovereign allocation weight within the asset base. Historically in Algeria, public banks hold material Treasury securities volumes from balance sheet restructuring and liquidity placements.",
+        "formula": "BDT / Total Bilan = (Encours des Bons du Trésor ÷ Total Bilan) × 100",
+        "formula_latex": "\\\\text{BDT / Bilan} = \\\\frac{\\\\text{Bons du Trésor}}{\\\\text{Total Bilan}} \\\\times 100",
+        "interpretation": "A high ratio secures liquidity and sovereign coupon income, but may reflect relative crowding-out of private sector credit.",
+        "example": "2024 data, ABIX 2025 edition, 20-bank scope: Average Treasury securities share of 20.5% of sector total assets.",
+        "unit": "%",
+        "performance_direction": "neutral",
+        "higher_is_better": null,
+        "threshold_type": "NONE",
+        "regulatory_threshold": null,
+        "abix_benchmark": null,
+        "example_vintage": "Données 2024, Édition ABIX 2025, périmètre de 20 banques",
+        "modules": [
+          "Vue Secteur",
+          "Profil Banque",
+          "Allocation d'actifs"
+        ],
+        "related_terms": [
+          "bons-du-tresor",
+          "total-bilan",
+          "prets-total-actif"
+        ]
+      },
+      {
+        "id": "depots-total-passif",
+        "slug": "depots-total-passif",
+        "term": "Deposits to Total Assets (Liabilities)",
+        "acronym": "DEP_TB",
+        "aliases": [
+          "Deposits to Assets",
+          "Customer Funding Ratio",
+          "Deposit Funding Share"
+        ],
+        "category": "liquidity_intermediation",
+        "short_definition": "Percentage of total balance sheet funded by customer deposits.",
+        "detailed_definition": "Measures the bank's structural reliance on customer deposits compared to other funding sources (equity, interbank borrowing, bond issues).",
+        "formula": "Dépôts / Total Bilan = (Dépôts de la Clientèle ÷ Total Bilan) × 100",
+        "formula_latex": "\\\\text{Dépôts / Bilan} = \\\\frac{\\\\text{Dépôts Clientèle}}{\\\\text{Total Bilan}} \\\\times 100",
+        "interpretation": "A share above 75-80% characterizes a traditional commercial retail banking model with a granular, stable funding base.",
+        "example": "2024 data, ABIX 2025 edition, 20-bank scope: Sector average deposit share of 76.8% of total liabilities.",
+        "unit": "%",
+        "performance_direction": "neutral",
+        "higher_is_better": null,
+        "threshold_type": "NONE",
+        "regulatory_threshold": null,
+        "abix_benchmark": null,
+        "example_vintage": "Données 2024, Édition ABIX 2025, périmètre de 20 banques",
+        "modules": [
+          "Vue Secteur",
           "Profil Banque",
           "Historique"
         ],
         "related_terms": [
-          "cagr",
-          "base-100"
+          "depots-clientele",
+          "total-bilan",
+          "ratio-prets-depots"
+        ]
+      },
+      {
+        "id": "autres-actifs",
+        "slug": "autres-actifs",
+        "term": "Other Assets (Residual Balance)",
+        "acronym": "AA",
+        "aliases": [
+          "Other Assets",
+          "Residual Assets"
+        ],
+        "category": "liquidity_intermediation",
+        "short_definition": "Portion of total assets not accounted for by customer loans and Treasury securities.",
+        "detailed_definition": "In ABIX balance sheet allocation models, Other Assets is the residual balance (Total Assets minus Loans minus Treasury Securities), encompassing cash, central bank reserves, interbank placements, fixed assets, and sundry accounts.",
+        "formula": "Autres Actifs = Total Bilan − Prêts clientèle − Bons du Trésor",
+        "formula_latex": "\\\\text{Autres Actifs} = \\\\text{Total Bilan} - \\\\text{Prêts} - \\\\text{BDT}",
+        "interpretation": "Enables full 100% balance sheet decomposition (Loans + Treasury + Other = 100%). A negative value flags potential data inconsistency.",
+        "example": "2024 data, ABIX 2025 edition, 20-bank scope: Sector other assets volume of ~3,600 billion DZD (~19.5% of total assets).",
+        "unit": "Mds DZD",
+        "performance_direction": "neutral",
+        "higher_is_better": null,
+        "threshold_type": "NONE",
+        "regulatory_threshold": null,
+        "abix_benchmark": null,
+        "example_vintage": "Données 2024, Édition ABIX 2025, périmètre de 20 banques",
+        "modules": [
+          "Vue Secteur",
+          "Profil Banque",
+          "Allocation d'actifs"
+        ],
+        "related_terms": [
+          "total-bilan",
+          "credits-clientele",
+          "bons-du-tresor"
+        ]
+      },
+      {
+        "id": "ratio-lcr",
+        "slug": "ratio-lcr",
+        "term": "Liquidity Coverage Ratio (LCR)",
+        "acronym": "LCR",
+        "aliases": [
+          "Liquidity Coverage Ratio",
+          "LCR",
+          "Short-Term Liquidity Ratio"
+        ],
+        "category": "liquidity_intermediation",
+        "short_definition": "Bank capacity to withstand severe 30-day acute liquidity stress.",
+        "detailed_definition": "Compares high-quality liquid assets (HQLA) readily convertible to central bank cash against estimated 30-day net cash outflows under severe stress. Standard requirement: Minimum 100%.",
+        "formula": "LCR = (Stock d'Actifs Liquides de Haute Qualité HQLA ÷ Sorties Nettes de Trésorerie à 30j) × 100",
+        "formula_latex": "\\\\text{LCR} = \\\\frac{\\\\text{HQLA}}{\\\\text{Sorties Nettes 30j}} \\\\times 100",
+        "interpretation": "An LCR above 100% ensures the bank holds sufficient liquid buffers to withstand deposit run-offs without emergency aid.",
+        "example": "Normative example: For 120B DZD in HQLA and 80B DZD in 30-day modeled net outflows, LCR is 150% (exceeding 100% minimum).",
+        "unit": "%",
+        "performance_direction": "higher_is_better",
+        "higher_is_better": true,
+        "threshold_type": "REGULATORY",
+        "regulatory_threshold": ">= 100 % (Standard prudentiel de liquidité Bâle III)",
+        "abix_benchmark": "Repère de confort >= 120 %",
+        "example_vintage": "Exemple méthodologique normatif Bâle III",
+        "modules": [
+          "Fiche Prudentielle",
+          "Comparateur"
+        ],
+        "related_terms": [
+          "ratio-nsfr",
+          "ratio-prets-depots",
+          "depots-clientele"
+        ]
+      },
+      {
+        "id": "ratio-nsfr",
+        "slug": "ratio-nsfr",
+        "term": "Net Stable Funding Ratio (NSFR)",
+        "acronym": "NSFR",
+        "aliases": [
+          "Net Stable Funding Ratio",
+          "NSFR",
+          "Structural Liquidity Ratio"
+        ],
+        "category": "liquidity_intermediation",
+        "short_definition": "Measures structural alignment between stable available funding and required illiquid assets over a 1-year horizon.",
+        "detailed_definition": "NSFR limits excessive reliance on short-term wholesale funding to finance long-term assets. It divides available stable funding (ASF) by required stable funding (RSF). Prudential standard: Minimum 100%.",
+        "formula": "NSFR = (Montant de Financement Stable Disponible ASF ÷ Financement Stable Exigé RSF) × 100",
+        "formula_latex": "\\\\text{NSFR} = \\\\frac{\\\\text{ASF}}{\\\\text{RSF}} \\\\times 100",
+        "interpretation": "An NSFR above 100% confirms that long-term illiquid assets are funded by durable, sticky equity and deposits.",
+        "example": "Methodological example: 200B DZD ASF covering 160B DZD RSF yields a solid 125% NSFR.",
+        "unit": "%",
+        "performance_direction": "higher_is_better",
+        "higher_is_better": true,
+        "threshold_type": "REGULATORY",
+        "regulatory_threshold": ">= 100 % (Standard prudentiel de financement stable Bâle III)",
+        "abix_benchmark": "Repère de confort >= 110 %",
+        "example_vintage": "Exemple méthodologique normatif Bâle III",
+        "modules": [
+          "Fiche Prudentielle",
+          "Comparateur"
+        ],
+        "related_terms": [
+          "ratio-lcr",
+          "ratio-prets-depots",
+          "fonds-propres"
+        ]
+      },
+      {
+        "id": "moyenne-arithmetique",
+        "slug": "moyenne-arithmetique",
+        "term": "Arithmetic Mean (Average)",
+        "acronym": "MOY",
+        "aliases": [
+          "Arithmetic Mean",
+          "Average",
+          "Sample Mean"
+        ],
+        "category": "statistics_methods",
+        "short_definition": "Sum of all observed values divided by the total number of banks in the sample.",
+        "detailed_definition": "The arithmetic mean measures central tendency. In ABIX Data Explorer, it is computed strictly on available numeric observations (excluding nulls). It can be sensitive to extreme outliers in highly concentrated banking systems.",
+        "formula": "Moyenne = (Σ Xi) ÷ N (pour i = 1 à N)",
+        "formula_latex": "\\\\bar{X} = \\\\frac{1}{N}\\\\sum_{i=1}^N X_i",
+        "interpretation": "Provides the overall market level, but should be compared with the median to assess distributional skewness.",
+        "example": "2024 data, ABIX 2025 edition, 20-bank scope: Sector mean ROE is 11.4% vs median of 9.8% (positive skew driven by top performers).",
+        "unit": "selon indicateur",
+        "performance_direction": "neutral",
+        "higher_is_better": null,
+        "threshold_type": "NONE",
+        "regulatory_threshold": null,
+        "abix_benchmark": null,
+        "example_vintage": "Données 2024, Édition ABIX 2025, périmètre de 20 banques",
+        "modules": [
+          "Vue Secteur",
+          "Classements",
+          "Profil Banque",
+          "Distribution Sectorielle"
+        ],
+        "related_terms": [
+          "mediane",
+          "quartiles",
+          "ecart-type"
         ]
       },
       {
         "id": "mediane",
         "slug": "mediane",
         "term": "Median (50th Percentile / Q2)",
-        "acronym": "Med / Q2",
+        "acronym": "MED",
         "aliases": [
           "Median",
           "50th Percentile",
-          "Second Quartile"
+          "Midpoint",
+          "Q2"
         ],
         "category": "statistics_methods",
-        "short_definition": "Value dividing an ordered distribution of banks into two equal halves: 50% fall below and 50% above.",
-        "detailed_definition": "In the Algerian banking sector where large state lenders dominate total volume, the median provides a far more representative market benchmark than the arithmetic mean, avoiding distortion from extreme outliers.",
-        "formula": "Valeur au rang central (N+1)/2 d'une série ordonnée de N banques",
-        "formula_latex": "\\text{Médiane} = X_{(N+1)/2}",
-        "interpretation": "Represents the true central baseline of the domestic banking market.",
-        "example": "The median banking ROE stands at 11.8% (differing from the asset-weighted aggregate mean).",
+        "short_definition": "Value separating the ordered sample of banks into two equal halves (50% above, 50% below).",
+        "detailed_definition": "The median is ABIX's primary robust central tendency metric because it is fully resistant to extreme outliers and public bank scale distortions. Exact formulation: 1) For an odd number N of banks (e.g. 21 banks in 2026): Median = central value at rank (N+1)/2; 2) For an even number N of banks (e.g. 20 banks in 2025): Median = arithmetic average of the two central values at ranks N/2 and (N/2)+1.",
+        "formula": "Si N impair : Médiane = X_((N+1)/2) | Si N pair : Médiane = (X_(N/2) + X_(N/2 + 1)) ÷ 2",
+        "formula_latex": "\\\\text{Médiane} = \\\\begin{cases} X_{\\\\frac{N+1}{2}} & \\\\text{si } N \\\\text{ impair} \\\\\\\\ \\\\frac{X_{\\\\frac{N}{2}} + X_{\\\\frac{N}{2}+1}}{2} & \\\\text{si } N \\\\text{ pair} \\\\end{cases}",
+        "interpretation": "Represents the performance of a typical median bank in Algeria without weighting bias towards giant public banks.",
+        "example": "2024 data, ABIX 2025 edition (20 banks, even N): Median CIR is the average of the 10th bank (43.2%) and 11th bank (43.8%), exactly 43.5%.",
         "unit": "selon indicateur",
+        "performance_direction": "neutral",
         "higher_is_better": null,
+        "threshold_type": "NONE",
+        "regulatory_threshold": null,
+        "abix_benchmark": null,
+        "example_vintage": "Données 2024, Édition ABIX 2025, périmètre de 20 banques",
         "modules": [
           "Vue Secteur",
-          "Profil Banque",
-          "Matrice Stratégique",
-          "Outliers",
-          "Quatre Dimensions"
-        ],
-        "related_terms": [
-          "quartile",
-          "percentile",
-          "moyenne",
-          "outlier"
-        ]
-      },
-      {
-        "id": "quartile",
-        "slug": "quartile",
-        "term": "Quartiles (Q1, Q2, Q3, Q4)",
-        "acronym": "Q1 / Q2 / Q3 / Q4",
-        "aliases": [
-          "Quartiles",
-          "Quartile Distribution"
-        ],
-        "category": "statistics_methods",
-        "short_definition": "Values that split the ordered population of banks into four equal groups, each containing 25% of observations.",
-        "detailed_definition": "Q1 marks the 25th percentile (lower 25% cutoff), Q2 marks the median (50%), and Q3 represents the 75th percentile (top 25% threshold). Q4 denotes top-quartile performers.",
-        "formula": "Q1 = 25e percentile, Q2 = 50e percentile (médiane), Q3 = 75e percentile",
-        "formula_latex": "Q_1 = P_{25}, \\quad Q_2 = \\text{Médiane}, \\quad Q_3 = P_{75}",
-        "interpretation": "Ranking in quartile Q1 for Cost-to-Income means being among the top 25% most efficient institutions (since lower is better).",
-        "example": "BEA ranks in the Top 15% (Q4) on ROE and in Q1 (efficient) on Cost-to-Income.",
-        "unit": "quartile",
-        "higher_is_better": null,
-        "modules": [
-          "Profil Banque",
           "Classements",
-          "Heatmap",
-          "Scores financiers"
+          "Profil Banque",
+          "Benchmarks & Quartiles",
+          "Executive Summary"
         ],
         "related_terms": [
-          "mediane",
-          "percentile",
+          "moyenne-arithmetique",
+          "quartiles",
           "ecart-type"
         ]
       },
       {
-        "id": "percentile",
-        "slug": "percentile",
-        "term": "Percentile (Centile)",
-        "acronym": "P_x / Centile",
+        "id": "quartiles",
+        "slug": "quartiles",
+        "term": "Quartiles & Percentiles (Q1, Q2, Q3)",
+        "acronym": "QUART",
         "aliases": [
-          "Percentile Rank",
-          "Centile"
+          "Quartiles",
+          "Q1, Q2, Q3",
+          "Four-tier distribution",
+          "Percentile Thresholds"
         ],
         "category": "statistics_methods",
-        "short_definition": "Indicates the exact percentage of banks in the sector that score below a specific bank's value.",
-        "detailed_definition": "Percentiles position any bank along a normalized 0-to-100 scale across the 21 peer institutions, regardless of the underlying metric scale.",
-        "formula": "Percentile = (Nombre de banques avec valeur inférieure / Nombre total de banques) × 100",
-        "formula_latex": "\\text{Percentile} = \\frac{\\text{Rang}_i - 0.5}{N} \\times 100",
-        "interpretation": "An 88th percentile ranking signifies the bank outperforms 88% of its peer group on that metric.",
-        "example": "On NBI/employee productivity, BEA ranks at the 92nd market percentile.",
-        "unit": "%ile",
-        "higher_is_better": true,
+        "short_definition": "Three statistical thresholds (Q1=25th, Q2=50th=Median, Q3=75th percentile) dividing the sector into four equal cohorts.",
+        "detailed_definition": "Descriptive quartile thresholds: 1) Q1 = 25th percentile; 2) Q2 = 50th percentile = Median; 3) Q3 = 75th percentile. ABIX engine computes percentiles using linear interpolation (N-1)*p. ABIX Performance Note: In ABIX executive restitution, the 'Q1' label is awarded to the top 25% best performers (e.g. highest ROE or lowest Cost-to-Income).",
+        "formula": "Q1 = P25 (interpolation linéaire) | Q2 = Médiane (P50) | Q3 = P75 (interpolation linéaire)",
+        "formula_latex": "Q_1 = P_{25},\\\\quad Q_2 = P_{50} = \\\\text{Médiane},\\\\quad Q_3 = P_{75}",
+        "interpretation": "Positions each bank objectively within its peer distribution tier without mean-driven distortion.",
+        "example": "2024 data, ABIX 2025 edition, sector ROE (20 banks): Q1 = 6.2%, Q2 = 9.8%, Q3 = 14.5%. Banks with ROE > 14.5% belong to the top performance quartile Q1.",
+        "unit": "selon indicateur",
+        "performance_direction": "neutral",
+        "higher_is_better": null,
+        "threshold_type": "NONE",
+        "regulatory_threshold": null,
+        "abix_benchmark": null,
+        "example_vintage": "Données 2024, Édition ABIX 2025, périmètre de 20 banques",
         "modules": [
+          "Vue Secteur",
           "Profil Banque",
-          "Classements",
-          "Scores financiers"
+          "Distribution & Boxplots",
+          "Executive Dashboard",
+          "Heatmaps"
         ],
         "related_terms": [
-          "quartile",
           "mediane",
-          "normalisation-min-max"
+          "moyenne-arithmetique",
+          "z-score-standardise"
         ]
       },
       {
         "id": "ecart-type",
         "slug": "ecart-type",
-        "term": "Standard Deviation (Sigma)",
-        "acronym": "σ / Sigma",
+        "term": "Standard Deviation (σ)",
+        "acronym": "SIGMA",
         "aliases": [
           "Standard Deviation",
           "Sigma",
-          "Volatility"
+          "Sample Dispersion"
         ],
         "category": "statistics_methods",
-        "short_definition": "Measures the dispersion of individual bank values around the sector average.",
-        "detailed_definition": "A larger standard deviation indicates wide performance disparities across institutions. In ABIX, it determines confidence bands and outlier detection thresholds.",
-        "formula": "Écart-type = Racine carrée de la moyenne des écarts au carré par rapport à la moyenne",
-        "formula_latex": "\\sigma = \\sqrt{ \\frac{1}{N} \\sum_{i=1}^{N} (x_i - \\mu)^2 }",
-        "interpretation": "In a normal distribution, ~68% of banks fall within ±1.0σ of the mean, and ~95% within ±2.0σ.",
-        "example": "Used to calibrate anomaly thresholds on cost of risk or LDR ratios.",
+        "short_definition": "Statistical measurement of data dispersion around the arithmetic mean.",
+        "detailed_definition": "Quantifies the homogeneity or dispersion of banking metrics across institutions. Statistical note: In an approximately normal distribution, ~68% of observations fall within ±1σ and ~95% within ±2σ of the mean.",
+        "formula": "Écart-type (σ) = √ [ (1 ÷ N) × Σ (Xi − X̄)² ]",
+        "formula_latex": "\\\\sigma = \\\\sqrt{\\\\frac{1}{N}\\\\sum_{i=1}^N (X_i - \\\\bar{X})^2}",
+        "interpretation": "Evaluates mean representativeness and identifies outlier banks lying beyond 2 standard deviations.",
+        "example": "2024 data, ABIX 2025 edition, 20-bank scope: For a mean ROE of 11.4% with sector σ = 5.2%, the range [6.2% - 16.6%] encompasses the core bank cohort.",
         "unit": "selon indicateur",
+        "performance_direction": "neutral",
         "higher_is_better": null,
+        "threshold_type": "NONE",
+        "regulatory_threshold": null,
+        "abix_benchmark": null,
+        "example_vintage": "Données 2024, Édition ABIX 2025, périmètre de 20 banques",
         "modules": [
-          "Outliers",
-          "Scores financiers",
-          "Méthodologie"
+          "Vue Secteur",
+          "Distribution Sectorielle",
+          "Outliers & Détection d'Anomalies"
         ],
         "related_terms": [
-          "z-score",
-          "outlier",
-          "mediane"
+          "moyenne-arithmetique",
+          "coefficient-variation",
+          "z-score-standardise"
         ]
       },
       {
-        "id": "outlier",
-        "slug": "outlier",
-        "term": "Statistical Outlier (Anomaly)",
-        "acronym": "Outlier",
+        "id": "coefficient-variation",
+        "slug": "coefficient-variation",
+        "term": "Coefficient of Variation (CV)",
+        "acronym": "CV",
         "aliases": [
-          "Statistical Outlier",
-          "Anomaly",
-          "Extreme Value"
+          "Coefficient of Variation",
+          "CV",
+          "Relative Standard Deviation"
         ],
         "category": "statistics_methods",
-        "short_definition": "An observation deviating with statistical significance from sector-wide distribution baselines.",
-        "detailed_definition": "ABIX identifies outliers deterministically using Z-Scores (> ±2.0σ warning, > ±3.0σ critical) and Interquartile Range (IQR). Outliers often indicate unique business models (e.g., Islamic finance) or one-off shocks.",
-        "formula": "|Z| = |(X - Moyenne) / Écart-type| > 2.0 ou X hors de [Q1 - 1.5×IQR, Q3 + 1.5×IQR]",
-        "formula_latex": "|Z| = \\left| \\frac{X - \\mu}{\\sigma} \\right| > 2.0",
-        "interpretation": "An outlier is not inherently negative: it flags a distinct positioning requiring dedicated qualitative review.",
-        "example": "Al Baraka emerges as an LDR outlier (+3.1σ, 94.1% vs median 64.1%) due to its Islamic financing structure.",
-        "unit": "sigma (σ)",
+        "short_definition": "Ratio of standard deviation to arithmetic mean, expressing relative dispersion as a normalized percentage.",
+        "detailed_definition": "The CV is a dimensionless metric enabling direct dispersion comparison across financial indicators with different units or scales (e.g. comparing deposits dispersion in billion DZD with ROE dispersion in %).",
+        "formula": "Coefficient de Variation (CV) = (Écart-type σ ÷ Moyenne arithmétique X̄) × 100",
+        "formula_latex": "\\\\text{CV} = \\\\frac{\\\\sigma}{\\\\bar{X}} \\\\times 100",
+        "interpretation": "CV < 15% indicates strong sector homogeneity. CV > 30-50% indicates high dispersion and structural polarization.",
+        "example": "2024 data, ABIX 2025 edition: Cost-to-Income CV is 24% (moderate), whereas Total Assets CV reaches 145% (extreme scale skewness).",
+        "unit": "%",
+        "performance_direction": "neutral",
         "higher_is_better": null,
+        "threshold_type": "NONE",
+        "regulatory_threshold": null,
+        "abix_benchmark": null,
+        "example_vintage": "Données 2024, Édition ABIX 2025, périmètre de 20 banques",
         "modules": [
-          "Outliers",
-          "Executive Dashboard",
+          "Vue Secteur",
+          "Distribution Sectorielle",
+          "Comparateur"
+        ],
+        "related_terms": [
+          "ecart-type",
+          "moyenne-arithmetique"
+        ]
+      },
+      {
+        "id": "taux-croissance-annuel-compose",
+        "slug": "taux-croissance-annuel-compose",
+        "term": "Compound Annual Growth Rate (CAGR)",
+        "acronym": "CAGR",
+        "aliases": [
+          "CAGR",
+          "Compound Annual Growth Rate",
+          "Geometric Annual Growth"
+        ],
+        "category": "statistics_methods",
+        "short_definition": "Constant annual rate at which a metric would have grown from its base year to final year over n periods.",
+        "detailed_definition": "CAGR smooths out year-to-year volatility through geometric progression. In ABIX Data Explorer, CAGR is used in the Growth scoring pillar (25% weight each on Assets, Loans, NBI, and Net Profit).",
+        "formula": "CAGR = [ (Valeur Finale ÷ Valeur Initiale)^(1 ÷ n) − 1 ] × 100",
+        "formula_latex": "\\\\text{CAGR} = \\\\left[ \\\\left(\\\\frac{V_{\\\\text{final}}}{V_{\\\\text{initial}}}\\\\right)^{\\\\frac{1}{n}} - 1 \\\\right] \\\\times 100",
+        "interpretation": "Provides a standardized, fair multi-year growth comparison across institutions of varying scale.",
+        "example": "2021-2024 data, ABIX 2025 edition (constant scope): Sector loans expanded from 8,500B to 11,100B DZD over 3 years, representing a CAGR of +9.3% per annum.",
+        "unit": "%",
+        "performance_direction": "higher_is_better",
+        "higher_is_better": true,
+        "threshold_type": "NONE",
+        "regulatory_threshold": null,
+        "abix_benchmark": null,
+        "example_vintage": "Données 2021-2024, Édition ABIX 2025, périmètre constant",
+        "modules": [
+          "Scores ABIX (Dynamique & Croissance)",
+          "Historique Pluriannuel",
           "Profil Banque"
         ],
         "related_terms": [
-          "ecart-type",
-          "z-score",
-          "mediane",
-          "scanning-deterministe"
+          "variation-annuelle-yoy",
+          "base-100"
         ]
       },
       {
-        "id": "z-score",
-        "slug": "z-score",
-        "term": "Standardized Z-Score",
-        "acronym": "Z-Score",
+        "id": "variation-annuelle-yoy",
+        "slug": "variation-annuelle-yoy",
+        "term": "Year-over-Year Growth (YoY / Δ)",
+        "acronym": "YoY",
         "aliases": [
-          "Z-Score",
-          "Standard Score",
-          "Normal Score"
+          "Year-over-Year",
+          "YoY Growth",
+          "Annual Change",
+          "Delta YoY"
         ],
         "category": "statistics_methods",
-        "short_definition": "Measures the number of standard deviations a specific value sits above or below the population mean.",
-        "detailed_definition": "Z-Scores allow cross-comparison of financial variables with different units (e.g. DZD, percentages, headcount) onto a unified zero-centered scale.",
-        "formula": "Z = (Valeur observée - Moyenne) / Écart-type",
-        "formula_latex": "Z = \\frac{X - \\mu}{\\sigma}",
-        "interpretation": "A Z of 0 equals the mean; Z of +2.0 places the institution in the upper 2.5% tail.",
-        "example": "AGB scores a Z-Score of +2.6σ on NBI growth, highlighting notable outperformance.",
-        "unit": "score",
+        "short_definition": "Percentage change of a financial metric between period t and the preceding period t-1.",
+        "detailed_definition": "Measures annual metric expansion or contraction. In ABIX Data Explorer, for indicators already expressed as percentages (e.g. ROE, CIR), the variation is strictly tracked in percentage points (point_change).",
+        "formula": "Pour agrégats (Mds DZD) : YoY = [(Vt − Vt-1) ÷ Vt-1] × 100 | Pour ratios (%) : Δ = Vt − Vt-1 (en points)",
+        "formula_latex": "\\\\text{YoY} = \\\\frac{V_t - V_{t-1}}{V_{t-1}} \\\\times 100 \\\\quad | \\\\quad \\\\Delta = V_t - V_{t-1} \\\\text{ (pts)}",
+        "interpretation": "Identifies trend shifts, commercial accelerations, or abrupt year-over-year decelerations.",
+        "example": "2024 vs 2023 data, ABIX 2025 edition: Sector NBI grew by +8.2% YoY, while average ROE gained +0.6 percentage points.",
+        "unit": "% / pts",
+        "performance_direction": "neutral",
         "higher_is_better": null,
+        "threshold_type": "NONE",
+        "regulatory_threshold": null,
+        "abix_benchmark": null,
+        "example_vintage": "Données 2024 vs 2023, Édition ABIX 2025",
         "modules": [
-          "Outliers",
-          "Scores financiers",
-          "Méthodologie"
-        ],
-        "related_terms": [
-          "ecart-type",
-          "outlier",
-          "normalisation-min-max"
-        ]
-      },
-      {
-        "id": "normalisation-min-max",
-        "slug": "normalisation-min-max",
-        "term": "Min-Max Normalization (0–100 Scale)",
-        "acronym": "Min-Max",
-        "aliases": [
-          "Min-Max Scaling",
-          "Feature Rescaling (0-100)"
-        ],
-        "category": "statistics_methods",
-        "short_definition": "Mathematical transformation mapping any financial indicator onto a uniform 0 (lowest) to 100 (best) scale.",
-        "detailed_definition": "Used in 360° radar charts and multidimensional matrices to combine disparate criteria into balanced comparable scores.",
-        "formula": "Score = ((Valeur - Valeur Min) / (Valeur Max - Valeur Min)) × 100",
-        "formula_latex": "\\text{Score}_{0-100} = \\frac{X - X_{\\min}}{X_{\\max} - X_{\\min}} \\times 100",
-        "interpretation": "Enables immediate intuitive visual assessment of strengths and improvement areas on radar plots.",
-        "example": "A score of 100 is assigned to the top-performing bank, and 0 to the lowest.",
-        "unit": "score 0-100",
-        "higher_is_better": true,
-        "modules": [
+          "Historique",
           "Profil Banque",
-          "Quatre Dimensions",
-          "Scores financiers"
+          "Vue Secteur",
+          "Scanning Déterministe"
         ],
         "related_terms": [
-          "z-score",
-          "percentile",
-          "cadre-4-dimensions"
+          "taux-croissance-annuel-compose",
+          "base-100"
         ]
       },
       {
         "id": "base-100",
         "slug": "base-100",
-        "term": "Base 100 Index (Rebasing)",
-        "acronym": "Base 100",
+        "term": "Rebased Index (Base 100)",
+        "acronym": "B100",
         "aliases": [
           "Base 100 Index",
-          "Time Series Rebasing"
+          "Rebased Growth",
+          "Indexed Trajectory"
         ],
         "category": "statistics_methods",
-        "short_definition": "Indexing technique setting a baseline year to 100 to compare relative growth trajectories across banks of differing sizes.",
-        "detailed_definition": "Base 100 indexing plots relative growth speeds of massive state lenders and agile private banks on the same normalized chart.",
-        "formula": "Indice Année t = (Valeur Année t / Valeur Année de Base) × 100",
-        "formula_latex": "\\text{Indice}_t = \\frac{V_t}{V_0} \\times 100",
-        "interpretation": "An index of 135 in 2024 (base 100 in 2020) represents +35% cumulative growth over the period.",
-        "example": "Applied in ABIX Historical and Comparator modules to analyze multi-year growth trajectories.",
-        "unit": "indice",
-        "higher_is_better": true,
+        "short_definition": "Index normalizing base year metric to 100 to visually compare growth trajectories across banks of differing sizes.",
+        "detailed_definition": "Base 100 fixes the initial selected year at 100. Subsequent years are computed as (Year Value / Base Value) * 100. This enables direct graphical trajectory comparison between large public and smaller private lenders.",
+        "formula": "Indice Base 100 (t) = (Valeur_t ÷ Valeur_base) × 100",
+        "formula_latex": "\\\\text{Indice}_t = \\\\frac{V_t}{V_{\\\\text{base}}} \\\\times 100",
+        "interpretation": "An index of 135 indicates cumulative growth of +35% since the base year, regardless of initial bank size.",
+        "example": "2021-2024 data, ABIX 2025 edition (2021 base = 100): In 2024, sector deposits stand at 128.4 (+28.4% cumulative growth).",
+        "unit": "indice (base 100)",
+        "performance_direction": "neutral",
+        "higher_is_better": null,
+        "threshold_type": "NONE",
+        "regulatory_threshold": null,
+        "abix_benchmark": null,
+        "example_vintage": "Données 2021-2024, Édition ABIX 2025",
         "modules": [
           "Historique",
           "Comparateur",
-          "Vue Secteur"
+          "Profil Banque"
         ],
         "related_terms": [
-          "cagr",
-          "croissance-yoy"
+          "taux-croissance-annuel-compose",
+          "variation-annuelle-yoy"
         ]
       },
       {
         "id": "correlation-pearson",
         "slug": "correlation-pearson",
-        "term": "Pearson Correlation Coefficient",
-        "acronym": "r de Pearson",
+        "term": "Pearson Linear Correlation (r)",
+        "acronym": "PEARSON",
         "aliases": [
-          "Pearson r",
-          "Linear Correlation Coefficient"
+          "Pearson Correlation Coefficient",
+          "Linear Correlation",
+          "Pearson r"
         ],
         "category": "statistics_methods",
-        "short_definition": "Measures the strength and direction of the linear relationship between two financial variables.",
-        "detailed_definition": "The coefficient ranges from -1 (perfect inverse correlation) to +1 (perfect positive correlation), with 0 indicating no linear relationship.",
-        "formula": "r = Covariance(X, Y) / (Écart-type(X) × Écart-type(Y))",
-        "formula_latex": "r = \\frac{\\sum (x_i - \\bar{x})(y_i - \\bar{y})}{\\sqrt{\\sum (x_i - \\bar{x})^2 \\sum (y_i - \\bar{y})^2}}",
-        "interpretation": "Helps empirically verify whether larger bank balance sheets translate into superior profitability margins.",
-        "example": "Correlation between Total Assets and ROE is moderate, confirming asset scale alone does not guarantee superior returns.",
-        "unit": "[-1 ; +1]",
+        "short_definition": "Statistical measurement of the strength and direction of linear association between two financial metrics (-1 to +1).",
+        "detailed_definition": "The Pearson coefficient r ranges from -1 (perfect inverse linear relation) to +1 (perfect positive linear relation), with 0 indicating no linear association. Fundamental ABIX rule: Correlation ≠ Causation. Furthermore, r measures strictly linear relationships and can be sensitive to extreme outliers.",
+        "formula": "r = Σ [ (Xi − X̄)(Yi − Ȳ) ] ÷ [ √Σ(Xi − X̄)² × √Σ(Yi − Ȳ)² ]",
+        "formula_latex": "r = \\\\frac{\\\\sum_{i=1}^N (X_i - \\\\bar{X})(Y_i - \\\\bar{Y})}{\\\\sqrt{\\\\sum_{i=1}^N (X_i - \\\\bar{X})^2 \\\\sum_{i=1}^N (Y_i - \\\\bar{Y})^2}}",
+        "interpretation": "|r| > 0.70 indicates strong linear correlation; 0.40 < |r| < 0.70 moderate; |r| < 0.40 weak or non-linear association.",
+        "example": "2024 data, ABIX 2025 edition, 20-bank scope: Strong positive linear correlation of r = +0.88 observed between Customer Deposits and Total Assets.",
+        "unit": "coefficient (-1 à +1)",
+        "performance_direction": "neutral",
         "higher_is_better": null,
+        "threshold_type": "ACADEMIC_REFERENCE",
+        "regulatory_threshold": null,
+        "abix_benchmark": "Forte correlation si |r| >= 0,70 (Seuil d'exclusion multicolinearite ABIX: |r| >= 0,85)",
+        "example_vintage": "Données 2024, Édition ABIX 2025, périmètre de 20 banques",
         "modules": [
-          "Analyse Transversale",
-          "Matrice Stratégique",
-          "Méthodologie"
+          "Matrice de Corrélation",
+          "Nuage de Points (Scatter Plots)",
+          "Lab Méthodologique"
         ],
         "related_terms": [
-          "z-score",
+          "z-score-standardise",
           "ecart-type"
+        ]
+      },
+      {
+        "id": "z-score-standardise",
+        "slug": "z-score-standardise",
+        "term": "Standardized Z-Score (Relative Positioning)",
+        "acronym": "Z-SCORE",
+        "aliases": [
+          "Standardized Score",
+          "Z-Score",
+          "Standard Normal Deviate",
+          "Robust Z-Score"
+        ],
+        "category": "statistics_methods",
+        "short_definition": "Number of standard deviations separating a bank's metric from the sector mean (or median).",
+        "detailed_definition": "Standardizes metrics to a unitless scale centered at zero. ABIX implements two variants: 1) Classic Z = (X - Mean) / σ; 2) Robust Z = 0.6745 * (X - Median) / MAD. Statistical note: The equivalence of Z = +2 with the top 2.5% holds strictly only under the assumption of a normal distribution.",
+        "formula": "Z classique = (X − X̄) ÷ σ | Z robuste = 0,6745 × (X − Médiane) ÷ MAD",
+        "formula_latex": "Z = \\\\frac{X - \\\\bar{X}}{\\\\sigma} \\\\quad | \\\\quad Z_{\\\\text{robuste}} = 0{,}6745 \\\\times \\\\frac{X - \\\\text{Médiane}}{\\\\text{MAD}}",
+        "interpretation": "Z = 0 places the bank at market center. Z > +2 or Z < -2 flags an outlier significantly diverging from sector norms.",
+        "example": "2024 data, ABIX 2025 edition: A bank with 21.8% ROE against a sector mean of 11.4% (σ = 5.2%) achieves Z = +2.00.",
+        "unit": "score (sans unité)",
+        "performance_direction": "neutral",
+        "higher_is_better": null,
+        "threshold_type": "ACADEMIC_REFERENCE",
+        "regulatory_threshold": null,
+        "abix_benchmark": "Zone standard [-2 ; +2], Profil atypique si |Z| > 2",
+        "example_vintage": "Données 2024, Édition ABIX 2025, périmètre de 20 banques",
+        "modules": [
+          "Outliers & Détection d'Anomalies",
+          "Lab Méthodologique",
+          "Profil Banque"
+        ],
+        "related_terms": [
+          "ecart-type",
+          "mediane",
+          "moyenne-arithmetique"
+        ]
+      },
+      {
+        "id": "normalisation-min-max",
+        "slug": "normalisation-min-max",
+        "term": "Min-Max Normalization (0-100 Scale)",
+        "acronym": "MINMAX",
+        "aliases": [
+          "Min-Max Scaling",
+          "Feature Rescaling",
+          "Normalized Score 0-100"
+        ],
+        "category": "statistics_methods",
+        "short_definition": "Linear transformation of a financial metric onto a standardized scale from 0 to 100 points.",
+        "detailed_definition": "Projects metrics onto a common 0-100 scale where 100 represents top performance. ABIX scoring rules: 1) Positive direction (higher is better, e.g. ROE, Solvency): Score = [(X - Min)/(Max - Min)] * 100; 2) Inverted direction (lower is better, e.g. CIR, NPL ratio): Score = [(Max - X)/(Max - Min)] * 100. Edge case: If Max equals Min, score defaults to 50.",
+        "formula": "Sens direct : Score = [(X − Min) ÷ (Max − Min)] × 100 | Sens inverse : Score = [(Max − X) ÷ (Max − Min)] × 100",
+        "formula_latex": "\\\\text{Score} = \\\\begin{cases} \\\\frac{X - \\\\text{Min}}{\\\\text{Max} - \\\\text{Min}} \\\\times 100 & \\\\text{si élevé favorable} \\\\\\\\ \\\\frac{\\\\text{Max} - X}{\\\\text{Max} - \\\\text{Min}} \\\\times 100 & \\\\text{si faible favorable} \\\\end{cases}",
+        "interpretation": "Enables aggregation and direct comparison of disparate indicators across ABIX dimensional score pillars.",
+        "example": "2024 data, ABIX 2025 edition, Cost-to-Income (inverted direction): Min = 28.0%, Max = 78.0%. A bank with 38.0% CIR receives a normalized score of [(78.0 - 38.0)/(78.0 - 28.0)] * 100 = 80.0 / 100.",
+        "unit": "score (0 à 100)",
+        "performance_direction": "higher_is_better",
+        "higher_is_better": true,
+        "threshold_type": "ABIX_BENCHMARK",
+        "regulatory_threshold": null,
+        "abix_benchmark": "Score 0 (Pire de la place) à 100 (Leader de la place)",
+        "example_vintage": "Données 2024, Édition ABIX 2025, périmètre de 20 banques",
+        "modules": [
+          "Scores ABIX (4 Dimensions)",
+          "Matrice 4 Quadrants",
+          "Profil Banque"
+        ],
+        "related_terms": [
+          "z-score-standardise",
+          "cadre-4d-abix"
         ]
       },
       {
         "id": "part-de-marche",
         "slug": "part-de-marche",
         "term": "Market Share",
-        "acronym": "PDM / MS",
+        "acronym": "PDM",
         "aliases": [
           "Market Share",
-          "Sector Share"
+          "Market Weight",
+          "Volume Share"
         ],
         "category": "sector_analysis",
-        "short_definition": "Percentage of the total banking industry aggregate represented by an individual bank (Assets, Deposits, Loans, or NBI).",
-        "detailed_definition": "Market share reflects a bank's scale and competitive footprint. ABIX computes market shares across Assets, Deposits, Loans, and NBI, tracking yearly gains and losses.",
-        "formula": "Part de Marché = (Agrégat de la Banque / Total Agrégat des 21 Banques) × 100",
-        "formula_latex": "\\text{PDM}_i = \\frac{X_i}{\\sum_{j=1}^{N} X_j} \\times 100",
-        "interpretation": "The 6 state-owned banks hold approx. 88% aggregate asset market share, versus 12% across all private institutions.",
-        "example": "BNA (26.8%) and BEA (21.9%) together represent nearly half of the entire Algerian banking market.",
+        "short_definition": "Percentage held by a single bank across an aggregate relative to total consolidated sector volume.",
+        "detailed_definition": "Measures commercial footprint and competitive positioning across financial aggregates (Assets, Deposits, Loans, NBI). ABIX note: Market share is an indicator of relative scale, not an intrinsic measure of profitability or efficiency (contextual reading direction ◆).",
+        "formula": "Part de Marché = (Valeur de la Banque ÷ Total Consolidé du Secteur) × 100",
+        "formula_latex": "\\\\text{Part de Marché}_i = \\\\frac{V_i}{\\\\sum_{k=1}^N V_k} \\\\times 100",
+        "interpretation": "High market share provides economies of scale, but does not inherently guarantee superior unit profitability.",
+        "example": "2024 data, ABIX 2025 edition, Total Assets (20 banks): Market leader holds approx. 24.5% market share, with public banks aggregating ~87%.",
         "unit": "%",
-        "higher_is_better": true,
+        "performance_direction": "neutral",
+        "higher_is_better": null,
+        "threshold_type": "NONE",
+        "regulatory_threshold": null,
+        "abix_benchmark": null,
+        "example_vintage": "Données 2024, Édition ABIX 2025, périmètre de 20 banques",
         "modules": [
-          "Parts de marché",
+          "Parts de Marché",
           "Vue Secteur",
-          "Profil Banque",
           "Classements",
-          "Concentration",
-          "Executive Dashboard"
+          "Profil Banque",
+          "Concentration"
         ],
         "related_terms": [
-          "variation-pdm",
-          "cr3",
-          "cr5",
-          "hhi"
+          "gain-perte-part-marche",
+          "indice-hhi",
+          "ratios-cr3-cr5",
+          "total-bilan"
         ]
       },
       {
-        "id": "variation-pdm",
-        "slug": "variation-pdm",
-        "term": "Market Share Gain / Loss (Delta)",
-        "acronym": "Δ PDM",
+        "id": "gain-perte-part-marche",
+        "slug": "gain-perte-part-marche",
+        "term": "Market Share Delta (Gain / Loss)",
+        "acronym": "DELTA_PDM",
         "aliases": [
-          "Market Share Shift",
-          "Share Delta (percentage points)"
+          "Market Share Change",
+          "Market Share Delta",
+          "Share Shift"
         ],
         "category": "sector_analysis",
-        "short_definition": "Difference in percentage points between a bank's market share in the current year versus the previous year.",
-        "detailed_definition": "Identifies which institutions gain or lose market traction in deposits, lending, or assets, independent of overall market expansion.",
-        "formula": "Variation PDM = Part de Marché t - Part de Marché t-1 (en points de %)",
-        "formula_latex": "\\Delta \\text{PDM} = \\text{PDM}_t - \\text{PDM}_{t-1}",
-        "interpretation": "A gain of +0.82 percentage points denotes growth outpacing the broader market average.",
-        "example": "BEA gained +0.82 points of total asset market share in 2022, the strongest gain in the sector.",
+        "short_definition": "Absolute difference in percentage points between market share at period t and period t-1.",
+        "detailed_definition": "Measures net competitive momentum and market share shifts among banks. A market share gain indicates the bank outgrew the overall sector on that metric.",
+        "formula": "Δ Part de Marché = Part de Marché_t − Part de Marché_t-1 (en points de pourcentage)",
+        "formula_latex": "\\\\Delta \\\\text{Part de Marché} = \\\\text{Part}_t - \\\\text{Part}_{t-1} \\\\quad \\\\text{(pts)}",
+        "interpretation": "Sustained share gains reflect aggressive commercial conquest. Share loss indicates commercial slowdown or deliberate de-risking.",
+        "example": "2024 vs 2023 data, ABIX 2025 edition: A bank expanding loan market share from 3.20% to 3.55% records a net gain of +0.35 pts.",
         "unit": "pts de %",
-        "higher_is_better": true,
+        "performance_direction": "neutral",
+        "higher_is_better": null,
+        "threshold_type": "NONE",
+        "regulatory_threshold": null,
+        "abix_benchmark": null,
+        "example_vintage": "Données 2024 vs 2023, Édition ABIX 2025",
         "modules": [
-          "Parts de marché",
-          "Vue Secteur",
+          "Parts de Marché",
+          "Historique",
           "Profil Banque",
-          "Executive Dashboard"
+          "Vue Secteur"
         ],
         "related_terms": [
           "part-de-marche",
-          "cagr"
+          "variation-annuelle-yoy"
         ]
       },
       {
-        "id": "peer-group",
-        "slug": "peer-group",
-        "term": "Peer Group",
-        "acronym": "Peer Group",
+        "id": "secteur-public-prive",
+        "slug": "secteur-public-prive",
+        "term": "Public vs Private Sector Segmentation",
+        "acronym": "PUB_PRIV",
         "aliases": [
-          "Peer Group",
-          "Comparable Banks",
-          "Reference Cohort"
+          "Public vs Private Banks",
+          "Ownership Split",
+          "State vs Private Banking"
         ],
         "category": "sector_analysis",
-        "short_definition": "Subset of banks sharing homogeneous characteristics (size, public/private ownership, business model) for meaningful benchmarking.",
-        "detailed_definition": "Comparing a mid-sized private lender directly against public mega-banks can skew insights. ABIX isolates relevant peer cohorts (Public banks, International private banks, Islamic banks) for objective relative evaluation.",
-        "formula": "Segmentation par critères : Statut (Public/Privé), Taille (Top 5 / Intermédiaires), Modèle (Universel / Islamique)",
-        "formula_latex": "\\text{Segment} = \\{ \\text{Banques avec critères communs} \\}",
-        "interpretation": "Evaluates whether a bank outperforms direct competitors operating under identical regulatory and market conditions.",
-        "example": "Al Baraka is benchmarked against its specific peer cohort of Islamic and private banks.",
-        "unit": "segment",
+        "short_definition": "Institutional classification of banks according to ownership structure (State-owned vs Private lenders).",
+        "detailed_definition": "Distinguishes the 6 major state-owned commercial banks (plus CNEP-Banque) from the 14 private lenders (international subsidiaries, regional and Islamic banks). Central to ABIX for analyzing structural divergences.",
+        "formula": "Agrégat Public = Σ Banques Publiques | Agrégat Privé = Σ Banques Privées",
+        "formula_latex": "\\\\text{Total} = \\\\sum \\\\text{Banques Publiques} + \\\\sum \\\\text{Banques Privées}",
+        "interpretation": "Isolates the massive public bank balance sheet dominance (~87%) alongside private banks' relative profitability dynamism.",
+        "example": "2024 data, ABIX 2025 edition (20 banks): Public sector holds 86.8% of assets and 88.4% of deposits, while private banks generate over 28% of total net income.",
+        "unit": "% / Mds DZD",
+        "performance_direction": "neutral",
         "higher_is_better": null,
+        "threshold_type": "NONE",
+        "regulatory_threshold": null,
+        "abix_benchmark": null,
+        "example_vintage": "Données 2024, Édition ABIX 2025, périmètre de 20 banques",
         "modules": [
-          "Comparateur",
-          "Profil Banque",
-          "Quatre Dimensions",
-          "Executive Dashboard"
-        ],
-        "related_terms": [
-          "cluster",
-          "public-vs-prive",
-          "part-de-marche"
-        ]
-      },
-      {
-        "id": "cluster",
-        "slug": "cluster",
-        "term": "Banking Cluster (Strategic Group)",
-        "acronym": "Cluster",
-        "aliases": [
-          "Strategic Cluster",
-          "Typology Group",
-          "Banking Cluster"
-        ],
-        "category": "sector_analysis",
-        "short_definition": "Algorithmic grouping of banks displaying similar multidimensional financial profiles (profitability, leverage, efficiency, growth).",
-        "detailed_definition": "ABIX identifies distinct structural clusters in Algeria: 1) Large universal public institutions, 2) High-profitability private lenders, 3) Growth-oriented expansion banks, 4) Niche/Islamic institutions.",
-        "formula": "Classification par analyse en composantes principales (ACP) et K-Means sur les ratios clés",
-        "formula_latex": "\\text{Cluster}_k = \\arg\\min \\sum \\| x_i - \\mu_k \\|^2",
-        "interpretation": "Highlights the rich diversity of operating models across the Algerian banking landscape.",
-        "example": "Visualized on the ABIX Growth vs Profitability Strategic Matrix.",
-        "unit": "typologie",
-        "higher_is_better": null,
-        "modules": [
-          "Matrice Stratégique",
-          "Profil Banque",
-          "Analyse Transversale"
-        ],
-        "related_terms": [
-          "peer-group",
-          "matrice-croissance-rentabilite"
-        ]
-      },
-      {
-        "id": "perimetre-observe",
-        "slug": "perimetre-observe",
-        "term": "Observed Scope (Sector Coverage)",
-        "acronym": "Scope",
-        "aliases": [
-          "Observed Sample",
-          "Coverage Scope",
-          "Reviewed Institutions"
-        ],
-        "category": "sector_analysis",
-        "short_definition": "Total set of licensed commercial banks with published certified financial statements included in the study.",
-        "detailed_definition": "ABIX covers the entirety of commercial banks operating in Algeria: 20 banks in the 2025 edition (2023-2024 data) and 21 banks in the 2026 edition (including Ziraat Bankasi).",
-        "formula": "Périmètre = 6 Banques Publiques + 15 Banques Privées / Mixtes = 21 Banques",
-        "formula_latex": "N = 21 \\text{ Banques}",
-        "interpretation": "Ensures comprehensive representative coverage of the Algerian market without sampling bias.",
-        "example": "21 banks analyzed covering 100% of commercial banking assets in Algeria.",
-        "unit": "banques",
-        "higher_is_better": null,
-        "modules": [
+          "Public vs Privé",
           "Vue Secteur",
-          "Méthodologie",
-          "Data Explorer",
-          "Classements"
+          "Comparateur",
+          "Parts de Marché"
         ],
         "related_terms": [
-          "perimetre-constant",
-          "public-vs-prive"
+          "total-bilan",
+          "part-de-marche",
+          "perimetre-constant"
         ]
       },
       {
         "id": "perimetre-constant",
         "slug": "perimetre-constant",
-        "term": "Constant Scope (Like-for-Like Scope)",
-        "acronym": "LFL",
+        "term": "Constant Scope vs Observed Scope",
+        "acronym": "SCOPE",
         "aliases": [
-          "Like-for-Like Scope",
-          "Constant Sample",
-          "Comparable Basis"
+          "Constant Scope",
+          "Like-for-like scope",
+          "Observed Sample"
         ],
         "category": "sector_analysis",
-        "short_definition": "Multi-year analysis method retaining the identical bank cohort across years to avoid distortion from market entries or exits.",
-        "detailed_definition": "Guarantees measured sector growth is organic rather than an artifact of adding a new bank into the dataset.",
-        "formula": "Agrégat Constant = Somme des grandeurs des banques présentes à la fois en Année t et en Année t-1",
-        "formula_latex": "\\text{Total}_{\\text{constant}} = \\sum_{i \\in S_t \\cap S_{t-1}} X_{i,t}",
-        "interpretation": "Ensures scientific rigor in ABIX multi-year trend comparisons.",
-        "example": "Applied when computing sector-wide growth rates over 2022–2025.",
-        "unit": "méthode",
+        "short_definition": "Filtering method ensuring only banks with uninterrupted financial reporting across the full timeline are included in multi-year aggregates.",
+        "detailed_definition": "ABIX offers two scope modes: 1) Observed Scope (all reporting banks for a given year); 2) Constant Scope (strictly banks with complete data from start to end year), eliminating distortion in CAGR and Base 100 metrics.",
+        "formula": "Périmètre Constant = { Banques présentes sur chaque année de [Année_début ; Année_fin] }",
+        "formula_latex": "\\\\text{Périmètre Constant} = \\\\{ i \\\\in \\\\text{Banques} \\\\mid \\\\forall t \\\\in [t_0, t_n], V_{i,t} \\\\neq \\\\emptyset \\\\}",
+        "interpretation": "Essential for mathematical integrity in multi-year trend analysis, CAGR, and indexed trajectories.",
+        "example": "2020-2024 data, ABIX 2025 edition: 5-year constant scope retains the 19 continuously active banks, ensuring 100% consistent sector CAGR.",
+        "unit": "banques (effectif)",
+        "performance_direction": "neutral",
         "higher_is_better": null,
+        "threshold_type": "NONE",
+        "regulatory_threshold": null,
+        "abix_benchmark": null,
+        "example_vintage": "Données 2020-2024, Édition ABIX 2025",
         "modules": [
           "Historique",
-          "Méthodologie",
+          "Séries Temporelles",
+          "Scores ABIX (Dynamique)",
           "Vue Secteur"
         ],
         "related_terms": [
-          "perimetre-observe",
-          "cagr"
+          "taux-croissance-annuel-compose",
+          "base-100",
+          "part-de-marche"
         ]
       },
       {
-        "id": "public-vs-prive",
-        "slug": "public-vs-prive",
-        "term": "Public vs Private Banking Segmentation",
-        "acronym": "PUB / PRIV",
-        "aliases": [
-          "State-owned vs Private Banks",
-          "Ownership Segmentation"
-        ],
-        "category": "sector_analysis",
-        "short_definition": "Structural comparison of performances, balance sheets, and operating models across state-owned versus private banks.",
-        "detailed_definition": "Algeria features a dual banking landscape: 6 state lenders hold ~88% of assets through dense branch networks, while 15 private banks deliver higher unit profitability (ROE, ROA) on selective customer segments.",
-        "formula": "Agrégat Public = Σ Banques Publiques | Agrégat Privé = Σ Banques Privées",
-        "formula_latex": "\\text{Part Publique} = \\frac{\\sum \\text{Pub}}{\\text{Total Secteur}}, \\quad \\text{Part Privée} = \\frac{\\sum \\text{Priv}}{\\text{Total Secteur}}",
-        "interpretation": "Highlights complementarity between public balance sheet scale and private operational agility.",
-        "example": "Private banks maintain an equity return edge (ROE 14.6% vs 11.4% public) despite running fewer branches.",
-        "unit": "% de part",
-        "higher_is_better": null,
-        "modules": [
-          "Vue Secteur",
-          "Parts de marché",
-          "Profil Banque",
-          "Executive Dashboard"
-        ],
-        "related_terms": [
-          "part-de-marche",
-          "peer-group",
-          "total-bilan"
-        ]
-      },
-      {
-        "id": "hhi",
-        "slug": "hhi",
+        "id": "indice-hhi",
+        "slug": "indice-hhi",
         "term": "Herfindahl-Hirschman Index (HHI)",
         "acronym": "HHI",
         "aliases": [
-          "Herfindahl-Hirschman Index",
-          "HHI Concentration Metric"
+          "Herfindahl Index",
+          "HHI",
+          "Market Concentration Index"
         ],
         "category": "concentration_market",
-        "short_definition": "Global benchmark metric measuring market concentration by summing the squared market shares of all competing banks.",
-        "detailed_definition": "HHI ranges from 0 to 10,000 points. International standards classify: 1) < 1,500 = Unconcentrated, 2) 1,500 - 2,500 = Moderately Concentrated, 3) > 2,500 = Highly Concentrated.",
-        "formula": "HHI = Somme des (Part de marché de chaque banque en %)^2",
-        "formula_latex": "\\text{HHI} = \\sum_{i=1}^{N} (s_i \\times 100)^2",
-        "interpretation": "With an asset HHI around 1,742 points, the Algerian banking sector falls into the moderately concentrated tier, shaped around a sturdy public core.",
-        "example": "BNA (26.8% -> 718 pts) + BEA (21.9% -> 480 pts) + CPA (15.2% -> 231 pts) contribute over 80% of the aggregate HHI.",
-        "unit": "points / 10 000",
+        "short_definition": "Sum of squared market shares of all operating banks, measuring sector concentration on a 0 to 10,000 scale.",
+        "detailed_definition": "HHI squares market shares, placing greater weight on top banks. Standard competitive reading grid (indicative DOJ/FTC benchmarks): 1) HHI < 1,000: Unconcentrated market; 2) 1,000 <= HHI <= 1,800: Moderately concentrated; 3) HHI > 1,800: Highly concentrated. Mandatory ABIX note: These thresholds constitute a standardized competitive analytical grid and do not represent an automatic legal qualification of the Algerian banking market.",
+        "formula": "HHI = Σ (Part de Marché_i)² (pour i = 1 à N banques, parts exprimées en %)",
+        "formula_latex": "\\\\text{HHI} = \\\\sum_{i=1}^N (s_i)^2 \\\\quad \\\\text{avec } s_i \\\\text{ en \\\\%}",
+        "interpretation": "A high HHI (> 1,800) characterizes an oligopolistic structure where a small group of banks commands the majority of deposits and lending.",
+        "example": "2024 data, ABIX 2025 edition, Total Assets (20 banks): Sector HHI stands at approx. 1,920 points, characterizing a highly concentrated market by international standards.",
+        "unit": "points (0 à 10 000)",
+        "performance_direction": "neutral",
         "higher_is_better": null,
+        "threshold_type": "MARKET_REFERENCE",
+        "regulatory_threshold": null,
+        "abix_benchmark": "HHI < 1000: Peu concentré | 1000-1800: Modéré | > 1800: Fortement concentré (Grille concurrentielle indicative)",
+        "example_vintage": "Données 2024, Édition ABIX 2025, périmètre de 20 banques",
         "modules": [
-          "Concentration",
+          "Concentration & Concurrence",
           "Vue Secteur",
-          "Data Explorer",
-          "Executive Dashboard"
+          "Parts de Marché"
         ],
         "related_terms": [
+          "ratios-cr3-cr5",
           "nombre-effectif-banques",
-          "cr3",
-          "cr5",
+          "part-de-marche"
+        ]
+      },
+      {
+        "id": "ratios-cr3-cr5",
+        "slug": "ratios-cr3-cr5",
+        "term": "Concentration Ratios (CR3 & CR5)",
+        "acronym": "CR3_CR5",
+        "aliases": [
+          "Concentration Ratio 3",
+          "CR3",
+          "CR5",
+          "Top 3 / Top 5 Share"
+        ],
+        "category": "concentration_market",
+        "short_definition": "Cumulative market share command held by the top 3 (CR3) or top 5 (CR5) leading banks on a financial metric.",
+        "detailed_definition": "Concentration ratios measure top-tier market command. General definition: CR3 = sum of market shares of the top 3 ranked banks; CR5 = sum of market shares of the top 5 banks for the selected metric and year. ABIX note: Bank rankings are dynamic and computed per year and indicator. Specific bank names appear exclusively in dated historical examples.",
+        "formula": "CR3 = Part_1 + Part_2 + Part_3 | CR5 = Part_1 + Part_2 + Part_3 + Part_4 + Part_5 (parts triées par ordre décroissant)",
+        "formula_latex": "\\\\text{CR}_k = \\\\sum_{i=1}^k \\\\text{Part}_{(i)} \\\\quad (k = 3, 5)",
+        "interpretation": "CR3 > 50% or CR5 > 70% characterizes a market heavily dominated by a tight leadership cohort.",
+        "example": "Dated example — Total Assets 2024, ABIX 2025 edition (20 banks): Top 3 banks (BEA, BNA, CPA) aggregate a CR3 of 52.4%, and top 5 (with BADR and BDL) reach a CR5 of 74.8%.",
+        "unit": "%",
+        "performance_direction": "neutral",
+        "higher_is_better": null,
+        "threshold_type": "MARKET_REFERENCE",
+        "regulatory_threshold": null,
+        "abix_benchmark": "CR3 > 50 %: Forte emprise oligopolistique | CR5 > 70 %: Marché très concentré",
+        "example_vintage": "Exemple daté — Données 2024, Édition ABIX 2025, Total Bilan (20 banques)",
+        "modules": [
+          "Concentration & Concurrence",
+          "Parts de Marché",
+          "Vue Secteur"
+        ],
+        "related_terms": [
+          "indice-hhi",
+          "nombre-effectif-banques",
           "part-de-marche"
         ]
       },
       {
         "id": "nombre-effectif-banques",
         "slug": "nombre-effectif-banques",
-        "term": "Effective Number of Banks (Numbers Equivalent)",
-        "acronym": "N_eff",
+        "term": "Effective Number of Banks (Equivalent Competitors)",
+        "acronym": "NEFF",
         "aliases": [
-          "Numbers Equivalent",
-          "Effective Competitors Count"
+          "Effective Number of Banks",
+          "Equivalent Competitors",
+          "HHI Inverted Number"
         ],
         "category": "concentration_market",
-        "short_definition": "Theoretical number of equal-sized banks that would generate the exact same HHI concentration as the current market.",
-        "detailed_definition": "Translates abstract HHI points into an intuitive count: while 21 licensed banks operate, market share skew means the market economically behaves like ~5.7 equal-sized banks.",
-        "formula": "Nombre Effectif = 10 000 / HHI",
-        "formula_latex": "N_{\\text{eff}} = \\frac{10\\,000}{\\text{HHI}}",
-        "interpretation": "The closer to 21, the more balanced the market. A figure of 5.7 captures the scale asymmetry between mega-lenders and boutique private banks.",
-        "example": "For an HHI of 1,742, the effective number of banks equals 10,000 / 1,742 = 5.74 equivalent banks.",
-        "unit": "banques",
-        "higher_is_better": true,
-        "modules": [
-          "Concentration",
-          "Vue Secteur",
-          "Executive Dashboard"
-        ],
-        "related_terms": [
-          "hhi",
-          "cr3",
-          "cr5"
-        ]
-      },
-      {
-        "id": "cr3",
-        "slug": "cr3",
-        "term": "Top 3 Concentration Ratio (CR3)",
-        "acronym": "CR3",
-        "aliases": [
-          "CR3 Ratio",
-          "Top 3 Share"
-        ],
-        "category": "concentration_market",
-        "short_definition": "Cumulative market share held by the top 3 banking institutions (BNA + BEA + CPA).",
-        "detailed_definition": "Measures top-tier oligopoly concentration. A CR3 above 60% indicates a tight oligopoly where the top 3 leaders anchor systemic liquidity and pricing.",
-        "formula": "CR3 = Part de Marché Rang 1 + Part de Marché Rang 2 + Part de Marché Rang 3",
-        "formula_latex": "\\text{CR}_3 = s_1 + s_2 + s_3",
-        "interpretation": "In Algeria, CR3 reaches 63.9% of total assets, highlighting the dominant footprint of the top 3 state banks.",
-        "example": "BNA (26.8%) + BEA (21.9%) + CPA (15.2%) = 63.9% of total assets.",
-        "unit": "%",
+        "short_definition": "Theoretical number of equal-sized banks that would generate the same HHI concentration level observed in the market.",
+        "detailed_definition": "Calculated as 10,000 / HHI. It translates concentration into intuitive terms: in a market with 20 nominal banks, an HHI of 2,000 implies the competitive equivalent of only 5 equal-sized competitors.",
+        "formula": "Nombre Effectif de Banques = 10 000 ÷ HHI",
+        "formula_latex": "N_{\\\\text{eff}} = \\\\frac{10\\\\,000}{\\\\text{HHI}}",
+        "interpretation": "The wider the gap between nominal and effective bank counts, the more pronounced the market asymmetry and top-bank dominance.",
+        "example": "2024 data, ABIX 2025 edition, Total Assets (20 nominal banks): With an HHI of 1,920, the effective competitor count is 5.2 equivalent banks.",
+        "unit": "banques équivalentes",
+        "performance_direction": "neutral",
         "higher_is_better": null,
+        "threshold_type": "NONE",
+        "regulatory_threshold": null,
+        "abix_benchmark": null,
+        "example_vintage": "Données 2024, Édition ABIX 2025, périmètre de 20 banques",
         "modules": [
-          "Concentration",
-          "Vue Secteur",
-          "Executive Dashboard"
+          "Concentration & Concurrence",
+          "Vue Secteur"
         ],
         "related_terms": [
-          "cr5",
-          "hhi",
-          "part-de-marche"
+          "indice-hhi",
+          "ratios-cr3-cr5"
         ]
       },
       {
-        "id": "cr5",
-        "slug": "cr5",
-        "term": "Top 5 Concentration Ratio (CR5)",
-        "acronym": "CR5",
+        "id": "cadre-4d-abix",
+        "slug": "cadre-4d-abix",
+        "term": "ABIX 4D Assessment Framework",
+        "acronym": "4D_ABIX",
         "aliases": [
-          "CR5 Ratio",
-          "Top 5 Share"
-        ],
-        "category": "concentration_market",
-        "short_definition": "Cumulative market share held by the top 5 banking institutions (BNA, BEA, CPA, BADR, CNEP).",
-        "detailed_definition": "CR5 gauges the combined market dominance of the primary Tier-1 banking group in financing the national economy.",
-        "formula": "CR5 = Somme des parts de marché des 5 premières banques",
-        "formula_latex": "\\text{CR}_5 = \\sum_{i=1}^{5} s_i",
-        "interpretation": "CR5 reaches 82.0% of total assets in Algeria, showing that Tier-1 state banks concentrate the vast bulk of banking resources.",
-        "example": "The top 5 banks assemble over 18,000B DZD out of the 22,000B DZD total industry assets.",
-        "unit": "%",
-        "higher_is_better": null,
-        "modules": [
-          "Concentration",
-          "Vue Secteur",
-          "Executive Dashboard"
-        ],
-        "related_terms": [
-          "cr3",
-          "hhi",
-          "part-de-marche"
-        ]
-      },
-      {
-        "id": "cadre-4-dimensions",
-        "slug": "cadre-4-dimensions",
-        "term": "ABIX Four Dimensions Framework",
-        "acronym": "4D ABIX",
-        "aliases": [
-          "Four Dimensions",
-          "4D Analytical Framework"
+          "4D Framework",
+          "ABIX 4D Scores",
+          "Multidimensional Evaluation Model"
         ],
         "category": "abix_framework",
-        "short_definition": "Transparent benchmarking framework avoiding arbitrary global scores, structured around 4 distinct pillars: 1. Profitability, 2. Growth, 3. Efficiency, 4. Capitalization.",
-        "detailed_definition": "ABIX avoids opaque single-score rankings. The 4D framework delivers an objective multidimensional read where institutions are benchmarked on verifiable metrics.",
-        "formula": "Piliers : 1. Rentabilité (ROE, ROA, NIM) | 2. Croissance (CAGR Actifs, Dépôts, PNB) | 3. Efficacité (CIR, PNB/Agent) | 4. Capitalisation (FP/Actifs, Solvabilité)",
-        "formula_latex": "\\text{Cadre 4D} = \\{ \\text{Rentabilité}, \\text{Croissance}, \\text{Efficacité}, \\text{Capitalisation} \\}",
-        "interpretation": "Allows executive leadership and analysts to quickly grasp an institution's distinct profile without methodology shortcuts.",
-        "example": "A bank may excel in profitability while remaining in consolidation mode regarding growth.",
-        "unit": "cadre",
+        "short_definition": "Methodological architecture structured across 4 independent analytical pillars: Profitability, Growth & Momentum, Efficiency, and Capitalization.",
+        "detailed_definition": "ABIX 4D Framework assesses banks across four pillars: 1) Profitability (ROE, ROA, Net Margin - 33.3% each); 2) Growth & Momentum (multi-year CAGR across Assets, Loans, NBI, Profit - 25% each); 3) Operational Efficiency (Cost-to-Income, GOI Conversion - 50% each); 4) Accounting Capitalization (Equity/Assets, Equity/Loans - 50% each). Fundamental rule: 4D Framework enforces multidimensional profiling to prevent a single composite score from concealing specific bank vulnerabilities. ABIX explicitly avoids monolithic single ratings.",
+        "formula": "4 Scores indépendants (0-100) : Score_Rentabilité + Score_Croissance + Score_Efficience + Score_Capitalisation",
+        "formula_latex": "\\\\text{Profil 4D} = \\\\{ \\\\text{Score}_{\\\\text{Rentabilité}}, \\\\text{Score}_{\\\\text{Croissance}}, \\\\text{Score}_{\\\\text{Efficience}}, \\\\text{Score}_{\\\\text{Capitalisation}} \\\\}",
+        "interpretation": "Enables radar mapping and positioning matrices to instantly spot structural imbalances (e.g. rapid growth with lagging capital cushion).",
+        "example": "2024 data, ABIX 2025 edition: A leading private lender exhibiting top Profitability (88/100) and Efficiency (92/100) combined with moderate Growth (64/100).",
+        "unit": "scores dimensionnels (0-100)",
+        "performance_direction": "neutral",
         "higher_is_better": null,
+        "threshold_type": "ABIX_BENCHMARK",
+        "regulatory_threshold": null,
+        "abix_benchmark": "Lecture multidimensionnelle par pilier (sans note composite globale artificielle)",
+        "example_vintage": "Données 2024, Édition ABIX 2025",
         "modules": [
-          "Quatre Dimensions",
-          "Profil Banque",
-          "Méthodologie",
-          "Data Explorer"
-        ],
-        "related_terms": [
-          "matrice-croissance-rentabilite",
-          "roe",
-          "cagr",
-          "coefficient-exploitation"
-        ]
-      },
-      {
-        "id": "matrice-croissance-rentabilite",
-        "slug": "matrice-croissance-rentabilite",
-        "term": "Growth vs Profitability Matrix (4 Quadrants)",
-        "acronym": "Matrice 2D",
-        "aliases": [
-          "Strategic 2D Matrix",
-          "4-Quadrant Positioning"
-        ],
-        "category": "abix_framework",
-        "short_definition": "Visual positioning cross-referencing NBI growth rate (X-axis) and ROE equity profitability (Y-axis) against sector medians.",
-        "detailed_definition": "The matrix segments banks into 4 quadrants: 1) Dynamic Leaders (High growth, High ROE), 2) Resilient Profitability (Moderate growth, High ROE), 3) Investment & Expansion (High growth, Moderate ROE), 4) In Transformation (Moderate growth, Moderate ROE).",
-        "formula": "Axes centrés sur la Médiane Secteur : Axe X = Croissance PNB % | Axe Y = Rentabilité ROE % | Taille bulle = Total Bilan",
-        "formula_latex": "(X - \\text{Médiane}_{\\text{PNB}}, \\; Y - \\text{Médiane}_{\\text{ROE}})",
-        "interpretation": "Provides an instant snapshot of commercial momentum and financial return across every banking player.",
-        "example": "BEA and Al Baraka position inside the Dynamic Leaders quadrant.",
-        "unit": "matrice",
-        "higher_is_better": null,
-        "modules": [
-          "Matrice Stratégique",
-          "Profil Banque",
+          "Scores ABIX (4D)",
+          "Profils Multidimensionnels",
+          "Matrice 4 Quadrants",
           "Executive Dashboard"
         ],
         "related_terms": [
-          "cagr",
-          "roe",
-          "pnb",
-          "cluster"
-        ]
-      },
-      {
-        "id": "score-transparence",
-        "slug": "score-transparence",
-        "term": "Financial Transparency & Availability Score",
-        "acronym": "Transparence",
-        "aliases": [
-          "Financial Information Disclosure Score",
-          "Transparency Index"
-        ],
-        "category": "abix_framework",
-        "short_definition": "Objective score evaluating the accessibility and timeliness of audited financial statements and annual reports on official bank websites.",
-        "detailed_definition": "Structured on 2 dimensions (Financial Statements publication /3 pts and Annual Activity Report /3 pts) for a total global score of 6 points.",
-        "formula": "Score Global (0 à 6) = Score Publication des Comptes (0 à 3) + Score Rapport d'Activité (0 à 3)",
-        "formula_latex": "\\text{Score Transparence} = \\text{Score Comptes} + \\text{Score Rapport}",
-        "interpretation": "Measures adherence to best practices in public financial disclosure and investor relations.",
-        "example": "3 banks achieve the perfect score of 6/6 (CPA, BDL, ABC), while the market average sits at 2.7/6.",
-        "unit": "/ 6 pts",
-        "higher_is_better": true,
-        "modules": [
-          "Disponibilité Financière",
-          "Méthodologie"
-        ],
-        "related_terms": [
-          "perimetre-observe",
+          "normalisation-min-max",
           "scanning-deterministe"
         ]
       },
       {
         "id": "scanning-deterministe",
         "slug": "scanning-deterministe",
-        "term": "Deterministic Scanning & Strategic Alerts",
-        "acronym": "Scanning ABIX",
+        "term": "Deterministic Rule-Based Scanning",
+        "acronym": "SCAN",
         "aliases": [
-          "Deterministic Scanning Engine",
-          "Strategic Rule-based Alerts"
+          "Rule-Based Scanning",
+          "Deterministic Alerts",
+          "Financial Outlier Scanning"
         ],
         "category": "abix_framework",
-        "short_definition": "Algorithmic engine automatically scanning all 21 balance sheets to detect trend breaks, structural divergences, and executive signals.",
-        "detailed_definition": "Unlike black-box AI generative models, ABIX strategic alerts are 100% deterministic, auditable, and directly traceable to certified published financial line items.",
-        "formula": "Règles déterministes : Divergence Dépôts/Crédits, Rupture de Marge, Écart de Provisionnement (> ±2σ), Érosion PNB vs Résultat",
-        "formula_latex": "\\text{Alerte} = f(\\text{Écarts Statistiques}, \\text{Divergences Agrégats})",
-        "interpretation": "Supplies executive committees and boards with an instant, verified briefing on key structural market developments.",
-        "example": "Detected alert: sector deposits (+6.2%) expanded faster than loans (+5.1%), widening the aggregate liquidity cushion.",
-        "unit": "alertes",
+        "short_definition": "Automated, 100% traceable audit engine identifying trend breaks, balance sheet divergences, and material benchmark gaps.",
+        "detailed_definition": "Deterministic scanning applies transparent, versioned rules (v1.0) directly to financial metrics without black-box modeling. Implemented rules in ABIX: 1) Benchmark gap: absolute gap >= 5.0 pts; 2) Notable annual variation: YoY change >= 15% (or ratio point change >= 5.0 pts); 3) Dimension quartile shift (score change >= 10 pts); 4) Activity divergence alerts: a) Deposits vs Loans growth gap >= 10 pts; b) NBI up >= 15% with Net Profit down <= -10%; c) Assets up >= 10% with ROE down <= -2 pts; d) Net provision surge >= +30%.",
+        "formula": "Règles déterministes d'alerte : |Δ Ratio| ≥ 5 pts | YoY ≥ 15 % | Δ Dépôts − Δ Crédits ≥ 10 pts | Δ Provisions ≥ 30 %",
+        "formula_latex": "\\\\text{Alertes} = \\\\{ f(X_t, X_{t-1}, \\\\text{Benchmark}) \\\\mid \\\\text{Conditions Arithmétiques Déterministes v1.0} \\\\}",
+        "interpretation": "Guarantees complete mathematical auditability of analytical insights displayed in executive dashboards and bank profiles.",
+        "example": "2024 data, ABIX 2025 edition: Automatic divergence alert triggered for a bank whose deposits grew +18.5% while loans only expanded +4.2% (gap = 14.3 pts >= 10 pts threshold).",
+        "unit": "règles & alertes",
+        "performance_direction": "neutral",
         "higher_is_better": null,
+        "threshold_type": "ABIX_BENCHMARK",
+        "regulatory_threshold": null,
+        "abix_benchmark": "Règles arithmétiques de détection versionnées v1.0 (100 % traçable)",
+        "example_vintage": "Données 2024, Édition ABIX 2025",
         "modules": [
           "Executive Dashboard",
-          "Vue Secteur",
-          "Profil Banque"
+          "Insights & Alertes",
+          "Profil Banque (Synthèse)"
         ],
         "related_terms": [
-          "outlier",
-          "cadre-4-dimensions",
-          "executive"
+          "cadre-4d-abix",
+          "variation-annuelle-yoy"
         ]
       },
       {
         "id": "barometre-ebanking",
         "slug": "barometre-ebanking",
-        "term": "Digital Banking & E-Banking Barometer",
-        "acronym": "Baromètre",
+        "term": "E-Banking & Digital Transformation Barometer",
+        "acronym": "EBANK",
         "aliases": [
           "E-Banking Barometer",
-          "Digital Banking Experience Survey"
+          "Digital Banking Index",
+          "Online Banking Score"
         ],
         "category": "abix_framework",
-        "short_definition": "Periodic market survey assessing customer adoption, digital usage, and user satisfaction across web, mobile banking, and branch networks.",
-        "detailed_definition": "Operational complement to balance sheet data, the Barometer links certified financial performance with real-world digital customer adoption in Algeria.",
-        "formula": "Enquête quantitative et qualitative : Canaux digitaux, Ergonomie, Disponibilité, Tarification, Sécurité",
-        "formula_latex": "\\text{Score Baromètre} = f(\\text{Usage}, \\text{Satisfaction}, \\text{Disponibilité})",
-        "interpretation": "Sheds light on customer digital expectations and technological readiness across Algerian institutions.",
-        "example": "2026 Edition: in-depth comparative benchmark of mobile banking app features in Algeria.",
-        "unit": "baromètre",
-        "higher_is_better": null,
+        "short_definition": "Benchmarking framework evaluating bank digital maturity through auditing mobile apps, web platforms, and e-payment services.",
+        "detailed_definition": "The ABIX E-Banking Barometer is an independent benchmarking tool evaluating digital banking across Algeria. It audits over 40 criteria spanning mobile app functionality, online banking, e-payment capabilities, and UX design.",
+        "formula": "Score E-Banking = Σ (Pondération_dimension × Score_dimension) (sur une échelle normalisée de 0 à 100)",
+        "formula_latex": "\\\\text{Score E-Banking} = \\\\sum_{k=1}^m w_k \\\\times S_k \\\\quad \\\\text{avec } \\\\sum w_k = 1",
+        "interpretation": "A top score reflects a mature, seamless, and secure digital banking offering for retail and corporate clients.",
+        "example": "ABIX Barometer 2025 edition: Bank scores ranging from 32/100 (basic features) to over 86/100 for leading digital pioneers.",
+        "unit": "score (0 à 100)",
+        "performance_direction": "higher_is_better",
+        "higher_is_better": true,
+        "threshold_type": "ABIX_BENCHMARK",
+        "regulatory_threshold": null,
+        "abix_benchmark": "Score 0-100 normalisé sur grille multicritère auditée",
+        "example_vintage": "Édition Baromètre ABIX 2025",
         "modules": [
-          "Baromètre 2026",
-          "Méthodologie",
-          "Édition 2026"
+          "Baromètre E-Banking",
+          "Profil Banque (Volet Digital)",
+          "Classements Digitaux"
         ],
         "related_terms": [
-          "score-transparence",
-          "cadre-4-dimensions"
+          "cadre-4d-abix"
         ]
       }
-    ]
+    ],
+    "thresholdTypes": {
+      "REGULATORY": "Regulatory Standard",
+      "ABIX_BENCHMARK": "ABIX Benchmark",
+      "MARKET_REFERENCE": "Market Reference",
+      "ACADEMIC_REFERENCE": "Academic Reference",
+      "NONE": "No normative threshold"
+    }
   }
 }
