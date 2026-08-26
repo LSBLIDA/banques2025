@@ -628,6 +628,35 @@
   handlePreorderSubmit(qs("#preorder-form-2026"), "preorder-form-error", "preorder-form-success", "po-submit-btn");
   handlePreorderSubmit(qs("#page-preorder-form-2026"), "ppo-form-error", "ppo-form-success", "ppo-submit-btn");
 
+  // ══════════════════════════════════════════════════════════ VIDÉO DÉMO DATA EXPLORER
+  window.loadDataExplorerVideo = function () {
+    var container = qs("#dex-video-player-container");
+    if (!container) return;
+
+    window.trackEvent("play_data_explorer_demo_video", { source: "hero_play_button" });
+
+    var iframe = document.createElement("iframe");
+    iframe.setAttribute("src", "https://www.youtube-nocookie.com/embed/6xiW8lhvE5A?autoplay=1&rel=0&modestbranding=1&enablejsapi=1");
+    iframe.setAttribute("title", "ABIX Data Explorer — Démonstration Vidéo");
+    iframe.setAttribute("class", "w-full h-full border-0 rounded-lg absolute inset-0");
+    iframe.setAttribute("allow", "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share");
+    iframe.setAttribute("allowfullscreen", "true");
+
+    container.innerHTML = "";
+    container.classList.remove("cursor-pointer", "group");
+    container.removeAttribute("onclick");
+    container.removeAttribute("onkeydown");
+    container.removeAttribute("tabindex");
+    container.removeAttribute("role");
+    container.appendChild(iframe);
+
+    var badge = qs("#hero-demo-badge");
+    if (badge) {
+      badge.style.opacity = "0";
+      badge.style.pointerEvents = "none";
+    }
+  };
+
   // ══════════════════════════════════════════════════════════ FORMULAIRE CONTACT GÉNÉRIQUE
   var contactForm = qs("#contact-form");
   if (contactForm) {

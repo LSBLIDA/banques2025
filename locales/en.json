@@ -1814,6 +1814,12 @@
         "Compare performances",
         "Track market shares"
       ]
+    },
+    "video": {
+      "playButton": "Watch Video Demo",
+      "playDuration": "2 min",
+      "caption": "Demo Video — Discover ABIX Data Explorer in action",
+      "ariaPlay": "Play ABIX Data Explorer demo video"
     }
   },
   "rapport2023": {

@@ -1599,6 +1599,12 @@
         "Comparez les performances",
         "Suivez les parts de marché"
       ]
+    },
+    "video": {
+      "playButton": "Voir la démonstration vidéo",
+      "playDuration": "2 min",
+      "caption": "Vidéo de démonstration — Découvrez ABIX Data Explorer en action",
+      "ariaPlay": "Lancer la vidéo de démonstration d'ABIX Data Explorer"
     }
   },
   "footer": {

@@ -1818,6 +1818,12 @@
         "قارن الأداء",
         "تتبع الحصص السوقية"
       ]
+    },
+    "video": {
+      "playButton": "مشاهدة الفيديو التوضيحي",
+      "playDuration": "دقيقتان",
+      "caption": "فيديو تعريفي — اكتشف منصة ABIX Data Explorer عمليًا",
+      "ariaPlay": "تشغيل الفيديو التوضيحي لمنصة ABIX Data Explorer"
     }
   },
   "rapport2023": {
