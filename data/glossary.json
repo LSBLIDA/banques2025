@@ -1,15 +1,11 @@
 {
   "metadata": {
-    "version": "3.0.0",
-    "status": "OFFICIAL_AUDITED_METHODOLOGY",
+    "version": "3.0",
+    "source": "ABIX Data Explorer - glossaryData.ts",
+    "sync_date": "2026-08-29",
     "total_terms": 67,
-    "categories_count": 8,
-    "languages_supported": [
-      "fr",
-      "en",
-      "ar"
-    ],
-    "updated_at": "2026-08-29T08:48:33.944Z"
+    "total_categories": 8,
+    "note": "Ce fichier est synchronise depuis ABIX_front/src/features/glossary/glossaryData.ts. Ne pas modifier manuellement - rejouer ce script."
   },
   "categories": {
     "financial_indicators": {
@@ -121,7 +117,11 @@
         "en": "Total Assets represents total closing accounting assets. In ABIX Data Explorer, it serves as the benchmark aggregate for market share calculations, bank size grouping, and sector weighting.",
         "ar": "يمثل إجمالي الميزانية مجموع الأصول المسجلة في ختام السنة المالية. في ABIX Data Explorer، يمثل المؤشر الأساسي لاحتساب الحصص السوقية وتصنيف البنوك حسب الحجم."
       },
-      "formula": "Total Bilan = Caisse & Banques centrales + Titres & Bons du Trésor + Crédits clientèle + Autres actifs",
+      "formula": {
+        "fr": "Total Bilan = Caisse & Banques centrales + Titres & Bons du Trésor + Crédits clientèle + Autres actifs",
+        "en": "Total Assets = Cash & Central Bank Balances + Securities & Treasury Bonds + Customer Loans + Other Assets",
+        "ar": "إجمالي الميزانية = الصندوق والبنوك المركزية + السندات وسندات الخزينة + قروض العملاء + أصول أخرى"
+      },
       "formula_latex": "\\\\text{Total Bilan} = \\\\sum \\\\text{Actifs Bilanciels}",
       "interpretation": {
         "fr": "Un indicateur de taille relative et de présence institutionnelle. Il ne préjuge pas à lui seul de la rentabilité ou de la solvabilité de la banque.",
@@ -129,17 +129,20 @@
         "ar": "مؤشر للحجم النسبي والوزن السوقي، ولا يعبر بمفرده عن مستوى المردودية أو الملاءة."
       },
       "example": {
-        "fr": "Données 2024, Édition ABIX 2025, périmètre de 20 banques : Total bilan sectoriel consolidé d'environ 18 500 Mds DZD, dominé à près de 87 % par le secteur public.",
-        "en": "2024 data, ABIX 2025 edition, 20-bank scope: Consolidated sector total assets of approx. 18,500 billion DZD, ~87% held by public banks.",
-        "ar": "بيانات 2024، إصدار ABIX 2025، نطاق 20 بنكاً: إجمالي الميزانية المجمع حوالي 18,500 مليار دج، تمثل البنوك العمومية نحو 87% منه."
+        "fr": "Exemple pédagogique : Si une banque possède 300 Mds DZD de crédits, 100 Mds DZD de bons du trésor et 50 Mds DZD de réserves de liquidité, son Total Bilan est de 450 Mds DZD.",
+        "en": "Pedagogical example: If a bank holds 300 billion DZD in loans, 100 billion DZD in treasury bonds, and 50 billion DZD in cash reserves, its Total Assets amount to 450 billion DZD.",
+        "ar": "مثال تعليمي: إذا كان البنك يمتلك 300 مليار دج من القروض، 100 مليار دج من سندات الخزينة، و50 مليار دج من الاحتياطيات النقدية، فإن إجمالي ميزانيته يبلغ 450 مليار دج."
       },
-      "unit": "Mds DZD",
+      "unit": {
+        "fr": "Mds DZD",
+        "en": "DZD bn",
+        "ar": "مليار دج"
+      },
       "performance_direction": "neutral",
       "higher_is_better": null,
       "threshold_type": "NONE",
       "regulatory_threshold": null,
       "abix_benchmark": null,
-      "example_vintage": "Données 2024, Édition ABIX 2025, périmètre de 20 banques",
       "modules": [
         "Vue Secteur",
         "Classements",
@@ -154,10 +157,7 @@
         "fonds-propres",
         "part-de-marche"
       ],
-      "display_order": 1,
-      "is_active": true,
-      "created_at": "2026-08-29T08:48:33.944Z",
-      "updated_at": "2026-08-29T08:48:33.944Z"
+      "display_order": 1
     },
     {
       "id": "depots-clientele",
@@ -194,7 +194,11 @@
         "en": "Customer deposits aggregate demand, term, savings, and collateral deposits from households, corporates, and institutions. They represent the primary funding base for intermediation.",
         "ar": "تجمع ودائع العملاء الحسابات الجارية ولأجل وحسابات الادخار للمؤسسات والأفراد، وتشكل المصدر التمويلي الرئيسي للنشاط المصرفي."
       },
-      "formula": "Dépôts = Dépôts à vue + Dépôts à terme + Livrets d'épargne + Autres dépôts clientèle",
+      "formula": {
+        "fr": "Dépôts = Dépôts à vue + Dépôts à terme + Livrets d'épargne + Autres dépôts clientèle",
+        "en": "Deposits = Demand Deposits + Term Deposits + Savings Accounts + Other Customer Deposits",
+        "ar": "الودائع = الودائع تحت الطلب + الودائع لأجل + حسابات التوفير + ودائع العملاء الأخرى"
+      },
       "formula_latex": "\\\\text{Dépôts} = \\\\sum \\\\text{Ressources Clientèle}",
       "interpretation": {
         "fr": "Mesure la capacité d'attraction de ressources et la fidélité de la base clientèle. Une part élevée de dépôts à vue réduit le coût des ressources.",
@@ -202,17 +206,20 @@
         "ar": "يقيس القدرة على استقطاب الموارد واستقرار قاعدة المودعين. ارتفاع حصة الودائع تحت الطلب يخفض تكلفة الموارد."
       },
       "example": {
-        "fr": "Données 2024, Édition ABIX 2025, périmètre de 20 banques : Encours total des dépôts de 14 200 Mds DZD, finançant l'essentiel du bilan bancaire.",
-        "en": "2024 data, ABIX 2025 edition, 20-bank scope: Total deposit volume of 14,200 billion DZD.",
-        "ar": "بيانات 2024، إصدار ABIX 2025، نطاق 20 بنكاً: إجمالي الودائع 14,200 مليار دج."
+        "fr": "Exemple pédagogique : Si une banque collecte 200 Mds DZD de comptes courants et 100 Mds DZD d'épargne, ses dépôts clientèle s'élèvent à 300 Mds DZD.",
+        "en": "Pedagogical example: If a bank collects 200 billion DZD in current accounts and 100 billion DZD in savings, its customer deposits amount to 300 billion DZD.",
+        "ar": "مثال تعليمي: إذا جمع البنك 200 مليار دج من الحسابات الجارية و100 مليار دج من المدخرات، فإن ودائع عملائه تبلغ 300 مليار دج."
       },
-      "unit": "Mds DZD",
+      "unit": {
+        "fr": "Mds DZD",
+        "en": "DZD bn",
+        "ar": "مليار دج"
+      },
       "performance_direction": "neutral",
       "higher_is_better": null,
       "threshold_type": "NONE",
       "regulatory_threshold": null,
       "abix_benchmark": null,
-      "example_vintage": "Données 2024, Édition ABIX 2025, périmètre de 20 banques",
       "modules": [
         "Vue Secteur",
         "Classements",
@@ -227,10 +234,7 @@
         "ratio-prets-depots",
         "depots-total-passif"
       ],
-      "display_order": 2,
-      "is_active": true,
-      "created_at": "2026-08-29T08:48:33.944Z",
-      "updated_at": "2026-08-29T08:48:33.944Z"
+      "display_order": 2
     },
     {
       "id": "credits-clientele",
@@ -269,7 +273,11 @@
         "en": "Represents total gross lending facilities extended by the bank across overdrafts, corporate working capital, equipment loans, mortgages, and consumer credit.",
         "ar": "يمثل إجمالي التمويلات المباشرة التي يقدمها البنك في شكل قروض استغلال، تجهيز، عقار وقروض استهلاكية."
       },
-      "formula": "Crédits = Crédits d'exploitation + Crédits d'investissement + Crédits immobiliers + Crédits aux particuliers",
+      "formula": {
+        "fr": "Crédits bruts = Découverts + Crédits d'investissement + Crédits immobiliers + Crédits conso + Créances rattachées",
+        "en": "Gross Loans = Overdrafts + Investment Loans + Real Estate Loans + Consumer Loans + Related Receivables",
+        "ar": "إجمالي القروض = السحوبات على المكشوف + قروض الاستثمار + القروض العقارية + القروض الاستهلاكية + المستحقات المرتبطة"
+      },
       "formula_latex": "\\\\text{Crédits} = \\\\sum \\\\text{Engagements Clientèle}",
       "interpretation": {
         "fr": "Reflète la contribution active de la banque au financement de l'économie et son niveau d'exposition aux risques de contrepartie.",
@@ -277,17 +285,20 @@
         "ar": "يعكس مدى مساهمة البنك في تمويل الاقتصاد الوطني ومستوى تعرضه لمخاطر الائتمان."
       },
       "example": {
-        "fr": "Données 2024, Édition ABIX 2025, périmètre de 20 banques : Encours brut des crédits à la clientèle de 11 100 Mds DZD.",
-        "en": "2024 data, ABIX 2025 edition, 20-bank scope: Gross customer loans of 11,100 billion DZD.",
-        "ar": "بيانات 2024، إصدار ABIX 2025، نطاق 20 بنكاً: إجمالي القروض الممنوحة 11,100 مليار دج."
+        "fr": "Exemple pédagogique : Si une banque accorde 150 Mds DZD aux entreprises et 50 Mds DZD aux particuliers, ses crédits à la clientèle sont de 200 Mds DZD.",
+        "en": "Pedagogical example: If a bank grants 150 billion DZD to businesses and 50 billion DZD to individuals, its customer loans amount to 200 billion DZD.",
+        "ar": "مثال تعليمي: إذا منح البنك 150 مليار دج للشركات و50 مليار دج للأفراد، فإن قروض عملائه تبلغ 200 مليار دج."
       },
-      "unit": "Mds DZD",
+      "unit": {
+        "fr": "Mds DZD",
+        "en": "DZD bn",
+        "ar": "مليار دج"
+      },
       "performance_direction": "neutral",
       "higher_is_better": null,
       "threshold_type": "NONE",
       "regulatory_threshold": null,
       "abix_benchmark": null,
-      "example_vintage": "Données 2024, Édition ABIX 2025, périmètre de 20 banques",
       "modules": [
         "Vue Secteur",
         "Classements",
@@ -303,10 +314,7 @@
         "prets-total-actif",
         "taux-npl"
       ],
-      "display_order": 3,
-      "is_active": true,
-      "created_at": "2026-08-29T08:48:33.944Z",
-      "updated_at": "2026-08-29T08:48:33.944Z"
+      "display_order": 3
     },
     {
       "id": "fonds-propres",
@@ -344,7 +352,11 @@
         "en": "Accounting Equity represents the net book value on the balance sheet. It acts as the financial cushion against unexpected losses. ABIX note: book equity is distinct from regulatory capital (Tier 1/Tier 2) under Bank of Algeria Regulation 2014-01.",
         "ar": "تمثل حقوق الملكية الصافية للبنك والدرع المالي لامتصاص الخسائر. ملاحظة ABIX: تختلف الأموال الخاصة المحاسبية عن الأموال الخاصة التنظيمية (Tier 1/Tier 2)."
       },
-      "formula": "Fonds Propres = Capital social + Primes d'émission + Réserves + Report à nouveau + Résultat net",
+      "formula": {
+        "fr": "Fonds Propres = Capital social + Réserves + Report à nouveau + Résultat net + Provisions générales réglementées",
+        "en": "Equity = Share Capital + Reserves + Retained Earnings + Net Income + Regulated General Provisions",
+        "ar": "حقوق الملكية = رأس المال الاجتماعي + الاحتياطيات + الأرباح المحتجزة + صافي الدخل + المخصصات العامة المنظمة"
+      },
       "formula_latex": "\\\\text{Fonds Propres} = \\\\text{Capital} + \\\\text{Réserves} + \\\\text{Report} + \\\\text{Résultat Net}",
       "interpretation": {
         "fr": "Un niveau élevé renforce l'autonomie financière et la capacité de résistance aux chocs macroéconomiques.",
@@ -352,17 +364,20 @@
         "ar": "مستوى الأموال الخاصة المرتفع يعزز الاستقلالية المالية والقدرة على الصمود في وجه الصدمات."
       },
       "example": {
-        "fr": "Données 2024, Édition ABIX 2025, périmètre de 20 banques : Fonds propres consolidés du secteur bancaire de 2 450 Mds DZD.",
-        "en": "2024 data, ABIX 2025 edition, 20-bank scope: Sector accounting equity of 2,450 billion DZD.",
-        "ar": "بيانات 2024، إصدار ABIX 2025، نطاق 20 بنكاً: إجمالي حقوق الملكية المجمعة 2,450 مليار دج."
+        "fr": "Exemple pédagogique : Si une banque a un capital de 50 Mds DZD et 10 Mds DZD de réserves accumulées, ses fonds propres s'élèvent à 60 Mds DZD.",
+        "en": "Pedagogical example: If a bank has a capital of 50 billion DZD and 10 billion DZD in accumulated reserves, its equity amounts to 60 billion DZD.",
+        "ar": "مثال تعليمي: إذا كان لدى البنك رأس مال قدره 50 مليار دج و10 مليارات دج من الاحتياطيات المتراكمة، فإن حقوق ملكيته تبلغ 60 مليار دج."
       },
-      "unit": "Mds DZD",
+      "unit": {
+        "fr": "Mds DZD",
+        "en": "DZD bn",
+        "ar": "مليار دج"
+      },
       "performance_direction": "higher_is_better",
       "higher_is_better": true,
       "threshold_type": "NONE",
       "regulatory_threshold": null,
       "abix_benchmark": null,
-      "example_vintage": "Données 2024, Édition ABIX 2025, périmètre de 20 banques",
       "modules": [
         "Vue Secteur",
         "Profil Banque",
@@ -375,10 +390,7 @@
         "fonds-propres-total-bilan",
         "ratio-solvabilite"
       ],
-      "display_order": 4,
-      "is_active": true,
-      "created_at": "2026-08-29T08:48:33.944Z",
-      "updated_at": "2026-08-29T08:48:33.944Z"
+      "display_order": 4
     },
     {
       "id": "produit-net-bancaire",
@@ -412,11 +424,15 @@
         "ar": "الهامش الإجمالي للنشاط المصرفي الذي يقيس خلق القيمة قبل خصم الأعباء التشغيلية."
       },
       "detailed_definition": {
-        "fr": "Le PNB est l'équivalent bancaire de la marge brute ou du chiffre d'affaires. Il est constitué de la marge nette d'intérêt (intérêts perçus moins intérêts versés), des commissions nettes perçues et des gains nets sur instruments financiers et opérations de change.",
-        "en": "NBI is the banking equivalent of gross revenue. It consists of net interest income, net fee and commission income, and net trading and FX gains.",
-        "ar": "الناتج البنكي الصافي يمثل إجمالي الإيرادات المصرفية المكون من هامش الفائدة الصافي والعمولات الصافية وأرباح الصرف والأدوات المالية."
+        "fr": "Le PNB est l'équivalent bancaire du chiffre d'affaires. Il est constitué du revenu net d’intérêts, des commissions nettes, du résultat des opérations financières et de change, et des autres produits d'exploitation.",
+        "en": "NBI is the banking equivalent of gross revenue. It consists of net interest income, net fee and commission income, net trading and FX gains, and other operating income.",
+        "ar": "الناتج البنكي الصافي يمثل إجمالي الإيرادات المصرفية المكون من صافي دخل الفوائد والعمولات الصافية ونتائج عمليات السوق والصرف وإيرادات التشغيل الأخرى."
       },
-      "formula": "PNB = (Intérêts reçus − Intérêts versés) + (Commissions reçues − Commissions payées) + Gains de change & titres",
+      "formula": {
+        "fr": "PNB = Revenu net d’intérêts + Commissions nettes + Résultat net des opérations de marché et de change + Autres produits d’exploitation",
+        "en": "NBI = Net Interest Income + Net Fee and Commission Income + Net Trading and FX Income + Other Operating Income",
+        "ar": "الناتج البنكي الصافي = صافي دخل الفوائد + صافي العمولات + صافي دخل عمليات السوق والصرف + إيرادات التشغيل الأخرى"
+      },
       "formula_latex": "\\\\text{PNB} = \\\\text{Marge d\\'intérêt} + \\\\text{Commissions nettes} + \\\\text{Résultat financier & change}",
       "interpretation": {
         "fr": "Reflète la dynamique commerciale globale et la capacité de la banque à monétiser son intermédiation et ses services.",
@@ -424,17 +440,20 @@
         "ar": "يعكس الحركية التجارية وقدرة البنك على توليد مداخيل من الوساطة والخدمات المصرفية."
       },
       "example": {
-        "fr": "Données 2024, Édition ABIX 2025, périmètre de 20 banques : PNB sectoriel de 430 Mds DZD, composé majoritairement de la marge d'intermédiation.",
-        "en": "2024 data, ABIX 2025 edition, 20-bank scope: Sector Net Banking Income of 430 billion DZD.",
-        "ar": "بيانات 2024، إصدار ABIX 2025، نطاق 20 بنكاً: الناتج البنكي الصافي المجمع 430 مليار دج."
+        "fr": "Exemple pédagogique : Si une banque génère 30 Mds DZD de revenu net d’intérêts et 10 Mds DZD de commissions, son Produit Net Bancaire est de 40 Mds DZD.",
+        "en": "Pedagogical example: If a bank generates 30 billion DZD in net interest income and 10 billion DZD in commissions, its Net Banking Income is 40 billion DZD.",
+        "ar": "مثال تعليمي: إذا حقق بنك 30 مليار دج من صافي دخل الفوائد و10 مليارات دج من العمولات، فإن ناتجه البنكي الصافي يبلغ 40 مليار دج."
       },
-      "unit": "Mds DZD",
+      "unit": {
+        "fr": "Mds DZD",
+        "en": "DZD bn",
+        "ar": "مليار دج"
+      },
       "performance_direction": "higher_is_better",
       "higher_is_better": true,
       "threshold_type": "NONE",
       "regulatory_threshold": null,
       "abix_benchmark": null,
-      "example_vintage": "Données 2024, Édition ABIX 2025, périmètre de 20 banques",
       "modules": [
         "Vue Secteur",
         "Profil Banque",
@@ -448,10 +467,7 @@
         "coefficient-exploitation",
         "marge-interet-nette"
       ],
-      "display_order": 5,
-      "is_active": true,
-      "created_at": "2026-08-29T08:48:33.944Z",
-      "updated_at": "2026-08-29T08:48:33.944Z"
+      "display_order": 5
     },
     {
       "id": "resultat-brut-exploitation",
@@ -488,7 +504,11 @@
         "en": "GOI measures the pure operational profitability before credit risk provisions and non-recurring items. It equals NBI minus operating costs and depreciation.",
         "ar": "تقيس النتيجة الإجمالية للاستغلال الربحية التشغيلية قبل احتساب مخصصات مخاطر الائتمان والأعباء الاستثنائية."
       },
-      "formula": "RBE = Produit Net Bancaire − Frais généraux d'exploitation − Dotations aux amortissements",
+      "formula": {
+        "fr": "RBE = Produit Net Bancaire - Frais Généraux (Charges de personnel + Autres charges d'exploitation) - Dotations aux amortissements",
+        "en": "GOI = Net Banking Income - General Expenses (Staff Costs + Other Operating Expenses) - Depreciation and Amortization",
+        "ar": "إجمالي نتيجة الاستغلال = الناتج البنكي الصافي - المصاريف العامة (تكاليف الموظفين + مصاريف التشغيل الأخرى) - مخصصات الاستهلاك"
+      },
       "formula_latex": "\\\\text{RBE} = \\\\text{PNB} - \\\\text{Frais généraux} - \\\\text{Amortissements}",
       "interpretation": {
         "fr": "Un RBE positif et en croissance démontre la maîtrise des charges d'exploitation face aux revenus générés.",
@@ -496,17 +516,20 @@
         "ar": "تدل النتيجة التشغيلية الإيجابية والمتنامية على التحكم الجيد في النفقات التشغيلية مقارنة بالإيرادات."
       },
       "example": {
-        "fr": "Données 2024, Édition ABIX 2025, périmètre de 20 banques : RBE sectoriel de 245 Mds DZD.",
-        "en": "2024 data, ABIX 2025 edition, 20-bank scope: Sector Gross Operating Income of 245 billion DZD.",
-        "ar": "بيانات 2024، إصدار ABIX 2025، نطاق 20 بنكاً: النتيجة الإجمالية للاستغلال المجمعة 245 مليار دج."
+        "fr": "Exemple pédagogique : Si le PNB est de 40 Mds DZD et les frais de fonctionnement de 25 Mds DZD, le Résultat Brut d'Exploitation est de 15 Mds DZD.",
+        "en": "Pedagogical example: If NBI is 40 billion DZD and operating expenses are 25 billion DZD, the Gross Operating Income is 15 billion DZD.",
+        "ar": "مثال تعليمي: إذا كان الناتج البنكي الصافي 40 مليار دج ومصاريف التشغيل 25 مليار دج، فإن النتيجة الإجمالية للاستغلال تبلغ 15 مليار دج."
       },
-      "unit": "Mds DZD",
+      "unit": {
+        "fr": "Mds DZD",
+        "en": "DZD bn",
+        "ar": "مليار دج"
+      },
       "performance_direction": "higher_is_better",
       "higher_is_better": true,
       "threshold_type": "NONE",
       "regulatory_threshold": null,
       "abix_benchmark": null,
-      "example_vintage": "Données 2024, Édition ABIX 2025, périmètre de 20 banques",
       "modules": [
         "Vue Secteur",
         "Profil Banque",
@@ -519,10 +542,7 @@
         "coefficient-exploitation",
         "conversion-rbe-rn"
       ],
-      "display_order": 6,
-      "is_active": true,
-      "created_at": "2026-08-29T08:48:33.944Z",
-      "updated_at": "2026-08-29T08:48:33.944Z"
+      "display_order": 6
     },
     {
       "id": "resultat-net",
@@ -560,7 +580,11 @@
         "en": "Net Income represents final net earnings after cost of risk (loan provisions), corporate income tax (IBS), and non-operating gains/losses.",
         "ar": "يمثل صافي الربح المحاسبي المحقق خلال السنة المالية بعد خصم تكلفة المخاطر والضرائب على أرباح الشركات."
       },
-      "formula": "Résultat Net = RBE − Coût net du risque (Provisions nettes) + Résultat exceptionnel − Impôts (IBS)",
+      "formula": {
+        "fr": "Résultat Net = RBE - Coût du risque net - Impôts sur les bénéfices - Autres charges exceptionnelles",
+        "en": "Net Income = GOI - Net Cost of Risk - Corporate Taxes - Other Exceptional Charges",
+        "ar": "صافي الدخل = إجمالي نتيجة الاستغلال - التكلفة الصافية للمخاطر - الضرائب على الأرباح - مصاريف استثنائية أخرى"
+      },
       "formula_latex": "\\\\text{RN} = \\\\text{RBE} - \\\\text{Coût du risque} \\\\pm \\\\text{Exceptionnel} - \\\\text{Impôts}",
       "interpretation": {
         "fr": "Indicateur ultime de rentabilité financière. Il alimente directement les fonds propres (mise en réserve) ou la distribution de dividendes.",
@@ -568,17 +592,20 @@
         "ar": "المقياس النهائي للمردودية المالية، ويغذي مباشرة الأموال الخاصة لتعزيز الملاءة أو توزيع الأرباح."
       },
       "example": {
-        "fr": "Données 2024, Édition ABIX 2025, périmètre de 20 banques : Résultat net sectoriel consolidé de 185 Mds DZD.",
-        "en": "2024 data, ABIX 2025 edition, 20-bank scope: Consolidated sector net profit of 185 billion DZD.",
-        "ar": "بيانات 2024، إصدار ABIX 2025، نطاق 20 بنكاً: النتيجة الصافية المجمعة 185 مليار دج."
+        "fr": "Exemple pédagogique : Si le RBE est de 15 Mds DZD, avec 3 Mds de provisions et 2 Mds d'impôts, le Résultat Net est de 10 Mds DZD.",
+        "en": "Pedagogical example: If GOI is 15 billion DZD, with 3 billion in provisions and 2 billion in taxes, the Net Income is 10 billion DZD.",
+        "ar": "مثال تعليمي: إذا كانت النتيجة الإجمالية للاستغلال 15 مليار دج، مع 3 مليارات من المخصصات ومليارين من الضرائب، فإن النتيجة الصافية تبلغ 10 مليارات دج."
       },
-      "unit": "Mds DZD",
+      "unit": {
+        "fr": "Mds DZD",
+        "en": "DZD bn",
+        "ar": "مليار دج"
+      },
       "performance_direction": "higher_is_better",
       "higher_is_better": true,
       "threshold_type": "NONE",
       "regulatory_threshold": null,
       "abix_benchmark": null,
-      "example_vintage": "Données 2024, Édition ABIX 2025, périmètre de 20 banques",
       "modules": [
         "Vue Secteur",
         "Profil Banque",
@@ -592,10 +619,7 @@
         "return-on-equity",
         "return-on-assets"
       ],
-      "display_order": 7,
-      "is_active": true,
-      "created_at": "2026-08-29T08:48:33.944Z",
-      "updated_at": "2026-08-29T08:48:33.944Z"
+      "display_order": 7
     },
     {
       "id": "bons-du-tresor",
@@ -634,7 +658,11 @@
         "en": "Includes short-term and medium/long-term sovereign paper issued by the State Treasury. In Algeria, Treasury paper represents a core asset allocation pillar. Prudential note: Sovereign exposures may benefit from preferential prudential treatment in accordance with applicable regulatory frameworks and qualifying criteria.",
         "ar": "تشمل سندات الخزينة قصيرة ومتوسطة وطويلة الأجل، وتعتبر عنصراً أساسياً في توظيف السيولة الفائضة وإدارة الأصول. ملاحظة تنظيمية: قد تستفيد السندات السيادية من معاملة حيطية تفضيلية وفقاً للضوابط المعمول بها وطبيعة الالتزام."
       },
-      "formula": "Bons du Trésor = Bons du Trésor à Court Terme + Bons du Trésor à Moyen et Long Terme + Titres assimilés",
+      "formula": {
+        "fr": "Portefeuille BDT = Bons du trésor assimilables (BTA) + Bons d'équipement (BEA) + Autres titres d'État",
+        "en": "Treasury Portfolio = Assimilable Treasury Bonds (BTA) + Equipment Bonds (BEA) + Other Government Securities",
+        "ar": "محفظة سندات الخزينة = سندات الخزينة المماثلة (BTA) + سندات التجهيز (BEA) + الأوراق المالية الحكومية الأخرى"
+      },
       "formula_latex": "\\\\text{BDT} = \\\\sum \\\\text{Titres d\\'État}",
       "interpretation": {
         "fr": "Une part élevée traduit une stratégie d'allocation prudente ou un excédent structurel de liquidité réinvesti en actifs souverains sans risque de contrepartie privée.",
@@ -642,17 +670,20 @@
         "ar": "ارتفاع حصة السندات يعكس توجهاً استثمارياً محافظاً أو إعادة توظيف لفائض السيولة في أصول سيادية."
       },
       "example": {
-        "fr": "Données 2024, Édition ABIX 2025, périmètre de 20 banques : Portefeuille sectoriel de Bons du Trésor de 3 800 Mds DZD.",
-        "en": "2024 data, ABIX 2025 edition, 20-bank scope: Sector Treasury securities portfolio of 3,800 billion DZD.",
-        "ar": "بيانات 2024، إصدار ABIX 2025، نطاق 20 بنكاً: إجمالي محفظة سندات الخزينة 3,800 مليار دج."
+        "fr": "Exemple pédagogique : Une banque place 50 Mds DZD de ses liquidités excédentaires dans des obligations d'État, ce montant représente son portefeuille de bons du trésor.",
+        "en": "Pedagogical example: A bank invests 50 billion DZD of its excess liquidity in government bonds; this amount represents its treasury bond portfolio.",
+        "ar": "مثال تعليمي: يستثمر البنك 50 مليار دج من سيولته الفائضة في سندات حكومية، يمثل هذا المبلغ محفظة سندات الخزينة الخاصة به."
       },
-      "unit": "Mds DZD",
+      "unit": {
+        "fr": "Mds DZD",
+        "en": "DZD bn",
+        "ar": "مليار دج"
+      },
       "performance_direction": "neutral",
       "higher_is_better": null,
       "threshold_type": "NONE",
       "regulatory_threshold": null,
       "abix_benchmark": null,
-      "example_vintage": "Données 2024, Édition ABIX 2025, périmètre de 20 banques",
       "modules": [
         "Vue Secteur",
         "Profil Banque",
@@ -665,10 +696,7 @@
         "credits-clientele",
         "bdt-total-actif"
       ],
-      "display_order": 8,
-      "is_active": true,
-      "created_at": "2026-08-29T08:48:33.944Z",
-      "updated_at": "2026-08-29T08:48:33.944Z"
+      "display_order": 8
     },
     {
       "id": "return-on-equity",
@@ -707,7 +735,11 @@
         "en": "ABIX Data Explorer does not recalculate ROE: it preserves the value published or imported from the annual source. The exact denominator may therefore follow the source convention (average, closing, or adjusted equity). Verify that definition in the source document; ROAE remains a separate educational concept.",
         "ar": "لا يعيد ABIX Data Explorer احتساب ROE، بل يحافظ على القيمة المنشورة أو المستوردة من المصدر السنوي. وقد يتبع المقام اتفاقية المصدر، سواء حقوق الملكية المتوسطة أو الختامية أو المعدلة. يجب التحقق من التعريف في وثيقة المصدر، بينما يبقى ROAE مفهوماً تعليمياً منفصلاً."
       },
-      "formula": "ROE = valeur publiée/importée (convention du document source)",
+      "formula": {
+        "fr": "ROE = (Résultat Net de l'exercice ÷ Fonds Propres moyens ou de fin de période) × 100",
+        "en": "ROE = (Net Income for the period ÷ Average or Year-end Equity) × 100",
+        "ar": "العائد على حقوق الملكية = (صافي الدخل للفترة ÷ متوسط أو رصيد نهاية الفترة لحقوق الملكية) × 100"
+      },
       "formula_latex": "\\\\text{ROE}_{ABIX} = \\\\text{valeur publiée ou importée}",
       "interpretation": {
         "fr": "Un ROE élevé témoigne d'une rentabilité financière robuste, mais doit être analysé conjointement avec le levier financier et le profil de risque.",
@@ -715,17 +747,20 @@
         "ar": "يشير العائد المرتفع إلى ربحية مالية قوية، ويجب تحليله بالاقتران مع مستوى الرافعة المالية والمخاطر."
       },
       "example": {
-        "fr": "Données 2024, Édition ABIX 2025, périmètre de 20 banques : ROE médian sectoriel de 9,8 %, avec des écarts allant de 3,5 % à plus de 22 % selon les modèles d'affaires.",
-        "en": "2024 data, ABIX 2025 edition, 20-bank scope: Sector median ROE of 9.8%, ranging from 3.5% to over 22%.",
-        "ar": "بيانات 2024، إصدار ABIX 2025، نطاق 20 بنكاً: وسيط العائد على حقوق الملكية 9.8%، مع تفاوتات بين 3.5% وأكثر من 22%."
+        "fr": "Exemple pédagogique : Si le résultat net est de 10 Mds DZD pour des fonds propres de 100 Mds DZD, le ROE est de 10 %.",
+        "en": "Pedagogical example: If the net income is 10 billion DZD for an equity of 100 billion DZD, the ROE is 10%.",
+        "ar": "مثال تعليمي: إذا كانت النتيجة الصافية 10 مليارات دج لحقوق ملكية قدرها 100 مليار دج، فإن العائد على حقوق الملكية هو 10%."
       },
       "unit": "%",
       "performance_direction": "higher_is_better",
       "higher_is_better": true,
       "threshold_type": "ABIX_BENCHMARK",
       "regulatory_threshold": null,
-      "abix_benchmark": "Modéré < 8 %, Standard sectoriel 8-15 %, Élevé > 15 %",
-      "example_vintage": "Données 2024, Édition ABIX 2025, périmètre de 20 banques",
+      "abix_benchmark": {
+        "fr": "Modéré < 8 %, Standard sectoriel 8-15 %, Élevé > 15 %",
+        "en": "Moderate < 8% | Sector Standard 8-15% | High > 15%",
+        "ar": "معتدل < 8% | معيار القطاع 8-15% | مرتفع > 15%"
+      },
       "modules": [
         "Vue Secteur",
         "Classements",
@@ -739,10 +774,7 @@
         "fonds-propres",
         "resultat-net"
       ],
-      "display_order": 9,
-      "is_active": true,
-      "created_at": "2026-08-29T08:48:33.944Z",
-      "updated_at": "2026-08-29T08:48:33.944Z"
+      "display_order": 9
     },
     {
       "id": "return-on-average-equity",
@@ -778,7 +810,11 @@
         "en": "Educational concept: ROAE would use average opening and closing equity. ABIX does not currently calculate it or display ROAE values in bank profiles.",
         "ar": "مفهوم تعليمي: يستخدم ROAE متوسط حقوق الملكية الافتتاحية والختامية. لا يحسبه ABIX حالياً ولا يعرض له قيماً في ملفات البنوك."
       },
-      "formula": "ROAE = [Résultat Net ÷ ((Fonds Propres t + Fonds Propres t-1) ÷ 2)] × 100",
+      "formula": {
+        "fr": "ROAE = (Résultat Net ÷ [ (Fonds Propres N + Fonds Propres N-1) ÷ 2 ]) × 100",
+        "en": "ROAE = (Net Income ÷ [ (Equity Y + Equity Y-1) ÷ 2 ]) × 100",
+        "ar": "العائد على متوسط حقوق الملكية = (صافي الدخل ÷ [ (حقوق الملكية للسنة + حقوق الملكية للسنة السابقة) ÷ 2 ]) × 100"
+      },
       "formula_latex": "\\\\text{ROAE} = \\\\frac{\\\\text{Résultat Net}}{\\\\frac{\\\\text{Fonds Propres}_t + \\\\text{Fonds Propres}_{t-1}}{2}} \\\\times 100",
       "interpretation": {
         "fr": "Privilégié pour les analyses pluriannuelles fines en présence de fortes variations de fonds propres en cours d'exercice.",
@@ -805,10 +841,7 @@
         "return-on-assets",
         "fonds-propres"
       ],
-      "display_order": 10,
-      "is_active": true,
-      "created_at": "2026-08-29T08:48:33.944Z",
-      "updated_at": "2026-08-29T08:48:33.944Z"
+      "display_order": 10
     },
     {
       "id": "return-on-assets",
@@ -847,7 +880,11 @@
         "en": "In ABIX Data Explorer, ROA is computed on closing balance sheet assets as of December 31. It measures the bank's ability to generate earnings per unit of asset managed.",
         "ar": "في ABIX Data Explorer، يُحتسب ROA على ميزانية الختام في 31 ديسمبر. يقيس قدرة البنك على توليد أرباح صافية من كل دينار من الأصول المدارة."
       },
-      "formula": "ROA = (Résultat Net ÷ Total Bilan de clôture) × 100",
+      "formula": {
+        "fr": "ROA = (Résultat Net de l'exercice ÷ Total Bilan de fin de période) × 100",
+        "en": "ROA = (Net Income for the period ÷ Year-end Total Assets) × 100",
+        "ar": "العائد على الأصول = (صافي الدخل للفترة ÷ إجمالي الميزانية في نهاية الفترة) × 100"
+      },
       "formula_latex": "\\\\text{ROA} = \\\\frac{\\\\text{Résultat Net}}{\\\\text{Total Bilan}_{\\\\text{clôture}}} \\\\times 100",
       "interpretation": {
         "fr": "Un indicateur clé de rentabilité industrielle. Dans le secteur bancaire, un ROA supérieur à 1,5 % témoigne d'une rentabilité opérationnelle robuste.",
@@ -855,17 +892,20 @@
         "ar": "مؤشر رئيسي للمردودية الاقتصادية. في القطاع المصرفي، يشير ROA الأعلى من 1.5% إلى أداء تشغيلي قوي."
       },
       "example": {
-        "fr": "Données 2024, Édition ABIX 2025, périmètre de 20 banques : ROA moyen sectoriel de 1,12 %, avec des pointes supérieures à 2,5 % pour certaines banques privées spécialisées.",
-        "en": "2024 data, ABIX 2025 edition, 20-bank scope: Sector average ROA of 1.12%, with peaks above 2.5% among private specialized institutions.",
-        "ar": "بيانات 2024، إصدار ABIX 2025، نطاق 20 بنكاً: متوسط ROA القطاعي 1.12%، ويتجاوز 2.5% لدى بعض البنوك الخاصة المتخصصة."
+        "fr": "Exemple pédagogique : Si le résultat net est de 10 Mds DZD pour un total bilan de 1000 Mds DZD, le ROA est de 1 %.",
+        "en": "Pedagogical example: If the net income is 10 billion DZD for total assets of 1000 billion DZD, the ROA is 1%.",
+        "ar": "مثال تعليمي: إذا كانت النتيجة الصافية 10 مليارات دج لإجمالي ميزانية قدره 1000 مليار دج، فإن العائد على الأصول هو 1%."
       },
       "unit": "%",
       "performance_direction": "higher_is_better",
       "higher_is_better": true,
       "threshold_type": "ABIX_BENCHMARK",
       "regulatory_threshold": null,
-      "abix_benchmark": "Modéré < 0,8 %, Moyen 0,8-1,5 %, Élevé > 1,5 %",
-      "example_vintage": "Données 2024, Édition ABIX 2025, périmètre de 20 banques",
+      "abix_benchmark": {
+        "fr": "Modéré < 0,8 %, Moyen 0,8-1,5 %, Élevé > 1,5 %",
+        "en": "Moderate < 0.8% | Average 0.8-1.5% | High > 1.5%",
+        "ar": "معتدل < 0.8% | متوسط 0.8-1.5% | مرتفع > 1.5%"
+      },
       "modules": [
         "Vue Secteur",
         "Classements",
@@ -879,10 +919,7 @@
         "total-bilan",
         "resultat-net"
       ],
-      "display_order": 11,
-      "is_active": true,
-      "created_at": "2026-08-29T08:48:33.944Z",
-      "updated_at": "2026-08-29T08:48:33.944Z"
+      "display_order": 11
     },
     {
       "id": "return-on-average-assets",
@@ -918,7 +955,11 @@
         "en": "Educational concept: ROAA would use average opening and closing assets. ABIX does not currently calculate it or display ROAA values in bank profiles.",
         "ar": "مفهوم تعليمي: يستخدم ROAA متوسط الأصول الافتتاحية والختامية. لا يحسبه ABIX حالياً ولا يعرض له قيماً في ملفات البنوك."
       },
-      "formula": "ROAA = [Résultat Net ÷ ((Total Bilan t + Total Bilan t-1) ÷ 2)] × 100",
+      "formula": {
+        "fr": "ROAA = (Résultat Net ÷ [ (Total Bilan N + Total Bilan N-1) ÷ 2 ]) × 100",
+        "en": "ROAA = (Net Income ÷ [ (Total Assets Y + Total Assets Y-1) ÷ 2 ]) × 100",
+        "ar": "العائد على متوسط الأصول = (صافي الدخل ÷ [ (إجمالي الميزانية للسنة + إجمالي الميزانية للسنة السابقة) ÷ 2 ]) × 100"
+      },
       "formula_latex": "\\\\text{ROAA} = \\\\frac{\\\\text{Résultat Net}}{\\\\frac{\\\\text{Total Bilan}_t + \\\\text{Total Bilan}_{t-1}}{2}} \\\\times 100",
       "interpretation": {
         "fr": "Standard international recommandé pour neutraliser les effets de saisonnalité ou d'expansion brutale de fin d'exercice.",
@@ -945,10 +986,7 @@
         "return-on-equity",
         "total-bilan"
       ],
-      "display_order": 12,
-      "is_active": true,
-      "created_at": "2026-08-29T08:48:33.944Z",
-      "updated_at": "2026-08-29T08:48:33.944Z"
+      "display_order": 12
     },
     {
       "id": "coefficient-exploitation",
@@ -988,7 +1026,11 @@
         "en": "The CIR measures operational efficiency. A lower ratio indicates higher operational productivity in converting revenues to gross profit. In ABIX scoring models, it operates as an inverted metric (lower is better).",
         "ar": "يقيس الكفاءة التشغيلية والإنتاجية. كلما انخفض المعامل، زادت كفاءة البنك في تحويل إيراداته إلى أرباح تشغيلية. في تصنيف ABIX، يعد هذا المؤشر ذا اتجاه عكسي (الأقل = أفضل)."
       },
-      "formula": "Coefficient d'Exploitation = [(Frais généraux + Amortissements) ÷ Produit Net Bancaire] × 100",
+      "formula": {
+        "fr": "CIR = (Frais Généraux de fonctionnement ÷ Produit Net Bancaire) × 100",
+        "en": "CIR = (General Operating Expenses ÷ Net Banking Income) × 100",
+        "ar": "نسبة التكلفة إلى الدخل = (المصاريف العامة للتشغيل ÷ الناتج البنكي الصافي) × 100"
+      },
       "formula_latex": "\\\\text{CIR} = \\\\frac{\\\\text{Frais généraux} + \\\\text{Amortissements}}{\\\\text{PNB}} \\\\times 100",
       "interpretation": {
         "fr": "Un ratio bas traduit une haute productivité opérationnelle. Un ratio supérieur à 60-65 % signale une structure de coûts lourde absorbant une fraction excessive du PNB.",
@@ -996,17 +1038,20 @@
         "ar": "يدل المعامل المنخفض على كفاءة تشغيلية ممتازة، بينما يشير تجاوزه لـ 60-65% إلى ثقل المصاريف العامة."
       },
       "example": {
-        "fr": "Données 2024, Édition ABIX 2025, périmètre de 20 banques : Coefficient d'exploitation médian sectoriel de 43,5 %, les banques les plus efficientes se situant sous les 35 %.",
-        "en": "2024 data, ABIX 2025 edition, 20-bank scope: Sector median CIR of 43.5%, top-tier efficient banks standing below 35%.",
-        "ar": "بيانات 2024، إصدار ABIX 2025، نطاق 20 بنكاً: وسيط معامل الاستغلال القطاعي 43.5%، مع نزول البنوك الأكثر كفاءة دون 35%."
+        "fr": "Exemple pédagogique : Si les frais de fonctionnement sont de 25 Mds DZD pour un PNB de 50 Mds DZD, le coefficient d'exploitation est de 50 %.",
+        "en": "Pedagogical example: If operating expenses are 25 billion DZD for an NBI of 50 billion DZD, the cost-to-income ratio is 50%.",
+        "ar": "مثال تعليمي: إذا كانت مصاريف التشغيل 25 مليار دج لناتج بنكي صافي قدره 50 مليار دج، فإن معامل الاستغلال هو 50%."
       },
       "unit": "%",
       "performance_direction": "lower_is_better",
       "higher_is_better": false,
       "threshold_type": "ABIX_BENCHMARK",
       "regulatory_threshold": null,
-      "abix_benchmark": "Excellente efficience < 40 %, Moyen 40-55 %, Faible efficience > 60 %",
-      "example_vintage": "Données 2024, Édition ABIX 2025, périmètre de 20 banques",
+      "abix_benchmark": {
+        "fr": "Excellente efficience < 40 %, Moyen 40-55 %, Faible efficience > 60 %",
+        "en": "Excellent Efficiency < 40% | Average 40-55% | Low Efficiency > 60%",
+        "ar": "كفاءة ممتازة < 40% | متوسط 40-55% | كفاءة منخفضة > 60%"
+      },
       "modules": [
         "Vue Secteur",
         "Classements",
@@ -1019,48 +1064,50 @@
         "resultat-brut-exploitation",
         "conversion-rbe-rn"
       ],
-      "display_order": 13,
-      "is_active": true,
-      "created_at": "2026-08-29T08:48:33.944Z",
-      "updated_at": "2026-08-29T08:48:33.944Z"
+      "display_order": 13
     },
     {
       "id": "marge-interet-nette",
       "slug": "marge-interet-nette",
       "term": {
-        "fr": "Marge d'Intérêt Nette (NIM)",
+        "fr": "Marge d’Intérêt Nette (NIM)",
         "en": "Net Interest Margin (NIM)",
-        "ar": "هامش الفائدة الصافي"
+        "ar": "هامش الفائدة الصافي (NIM)"
       },
       "acronym": "NIM",
       "aliases": {
         "fr": [
           "NIM",
-          "Marge nette d'intermédiation",
-          "Productivité du bilan"
+          "Marge nette d’intérêt",
+          "Marge nette d’intermédiation"
         ],
         "en": [
-          "Net Interest Margin",
           "NIM",
+          "Net Interest Margin",
           "Interest Spread Margin"
         ],
         "ar": [
+          "NIM",
           "هامش الفائدة الصافي",
-          "هامش الوساطة المصرفية"
+          "هامش الوساطة الصافي"
         ]
       },
       "category": "ratios_profitability",
       "short_definition": {
-        "fr": "Rapport entre la marge d'intérêt nette perçue et le volume des actifs productifs d'intérêts.",
-        "en": "Ratio of net interest income earned to interest-earning assets.",
-        "ar": "النسبة بين دخل الفائدة الصافي وإجمالي الأصول المنتجة للفوائد."
+        "fr": "Rapport entre le revenu net d’intérêts et le volume moyen des actifs productifs d’intérêts.",
+        "en": "Ratio of net interest income to average interest-earning assets.",
+        "ar": "نسبة صافي دخل الفوائد إلى متوسط الأصول المدرة للفوائد."
       },
       "detailed_definition": {
-        "fr": "La Marge d'Intérêt Nette mesure la rentabilité brute de l'activité d'intermédiation financière (prêts, titres obligataires, dépôts rémunérés). Note méthodologique ABIX : Dans les restitutions sectorielles où le détail fin des actifs productifs moyens n'est pas disponible de façon homogène, ABIX utilise le ratio proxy PNB / Total Bilan (Productivité globale du bilan).",
-        "en": "NIM measures the core spread profitability of financial intermediation. ABIX methodology note: Where detailed average earning assets are not homogeneously reported across all banks, ABIX applies the NBI / Total Assets proxy ratio.",
-        "ar": "يقيس الهامش الصافي لنشاط الوساطة المصرفية. ملاحظة ABIX: في غياب تفصيل متجانس للأصول المنتجة، تعتمد المنصة نسبة PNB / إجمالي الميزانية كمؤشر بديل للإنتاجية."
+        "fr": "Le NIM mesure la rentabilité de l’intermédiation financière en rapportant le revenu net d’intérêts au volume moyen des actifs productifs d’intérêts. Note méthodologique ABIX : lorsque le détail des actifs productifs moyens n’est pas disponible de façon homogène, ABIX peut utiliser le ratio PNB / Total Bilan comme un proxy séparé de rentabilité. Ce proxy ne doit pas être interprété comme une Marge d’Intérêt Nette stricte.",
+        "en": "Net Interest Margin measures the profitability of financial intermediation by relating net interest income to average interest-earning assets. ABIX Methodology Note: when homogeneous average interest-earning asset data are unavailable, ABIX may use NBI / Total Assets as a separate profitability proxy. This proxy should not be interpreted as a strict Net Interest Margin.",
+        "ar": "يقيس هامش الفائدة الصافي ربحية نشاط الوساطة المالية من خلال مقارنة صافي دخل الفوائد بمتوسط الأصول المدرة للفوائد. ملاحظة منهجية ABIX: عند عدم توفر بيانات متجانسة حول متوسط الأصول المدرة للفوائد، قد يستخدم ABIX نسبة الناتج البنكي الصافي إلى إجمالي الميزانية كمؤشر بديل مستقل للربحية. ولا ينبغي تفسير هذا المؤشر على أنه هامش فائدة صافٍ بالمعنى الدقيق."
       },
-      "formula": "NIM théorique = (Marge d'intérêt nette ÷ Actifs productifs moyens) × 100 | Proxy ABIX = (PNB ÷ Total Bilan) × 100",
+      "formula": {
+        "fr": "NIM théorique = (Revenu net d’intérêts ÷ Actifs productifs moyens) × 100 | Proxy ABIX = (PNB ÷ Total Bilan) × 100",
+        "en": "Theoretical NIM = (Net Interest Income ÷ Average Interest-Earning Assets) × 100 | ABIX Proxy = (NBI ÷ Total Assets) × 100",
+        "ar": "هامش الفائدة الصافي النظري = (صافي دخل الفوائد ÷ متوسط الأصول المدرة للفوائد) × 100 | مؤشر ABIX البديل = (الناتج البنكي الصافي ÷ إجمالي الميزانية) × 100"
+      },
       "formula_latex": "\\\\text{NIM} = \\\\frac{\\\\text{Marge d\\'intérêt}}{\\\\text{Actifs productifs}} \\\\times 100",
       "interpretation": {
         "fr": "Une marge confortable reflète un bon pouvoir de tarification sur les crédits et une ressource clientèle bon marché.",
@@ -1068,17 +1115,20 @@
         "ar": "يعكس الهامش الجيد تسعيراً فعالاً للقروض مع كلفة منخفضة لودائع العملاء."
       },
       "example": {
-        "fr": "Données 2024, Édition ABIX 2025, périmètre de 20 banques : Ratio proxy PNB / Total bilan sectoriel moyen de 2,35 %.",
-        "en": "2024 data, ABIX 2025 edition, 20-bank scope: Sector average NBI / Total Assets proxy of 2.35%.",
-        "ar": "بيانات 2024، إصدار ABIX 2025، نطاق 20 بنكاً: متوسط نسبة PNB / الميزانية القطاعي 2.35%."
+        "fr": "Exemple pédagogique : si une banque génère 5 Mds DZD de revenu net d’intérêts sur 100 Mds DZD d’actifs productifs moyens, son NIM est de 5 %.",
+        "en": "Pedagogical example: if a bank generates 5 billion DZD in net interest income on 100 billion DZD of average interest-earning assets, its NIM is 5%.",
+        "ar": "مثال تعليمي: إذا حقق بنك 5 مليارات دج من صافي دخل الفوائد على متوسط أصول مدرة للفوائد قدره 100 مليار دج، فإن هامش الفائدة الصافي لديه يبلغ 5%."
       },
       "unit": "%",
       "performance_direction": "higher_is_better",
       "higher_is_better": true,
       "threshold_type": "ABIX_BENCHMARK",
       "regulatory_threshold": null,
-      "abix_benchmark": "Standard sectoriel 2,0-3,5 %",
-      "example_vintage": "Données 2024, Édition ABIX 2025, périmètre de 20 banques",
+      "abix_benchmark": {
+        "fr": "Standard sectoriel 2,0-3,5 %",
+        "en": "Sector Standard: 2.0-3.5%",
+        "ar": "معيار القطاع: 2.0-3.5%"
+      },
       "modules": [
         "Vue Secteur",
         "Profil Banque",
@@ -1089,10 +1139,7 @@
         "total-bilan",
         "ratio-prets-depots"
       ],
-      "display_order": 14,
-      "is_active": true,
-      "created_at": "2026-08-29T08:48:33.944Z",
-      "updated_at": "2026-08-29T08:48:33.944Z"
+      "display_order": 14
     },
     {
       "id": "marge-nette-pnb",
@@ -1130,7 +1177,11 @@
         "en": "Net Profit Margin assesses the overall capacity of the bank to retain revenues after operating costs, loan impairment provisions, and corporate taxes.",
         "ar": "يقيس قدرة البنك على الاحتفاظ بإيراداته بعد تغطية المصاريف العامة ومخصصات المخاطر والضرائب."
       },
-      "formula": "Marge Nette sur PNB = (Résultat Net ÷ Produit Net Bancaire) × 100",
+      "formula": {
+        "fr": "Marge Nette sur PNB = (Résultat Net ÷ Produit Net Bancaire) × 100",
+        "en": "Net Margin on NBI = (Net Income ÷ Net Banking Income) × 100",
+        "ar": "الهامش الصافي على الناتج البنكي = (صافي الدخل ÷ الناتج البنكي الصافي) × 100"
+      },
       "formula_latex": "\\\\text{Marge Nette} = \\\\frac{\\\\text{Résultat Net}}{\\\\text{PNB}} \\\\times 100",
       "interpretation": {
         "fr": "Plus le ratio est élevé, plus le modèle opérationnel de la banque est rentable et résilient aux chocs de coûts.",
@@ -1138,17 +1189,20 @@
         "ar": "كلما ارتفعت النسبة، دل ذلك على نموذج تشغيلي مربح وقادر على استيعاب ارتفاع التكاليف."
       },
       "example": {
-        "fr": "Données 2024, Édition ABIX 2025, périmètre de 20 banques : Taux de marge nette médian de 42,8 % sur la place algérienne.",
-        "en": "2024 data, ABIX 2025 edition, 20-bank scope: Sector median net profit margin of 42.8%.",
-        "ar": "بيانات 2024، إصدار ABIX 2025، نطاق 20 بنكاً: وسيط هامش الربح الصافي القطاعي 42.8%."
+        "fr": "Exemple pédagogique : Si le résultat net est de 10 Mds DZD pour un PNB de 40 Mds DZD, la marge nette sur PNB est de 25 %.",
+        "en": "Pedagogical example: If the net income is 10 billion DZD for an NBI of 40 billion DZD, the net margin on NBI is 25%.",
+        "ar": "مثال تعليمي: إذا كانت النتيجة الصافية 10 مليارات دج لناتج بنكي صافي قدره 40 مليار دج، فإن الهامش الصافي على الناتج هو 25%."
       },
       "unit": "%",
       "performance_direction": "higher_is_better",
       "higher_is_better": true,
       "threshold_type": "ABIX_BENCHMARK",
       "regulatory_threshold": null,
-      "abix_benchmark": "Standard sectoriel 35-50 %",
-      "example_vintage": "Données 2024, Édition ABIX 2025, périmètre de 20 banques",
+      "abix_benchmark": {
+        "fr": "Standard sectoriel 35-50 %",
+        "en": "Sector Standard: 35-50%",
+        "ar": "معيار القطاع: 35-50%"
+      },
       "modules": [
         "Vue Secteur",
         "Profil Banque",
@@ -1159,10 +1213,7 @@
         "resultat-net",
         "conversion-rbe-rn"
       ],
-      "display_order": 15,
-      "is_active": true,
-      "created_at": "2026-08-29T08:48:33.944Z",
-      "updated_at": "2026-08-29T08:48:33.944Z"
+      "display_order": 15
     },
     {
       "id": "conversion-rbe-rn",
@@ -1200,7 +1251,11 @@
         "en": "This indicator compares two reported accounting aggregates. The gap between GOI and net profit may reflect cost of risk, taxation and non-operating items; the ratio alone does not establish causality.",
         "ar": "يقارن هذا المؤشر بين مجموعين محاسبيين منشورين. وقد ينتج الفارق بين النتيجة التشغيلية والنتيجة الصافية عن تكلفة المخاطر والضرائب وعناصر أخرى؛ ولا تثبت النسبة وحدها علاقة سببية."
       },
-      "formula": "Taux de Conversion RBE → RN = (Résultat Net ÷ RBE) × 100",
+      "formula": {
+        "fr": "Taux de conversion = (Résultat Net ÷ Résultat Brut d'Exploitation) × 100",
+        "en": "Conversion Rate = (Net Income ÷ Gross Operating Income) × 100",
+        "ar": "معدل التحويل = (صافي الدخل ÷ إجمالي نتيجة الاستغلال) × 100"
+      },
       "formula_latex": "\\\\text{Taux de Conversion} = \\\\frac{\\\\text{Résultat Net}}{\\\\text{RBE}} \\\\times 100",
       "interpretation": {
         "fr": "À lire dans le temps et avec les composantes disponibles. Une variation décrit une conversion comptable différente, sans diagnostic causal automatique.",
@@ -1208,9 +1263,9 @@
         "ar": "تُقرأ النسبة عبر الزمن ومع المكونات المتاحة. ويصف التغير تحويلاً محاسبياً مختلفاً من دون تشخيص سببي تلقائي."
       },
       "example": {
-        "fr": "Données 2024, Édition ABIX 2025, périmètre de 20 banques : Taux de conversion médian de 75,5 %.",
-        "en": "2024 data, ABIX 2025 edition, 20-bank scope: Sector median conversion rate of 75.5%.",
-        "ar": "بيانات 2024، إصدار ABIX 2025، نطاق 20 بنكاً: وسيط معدل التحويل القطاعي 75.5%."
+        "fr": "Exemple pédagogique : Si le Résultat Net est de 10 Mds DZD et le RBE de 20 Mds DZD, le taux de conversion est de 50 %.",
+        "en": "Pedagogical example: If the Net Income is 10 billion DZD and the GOI is 20 billion DZD, the conversion rate is 50%.",
+        "ar": "مثال تعليمي: إذا كانت النتيجة الصافية 10 مليارات دج والنتيجة الإجمالية للاستغلال 20 مليار دج، فإن معدل التحويل هو 50%."
       },
       "unit": "%",
       "performance_direction": "contextual",
@@ -1218,7 +1273,6 @@
       "threshold_type": "NONE",
       "regulatory_threshold": null,
       "abix_benchmark": null,
-      "example_vintage": "Données 2024, Édition ABIX 2025, périmètre de 20 banques",
       "modules": [
         "Vue Secteur",
         "Profil Banque",
@@ -1229,10 +1283,7 @@
         "resultat-net",
         "pression-provision-rbe"
       ],
-      "display_order": 16,
-      "is_active": true,
-      "created_at": "2026-08-29T08:48:33.944Z",
-      "updated_at": "2026-08-29T08:48:33.944Z"
+      "display_order": 16
     },
     {
       "id": "ratio-solvabilite",
@@ -1271,7 +1322,11 @@
         "en": "Measures the prudential capital cushion against risk-weighted assets. Algerian regulatory framework: Pursuant to Bank of Algeria Regulation No. 2014-01 of February 16, 2014, mandatory requirements are: 1) Minimum global capital adequacy ratio: at least 9.5% of risk-weighted assets; 2) Tier 1 capital: at least 7.0% of risk-weighted assets. ABIX comfort benchmark: An indicative comfort range in the local market is generally situated between 14% and 18%.",
         "ar": "يقيس الملاءة الحيطية للبنك أمام الأصول المرجحة بالمخاطر. الإطار التنظيمي الجزائري: وفقاً لنظام بنك الجزائر رقم 2014-01، فإن الحدود الإلزامية هي: 1) معدل الملاءة الإجمالي الأدنى: 9.5% على الأقل من المخاطر المرجحة؛ 2) الأموال الخاصة الأساسية (Tier 1): 7.0% على الأقل. معيار الراحة الموصى به لدى ABIX: يقع عادة بين 14% و18%."
       },
-      "formula": "Ratio de Solvabilité = (Fonds Propres Réglementaires Globaux ÷ Actifs Pondérés par les Risques) × 100",
+      "formula": {
+        "fr": "CAR = (Fonds Propres Réglementaires Globaux ÷ Total des Risques Pondérés (RWA)) × 100",
+        "en": "CAR = (Total Regulatory Capital ÷ Total Risk-Weighted Assets (RWA)) × 100",
+        "ar": "معدل الملاءة = (إجمالي رأس المال التنظيمي ÷ إجمالي الأصول المرجحة بالمخاطر (RWA)) × 100"
+      },
       "formula_latex": "\\\\text{CAR} = \\\\frac{\\\\text{Fonds Propres Réglementaires}}{\\\\text{RWA}} \\\\times 100",
       "interpretation": {
         "fr": "Un ratio supérieur à l'exigence légale de 9,5 % atteste de la conformité réglementaire. Un niveau très élevé (> 20 %) assure une sécurité maximale mais peut refléter une sous-utilisation des capacités de crédit.",
@@ -1279,17 +1334,24 @@
         "ar": "تجاوز الحد الأدنى القانوني 9.5% يؤكد الامتثال التنظيمي. وتجاوز 20% يمنح أماناً عالياً مع احتمال وجود تحفظ في منح القروض."
       },
       "example": {
-        "fr": "Données 2024, Édition ABIX 2025, périmètre bancaire algérien : Ratio moyen sectoriel estimé à ~16,2 %, largement au-dessus du plancher réglementaire de 9,5 %.",
-        "en": "2024 data, ABIX 2025 edition: Sector average CAR estimated at ~16.2%, well above the 9.5% regulatory floor.",
-        "ar": "بيانات 2024، إصدار ABIX 2025: متوسط معدل الملاءة القطاعي يقارب 16.2%، وهو أعلى بكثير من الحد الأدنى التنظيمي 9.5%."
+        "fr": "Exemple pédagogique : Si les fonds propres réglementaires sont de 20 Mds DZD pour des actifs pondérés des risques de 100 Mds DZD, le ratio de solvabilité est de 20 %.",
+        "en": "Pedagogical example: If regulatory capital is 20 billion DZD against risk-weighted assets of 100 billion DZD, the solvency ratio is 20%.",
+        "ar": "مثال تعليمي: إذا كانت الأموال الخاصة التنظيمية 20 مليار دج مقابل أصول مرجحة بالمخاطر قدرها 100 مليار دج، فإن نسبة الملاءة هي 20%."
       },
       "unit": "%",
       "performance_direction": "higher_is_better",
       "higher_is_better": true,
       "threshold_type": "REGULATORY",
-      "regulatory_threshold": "Solvabilité globale >= 9,5 % | Tier 1 >= 7,0 % (Règlement BA n° 2014-01)",
-      "abix_benchmark": "Repère de confort ABIX >= 14-18 %",
-      "example_vintage": "Données 2024, Édition ABIX 2025, périmètre bancaire algérien",
+      "regulatory_threshold": {
+        "fr": "Solvabilité globale ≥ 9,5 % | Tier 1 ≥ 7,0 % (Règlement Banque d'Algérie n° 2014-01)",
+        "en": "Overall Solvency ≥ 9.5% | Tier 1 ≥ 7.0% (Bank of Algeria Regulation No. 2014-01)",
+        "ar": "الملاءة الإجمالية ≥ 9.5% | الشريحة الأولى (Tier 1) ≥ 7.0% (نظام بنك الجزائر رقم 2014-01)"
+      },
+      "abix_benchmark": {
+        "fr": "Repère de confort ABIX : 14–18 %",
+        "en": "ABIX Comfort Range: 14–18%",
+        "ar": "المعيار الاسترشادي ABIX: نطاق الراحة 14–18%"
+      },
       "modules": [
         "Vue Secteur",
         "Profil Banque",
@@ -1302,10 +1364,7 @@
         "fonds-propres-total-bilan",
         "taux-npl"
       ],
-      "display_order": 17,
-      "is_active": true,
-      "created_at": "2026-08-29T08:48:33.944Z",
-      "updated_at": "2026-08-29T08:48:33.944Z"
+      "display_order": 17
     },
     {
       "id": "tier-1-ratio",
@@ -1343,7 +1402,11 @@
         "en": "Tier 1 ratio evaluates the bank's capacity to absorb immediate losses on a going-concern basis. Algerian regulation: BA Regulation No. 2014-01 mandates a minimum Tier 1 capital ratio of 7.0% of risk-weighted assets.",
         "ar": "يقيم قدرة البنك على امتصاص الخسائر الفورية مع استمرار النشاط. الإطار التنظيمي الجزائري: يحدد نظام بنك الجزائر 2014-01 الحد الأدنى الإلزامي بـ 7.0% من الأصول المرجحة."
       },
-      "formula": "Ratio Tier 1 = (Fonds Propres de Base Tier 1 ÷ Actifs Pondérés par les Risques) × 100",
+      "formula": {
+        "fr": "Ratio Tier 1 = (Fonds Propres de Base (Tier 1) ÷ Total des Risques Pondérés (RWA)) × 100",
+        "en": "Tier 1 Ratio = (Tier 1 Core Capital ÷ Total Risk-Weighted Assets (RWA)) × 100",
+        "ar": "نسبة الشريحة الأولى = (رأس المال الأساسي للشريحة الأولى (Tier 1) ÷ إجمالي الأصول المرجحة بالمخاطر (RWA)) × 100"
+      },
       "formula_latex": "\\\\text{Ratio Tier 1} = \\\\frac{\\\\text{Tier 1 Capital}}{\\\\text{RWA}} \\\\times 100",
       "interpretation": {
         "fr": "Un ratio Tier 1 robuste garantit la pérennité financière de la banque sans nécessiter de recapitalisation d'urgence en cas de dégradation économique.",
@@ -1351,17 +1414,24 @@
         "ar": "يضمن معدل Tier 1 القوي استدامة البنك مالياً دون الحاجة إلى ضخ رأسمال استعجالي في فترات الأزمات."
       },
       "example": {
-        "fr": "Données 2024, Édition ABIX 2025 : Ratio Tier 1 moyen des grandes banques algériennes estimé à plus de 13,5 %, conforme aux exigences prudentielles.",
-        "en": "2024 data, ABIX 2025 edition: Average Tier 1 ratio of major Algerian banks estimated above 13.5%, compliant with regulations.",
-        "ar": "بيانات 2024، إصدار ABIX 2025: يقدر متوسط معدل Tier 1 للبنوك الجزائرية بأكثر من 13.5%."
+        "fr": "Exemple pédagogique : Si les fonds propres de base (Tier 1) sont de 15 Mds DZD pour des actifs pondérés de 100 Mds DZD, le ratio Tier 1 est de 15 %.",
+        "en": "Pedagogical example: If core equity (Tier 1) is 15 billion DZD for risk-weighted assets of 100 billion DZD, the Tier 1 ratio is 15%.",
+        "ar": "مثال تعليمي: إذا كانت الأموال الخاصة الأساسية 15 مليار دج لأصول مرجحة بالمخاطر قدرها 100 مليار دج، فإن نسبة الشريحة الأولى هي 15%."
       },
       "unit": "%",
       "performance_direction": "higher_is_better",
       "higher_is_better": true,
       "threshold_type": "REGULATORY",
-      "regulatory_threshold": ">= 7,0 % (Règlement Banque d'Algérie n° 2014-01)",
-      "abix_benchmark": "Repère de confort ABIX >= 11-14 %",
-      "example_vintage": "Données 2024, Édition ABIX 2025, banques algériennes",
+      "regulatory_threshold": {
+        "fr": "≥ 7,0 % (Règlement Banque d'Algérie n° 2014-01)",
+        "en": "≥ 7.0% (Bank of Algeria Regulation No. 2014-01)",
+        "ar": "≥ 7.0% (نظام بنك الجزائر رقم 2014-01)"
+      },
+      "abix_benchmark": {
+        "fr": "Repère de confort ABIX : 11–14 %",
+        "en": "ABIX Comfort Range: 11–14%",
+        "ar": "المعيار الاسترشادي ABIX: نطاق الراحة 11–14%"
+      },
       "modules": [
         "Profil Banque",
         "Fiche Prudentielle"
@@ -1371,10 +1441,7 @@
         "fonds-propres",
         "fonds-propres-total-bilan"
       ],
-      "display_order": 18,
-      "is_active": true,
-      "created_at": "2026-08-29T08:48:33.944Z",
-      "updated_at": "2026-08-29T08:48:33.944Z"
+      "display_order": 18
     },
     {
       "id": "taux-npl",
@@ -1414,7 +1481,11 @@
         "en": "Educational asset-quality concept. ABIX does not currently calculate or display this ratio because homogeneous gross NPL balances are unavailable for all banks.",
         "ar": "مفهوم تعليمي لجودة الأصول. لا يحسب ABIX هذه النسبة ولا يعرضها حالياً لعدم توفر أرصدة NPL إجمالية ومتجانسة لكل البنوك."
       },
-      "formula": "Taux NPL = (Créances Non Performantes brutes ÷ Encours Total des Crédits bruts) × 100",
+      "formula": {
+        "fr": "Taux de NPL = (Encours des créances classées en souffrance ÷ Encours total des crédits bruts) × 100",
+        "en": "NPL Ratio = (Outstanding Non-Performing Loans ÷ Total Gross Loans Outstanding) × 100",
+        "ar": "نسبة القروض المتعثرة = (رصيد القروض المصنفة كمتعثرة ÷ إجمالي رصيد القروض غير الصافية) × 100"
+      },
       "formula_latex": "\\\\text{Taux NPL} = \\\\frac{\\\\text{Créances Douteuses}}{\\\\text{Total Crédits Bruts}} \\\\times 100",
       "interpretation": {
         "fr": "La formule est fournie à titre pédagogique uniquement ; aucune valeur, direction de performance ou alerte NPL n'est produite par ABIX.",
@@ -1441,10 +1512,7 @@
         "effort-provisionnement",
         "credits-clientele"
       ],
-      "display_order": 19,
-      "is_active": true,
-      "created_at": "2026-08-29T08:48:33.944Z",
-      "updated_at": "2026-08-29T08:48:33.944Z"
+      "display_order": 19
     },
     {
       "id": "taux-couverture-npl",
@@ -1483,7 +1551,11 @@
         "en": "Educational concept. ABIX does not currently calculate or display this ratio because homogeneous impairment-provision stocks and NPL balances are unavailable for all banks.",
         "ar": "مفهوم تعليمي. لا يحسب ABIX هذه النسبة ولا يعرضها حالياً لعدم توفر مخزون مخصصات وأرصدة NPL متجانسة لكل البنوك."
       },
-      "formula": "Taux de Couverture = (Stock de Provisions pour Dépréciation ÷ Encours Brut des NPL) × 100",
+      "formula": {
+        "fr": "Taux de couverture = (Provisions pour créances en souffrance ÷ Encours brut des créances en souffrance) × 100",
+        "en": "Coverage Ratio = (Provisions for Non-Performing Loans ÷ Gross Outstanding Non-Performing Loans) × 100",
+        "ar": "نسبة التغطية = (مخصصات القروض المتعثرة ÷ إجمالي رصيد القروض المتعثرة) × 100"
+      },
       "formula_latex": "\\\\text{Taux de Couverture} = \\\\frac{\\\\text{Stock de Provisions}}{\\\\text{Créances NPL}} \\\\times 100",
       "interpretation": {
         "fr": "La formule est fournie à titre pédagogique uniquement ; aucun benchmark ni jugement de couverture n'est produit par ABIX.",
@@ -1510,10 +1582,7 @@
         "effort-provisionnement",
         "credits-clientele"
       ],
-      "display_order": 20,
-      "is_active": true,
-      "created_at": "2026-08-29T08:48:33.944Z",
-      "updated_at": "2026-08-29T08:48:33.944Z"
+      "display_order": 20
     },
     {
       "id": "effort-provisionnement",
@@ -1552,7 +1621,11 @@
         "en": "ABIX divides the available annual net-provision flow by outstanding loans. This contextual measure is neither an NPL ratio nor a coverage ratio and does not by itself prove portfolio deterioration.",
         "ar": "يقسم ABIX التدفق السنوي المتاح للمخصصات الصافية على رصيد القروض. وهو مقياس سياقي لا يمثل نسبة NPL أو نسبة تغطية ولا يثبت وحده تدهور المحفظة."
       },
-      "formula": "Effort de Provisionnement = (Dotations Nettes aux Provisions ÷ Encours des Prêts) × 100",
+      "formula": {
+        "fr": "Effort = (Dotations nettes aux provisions pour risque de crédit ÷ Encours moyen ou total des crédits) × 100",
+        "en": "Provisioning Effort = (Net Allocations to Credit Risk Provisions ÷ Average or Total Loans Outstanding) × 100",
+        "ar": "جهد تكوين المخصصات = (المخصصات الصافية لمخاطر الائتمان ÷ متوسط أو إجمالي القروض) × 100"
+      },
       "formula_latex": "\\\\text{Effort Provisions} = \\\\frac{\\\\text{Dotations Nettes aux Provisions}}{\\\\text{Crédits Clientèle}} \\\\times 100",
       "interpretation": {
         "fr": "À lire conjointement avec son montant, son évolution et les autres agrégats disponibles. Un niveau élevé ou faible n'est pas automatiquement favorable ou défavorable.",
@@ -1560,9 +1633,9 @@
         "ar": "يُقرأ مع المبلغ وتطوره وبقية المجاميع المتاحة. ولا يُعد المستوى المرتفع أو المنخفض إيجابياً أو سلبياً تلقائياً."
       },
       "example": {
-        "fr": "Données 2024, Édition ABIX 2025, périmètre de 20 banques : Effort de provisionnement médian de 0,55 % des encours de crédit.",
-        "en": "2024 data, ABIX 2025 edition, 20-bank scope: Sector median provisioning effort of 0.55% of total loans.",
-        "ar": "بيانات 2024، إصدار ABIX 2025، نطاق 20 بنكاً: وسيط جهد المخصصات 0.55% من إجمالي القروض."
+        "fr": "Exemple pédagogique : Si une banque dote 4 Mds DZD aux provisions sur un encours de crédits de 400 Mds DZD, l'effort de provisionnement est de 1 %.",
+        "en": "Pedagogical example: If a bank allocates 4 billion DZD to provisions on a loan portfolio of 400 billion DZD, the provisioning effort is 1%.",
+        "ar": "مثال تعليمي: إذا خصص البنك 4 مليارات دج كمخصصات لمحفظة قروض قدرها 400 مليار دج، فإن جهد التخصيص هو 1%."
       },
       "unit": "%",
       "performance_direction": "contextual",
@@ -1570,7 +1643,6 @@
       "threshold_type": "NONE",
       "regulatory_threshold": null,
       "abix_benchmark": null,
-      "example_vintage": "Données 2024, Édition ABIX 2025, périmètre de 20 banques",
       "modules": [
         "Vue Secteur",
         "Profil Banque",
@@ -1582,10 +1654,7 @@
         "pression-provision-rbe",
         "credits-clientele"
       ],
-      "display_order": 21,
-      "is_active": true,
-      "created_at": "2026-08-29T08:48:33.944Z",
-      "updated_at": "2026-08-29T08:48:33.944Z"
+      "display_order": 21
     },
     {
       "id": "cout-risque-pnb",
@@ -1622,7 +1691,11 @@
         "en": "ABIX's official cost-of-risk materiality indicator: it retains the provision amount, its annual change and its weight in NBI. It replaces neither the NPL ratio nor the coverage ratio and cannot establish causality on its own.",
         "ar": "مؤشر ABIX الرسمي لمادية تكلفة المخاطر: يحتفظ بمبلغ المخصصات وتغيره السنوي ووزنه في الناتج البنكي الصافي. ولا يعوض نسبة NPL أو التغطية ولا يثبت سبب التغير بمفرده."
       },
-      "formula": "Poids du Coût du Risque = (Dotations Nettes aux Provisions ÷ PNB) × 100",
+      "formula": {
+        "fr": "Poids CdR = (Dotations nettes aux provisions pour risque de crédit ÷ Produit Net Bancaire) × 100",
+        "en": "Cost of Risk Weight = (Net Allocations to Credit Risk Provisions ÷ Net Banking Income) × 100",
+        "ar": "وزن تكلفة المخاطر = (المخصصات الصافية لمخاطر الائتمان ÷ الناتج البنكي الصافي) × 100"
+      },
       "formula_latex": "\\\\text{Poids du coût du risque} = \\\\frac{\\\\text{Dotations nettes}}{\\\\text{PNB}} \\\\times 100",
       "interpretation": {
         "fr": "Lecture contextuelle par montant, évolution et écart à une référence disponible. Une hausse brute des dotations ne déclenche pas, à elle seule, une alerte ABIX.",
@@ -1652,10 +1725,7 @@
         "pression-provision-rbe",
         "produit-net-bancaire"
       ],
-      "display_order": 21.5,
-      "is_active": true,
-      "created_at": "2026-08-29T08:48:33.944Z",
-      "updated_at": "2026-08-29T08:48:33.944Z"
+      "display_order": 21.5
     },
     {
       "id": "pression-provision-rbe",
@@ -1691,7 +1761,11 @@
         "en": "Divides the available annual net-provision flow by GOI. A change may reflect several accounting or economic factors; ABIX does not automatically infer borrower-risk deterioration.",
         "ar": "يقسم التدفق السنوي للمخصصات الصافية على النتيجة الإجمالية للاستغلال. وقد ينتج التغير عن عوامل محاسبية أو اقتصادية متعددة، ولا يستنتج ABIX تلقائياً تدهور مخاطر العملاء."
       },
-      "formula": "Pression Provisions / RBE = (Dotations Nettes aux Provisions ÷ RBE) × 100",
+      "formula": {
+        "fr": "Pression provisionnement = (Dotations nettes pour risque de crédit ÷ Résultat Brut d'Exploitation) × 100",
+        "en": "Provisioning Pressure = (Net Allocations to Credit Risk Provisions ÷ Gross Operating Income) × 100",
+        "ar": "ضغط المخصصات = (المخصصات الصافية لمخاطر الائتمان ÷ إجمالي نتيجة الاستغلال) × 100"
+      },
       "formula_latex": "\\\\text{Pression Provisions} = \\\\frac{\\\\text{Dotations Nettes}}{\\\\text{RBE}} \\\\times 100",
       "interpretation": {
         "fr": "Lecture contextuelle : comparer le ratio dans le temps et à un groupe suffisamment large, en conservant le montant des dotations et le niveau du RBE.",
@@ -1699,9 +1773,9 @@
         "ar": "قراءة سياقية: تُقارن النسبة عبر الزمن ومع مجموعة كبيرة بما يكفي، مع الاحتفاظ بمبلغ المخصصات ومستوى النتيجة التشغيلية."
       },
       "example": {
-        "fr": "Données 2024, Édition ABIX 2025, périmètre de 20 banques : Pression médiane des provisions sur le RBE de 18,4 %.",
-        "en": "2024 data, ABIX 2025 edition, 20-bank scope: Sector median provision burden on GOI of 18.4%.",
-        "ar": "بيانات 2024، إصدار ABIX 2025، نطاق 20 بنكاً: وسيط ضغط المخصصات على الناتج التشغيلي 18.4%."
+        "fr": "Exemple pédagogique : Si les dotations aux provisions sont de 4 Mds DZD pour un RBE de 20 Mds DZD, la pression du provisionnement est de 20 %.",
+        "en": "Pedagogical example: If provision allocations are 4 billion DZD against a GOI of 20 billion DZD, the provisioning pressure is 20%.",
+        "ar": "مثال تعليمي: إذا كانت المخصصات 4 مليارات دج لنتيجة إجمالية للاستغلال قدرها 20 مليار دج، فإن ضغط المخصصات هو 20%."
       },
       "unit": "%",
       "performance_direction": "contextual",
@@ -1709,7 +1783,6 @@
       "threshold_type": "NONE",
       "regulatory_threshold": null,
       "abix_benchmark": null,
-      "example_vintage": "Données 2024, Édition ABIX 2025, périmètre de 20 banques",
       "modules": [
         "Vue Secteur",
         "Profil Banque",
@@ -1720,10 +1793,7 @@
         "conversion-rbe-rn",
         "effort-provisionnement"
       ],
-      "display_order": 22,
-      "is_active": true,
-      "created_at": "2026-08-29T08:48:33.944Z",
-      "updated_at": "2026-08-29T08:48:33.944Z"
+      "display_order": 22
     },
     {
       "id": "fonds-propres-total-bilan",
@@ -1762,7 +1832,11 @@
         "en": "Accounting measure of financial backing, dividing reported equity by total assets. It does not replace a regulatory solvency ratio based on risk-weighted assets (RWA).",
         "ar": "مؤشر محاسبي للمتانة المالية يقسم حقوق الملكية المنشورة على إجمالي الأصول. ولا يعوض نسبة الملاءة التنظيمية القائمة على الأصول المرجحة بالمخاطر."
       },
-      "formula": "Fonds Propres / Total Bilan = (Fonds Propres Comptables ÷ Total Bilan) × 100",
+      "formula": {
+        "fr": "Ratio FP/TB = (Fonds Propres Comptables ÷ Total Bilan) × 100",
+        "en": "Equity-to-Assets Ratio = (Accounting Equity ÷ Total Assets) × 100",
+        "ar": "نسبة حقوق الملكية إلى الأصول = (حقوق الملكية المحاسبية ÷ إجمالي الميزانية) × 100"
+      },
       "formula_latex": "\\\\text{FP / Bilan} = \\\\frac{\\\\text{Fonds Propres}}{\\\\text{Total Bilan}} \\\\times 100",
       "interpretation": {
         "fr": "Dans la dimension ABIX de solidité financière, un ratio plus élevé traduit une couverture comptable relative plus importante ; l'interprétation reste distincte de la conformité prudentielle.",
@@ -1770,17 +1844,20 @@
         "ar": "ضمن بُعد المتانة المالية في ABIX، تعني النسبة الأعلى تغطية محاسبية نسبية أكبر، مع بقائها مختلفة عن الامتثال الاحترازي."
       },
       "example": {
-        "fr": "Données 2024, Édition ABIX 2025, périmètre de 20 banques : ratio sectoriel moyen de 13,2 %, à lire comme une mesure comptable et non comme une solvabilité réglementaire.",
-        "en": "2024 data, ABIX 2025 edition, 20-bank scope: Sector average ratio of 13.2%, reflecting strong equity backing.",
-        "ar": "بيانات 2024، إصدار ABIX 2025، نطاق 20 بنكاً: متوسط النسبة القطاعية 13.2%."
+        "fr": "Exemple pédagogique : Si les fonds propres sont de 50 Mds DZD pour un total bilan de 500 Mds DZD, le ratio est de 10 %.",
+        "en": "Pedagogical example: If equity is 50 billion DZD against total assets of 500 billion DZD, the ratio is 10%.",
+        "ar": "مثال تعليمي: إذا كانت حقوق الملكية 50 مليار دج لإجمالي ميزانية قدره 500 مليار دج، فإن النسبة هي 10%."
       },
       "unit": "%",
       "performance_direction": "higher_is_better",
       "higher_is_better": true,
       "threshold_type": "ABIX_BENCHMARK",
       "regulatory_threshold": null,
-      "abix_benchmark": "Standard sectoriel 10-16 %",
-      "example_vintage": "Données 2024, Édition ABIX 2025, périmètre de 20 banques",
+      "abix_benchmark": {
+        "fr": "Standard sectoriel 10-16 %",
+        "en": "Sector Standard: 10-16%",
+        "ar": "معيار القطاع: 10-16%"
+      },
       "modules": [
         "Vue Secteur",
         "Profil Banque",
@@ -1793,10 +1870,7 @@
         "levier-financier",
         "ratio-solvabilite"
       ],
-      "display_order": 23,
-      "is_active": true,
-      "created_at": "2026-08-29T08:48:33.944Z",
-      "updated_at": "2026-08-29T08:48:33.944Z"
+      "display_order": 23
     },
     {
       "id": "levier-financier",
@@ -1834,7 +1908,11 @@
         "en": "Measures balance sheet asset scale relative to equity backing. ABIX note: This is a simplified accounting leverage multiple and does not constitute the Basel III regulatory leverage ratio (which includes off-balance sheet items and prudential deductions).",
         "ar": "يقيس مضاعف الأصول مقارنة بحقوق الملكية. ملاحظة ABIX: هذا المؤشر رافعة محاسبية مبسطة ولا يمثل نسبة الرافعة التنظيمية لبازل 3 (التي تشمل الالتزامات خارج الميزانية)."
       },
-      "formula": "Levier Comptable = Total Bilan ÷ Fonds Propres Comptables",
+      "formula": {
+        "fr": "Levier comptable = Total Bilan ÷ Fonds Propres Comptables",
+        "en": "Accounting Leverage = Total Assets ÷ Accounting Equity",
+        "ar": "الرافعة المحاسبية = إجمالي الميزانية ÷ حقوق الملكية المحاسبية"
+      },
       "formula_latex": "\\\\text{Levier} = \\\\frac{\\\\text{Total Bilan}}{\\\\text{Fonds Propres}}",
       "interpretation": {
         "fr": "Un levier modéré (6x à 9x) offre une sécurité financière élevée. Un levier très élevé (> 15x) accroît la sensibilité aux chocs de solvabilité.",
@@ -1842,17 +1920,20 @@
         "ar": "الرافعة المعتدلة (6 إلى 9 مرات) توفر أماناً مالياً مرتفعاً، بينما الرافعة المرتفعة جداً تزيد من الحساسية للصدمات."
       },
       "example": {
-        "fr": "Données 2024, Édition ABIX 2025, périmètre de 20 banques : Levier comptable médian sectoriel de 7,6x (pour 100 DZD de bilan, la banque dispose de ~13,2 DZD de fonds propres).",
-        "en": "2024 data, ABIX 2025 edition, 20-bank scope: Sector median accounting leverage of 7.6x.",
-        "ar": "بيانات 2024، إصدار ABIX 2025، نطاق 20 بنكاً: وسيط الرافعة المحاسبية القطاعية 7.6 أضعاف."
+        "fr": "Exemple pédagogique : Si le total bilan est de 500 Mds DZD et les fonds propres de 50 Mds DZD, le levier financier est de 10x.",
+        "en": "Pedagogical example: If total assets are 500 billion DZD and equity is 50 billion DZD, the financial leverage is 10x.",
+        "ar": "مثال تعليمي: إذا كان إجمالي الميزانية 500 مليار دج وحقوق الملكية 50 مليار دج، فإن الرافعة المالية هي 10 أضعاف."
       },
       "unit": "x",
       "performance_direction": "neutral",
       "higher_is_better": null,
       "threshold_type": "ABIX_BENCHMARK",
       "regulatory_threshold": null,
-      "abix_benchmark": "Repère prudentiel indicatif 6x à 10x",
-      "example_vintage": "Données 2024, Édition ABIX 2025, périmètre de 20 banques",
+      "abix_benchmark": {
+        "fr": "Repère prudentiel indicatif 6x à 10x",
+        "en": "Indicative Prudential Benchmark: 6x to 10x",
+        "ar": "المعيار الاحترازي الاسترشادي: 6x إلى 10x"
+      },
       "modules": [
         "Vue Secteur",
         "Profil Banque",
@@ -1863,10 +1944,7 @@
         "fonds-propres",
         "total-bilan"
       ],
-      "display_order": 24,
-      "is_active": true,
-      "created_at": "2026-08-29T08:48:33.944Z",
-      "updated_at": "2026-08-29T08:48:33.944Z"
+      "display_order": 24
     },
     {
       "id": "ratio-prets-depots",
@@ -1905,7 +1983,11 @@
         "en": "The LDR measures the bank's financial intermediation depth. It compares net loans to customer deposits. A balanced ratio ensures that lending is funded by stable customer deposits without excessive reliance on wholesale funding.",
         "ar": "يقيس عمق الوساطة المصرفية ومستوى تحويل الودائع إلى قروض. وتضمن النسبة المتوازنة تمويل القروض من الودائع المستقرة."
       },
-      "formula": "Ratio Prêts / Dépôts = (Crédits Nets à la Clientèle ÷ Dépôts de la Clientèle) × 100",
+      "formula": {
+        "fr": "LDR = (Total des Crédits à la clientèle ÷ Total des Dépôts de la clientèle) × 100",
+        "en": "LDR = (Total Customer Loans ÷ Total Customer Deposits) × 100",
+        "ar": "نسبة القروض إلى الودائع = (إجمالي قروض العملاء ÷ إجمالي ودائع العملاء) × 100"
+      },
       "formula_latex": "\\\\text{LDR} = \\\\frac{\\\\text{Crédits Clientèle}}{\\\\text{Dépôts Clientèle}} \\\\times 100",
       "interpretation": {
         "fr": "Un ratio entre 70 % et 90 % traduit une intermédiation dynamique et équilibrée. En dessous de 60 %, la banque sous-emploie ses ressources ; au-delà de 100 %, elle dépend de refinancements extérieurs.",
@@ -1913,17 +1995,20 @@
         "ar": "تعتبر النسبة بين 70% و90% متوازنة ونشطة. أقل من 60% يدل على نقص توظيف الموارد، وأكثر من 100% يشير إلى الاعتماد على تمويلات خارجية."
       },
       "example": {
-        "fr": "Données 2024, Édition ABIX 2025, périmètre de 20 banques : LDR moyen sectoriel de 78,2 %, témoignant d'une capacité d'adossement robuste des crédits sur les dépôts.",
-        "en": "2024 data, ABIX 2025 edition, 20-bank scope: Sector average LDR of 78.2%, reflecting solid deposit backing.",
-        "ar": "بيانات 2024، إصدار ABIX 2025، نطاق 20 بنكاً: متوسط LDR القطاعي 78.2%."
+        "fr": "Exemple pédagogique : Si une banque dispose de 700 Mds DZD de crédits et 1000 Mds DZD de dépôts, le ratio prêts/dépôts (LDR) est de 70 %.",
+        "en": "Pedagogical example: If a bank has 700 billion DZD in loans and 1000 billion DZD in deposits, the loan-to-deposit ratio (LDR) is 70%.",
+        "ar": "مثال تعليمي: إذا كان لدى البنك 700 مليار دج كقروض و1000 مليار دج كودائع، فإن نسبة القروض إلى الودائع هي 70%."
       },
       "unit": "%",
       "performance_direction": "neutral",
       "higher_is_better": null,
       "threshold_type": "MARKET_REFERENCE",
       "regulatory_threshold": null,
-      "abix_benchmark": "Sous-intermédiation < 60 %, Équilibré 70-90 %, Tension liquidité > 100 %",
-      "example_vintage": "Données 2024, Édition ABIX 2025, périmètre de 20 banques",
+      "abix_benchmark": {
+        "fr": "Sous-intermédiation < 60 %, Équilibré 70-90 %, Tension liquidité > 100 %",
+        "en": "Low Intermediation < 60% | Balanced 70-90% | Liquidity Strain > 100%",
+        "ar": "وساطة منخفضة < 60% | متوازن 70-90% | ضغط على السيولة > 100%"
+      },
       "modules": [
         "Vue Secteur",
         "Profil Banque",
@@ -1935,10 +2020,7 @@
         "credits-clientele",
         "ratio-lcr"
       ],
-      "display_order": 25,
-      "is_active": true,
-      "created_at": "2026-08-29T08:48:33.944Z",
-      "updated_at": "2026-08-29T08:48:33.944Z"
+      "display_order": 25
     },
     {
       "id": "prets-total-actif",
@@ -1976,7 +2058,11 @@
         "en": "Reflects the bank's asset allocation profile. A high loan share characterizes a commercial lending bank, whereas a lower share indicates a sovereign paper or cash management focus.",
         "ar": "يعكس النمط الاستثماري لأصول البنك. ارتفاع حصة القروض يميز البنوك التجارية الموجهة لتمويل الاقتصاد، بينما انخفاضها يشير للتركيز على السندات والسيولة."
       },
-      "formula": "Prêts / Total Bilan = (Encours des Crédits Clientèle ÷ Total Bilan) × 100",
+      "formula": {
+        "fr": "Part des crédits = (Encours net des crédits à la clientèle ÷ Total Bilan) × 100",
+        "en": "Share of Loans = (Net Outstanding Customer Loans ÷ Total Assets) × 100",
+        "ar": "حصة القروض = (الرصيد الصافي لقروض العملاء ÷ إجمالي الميزانية) × 100"
+      },
       "formula_latex": "\\\\text{Prêts / Bilan} = \\\\frac{\\\\text{Crédits Clientèle}}{\\\\text{Total Bilan}} \\\\times 100",
       "interpretation": {
         "fr": "Mesure l'intensité d'intermédiation directe de la banque. Plus le ratio est élevé, plus les revenus dépendent du risque de crédit privé.",
@@ -1984,9 +2070,9 @@
         "ar": "يقيس كثافة الإقراض المباشر، وكلما ارتفعت النسبة ارتبطت إيرادات البنك أكثر بمخاطر الائتمان."
       },
       "example": {
-        "fr": "Données 2024, Édition ABIX 2025, périmètre de 20 banques : Part moyenne des prêts dans l'actif de 60,0 % sur le secteur bancaire algérien.",
-        "en": "2024 data, ABIX 2025 edition, 20-bank scope: Sector average loan share of total assets of 60.0%.",
-        "ar": "بيانات 2024، إصدار ABIX 2025، نطاق 20 بنكاً: متوسط حصة القروض في الأصول 60.0%."
+        "fr": "Exemple pédagogique : Si les prêts s'élèvent à 400 Mds DZD sur un total bilan de 1000 Mds DZD, la part des prêts dans l'actif est de 40 %.",
+        "en": "Pedagogical example: If loans amount to 400 billion DZD out of total assets of 1000 billion DZD, the share of loans in assets is 40%.",
+        "ar": "مثال تعليمي: إذا بلغت القروض 400 مليار دج من إجمالي ميزانية قدره 1000 مليار دج، فإن حصة القروض في الأصول هي 40%."
       },
       "unit": "%",
       "performance_direction": "neutral",
@@ -1994,7 +2080,6 @@
       "threshold_type": "NONE",
       "regulatory_threshold": null,
       "abix_benchmark": null,
-      "example_vintage": "Données 2024, Édition ABIX 2025, périmètre de 20 banques",
       "modules": [
         "Vue Secteur",
         "Profil Banque",
@@ -2007,10 +2092,7 @@
         "bdt-total-actif",
         "ratio-prets-depots"
       ],
-      "display_order": 26,
-      "is_active": true,
-      "created_at": "2026-08-29T08:48:33.944Z",
-      "updated_at": "2026-08-29T08:48:33.944Z"
+      "display_order": 26
     },
     {
       "id": "bdt-total-actif",
@@ -2049,7 +2131,11 @@
         "en": "Measures the sovereign allocation weight within the asset base. Historically in Algeria, public banks hold material Treasury securities volumes from balance sheet restructuring and liquidity placements.",
         "ar": "يقيس وزن التوظيفات السيادية في هيكل الأصول. تاريخياً، تحتفظ البنوك العمومية بحصة هامة من سندات الخزينة لتوظيف السيولة."
       },
-      "formula": "BDT / Total Bilan = (Encours des Bons du Trésor ÷ Total Bilan) × 100",
+      "formula": {
+        "fr": "Part des BDT = (Encours des Bons du Trésor et Titres d'État ÷ Total Bilan) × 100",
+        "en": "Share of Treasury Bonds = (Outstanding Treasury Bonds & Government Securities ÷ Total Assets) × 100",
+        "ar": "حصة سندات الخزينة = (رصيد سندات الخزينة والأوراق المالية الحكومية ÷ إجمالي الميزانية) × 100"
+      },
       "formula_latex": "\\\\text{BDT / Bilan} = \\\\frac{\\\\text{Bons du Trésor}}{\\\\text{Total Bilan}} \\\\times 100",
       "interpretation": {
         "fr": "Un ratio élevé sécurise la liquidité et dégage des revenus d'intérêts garantis par l'État, mais traduit une éviction relative du crédit à l'économie.",
@@ -2057,9 +2143,9 @@
         "ar": "توفر النسبة المرتفعة أماناً ومداخيل مضمونة، لكنها قد تعكس توجيهاً أقل للموارد نحو تمويل الاقتصاد الخاص."
       },
       "example": {
-        "fr": "Données 2024, Édition ABIX 2025, périmètre de 20 banques : Part moyenne des BDT de 20,5 % du total bilan sectoriel.",
-        "en": "2024 data, ABIX 2025 edition, 20-bank scope: Average Treasury securities share of 20.5% of sector total assets.",
-        "ar": "بيانات 2024، إصدار ABIX 2025، نطاق 20 بنكاً: متوسط حصة سندات الخزينة 20.5% من إجمالي الميزانية."
+        "fr": "Exemple pédagogique : Si le portefeuille de bons du trésor est de 200 Mds DZD pour un total bilan de 1000 Mds DZD, le ratio est de 20 %.",
+        "en": "Pedagogical example: If the treasury bond portfolio is 200 billion DZD against total assets of 1000 billion DZD, the ratio is 20%.",
+        "ar": "مثال تعليمي: إذا كانت محفظة سندات الخزينة 200 مليار دج لإجمالي ميزانية قدره 1000 مليار دج، فإن النسبة هي 20%."
       },
       "unit": "%",
       "performance_direction": "neutral",
@@ -2067,7 +2153,6 @@
       "threshold_type": "NONE",
       "regulatory_threshold": null,
       "abix_benchmark": null,
-      "example_vintage": "Données 2024, Édition ABIX 2025, périmètre de 20 banques",
       "modules": [
         "Vue Secteur",
         "Profil Banque",
@@ -2078,10 +2163,7 @@
         "total-bilan",
         "prets-total-actif"
       ],
-      "display_order": 27,
-      "is_active": true,
-      "created_at": "2026-08-29T08:48:33.944Z",
-      "updated_at": "2026-08-29T08:48:33.944Z"
+      "display_order": 27
     },
     {
       "id": "depots-total-passif",
@@ -2119,7 +2201,11 @@
         "en": "Measures the bank's structural reliance on customer deposits compared to other funding sources (equity, interbank borrowing, bond issues).",
         "ar": "يقيس اعتماد الهيكل المالي للبنك على ودائع العملاء مقارنة بالمصادر الأخرى (الأموال الخاصة، الاقتراض بين البنوك)."
       },
-      "formula": "Dépôts / Total Bilan = (Dépôts de la Clientèle ÷ Total Bilan) × 100",
+      "formula": {
+        "fr": "Part des dépôts = (Encours des dépôts clientèle ÷ Total Bilan) × 100",
+        "en": "Share of Deposits = (Outstanding Customer Deposits ÷ Total Assets) × 100",
+        "ar": "حصة الودائع = (رصيد ودائع العملاء ÷ إجمالي الميزانية) × 100"
+      },
       "formula_latex": "\\\\text{Dépôts / Bilan} = \\\\frac{\\\\text{Dépôts Clientèle}}{\\\\text{Total Bilan}} \\\\times 100",
       "interpretation": {
         "fr": "Une part supérieure à 75-80 % caractérise un modèle de banque de détail traditionnel bénéficiant d'une base de financement granulaire et stable.",
@@ -2127,9 +2213,9 @@
         "ar": "النسبة التي تتجاوز 75-80% تميز البنوك التجارية التقليدية التي تستفيد من قاعدة تمويلية عريضة ومستقرة."
       },
       "example": {
-        "fr": "Données 2024, Édition ABIX 2025, périmètre de 20 banques : Part moyenne des dépôts dans le passif de 76,8 %.",
-        "en": "2024 data, ABIX 2025 edition, 20-bank scope: Sector average deposit share of 76.8% of total liabilities.",
-        "ar": "بيانات 2024، إصدار ABIX 2025، نطاق 20 بنكاً: متوسط حصة الودائع في الخصوم 76.8%."
+        "fr": "Exemple pédagogique : Si les dépôts représentent 800 Mds DZD sur un total passif de 1000 Mds DZD, leur part est de 80 %.",
+        "en": "Pedagogical example: If deposits account for 800 billion DZD out of total liabilities of 1000 billion DZD, their share is 80%.",
+        "ar": "مثال تعليمي: إذا كانت الودائع تمثل 800 مليار دج من إجمالي خصوم قدره 1000 مليار دج، فإن حصتها هي 80%."
       },
       "unit": "%",
       "performance_direction": "neutral",
@@ -2137,7 +2223,6 @@
       "threshold_type": "NONE",
       "regulatory_threshold": null,
       "abix_benchmark": null,
-      "example_vintage": "Données 2024, Édition ABIX 2025, périmètre de 20 banques",
       "modules": [
         "Vue Secteur",
         "Profil Banque",
@@ -2148,10 +2233,7 @@
         "total-bilan",
         "ratio-prets-depots"
       ],
-      "display_order": 28,
-      "is_active": true,
-      "created_at": "2026-08-29T08:48:33.944Z",
-      "updated_at": "2026-08-29T08:48:33.944Z"
+      "display_order": 28
     },
     {
       "id": "autres-actifs",
@@ -2187,7 +2269,11 @@
         "en": "In ABIX balance sheet allocation models, Other Assets is the residual balance (Total Assets minus Loans minus Treasury Securities), encompassing cash, central bank reserves, interbank placements, fixed assets, and sundry accounts.",
         "ar": "في نموذج ABIX لتفكيك الأصول، تمثل الأصول الأخرى الفارق المتبقي (إجمالي الميزانية مطروحاً منه القروض وسندات الخزينة)، وتشمل السيولة النقدية، الاحتياطيات لدى بنك الجزائر والأصول الثابتة."
       },
-      "formula": "Autres Actifs = Total Bilan − Prêts clientèle − Bons du Trésor",
+      "formula": {
+        "fr": "Autres Actifs = Total Bilan - (Crédits clientèle + Bons du Trésor + Caisse & Banques Centrales)",
+        "en": "Other Assets = Total Assets - (Customer Loans + Treasury Bonds + Cash & Central Bank Balances)",
+        "ar": "أصول أخرى = إجمالي الميزانية - (قروض العملاء + سندات الخزينة + الصندوق والبنوك المركزية)"
+      },
       "formula_latex": "\\\\text{Autres Actifs} = \\\\text{Total Bilan} - \\\\text{Prêts} - \\\\text{BDT}",
       "interpretation": {
         "fr": "Permet de visualiser l'allocation bilancielle totale à 100 % (Prêts + BDT + Autres actifs = 100 %). Une valeur négative signale une anomalie de données.",
@@ -2195,17 +2281,20 @@
         "ar": "يتيح العرض المتكامل لهيكل الأصول بنسبة 100%. القيمة السالبة تشير إلى خلل محتمل في البيانات."
       },
       "example": {
-        "fr": "Données 2024, Édition ABIX 2025, périmètre de 20 banques : Volume sectoriel des autres actifs d'environ 3 600 Mds DZD (soit ~19,5 % du total bilan).",
-        "en": "2024 data, ABIX 2025 edition, 20-bank scope: Sector other assets volume of ~3,600 billion DZD (~19.5% of total assets).",
-        "ar": "بيانات 2024، إصدار ABIX 2025، نطاق 20 بنكاً: حجم الأصول الأخرى حوالي 3,600 مليار دج (~19.5% من إجمالي الميزانية)."
+        "fr": "Exemple pédagogique : Si le total bilan est de 1000 Mds DZD et les prêts et bons du trésor totalisent 850 Mds DZD, les autres actifs représentent 150 Mds DZD.",
+        "en": "Pedagogical example: If total assets are 1000 billion DZD and loans and treasury bonds total 850 billion DZD, other assets represent 150 billion DZD.",
+        "ar": "مثال تعليمي: إذا كان إجمالي الميزانية 1000 مليار دج وبلغت القروض وسندات الخزينة 850 مليار دج، فإن الأصول الأخرى تمثل 150 مليار دج."
       },
-      "unit": "Mds DZD",
+      "unit": {
+        "fr": "Mds DZD",
+        "en": "DZD bn",
+        "ar": "مليار دج"
+      },
       "performance_direction": "neutral",
       "higher_is_better": null,
       "threshold_type": "NONE",
       "regulatory_threshold": null,
       "abix_benchmark": null,
-      "example_vintage": "Données 2024, Édition ABIX 2025, périmètre de 20 banques",
       "modules": [
         "Vue Secteur",
         "Profil Banque",
@@ -2216,10 +2305,7 @@
         "credits-clientele",
         "bons-du-tresor"
       ],
-      "display_order": 29,
-      "is_active": true,
-      "created_at": "2026-08-29T08:48:33.944Z",
-      "updated_at": "2026-08-29T08:48:33.944Z"
+      "display_order": 29
     },
     {
       "id": "ratio-lcr",
@@ -2257,7 +2343,11 @@
         "en": "Compares high-quality liquid assets (HQLA) readily convertible to central bank cash against estimated 30-day net cash outflows under severe stress. Standard requirement: Minimum 100%.",
         "ar": "يقارن الأصول السائلة عالية الجودة (HQLA) بصافي التدفقات النقدية الخارجة المتوقعة خلال 30 يوماً في حالة أزمة. المعيار التنظيمي: 100% كحد أدنى."
       },
-      "formula": "LCR = (Stock d'Actifs Liquides de Haute Qualité HQLA ÷ Sorties Nettes de Trésorerie à 30j) × 100",
+      "formula": {
+        "fr": "LCR = (Encours des Actifs Liquides de Haute Qualité - HQLA ÷ Sorties nettes de trésorerie à 30 jours) × 100",
+        "en": "LCR = (Stock of High-Quality Liquid Assets - HQLA ÷ Total Net Cash Outflows over 30 Days) × 100",
+        "ar": "نسبة تغطية السيولة = (رصيد الأصول السائلة عالية الجودة ÷ التدفقات النقدية الخارجة الصافية خلال 30 يومًا) × 100"
+      },
       "formula_latex": "\\\\text{LCR} = \\\\frac{\\\\text{HQLA}}{\\\\text{Sorties Nettes 30j}} \\\\times 100",
       "interpretation": {
         "fr": "Un ratio supérieur à 100 % garantit que la banque détient suffisamment de liquidités immédiatement mobilisables pour faire face à des retraits massifs sans soutien d'urgence.",
@@ -2273,8 +2363,16 @@
       "performance_direction": "higher_is_better",
       "higher_is_better": true,
       "threshold_type": "REGULATORY",
-      "regulatory_threshold": ">= 100 % (Standard prudentiel de liquidité Bâle III)",
-      "abix_benchmark": "Repère de confort >= 120 %",
+      "regulatory_threshold": {
+        "fr": "≥ 100 % (Standard prudentiel de liquidité Bâle III)",
+        "en": "≥ 100% (Basel III Prudential Liquidity Standard)",
+        "ar": "≥ 100% (المعيار الاحترازي للسيولة بازل 3)"
+      },
+      "abix_benchmark": {
+        "fr": "Repère de confort >= 120 %",
+        "en": "Comfort Benchmark >= 120%",
+        "ar": "المعيار الاسترشادي المريح >= 120%"
+      },
       "example_vintage": "Exemple méthodologique normatif Bâle III",
       "modules": [
         "Fiche Prudentielle",
@@ -2285,10 +2383,7 @@
         "ratio-prets-depots",
         "depots-clientele"
       ],
-      "display_order": 30,
-      "is_active": true,
-      "created_at": "2026-08-29T08:48:33.944Z",
-      "updated_at": "2026-08-29T08:48:33.944Z"
+      "display_order": 30
     },
     {
       "id": "ratio-nsfr",
@@ -2326,7 +2421,11 @@
         "en": "NSFR limits excessive reliance on short-term wholesale funding to finance long-term assets. It divides available stable funding (ASF) by required stable funding (RSF). Prudential standard: Minimum 100%.",
         "ar": "يهدف NSFR للحد من الاعتماد المفرط على التمويل قصير الأجل لتمويل أصول طويلة الأجل. النسبة الإلزامية: 100% كحد أدنى."
       },
-      "formula": "NSFR = (Montant de Financement Stable Disponible ASF ÷ Financement Stable Exigé RSF) × 100",
+      "formula": {
+        "fr": "NSFR = (Montant du Financement Stable Disponible - ASF ÷ Montant du Financement Stable Exigé - RSF) × 100",
+        "en": "NSFR = (Available Amount of Stable Funding - ASF ÷ Required Amount of Stable Funding - RSF) × 100",
+        "ar": "نسبة صافي التمويل المستقر = (مبلغ التمويل المستقر المتاح ÷ مبلغ التمويل المستقر المطلوب) × 100"
+      },
       "formula_latex": "\\\\text{NSFR} = \\\\frac{\\\\text{ASF}}{\\\\text{RSF}} \\\\times 100",
       "interpretation": {
         "fr": "Un NSFR supérieur à 100 % atteste que la banque finance ses actifs longs et illiquides par des capitaux et dépôts pérennes.",
@@ -2342,8 +2441,16 @@
       "performance_direction": "higher_is_better",
       "higher_is_better": true,
       "threshold_type": "REGULATORY",
-      "regulatory_threshold": ">= 100 % (Standard prudentiel de financement stable Bâle III)",
-      "abix_benchmark": "Repère de confort >= 110 %",
+      "regulatory_threshold": {
+        "fr": "≥ 100 % (Standard prudentiel de financement stable Bâle III)",
+        "en": "≥ 100% (Basel III Prudential Stable Funding Standard)",
+        "ar": "≥ 100% (المعيار الاحترازي للتمويل المستقر بازل 3)"
+      },
+      "abix_benchmark": {
+        "fr": "Repère de confort >= 110 %",
+        "en": "Comfort Benchmark >= 110%",
+        "ar": "المعيار الاسترشادي المريح >= 110%"
+      },
       "example_vintage": "Exemple méthodologique normatif Bâle III",
       "modules": [
         "Fiche Prudentielle",
@@ -2354,10 +2461,7 @@
         "ratio-prets-depots",
         "fonds-propres"
       ],
-      "display_order": 31,
-      "is_active": true,
-      "created_at": "2026-08-29T08:48:33.944Z",
-      "updated_at": "2026-08-29T08:48:33.944Z"
+      "display_order": 31
     },
     {
       "id": "moyenne-arithmetique",
@@ -2395,7 +2499,11 @@
         "en": "The arithmetic mean measures central tendency. In ABIX Data Explorer, it is computed strictly on available numeric observations (excluding nulls). It can be sensitive to extreme outliers in highly concentrated banking systems.",
         "ar": "يقيس المتوسط الحسابي النزعة المركزية للمؤشرات القطاعية. في ABIX، يُحتسب على البيانات المتوفرة فقط، وقد يتأثر بالقيم الشاذة في الأسواق عالية التركيز."
       },
-      "formula": "Moyenne = (Σ Xi) ÷ N (pour i = 1 à N)",
+      "formula": {
+        "fr": "Moyenne = (Σ Xi) ÷ N (pour i = 1 à N)",
+        "en": "Mean = (Σ Xi) ÷ N (for i = 1 to N)",
+        "ar": "المتوسط الحسابي = (Σ Xi) ÷ N (حيث i = 1 إلى N)"
+      },
       "formula_latex": "\\\\bar{X} = \\\\frac{1}{N}\\\\sum_{i=1}^N X_i",
       "interpretation": {
         "fr": "Donne le niveau moyen de la place, mais doit être confrontée à la médiane pour apprécier l'asymétrie de la distribution sectorielle.",
@@ -2403,17 +2511,20 @@
         "ar": "يعطي المستوى العام للسوق، ويجب مقارنته بالوسيط لتقييم مدى عدم تماثل التوزيع."
       },
       "example": {
-        "fr": "Données 2024, Édition ABIX 2025, périmètre de 20 banques : Le ROE moyen sectoriel est de 11,4 % alors que le ROE médian est de 9,8 % (asymétrie positive tirée par les banques de tête).",
-        "en": "2024 data, ABIX 2025 edition, 20-bank scope: Sector mean ROE is 11.4% vs median of 9.8% (positive skew driven by top performers).",
-        "ar": "بيانات 2024، إصدار ABIX 2025، نطاق 20 بنكاً: متوسط ROE هو 11.4% مقارنة بوسيط 9.8% (انحراف إيجابي مدفوع بالبنوك الرائدة)."
+        "fr": "Exemple pédagogique : Si trois banques ont des dépôts de 10, 20 et 30 Mds DZD, la moyenne arithmétique est de 20 Mds DZD.",
+        "en": "Pedagogical example: If three banks have deposits of 10, 20, and 30 billion DZD, the arithmetic mean is 20 billion DZD.",
+        "ar": "مثال تعليمي: إذا كان لدى ثلاثة بنوك ودائع قدرها 10، 20، و30 مليار دج، فإن المتوسط الحسابي هو 20 مليار دج."
       },
-      "unit": "selon indicateur",
+      "unit": {
+        "fr": "selon indicateur",
+        "en": "depending on indicator",
+        "ar": "حسب المؤشر"
+      },
       "performance_direction": "neutral",
       "higher_is_better": null,
       "threshold_type": "NONE",
       "regulatory_threshold": null,
       "abix_benchmark": null,
-      "example_vintage": "Données 2024, Édition ABIX 2025, périmètre de 20 banques",
       "modules": [
         "Vue Secteur",
         "Classements",
@@ -2425,10 +2536,7 @@
         "quartiles",
         "ecart-type"
       ],
-      "display_order": 32,
-      "is_active": true,
-      "created_at": "2026-08-29T08:48:33.944Z",
-      "updated_at": "2026-08-29T08:48:33.944Z"
+      "display_order": 32
     },
     {
       "id": "mediane",
@@ -2469,7 +2577,11 @@
         "en": "The median is ABIX's primary robust central tendency metric because it is fully resistant to extreme outliers and public bank scale distortions. Exact formulation: 1) For an odd number N of banks (e.g. 21 banks in 2026): Median = central value at rank (N+1)/2; 2) For an even number N of banks (e.g. 20 banks in 2025): Median = arithmetic average of the two central values at ranks N/2 and (N/2)+1.",
         "ar": "الوسيط هو المقياس الإحصائي المركزي المفضل في ABIX لكونه مقاوماً تماماً للقيم الشاذة وهيمنة البنوك الكبرى. الصيغة الرياضية: 1) لعدد فردي N (مثل 21 بنكاً في 2026): القيمة المركزية في الرتبة (N+1)/2؛ 2) لعدد زوجي N (مثل 20 بنكاً في 2025): متوسط القيمتين المركزيتين في الرتبتين N/2 و (N/2)+1."
       },
-      "formula": "Si N impair : Médiane = X_((N+1)/2) | Si N pair : Médiane = (X_(N/2) + X_(N/2 + 1)) ÷ 2",
+      "formula": {
+        "fr": "Si N impair : Médiane = X_((N+1)/2) | Si N pair : Médiane = (X_(N/2) + X_(N/2 + 1)) ÷ 2",
+        "en": "If N is odd: Median = X_((N+1)/2) | If N is even: Median = (X_(N/2) + X_(N/2 + 1)) ÷ 2",
+        "ar": "إذا كان N فردياً: الوسيط = X_((N+1)/2) | إذا كان N زوجياً: الوسيط = (X_(N/2) + X_(N/2 + 1)) ÷ 2"
+      },
       "formula_latex": "\\\\text{Médiane} = \\\\begin{cases} X_{\\\\frac{N+1}{2}} & \\\\text{si } N \\\\text{ impair} \\\\\\\\ \\\\frac{X_{\\\\frac{N}{2}} + X_{\\\\frac{N}{2}+1}}{2} & \\\\text{si } N \\\\text{ pair} \\\\end{cases}",
       "interpretation": {
         "fr": "Représente la performance d'une « banque type » médiane sur la place bancaire algérienne, sans biais de surreprésentation des grandes banques publiques.",
@@ -2477,17 +2589,20 @@
         "ar": "يمثل أداء «البنك النموذجي» في الساحة المصرفية دون تحيز للأحجام الكبيرة للبنوك العمومية."
       },
       "example": {
-        "fr": "Données 2024, Édition ABIX 2025 (périmètre de 20 banques, N pair) : Le coefficient d'exploitation médian est calculé comme la moyenne de la 10e banque (43,2 %) et de la 11e banque (43,8 %), soit exactement 43,5 %.",
-        "en": "2024 data, ABIX 2025 edition (20 banks, even N): Median CIR is the average of the 10th bank (43.2%) and 11th bank (43.8%), exactly 43.5%.",
-        "ar": "بيانات 2024، إصدار ABIX 2025 (20 بنكاً، N زوجي): وسيط معامل الاستغلال هو متوسط البنك العاشر (43.2%) والحادي عشر (43.8%)، أي 43.5%."
+        "fr": "Exemple pédagogique : Dans une liste de valeurs de PNB (10, 20, 50, 100, 200), la médiane est de 50 Mds DZD.",
+        "en": "Pedagogical example: In a list of NBI values (10, 20, 50, 100, 200), the median is 50 billion DZD.",
+        "ar": "مثال تعليمي: في قائمة قيم الناتج البنكي الصافي (10، 20، 50، 100، 200)، الوسيط هو 50 مليار دج."
       },
-      "unit": "selon indicateur",
+      "unit": {
+        "fr": "selon indicateur",
+        "en": "depending on indicator",
+        "ar": "حسب المؤشر"
+      },
       "performance_direction": "neutral",
       "higher_is_better": null,
       "threshold_type": "NONE",
       "regulatory_threshold": null,
       "abix_benchmark": null,
-      "example_vintage": "Données 2024, Édition ABIX 2025, périmètre de 20 banques",
       "modules": [
         "Vue Secteur",
         "Classements",
@@ -2500,10 +2615,7 @@
         "quartiles",
         "ecart-type"
       ],
-      "display_order": 33,
-      "is_active": true,
-      "created_at": "2026-08-29T08:48:33.944Z",
-      "updated_at": "2026-08-29T08:48:33.944Z"
+      "display_order": 33
     },
     {
       "id": "quartiles",
@@ -2522,6 +2634,7 @@
           "Tranches de distribution"
         ],
         "en": [
+          "Quartiles and Percentiles",
           "Quartiles",
           "Q1, Q2, Q3",
           "Four-tier distribution",
@@ -2544,7 +2657,11 @@
         "en": "In descriptive statistics, quartile thresholds are Q1=P25, Q2=P50 (median), and Q3=P75, using (N-1)*p interpolation. ABIX performance bands are a separate, business-direction-aware presentation: ABIX band Q1 identifies the most favorable 25%, while Q4 identifies the least favorable 25%. For Growth Momentum, the same cut-offs are explicitly labelled relative momentum bands and do not imply general performance.",
         "ar": "في الإحصاء الوصفي تكون حدود الأرباع Q1=P25 وQ2=P50 (الوسيط) وQ3=P75 وفق استيفاء (N-1)×p. أما نطاقات أداء ABIX فهي عرض منفصل يراعي اتجاه المؤشر: نطاق Q1 يضم 25% الأكثر ملاءمة وQ4 الأقل ملاءمة. وفي ديناميكية النمو تسمى الحدود نطاقات الديناميكية النسبية ولا تعني حكماً على الأداء العام."
       },
-      "formula": "Q1 = P25 (interpolation linéaire) | Q2 = Médiane (P50) | Q3 = P75 (interpolation linéaire)",
+      "formula": {
+        "fr": "Q1 = P25 (interpolation linéaire) | Q2 = Médiane (P50) | Q3 = P75 (interpolation linéaire)",
+        "en": "Q1 = P25 (linear interpolation) | Q2 = Median (P50) | Q3 = P75 (linear interpolation)",
+        "ar": "Q1 = P25 (استيفاء خطي) | Q2 = الوسيط (P50) | Q3 = P75 (استيفاء خطي)"
+      },
       "formula_latex": "Q_1 = P_{25},\\\\quad Q_2 = P_{50} = \\\\text{Médiane},\\\\quad Q_3 = P_{75}",
       "interpretation": {
         "fr": "Permet de positionner objectivement chaque banque dans sa tranche sectorielle (Tranche 1, Tranche 2, Tranche 3, Tranche 4) sans biais de moyenne.",
@@ -2552,11 +2669,15 @@
         "ar": "يتيح تحديد التموضع الدقيق لكل بنك ضمن شريحته القطاعية دون تأثر بالمتوسطات."
       },
       "example": {
-        "fr": "Exemple descriptif : Q1=P25, Q2=P50 et Q3=P75. Dans une restitution orientée du ROE, les valeurs au-dessus de P75 portent séparément le libellé « bande de performance ABIX Q1 ».",
-        "en": "Descriptive example: Q1=P25, Q2=P50, and Q3=P75. In a direction-aware ROE view, values above P75 separately carry the label 'ABIX performance band Q1'.",
-        "ar": "بيانات 2024، إصدار ABIX 2025، عائد ROE: الربيع الأول 6.2%، الوسيط 9.8%، الربيع الثالث 14.5%."
+        "fr": "Exemple pédagogique : La médiane (Q2) sépare le marché en deux. Q1 est la valeur sous laquelle se trouvent 25 % des banques. Q3 est celle sous laquelle on trouve 75 % des établissements.",
+        "en": "Pedagogical example: The median (Q2) splits the market in half. Q1 is the value below which 25% of banks fall. Q3 is the value below which 75% of institutions are located.",
+        "ar": "مثال تعليمي: المتوسط (Q2) يقسم السوق إلى نصفين. Q1 هي القيمة التي يقع دونها 25% من البنوك. Q3 هي القيمة التي يقع دونها 75% من المؤسسات."
       },
-      "unit": "selon indicateur",
+      "unit": {
+        "fr": "selon indicateur",
+        "en": "depending on indicator",
+        "ar": "حسب المؤشر"
+      },
       "performance_direction": "neutral",
       "higher_is_better": null,
       "threshold_type": "NONE",
@@ -2575,10 +2696,7 @@
         "moyenne-arithmetique",
         "z-score-standardise"
       ],
-      "display_order": 34,
-      "is_active": true,
-      "created_at": "2026-08-29T08:48:33.944Z",
-      "updated_at": "2026-08-29T08:48:33.944Z"
+      "display_order": 34
     },
     {
       "id": "ecart-type",
@@ -2617,7 +2735,11 @@
         "en": "Quantifies the homogeneity or dispersion of banking metrics across institutions. Statistical note: In an approximately normal distribution, ~68% of observations fall within ±1σ and ~95% within ±2σ of the mean.",
         "ar": "يقيس درجة التجانس أو التباين بين أداء البنوك. ملاحظة إحصائية: في التوزيع المعتدل تقريباً، يقع نحو 68% من القيم ضمن ±1 انحراف معياري و95% ضمن ±2 انحراف معياري."
       },
-      "formula": "Écart-type (σ) = √ [ (1 ÷ N) × Σ (Xi − X̄)² ]",
+      "formula": {
+        "fr": "Écart-type (σ) = √ [ (1 ÷ N) × Σ (Xi − X̄)² ]",
+        "en": "Standard Deviation (σ) = √ [ (1 ÷ N) × Σ (Xi − X̄)² ]",
+        "ar": "الانحراف المعياري (σ) = √ [ (1 ÷ N) × Σ (Xi − X̄)² ]"
+      },
       "formula_latex": "\\\\sigma = \\\\sqrt{\\\\frac{1}{N}\\\\sum_{i=1}^N (X_i - \\\\bar{X})^2}",
       "interpretation": {
         "fr": "Permet d'évaluer la représentativité de la moyenne et d'identifier les banques atypiques (outliers) situées à plus de 2 écarts-types.",
@@ -2625,17 +2747,20 @@
         "ar": "يساعد على تقييم مدى تمثيلية المتوسط وتحديد البنوك الشاذة إحصائياً التي تبعد بأكثر من انحرافين معياريين."
       },
       "example": {
-        "fr": "Données 2024, Édition ABIX 2025, périmètre de 20 banques : Pour un ROE moyen de 11,4 % avec un écart-type sectoriel de σ = 5,2 %, la plage [6,2 % - 16,6 %] regroupe la majorité des banques sous hypothèse de quasi-normalité.",
-        "en": "2024 data, ABIX 2025 edition, 20-bank scope: For a mean ROE of 11.4% with sector σ = 5.2%, the range [6.2% - 16.6%] encompasses the core bank cohort.",
-        "ar": "بيانات 2024، إصدار ABIX 2025: لمتوسط عائد 11.4% وانحراف معياري 5.2%، يشمل النطاق [6.2% - 16.6%] غالبية البنوك."
+        "fr": "Exemple pédagogique : Un écart-type faible sur les taux d'intérêt signifie que la plupart des banques proposent des taux très proches de la moyenne.",
+        "en": "Pedagogical example: A low standard deviation on interest rates means most banks offer rates very close to the average.",
+        "ar": "مثال تعليمي: الانحراف المعياري المنخفض لأسعار الفائدة يعني أن معظم البنوك تقدم أسعارًا قريبة جدًا من المتوسط."
       },
-      "unit": "selon indicateur",
+      "unit": {
+        "fr": "selon indicateur",
+        "en": "depending on indicator",
+        "ar": "حسب المؤشر"
+      },
       "performance_direction": "neutral",
       "higher_is_better": null,
       "threshold_type": "NONE",
       "regulatory_threshold": null,
       "abix_benchmark": null,
-      "example_vintage": "Données 2024, Édition ABIX 2025, périmètre de 20 banques",
       "modules": [
         "Vue Secteur",
         "Distribution Sectorielle",
@@ -2646,10 +2771,7 @@
         "coefficient-variation",
         "z-score-standardise"
       ],
-      "display_order": 35,
-      "is_active": true,
-      "created_at": "2026-08-29T08:48:33.944Z",
-      "updated_at": "2026-08-29T08:48:33.944Z"
+      "display_order": 35
     },
     {
       "id": "coefficient-variation",
@@ -2687,7 +2809,11 @@
         "en": "The CV is a dimensionless metric enabling direct dispersion comparison across financial indicators with different units or scales (e.g. comparing deposits dispersion in billion DZD with ROE dispersion in %).",
         "ar": "معامل الاختلاف هو مقياس نسبي يتيح المقارنة المباشرة لدرجة التباين بين مؤشرات مالية مختلفة الوحدات والمقاييس."
       },
-      "formula": "Coefficient de Variation (CV) = (Écart-type σ ÷ Moyenne arithmétique X̄) × 100",
+      "formula": {
+        "fr": "Coefficient de Variation (CV) = (Écart-type σ ÷ Moyenne arithmétique X̄) × 100",
+        "en": "Coefficient of Variation (CV) = (Standard Deviation σ ÷ Arithmetic Mean X̄) × 100",
+        "ar": "معامل الاختلاف (CV) = (الانحراف المعياري σ ÷ المتوسط الحسابي X̄) × 100"
+      },
       "formula_latex": "\\\\text{CV} = \\\\frac{\\\\sigma}{\\\\bar{X}} \\\\times 100",
       "interpretation": {
         "fr": "Un CV < 15 % traduit une forte homogénéité sectorielle. Un CV > 30-50 % indique une forte dispersion ou une polarisation marquée entre établissements.",
@@ -2695,9 +2821,9 @@
         "ar": "يدل CV الأقل من 15% على تجانس كبير، بينما يدل تجاوزه 30-50% على تباين حاد أو استقطاب في السوق."
       },
       "example": {
-        "fr": "Données 2024, Édition ABIX 2025, périmètre de 20 banques : Le CV du coefficient d'exploitation est de 24 % (modéré), tandis que celui de la taille de bilan atteint 145 % (très forte asymétrie de taille).",
-        "en": "2024 data, ABIX 2025 edition: Cost-to-Income CV is 24% (moderate), whereas Total Assets CV reaches 145% (extreme scale skewness).",
-        "ar": "بيانات 2024، إصدار ABIX 2025: يبلغ معامل الاختلاف لمعامل الاستغلال 24% بينما يصل لحجم الميزانية إلى 145%."
+        "fr": "Exemple pédagogique : Si l'écart-type est de 5 Mds DZD et la moyenne de 50 Mds DZD, le coefficient de variation est de 10 %.",
+        "en": "Pedagogical example: If the standard deviation is 5 billion DZD and the mean is 50 billion DZD, the coefficient of variation is 10%.",
+        "ar": "مثال تعليمي: إذا كان الانحراف المعياري 5 مليارات دج والمتوسط 50 مليار دج، فإن معامل الاختلاف هو 10%."
       },
       "unit": "%",
       "performance_direction": "neutral",
@@ -2705,7 +2831,6 @@
       "threshold_type": "NONE",
       "regulatory_threshold": null,
       "abix_benchmark": null,
-      "example_vintage": "Données 2024, Édition ABIX 2025, périmètre de 20 banques",
       "modules": [
         "Vue Secteur",
         "Distribution Sectorielle",
@@ -2715,10 +2840,7 @@
         "ecart-type",
         "moyenne-arithmetique"
       ],
-      "display_order": 36,
-      "is_active": true,
-      "created_at": "2026-08-29T08:48:33.944Z",
-      "updated_at": "2026-08-29T08:48:33.944Z"
+      "display_order": 36
     },
     {
       "id": "taux-croissance-annuel-compose",
@@ -2756,7 +2878,11 @@
         "en": "CAGR smooths out year-to-year volatility through geometric progression. In ABIX Data Explorer, CAGR is used in the Growth scoring pillar (25% weight each on Assets, Loans, NBI, and Net Profit).",
         "ar": "يحيّد CAGR التذبذبات السنوية بحساب المتوسط الهندسي للمسار. في ABIX، يُستخدم في تقييم ركيزة النمو (بوزن 25% لكل من الميزانية، القروض، الناتج البنكي والربح الصافي)."
       },
-      "formula": "CAGR = [ (Valeur Finale ÷ Valeur Initiale)^(1 ÷ n) − 1 ] × 100",
+      "formula": {
+        "fr": "CAGR = [ (Valeur Finale ÷ Valeur Initiale)^(1 ÷ n) − 1 ] × 100",
+        "en": "CAGR = [ (Ending Value ÷ Beginning Value)^(1 ÷ n) − 1 ] × 100",
+        "ar": "معدل النمو السنوي المركب (CAGR) = [ (القيمة النهائية ÷ القيمة الابتدائية)^(1 ÷ n) − 1 ] × 100"
+      },
       "formula_latex": "\\\\text{CAGR} = \\\\left[ \\\\left(\\\\frac{V_{\\\\text{final}}}{V_{\\\\text{initial}}}\\\\right)^{\\\\frac{1}{n}} - 1 \\\\right] \\\\times 100",
       "interpretation": {
         "fr": "Permet de comparer équitablement la dynamique commerciale et financière pluriannuelle entre banques de tailles différentes.",
@@ -2764,9 +2890,9 @@
         "ar": "يتيح مقارنة عادلة للحركية التمويلية والتجارية عبر السنوات بين بنوك متفاوتة الحجم."
       },
       "example": {
-        "fr": "Données 2021-2024, Édition ABIX 2025 (périmètre constant) : Les crédits du secteur sont passés de 8 500 à 11 100 Mds DZD sur 3 ans, soit un CAGR de +9,3 % par an.",
-        "en": "2021-2024 data, ABIX 2025 edition (constant scope): Sector loans expanded from 8,500B to 11,100B DZD over 3 years, representing a CAGR of +9.3% per annum.",
-        "ar": "بيانات 2021-2024، إصدار ABIX 2025: ارتفعت القروض من 8,500 إلى 11,100 مليار دج خلال 3 سنوات، بمعدل CAGR قدره +9.3% سنوياً."
+        "fr": "Exemple pédagogique : Un capital passant de 100 à 121 Mds DZD en 2 ans a un taux de croissance annuel composé (TCAC) de 10 %.",
+        "en": "Pedagogical example: Capital growing from 100 to 121 billion DZD over 2 years has a compound annual growth rate (CAGR) of 10%.",
+        "ar": "مثال تعليمي: رأس المال الذي ينمو من 100 إلى 121 مليار دج في عامين له معدل نمو سنوي مركب قدره 10%."
       },
       "unit": "%",
       "performance_direction": "higher_is_better",
@@ -2774,7 +2900,6 @@
       "threshold_type": "NONE",
       "regulatory_threshold": null,
       "abix_benchmark": null,
-      "example_vintage": "Données 2021-2024, Édition ABIX 2025, périmètre constant",
       "modules": [
         "Scores ABIX (Dynamique & Croissance)",
         "Historique Pluriannuel",
@@ -2784,10 +2909,7 @@
         "variation-annuelle-yoy",
         "base-100"
       ],
-      "display_order": 37,
-      "is_active": true,
-      "created_at": "2026-08-29T08:48:33.944Z",
-      "updated_at": "2026-08-29T08:48:33.944Z"
+      "display_order": 37
     },
     {
       "id": "variation-annuelle-yoy",
@@ -2828,7 +2950,11 @@
         "en": "Measures annual metric expansion or contraction. In ABIX Data Explorer, for indicators already expressed as percentages (e.g. ROE, CIR), the variation is strictly tracked in percentage points (point_change).",
         "ar": "يقيس وتيرة التوسع أو الانكماش السنوي. في ABIX، بالنسبة للنسب المئوية (مثل ROE)، يُحتسب التغير بنقاط مئوية مطلقة منعاً للخلط."
       },
-      "formula": "Pour agrégats (Mds DZD) : YoY = [(Vt − Vt-1) ÷ Vt-1] × 100 | Pour ratios (%) : Δ = Vt − Vt-1 (en points)",
+      "formula": {
+        "fr": "Pour agrégats (Mds DZD) : YoY = [(Vt − Vt-1) ÷ Vt-1] × 100 | Pour ratios (%) : Δ = Vt − Vt-1 (en points)",
+        "en": "For financial aggregates (Billion DZD): YoY = [(Vt − Vt-1) ÷ Vt-1] × 100 | For ratios (%): Δ = Vt − Vt-1 (in points)",
+        "ar": "للمجاميع المالية (مليار دج): YoY = [(Vt − Vt-1) ÷ Vt-1] × 100 | للنسب المئوية (%): Δ = Vt − Vt-1 (بالنقاط)"
+      },
       "formula_latex": "\\\\text{YoY} = \\\\frac{V_t - V_{t-1}}{V_{t-1}} \\\\times 100 \\\\quad | \\\\quad \\\\Delta = V_t - V_{t-1} \\\\text{ (pts)}",
       "interpretation": {
         "fr": "Permet d'identifier les ruptures de tendance, accélérations commerciales ou décélérations brutales d'une année sur l'autre.",
@@ -2836,17 +2962,20 @@
         "ar": "يتيح رصد التحولات الهيكلية، والتسارع التجاري أو التباطؤ المفاجئ من سنة إلى أخرى."
       },
       "example": {
-        "fr": "Données 2024 vs 2023, Édition ABIX 2025 : Progression du PNB sectoriel de +8,2 % YoY, tandis que le ROE moyen a gagné +0,6 point de pourcentage.",
-        "en": "2024 vs 2023 data, ABIX 2025 edition: Sector NBI grew by +8.2% YoY, while average ROE gained +0.6 percentage points.",
-        "ar": "بيانات 2024 مقارنة بـ 2023: نمو الناتج البنكي الصافي القطاعي بـ +8.2%، مع ارتفاع وسيط ROE بـ +0.6 نقطة مئوية."
+        "fr": "Exemple pédagogique : Si les crédits passent de 100 à 110 Mds DZD en un an, la variation annuelle est de +10 %.",
+        "en": "Pedagogical example: If loans increase from 100 to 110 billion DZD in one year, the year-over-year variation is +10%.",
+        "ar": "مثال تعليمي: إذا زادت القروض من 100 إلى 110 مليار دج في سنة واحدة، فإن التغير السنوي هو +10%."
       },
-      "unit": "% / pts",
+      "unit": {
+        "fr": "% / pts",
+        "en": "% / pts",
+        "ar": "% / نقطة"
+      },
       "performance_direction": "neutral",
       "higher_is_better": null,
       "threshold_type": "NONE",
       "regulatory_threshold": null,
       "abix_benchmark": null,
-      "example_vintage": "Données 2024 vs 2023, Édition ABIX 2025",
       "modules": [
         "Historique",
         "Profil Banque",
@@ -2857,10 +2986,7 @@
         "taux-croissance-annuel-compose",
         "base-100"
       ],
-      "display_order": 38,
-      "is_active": true,
-      "created_at": "2026-08-29T08:48:33.944Z",
-      "updated_at": "2026-08-29T08:48:33.944Z"
+      "display_order": 38
     },
     {
       "id": "base-100",
@@ -2898,7 +3024,11 @@
         "en": "Base 100 fixes the initial selected year at 100. Subsequent years are computed as (Year Value / Base Value) * 100. This enables direct graphical trajectory comparison between large public and smaller private lenders.",
         "ar": "يثبت تحليل الأساس 100 سنة البداية عند 100، وتُحسب السنوات اللاحقة تناسبياً، مما يسمح بمقارنة مسارات بنوك كبيرة وصغيرة على نفس الرسم البياني."
       },
-      "formula": "Indice Base 100 (t) = (Valeur_t ÷ Valeur_base) × 100",
+      "formula": {
+        "fr": "Indice Base 100 (t) = (Valeur_t ÷ Valeur_base) × 100",
+        "en": "Base 100 Index (t) = (Value_t ÷ Base_Value) × 100",
+        "ar": "مؤشر الأساس 100 (t) = (القيمة_t ÷ القيمة_الأساسية) × 100"
+      },
       "formula_latex": "\\\\text{Indice}_t = \\\\frac{V_t}{V_{\\\\text{base}}} \\\\times 100",
       "interpretation": {
         "fr": "Un indice à 135 signifie une progression cumulée de +35 % depuis l'année de référence, indépendamment de la taille initiale de l'établissement.",
@@ -2906,17 +3036,20 @@
         "ar": "قراءة المؤشر عند 135 تعني نمواً تراكمياً بنسبة +35% منذ سنة الأساس."
       },
       "example": {
-        "fr": "Données 2021-2024, Édition ABIX 2025 (base 2021 = 100) : En 2024, les dépôts du secteur se situent à l'indice 128,4 (croissance cumulée de +28,4 % en 3 ans).",
-        "en": "2021-2024 data, ABIX 2025 edition (2021 base = 100): In 2024, sector deposits stand at 128.4 (+28.4% cumulative growth).",
-        "ar": "بيانات 2021-2024 (الأساس 2021 = 100): في 2024، بلغت ودائع القطاع المؤشر 128.4 (+28.4% نمو تراكمي)."
+        "fr": "Exemple pédagogique : Si un indicateur part de 50 Mds DZD (indice 100) et atteint 75 Mds DZD, son indice en base 100 devient 150.",
+        "en": "Pedagogical example: If an indicator starts at 50 billion DZD (base 100) and reaches 75 billion DZD, its base 100 index becomes 150.",
+        "ar": "مثال تعليمي: إذا بدأ مؤشر من 50 مليار دج (مؤشر الأساس 100) ووصل إلى 75 مليار دج، فإن مؤشره في الأساس 100 يصبح 150."
       },
-      "unit": "indice (base 100)",
+      "unit": {
+        "fr": "indice (base 100)",
+        "en": "index (base 100)",
+        "ar": "مؤشر (أساس 100)"
+      },
       "performance_direction": "neutral",
       "higher_is_better": null,
       "threshold_type": "NONE",
       "regulatory_threshold": null,
       "abix_benchmark": null,
-      "example_vintage": "Données 2021-2024, Édition ABIX 2025",
       "modules": [
         "Historique",
         "Comparateur",
@@ -2926,10 +3059,7 @@
         "taux-croissance-annuel-compose",
         "variation-annuelle-yoy"
       ],
-      "display_order": 39,
-      "is_active": true,
-      "created_at": "2026-08-29T08:48:33.944Z",
-      "updated_at": "2026-08-29T08:48:33.944Z"
+      "display_order": 39
     },
     {
       "id": "correlation-pearson",
@@ -2967,7 +3097,11 @@
         "en": "The Pearson coefficient r ranges from -1 (perfect inverse linear relation) to +1 (perfect positive linear relation), with 0 indicating no linear association. Fundamental ABIX rule: Correlation ≠ Causation. Furthermore, r measures strictly linear relationships and can be sensitive to extreme outliers.",
         "ar": "يتراوح معامل بيرسون r بين -1 و +1. قاعدة ABIX المنهجية الجوهرية: الارتباط لا يعني السببية إطلاقاً. كما يقيس المعامل العلاقات الخطية حصراً ويتأثر بالقيم الشاذة."
       },
-      "formula": "r = Σ [ (Xi − X̄)(Yi − Ȳ) ] ÷ [ √Σ(Xi − X̄)² × √Σ(Yi − Ȳ)² ]",
+      "formula": {
+        "fr": "r = Σ [ (Xi − X̄)(Yi − Ȳ) ] ÷ [ √Σ(Xi − X̄)² × √Σ(Yi − Ȳ)² ]",
+        "en": "r = Σ [ (Xi − X̄)(Yi − Ȳ) ] ÷ [ √Σ(Xi − X̄)² × √Σ(Yi − Ȳ)² ]",
+        "ar": "معامل الارتباط r = Σ [ (Xi − X̄)(Yi − Ȳ) ] ÷ [ √Σ(Xi − X̄)² × √Σ(Yi − Ȳ)² ]"
+      },
       "formula_latex": "r = \\\\frac{\\\\sum_{i=1}^N (X_i - \\\\bar{X})(Y_i - \\\\bar{Y})}{\\\\sqrt{\\\\sum_{i=1}^N (X_i - \\\\bar{X})^2 \\\\sum_{i=1}^N (Y_i - \\\\bar{Y})^2}}",
       "interpretation": {
         "fr": "|r| > 0,70 signale une forte corrélation linéaire ; 0,40 < |r| < 0,70 une corrélation modérée ; |r| < 0,40 une relation faible ou non linéaire.",
@@ -2975,17 +3109,24 @@
         "ar": "|r| > 0.70 يدل على ارتباط خطي قوي؛ بين 0.40 و 0.70 ارتباط متوسط؛ وأقل من 0.40 ارتباط ضعيف أو غير خطي."
       },
       "example": {
-        "fr": "Données 2024, Édition ABIX 2025, périmètre de 20 banques : Corrélation observée positive et robuste de r = +0,88 entre les Dépôts clientèle et le Total Bilan sur le marché algérien.",
-        "en": "2024 data, ABIX 2025 edition, 20-bank scope: Strong positive linear correlation of r = +0.88 observed between Customer Deposits and Total Assets.",
-        "ar": "بيانات 2024، إصدار ABIX 2025، نطاق 20 بنكاً: ارتباط خطي إيجابي وقوي r = +0.88 بين ودائع العملاء وإجمالي الميزانية."
+        "fr": "Exemple pédagogique : Une corrélation de 0,9 entre le PNB et le total bilan indique qu'ils augmentent généralement ensemble.",
+        "en": "Pedagogical example: A 0.9 correlation between NBI and total assets indicates they generally increase together.",
+        "ar": "مثال تعليمي: ارتباط قدره 0.9 بين الناتج البنكي الصافي وإجمالي الميزانية يشير إلى أنهما يرتفعان معًا بشكل عام."
       },
-      "unit": "coefficient (-1 à +1)",
+      "unit": {
+        "fr": "coefficient (-1 à +1)",
+        "en": "coefficient (-1 to +1)",
+        "ar": "معامل (-1 إلى +1)"
+      },
       "performance_direction": "neutral",
       "higher_is_better": null,
       "threshold_type": "ACADEMIC_REFERENCE",
       "regulatory_threshold": null,
-      "abix_benchmark": "Forte correlation si |r| >= 0,70 (Seuil d'exclusion multicolinearite ABIX: |r| >= 0,85)",
-      "example_vintage": "Données 2024, Édition ABIX 2025, périmètre de 20 banques",
+      "abix_benchmark": {
+        "fr": "Forte corrélation si |r| >= 0,70 (Seuil d'exclusion multicolinéarité ABIX : |r| >= 0,85)",
+        "en": "Strong correlation if |r| >= 0.70 (ABIX Multicollinearity Exclusion Threshold: |r| >= 0.85)",
+        "ar": "ارتباط قوي إذا كان |r| >= 0.70 (عتبة استبعاد التعددية الخطية ABIX: |r| >= 0.85)"
+      },
       "modules": [
         "Matrice de Corrélation",
         "Nuage de Points (Scatter Plots)",
@@ -2995,10 +3136,7 @@
         "z-score-standardise",
         "ecart-type"
       ],
-      "display_order": 40,
-      "is_active": true,
-      "created_at": "2026-08-29T08:48:33.944Z",
-      "updated_at": "2026-08-29T08:48:33.944Z"
+      "display_order": 40
     },
     {
       "id": "z-score-standardise",
@@ -3038,25 +3176,36 @@
         "en": "Standardizes metrics to a unitless scale centered at zero. ABIX implements two variants: 1) Classic Z = (X - Mean) / σ; 2) Robust Z = 0.6745 * (X - Median) / MAD. Statistical note: The equivalence of Z = +2 with the top 2.5% holds strictly only under the assumption of a normal distribution.",
         "ar": "يقيس المسافة الإحصائية عن مركز التوزيع. تعتمد ABIX صيغتين: 1) القياسية: Z = (القيمة - المتوسط) / الانحراف المعياري؛ 2) القوية المقاومة للشواذ: Z = 0.6745 × (القيمة - الوسيط) / MAD. ملاحظة: تطابق Z = +2 مع أعلى 2.5% مشروط باعتدال التوزيع."
       },
-      "formula": "Z classique = (X − X̄) ÷ σ | Z robuste = 0,6745 × (X − Médiane) ÷ MAD",
-      "formula_latex": "Z = \\\\frac{X - \\\\bar{X}}{\\\\sigma} \\\\quad | \\\\quad Z_{\\\\text{robuste}} = 0{,}6745 \\\\times \\\\frac{X - \\\\text{Médiane}}{\\\\text{MAD}}",
+      "formula": {
+        "fr": "Z classique = (X − X̄) ÷ σ | Z robuste = 0,6745 × (X − Médiane) ÷ MAD",
+        "en": "Standard Z-Score = (X − X̄) ÷ σ | Robust Z-Score = 0.6745 × (X − Median) ÷ MAD",
+        "ar": "درجة Z المعيارية = (X − X̄) ÷ σ | درجة Z القوية = 0.6745 × (X − الوسيط) ÷ MAD"
+      },
+      "formula_latex": "Z = \\\\frac{X - \\\\bar{X}}{\\\\sigma} \\\\quad | \\\\quad Z_{\\\\text{robuste}} = 0{}6745 \\\\times \\\\frac{X - \\\\text{Médiane}}{\\\\text{MAD}}",
       "interpretation": {
         "fr": "Z = 0 situe la banque exactement au centre. Z > +2 ou Z < -2 signale un profil atypique (outlier statistique) se démarquant nettement du secteur.",
         "en": "Z = 0 places the bank at market center. Z > +2 or Z < -2 flags an outlier significantly diverging from sector norms.",
         "ar": "Z = 0 يعني التواجد تماماً في المركز. وتجاوز +2 أو -2 يشير إلى وضعية استثنائية (قيمة شاذة إحصائياً)."
       },
       "example": {
-        "fr": "Données 2024, Édition ABIX 2025, ROE : Pour une banque affichant un ROE de 21,8 % face à une moyenne de 11,4 % (σ = 5,2 %), son Z-score s'établit à Z = +2,00 (positionnement supérieur d'élite sous hypothèse normale).",
-        "en": "2024 data, ABIX 2025 edition: A bank with 21.8% ROE against a sector mean of 11.4% (σ = 5.2%) achieves Z = +2.00.",
-        "ar": "بيانات 2024، إصدار ABIX 2025: بنك بعائد 21.8% مقابل متوسط 11.4% (انحراف 5.2%)، تكون درجته المعيارية Z = +2.00."
+        "fr": "Exemple pédagogique : Un Z-score de +2 signifie que la performance de la banque est supérieure de deux écarts-types à la moyenne du secteur.",
+        "en": "Pedagogical example: A Z-score of +2 means the bank's performance is two standard deviations above the sector average.",
+        "ar": "مثال تعليمي: درجة Z تبلغ +2 تعني أن أداء البنك أعلى بانحرافين معياريين عن متوسط القطاع."
       },
-      "unit": "score (sans unité)",
+      "unit": {
+        "fr": "score (sans unité)",
+        "en": "score (unitless)",
+        "ar": "درجة (بلا وحدة)"
+      },
       "performance_direction": "neutral",
       "higher_is_better": null,
       "threshold_type": "ACADEMIC_REFERENCE",
       "regulatory_threshold": null,
-      "abix_benchmark": "Zone standard [-2 ; +2], Profil atypique si |Z| > 2",
-      "example_vintage": "Données 2024, Édition ABIX 2025, périmètre de 20 banques",
+      "abix_benchmark": {
+        "fr": "Zone standard [-2 ; +2], Profil atypique si |Z| > 2",
+        "en": "Standard Zone [-2 ; +2] | Atypical Profile if |Z| > 2",
+        "ar": "النطاق المعياري [-2 ؛ +2] | ملف غير نمطي إذا كان |Z| > 2"
+      },
       "modules": [
         "Outliers & Détection d'Anomalies",
         "Lab Méthodologique",
@@ -3067,10 +3216,7 @@
         "mediane",
         "moyenne-arithmetique"
       ],
-      "display_order": 41,
-      "is_active": true,
-      "created_at": "2026-08-29T08:48:33.944Z",
-      "updated_at": "2026-08-29T08:48:33.944Z"
+      "display_order": 41
     },
     {
       "id": "normalisation-min-max",
@@ -3109,7 +3255,11 @@
         "en": "Statistical concept shown for education and usable as a secondary diagnostic in the laboratory. The four official ABIX dimension scores use empirical percentile ranks within the selected comparison group, not Min-Max normalization.",
         "ar": "مفهوم إحصائي معروض للتعليم ويمكن استعماله كتشخيص ثانوي في المختبر. تعتمد الدرجات الرسمية للأبعاد الأربعة في ABIX على الرتب المئينية التجريبية داخل مجموعة المقارنة المختارة، وليس على تطبيع Min-Max."
       },
-      "formula": "Sens direct : Score = [(X − Min) ÷ (Max − Min)] × 100 | Sens inverse : Score = [(Max − X) ÷ (Max − Min)] × 100",
+      "formula": {
+        "fr": "Sens direct : Score = [(X − Min) ÷ (Max − Min)] × 100 | Sens inverse : Score = [(Max − X) ÷ (Max − Min)] × 100",
+        "en": "Direct scale: Score = [(X − Min) ÷ (Max − Min)] × 100 | Inverted scale: Score = [(Max − X) ÷ (Max − Min)] × 100",
+        "ar": "الاتجاه المباشر: النتيجة = [(X − Min) ÷ (Max − Min)] × 100 | الاتجاه العكسي: النتيجة = [(Max − X) ÷ (Max − Min)] × 100"
+      },
       "formula_latex": "\\\\text{Score} = \\\\begin{cases} \\\\frac{X - \\\\text{Min}}{\\\\text{Max} - \\\\text{Min}} \\\\times 100 & \\\\text{si élevé favorable} \\\\\\\\ \\\\frac{\\\\text{Max} - X}{\\\\text{Max} - \\\\text{Min}} \\\\times 100 & \\\\text{si faible favorable} \\\\end{cases}",
       "interpretation": {
         "fr": "Utile pour comprendre une mise à l'échelle linéaire, mais sans statut de score officiel ABIX.",
@@ -3117,17 +3267,20 @@
         "ar": "مفيد لفهم التحجيم الخطي، لكنه لا يمثل درجة رسمية في ABIX."
       },
       "example": {
-        "fr": "Données 2024, Édition ABIX 2025, Coefficient d'exploitation (sens inverse) : Min = 28,0 %, Max = 78,0 %. Une banque affichant un CIR de 38,0 % obtient un score normalisé de : [(78,0 − 38,0) ÷ (78,0 − 28,0)] × 100 = 80,0 / 100.",
-        "en": "2024 data, ABIX 2025 edition, Cost-to-Income (inverted direction): Min = 28.0%, Max = 78.0%. A bank with 38.0% CIR receives a normalized score of [(78.0 - 38.0)/(78.0 - 28.0)] * 100 = 80.0 / 100.",
-        "ar": "بيانات 2024، إصدار ABIX 2025، معامل الاستغلال (عكسي): الأدنى 28.0% والأعلى 78.0%. بنك بنسبة 38.0% يحصل على درجة: [(78.0 - 38.0) / (78.0 - 28.0)] × 100 = 80.0 من 100."
+        "fr": "Exemple pédagogique : Une valeur de 80 transformée sur une échelle de 0 à 100 se verra attribuer un score de 0,8.",
+        "en": "Pedagogical example: A value of 80 transformed onto a 0 to 100 scale will be assigned a score of 0.8.",
+        "ar": "مثال تعليمي: قيمة 80 يتم تحويلها على مقياس من 0 إلى 100 ستحصل على درجة 0.8."
       },
-      "unit": "score (0 à 100)",
+      "unit": {
+        "fr": "score (0 à 100)",
+        "en": "score (0 to 100)",
+        "ar": "نقطة (0 إلى 100)"
+      },
       "performance_direction": "neutral",
       "higher_is_better": null,
       "threshold_type": "NONE",
       "regulatory_threshold": null,
       "abix_benchmark": null,
-      "example_vintage": "Données 2024, Édition ABIX 2025, périmètre de 20 banques",
       "modules": [
         "Laboratoire méthodologique",
         "Glossaire pédagogique"
@@ -3136,10 +3289,7 @@
         "z-score-standardise",
         "cadre-4d-abix"
       ],
-      "display_order": 42,
-      "is_active": true,
-      "created_at": "2026-08-29T08:48:33.944Z",
-      "updated_at": "2026-08-29T08:48:33.944Z"
+      "display_order": 42
     },
     {
       "id": "part-de-marche",
@@ -3177,7 +3327,11 @@
         "en": "Measures commercial footprint and competitive positioning across financial aggregates (Assets, Deposits, Loans, NBI). ABIX note: Market share is an indicator of relative scale, not an intrinsic measure of profitability or efficiency (contextual reading direction ◆).",
         "ar": "تقيس الوزن التنافسي والحضور التجاري للبنك (الميزانية، الودائع، القروض، الناتج البنكي). ملاحظة ABIX: الحصة السوقية تعبر عن الحجم النسبي ولا تمثل مقياساً لجودة الأداء أو الربحية (اتجاه قراءة سياقي ◆)."
       },
-      "formula": "Part de Marché = (Valeur de la Banque ÷ Total Consolidé du Secteur) × 100",
+      "formula": {
+        "fr": "Part de Marché = (Valeur de la Banque ÷ Total Consolidé du Secteur) × 100",
+        "en": "Market Share = (Bank Metric Value ÷ Sector Consolidated Total) × 100",
+        "ar": "الحصة السوقية = (قيمة مؤشر البنك ÷ إجمالي القطاع المجمع) × 100"
+      },
       "formula_latex": "\\\\text{Part de Marché}_i = \\\\frac{V_i}{\\\\sum_{k=1}^N V_k} \\\\times 100",
       "interpretation": {
         "fr": "Une part de marché élevée confère des économies d'échelle et un pouvoir de négociation, mais n'implique pas automatiquement une rentabilité unitaire supérieure.",
@@ -3185,9 +3339,9 @@
         "ar": "تمنح الحصة السوقية المرتفعة وفورات حجم وقوة تفاوضية، لكنها لا تضمن تلقائياً مردودية ربحية أعلى."
       },
       "example": {
-        "fr": "Données 2024, Édition ABIX 2025, Total Bilan (20 banques) : La première banque de la place détient environ 24,5 % de part de marché, et les 6 banques publiques cumulent près de 87 % du secteur.",
-        "en": "2024 data, ABIX 2025 edition, Total Assets (20 banks): Market leader holds approx. 24.5% market share, with public banks aggregating ~87%.",
-        "ar": "بيانات 2024، إصدار ABIX 2025، إجمالي الميزانية (20 بنكاً): يستحوذ البنك الأول على حوالي 24.5%، والبنوك العمومية الستة على نحو 87%."
+        "fr": "Exemple pédagogique : Si une banque détient 100 Mds DZD de dépôts sur un total sectoriel de 1000 Mds DZD, sa part de marché est de 10 %.",
+        "en": "Pedagogical example: If a bank holds 100 billion DZD in deposits out of a sector total of 1000 billion DZD, its market share is 10%.",
+        "ar": "مثال تعليمي: إذا كان البنك يمتلك 100 مليار دج من الودائع من إجمالي قطاعي قدره 1000 مليار دج، فإن حصته السوقية هي 10%."
       },
       "unit": "%",
       "performance_direction": "neutral",
@@ -3195,7 +3349,6 @@
       "threshold_type": "NONE",
       "regulatory_threshold": null,
       "abix_benchmark": null,
-      "example_vintage": "Données 2024, Édition ABIX 2025, périmètre de 20 banques",
       "modules": [
         "Parts de Marché",
         "Vue Secteur",
@@ -3209,10 +3362,7 @@
         "ratios-cr3-cr5",
         "total-bilan"
       ],
-      "display_order": 43,
-      "is_active": true,
-      "created_at": "2026-08-29T08:48:33.944Z",
-      "updated_at": "2026-08-29T08:48:33.944Z"
+      "display_order": 43
     },
     {
       "id": "gain-perte-part-marche",
@@ -3250,7 +3400,11 @@
         "en": "Measures net competitive momentum and market share shifts among banks. A market share gain indicates the bank outgrew the overall sector on that metric.",
         "ar": "يقيس الحركية التنافسية الصافية وتحولات الحصص السوقية. كسب حصة يعني نمو البنك بوتيرة أسرع من متوسط القطاع."
       },
-      "formula": "Δ Part de Marché = Part de Marché_t − Part de Marché_t-1 (en points de pourcentage)",
+      "formula": {
+        "fr": "Δ Part de Marché = Part de Marché_t − Part de Marché_t-1 (en points de pourcentage)",
+        "en": "Δ Market Share = Market Share_t − Market Share_t-1 (in percentage points)",
+        "ar": "تغير الحصة السوقية = الحصة السوقية_t − الحصة السوقية_t-1 (بالنقاط المئوية)"
+      },
       "formula_latex": "\\\\Delta \\\\text{Part de Marché} = \\\\text{Part}_t - \\\\text{Part}_{t-1} \\\\quad \\\\text{(pts)}",
       "interpretation": {
         "fr": "Un gain de part régulier atteste d'une conquête commerciale active. Une perte de part signale un essoufflement ou un repositionnement stratégique volontaire.",
@@ -3258,17 +3412,20 @@
         "ar": "كسب الحصة يعكس نمواً تجارياً نشطاً، بينما فقدانها يشير إلى تباطؤ أو إعادة تموضع استراتيجي."
       },
       "example": {
-        "fr": "Données 2024 vs 2023, Édition ABIX 2025 : Une banque privée dont la part sur les crédits passe de 3,20 % à 3,55 % enregistre un gain net de +0,35 pt.",
-        "en": "2024 vs 2023 data, ABIX 2025 edition: A bank expanding loan market share from 3.20% to 3.55% records a net gain of +0.35 pts.",
-        "ar": "بيانات 2024 مقارنة بـ 2023: بنك خاص ارتفعت حصته في القروض من 3.20% إلى 3.55% يسجل كسباً بـ +0.35 نقطة."
+        "fr": "Exemple pédagogique : Une banque passant de 10 % à 12 % de part de marché enregistre un gain de 2 points de pourcentage.",
+        "en": "Pedagogical example: A bank increasing its market share from 10% to 12% records a gain of 2 percentage points.",
+        "ar": "مثال تعليمي: البنك الذي ترتفع حصته السوقية من 10% إلى 12% يسجل زيادة قدرها نقطتان مئويتان."
       },
-      "unit": "pts de %",
+      "unit": {
+        "fr": "pts de %",
+        "en": "percentage points",
+        "ar": "نقاط مئوية"
+      },
       "performance_direction": "neutral",
       "higher_is_better": null,
       "threshold_type": "NONE",
       "regulatory_threshold": null,
       "abix_benchmark": null,
-      "example_vintage": "Données 2024 vs 2023, Édition ABIX 2025",
       "modules": [
         "Parts de Marché",
         "Historique",
@@ -3279,10 +3436,7 @@
         "part-de-marche",
         "variation-annuelle-yoy"
       ],
-      "display_order": 44,
-      "is_active": true,
-      "created_at": "2026-08-29T08:48:33.944Z",
-      "updated_at": "2026-08-29T08:48:33.944Z"
+      "display_order": 44
     },
     {
       "id": "secteur-public-prive",
@@ -3320,7 +3474,11 @@
         "en": "Distinguishes the 6 major state-owned commercial banks (plus CNEP-Banque) from the 14 private lenders (international subsidiaries, regional and Islamic banks). Central to ABIX for analyzing structural divergences.",
         "ar": "يميز بين البنوك التجارية العمومية للدولة (مع كناب-بنك) والبنوك الخاصة (فروع المجموعات الدولية والبنوك الإسلامية)."
       },
-      "formula": "Agrégat Public = Σ Banques Publiques | Agrégat Privé = Σ Banques Privées",
+      "formula": {
+        "fr": "Agrégat Public = Σ Banques Publiques | Agrégat Privé = Σ Banques Privées",
+        "en": "Public Sector Aggregate = Σ Public Banks | Private Sector Aggregate = Σ Private Banks",
+        "ar": "المجموع العام = Σ البنوك العمومية | المجموع الخاص = Σ البنوك الخاصة"
+      },
       "formula_latex": "\\\\text{Total} = \\\\sum \\\\text{Banques Publiques} + \\\\sum \\\\text{Banques Privées}",
       "interpretation": {
         "fr": "Permet d'isoler le poids prépondérant des banques publiques dans les volumes bilanciels (~87 %) et la dynamique de rentabilité relative des banques privées.",
@@ -3328,17 +3486,20 @@
         "ar": "يتيح عزل الوزن المهيمن للبنوك العمومية في الميزانية (~87%) ومقارنة ديناميكية ربحية البنوك الخاصة."
       },
       "example": {
-        "fr": "Données 2024, Édition ABIX 2025 (20 banques) : Le secteur public détient 86,8 % des actifs et 88,4 % des dépôts, tandis que le secteur privé génère plus de 28 % du résultat net global.",
-        "en": "2024 data, ABIX 2025 edition (20 banks): Public sector holds 86.8% of assets and 88.4% of deposits, while private banks generate over 28% of total net income.",
-        "ar": "بيانات 2024، إصدار ABIX 2025: يستحوذ القطاع العام على 86.8% من الأصول و88.4% من الودائع، بينما يحقق القطاع الخاص أكثر من 28% من صافي الأرباح."
+        "fr": "Exemple pédagogique : Si les banques publiques détiennent 800 Mds DZD et les privées 200 Mds DZD, la répartition est 80% / 20%.",
+        "en": "Pedagogical example: If public banks hold 800 billion DZD and private ones 200 billion DZD, the split is 80% / 20%.",
+        "ar": "مثال تعليمي: إذا كانت البنوك العمومية تمتلك 800 مليار دج والبنوك الخاصة 200 مليار دج، فإن التوزيع هو 80% / 20%."
       },
-      "unit": "% / Mds DZD",
+      "unit": {
+        "fr": "% / Mds DZD",
+        "en": "% / DZD bn",
+        "ar": "% / مليار دج"
+      },
       "performance_direction": "neutral",
       "higher_is_better": null,
       "threshold_type": "NONE",
       "regulatory_threshold": null,
       "abix_benchmark": null,
-      "example_vintage": "Données 2024, Édition ABIX 2025, périmètre de 20 banques",
       "modules": [
         "Public vs Privé",
         "Vue Secteur",
@@ -3350,10 +3511,7 @@
         "part-de-marche",
         "perimetre-constant"
       ],
-      "display_order": 45,
-      "is_active": true,
-      "created_at": "2026-08-29T08:48:33.944Z",
-      "updated_at": "2026-08-29T08:48:33.944Z"
+      "display_order": 45
     },
     {
       "id": "perimetre-constant",
@@ -3391,7 +3549,11 @@
         "en": "ABIX offers two scope modes: 1) Observed Scope (all reporting banks for a given year); 2) Constant Scope (strictly banks with complete data from start to end year), eliminating distortion in CAGR and Base 100 metrics.",
         "ar": "يوفر ABIX نمطين للنطاق: 1) النطاق المرصود (كافة البنوك المتوفرة في سنة معينة)؛ 2) النطاق الثابت (البنوك المتواجدة باستمرار طوال فترة التحليل)، مما يحيد أثر دخول أو خروج البنوك في حساب CAGR ومؤشر الأساس 100."
       },
-      "formula": "Périmètre Constant = { Banques présentes sur chaque année de [Année_début ; Année_fin] }",
+      "formula": {
+        "fr": "Périmètre Constant = { Banques présentes sur chaque année de [Année_début ; Année_fin] }",
+        "en": "Constant Scope = { Banks present in every year of [Start_Year ; End_Year] }",
+        "ar": "النطاق الثابت = { البنوك المتواجدة في كل سنة من [سنة_البداية ؛ سنة_النهاية] }"
+      },
       "formula_latex": "\\\\text{Périmètre Constant} = \\\\{ i \\\\in \\\\text{Banques} \\\\mid \\\\forall t \\\\in [t_0, t_n], V_{i,t} \\\\neq \\\\emptyset \\\\}",
       "interpretation": {
         "fr": "Indispensable pour l'exactitude des séries temporelles, des taux de croissance composés et des comparaisons pluriannuelles rigoureuses.",
@@ -3399,17 +3561,20 @@
         "ar": "ضروري لضمان دقة السلاسل الزمنية ومعدلات النمو المركبة والمقارنات متعددة السنوات."
       },
       "example": {
-        "fr": "Données 2020-2024, Édition ABIX 2025 : L'analyse à périmètre constant sur 5 ans retient les 19 banques actives sans interruption sur la période, garantissant un CAGR sectoriel 100 % cohérent.",
-        "en": "2020-2024 data, ABIX 2025 edition: 5-year constant scope retains the 19 continuously active banks, ensuring 100% consistent sector CAGR.",
-        "ar": "بيانات 2020-2024: يعتمد النطاق الثابت على 19 بنكاً متواجداً باستمرار طوال السنوات الخمس لضمان دقة معدل النمو المركب."
+        "fr": "Exemple pédagogique : Mesurer la croissance sans inclure l'impact d'une fusion récente permet d'évaluer la performance à périmètre constant.",
+        "en": "Pedagogical example: Measuring growth without including the impact of a recent merger assesses performance on a like-for-like basis.",
+        "ar": "مثال تعليمي: قياس النمو دون تضمين تأثير اندماج حديث يسمح بتقييم الأداء في نطاق ثابت."
       },
-      "unit": "banques (effectif)",
+      "unit": {
+        "fr": "banques (effectif)",
+        "en": "banks (count)",
+        "ar": "عدد البنوك"
+      },
       "performance_direction": "neutral",
       "higher_is_better": null,
       "threshold_type": "NONE",
       "regulatory_threshold": null,
       "abix_benchmark": null,
-      "example_vintage": "Données 2020-2024, Édition ABIX 2025",
       "modules": [
         "Historique",
         "Séries Temporelles",
@@ -3421,10 +3586,7 @@
         "base-100",
         "part-de-marche"
       ],
-      "display_order": 46,
-      "is_active": true,
-      "created_at": "2026-08-29T08:48:33.944Z",
-      "updated_at": "2026-08-29T08:48:33.944Z"
+      "display_order": 46
     },
     {
       "id": "indice-hhi",
@@ -3462,7 +3624,11 @@
         "en": "HHI squares market shares, placing greater weight on top banks. Standard competitive reading grid (indicative DOJ/FTC benchmarks): 1) HHI < 1,000: Unconcentrated market; 2) 1,000 <= HHI <= 1,800: Moderately concentrated; 3) HHI > 1,800: Highly concentrated. Mandatory ABIX note: These thresholds constitute a standardized competitive analytical grid and do not represent an automatic legal qualification of the Algerian banking market.",
         "ar": "يقيس HHI تركيز السوق بتربيع الحصص السوقية. شبكة القراءة التنافسية المعيارية: 1) أقل من 1,000: سوق غير مركز أو ضعيف التركيز؛ 2) من 1,000 إلى 1,800: تركيز معتدل؛ 3) أكثر من 1,800: تركيز مرتفع. ملاحظة ABIX الإلزامية: تمثل هذه العتبات شبكة قراءة اقتصادية استرشادية ولا تشكل توصيفاً قانونياً تلقائياً للسوق المصرفية الجزائرية."
       },
-      "formula": "HHI = Σ (Part de Marché_i)² (pour i = 1 à N banques, parts exprimées en %)",
+      "formula": {
+        "fr": "HHI = Σ (Part de Marché_i)² (pour i = 1 à N banques, parts exprimées en %)",
+        "en": "HHI = Σ (Market Share_i)² (for i = 1 to N banks, shares expressed in %)",
+        "ar": "مؤشر هيرفندال-هيرشمان (HHI) = Σ (الحصة السوقية_i)² (حيث i = 1 إلى N بنك، الحصص معبر عنها بـ %)"
+      },
       "formula_latex": "\\\\text{HHI} = \\\\sum_{i=1}^N (s_i)^2 \\\\quad \\\\text{avec } s_i \\\\text{ en \\\\%}",
       "interpretation": {
         "fr": "Un HHI élevé (> 1 800) traduit une structure oligopolistique où un petit nombre d'acteurs domine la collecte des dépôts et la distribution des crédits.",
@@ -3470,17 +3636,24 @@
         "ar": "يدل مؤشر HHI المرتفع (> 1,800) على بنية سوقية احتكارية تسيطر فيها قلة من البنوك على معظم الودائع والقروض."
       },
       "example": {
-        "fr": "Données 2024, Édition ABIX 2025, Total Bilan (20 banques) : L'indice HHI du total bilan s'établit à environ 1 920 points, caractérisant un marché fortement concentré selon les repères internationaux.",
-        "en": "2024 data, ABIX 2025 edition, Total Assets (20 banks): Sector HHI stands at approx. 1,920 points, characterizing a highly concentrated market by international standards.",
-        "ar": "بيانات 2024، إصدار ABIX 2025، إجمالي الميزانية (20 بنكاً): يبلغ مؤشر HHI حوالي 1,920 نقطة، مما يعكس تركيزاً مرتفعاً للسوق."
+        "fr": "Exemple pédagogique : Si le marché compte quatre banques avec chacune 25% de part de marché, l'indice HHI est de 2500, indiquant un marché concentré.",
+        "en": "Pedagogical example: If the market consists of four banks each holding a 25% share, the HHI is 2500, indicating a concentrated market.",
+        "ar": "مثال تعليمي: إذا كان السوق يتكون من أربعة بنوك يمتلك كل منها حصة 25%، فإن مؤشر HHI هو 2500، مما يدل على سوق مركزة."
       },
-      "unit": "points (0 à 10 000)",
+      "unit": {
+        "fr": "points (0 à 10 000)",
+        "en": "points (0 to 10,000)",
+        "ar": "نقطة (0 إلى 10,000)"
+      },
       "performance_direction": "neutral",
       "higher_is_better": null,
       "threshold_type": "MARKET_REFERENCE",
       "regulatory_threshold": null,
-      "abix_benchmark": "HHI < 1000: Peu concentré | 1000-1800: Modéré | > 1800: Fortement concentré (Grille concurrentielle indicative)",
-      "example_vintage": "Données 2024, Édition ABIX 2025, périmètre de 20 banques",
+      "abix_benchmark": {
+        "fr": "HHI < 1000 : Peu concentré | 1000-1800 : Modéré | > 1800 : Fortement concentré (Grille concurrentielle indicative)",
+        "en": "HHI < 1000: Low concentration | 1000-1800: Moderate concentration | > 1800: High concentration (Indicative competition grid)",
+        "ar": "HHI < 1000: تركز منخفض | 1000-1800: تركز معتدل | > 1800: تركز مرتفع (شبكة تنافسية استرشادية)"
+      },
       "modules": [
         "Concentration & Concurrence",
         "Vue Secteur",
@@ -3491,10 +3664,7 @@
         "nombre-effectif-banques",
         "part-de-marche"
       ],
-      "display_order": 47,
-      "is_active": true,
-      "created_at": "2026-08-29T08:48:33.944Z",
-      "updated_at": "2026-08-29T08:48:33.944Z"
+      "display_order": 47
     },
     {
       "id": "ratios-cr3-cr5",
@@ -3535,7 +3705,11 @@
         "en": "Concentration ratios measure top-tier market command. General definition: CR3 = sum of market shares of the top 3 ranked banks; CR5 = sum of market shares of the top 5 banks for the selected metric and year. ABIX note: Bank rankings are dynamic and computed per year and indicator. Specific bank names appear exclusively in dated historical examples.",
         "ar": "تقيس نسب التركيز CRk الهيمنة المجمعة للبنوك الكبرى. التعريف العام: CR3 = مجموع حصص أكبر 3 بنوك في الترتيب؛ CR5 = مجموع حصص أكبر 5 بنوك للمؤشر والسنة المحددة. ملاحظة ABIX: الترتيب ديناميكي ويُعاد حسابه لكل دورة ومؤشر."
       },
-      "formula": "CR3 = Part_1 + Part_2 + Part_3 | CR5 = Part_1 + Part_2 + Part_3 + Part_4 + Part_5 (parts triées par ordre décroissant)",
+      "formula": {
+        "fr": "CR3 = Part_1 + Part_2 + Part_3 | CR5 = Part_1 + Part_2 + Part_3 + Part_4 + Part_5 (parts triées par ordre décroissant)",
+        "en": "CR3 = Share_1 + Share_2 + Share_3 | CR5 = Share_1 + Share_2 + Share_3 + Share_4 + Share_5 (shares sorted descending)",
+        "ar": "CR3 = حصة_1 + حصة_2 + حصة_3 | CR5 = حصة_1 + حصة_2 + حصة_3 + حصة_4 + حصة_5 (مرتبة تنازلياً)"
+      },
       "formula_latex": "\\\\text{CR}_k = \\\\sum_{i=1}^k \\\\text{Part}_{(i)} \\\\quad (k = 3, 5)",
       "interpretation": {
         "fr": "Un CR3 > 50 % ou un CR5 > 70 % caractérise un marché bancaire fortement dominé par un groupe restreint de banques leaders.",
@@ -3543,17 +3717,20 @@
         "ar": "تجاوز CR3 لـ 50% أو CR5 لـ 70% يعكس هيمنة قوية لكبار الفاعلين على السوق."
       },
       "example": {
-        "fr": "Exemple daté — Total Bilan 2024, Édition ABIX 2025 (20 banques) : Les 3 premières banques (BEA, BNA, CPA) totalisent un CR3 de 52,4 %, et les 5 premières (avec BADR et BDL) un CR5 de 74,8 %.",
-        "en": "Dated example — Total Assets 2024, ABIX 2025 edition (20 banks): Top 3 banks (BEA, BNA, CPA) aggregate a CR3 of 52.4%, and top 5 (with BADR and BDL) reach a CR5 of 74.8%.",
-        "ar": "مثال مؤرخ — إجمالي الميزانية 2024، إصدار ABIX 2025 (20 بنكاً): حققت أكبر 3 بنوك (BEA، BNA، CPA) نسبة CR3 قدرها 52.4%، وأكبر 5 بنوك CR5 قدرها 74.8%."
+        "fr": "Exemple pédagogique : Si les 3 premières banques détiennent 75 % des crédits totaux, le CR3 est de 75 %.",
+        "en": "Pedagogical example: If the top 3 banks hold 75% of total loans, the CR3 is 75%.",
+        "ar": "مثال تعليمي: إذا كانت البنوك الثلاثة الأولى تمتلك 75% من إجمالي القروض، فإن نسبة CR3 هي 75%."
       },
       "unit": "%",
       "performance_direction": "neutral",
       "higher_is_better": null,
       "threshold_type": "MARKET_REFERENCE",
       "regulatory_threshold": null,
-      "abix_benchmark": "CR3 > 50 %: Forte emprise oligopolistique | CR5 > 70 %: Marché très concentré",
-      "example_vintage": "Exemple daté — Données 2024, Édition ABIX 2025, Total Bilan (20 banques)",
+      "abix_benchmark": {
+        "fr": "CR3 > 50 % : Forte emprise oligopolistique | CR5 > 70 % : Marché très concentré",
+        "en": "CR3 > 50%: Strong oligopolistic control | CR5 > 70%: Highly concentrated market",
+        "ar": "CR3 > 50%: هيمنة احتكار قلة قوية | CR5 > 70%: سوق عالي التركز"
+      },
       "modules": [
         "Concentration & Concurrence",
         "Parts de Marché",
@@ -3564,10 +3741,7 @@
         "nombre-effectif-banques",
         "part-de-marche"
       ],
-      "display_order": 48,
-      "is_active": true,
-      "created_at": "2026-08-29T08:48:33.944Z",
-      "updated_at": "2026-08-29T08:48:33.944Z"
+      "display_order": 48
     },
     {
       "id": "nombre-effectif-banques",
@@ -3605,7 +3779,11 @@
         "en": "Calculated as 10,000 / HHI. It translates concentration into intuitive terms: in a market with 20 nominal banks, an HHI of 2,000 implies the competitive equivalent of only 5 equal-sized competitors.",
         "ar": "يُحسب بقسمة 10,000 على مؤشر HHI. يقدم قراءة بديهية للتركيز: في سوق يضم 20 بنكاً، إذا كان HHI يساوي 2,000، فإن السوق يعمل كأنه يضم 5 بنوك متساوية الحجم فقط."
       },
-      "formula": "Nombre Effectif de Banques = 10 000 ÷ HHI",
+      "formula": {
+        "fr": "Nombre Effectif de Banques = 10 000 ÷ HHI",
+        "en": "Effective Number of Banks = 10,000 ÷ HHI",
+        "ar": "العدد الفعلي للبنوك = 10,000 ÷ HHI"
+      },
       "formula_latex": "N_{\\\\text{eff}} = \\\\frac{10\\\\,000}{\\\\text{HHI}}",
       "interpretation": {
         "fr": "Plus le nombre effectif est éloigné du nombre réel de banques, plus l'asymétrie concurrentielle et la domination par les grands acteurs sont prononcées.",
@@ -3613,17 +3791,20 @@
         "ar": "كلما اتسعت الفجوة بين العدد الفعلي والعدد الحقيقي للبنوك، دل ذلك على تباين تنافسي وهيمنة للبنوك الكبرى."
       },
       "example": {
-        "fr": "Données 2024, Édition ABIX 2025, Total Bilan (20 banques réelles) : Avec un HHI de 1 920 points, le nombre effectif de banques est de 5,2 banques équivalentes.",
-        "en": "2024 data, ABIX 2025 edition, Total Assets (20 nominal banks): With an HHI of 1,920, the effective competitor count is 5.2 equivalent banks.",
-        "ar": "بيانات 2024، إصدار ABIX 2025 (20 بنكاً): مع مؤشر HHI قدره 1,920 نقطة، يبلغ العدد الفعلي 5.2 بنكاً مكافئاً."
+        "fr": "Exemple pédagogique : Dans un marché de 10 banques très dominé par une seule, le nombre effectif de banques selon l'indice HHI peut n'être que de 2.",
+        "en": "Pedagogical example: In a 10-bank market heavily dominated by one, the effective number of banks based on HHI might be only 2.",
+        "ar": "مثال تعليمي: في سوق يضم 10 بنوك يسيطر عليه بنك واحد بشكل كبير، قد يكون العدد الفعلي للبنوك بناءً على مؤشر HHI بنكين فقط."
       },
-      "unit": "banques équivalentes",
+      "unit": {
+        "fr": "banques équivalentes",
+        "en": "equivalent banks",
+        "ar": "بنوك مكافئة"
+      },
       "performance_direction": "neutral",
       "higher_is_better": null,
       "threshold_type": "NONE",
       "regulatory_threshold": null,
       "abix_benchmark": null,
-      "example_vintage": "Données 2024, Édition ABIX 2025, périmètre de 20 banques",
       "modules": [
         "Concentration & Concurrence",
         "Vue Secteur"
@@ -3632,10 +3813,7 @@
         "indice-hhi",
         "ratios-cr3-cr5"
       ],
-      "display_order": 49,
-      "is_active": true,
-      "created_at": "2026-08-29T08:48:33.944Z",
-      "updated_at": "2026-08-29T08:48:33.944Z"
+      "display_order": 49
     },
     {
       "id": "cadre-4d-abix",
@@ -3676,7 +3854,11 @@
         "en": "Scores use empirical percentile ranks within the selected comparison group when N >= 5, then dimension weights: Profitability (imported ROE, calculated ROA, net margin; 33.3% each), Growth Momentum (CAGR of assets, loans, NBI and net profit; 25% each), Efficiency (CIR and GOI/net-profit conversion; 50% each), and Financial Strength (equity/assets and equity/loans; 50% each). At least 67% component coverage is required. Dimensions remain separate: ABIX calculates no global score.",
         "ar": "تعتمد الدرجات على الرتب المئينية التجريبية داخل مجموعة المقارنة المختارة عندما يكون N أكبر من أو يساوي 5، ثم أوزان كل بُعد: المردودية، زخم النمو، الكفاءة، والمتانة المالية. يلزم توفر 67٪ على الأقل من المكونات. تبقى الأبعاد منفصلة ولا يحسب ABIX درجة إجمالية."
       },
-      "formula": "Profil 4D = {Score_Rentabilité, Score_Growth_Momentum, Score_Efficience, Score_Solidité_Financière} — sans addition globale",
+      "formula": {
+        "fr": "Profil 4D = {Score_Rentabilité, Score_Growth_Momentum, Score_Efficience, Score_Solidité_Financière} — sans addition globale",
+        "en": "4D Profile = {Profitability_Score, Growth_Momentum_Score, Efficiency_Score, Financial_Strength_Score} — without aggregate sum",
+        "ar": "الملف الرباعي 4D = {نقطة_الربحية، نقطة_ديناميكية_النمو، نقطة_الكفاءة، نقطة_المتانة_المالية} — دون دمج تجميعي"
+      },
       "formula_latex": "\\\\text{Profil 4D} = \\\\{ \\\\text{Score}_{\\\\text{Rentabilité}}, \\\\text{Score}_{\\\\text{Growth Momentum}}, \\\\text{Score}_{\\\\text{Efficience}}, \\\\text{Score}_{\\\\text{Solidité financière}} \\\\}",
       "interpretation": {
         "fr": "Les quartiles de Growth Momentum décrivent une dynamique relative (supérieure, intermédiaire-haute, intermédiaire-basse ou inférieure) et ne sont pas qualifiés automatiquement de force ou faiblesse.",
@@ -3684,11 +3866,15 @@
         "ar": "تصف أرباع زخم النمو ديناميكية نسبية ولا تُصنف تلقائياً كنقطة قوة أو ضعف."
       },
       "example": {
-        "fr": "Exemple méthodologique : quatre scores sont restitués séparément avec leur groupe, leur taille d'échantillon, leur rang de compétition et leur quartile.",
-        "en": "Methodological example: four scores are reported separately with their group, sample size, competition rank and quartile.",
-        "ar": "مثال منهجي: تُعرض أربع درجات منفصلة مع المجموعة وحجم العينة ورتبة المنافسة والربع."
+        "fr": "Exemple pédagogique : Une banque obtenant de forts scores en Rentabilité et Croissance, mais faible en Solidité et Digital, sera orientée vers une stratégie spécifique de consolidation.",
+        "en": "Pedagogical example: A bank scoring highly in Profitability and Growth, but low in Strength and Digital, will be guided towards a specific consolidation strategy.",
+        "ar": "مثال تعليمي: البنك الذي يحصل على درجات عالية في الربحية والنمو، ولكن درجات منخفضة في المتانة والرقمية، سيتم توجيهه نحو استراتيجية دمج محددة."
       },
-      "unit": "scores dimensionnels (0-100)",
+      "unit": {
+        "fr": "scores dimensionnels (0-100)",
+        "en": "dimensional scores (0-100)",
+        "ar": "درجات الأبعاد (0–100)"
+      },
       "performance_direction": "neutral",
       "higher_is_better": null,
       "threshold_type": "NONE",
@@ -3705,10 +3891,7 @@
         "normalisation-min-max",
         "scanning-deterministe"
       ],
-      "display_order": 50,
-      "is_active": true,
-      "created_at": "2026-08-29T08:48:33.944Z",
-      "updated_at": "2026-08-29T08:48:33.944Z"
+      "display_order": 50
     },
     {
       "id": "scanning-deterministe",
@@ -3747,7 +3930,11 @@
         "en": "Deterministic scanning applies explicit arithmetic rules to available data: benchmark gaps, changes, dimension shifts and activity divergences. For cost of risk, a raw provision increase—even a very large one—is insufficient: the observation requires a material provisions/NBI weight (absolute value >= 10%) or an absolute gap to an available benchmark >= 5 points, while reporting amount, change and ratio. No free-form generative model is involved.",
         "ar": "يطبق المسح الحتمي قواعد حسابية صريحة على البيانات المتاحة. وبالنسبة لتكلفة المخاطر، لا يكفي ارتفاع المخصصات الخام مهما كان كبيراً؛ بل يلزم وزن مادي للمخصصات في الناتج البنكي (قيمة مطلقة 10٪ فأكثر) أو فارق مطلق عن مرجع متاح يبلغ 5 نقاط فأكثر، مع عرض المبلغ والتغير والنسبة."
       },
-      "formula": "Règles déterministes versionnées ; coût du risque : |Dotations nettes / PNB| ≥ 10 % ou |écart benchmark| ≥ 5 pts",
+      "formula": {
+        "fr": "Règles déterministes versionnées ; coût du risque : |Dotations nettes / PNB| ≥ 10 % ou |écart benchmark| ≥ 5 pts",
+        "en": "Deterministic rules; cost of risk alert: |Net Provisions / NBI| ≥ 10% or |benchmark deviation| ≥ 5 pts",
+        "ar": "قواعد حتمية محددة؛ تكلفة المخاطر: |صافي المخصصات / الناتج البنكي| ≥ 10% أو |الانحراف عن المعيار| ≥ 5 نقاط"
+      },
       "formula_latex": "\\\\text{Alertes} = \\\\{ f(X_t, X_{t-1}, \\\\text{Benchmark}) \\\\mid \\\\text{Conditions Arithmétiques Déterministes v1.0} \\\\}",
       "interpretation": {
         "fr": "Garantit une auditabilité intégrale des constats de gestion restitués dans les dashboards exécutifs et les fiches de synthèse.",
@@ -3755,17 +3942,24 @@
         "ar": "يضمن الشفافية والتدقيق الرياضي الكامل لكافة الملاحظات التحليلية في لوحات القيادة التنفيذية."
       },
       "example": {
-        "fr": "Données 2024, Édition ABIX 2025 : Génération automatique d'une alerte de divergence pour une banque dont les dépôts ont progressé de +18,5 % tandis que les crédits n'ont cru que de +4,2 % (écart de divergence = 14,3 pts ≥ seuil de 10 pts).",
-        "en": "2024 data, ABIX 2025 edition: Automatic divergence alert triggered for a bank whose deposits grew +18.5% while loans only expanded +4.2% (gap = 14.3 pts >= 10 pts threshold).",
-        "ar": "بيانات 2024، إصدار ABIX 2025: إطلاق تنبيه تلقائي لبنك نمت ودائعه بـ +18.5% بينما نمت قروضه بـ +4.2% فقط (فارق 14.3 نقطة >= عتبة 10 نقاط)."
+        "fr": "Exemple pédagogique : L'application d'une règle stricte 'si ROA > 1% alors score=A' est une méthode de scanning déterministe.",
+        "en": "Pedagogical example: Applying a strict rule 'if ROA > 1% then score=A' is a deterministic scanning method.",
+        "ar": "مثال تعليمي: تطبيق قاعدة صارمة 'إذا كان ROA > 1% فإن الدرجة=A' هو طريقة فحص حتمية."
       },
-      "unit": "règles & alertes",
+      "unit": {
+        "fr": "règles & alertes",
+        "en": "rules & alerts",
+        "ar": "قواعد وتنبيهات"
+      },
       "performance_direction": "neutral",
       "higher_is_better": null,
       "threshold_type": "ABIX_BENCHMARK",
       "regulatory_threshold": null,
-      "abix_benchmark": "Règles arithmétiques de détection versionnées v1.0 (100 % traçable)",
-      "example_vintage": "Données 2024, Édition ABIX 2025",
+      "abix_benchmark": {
+        "fr": "Règles arithmétiques de détection versionnées v1.0 (100 % traçable)",
+        "en": "Versioned arithmetic detection rules v1.0 (100% traceable)",
+        "ar": "قواعد حسابية للكشف محددة الإصدار v1.0 (قابلة للتتبع 100%)"
+      },
       "modules": [
         "Executive Dashboard",
         "Insights & Alertes",
@@ -3775,10 +3969,7 @@
         "cadre-4d-abix",
         "variation-annuelle-yoy"
       ],
-      "display_order": 51,
-      "is_active": true,
-      "created_at": "2026-08-29T08:48:33.944Z",
-      "updated_at": "2026-08-29T08:48:33.944Z"
+      "display_order": 51
     },
     {
       "id": "barometre-ebanking",
@@ -3816,7 +4007,11 @@
         "en": "The ABIX E-Banking Barometer is an independent benchmarking tool evaluating digital banking across Algeria. It audits over 40 criteria spanning mobile app functionality, online banking, e-payment capabilities, and UX design.",
         "ar": "يقيم بارومتر الخدمات المصرفية الإلكترونية عروض الرقمنة في الساحة المصرفية عبر أكثر من 40 معياراً تشمل تطبيقات الهاتف، بوابات الإنترنت ووسائل الدفع الإلكتروني."
       },
-      "formula": "Score E-Banking = Σ (Pondération_dimension × Score_dimension) (sur une échelle normalisée de 0 à 100)",
+      "formula": {
+        "fr": "Score E-Banking = Σ (Pondération_dimension × Score_dimension) (sur une échelle normalisée de 0 à 100)",
+        "en": "E-Banking Score = Σ (Dimension_Weight × Dimension_Score) (normalized 0 to 100 scale)",
+        "ar": "مؤشر الرقمنة البنكية = Σ (وزن_المعيار × نقطة_المعيار) (على سلم معياري من 0 إلى 100)"
+      },
       "formula_latex": "\\\\text{Score E-Banking} = \\\\sum_{k=1}^m w_k \\\\times S_k \\\\quad \\\\text{avec } \\\\sum w_k = 1",
       "interpretation": {
         "fr": "Un score élevé reflète une offre digitale mature, fluide et sécurisée répondant aux attentes des usagers particuliers et entreprises.",
@@ -3824,17 +4019,24 @@
         "ar": "تدل النتيجة المرتفعة على عرض رقمي متقدم وسلس وآمن يلبي تطلعات الأفراد والمؤسسات."
       },
       "example": {
-        "fr": "Édition Baromètre ABIX 2025 : Scores sectoriels variant de 32/100 (offre basique) à plus de 86/100 pour les banques leaders de la digitalisation en Algérie.",
-        "en": "ABIX Barometer 2025 edition: Bank scores ranging from 32/100 (basic features) to over 86/100 for leading digital pioneers.",
-        "ar": "إصدار بارومتر ABIX 2025: تتراوح النتائج من 32/100 (خدمات أساسية) إلى أكثر من 86/100 للبنوك الرائدة في التحول الرقمي."
+        "fr": "Exemple pédagogique : L'évolution des paiements par carte bancaire reflète le développement des services digitaux mesurés par un tel baromètre.",
+        "en": "Pedagogical example: The evolution of bank card payments reflects the development of digital services measured by such a barometer.",
+        "ar": "مثال تعليمي: تطور المدفوعات بالبطاقات المصرفية يعكس تطور الخدمات الرقمية المقاسة بواسطة مثل هذا المقياس."
       },
-      "unit": "score (0 à 100)",
+      "unit": {
+        "fr": "score (0 à 100)",
+        "en": "score (0 to 100)",
+        "ar": "نقطة (0 إلى 100)"
+      },
       "performance_direction": "higher_is_better",
       "higher_is_better": true,
       "threshold_type": "ABIX_BENCHMARK",
       "regulatory_threshold": null,
-      "abix_benchmark": "Score 0-100 normalisé sur grille multicritère auditée",
-      "example_vintage": "Édition Baromètre ABIX 2025",
+      "abix_benchmark": {
+        "fr": "Score 0-100 normalisé sur grille multicritère auditée",
+        "en": "Normalized 0-100 score on audited multi-criteria grid",
+        "ar": "درجة 0-100 معيارية وفق شبكة تقييم متعددة المعايير مدققة"
+      },
       "modules": [
         "Baromètre E-Banking",
         "Profil Banque (Volet Digital)",
@@ -3843,10 +4045,7 @@
       "related_terms": [
         "cadre-4d-abix"
       ],
-      "display_order": 52,
-      "is_active": true,
-      "created_at": "2026-08-29T08:48:33.944Z",
-      "updated_at": "2026-08-29T08:48:33.944Z"
+      "display_order": 52
     },
     {
       "id": "poids-cout-risque-pnb",
@@ -3881,7 +4080,11 @@
         "en": "The ratio measures the share of Net Banking Income absorbed by net provision charges. It complements the amount and trend analysis without replacing the NPL ratio, coverage ratio, or a prudential exposure-based risk-cost measure.",
         "ar": "تقيس النسبة حصة الناتج البنكي الصافي التي تمتصها المؤونات الصافية. وهي تكمل قراءة المبلغ وتطوره دون أن تعوض نسبة القروض غير العاملة أو نسبة التغطية أو تكلفة المخاطر الاحترازية المحسوبة على القروض."
       },
-      "formula": "(Dotations nettes aux provisions / Produit Net Bancaire) × 100",
+      "formula": {
+        "fr": "(Dotations nettes aux provisions ÷ Produit Net Bancaire) × 100",
+        "en": "(Net Allocations to Provisions ÷ Net Banking Income) × 100",
+        "ar": "(صافي المخصصات ÷ الناتج البنكي الصافي) × 100"
+      },
       "interpretation": {
         "fr": "Lecture contextuelle par montant, évolution et écart à la référence consolidée publique ou privée disponible. Une hausse brute des dotations ne constitue pas, à elle seule, un jugement de performance.",
         "en": "Contextual reading by amount, trend, and gap to the available consolidated public or private reference. A raw increase in provisions does not, by itself, constitute a performance judgement.",
@@ -3896,7 +4099,11 @@
       "performance_direction": "contextual",
       "higher_is_better": null,
       "threshold_type": "ABIX_BENCHMARK",
-      "abix_benchmark": "L'appréciation est contextuelle au regard du PNB et du modèle d'activité. (Règle V2)",
+      "abix_benchmark": {
+        "fr": "L'appréciation est contextuelle au regard du PNB et du modèle d'activité. (Règle V2)",
+        "en": "Assessment is contextual with respect to NBI and the business model. (V2 Rule)",
+        "ar": "التقييم سياقي بالنظر إلى الناتج البنكي الصافي ونموذج النشاط. (قاعدة V2)"
+      },
       "modules": [
         "Executive V2"
       ],
@@ -3904,10 +4111,7 @@
         "dotations-nettes-provisions",
         "produit-net-bancaire"
       ],
-      "display_order": 53,
-      "is_active": true,
-      "created_at": "2026-08-29T08:48:33.944Z",
-      "updated_at": "2026-08-29T08:48:33.944Z"
+      "display_order": 53
     },
     {
       "id": "pnb-par-collaborateur",
@@ -3943,7 +4147,11 @@
         "en": "See short definition.",
         "ar": "انظر التعريف المختصر."
       },
-      "formula": "Produit Net Bancaire / Effectif Total Annoncé",
+      "formula": {
+        "fr": "Produit Net Bancaire ÷ Effectif Total Annoncé",
+        "en": "Net Banking Income ÷ Total Reported Staff",
+        "ar": "الناتج البنكي الصافي ÷ إجمالي عدد الموظفين"
+      },
       "interpretation": {
         "fr": "Permet de comparer l'efficience de la force de travail entre banques de modèles similaires (retail vs corporate).",
         "en": "Allows for comparison of workforce efficiency between banks with similar models (retail vs corporate).",
@@ -3954,11 +4162,19 @@
         "en": "N/A",
         "ar": "غ/م"
       },
-      "unit": "M DZD",
+      "unit": {
+        "fr": "M DZD",
+        "en": "DZD mn",
+        "ar": "مليون دج"
+      },
       "performance_direction": "higher_is_better",
       "higher_is_better": true,
       "threshold_type": "ABIX_BENCHMARK",
-      "abix_benchmark": "Benchmarking comparatif via l'outil Executive V2.",
+      "abix_benchmark": {
+        "fr": "Benchmarking comparatif via l'outil Executive V2.",
+        "en": "Comparative benchmarking via Executive V2.",
+        "ar": "مقارنة معيارية من خلال أداة Executive V2."
+      },
       "modules": [
         "Executive V2"
       ],
@@ -3966,10 +4182,7 @@
         "produit-net-bancaire",
         "coefficient-exploitation"
       ],
-      "display_order": 54,
-      "is_active": true,
-      "created_at": "2026-08-29T08:48:33.944Z",
-      "updated_at": "2026-08-29T08:48:33.944Z"
+      "display_order": 54
     },
     {
       "id": "effectifs-bancaires",
@@ -4015,17 +4228,18 @@
         "en": "N/A",
         "ar": "غ/م"
       },
-      "unit": "collaborateurs",
+      "unit": {
+        "fr": "collaborateurs",
+        "en": "employees",
+        "ar": "موظف"
+      },
       "performance_direction": "neutral",
       "higher_is_better": null,
       "modules": [
         "Executive V2"
       ],
       "related_terms": [],
-      "display_order": 55,
-      "is_active": true,
-      "created_at": "2026-08-29T08:48:33.944Z",
-      "updated_at": "2026-08-29T08:48:33.944Z"
+      "display_order": 55
     },
     {
       "id": "nombre-agences",
@@ -4071,17 +4285,18 @@
         "en": "N/A",
         "ar": "غ/م"
       },
-      "unit": "agences",
+      "unit": {
+        "fr": "agences",
+        "en": "branches",
+        "ar": "وكالة"
+      },
       "performance_direction": "neutral",
       "higher_is_better": null,
       "modules": [
         "Executive V2"
       ],
       "related_terms": [],
-      "display_order": 56,
-      "is_active": true,
-      "created_at": "2026-08-29T08:48:33.944Z",
-      "updated_at": "2026-08-29T08:48:33.944Z"
+      "display_order": 56
     },
     {
       "id": "engagements-hors-bilan-donnes",
@@ -4124,17 +4339,18 @@
         "en": "N/A",
         "ar": "غ/م"
       },
-      "unit": "M DZD",
+      "unit": {
+        "fr": "M DZD",
+        "en": "DZD mn",
+        "ar": "مليون دج"
+      },
       "performance_direction": "neutral",
       "higher_is_better": null,
       "modules": [
         "Executive V2"
       ],
       "related_terms": [],
-      "display_order": 57,
-      "is_active": true,
-      "created_at": "2026-08-29T08:48:33.944Z",
-      "updated_at": "2026-08-29T08:48:33.944Z"
+      "display_order": 57
     },
     {
       "id": "engagements-hors-bilan-recus",
@@ -4177,48 +4393,52 @@
         "en": "N/A",
         "ar": "غ/م"
       },
-      "unit": "M DZD",
+      "unit": {
+        "fr": "M DZD",
+        "en": "DZD mn",
+        "ar": "مليون دج"
+      },
       "performance_direction": "neutral",
       "higher_is_better": null,
       "modules": [
         "Executive V2"
       ],
       "related_terms": [],
-      "display_order": 58,
-      "is_active": true,
-      "created_at": "2026-08-29T08:48:33.944Z",
-      "updated_at": "2026-08-29T08:48:33.944Z"
+      "display_order": 58
     },
     {
       "id": "part-marge-interet",
       "slug": "part-marge-interet",
       "term": {
-        "fr": "Part de la Marge d'Intérêt (MNI) dans le PNB",
-        "en": "Net Interest Margin share in NBI",
-        "ar": "حصة هامش الفائدة في الناتج البنكي الصافي"
+        "fr": "Part du Revenu Net d’Intérêts dans le PNB",
+        "en": "Net Interest Income Share in NBI",
+        "ar": "حصة صافي دخل الفوائد في الناتج البنكي الصافي"
       },
       "acronym": "MNI / PNB",
       "aliases": {
         "fr": [
-          "Part marge d'intérêt"
+          "Part des intérêts nets",
+          "Part du revenu d’intermédiation"
         ],
         "en": [
-          "NIM share"
+          "NII Share",
+          "Net interest share"
         ],
         "ar": [
-          "حصة هامش الفائدة"
+          "حصة الفوائد الصافية",
+          "حصة دخل الوساطة"
         ]
       },
       "category": "financial_indicators",
       "short_definition": {
-        "fr": "Part des revenus d'intermédiation classique dans le produit net bancaire.",
-        "en": "Share of traditional intermediation revenues in the net banking income.",
-        "ar": "حصة إيرادات الوساطة التقليدية في الناتج البنكي الصافي."
+        "fr": "Part du revenu net d’intérêts dans le Produit Net Bancaire.",
+        "en": "Share of net interest income in Net Banking Income.",
+        "ar": "نسبة صافي دخل الفوائد إلى الناتج البنكي الصافي."
       },
       "detailed_definition": {
-        "fr": "Ratio de la marge nette d'intérêts sur le Produit Net Bancaire global.",
-        "en": "Ratio of net interest margin to global Net Banking Income.",
-        "ar": "نسبة صافي هامش الفائدة إلى إجمالي الناتج البنكي الصافي."
+        "fr": "Ratio du revenu net d'intérêts sur le Produit Net Bancaire global.",
+        "en": "Ratio of net interest income to global Net Banking Income.",
+        "ar": "نسبة صافي دخل الفوائد إلى إجمالي الناتج البنكي الصافي."
       },
       "interpretation": {
         "fr": "Permet de visualiser le poids de l'activité d'intermédiation.",
@@ -4238,9 +4458,12 @@
       ],
       "related_terms": [],
       "display_order": 59,
-      "is_active": true,
-      "created_at": "2026-08-29T08:48:33.944Z",
-      "updated_at": "2026-08-29T08:48:33.944Z"
+      "formula": {
+        "fr": "Part du Revenu Net d’Intérêts = (Revenu Net d’Intérêts ÷ Produit Net Bancaire) × 100",
+        "en": "Net Interest Income Share = (Net Interest Income ÷ Net Banking Income) × 100",
+        "ar": "حصة صافي دخل الفوائد = (صافي دخل الفوائد ÷ الناتج البنكي الصافي) × 100"
+      },
+      "formula_latex": "\\text{Part MNI / PNB} = \\frac{\\text{MNI}}{\\text{PNB}} \\times 100"
     },
     {
       "id": "part-commissions",
@@ -4291,9 +4514,12 @@
       ],
       "related_terms": [],
       "display_order": 60,
-      "is_active": true,
-      "created_at": "2026-08-29T08:48:33.944Z",
-      "updated_at": "2026-08-29T08:48:33.944Z"
+      "formula": {
+        "fr": "Part des Commissions / PNB = (Commissions Nettes ÷ Produit Net Bancaire) × 100",
+        "en": "Fee & Commission Share = (Net Fee and Commission Income ÷ Net Banking Income) × 100",
+        "ar": "حصة العمولات = (العمولات الصافية ÷ الناتج البنكي الصافي) × 100"
+      },
+      "formula_latex": "\\text{Part Commissions} = \\frac{\\text{Commissions Nettes}}{\\text{PNB}} \\times 100"
     },
     {
       "id": "part-autres-revenus",
@@ -4344,9 +4570,12 @@
       ],
       "related_terms": [],
       "display_order": 61,
-      "is_active": true,
-      "created_at": "2026-08-29T08:48:33.944Z",
-      "updated_at": "2026-08-29T08:48:33.944Z"
+      "formula": {
+        "fr": "Part des Autres Revenus / PNB = (Autres Revenus Bancaires ÷ Produit Net Bancaire) × 100",
+        "en": "Other Income Share = (Other Banking Income ÷ Net Banking Income) × 100",
+        "ar": "حصة الإيرادات الأخرى = (الإيرادات البنكية الأخرى ÷ الناتج البنكي الصافي) × 100"
+      },
+      "formula_latex": "\\text{Part Autres Revenus} = \\frac{\\text{Autres Revenus}}{\\text{PNB}} \\times 100"
     },
     {
       "id": "reference-consolidee-statut",
@@ -4382,7 +4611,11 @@
         "en": "For risk cost, the reference equals group net provisions divided by group NBI. It is therefore NBI-weighted and is not a median.",
         "ar": "بالنسبة لتكلفة المخاطر يساوي المرجع مجموع المؤونات الصافية مقسوماً على مجموع الناتج البنكي للمجموعة، ولذلك فهو مرجح بالناتج وليس وسيطاً."
       },
-      "formula": "Référence CdR du statut = Σ provisions nettes du groupe / Σ PNB du groupe × 100",
+      "formula": {
+        "fr": "Référence CdR du statut = Σ provisions nettes du groupe ÷ Σ PNB du groupe × 100",
+        "en": "Status Group Cost of Risk Reference = Σ Group Net Provisions ÷ Σ Group NBI × 100",
+        "ar": "معيار تكلفة المخاطر حسب الوضعية = Σ المخصصات الصافية للمجموعة ÷ Σ الناتج البنكي الصافي للمجموعة × 100"
+      },
       "interpretation": {
         "fr": "Permet une comparaison contextuelle avec les banques de même statut de propriété, sans notation réglementaire ni benchmark par modèle économique.",
         "en": "Provides a contextual comparison with banks of the same ownership status, without a regulatory rating or business-model benchmark.",
@@ -4405,10 +4638,7 @@
         "secteur-public-prive",
         "mediane"
       ],
-      "display_order": 62,
-      "is_active": true,
-      "created_at": "2026-08-29T08:48:33.944Z",
-      "updated_at": "2026-08-29T08:48:33.944Z"
+      "display_order": 62
     },
     {
       "id": "dynamique-croissance",
@@ -4468,10 +4698,7 @@
         "quartiles",
         "cadre-4d-abix"
       ],
-      "display_order": 63,
-      "is_active": true,
-      "created_at": "2026-08-29T08:48:33.944Z",
-      "updated_at": "2026-08-29T08:48:33.944Z"
+      "display_order": 63
     },
     {
       "id": "solidite-financiere",
@@ -4530,10 +4757,7 @@
         "ratio-fonds-propres-actifs",
         "cadre-4d-abix"
       ],
-      "display_order": 64,
-      "is_active": true,
-      "created_at": "2026-08-29T08:48:33.944Z",
-      "updated_at": "2026-08-29T08:48:33.944Z"
+      "display_order": 64
     },
     {
       "id": "non-disponible",
@@ -4591,10 +4815,7 @@
       "related_terms": [
         "non-significatif"
       ],
-      "display_order": 65,
-      "is_active": true,
-      "created_at": "2026-08-29T08:48:33.944Z",
-      "updated_at": "2026-08-29T08:48:33.944Z"
+      "display_order": 65
     },
     {
       "id": "non-significatif",
@@ -4651,10 +4872,7 @@
       "related_terms": [
         "non-disponible"
       ],
-      "display_order": 66,
-      "is_active": true,
-      "created_at": "2026-08-29T08:48:33.944Z",
-      "updated_at": "2026-08-29T08:48:33.944Z"
+      "display_order": 66
     }
   ]
 }

@@ -15,13 +15,15 @@
  * Réponse : JSON
  */
 
-header('Content-Type: application/json; charset=utf-8');
-header('X-Content-Type-Options: nosniff');
-header('Access-Control-Allow-Origin: *');
-header('Access-Control-Allow-Methods: GET, OPTIONS');
-header('Access-Control-Allow-Headers: Content-Type, Accept');
+if (!headers_sent()) {
+    header('Content-Type: application/json; charset=utf-8');
+    header('X-Content-Type-Options: nosniff');
+    header('Access-Control-Allow-Origin: *');
+    header('Access-Control-Allow-Methods: GET, OPTIONS');
+    header('Access-Control-Allow-Headers: Content-Type, Accept');
+}
 
-if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
+if (isset($_SERVER['REQUEST_METHOD']) && $_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
     http_response_code(200);
     exit;
 }
@@ -67,12 +69,16 @@ foreach ($glossaryEntries as $entry) {
         continue;
     }
 
-    $term = is_array($entry['term']) ? ($entry['term'][$lang] ?? $entry['term']['fr'] ?? '') : $entry['term'];
-    $shortDef = is_array($entry['short_definition']) ? ($entry['short_definition'][$lang] ?? $entry['short_definition']['fr'] ?? '') : $entry['short_definition'];
-    $detailedDef = is_array($entry['detailed_definition']) ? ($entry['detailed_definition'][$lang] ?? $entry['detailed_definition']['fr'] ?? '') : $entry['detailed_definition'];
-    $interpretation = is_array($entry['interpretation']) ? ($entry['interpretation'][$lang] ?? $entry['interpretation']['fr'] ?? '') : $entry['interpretation'];
-    $example = is_array($entry['example']) ? ($entry['example'][$lang] ?? $entry['example']['fr'] ?? '') : $entry['example'];
-    
+    $term = is_array($entry['term'] ?? null) ? ($entry['term'][$lang] ?? $entry['term']['fr'] ?? '') : ($entry['term'] ?? '');
+    $shortDef = is_array($entry['short_definition'] ?? null) ? ($entry['short_definition'][$lang] ?? $entry['short_definition']['fr'] ?? '') : ($entry['short_definition'] ?? '');
+    $detailedDef = is_array($entry['detailed_definition'] ?? null) ? ($entry['detailed_definition'][$lang] ?? $entry['detailed_definition']['fr'] ?? '') : ($entry['detailed_definition'] ?? '');
+    $interpretation = is_array($entry['interpretation'] ?? null) ? ($entry['interpretation'][$lang] ?? $entry['interpretation']['fr'] ?? '') : ($entry['interpretation'] ?? '');
+    $example = is_array($entry['example'] ?? null) ? ($entry['example'][$lang] ?? $entry['example']['fr'] ?? '') : ($entry['example'] ?? '');
+    $formula = is_array($entry['formula'] ?? null) ? ($entry['formula'][$lang] ?? $entry['formula']['fr'] ?? '') : ($entry['formula'] ?? '');
+    $unit = is_array($entry['unit'] ?? null) ? ($entry['unit'][$lang] ?? $entry['unit']['fr'] ?? '') : ($entry['unit'] ?? '');
+    $regThresh = is_array($entry['regulatory_threshold'] ?? null) ? ($entry['regulatory_threshold'][$lang] ?? $entry['regulatory_threshold']['fr'] ?? '') : ($entry['regulatory_threshold'] ?? '');
+    $abixBench = is_array($entry['abix_benchmark'] ?? null) ? ($entry['abix_benchmark'][$lang] ?? $entry['abix_benchmark']['fr'] ?? '') : ($entry['abix_benchmark'] ?? '');
+
     $aliases = [];
     if (isset($entry['aliases'])) {
         if (is_array($entry['aliases'])) {
@@ -95,12 +101,15 @@ foreach ($glossaryEntries as $entry) {
         'category' => $entry['category'] ?? '',
         'short_definition' => $shortDef,
         'detailed_definition' => $detailedDef,
-        'formula' => $entry['formula'] ?? '',
+        'formula' => $formula,
         'formula_latex' => $entry['formula_latex'] ?? '',
         'interpretation' => $interpretation,
         'example' => $example,
-        'unit' => $entry['unit'] ?? '',
+        'unit' => $unit,
         'higher_is_better' => $entry['higher_is_better'] ?? null,
+        'regulatory_threshold' => $regThresh,
+        'abix_benchmark' => $abixBench,
+        'threshold_type' => $entry['threshold_type'] ?? 'NONE',
         'modules' => $entry['modules'] ?? [],
         'related_terms' => $entry['related_terms'] ?? [],
         'display_order' => $entry['display_order'] ?? 999
@@ -129,7 +138,7 @@ foreach ($glossaryEntries as $entry) {
         }
     }
 
-    // Filtrage par recherche textuelle (insensible à la casse et aux accents si possible)
+    // Filtrage par recherche textuelle
     if ($query) {
         $qLower = mb_strtolower($query, 'UTF-8');
         $match = false;

@@ -83,6 +83,11 @@ npm run build:dev
     - Compilez sans préfixe avec `npm run compile:watch` et `npm run watch:css`
     - Accédez à [http://banques2025.test/fr/](http://banques2025.test/fr/)
 
+- **Sans Laragon (Serveur local autonome Node.js) :**
+  - Compilez avec `npm run build`
+  - Lancez `npm run serve`
+  - Accédez à [http://localhost:3000/fr/](http://localhost:3000/fr/) ou [http://localhost:3000/en/](http://localhost:3000/en/)
+
 ---
 
 ## 🚢 5. Build pour la Production (Déploiement racine)
@@ -103,10 +108,11 @@ Ce script génère :
 
 | Commande | Rôle | Quand l'utiliser ? |
 | :--- | :--- | :--- |
+| `npm run serve` | Démarre un serveur HTTP local (Node.js) | Tester le site sans Laragon (`localhost:3000`) |
 | `npm run build:dev` | Compile le HTML avec `/banques2025` + CSS minifié | Avant de tester sur `localhost/banques2025` |
 | `npm run compile:watch:dev` | Recompile le HTML à chaque modif (avec basePath) | Pendant le développement sous Laragon |
 | `npm run watch:css` | Recompile le CSS Tailwind en direct | Pendant le développement |
-| `npm run build` | Compile HTML racine + CSS minifié | Déploiement en production |
+| `npm run build` | Compile HTML racine + CSS minifié | Test local racine ou déploiement production |
 | `npm run compile` | Compile uniquement le HTML (sans basePath) | Test racine ou prod |
 | `npm run compile:dev` | Compile uniquement le HTML (avec `/banques2025`) | Mise à jour rapide HTML Laragon |
 | `npm run build:css` | Compile uniquement le CSS minifié | Build CSS isolé |

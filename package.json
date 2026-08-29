@@ -20,7 +20,8 @@
     "watch:css": "node_modules\\.bin\\tailwindcss -i ./css/tailwind.css -o ./css/main.css --watch",
     "build": "npm run compile && npm run build:css",
     "build:dev": "npm run compile:dev && npm run build:css",
-    "dev": "npm run watch:css"
+    "dev": "npm run watch:css",
+    "serve": "npx serve ."
   },
   "author": "",
   "license": "MIT",

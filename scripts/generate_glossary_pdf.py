@@ -1,21 +1,21 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-ABIX -- Generateur de Livret Methodologique & Glossaire PDF Premium
-Une fiche par page, rendu institutionnel haute qualite, charte ABIX.
+ABIX -- Générateur de Livret Méthodologique & Glossaire PDF Premium (FR & EN)
+Une fiche par page, rendu institutionnel haute qualité, charte ABIX.
 """
 
 import os
 import sys
 import json
 import shutil
+from datetime import datetime
 
 if hasattr(sys.stdout, 'reconfigure'):
     sys.stdout.reconfigure(encoding='utf-8')
 if hasattr(sys.stderr, 'reconfigure'):
     sys.stderr.reconfigure(encoding='utf-8')
 
-from datetime import datetime
 from reportlab.lib.pagesizes import A4
 from reportlab.lib import colors
 from reportlab.platypus import (
@@ -27,11 +27,12 @@ from reportlab.lib.units import mm
 from reportlab.pdfgen import canvas
 from reportlab.lib.enums import TA_LEFT
 
-# -- Repertoires
-ROOT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+# -- Répertoires
+ROOT_DIR = r"c:\laragon\www\banques2025"
 DATA_FILE = os.path.join(ROOT_DIR, "data", "glossary.json")
 OUTPUT_DIR = os.path.join(ROOT_DIR, "public", "documents", "glossaire")
 ABIX_FRONT_DOCS = r'C:/laragon/www/ABIX/ABIX_front/public/docs/glossaire'
+COVERS_DIR = os.path.join(ROOT_DIR, "public", "images", "covers")
 
 PAGE_WIDTH, PAGE_HEIGHT = A4
 MARGIN = 16 * mm
@@ -61,23 +62,71 @@ C_AMBER_800 = colors.HexColor("#92400E")
 C_BLUE_50   = colors.HexColor("#EFF6FF")
 C_BLUE_200  = colors.HexColor("#BFDBFE")
 
+MODULES_I18N = {
+    "Allocation d'actifs": {"fr": "Allocation d'actifs", "en": "Asset Allocation"},
+    "Baromètre E-Banking": {"fr": "Baromètre E-Banking", "en": "E-Banking Barometer"},
+    "Benchmarks & Quartiles": {"fr": "Benchmarks & Quartiles", "en": "Benchmarks & Quartiles"},
+    "Classements": {"fr": "Classements", "en": "Rankings"},
+    "Classements Digitaux": {"fr": "Classements Digitaux", "en": "Digital Rankings"},
+    "Comparateur": {"fr": "Comparateur", "en": "Comparator"},
+    "Concentration": {"fr": "Concentration", "en": "Concentration"},
+    "Concentration & Concurrence": {"fr": "Concentration & Concurrence", "en": "Concentration & Competition"},
+    "Distribution & Boxplots": {"fr": "Distribution & Boxplots", "en": "Distribution & Boxplots"},
+    "Distribution Sectorielle": {"fr": "Distribution Sectorielle", "en": "Sector Distribution"},
+    "Executive Dashboard": {"fr": "Executive Dashboard", "en": "Executive Dashboard"},
+    "Executive Summary": {"fr": "Executive Summary", "en": "Executive Summary"},
+    "Executive V2": {"fr": "Executive V2", "en": "Executive V2"},
+    "Fiche Prudentielle": {"fr": "Fiche Prudentielle", "en": "Prudential Profile"},
+    "Glossaire pédagogique": {"fr": "Glossaire pédagogique", "en": "Educational Glossary"},
+    "Heatmaps": {"fr": "Heatmaps", "en": "Heatmaps"},
+    "Historique": {"fr": "Historique", "en": "Historical Trends"},
+    "Historique Pluriannuel": {"fr": "Historique Pluriannuel", "en": "Multi-Year History"},
+    "Insights & Alertes": {"fr": "Insights & Alertes", "en": "Insights & Alerts"},
+    "Lab Méthodologique": {"fr": "Lab Méthodologique", "en": "Methodology Lab"},
+    "Laboratoire méthodologique": {"fr": "Laboratoire méthodologique", "en": "Methodology Lab"},
+    "Matrice 4 Quadrants": {"fr": "Matrice 4 Quadrants", "en": "4-Quadrant Matrix"},
+    "Matrice Rentabilité vs Risque": {"fr": "Matrice Rentabilité vs Risque", "en": "Profitability vs Risk Matrix"},
+    "Matrice de Corrélation": {"fr": "Matrice de Corrélation", "en": "Correlation Matrix"},
+    "Nuage de Points (Scatter Plots)": {"fr": "Nuage de Points (Scatter Plots)", "en": "Scatter Plots"},
+    "Outliers & Détection d'Anomalies": {"fr": "Outliers & Détection d'Anomalies", "en": "Outliers & Anomaly Detection"},
+    "Parts de Marché": {"fr": "Parts de Marché", "en": "Market Shares"},
+    "Parts de marché": {"fr": "Parts de marché", "en": "Market Shares"},
+    "Profil Banque": {"fr": "Profil Banque", "en": "Bank Profile"},
+    "Profil Banque (Synthèse)": {"fr": "Profil Banque (Synthèse)", "en": "Bank Profile (Summary)"},
+    "Profil Banque (Volet Digital)": {"fr": "Profil Banque (Volet Digital)", "en": "Bank Profile (Digital Section)"},
+    "Profils Multidimensionnels": {"fr": "Profils Multidimensionnels", "en": "Multidimensional Profiles"},
+    "Public vs Privé": {"fr": "Public vs Privé", "en": "Public vs Private"},
+    "Scanning Déterministe": {"fr": "Scanning Déterministe", "en": "Deterministic Scanning"},
+    "Scores ABIX": {"fr": "Scores ABIX", "en": "ABIX Scores"},
+    "Scores ABIX (4D)": {"fr": "Scores ABIX (4D)", "en": "ABIX Scores (4D)"},
+    "Scores ABIX (Dynamique & Croissance)": {"fr": "Scores ABIX (Dynamique & Croissance)", "en": "ABIX Scores (Dynamic & Growth)"},
+    "Scores ABIX (Dynamique)": {"fr": "Scores ABIX (Dynamique)", "en": "ABIX Scores (Dynamic)"},
+    "Scores ABIX (Efficience & Risque)": {"fr": "Scores ABIX (Efficience & Risque)", "en": "ABIX Scores (Efficiency & Risk)"},
+    "Scores ABIX (Efficience)": {"fr": "Scores ABIX (Efficience)", "en": "ABIX Scores (Efficiency)"},
+    "Scores ABIX (Rentabilité)": {"fr": "Scores ABIX (Rentabilité)", "en": "ABIX Scores (Profitability)"},
+    "Scores ABIX (Risque)": {"fr": "Scores ABIX (Risque)", "en": "ABIX Scores (Risk)"},
+    "Scores ABIX (Solidité financière)": {"fr": "Scores ABIX (Solidité financière)", "en": "ABIX Scores (Financial Strength)"},
+    "Scores ABIX (Solvabilité)": {"fr": "Scores ABIX (Solvabilité)", "en": "ABIX Scores (Solvency)"},
+    "Séries Temporelles": {"fr": "Séries Temporelles", "en": "Time Series"},
+    "Tous modules": {"fr": "Tous modules", "en": "All Modules"},
+    "Vue Secteur": {"fr": "Vue Secteur", "en": "Sector View"}
+}
+
+def format_acronym_display(acronym, lang):
+    if not acronym:
+        return ""
+    if lang == "en":
+        if acronym in ["Effectifs", "Agences", "EHB Donnés", "EHB Reçus", "Autres / PNB", "Réf. statut", "PNB/Effectif", "BT / bilan", "Commissions / PNB", "MNI / PNB"]:
+            return f"code: {acronym}"
+    return acronym
 
 def get_styles():
     return {
-        'CoverTitle': ParagraphStyle('CoverTitle',
-            fontName='Helvetica-Bold', fontSize=28, leading=34, textColor=C_WHITE, spaceAfter=6),
-        'CoverSubtitle': ParagraphStyle('CoverSubtitle',
-            fontName='Helvetica', fontSize=13, leading=19,
-            textColor=colors.HexColor("#93C5FD"), spaceAfter=18),
-        'CoverMeta': ParagraphStyle('CoverMeta',
-            fontName='Helvetica', fontSize=9, leading=14, textColor=colors.HexColor("#CBD5E1")),
-        'CoverBadge': ParagraphStyle('CoverBadge',
-            fontName='Helvetica-Bold', fontSize=10, leading=14, textColor=C_GOLD, spaceAfter=10),
         'SectionLabel': ParagraphStyle('SectionLabel',
             fontName='Helvetica-Bold', fontSize=7.5, leading=9,
             textColor=C_SLATE_400, spaceBefore=0, spaceAfter=2),
         'TermName': ParagraphStyle('TermName',
-            fontName='Helvetica-Bold', fontSize=18, leading=23, textColor=C_WHITE, spaceAfter=2),
+            fontName='Helvetica-Bold', fontSize=17, leading=22, textColor=C_WHITE, spaceAfter=2),
         'TermAliases': ParagraphStyle('TermAliases',
             fontName='Helvetica-Oblique', fontSize=8.5, leading=12,
             textColor=colors.HexColor("#94A3B8")),
@@ -108,6 +157,7 @@ def get_styles():
 class ABIXCanvas(canvas.Canvas):
     def __init__(self, *args, **kwargs):
         self.lang = kwargs.pop("lang", "fr")
+        self.cover_image = kwargs.pop("cover_image", None)
         super().__init__(*args, **kwargs)
         self._saved_page_states = []
 
@@ -119,7 +169,10 @@ class ABIXCanvas(canvas.Canvas):
         total = len(self._saved_page_states)
         for i, state in enumerate(self._saved_page_states):
             self.__dict__.update(state)
-            if i > 0:
+            if i == 0:
+                if self.cover_image and os.path.exists(self.cover_image):
+                    self.drawImage(self.cover_image, 0, 0, width=PAGE_WIDTH, height=PAGE_HEIGHT)
+            else:
                 self._draw_decorations(i + 1, total)
             super().showPage()
         super().save()
@@ -131,20 +184,22 @@ class ABIXCanvas(canvas.Canvas):
         self.rect(0, PAGE_HEIGHT - 11*mm, PAGE_WIDTH, 11*mm, fill=1, stroke=0)
         self.setFont("Helvetica-Bold", 7.5)
         self.setFillColor(C_WHITE)
-        title = ("ABIX DATA EXPLORER \u2014 REFERENTIEL METHODOLOGIQUE & GLOSSAIRE" if self.lang == "fr"
-                 else "ABIX DATA EXPLORER \u2014 METHODOLOGICAL GLOSSARY & REFERENCE GUIDE")
+        title = ("GLOSSAIRE BANCAIRE & FINANCIER \u2014 ABIX" if self.lang == "fr"
+                 else "BANKING & FINANCIAL GLOSSARY \u2014 ABIX")
         self.drawString(MARGIN, PAGE_HEIGHT - 7*mm, title)
         self.setFont("Helvetica", 7.5)
         self.setFillColor(colors.HexColor("#93C5FD"))
-        self.drawRightString(PAGE_WIDTH - MARGIN, PAGE_HEIGHT - 7*mm, "Edition 2025/2026")
+        edition_str = "Édition 2025/2026" if self.lang == "fr" else "Edition 2025/2026"
+        self.drawRightString(PAGE_WIDTH - MARGIN, PAGE_HEIGHT - 7*mm, edition_str)
+        
         # Footer
         self.setStrokeColor(C_SLATE_200)
         self.setLineWidth(0.4)
         self.line(MARGIN, 13*mm, PAGE_WIDTH - MARGIN, 13*mm)
         self.setFont("Helvetica", 7)
         self.setFillColor(C_SLATE_400)
-        footer = ("(c) 2025 ABIX \u2014 Tadjeddine & Partners. Tous droits reserves." if self.lang == "fr"
-                  else "(c) 2025 ABIX \u2014 Tadjeddine & Partners. All rights reserved.")
+        footer = ("© 2025–2026 ABIX — Tadjeddine & Partners. Tous droits réservés." if self.lang == "fr"
+                  else "© 2025–2026 ABIX — Tadjeddine & Partners. All rights reserved.")
         self.drawString(MARGIN, 9*mm, footer)
         self.setFont("Helvetica-Bold", 7.5)
         self.setFillColor(C_NAVY)
@@ -169,73 +224,28 @@ def make_box(content_list, bg, border, pad_top=6, pad_bot=6, pad_lr=10, width=No
 
 def perf_info(higher_b, perf_dir, lang):
     if higher_b is True or perf_dir == "higher_is_better":
-        return (("\u25b2  Plus eleve generalement favorable" if lang == "fr"
-                 else "\u25b2  Higher generally better"),
+        return (("▲  Plus élevé généralement favorable" if lang == "fr"
+                 else "▲  Higher generally better"),
                 colors.HexColor("#059669"))
     elif higher_b is False or perf_dir == "lower_is_better":
-        return (("\u25bc  Plus faible generalement favorable" if lang == "fr"
-                 else "\u25bc  Lower generally better"),
+        return (("▼  Plus faible généralement favorable" if lang == "fr"
+                 else "▼  Lower generally better"),
                 colors.HexColor("#D97706"))
     else:
-        return (("\u25c6  Interpretation contextuelle" if lang == "fr"
-                 else "\u25c6  Contextual interpretation"),
+        return (("◆  Interprétation contextuelle" if lang == "fr"
+                 else "◆  Contextual interpretation"),
                 colors.HexColor("#475569"))
 
 
 def thresh_info(thresh_type, lang):
     m = {
-        "REGULATORY":         ("Norme Reglementaire" if lang == "fr" else "Regulatory Standard", "#DC2626"),
+        "REGULATORY":         ("Norme Réglementaire" if lang == "fr" else "Regulatory Standard", "#DC2626"),
         "ABIX_BENCHMARK":     ("Benchmark ABIX", "#2563EB"),
-        "ACADEMIC_REFERENCE": ("Ref. Academique" if lang == "fr" else "Academic Reference", "#7C3AED"),
-        "MARKET_REFERENCE":   ("Pratique Marche" if lang == "fr" else "Market Reference", "#0D9488"),
+        "ACADEMIC_REFERENCE": ("Réf. Académique" if lang == "fr" else "Academic Reference", "#7C3AED"),
+        "MARKET_REFERENCE":   ("Pratique Marché" if lang == "fr" else "Market Reference", "#0D9488"),
     }
     pair = m.get(thresh_type)
     return (pair[0], pair[1]) if pair else (None, None)
-
-
-def build_cover(story, lang, n_entries, styles):
-    cover_inner = [
-        Spacer(1, 22*mm),
-        Paragraph("REFERENTIEL METHODOLOGIQUE OFFICIEL" if lang == "fr"
-                  else "OFFICIAL METHODOLOGICAL REFERENCE", styles['CoverBadge']),
-        Paragraph("Glossaire Financier &amp; Bancaire" if lang == "fr"
-                  else "Banking &amp; Financial Glossary", styles['CoverTitle']),
-        Paragraph(
-            ("ABIX Data Explorer \u2014 Algorithmes, Ratios, Indicateurs &amp; Concepts Metiers"
-             "<br/>du Secteur Bancaire Algerien" if lang == "fr" else
-             "ABIX Data Explorer \u2014 Financial Metrics, Ratios, Algorithms &amp; Banking Concepts in Algeria"),
-            styles['CoverSubtitle']),
-        HRFlowable(width=CONTENT_W - 28, thickness=1.5, color=C_GOLD, spaceBefore=6, spaceAfter=16),
-        Paragraph(
-            (f"Ce document constitue le referentiel methodologique exhaustif des <b>{n_entries} notions</b> "
-             f"mises en oeuvre dans la plateforme ABIX Data Explorer, couvrant les banques commerciales "
-             f"actives en Algerie. Chaque fiche documente la methode reellement utilisee par le moteur de calcul ABIX."
-             if lang == "fr" else
-             f"This document provides the comprehensive methodological reference for all <b>{n_entries} concepts</b> "
-             f"implemented in the ABIX Data Explorer platform across commercial banks in Algeria."),
-            styles['CoverMeta']),
-        Spacer(1, 12*mm),
-        Table([
-            [Paragraph(f"<b>{'Perimetre :' if lang == 'fr' else 'Scope:'}</b> 21 banques commerciales algeriennes",
-                       styles['CoverMeta']),
-             Paragraph(f"<b>{'Notions :' if lang == 'fr' else 'Terms:'}</b> {n_entries}",
-                       styles['CoverMeta'])],
-            [Paragraph(f"<b>{'Edition :' if lang == 'fr' else 'Edition:'}</b> 2025 / 2026",
-                       styles['CoverMeta']),
-             Paragraph(f"<b>{'Genere :' if lang == 'fr' else 'Generated:'}</b> {datetime.now().strftime('%d/%m/%Y')}",
-                       styles['CoverMeta'])],
-        ], colWidths=[CONTENT_W / 2, CONTENT_W / 2]),
-    ]
-    cover_t = Table([[cover_inner]], colWidths=[CONTENT_W])
-    cover_t.setStyle(TableStyle([
-        ('BACKGROUND', (0, 0), (-1, -1), C_NAVY_DARK),
-        ('LEFTPADDING', (0, 0), (-1, -1), 14),
-        ('RIGHTPADDING', (0, 0), (-1, -1), 14),
-        ('TOPPADDING', (0, 0), (-1, -1), 0),
-        ('BOTTOMPADDING', (0, 0), (-1, -1), 30),
-    ]))
-    story.append(cover_t)
-    story.append(PageBreak())
 
 
 def build_toc(story, entries, categories, lang, styles):
@@ -253,9 +263,9 @@ def build_toc(story, entries, categories, lang, styles):
             continue
         story.append(Paragraph(f"<b>{cat_name}</b>  <font color='#94A3B8'>({len(cat_terms)})</font>",
                                 styles['TOCCatName']))
-        terms_str = "  \u00b7  ".join([
+        terms_str = "  ·  ".join([
             ((e.get("term") or {}).get(lang) or (e.get("term") or {}).get("fr", "?"))
-            + (f" ({e['acronym']})" if e.get("acronym") else "")
+            + (f" ({format_acronym_display(e['acronym'], lang)})" if e.get("acronym") else "")
             for e in cat_terms
         ])
         story.append(Paragraph(terms_str, styles['TOCTermName']))
@@ -263,26 +273,51 @@ def build_toc(story, entries, categories, lang, styles):
     story.append(PageBreak())
 
 
-def build_term_card(item, lang, styles, cat_name):
+def build_term_card(item, lang, styles, cat_name, terms_by_id):
     blocks = []
     term_str  = (item.get("term") or {}).get(lang) or (item.get("term") or {}).get("fr", "")
-    acronym   = item.get("acronym", "") or ""
+    acronym_raw = item.get("acronym", "") or ""
+    acronym   = format_acronym_display(acronym_raw, lang)
     aliases_d = item.get("aliases") or {}
     aliases   = aliases_d.get(lang) or aliases_d.get("fr") or []
     short_def = (item.get("short_definition") or {}).get(lang) or (item.get("short_definition") or {}).get("fr", "")
     detailed  = (item.get("detailed_definition") or {}).get(lang) or (item.get("detailed_definition") or {}).get("fr", "")
-    formula   = item.get("formula") or ""
+    
+    # Formule multilingue
+    formula_obj = item.get("formula")
+    if isinstance(formula_obj, dict):
+        formula = formula_obj.get(lang) or formula_obj.get("fr", "")
+    else:
+        formula = formula_obj or ""
+
     interp    = (item.get("interpretation") or {}).get(lang) or (item.get("interpretation") or {}).get("fr", "")
     example   = (item.get("example") or {}).get(lang) or (item.get("example") or {}).get("fr", "")
-    vintage   = item.get("example_vintage") or ""
-    unit      = item.get("unit") or ""
+    
+    # Unité multilingue
+    unit_obj = item.get("unit")
+    if isinstance(unit_obj, dict):
+        unit = unit_obj.get(lang) or unit_obj.get("fr", "")
+    else:
+        unit = unit_obj or ""
+
     modules   = item.get("modules") or []
     related   = item.get("related_terms") or []
     higher_b  = item.get("higher_is_better")
     perf_dir  = item.get("performance_direction") or "neutral"
     thresh_t  = item.get("threshold_type") or "NONE"
-    reg_thresh= item.get("regulatory_threshold") or ""
-    abix_bench= item.get("abix_benchmark") or ""
+    
+    # Seuils & Benchmarks multilingues
+    reg_thresh_obj = item.get("regulatory_threshold")
+    if isinstance(reg_thresh_obj, dict):
+        reg_thresh = reg_thresh_obj.get(lang) or reg_thresh_obj.get("fr", "")
+    else:
+        reg_thresh = reg_thresh_obj or ""
+
+    abix_bench_obj = item.get("abix_benchmark")
+    if isinstance(abix_bench_obj, dict):
+        abix_bench = abix_bench_obj.get(lang) or abix_bench_obj.get("fr", "")
+    else:
+        abix_bench = abix_bench_obj or ""
 
     perf_txt, perf_fg = perf_info(higher_b, perf_dir, lang)
     thresh_lbl, thresh_col = thresh_info(thresh_t, lang)
@@ -292,10 +327,10 @@ def build_term_card(item, lang, styles, cat_name):
     if thresh_lbl:
         badge_parts.append(f"<font color='{thresh_col}'><b>{thresh_lbl}</b></font>")
     if unit:
-        badge_parts.append(f"<font color='#CBD5E1'>{'Unite :' if lang == 'fr' else 'Unit:'} {unit}</font>")
+        badge_parts.append(f"<font color='#CBD5E1'>{'Unité :' if lang == 'fr' else 'Unit:'} {unit}</font>")
 
     header_inner = [
-        Paragraph("  \u00b7  ".join(badge_parts),
+        Paragraph("  ·  ".join(badge_parts),
                   ParagraphStyle('hdr_meta', fontName='Helvetica', fontSize=8,
                                  leading=11, textColor=C_WHITE)),
         Spacer(1, 3*mm),
@@ -324,7 +359,7 @@ def build_term_card(item, lang, styles, cat_name):
 
     # Def synthétique
     if short_def:
-        blocks.append(Paragraph(("DEFINITION SYNTHETIQUE" if lang == "fr" else "SUMMARY DEFINITION"),
+        blocks.append(Paragraph(("DÉFINITION SYNTHÉTIQUE" if lang == "fr" else "SUMMARY DEFINITION"),
                                  styles['SectionLabel']))
         blocks.append(make_box([Paragraph(short_def, styles['ShortDef'])],
                                 C_SLATE_100, C_SLATE_200, pad_top=8, pad_bot=8, pad_lr=10))
@@ -332,7 +367,7 @@ def build_term_card(item, lang, styles, cat_name):
 
     # Def détaillée
     if detailed:
-        blocks.append(Paragraph(("EXPLICATION DETAILLEE" if lang == "fr" else "DETAILED EXPLANATION"),
+        blocks.append(Paragraph(("EXPLICATION DÉTAILLÉE" if lang == "fr" else "DETAILED EXPLANATION"),
                                  styles['SectionLabel']))
         blocks.append(make_box([Paragraph(detailed, styles['DetailedDef'])],
                                 C_WHITE, C_SLATE_200, pad_top=6, pad_bot=6, pad_lr=10))
@@ -340,7 +375,7 @@ def build_term_card(item, lang, styles, cat_name):
 
     # Formule
     if formula:
-        blocks.append(Paragraph(("FORMULE DE CALCUL ABIX" if lang == "fr" else "ABIX CALCULATION FORMULA"),
+        blocks.append(Paragraph(("FORMULE DE CALCUL" if lang == "fr" else "CALCULATION FORMULA"),
                                  styles['SectionLabel']))
         blocks.append(make_box([Paragraph(formula, styles['FormulaText'])],
                                 C_SLATE_900, colors.HexColor("#334155"),
@@ -349,7 +384,7 @@ def build_term_card(item, lang, styles, cat_name):
 
     # Interprétation
     if interp:
-        blocks.append(Paragraph(("COMMENT INTERPRETER ?" if lang == "fr" else "HOW TO INTERPRET?"),
+        blocks.append(Paragraph(("COMMENT INTERPRÉTER ?" if lang == "fr" else "HOW TO INTERPRET?"),
                                  styles['SectionLabel']))
         blocks.append(make_box([Paragraph(interp, styles['InterpText'])],
                                 C_GREEN_50, C_GREEN_200, pad_top=7, pad_bot=7, pad_lr=10))
@@ -362,13 +397,13 @@ def build_term_card(item, lang, styles, cat_name):
         thresh_rows = []
         if reg_thresh:
             thresh_rows.append(Paragraph(
-                f"<font color='#DC2626'><b>{'Cadre Reglementaire Obligatoire' if lang == 'fr' else 'Mandatory Regulatory Framework'} :</b></font>  {reg_thresh}",
+                f"<font color='#DC2626'><b>{'Cadre Réglementaire Obligatoire' if lang == 'fr' else 'Mandatory Regulatory Framework'} :</b></font>  {reg_thresh}",
                 styles['ThreshRegText']))
         if abix_bench:
             if thresh_rows:
                 thresh_rows.append(Spacer(1, 3*mm))
             thresh_rows.append(Paragraph(
-                f"<font color='#2563EB'><b>{'Benchmark &amp; Repere ABIX' if lang == 'fr' else 'ABIX Comfort Benchmark'} :</b></font>  {abix_bench}",
+                f"<font color='#2563EB'><b>{'Benchmark & Repère ABIX' if lang == 'fr' else 'ABIX Comfort Benchmark'} :</b></font>  {abix_bench}",
                 styles['ThreshAbixText']))
         blocks.append(make_box(thresh_rows, colors.HexColor("#F8FAFC"), C_SLATE_200,
                                 pad_top=7, pad_bot=7, pad_lr=10))
@@ -376,28 +411,38 @@ def build_term_card(item, lang, styles, cat_name):
 
     # Exemple
     if example:
-        lbl = ("EXEMPLE CONCRET" if lang == "fr" else "CONCRETE EXAMPLE")
-        if vintage:
-            lbl += f"  ({vintage})"
+        lbl = ("EXEMPLE PÉDAGOGIQUE" if lang == "fr" else "PEDAGOGICAL EXAMPLE")
         blocks.append(Paragraph(lbl, styles['SectionLabel']))
         blocks.append(make_box([Paragraph(example, styles['ExampleText'])],
                                 C_AMBER_50, C_AMBER_200, pad_top=7, pad_bot=7, pad_lr=10))
         blocks.append(Spacer(1, 2.5*mm))
 
     # Modules & Related
+    translated_modules = [MODULES_I18N.get(m, {}).get(lang, m) for m in modules]
+    translated_related = []
+    for r in related:
+        if r in terms_by_id:
+            r_item = terms_by_id[r]
+            r_t = (r_item.get("term") or {}).get(lang) or (r_item.get("term") or {}).get("fr", r)
+            if r_item.get("acronym"):
+                r_t += f" ({format_acronym_display(r_item['acronym'], lang)})"
+            translated_related.append(r_t)
+        else:
+            translated_related.append(r)
+
     footer_cols = []
-    if modules:
-        col_w = (CONTENT_W / 2 - 2*mm) if related else CONTENT_W
+    if translated_modules:
+        col_w = (CONTENT_W / 2 - 2*mm) if translated_related else CONTENT_W
         footer_cols.append([
             Paragraph("MODULES ABIX" if lang == "fr" else "ABIX MODULES", styles['SectionLabel']),
-            make_box([Paragraph(", ".join(modules), styles['ModulesText'])],
+            make_box([Paragraph(", ".join(translated_modules), styles['ModulesText'])],
                       C_SLATE_100, C_SLATE_200, pad_top=5, pad_bot=5, pad_lr=8, width=col_w),
         ])
-    if related:
-        col_w = (CONTENT_W / 2 - 2*mm) if modules else CONTENT_W
+    if translated_related:
+        col_w = (CONTENT_W / 2 - 2*mm) if translated_modules else CONTENT_W
         footer_cols.append([
-            Paragraph("NOTIONS CONNEXES" if lang == "fr" else "RELATED TERMS", styles['SectionLabel']),
-            make_box([Paragraph(", ".join(related), styles['ModulesText'])],
+            Paragraph("NOTIONS CONNEXES" if lang == "fr" else "RELATED CONCEPTS", styles['SectionLabel']),
+            make_box([Paragraph(", ".join(translated_related), styles['ModulesText'])],
                       C_SLATE_100, C_SLATE_200, pad_top=5, pad_bot=5, pad_lr=8, width=col_w),
         ])
     if len(footer_cols) == 2:
@@ -420,19 +465,25 @@ def build_term_card(item, lang, styles, cat_name):
 
 def generate_pdf(lang="fr"):
     os.makedirs(OUTPUT_DIR, exist_ok=True)
-    filename = ("glossaire-abix-banques-algerie-fr.pdf" if lang == "fr"
-                else "glossary-abix-algerian-banking-en.pdf")
+    filename = ("glossaire-bancaire-financier-abix-fr.pdf" if lang == "fr"
+                else "abix-banking-financial-glossary-en.pdf")
     pdf_path = os.path.join(OUTPUT_DIR, filename)
+    cover_image = os.path.join(COVERS_DIR, f"cover_{lang}.jpg")
 
     with open(DATA_FILE, "r", encoding="utf-8") as f:
         data = json.load(f)
 
     entries    = data.get("terms") or data.get("entries", [])
     categories = data.get("categories", {})
+    terms_by_id = {it["id"]: it for it in entries}
     styles     = get_styles()
     story      = []
 
-    build_cover(story, lang, len(entries), styles)
+    # Page 1: Empty PageBreak (Canvas will draw full bleed cover on page 1)
+    story.append(Spacer(1, 1))
+    story.append(PageBreak())
+
+    # Page 2: Sommaire / TOC
     build_toc(story, entries, categories, lang, styles)
 
     by_cat = {}
@@ -445,17 +496,17 @@ def generate_pdf(lang="fr"):
             continue
         cat_name = (cat_data.get("name") or {}).get(lang) or (cat_data.get("name") or {}).get("fr", cat_id)
 
-        # Page titre de categorie
+        # Page titre de catégorie
         cat_inner = [
             Spacer(1, 28*mm),
-            Paragraph("CATEGORIE" if lang == "fr" else "CATEGORY",
+            Paragraph("CATÉGORIE" if lang == "fr" else "CATEGORY",
                 ParagraphStyle('catlbl', fontName='Helvetica-Bold', fontSize=9, leading=12,
                                textColor=colors.HexColor("#93C5FD"), spaceAfter=4)),
             Paragraph(cat_name,
                 ParagraphStyle('catname', fontName='Helvetica-Bold', fontSize=24, leading=30,
                                textColor=C_WHITE, spaceAfter=8)),
             HRFlowable(width=CONTENT_W - 28, thickness=1.5, color=C_GOLD, spaceBefore=0, spaceAfter=8),
-            Paragraph(f"{len(cat_terms)} {'notions dans cette categorie' if lang == 'fr' else 'terms in this category'}",
+            Paragraph(f"{len(cat_terms)} {'notions dans cette catégorie' if lang == 'fr' else 'terms in this category'}",
                 ParagraphStyle('catcnt', fontName='Helvetica', fontSize=12, leading=16,
                                textColor=colors.HexColor("#CBD5E1"))),
         ]
@@ -471,8 +522,7 @@ def generate_pdf(lang="fr"):
         story.append(PageBreak())
 
         for item in cat_terms:
-            card = build_term_card(item, lang, styles, cat_name)
-            # Les premiers elements restent ensemble (header + def)
+            card = build_term_card(item, lang, styles, cat_name, terms_by_id)
             story.append(KeepTogether(card[:4] if len(card) > 4 else card))
             for block in (card[4:] if len(card) > 4 else []):
                 story.append(block)
@@ -480,6 +530,7 @@ def generate_pdf(lang="fr"):
 
     def make_canvas(*args, **kwargs):
         kwargs["lang"] = lang
+        kwargs["cover_image"] = cover_image
         return ABIXCanvas(*args, **kwargs)
 
     doc = SimpleDocTemplate(
@@ -490,17 +541,16 @@ def generate_pdf(lang="fr"):
     doc.build(story, canvasmaker=make_canvas)
     size = os.path.getsize(pdf_path)
     print(f"[generate_glossary_pdf] OK  {os.path.basename(pdf_path)} ({size:,} octets)")
+
+    if os.path.exists(ABIX_FRONT_DOCS):
+        dest = os.path.join(ABIX_FRONT_DOCS, os.path.basename(pdf_path))
+        shutil.copy2(pdf_path, dest)
+
     return pdf_path
 
 
 if __name__ == "__main__":
-    print("--- Generation des livrets PDF Premium du Glossaire ABIX ---")
+    print("--- Génération des livrets PDF Premium du Glossaire ABIX (FR & EN) ---")
     generate_pdf("fr")
     generate_pdf("en")
-    if os.path.exists(ABIX_FRONT_DOCS):
-        for fname in os.listdir(OUTPUT_DIR):
-            if fname.endswith(".pdf"):
-                shutil.copy2(os.path.join(OUTPUT_DIR, fname),
-                             os.path.join(ABIX_FRONT_DOCS, fname))
-        print(f"OK  PDFs synchronises vers {ABIX_FRONT_DOCS}")
-    print("\nGeneration terminee avec succes !")
+    print("\nGénération FR & EN terminée avec succès !")
