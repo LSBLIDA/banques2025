@@ -9,7 +9,7 @@
       "en",
       "ar"
     ],
-    "updated_at": "2026-08-29T08:46:18.106Z"
+    "updated_at": "2026-08-29T08:48:33.944Z"
   },
   "categories": {
     "financial_indicators": {
@@ -156,8 +156,8 @@
       ],
       "display_order": 1,
       "is_active": true,
-      "created_at": "2026-08-29T08:46:18.106Z",
-      "updated_at": "2026-08-29T08:46:18.106Z"
+      "created_at": "2026-08-29T08:48:33.944Z",
+      "updated_at": "2026-08-29T08:48:33.944Z"
     },
     {
       "id": "depots-clientele",
@@ -229,8 +229,8 @@
       ],
       "display_order": 2,
       "is_active": true,
-      "created_at": "2026-08-29T08:46:18.106Z",
-      "updated_at": "2026-08-29T08:46:18.106Z"
+      "created_at": "2026-08-29T08:48:33.944Z",
+      "updated_at": "2026-08-29T08:48:33.944Z"
     },
     {
       "id": "credits-clientele",
@@ -305,8 +305,8 @@
       ],
       "display_order": 3,
       "is_active": true,
-      "created_at": "2026-08-29T08:46:18.106Z",
-      "updated_at": "2026-08-29T08:46:18.106Z"
+      "created_at": "2026-08-29T08:48:33.944Z",
+      "updated_at": "2026-08-29T08:48:33.944Z"
     },
     {
       "id": "fonds-propres",
@@ -377,8 +377,8 @@
       ],
       "display_order": 4,
       "is_active": true,
-      "created_at": "2026-08-29T08:46:18.106Z",
-      "updated_at": "2026-08-29T08:46:18.106Z"
+      "created_at": "2026-08-29T08:48:33.944Z",
+      "updated_at": "2026-08-29T08:48:33.944Z"
     },
     {
       "id": "produit-net-bancaire",
@@ -450,8 +450,8 @@
       ],
       "display_order": 5,
       "is_active": true,
-      "created_at": "2026-08-29T08:46:18.106Z",
-      "updated_at": "2026-08-29T08:46:18.106Z"
+      "created_at": "2026-08-29T08:48:33.944Z",
+      "updated_at": "2026-08-29T08:48:33.944Z"
     },
     {
       "id": "resultat-brut-exploitation",
@@ -521,8 +521,8 @@
       ],
       "display_order": 6,
       "is_active": true,
-      "created_at": "2026-08-29T08:46:18.106Z",
-      "updated_at": "2026-08-29T08:46:18.106Z"
+      "created_at": "2026-08-29T08:48:33.944Z",
+      "updated_at": "2026-08-29T08:48:33.944Z"
     },
     {
       "id": "resultat-net",
@@ -594,8 +594,8 @@
       ],
       "display_order": 7,
       "is_active": true,
-      "created_at": "2026-08-29T08:46:18.106Z",
-      "updated_at": "2026-08-29T08:46:18.106Z"
+      "created_at": "2026-08-29T08:48:33.944Z",
+      "updated_at": "2026-08-29T08:48:33.944Z"
     },
     {
       "id": "bons-du-tresor",
@@ -667,8 +667,8 @@
       ],
       "display_order": 8,
       "is_active": true,
-      "created_at": "2026-08-29T08:46:18.106Z",
-      "updated_at": "2026-08-29T08:46:18.106Z"
+      "created_at": "2026-08-29T08:48:33.944Z",
+      "updated_at": "2026-08-29T08:48:33.944Z"
     },
     {
       "id": "return-on-equity",
@@ -741,8 +741,8 @@
       ],
       "display_order": 9,
       "is_active": true,
-      "created_at": "2026-08-29T08:46:18.106Z",
-      "updated_at": "2026-08-29T08:46:18.106Z"
+      "created_at": "2026-08-29T08:48:33.944Z",
+      "updated_at": "2026-08-29T08:48:33.944Z"
     },
     {
       "id": "return-on-average-equity",
@@ -807,8 +807,8 @@
       ],
       "display_order": 10,
       "is_active": true,
-      "created_at": "2026-08-29T08:46:18.106Z",
-      "updated_at": "2026-08-29T08:46:18.106Z"
+      "created_at": "2026-08-29T08:48:33.944Z",
+      "updated_at": "2026-08-29T08:48:33.944Z"
     },
     {
       "id": "return-on-assets",
@@ -881,8 +881,8 @@
       ],
       "display_order": 11,
       "is_active": true,
-      "created_at": "2026-08-29T08:46:18.106Z",
-      "updated_at": "2026-08-29T08:46:18.106Z"
+      "created_at": "2026-08-29T08:48:33.944Z",
+      "updated_at": "2026-08-29T08:48:33.944Z"
     },
     {
       "id": "return-on-average-assets",
@@ -947,8 +947,8 @@
       ],
       "display_order": 12,
       "is_active": true,
-      "created_at": "2026-08-29T08:46:18.106Z",
-      "updated_at": "2026-08-29T08:46:18.106Z"
+      "created_at": "2026-08-29T08:48:33.944Z",
+      "updated_at": "2026-08-29T08:48:33.944Z"
     },
     {
       "id": "coefficient-exploitation",
@@ -1021,8 +1021,8 @@
       ],
       "display_order": 13,
       "is_active": true,
-      "created_at": "2026-08-29T08:46:18.106Z",
-      "updated_at": "2026-08-29T08:46:18.106Z"
+      "created_at": "2026-08-29T08:48:33.944Z",
+      "updated_at": "2026-08-29T08:48:33.944Z"
     },
     {
       "id": "marge-interet-nette",
@@ -1091,8 +1091,8 @@
       ],
       "display_order": 14,
       "is_active": true,
-      "created_at": "2026-08-29T08:46:18.106Z",
-      "updated_at": "2026-08-29T08:46:18.106Z"
+      "created_at": "2026-08-29T08:48:33.944Z",
+      "updated_at": "2026-08-29T08:48:33.944Z"
     },
     {
       "id": "marge-nette-pnb",
@@ -1161,8 +1161,8 @@
       ],
       "display_order": 15,
       "is_active": true,
-      "created_at": "2026-08-29T08:46:18.106Z",
-      "updated_at": "2026-08-29T08:46:18.106Z"
+      "created_at": "2026-08-29T08:48:33.944Z",
+      "updated_at": "2026-08-29T08:48:33.944Z"
     },
     {
       "id": "conversion-rbe-rn",
@@ -1231,8 +1231,8 @@
       ],
       "display_order": 16,
       "is_active": true,
-      "created_at": "2026-08-29T08:46:18.106Z",
-      "updated_at": "2026-08-29T08:46:18.106Z"
+      "created_at": "2026-08-29T08:48:33.944Z",
+      "updated_at": "2026-08-29T08:48:33.944Z"
     },
     {
       "id": "ratio-solvabilite",
@@ -1304,8 +1304,8 @@
       ],
       "display_order": 17,
       "is_active": true,
-      "created_at": "2026-08-29T08:46:18.106Z",
-      "updated_at": "2026-08-29T08:46:18.106Z"
+      "created_at": "2026-08-29T08:48:33.944Z",
+      "updated_at": "2026-08-29T08:48:33.944Z"
     },
     {
       "id": "tier-1-ratio",
@@ -1373,8 +1373,8 @@
       ],
       "display_order": 18,
       "is_active": true,
-      "created_at": "2026-08-29T08:46:18.106Z",
-      "updated_at": "2026-08-29T08:46:18.106Z"
+      "created_at": "2026-08-29T08:48:33.944Z",
+      "updated_at": "2026-08-29T08:48:33.944Z"
     },
     {
       "id": "taux-npl",
@@ -1443,8 +1443,8 @@
       ],
       "display_order": 19,
       "is_active": true,
-      "created_at": "2026-08-29T08:46:18.106Z",
-      "updated_at": "2026-08-29T08:46:18.106Z"
+      "created_at": "2026-08-29T08:48:33.944Z",
+      "updated_at": "2026-08-29T08:48:33.944Z"
     },
     {
       "id": "taux-couverture-npl",
@@ -1512,8 +1512,8 @@
       ],
       "display_order": 20,
       "is_active": true,
-      "created_at": "2026-08-29T08:46:18.106Z",
-      "updated_at": "2026-08-29T08:46:18.106Z"
+      "created_at": "2026-08-29T08:48:33.944Z",
+      "updated_at": "2026-08-29T08:48:33.944Z"
     },
     {
       "id": "effort-provisionnement",
@@ -1584,8 +1584,8 @@
       ],
       "display_order": 21,
       "is_active": true,
-      "created_at": "2026-08-29T08:46:18.106Z",
-      "updated_at": "2026-08-29T08:46:18.106Z"
+      "created_at": "2026-08-29T08:48:33.944Z",
+      "updated_at": "2026-08-29T08:48:33.944Z"
     },
     {
       "id": "cout-risque-pnb",
@@ -1654,8 +1654,8 @@
       ],
       "display_order": 21.5,
       "is_active": true,
-      "created_at": "2026-08-29T08:46:18.106Z",
-      "updated_at": "2026-08-29T08:46:18.106Z"
+      "created_at": "2026-08-29T08:48:33.944Z",
+      "updated_at": "2026-08-29T08:48:33.944Z"
     },
     {
       "id": "pression-provision-rbe",
@@ -1722,8 +1722,8 @@
       ],
       "display_order": 22,
       "is_active": true,
-      "created_at": "2026-08-29T08:46:18.106Z",
-      "updated_at": "2026-08-29T08:46:18.106Z"
+      "created_at": "2026-08-29T08:48:33.944Z",
+      "updated_at": "2026-08-29T08:48:33.944Z"
     },
     {
       "id": "fonds-propres-total-bilan",
@@ -1795,8 +1795,8 @@
       ],
       "display_order": 23,
       "is_active": true,
-      "created_at": "2026-08-29T08:46:18.106Z",
-      "updated_at": "2026-08-29T08:46:18.106Z"
+      "created_at": "2026-08-29T08:48:33.944Z",
+      "updated_at": "2026-08-29T08:48:33.944Z"
     },
     {
       "id": "levier-financier",
@@ -1865,8 +1865,8 @@
       ],
       "display_order": 24,
       "is_active": true,
-      "created_at": "2026-08-29T08:46:18.106Z",
-      "updated_at": "2026-08-29T08:46:18.106Z"
+      "created_at": "2026-08-29T08:48:33.944Z",
+      "updated_at": "2026-08-29T08:48:33.944Z"
     },
     {
       "id": "ratio-prets-depots",
@@ -1937,8 +1937,8 @@
       ],
       "display_order": 25,
       "is_active": true,
-      "created_at": "2026-08-29T08:46:18.106Z",
-      "updated_at": "2026-08-29T08:46:18.106Z"
+      "created_at": "2026-08-29T08:48:33.944Z",
+      "updated_at": "2026-08-29T08:48:33.944Z"
     },
     {
       "id": "prets-total-actif",
@@ -2009,8 +2009,8 @@
       ],
       "display_order": 26,
       "is_active": true,
-      "created_at": "2026-08-29T08:46:18.106Z",
-      "updated_at": "2026-08-29T08:46:18.106Z"
+      "created_at": "2026-08-29T08:48:33.944Z",
+      "updated_at": "2026-08-29T08:48:33.944Z"
     },
     {
       "id": "bdt-total-actif",
@@ -2080,8 +2080,8 @@
       ],
       "display_order": 27,
       "is_active": true,
-      "created_at": "2026-08-29T08:46:18.106Z",
-      "updated_at": "2026-08-29T08:46:18.106Z"
+      "created_at": "2026-08-29T08:48:33.944Z",
+      "updated_at": "2026-08-29T08:48:33.944Z"
     },
     {
       "id": "depots-total-passif",
@@ -2150,8 +2150,8 @@
       ],
       "display_order": 28,
       "is_active": true,
-      "created_at": "2026-08-29T08:46:18.106Z",
-      "updated_at": "2026-08-29T08:46:18.106Z"
+      "created_at": "2026-08-29T08:48:33.944Z",
+      "updated_at": "2026-08-29T08:48:33.944Z"
     },
     {
       "id": "autres-actifs",
@@ -2218,8 +2218,8 @@
       ],
       "display_order": 29,
       "is_active": true,
-      "created_at": "2026-08-29T08:46:18.106Z",
-      "updated_at": "2026-08-29T08:46:18.106Z"
+      "created_at": "2026-08-29T08:48:33.944Z",
+      "updated_at": "2026-08-29T08:48:33.944Z"
     },
     {
       "id": "ratio-lcr",
@@ -2287,8 +2287,8 @@
       ],
       "display_order": 30,
       "is_active": true,
-      "created_at": "2026-08-29T08:46:18.106Z",
-      "updated_at": "2026-08-29T08:46:18.106Z"
+      "created_at": "2026-08-29T08:48:33.944Z",
+      "updated_at": "2026-08-29T08:48:33.944Z"
     },
     {
       "id": "ratio-nsfr",
@@ -2356,8 +2356,8 @@
       ],
       "display_order": 31,
       "is_active": true,
-      "created_at": "2026-08-29T08:46:18.106Z",
-      "updated_at": "2026-08-29T08:46:18.106Z"
+      "created_at": "2026-08-29T08:48:33.944Z",
+      "updated_at": "2026-08-29T08:48:33.944Z"
     },
     {
       "id": "moyenne-arithmetique",
@@ -2427,8 +2427,8 @@
       ],
       "display_order": 32,
       "is_active": true,
-      "created_at": "2026-08-29T08:46:18.106Z",
-      "updated_at": "2026-08-29T08:46:18.106Z"
+      "created_at": "2026-08-29T08:48:33.944Z",
+      "updated_at": "2026-08-29T08:48:33.944Z"
     },
     {
       "id": "mediane",
@@ -2502,8 +2502,8 @@
       ],
       "display_order": 33,
       "is_active": true,
-      "created_at": "2026-08-29T08:46:18.106Z",
-      "updated_at": "2026-08-29T08:46:18.106Z"
+      "created_at": "2026-08-29T08:48:33.944Z",
+      "updated_at": "2026-08-29T08:48:33.944Z"
     },
     {
       "id": "quartiles",
@@ -2577,8 +2577,8 @@
       ],
       "display_order": 34,
       "is_active": true,
-      "created_at": "2026-08-29T08:46:18.106Z",
-      "updated_at": "2026-08-29T08:46:18.106Z"
+      "created_at": "2026-08-29T08:48:33.944Z",
+      "updated_at": "2026-08-29T08:48:33.944Z"
     },
     {
       "id": "ecart-type",
@@ -2648,8 +2648,8 @@
       ],
       "display_order": 35,
       "is_active": true,
-      "created_at": "2026-08-29T08:46:18.106Z",
-      "updated_at": "2026-08-29T08:46:18.106Z"
+      "created_at": "2026-08-29T08:48:33.944Z",
+      "updated_at": "2026-08-29T08:48:33.944Z"
     },
     {
       "id": "coefficient-variation",
@@ -2717,8 +2717,8 @@
       ],
       "display_order": 36,
       "is_active": true,
-      "created_at": "2026-08-29T08:46:18.106Z",
-      "updated_at": "2026-08-29T08:46:18.106Z"
+      "created_at": "2026-08-29T08:48:33.944Z",
+      "updated_at": "2026-08-29T08:48:33.944Z"
     },
     {
       "id": "taux-croissance-annuel-compose",
@@ -2786,8 +2786,8 @@
       ],
       "display_order": 37,
       "is_active": true,
-      "created_at": "2026-08-29T08:46:18.106Z",
-      "updated_at": "2026-08-29T08:46:18.106Z"
+      "created_at": "2026-08-29T08:48:33.944Z",
+      "updated_at": "2026-08-29T08:48:33.944Z"
     },
     {
       "id": "variation-annuelle-yoy",
@@ -2859,8 +2859,8 @@
       ],
       "display_order": 38,
       "is_active": true,
-      "created_at": "2026-08-29T08:46:18.106Z",
-      "updated_at": "2026-08-29T08:46:18.106Z"
+      "created_at": "2026-08-29T08:48:33.944Z",
+      "updated_at": "2026-08-29T08:48:33.944Z"
     },
     {
       "id": "base-100",
@@ -2928,8 +2928,8 @@
       ],
       "display_order": 39,
       "is_active": true,
-      "created_at": "2026-08-29T08:46:18.106Z",
-      "updated_at": "2026-08-29T08:46:18.106Z"
+      "created_at": "2026-08-29T08:48:33.944Z",
+      "updated_at": "2026-08-29T08:48:33.944Z"
     },
     {
       "id": "correlation-pearson",
@@ -2997,8 +2997,8 @@
       ],
       "display_order": 40,
       "is_active": true,
-      "created_at": "2026-08-29T08:46:18.106Z",
-      "updated_at": "2026-08-29T08:46:18.106Z"
+      "created_at": "2026-08-29T08:48:33.944Z",
+      "updated_at": "2026-08-29T08:48:33.944Z"
     },
     {
       "id": "z-score-standardise",
@@ -3069,8 +3069,8 @@
       ],
       "display_order": 41,
       "is_active": true,
-      "created_at": "2026-08-29T08:46:18.106Z",
-      "updated_at": "2026-08-29T08:46:18.106Z"
+      "created_at": "2026-08-29T08:48:33.944Z",
+      "updated_at": "2026-08-29T08:48:33.944Z"
     },
     {
       "id": "normalisation-min-max",
@@ -3138,8 +3138,8 @@
       ],
       "display_order": 42,
       "is_active": true,
-      "created_at": "2026-08-29T08:46:18.106Z",
-      "updated_at": "2026-08-29T08:46:18.106Z"
+      "created_at": "2026-08-29T08:48:33.944Z",
+      "updated_at": "2026-08-29T08:48:33.944Z"
     },
     {
       "id": "part-de-marche",
@@ -3211,8 +3211,8 @@
       ],
       "display_order": 43,
       "is_active": true,
-      "created_at": "2026-08-29T08:46:18.106Z",
-      "updated_at": "2026-08-29T08:46:18.106Z"
+      "created_at": "2026-08-29T08:48:33.944Z",
+      "updated_at": "2026-08-29T08:48:33.944Z"
     },
     {
       "id": "gain-perte-part-marche",
@@ -3281,8 +3281,8 @@
       ],
       "display_order": 44,
       "is_active": true,
-      "created_at": "2026-08-29T08:46:18.106Z",
-      "updated_at": "2026-08-29T08:46:18.106Z"
+      "created_at": "2026-08-29T08:48:33.944Z",
+      "updated_at": "2026-08-29T08:48:33.944Z"
     },
     {
       "id": "secteur-public-prive",
@@ -3352,8 +3352,8 @@
       ],
       "display_order": 45,
       "is_active": true,
-      "created_at": "2026-08-29T08:46:18.106Z",
-      "updated_at": "2026-08-29T08:46:18.106Z"
+      "created_at": "2026-08-29T08:48:33.944Z",
+      "updated_at": "2026-08-29T08:48:33.944Z"
     },
     {
       "id": "perimetre-constant",
@@ -3423,8 +3423,8 @@
       ],
       "display_order": 46,
       "is_active": true,
-      "created_at": "2026-08-29T08:46:18.106Z",
-      "updated_at": "2026-08-29T08:46:18.106Z"
+      "created_at": "2026-08-29T08:48:33.944Z",
+      "updated_at": "2026-08-29T08:48:33.944Z"
     },
     {
       "id": "indice-hhi",
@@ -3493,8 +3493,8 @@
       ],
       "display_order": 47,
       "is_active": true,
-      "created_at": "2026-08-29T08:46:18.106Z",
-      "updated_at": "2026-08-29T08:46:18.106Z"
+      "created_at": "2026-08-29T08:48:33.944Z",
+      "updated_at": "2026-08-29T08:48:33.944Z"
     },
     {
       "id": "ratios-cr3-cr5",
@@ -3566,8 +3566,8 @@
       ],
       "display_order": 48,
       "is_active": true,
-      "created_at": "2026-08-29T08:46:18.106Z",
-      "updated_at": "2026-08-29T08:46:18.106Z"
+      "created_at": "2026-08-29T08:48:33.944Z",
+      "updated_at": "2026-08-29T08:48:33.944Z"
     },
     {
       "id": "nombre-effectif-banques",
@@ -3634,8 +3634,8 @@
       ],
       "display_order": 49,
       "is_active": true,
-      "created_at": "2026-08-29T08:46:18.106Z",
-      "updated_at": "2026-08-29T08:46:18.106Z"
+      "created_at": "2026-08-29T08:48:33.944Z",
+      "updated_at": "2026-08-29T08:48:33.944Z"
     },
     {
       "id": "cadre-4d-abix",
@@ -3707,8 +3707,8 @@
       ],
       "display_order": 50,
       "is_active": true,
-      "created_at": "2026-08-29T08:46:18.106Z",
-      "updated_at": "2026-08-29T08:46:18.106Z"
+      "created_at": "2026-08-29T08:48:33.944Z",
+      "updated_at": "2026-08-29T08:48:33.944Z"
     },
     {
       "id": "scanning-deterministe",
@@ -3777,8 +3777,8 @@
       ],
       "display_order": 51,
       "is_active": true,
-      "created_at": "2026-08-29T08:46:18.106Z",
-      "updated_at": "2026-08-29T08:46:18.106Z"
+      "created_at": "2026-08-29T08:48:33.944Z",
+      "updated_at": "2026-08-29T08:48:33.944Z"
     },
     {
       "id": "barometre-ebanking",
@@ -3845,8 +3845,8 @@
       ],
       "display_order": 52,
       "is_active": true,
-      "created_at": "2026-08-29T08:46:18.106Z",
-      "updated_at": "2026-08-29T08:46:18.106Z"
+      "created_at": "2026-08-29T08:48:33.944Z",
+      "updated_at": "2026-08-29T08:48:33.944Z"
     },
     {
       "id": "poids-cout-risque-pnb",
@@ -3906,8 +3906,8 @@
       ],
       "display_order": 53,
       "is_active": true,
-      "created_at": "2026-08-29T08:46:18.106Z",
-      "updated_at": "2026-08-29T08:46:18.106Z"
+      "created_at": "2026-08-29T08:48:33.944Z",
+      "updated_at": "2026-08-29T08:48:33.944Z"
     },
     {
       "id": "pnb-par-collaborateur",
@@ -3968,8 +3968,8 @@
       ],
       "display_order": 54,
       "is_active": true,
-      "created_at": "2026-08-29T08:46:18.106Z",
-      "updated_at": "2026-08-29T08:46:18.106Z"
+      "created_at": "2026-08-29T08:48:33.944Z",
+      "updated_at": "2026-08-29T08:48:33.944Z"
     },
     {
       "id": "effectifs-bancaires",
@@ -4024,8 +4024,8 @@
       "related_terms": [],
       "display_order": 55,
       "is_active": true,
-      "created_at": "2026-08-29T08:46:18.106Z",
-      "updated_at": "2026-08-29T08:46:18.106Z"
+      "created_at": "2026-08-29T08:48:33.944Z",
+      "updated_at": "2026-08-29T08:48:33.944Z"
     },
     {
       "id": "nombre-agences",
@@ -4080,8 +4080,8 @@
       "related_terms": [],
       "display_order": 56,
       "is_active": true,
-      "created_at": "2026-08-29T08:46:18.106Z",
-      "updated_at": "2026-08-29T08:46:18.106Z"
+      "created_at": "2026-08-29T08:48:33.944Z",
+      "updated_at": "2026-08-29T08:48:33.944Z"
     },
     {
       "id": "engagements-hors-bilan-donnes",
@@ -4133,8 +4133,8 @@
       "related_terms": [],
       "display_order": 57,
       "is_active": true,
-      "created_at": "2026-08-29T08:46:18.106Z",
-      "updated_at": "2026-08-29T08:46:18.106Z"
+      "created_at": "2026-08-29T08:48:33.944Z",
+      "updated_at": "2026-08-29T08:48:33.944Z"
     },
     {
       "id": "engagements-hors-bilan-recus",
@@ -4186,8 +4186,8 @@
       "related_terms": [],
       "display_order": 58,
       "is_active": true,
-      "created_at": "2026-08-29T08:46:18.106Z",
-      "updated_at": "2026-08-29T08:46:18.106Z"
+      "created_at": "2026-08-29T08:48:33.944Z",
+      "updated_at": "2026-08-29T08:48:33.944Z"
     },
     {
       "id": "part-marge-interet",
@@ -4239,8 +4239,8 @@
       "related_terms": [],
       "display_order": 59,
       "is_active": true,
-      "created_at": "2026-08-29T08:46:18.106Z",
-      "updated_at": "2026-08-29T08:46:18.106Z"
+      "created_at": "2026-08-29T08:48:33.944Z",
+      "updated_at": "2026-08-29T08:48:33.944Z"
     },
     {
       "id": "part-commissions",
@@ -4292,8 +4292,8 @@
       "related_terms": [],
       "display_order": 60,
       "is_active": true,
-      "created_at": "2026-08-29T08:46:18.106Z",
-      "updated_at": "2026-08-29T08:46:18.106Z"
+      "created_at": "2026-08-29T08:48:33.944Z",
+      "updated_at": "2026-08-29T08:48:33.944Z"
     },
     {
       "id": "part-autres-revenus",
@@ -4345,8 +4345,8 @@
       "related_terms": [],
       "display_order": 61,
       "is_active": true,
-      "created_at": "2026-08-29T08:46:18.106Z",
-      "updated_at": "2026-08-29T08:46:18.106Z"
+      "created_at": "2026-08-29T08:48:33.944Z",
+      "updated_at": "2026-08-29T08:48:33.944Z"
     },
     {
       "id": "reference-consolidee-statut",
@@ -4407,8 +4407,8 @@
       ],
       "display_order": 62,
       "is_active": true,
-      "created_at": "2026-08-29T08:46:18.106Z",
-      "updated_at": "2026-08-29T08:46:18.106Z"
+      "created_at": "2026-08-29T08:48:33.944Z",
+      "updated_at": "2026-08-29T08:48:33.944Z"
     },
     {
       "id": "dynamique-croissance",
@@ -4470,8 +4470,8 @@
       ],
       "display_order": 63,
       "is_active": true,
-      "created_at": "2026-08-29T08:46:18.106Z",
-      "updated_at": "2026-08-29T08:46:18.106Z"
+      "created_at": "2026-08-29T08:48:33.944Z",
+      "updated_at": "2026-08-29T08:48:33.944Z"
     },
     {
       "id": "solidite-financiere",
@@ -4532,8 +4532,8 @@
       ],
       "display_order": 64,
       "is_active": true,
-      "created_at": "2026-08-29T08:46:18.106Z",
-      "updated_at": "2026-08-29T08:46:18.106Z"
+      "created_at": "2026-08-29T08:48:33.944Z",
+      "updated_at": "2026-08-29T08:48:33.944Z"
     },
     {
       "id": "non-disponible",
@@ -4593,8 +4593,8 @@
       ],
       "display_order": 65,
       "is_active": true,
-      "created_at": "2026-08-29T08:46:18.106Z",
-      "updated_at": "2026-08-29T08:46:18.106Z"
+      "created_at": "2026-08-29T08:48:33.944Z",
+      "updated_at": "2026-08-29T08:48:33.944Z"
     },
     {
       "id": "non-significatif",
@@ -4653,8 +4653,8 @@
       ],
       "display_order": 66,
       "is_active": true,
-      "created_at": "2026-08-29T08:46:18.106Z",
-      "updated_at": "2026-08-29T08:46:18.106Z"
+      "created_at": "2026-08-29T08:48:33.944Z",
+      "updated_at": "2026-08-29T08:48:33.944Z"
     }
   ]
 }

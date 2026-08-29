@@ -4531,6 +4531,7 @@ function updateLocales() {
         formulaBadge: "Formule",
         higherBetterTrue: "Élevé = Favorable",
         higherBetterFalse: "Faible = Favorable",
+        higherBetterNeutral: "Lecture contextuelle",
         usedInModules: "Utilisé dans ABIX :"
       },
       drawer: {
@@ -4546,7 +4547,12 @@ function updateLocales() {
         closeBtn: "Fermer la fiche",
         copyLink: "Copier le lien direct",
         copiedToast: "Lien copié dans le presse-papier !",
-        exportPdf: "Imprimer / Exporter en PDF"
+        exportPdf: "Imprimer / Exporter en PDF",
+        thresholdTitle: "Classification et seuils",
+        regulatoryThresholdTitle: "Seuil réglementaire",
+        abixBenchmarkTitle: "Benchmark ABIX",
+        vintageTitle: "Millésime",
+        printTitlePrefix: "ABIX - Fiche"
       },
       contextualHelp: {
         tooltipSeeMore: "Voir la définition dans le glossaire →",
@@ -4586,6 +4592,7 @@ function updateLocales() {
         formulaBadge: "Formula",
         higherBetterTrue: "Higher = Better",
         higherBetterFalse: "Lower = Better",
+        higherBetterNeutral: "Contextual reading",
         usedInModules: "Used in ABIX:"
       },
       drawer: {
@@ -4601,7 +4608,12 @@ function updateLocales() {
         closeBtn: "Close sheet",
         copyLink: "Copy direct link",
         copiedToast: "Direct link copied to clipboard!",
-        exportPdf: "Print / Export as PDF"
+        exportPdf: "Print / Export as PDF",
+        thresholdTitle: "Classification and thresholds",
+        regulatoryThresholdTitle: "Regulatory threshold",
+        abixBenchmarkTitle: "ABIX benchmark",
+        vintageTitle: "Vintage",
+        printTitlePrefix: "ABIX - Entry"
       },
       contextualHelp: {
         tooltipSeeMore: "View definition in glossary →",
@@ -4623,7 +4635,7 @@ function updateLocales() {
         categoriesLabel: "تصنيفات تحليلية",
         quickTip: "تلميح: اضغط على المفتاح « / » للبحث الفوري.",
         downloadPdf: "تحميل دليل المعجم (PDF)",
-        downloadPdfFilename: "glossaire-abix-banques-algerie-fr.pdf"
+        downloadPdfFilename: "glossary-abix-algerian-banking-ar.pdf"
       },
       filters: {
         all: "الكل",
@@ -4641,6 +4653,7 @@ function updateLocales() {
         formulaBadge: "الصيغة",
         higherBetterTrue: "الأعلى = أفضل",
         higherBetterFalse: "الأقل = أفضل",
+        higherBetterNeutral: "قراءة سياقية",
         usedInModules: "مستخدم في منصة ABIX:"
       },
       drawer: {
@@ -4656,7 +4669,12 @@ function updateLocales() {
         closeBtn: "إغلاق البطاقة",
         copyLink: "نسخ الرابط المباشر",
         copiedToast: "تم نسخ الرابط المباشر إلى الحافظة!",
-        exportPdf: "طباعة / تصدير كـ PDF"
+        exportPdf: "طباعة / تصدير كـ PDF",
+        thresholdTitle: "التصنيف والحدود",
+        regulatoryThresholdTitle: "الحد الرقابي",
+        abixBenchmarkTitle: "مرجع ABIX",
+        vintageTitle: "الفترة المرجعية",
+        printTitlePrefix: "ABIX - بطاقة"
       },
       contextualHelp: {
         tooltipSeeMore: "عرض التعريف في المعجم ←",

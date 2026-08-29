@@ -2105,7 +2105,7 @@
       "categoriesLabel": "تصنيفات تحليلية",
       "quickTip": "تلميح: اضغط على المفتاح « / » للبحث الفوري.",
       "downloadPdf": "تحميل دليل المعجم (PDF)",
-      "downloadPdfFilename": "glossaire-abix-banques-algerie-fr.pdf"
+      "downloadPdfFilename": "glossary-abix-algerian-banking-ar.pdf"
     },
     "filters": {
       "all": "الكل",
@@ -2123,6 +2123,7 @@
       "formulaBadge": "الصيغة",
       "higherBetterTrue": "الأعلى = أفضل",
       "higherBetterFalse": "الأقل = أفضل",
+      "higherBetterNeutral": "قراءة سياقية",
       "usedInModules": "مستخدم في منصة ABIX:"
     },
     "drawer": {
@@ -2138,7 +2139,12 @@
       "closeBtn": "إغلاق البطاقة",
       "copyLink": "نسخ الرابط المباشر",
       "copiedToast": "تم نسخ الرابط المباشر إلى الحافظة!",
-      "exportPdf": "طباعة / تصدير كـ PDF"
+      "exportPdf": "طباعة / تصدير كـ PDF",
+      "thresholdTitle": "التصنيف والحدود",
+      "regulatoryThresholdTitle": "الحد الرقابي",
+      "abixBenchmarkTitle": "مرجع ABIX",
+      "vintageTitle": "الفترة المرجعية",
+      "printTitlePrefix": "ABIX - بطاقة"
     },
     "contextualHelp": {
       "tooltipSeeMore": "عرض التعريف في المعجم ←",

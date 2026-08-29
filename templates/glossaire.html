@@ -515,28 +515,29 @@
     var GLOSSARY_DATA = {
       lang: "{{__lang}}",
       categories: {
-        financial_indicators: { name: "{{glossary.categories.financial_indicators.name}}" },
-        ratios_profitability: { name: "{{glossary.categories.ratios_profitability.name}}" },
-        risk_solvency: { name: "{{glossary.categories.risk_solvency.name}}" },
-        liquidity_intermediation: { name: "{{glossary.categories.liquidity_intermediation.name}}" },
-        statistics_methods: { name: "{{glossary.categories.statistics_methods.name}}" },
-        sector_analysis: { name: "{{glossary.categories.sector_analysis.name}}" },
-        concentration_market: { name: "{{glossary.categories.concentration_market.name}}" },
-        abix_framework: { name: "{{glossary.categories.abix_framework.name}}" }
+        financial_indicators: { name: {{js glossary.categories.financial_indicators.name}} },
+        ratios_profitability: { name: {{js glossary.categories.ratios_profitability.name}} },
+        risk_solvency: { name: {{js glossary.categories.risk_solvency.name}} },
+        liquidity_intermediation: { name: {{js glossary.categories.liquidity_intermediation.name}} },
+        statistics_methods: { name: {{js glossary.categories.statistics_methods.name}} },
+        sector_analysis: { name: {{js glossary.categories.sector_analysis.name}} },
+        concentration_market: { name: {{js glossary.categories.concentration_market.name}} },
+        abix_framework: { name: {{js glossary.categories.abix_framework.name}} }
       },
       ui: {
-        viewDefinition: "{{glossary.card.viewDefinition}}",
-        formulaBadge: "{{glossary.card.formulaBadge}}",
-        higherBetterTrue: "{{glossary.card.higherBetterTrue}}",
-        higherBetterFalse: "{{glossary.card.higherBetterFalse}}",
-        higherBetterNeutral: "{{glossary.card.higherBetterNeutral}}",
-        usedInModules: "{{glossary.card.usedInModules}}",
-        showingCount: "{{glossary.filters.showingCount}}",
-        noResultsDesc: "{{glossary.filters.noResultsDesc}}",
-        thresholdTitle: "{{glossary.drawer.thresholdTitle}}",
-        regulatoryThresholdTitle: "{{glossary.drawer.regulatoryThresholdTitle}}",
-        abixBenchmarkTitle: "{{glossary.drawer.abixBenchmarkTitle}}",
-        vintageTitle: "{{glossary.drawer.vintageTitle}}"
+        viewDefinition: {{js glossary.card.viewDefinition}},
+        formulaBadge: {{js glossary.card.formulaBadge}},
+        higherBetterTrue: {{js glossary.card.higherBetterTrue}},
+        higherBetterFalse: {{js glossary.card.higherBetterFalse}},
+        higherBetterNeutral: {{js glossary.card.higherBetterNeutral}},
+        usedInModules: {{js glossary.card.usedInModules}},
+        showingCount: {{js glossary.filters.showingCount}},
+        noResultsDesc: {{js glossary.filters.noResultsDesc}},
+        thresholdTitle: {{js glossary.drawer.thresholdTitle}},
+        regulatoryThresholdTitle: {{js glossary.drawer.regulatoryThresholdTitle}},
+        abixBenchmarkTitle: {{js glossary.drawer.abixBenchmarkTitle}},
+        vintageTitle: {{js glossary.drawer.vintageTitle}},
+        printTitlePrefix: {{js glossary.drawer.printTitlePrefix}}
       }
     };
 
@@ -885,7 +886,7 @@
         modalPrintBtn.onclick = function () {
           var originalTitle = document.title;
           var termName = item.term + (item.acronym ? ' (' + item.acronym + ')' : '');
-          var printTitle = 'ABIX - Fiche - ' + termName;
+          var printTitle = GLOSSARY_DATA.ui.printTitlePrefix + ' - ' + termName;
           document.title = printTitle;
           window.print();
 

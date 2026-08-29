@@ -2123,6 +2123,7 @@
       "formulaBadge": "Formule",
       "higherBetterTrue": "Élevé = Favorable",
       "higherBetterFalse": "Faible = Favorable",
+      "higherBetterNeutral": "Lecture contextuelle",
       "usedInModules": "Utilisé dans ABIX :"
     },
     "drawer": {
@@ -2138,7 +2139,12 @@
       "closeBtn": "Fermer la fiche",
       "copyLink": "Copier le lien direct",
       "copiedToast": "Lien copié dans le presse-papier !",
-      "exportPdf": "Imprimer / Exporter en PDF"
+      "exportPdf": "Imprimer / Exporter en PDF",
+      "thresholdTitle": "Classification et seuils",
+      "regulatoryThresholdTitle": "Seuil réglementaire",
+      "abixBenchmarkTitle": "Benchmark ABIX",
+      "vintageTitle": "Millésime",
+      "printTitlePrefix": "ABIX - Fiche"
     },
     "contextualHelp": {
       "tooltipSeeMore": "Voir la définition dans le glossaire →",
