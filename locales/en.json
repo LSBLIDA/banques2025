@@ -2119,6 +2119,7 @@
       "formulaBadge": "Formula",
       "higherBetterTrue": "Higher = Better",
       "higherBetterFalse": "Lower = Better",
+      "higherBetterNeutral": "Contextual reading",
       "usedInModules": "Used in ABIX:"
     },
     "drawer": {
@@ -2134,7 +2135,12 @@
       "closeBtn": "Close sheet",
       "copyLink": "Copy direct link",
       "copiedToast": "Direct link copied to clipboard!",
-      "exportPdf": "Print / Export as PDF"
+      "exportPdf": "Print / Export as PDF",
+      "thresholdTitle": "Classification and thresholds",
+      "regulatoryThresholdTitle": "Regulatory threshold",
+      "abixBenchmarkTitle": "ABIX benchmark",
+      "vintageTitle": "Vintage",
+      "printTitlePrefix": "ABIX - Entry"
     },
     "contextualHelp": {
       "tooltipSeeMore": "View definition in glossary →",

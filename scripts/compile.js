@@ -104,8 +104,17 @@ function getNestedValue(obj, keyPath) {
  */
 function resolveTranslations(html, translations) {
   return html.replace(/\{\{([^}]+)\}\}/g, (match, keyPath) => {
-    const value = getNestedValue(translations, keyPath.trim());
+    const expression = keyPath.trim();
+    const isJavaScriptString = expression.startsWith("js ");
+    const lookupPath = isJavaScriptString ? expression.slice(3).trim() : expression;
+    const value = getNestedValue(translations, lookupPath);
     if (value === null || value === undefined) return "";
+    if (isJavaScriptString) {
+      return JSON.stringify(String(value))
+        .replace(/</g, "\\u003C")
+        .replace(/\u2028/g, "\\u2028")
+        .replace(/\u2029/g, "\\u2029");
+    }
     return String(value);
   });
 }
