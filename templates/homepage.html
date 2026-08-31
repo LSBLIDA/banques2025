@@ -28,14 +28,14 @@
 {{__mainNav}}
 
 <!-- ══════════════════════════════════════════════════════════════════════ HERO -->
-<section id="accueil" class="pt-16 bg-banking-gradient text-white relative overflow-hidden min-h-screen flex items-center">
+<section id="accueil" class="pt-16 bg-banking-gradient text-white relative overflow-hidden">
   <!-- Image de fond subtile -->
   <div class="absolute inset-0 opacity-10">
     <img src="{{__basePath}}/public/image_fond.png" alt="" class="w-full h-full object-cover" aria-hidden="true" />
   </div>
   <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-primary/30"></div>
 
-  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28 w-full">
+  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16 w-full">
     <div class="grid lg:grid-cols-12 gap-12 items-center">
 
       <!-- Texte Hero (Col 7) -->
@@ -61,7 +61,6 @@
 
         <!-- Texte d'introduction en deux paragraphes distincts -->
         <div class="space-y-3 text-sm sm:text-base text-blue-100/90 leading-relaxed max-w-2xl">
-          <p>{{home.hero.subtitle}}</p>
           <p>{{home.hero.subtitleParagraph2}}</p>
         </div>
 
@@ -91,9 +90,9 @@
             <svg class="w-5 h-5 me-2 flex-shrink-0 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
             {{home.hero.ctaPreorder}}
           </a>
-          <a href="{{__basePath}}/{{__lang}}/editions/2025/" data-track="click_edition_2025" class="btn-secondary-hero">
-            {{home.hero.ctaDiscover2025}}
-          </a>
+          <button onclick="openVideoModal()" class="btn-secondary-hero">
+            {{home.hero.ctaNotify}}
+          </button>
         </div>
 
         <!-- CTA Secondaires -->
@@ -101,8 +100,6 @@
           <a href="{{__basePath}}/{{__lang}}/editions/2026/#synthese" data-track="click_executive_summary" class="btn-ghost-hero">{{home.hero.ctaSynthesis}}</a>
           <span class="text-blue-300/40">•</span>
           <a href="{{__basePath}}/{{__lang}}/services/" data-track="click_custom_benchmark" class="btn-ghost-hero">{{home.hero.ctaBenchmark}}</a>
-          <span class="text-blue-300/40">•</span>
-          <a href="{{__basePath}}/{{__lang}}/editions/2026/#inscription" class="btn-ghost-hero">{{home.hero.ctaNotify}}</a>
         </div>
 
         <!-- Mentions en bas du Hero -->
@@ -124,7 +121,7 @@
 
           <!-- Couverture 2026 en Premier Plan (Foreground, plus grande) -->
           <div class="cover-stack-2026">
-            <div class="relative bg-white/10 rounded-xl overflow-hidden shadow-2xl border border-white/20 transition-transform duration-300 hover:scale-[1.02]">
+            <a href="{{__basePath}}/{{__lang}}/editions/2026/" class="block relative bg-white/10 rounded-xl overflow-hidden shadow-2xl border border-white/20 transition-transform duration-300 hover:scale-[1.02]">
               <span class="absolute top-2 left-2 z-10 text-[9px] font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-slate-900/90 text-amber-300 border border-amber-400/40 shadow-sm">{{home.covers.badge2026}}</span>
               <img src="{{__basePath}}/public/couverture-2026.jpg" alt="Couverture Algeria Banking Index Édition 2026"
                 class="w-full h-auto object-cover rounded-xl"
@@ -134,12 +131,12 @@
                 <p class="text-[11px] font-semibold text-amber-300">{{home.covers.cover2026Subtitle}}</p>
                 <p class="text-[9px] text-blue-200/90 font-normal">{{home.covers.cover2026Trends}}</p>
               </div>
-            </div>
+            </a>
           </div>
 
           <!-- Couverture 2025 en Second Plan (Background, légèrement plus petite et décalée) -->
           <div class="cover-stack-2025">
-            <div class="relative bg-white/10 rounded-xl overflow-hidden shadow-2xl border border-white/20">
+            <a href="{{__basePath}}/{{__lang}}/editions/2025/" class="block relative bg-white/10 rounded-xl overflow-hidden shadow-2xl border border-white/20">
               <span class="absolute top-2 left-2 z-10 text-[9px] font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-slate-900/90 text-emerald-300 border border-emerald-400/40 shadow-sm">{{home.covers.badge2025}}</span>
               <img src="{{__basePath}}/public/Couverture.png" alt="Couverture Algeria Banking Index Édition 2025"
                 class="w-full h-auto object-cover rounded-xl"
@@ -148,7 +145,7 @@
                 <p class="text-xs font-bold text-white mb-0.5">{{home.covers.cover2025Title}}</p>
                 <p class="text-[10px] text-emerald-300 font-medium">{{home.covers.cover2025Status}}</p>
               </div>
-            </div>
+            </a>
           </div>
 
         </div>
@@ -207,155 +204,6 @@
   </div>
 </section>
 
-<!-- ════════════════════════════════════════════════ BLOC COMMERCIAL EARLY BIRD -->
-<section id="early-bird" data-track="view_early_bird_offer" class="py-16 bg-slate-900 text-white relative overflow-hidden border-y border-amber-400/20">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-    <div class="bg-gradient-to-br from-slate-800 via-slate-900 to-primary-900 rounded-3xl p-8 lg:p-12 border border-amber-400/30 shadow-2xl space-y-10">
-      <div class="grid lg:grid-cols-12 gap-8 items-center">
-
-        <!-- Info & Réassurance (Col 7) -->
-        <div class="lg:col-span-7 space-y-6">
-          <div class="inline-flex items-center gap-2 bg-amber-400/10 text-amber-300 border border-amber-400/30 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider">
-            <svg class="w-4 h-4 text-amber-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/></svg>
-            {{home.earlyBird.badge}}
-          </div>
-
-          <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold font-playfair text-white">
-            {{home.earlyBird.title}}
-          </h2>
-
-          <p class="text-base text-gray-300 leading-relaxed">
-            {{home.earlyBird.subtitle}}
-          </p>
-
-          <!-- 3 Éléments de réassurance -->
-          <ul class="space-y-3 pt-2">
-            <li class="flex items-start gap-3 text-sm text-gray-200">
-              <svg class="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/></svg>
-              <span>{{home.earlyBird.reassurance.0}}</span>
-            </li>
-            <li class="flex items-start gap-3 text-sm text-gray-200">
-              <svg class="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/></svg>
-              <span>{{home.earlyBird.reassurance.1}}</span>
-            </li>
-            <li class="flex items-start gap-3 text-sm text-gray-200">
-              <svg class="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/></svg>
-              <span>{{home.earlyBird.reassurance.2}}</span>
-            </li>
-          </ul>
-
-          <p class="text-xs text-amber-300/80 italic pt-1 border-t border-white/10">
-            {{home.earlyBird.disclaimer}}
-          </p>
-        </div>
-
-        <!-- Tarification & CTA (Col 5) -->
-        <div class="lg:col-span-5 bg-white/5 rounded-2xl p-6 sm:p-8 border border-white/10 text-center space-y-6">
-          <div class="space-y-1">
-            <span class="text-xs uppercase tracking-widest text-amber-300 font-semibold">{{home.earlyBird.specialOffer}}</span>
-            <div id="earlybird-price-display" class="text-3xl font-extrabold text-white">
-              {{home.earlyBird.priceDefaultLabel}}
-            </div>
-            <p class="text-xs text-gray-400">{{home.earlyBird.validityText}}</p>
-          </div>
-
-          <!-- Compte à rebours sobre (date réelle) -->
-          <div id="countdown-container" class="bg-black/30 rounded-xl p-3 border border-white/10">
-            <p class="text-[11px] text-gray-400 uppercase tracking-wider mb-2">{{home.earlyBird.countdownText}}</p>
-            <div class="grid grid-cols-4 gap-2 text-center" id="earlybird-countdown">
-              <div class="bg-white/10 rounded py-1.5"><span id="cd-days" class="block text-lg font-bold text-amber-300">--</span><span class="text-[9px] text-gray-400">{{home.earlyBird.days}}</span></div>
-              <div class="bg-white/10 rounded py-1.5"><span id="cd-hours" class="block text-lg font-bold text-amber-300">--</span><span class="text-[9px] text-gray-400">{{home.earlyBird.hours}}</span></div>
-              <div class="bg-white/10 rounded py-1.5"><span id="cd-mins" class="block text-lg font-bold text-amber-300">--</span><span class="text-[9px] text-gray-400">{{home.earlyBird.minutes}}</span></div>
-              <div class="bg-white/10 rounded py-1.5"><span id="cd-secs" class="block text-lg font-bold text-amber-300">--</span><span class="text-[9px] text-gray-400">{{home.earlyBird.seconds}}</span></div>
-            </div>
-          </div>
-
-          <div class="pt-2">
-            <a href="{{__basePath}}/{{__lang}}/editions/2026/#tarifs" class="btn-outline w-full text-center block text-sm">
-              {{home.earlyBird.viewDetails}}
-            </a>
-          </div>
-        </div>
-
-      </div>
-
-      <!-- Aperçu compact des 3 cartes d'offres 2026 sur la page d'accueil -->
-      <div class="pt-8 border-t border-white/10">
-        <div class="text-center mb-6">
-          <h3 class="text-xl font-bold font-playfair text-white">{{home.earlyBird.syntheticViewTitle}}</h3>
-        </div>
-        <div class="grid md:grid-cols-3 gap-6">
-
-          <!-- Pack Essentiel -->
-          <div class="bg-white/5 rounded-2xl p-6 border border-white/10 flex flex-col justify-between space-y-4">
-            <div>
-              <h4 class="text-lg font-bold text-white font-playfair">{{edition2026.pricing.essential.title}}</h4>
-              <p class="text-xs text-gray-400 mt-1">{{edition2026.pricing.essential.userLicensesText}}</p>
-              <div class="mt-4 space-y-1">
-                <div class="flex items-baseline gap-2">
-                  <span class="regular-price-struck text-xs text-gray-400 line-through font-semibold">{{edition2026.pricing.essential.regularPrice}}</span>
-                  <span class="badge-discount text-[10px] font-bold text-amber-300 bg-amber-500/20 px-1.5 py-0.5 rounded border border-amber-400/40">{{edition2026.pricing.earlyBirdBadge}}</span>
-                </div>
-                <div class="early-bird-price text-2xl font-extrabold text-white">{{edition2026.pricing.essential.earlyBirdPrice}}</div>
-                <p class="saving-mention text-xs font-bold text-emerald-400">{{edition2026.pricing.essential.saving}}</p>
-              </div>
-            </div>
-            <button onclick="openPreorder('essential')" data-pack="essential" class="cta-pricing-btn btn-outline w-full text-xs py-2.5 rounded-lg font-bold text-white border-white/20 hover:bg-white/10 transition-all">
-              <span class="cta-text">{{edition2026.pricing.essential.cta}}</span>
-            </button>
-          </div>
-
-          <!-- Pack Pro -->
-          <div class="bg-white/10 rounded-2xl p-6 border-2 border-amber-400 flex flex-col justify-between space-y-4 relative">
-            <span class="popular-badge absolute -top-3 left-1/2 -translate-x-1/2 bg-amber-400 text-slate-950 text-[10px] font-black px-3 py-0.5 rounded-full uppercase tracking-wider">{{edition2026.pricing.pro.badge}}</span>
-            <div>
-              <h4 class="text-lg font-bold text-white font-playfair mt-1">{{edition2026.pricing.pro.title}}</h4>
-              <p class="text-xs text-amber-300 mt-1">{{edition2026.pricing.pro.userLicensesText}}</p>
-              <div class="mt-4 space-y-1">
-                <div class="flex items-baseline gap-2">
-                  <span class="regular-price-struck text-xs text-gray-400 line-through font-semibold">{{edition2026.pricing.pro.regularPrice}}</span>
-                  <span class="badge-discount text-[10px] font-bold text-amber-300 bg-amber-500/20 px-1.5 py-0.5 rounded border border-amber-400/40">{{edition2026.pricing.earlyBirdBadge}}</span>
-                </div>
-                <div class="early-bird-price text-2xl font-extrabold text-amber-300">{{edition2026.pricing.pro.earlyBirdPrice}}</div>
-                <p class="saving-mention text-xs font-bold text-emerald-400">{{edition2026.pricing.pro.saving}}</p>
-              </div>
-            </div>
-            <button onclick="openPreorder('pro')" data-pack="pro" class="cta-pricing-btn btn-cta w-full text-xs py-2.5 rounded-lg font-bold transition-all">
-              <span class="cta-text">{{edition2026.pricing.pro.cta}}</span>
-            </button>
-          </div>
-
-          <!-- Pack Corporate Executive -->
-          <div class="bg-white/5 rounded-2xl p-6 border border-white/10 flex flex-col justify-between space-y-4">
-            <div>
-              <h4 class="text-lg font-bold text-white font-playfair">{{edition2026.pricing.corporate.title}}</h4>
-              <p class="text-xs text-gray-400 mt-1">{{edition2026.pricing.corporate.userLicensesText}}</p>
-              <div class="mt-4 space-y-1">
-                <div class="flex items-baseline gap-2">
-                  <span class="regular-price-struck text-xs text-gray-400 line-through font-semibold">{{edition2026.pricing.corporate.regularPrice}}</span>
-                  <span class="badge-discount text-[10px] font-bold text-amber-300 bg-amber-500/20 px-1.5 py-0.5 rounded border border-amber-400/40">{{edition2026.pricing.earlyBirdBadge}}</span>
-                </div>
-                <div class="early-bird-price text-2xl font-extrabold text-white">{{edition2026.pricing.corporate.earlyBirdPrice}}</div>
-                <p class="saving-mention text-xs font-bold text-emerald-400">{{edition2026.pricing.corporate.saving}}</p>
-              </div>
-            </div>
-            <button onclick="openPreorder('corporate')" data-pack="corporate" class="cta-pricing-btn btn-outline w-full text-xs py-2.5 rounded-lg font-bold text-white border-white/20 hover:bg-white/10 transition-all">
-              <span class="cta-text">{{edition2026.pricing.corporate.cta}}</span>
-            </button>
-          </div>
-        </div>
-
-        <div class="mt-6 text-center">
-          <a href="{{__basePath}}/{{__lang}}/editions/2026/#tarifs" class="inline-flex items-center gap-2 text-sm text-amber-300 hover:text-amber-200 font-semibold underline underline-offset-4 transition-colors">
-            <span>{{home.earlyBird.viewFullComparison}}</span>
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-          </a>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
 
 <!-- ══════════════════════════════════════════════════════ SECTION CONSEIL -->
 <section id="conseil" class="py-20 bg-primary text-white">
@@ -689,7 +537,6 @@
   <div class="bg-slate-900 text-white rounded-3xl max-w-2xl w-full max-h-[95vh] flex flex-col border border-amber-400/30 shadow-2xl relative overflow-hidden">
     <div class="p-4 sm:p-5 border-b border-gray-800 flex items-center justify-between bg-slate-900/90 flex-shrink-0">
       <div>
-        <span class="inline-block bg-amber-400/20 text-amber-300 text-[11px] font-bold px-3 py-0.5 rounded-full border border-amber-400/30 mb-1">{{home.earlyBird.badge}}</span>
         <h3 id="preorderModalTitle" class="text-lg font-bold text-white font-playfair">{{edition2026.preorderForm.title}}</h3>
       </div>
       <button onclick="closePreorder()" class="text-gray-400 hover:text-white transition-colors p-2 rounded-xl hover:bg-slate-800" aria-label="{{modal.closeLabel}}">

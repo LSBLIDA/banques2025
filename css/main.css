@@ -3266,10 +3266,6 @@ video {
   color: rgb(191 219 254 / var(--tw-text-opacity, 1));
 }
 
-.text-blue-200\/70{
-  color: rgb(191 219 254 / 0.7);
-}
-
 .text-blue-200\/80{
   color: rgb(191 219 254 / 0.8);
 }

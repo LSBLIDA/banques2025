@@ -120,12 +120,12 @@
       "pretitle": "Études et analyses stratégiques du secteur bancaire",
       "title": "Algeria Banking Index",
       "signature": "Études, benchmarks et analyses stratégiques du secteur bancaire algérien",
-      "badge": "Souscriptions anticipées ouvertes — Tarif préférentiel jusqu’au 31 août 2026",
+      "badge": "Souscriptions ouvertes — Édition 2026",
       "subtitle": "Algeria Banking Index est la marque éditoriale créée par Tadjeddine & Partners pour publier des études indépendantes, des benchmarks et des analyses stratégiques consacrés au secteur bancaire algérien.",
       "subtitleParagraph2": "L’édition 2026 analyse les performances 2024–2025 de 21 banques opérant en Algérie, avec une mise en perspective des tendances 2023–2025. Elle croise données financières, indicateurs opérationnels, benchmarks, dynamiques concurrentielles et nouveaux éclairages sur les usages bancaires digitaux.",
       "ctaPreorder": "Souscrire à l’édition 2026",
       "ctaPrimary": "Souscrire à l’édition 2026",
-      "ctaNotify": "Recevoir les actualités de l’édition 2026",
+      "ctaNotify": "Découvrir ABIX Data Explorer",
       "ctaSynthesis": "Recevoir la synthèse exécutive",
       "ctaPresentation": "Demander une présentation",
       "ctaBenchmark": "Obtenir un benchmark personnalisé",
@@ -148,20 +148,20 @@
       "cover2025Status": "Édition précédente disponible"
     },
     "earlyBird": {
-      "badge": "Offre de souscription anticipée — Jusqu'au 31 août 2026",
+      "badge": "Souscription — Édition 2026",
       "title": "Souscrivez à l’édition 2026 à tarif préférentiel",
-      "subtitle": "Bénéficiez d’une remise de 10 % pour toute souscription enregistrée avant le 31 août 2026. L’étude est actuellement en cours de finalisation et sera remise aux souscripteurs dès sa publication.",
+      "subtitle": "L’étude est actuellement en cours de finalisation et sera remise aux souscripteurs dès sa publication.",
       "reassurance": [
-        "Tarif préférentiel réservé aux souscriptions anticipées avant le 31 août 2026",
+        "Souscription pour l'édition 2026",
         "Livraison de l’étude complète dès sa publication",
         "Accès aux livrables correspondant à l’offre souscrite"
       ],
       "ctaPrimary": "Souscrire à l’édition 2026",
       "ctaSecondary": "Voir le contenu prévisionnel de l’édition 2026",
-      "disclaimer": "Offre réservée aux souscriptions anticipées enregistrées avant le 31 août 2026.",
+      "disclaimer": "",
       "priceDefaultLabel": "Tarif de souscription anticipée",
       "specialOffer": "Offre spéciale précommande",
-      "validityText": "Valable jusqu'au 31 août 2026 à 23h59",
+      "validityText": "",
       "countdownText": "Fin du tarif préférentiel dans",
       "days": "Jours",
       "hours": "Heures",
@@ -240,7 +240,7 @@
       "description": "Étude comparative 2024–2025 avec analyse des tendances 2023–2025 du secteur bancaire algérien. 21 banques analysées. Souscription anticipée."
     },
     "hero": {
-      "badge": "Souscriptions anticipées ouvertes — Tarif préférentiel jusqu’au 31 août 2026",
+      "badge": "Souscriptions ouvertes — Édition 2026",
       "title": "Étude du secteur bancaire algérien — Édition 2026",
       "subtitle": "Étude comparative 2024–2025 avec analyse des tendances 2023–2025",
       "status": "Publication prévue en septembre 2026 — analyses et enrichissements éditoriaux en cours de finalisation.",
@@ -248,13 +248,13 @@
       "disclaimerNoBanks": "21 banques couvertes sur le marché bancaire algérien.",
       "disclaimerNoDate": "Les données financières de référence sont consolidées. Les derniers travaux portent notamment sur les analyses comparatives, les données opérationnelles, le Baromètre des services bancaires et les contributions éditoriales.",
       "ctaPreorder": "Souscrire à l’édition 2026",
-      "ctaNotify": "Être informé de la parution"
+      "ctaNotify": "Découvrir ABIX Data Explorer"
     },
     "pricing": {
-      "sectionTitle": "Offre de souscription anticipée — Édition 2026",
-      "sectionSubtitle": "Souscrivez avant le 31 août 2026 et bénéficiez d’une remise de 10 % sur le tarif public de l’édition 2026. L’étude sera livrée dès sa publication.",
-      "earlyBirdBadge": "-10 % jusqu’au 31 août",
-      "validityMention": "Tarif de souscription anticipée valable jusqu’au 31 août 2026",
+      "sectionTitle": "Souscription — Édition 2026",
+      "sectionSubtitle": "L’étude sera livrée dès sa publication.",
+      "earlyBirdBadge": "",
+      "validityMention": "",
       "popularBadge": "Plus populaire",
       "regularPriceStruckLabel": "Tarif public",
       "earlyBirdPriceLabel": "Tarif de souscription anticipée",
@@ -334,7 +334,7 @@
     },
     "preorderForm": {
       "title": "Formulaire de souscription anticipée",
-      "subtitle": "Bénéficiez d’une remise de 10 % pour toute souscription enregistrée avant le 31 août 2026 à 23 h 59.",
+      "subtitle": "Souscrivez à l'édition 2026.",
       "labelCompany": "Société / Organisme",
       "labelFullName": "Nom & Prénom",
       "labelFirstName": "Prénom",
@@ -426,14 +426,6 @@
       "subtitle": "Tout ce que vous devez savoir sur l’édition 2026 d’Algeria Banking Index, son contenu et les modalités de souscription anticipée.",
       "items": [
         {
-          "q": "Quand l’étude sera-t-elle publiée ?",
-          "a": "La publication de l’édition 2026 est prévue en septembre 2026, après finalisation des derniers travaux d’analyse et validation éditoriale. Les souscripteurs seront informés dès sa mise à disposition et recevront les livrables correspondant à l’offre souscrite."
-        },
-        {
-          "q": "Quel sera le périmètre de l’édition 2026 ?",
-          "a": "L’édition 2026 couvrira 21 banques opérant en Algérie. Elle portera principalement sur la comparaison des performances 2024–2025, complétée par une analyse des tendances observées sur la période 2023–2025."
-        },
-        {
           "q": "Que contiendra l’étude 2026 ?",
           "a": "L’étude proposera une analyse consolidée du secteur bancaire algérien, des comparaisons entre banques publiques et privées, des analyses individuelles des 21 établissements, ainsi que des classements et benchmarks par indicateur.\n\nCette édition sera également enrichie de nouveaux éclairages sur le hors-bilan, les effectifs, le réseau bancaire et la performance opérationnelle.\n\nElle intégrera par ailleurs un volet consacré aux services bancaires digitaux, notamment à travers un baromètre de satisfaction des utilisateurs des services e-banking."
         },
@@ -443,7 +435,7 @@
         },
         {
           "q": "Le tarif préférentiel est-il garanti ?",
-          "a": "Oui. Toute souscription enregistrée au plus tard le 31 août 2026 à 23 h 59, heure d’Algérie, bénéficie du tarif de souscription anticipée.\n\nCe tarif reste garanti jusqu’à la livraison de l’étude."
+          "a": "Oui. La souscription reste garantie jusqu’à la livraison de l’étude."
         },
         {
           "q": "Quels sont les différents niveaux d’offre ?",
@@ -475,7 +467,7 @@
         },
         {
           "q": "Que se passe-t-il si la date de publication évolue ?",
-          "a": "Les souscripteurs seront informés de toute évolution du calendrier de publication.\n\nLa souscription restera valide et le tarif préférentiel obtenu avant le 31 août 2026 demeurera garanti."
+          "a": "Les souscripteurs seront informés de toute évolution du calendrier de publication.\n\nLa souscription restera valide."
         },
         {
           "q": "Puis-je demander une présentation ou un benchmark personnalisé ?",
@@ -542,7 +534,7 @@
       "title": "Édition 2025 — Algeria Banking Index",
       "description": "L'édition 2025 d'Algeria Banking Index analyse les performances financières de 20 banques algériennes sur les exercices 2023 et 2024. Disponible en 3 packs."
     },
-    "alert2026": "L’édition 2026 est ouverte à la souscription anticipée avec un tarif préférentiel valable jusqu’au 31 août 2026.",
+    "alert2026": "L’édition 2026 est ouverte à la souscription.",
     "alert2026Cta": "Souscrire à l’édition 2026",
     "hero": {
       "badge": "Disponible",
@@ -815,7 +807,7 @@
       "p3": "Lorsque certaines données ne sont pas disponibles ou ne peuvent pas être comparées de manière suffisamment homogène, elles peuvent être exclues d’un indicateur ou faire l’objet d’une mention spécifique."
     },
     "ctaTitle": "Découvrir les résultats et analyses des études",
-    "ctaSubtitle": "L’édition 2026 est ouverte à la souscription anticipée avec un tarif préférentiel valable jusqu’au 31 août 2026."
+    "ctaSubtitle": "L’édition 2026 est ouverte à la souscription."
   },
   "services": {
     "meta": {
@@ -2071,7 +2063,7 @@
     "labelDuration": "Durée d'accès",
     "valueDuration": "12 mois complets",
     "summaryTitle": "Contenu inclus dans votre pack",
-    "validityNotice": "Offre promotionnelle Early Bird valable jusqu’au 31 août 2026.",
+    "validityNotice": "",
     "plans": {
       "essentiel": {
         "name": "Pack Essentiel",
@@ -4532,5 +4524,8 @@
   "glossary.terms.non-significatif.short_definition": "Valeur non exploitable comme donnée numérique fiable.",
   "glossary.terms.non-significatif.detailed_definition": "ABIX conserve explicitement la mention NS ; elle n'est jamais transformée automatiquement en zéro ni intégrée comme une observation numérique.",
   "glossary.terms.non-significatif.interpretation": "La valeur est exclue des calculs qui exigent une observation numérique valide.",
-  "glossary.terms.non-significatif.example": "NS"
+  "glossary.terms.non-significatif.example": "NS",
+  "socials": {
+    "linkedin": "https://www.linkedin.com/company/tadjeddine-partners/"
+  }
 }

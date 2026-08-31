@@ -142,7 +142,7 @@ const SITE_CONFIG = {
     phones: ["+213 (0) 560 403 405", "+213 (0) 560 349 059"]
   },
   socials: {
-    linkedin: "https://www.linkedin.com/company/tadjeddine-partners"
+    linkedin: "https://www.linkedin.com/company/tadjeddine-partners/"
   },
   externalLinks: {
     publisherWebsite: "https://tadjeddine-partners.com",

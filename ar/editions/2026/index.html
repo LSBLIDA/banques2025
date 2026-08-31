@@ -252,9 +252,9 @@
             <svg class="w-5 h-5 me-2 flex-shrink-0 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
             الاشتراك في إصدار 2026
           </a>
-          <a href="#notification" class="btn-secondary-hero">
-            الإخطار عند الصدور
-          </a>
+          <button onclick="openVideoModal()" class="btn-secondary-hero">
+            اكتشف ABIX Data Explorer
+          </button>
         </div>
       </div>
 
@@ -401,12 +401,8 @@
 <section id="tarifs" class="scroll-mt-16 pt-24 pb-20 bg-slate-900 text-white relative border-y border-amber-400/20">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
-      <div id="pricing-earlybird-badge" class="badge-discount inline-flex items-center gap-2 bg-amber-400/20 text-amber-300 border border-amber-400/30 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider">
-        <span class="w-2 h-2 bg-amber-400 rounded-full animate-pulse"></span>
-        <span>-10% حتى 31 أغسطس</span>
-      </div>
-      <h2 class="text-3xl sm:text-4xl font-extrabold font-playfair text-white">عرض الاشتراك المسبق — إصدار 2026</h2>
-      <p class="text-gray-300 text-base leading-relaxed">اشترك قبل 31 أغسطس 2026 واستفد من خصم 10% على السعر العام لإصدار 2026. تُسلَّم الدراسة فور نشرها.</p>
+      <h2 class="text-3xl sm:text-4xl font-extrabold font-playfair text-white">الاشتراك — إصدار 2026</h2>
+      <p class="text-gray-300 text-base leading-relaxed">تُسلَّم الدراسة فور نشرها.</p>
     </div>
 
     <!-- Grille des 3 cartes d'offres -->
@@ -424,14 +420,12 @@
           <!-- Affichage du Prix -->
           <div class="pricing-block space-y-1 py-4 border-y border-gray-700/60">
             <div class="flex items-baseline gap-2">
-              <span class="regular-price-struck text-sm text-gray-400 line-through font-semibold">84,000 دج بدون ضريبة</span>
-              <span class="badge-discount inline-block text-[10px] font-bold text-amber-300 bg-amber-500/20 px-2 py-0.5 rounded border border-amber-400/40">-10% حتى 31 أغسطس</span>
-            </div>
+              <span class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">84,000 دج بدون ضريبة</span>
+              </div>
             <div class="early-bird-price text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
-              75,600 دج بدون ضريبة
+              
             </div>
-            <p class="saving-mention text-xs font-bold text-emerald-400">وفّر 8,400 دج بدون ضريبة</p>
-            <p class="validity-mention text-[11px] text-gray-400 italic pt-1">سعر الاشتراك المسبق ساري حتى 31 أغسطس 2026</p>
+            <p class="validity-mention text-[11px] text-gray-400 italic pt-1"></p>
           </div>
 
           <!-- Caractéristiques du Pack Essentiel -->
@@ -516,14 +510,12 @@
           <!-- Affichage du Prix -->
           <div class="pricing-block space-y-1 py-4 border-y border-amber-400/30">
             <div class="flex items-baseline gap-2">
-              <span class="regular-price-struck text-sm text-gray-400 line-through font-semibold">120,000 دج بدون ضريبة</span>
-              <span class="badge-discount inline-block text-[10px] font-bold text-amber-300 bg-amber-500/20 px-2 py-0.5 rounded border border-amber-400/40">-10% حتى 31 أغسطس</span>
-            </div>
+              <span class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">120,000 دج بدون ضريبة</span>
+              </div>
             <div class="early-bird-price text-3xl sm:text-4xl font-extrabold text-amber-300 tracking-tight">
-              108,000 دج بدون ضريبة
+              
             </div>
-            <p class="saving-mention text-xs font-bold text-emerald-400">وفّر 12,000 دج بدون ضريبة</p>
-            <p class="validity-mention text-[11px] text-gray-400 italic pt-1">سعر الاشتراك المسبق ساري حتى 31 أغسطس 2026</p>
+            <p class="validity-mention text-[11px] text-gray-400 italic pt-1"></p>
           </div>
 
           <!-- Caractéristiques du Pack Pro -->
@@ -595,14 +587,12 @@
           <!-- Affichage du Prix -->
           <div class="pricing-block space-y-1 py-4 border-y border-gray-700/60">
             <div class="flex items-baseline gap-2">
-              <span class="regular-price-struck text-sm text-gray-400 line-through font-semibold">180,000 دج بدون ضريبة</span>
-              <span class="badge-discount inline-block text-[10px] font-bold text-amber-300 bg-amber-500/20 px-2 py-0.5 rounded border border-amber-400/40">-10% حتى 31 أغسطس</span>
-            </div>
+              <span class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">180,000 دج بدون ضريبة</span>
+              </div>
             <div class="early-bird-price text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
-              162,000 دج بدون ضريبة
+              
             </div>
-            <p class="saving-mention text-xs font-bold text-emerald-400">وفّر 18,000 دج بدون ضريبة</p>
-            <p class="validity-mention text-[11px] text-gray-400 italic pt-1">سعر الاشتراك المسبق ساري حتى 31 أغسطس 2026</p>
+            <p class="validity-mention text-[11px] text-gray-400 italic pt-1"></p>
           </div>
 
           <!-- Caractéristiques du Pack Corporate -->
@@ -693,34 +683,10 @@
       <!-- Q1 -->
       <div class="bg-white rounded-xl border border-gray-200 overflow-hidden shadow-sm">
         <button onclick="toggleFAQ('pfaq1')" class="w-full text-start p-5 flex justify-between items-center focus:outline-none hover:bg-gray-50/80 transition-colors">
-          <span class="font-semibold text-gray-900 text-sm sm:text-base pe-4">متى سيُنشر إصدار 2026؟</span>
+          <span class="font-semibold text-gray-900 text-sm sm:text-base pe-4">ما الذي ستتضمنه دراسة 2026؟</span>
           <svg id="pfaq1-icon" class="w-5 h-5 text-gray-400 flex-shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
         </button>
         <div id="pfaq1-content" class="hidden px-5 pb-5 text-gray-600 text-xs sm:text-sm leading-relaxed border-t border-gray-100 pt-3">
-          من المتوقع صدور إصدار 2026 من Algeria Banking Index في سبتمبر 2026.
-
-سيتم إخطار المشتركين فور توفر الدراسة.
-        </div>
-      </div>
-
-      <!-- Q2 -->
-      <div class="bg-white rounded-xl border border-gray-200 overflow-hidden shadow-sm">
-        <button onclick="toggleFAQ('pfaq2')" class="w-full text-start p-5 flex justify-between items-center focus:outline-none hover:bg-gray-50/80 transition-colors">
-          <span class="font-semibold text-gray-900 text-sm sm:text-base pe-4">ما نطاق إصدار 2026؟</span>
-          <svg id="pfaq2-icon" class="w-5 h-5 text-gray-400 flex-shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-        </button>
-        <div id="pfaq2-content" class="hidden px-5 pb-5 text-gray-600 text-xs sm:text-sm leading-relaxed border-t border-gray-100 pt-3">
-          سيغطي إصدار 2026 نحو 21 بنكاً عاملاً في الجزائر. وسيركز أساساً على مقارنة أداء 2024-2025، مع تحليل للاتجاهات المرصودة خلال الفترة 2023-2025.
-        </div>
-      </div>
-
-      <!-- Q3 -->
-      <div class="bg-white rounded-xl border border-gray-200 overflow-hidden shadow-sm">
-        <button onclick="toggleFAQ('pfaq3')" class="w-full text-start p-5 flex justify-between items-center focus:outline-none hover:bg-gray-50/80 transition-colors">
-          <span class="font-semibold text-gray-900 text-sm sm:text-base pe-4">ما الذي ستتضمنه دراسة 2026؟</span>
-          <svg id="pfaq3-icon" class="w-5 h-5 text-gray-400 flex-shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-        </button>
-        <div id="pfaq3-content" class="hidden px-5 pb-5 text-gray-600 text-xs sm:text-sm leading-relaxed border-t border-gray-100 pt-3">
           ستقدم الدراسة تحليلاً موحّداً للقطاع المصرفي الجزائري، ومقارنات بين البنوك العامة والخاصة، وتحليلات فردية للـ 21 مؤسسة، وتصنيفات ومقارنات مرجعية بالمؤشر.
 
 سيُثرى هذا الإصدار أيضاً بإضاءات جديدة حول البنود خارج الميزانية والعمالة والشبكة المصرفية والأداء التشغيلي.
@@ -729,39 +695,39 @@
         </div>
       </div>
 
-      <!-- Q4 -->
+      <!-- Q2 -->
       <div class="bg-white rounded-xl border border-gray-200 overflow-hidden shadow-sm">
-        <button onclick="toggleFAQ('pfaq4')" class="w-full text-start p-5 flex justify-between items-center focus:outline-none hover:bg-gray-50/80 transition-colors">
+        <button onclick="toggleFAQ('pfaq2')" class="w-full text-start p-5 flex justify-between items-center focus:outline-none hover:bg-gray-50/80 transition-colors">
           <span class="font-semibold text-gray-900 text-sm sm:text-base pe-4">ما الضمانات التي يوفرها الاشتراك المسبق؟</span>
-          <svg id="pfaq4-icon" class="w-5 h-5 text-gray-400 flex-shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          <svg id="pfaq2-icon" class="w-5 h-5 text-gray-400 flex-shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
         </button>
-        <div id="pfaq4-content" class="hidden px-5 pb-5 text-gray-600 text-xs sm:text-sm leading-relaxed border-t border-gray-100 pt-3">
+        <div id="pfaq2-content" class="hidden px-5 pb-5 text-gray-600 text-xs sm:text-sm leading-relaxed border-t border-gray-100 pt-3">
           يتيح لك الاشتراك المسبق حجز إصدار 2026 قبل نشره والاستفادة من سعر تفضيلي بخصم 10%.
 
 عند النشر، تُوضع المستندات المقابلة للباقة المشترَكة تحت تصرف المشترك.
         </div>
       </div>
 
-      <!-- Q5 -->
+      <!-- Q3 -->
       <div class="bg-white rounded-xl border border-gray-200 overflow-hidden shadow-sm">
-        <button onclick="toggleFAQ('pfaq5')" class="w-full text-start p-5 flex justify-between items-center focus:outline-none hover:bg-gray-50/80 transition-colors">
+        <button onclick="toggleFAQ('pfaq3')" class="w-full text-start p-5 flex justify-between items-center focus:outline-none hover:bg-gray-50/80 transition-colors">
           <span class="font-semibold text-gray-900 text-sm sm:text-base pe-4">هل السعر التفضيلي مضمون؟</span>
-          <svg id="pfaq5-icon" class="w-5 h-5 text-gray-400 flex-shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          <svg id="pfaq3-icon" class="w-5 h-5 text-gray-400 flex-shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
         </button>
-        <div id="pfaq5-content" class="hidden px-5 pb-5 text-gray-600 text-xs sm:text-sm leading-relaxed border-t border-gray-100 pt-3">
+        <div id="pfaq3-content" class="hidden px-5 pb-5 text-gray-600 text-xs sm:text-sm leading-relaxed border-t border-gray-100 pt-3">
           نعم. كل اشتراك مسجَّل في موعد أقصاه 31 أغسطس 2026 الساعة 23:59 بتوقيت الجزائر يستفيد من سعر الاشتراك المسبق.
 
 يظل هذا السعر مضموناً حتى تسليم الدراسة.
         </div>
       </div>
 
-      <!-- Q6 -->
+      <!-- Q4 -->
       <div class="bg-white rounded-xl border border-gray-200 overflow-hidden shadow-sm">
-        <button onclick="toggleFAQ('pfaq6')" class="w-full text-start p-5 flex justify-between items-center focus:outline-none hover:bg-gray-50/80 transition-colors">
+        <button onclick="toggleFAQ('pfaq4')" class="w-full text-start p-5 flex justify-between items-center focus:outline-none hover:bg-gray-50/80 transition-colors">
           <span class="font-semibold text-gray-900 text-sm sm:text-base pe-4">ما مستويات العروض المتاحة؟</span>
-          <svg id="pfaq6-icon" class="w-5 h-5 text-gray-400 flex-shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          <svg id="pfaq4-icon" class="w-5 h-5 text-gray-400 flex-shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
         </button>
-        <div id="pfaq6-content" class="hidden px-5 pb-5 text-gray-600 text-xs sm:text-sm leading-relaxed border-t border-gray-100 pt-3">
+        <div id="pfaq4-content" class="hidden px-5 pb-5 text-gray-600 text-xs sm:text-sm leading-relaxed border-t border-gray-100 pt-3">
           تتوفر ثلاثة عروض:
 
 الباقة الأساسية:
@@ -790,24 +756,24 @@
         </div>
       </div>
 
-      <!-- Q7 -->
+      <!-- Q5 -->
       <div class="bg-white rounded-xl border border-gray-200 overflow-hidden shadow-sm">
-        <button onclick="toggleFAQ('pfaq7')" class="w-full text-start p-5 flex justify-between items-center focus:outline-none hover:bg-gray-50/80 transition-colors">
+        <button onclick="toggleFAQ('pfaq5')" class="w-full text-start p-5 flex justify-between items-center focus:outline-none hover:bg-gray-50/80 transition-colors">
           <span class="font-semibold text-gray-900 text-sm sm:text-base pe-4">هل يمكنني الحصول على فاتورة مبدئية؟</span>
-          <svg id="pfaq7-icon" class="w-5 h-5 text-gray-400 flex-shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          <svg id="pfaq5-icon" class="w-5 h-5 text-gray-400 flex-shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
         </button>
-        <div id="pfaq7-content" class="hidden px-5 pb-5 text-gray-600 text-xs sm:text-sm leading-relaxed border-t border-gray-100 pt-3">
+        <div id="pfaq5-content" class="hidden px-5 pb-5 text-gray-600 text-xs sm:text-sm leading-relaxed border-t border-gray-100 pt-3">
           نعم. بناءً على الطلب، يمكن لتاجدين وشركاؤه إصدار فاتورة مبدئية للباقة المختارة لتسهيل إجراءات الطلب الداخلية للمؤسسة.
         </div>
       </div>
 
-      <!-- Q8 -->
+      <!-- Q6 -->
       <div class="bg-white rounded-xl border border-gray-200 overflow-hidden shadow-sm">
-        <button onclick="toggleFAQ('pfaq8')" class="w-full text-start p-5 flex justify-between items-center focus:outline-none hover:bg-gray-50/80 transition-colors">
+        <button onclick="toggleFAQ('pfaq6')" class="w-full text-start p-5 flex justify-between items-center focus:outline-none hover:bg-gray-50/80 transition-colors">
           <span class="font-semibold text-gray-900 text-sm sm:text-base pe-4">هل يمكنني الاشتراك لعدة مستخدمين؟</span>
-          <svg id="pfaq8-icon" class="w-5 h-5 text-gray-400 flex-shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          <svg id="pfaq6-icon" class="w-5 h-5 text-gray-400 flex-shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
         </button>
-        <div id="pfaq8-content" class="hidden px-5 pb-5 text-gray-600 text-xs sm:text-sm leading-relaxed border-t border-gray-100 pt-3">
+        <div id="pfaq6-content" class="hidden px-5 pb-5 text-gray-600 text-xs sm:text-sm leading-relaxed border-t border-gray-100 pt-3">
           نعم.
 
 الباقة الأساسية مخصصة لمستخدم واحد.
@@ -818,13 +784,13 @@
         </div>
       </div>
 
-      <!-- Q9 -->
+      <!-- Q7 -->
       <div class="bg-white rounded-xl border border-gray-200 overflow-hidden shadow-sm">
-        <button onclick="toggleFAQ('pfaq9')" class="w-full text-start p-5 flex justify-between items-center focus:outline-none hover:bg-gray-50/80 transition-colors">
+        <button onclick="toggleFAQ('pfaq7')" class="w-full text-start p-5 flex justify-between items-center focus:outline-none hover:bg-gray-50/80 transition-colors">
           <span class="font-semibold text-gray-900 text-sm sm:text-base pe-4">هل بيانات 2024 مطابقة لتلك الواردة في الإصدار السابق؟</span>
-          <svg id="pfaq9-icon" class="w-5 h-5 text-gray-400 flex-shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          <svg id="pfaq7-icon" class="w-5 h-5 text-gray-400 flex-shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
         </button>
-        <div id="pfaq9-content" class="hidden px-5 pb-5 text-gray-600 text-xs sm:text-sm leading-relaxed border-t border-gray-100 pt-3">
+        <div id="pfaq7-content" class="hidden px-5 pb-5 text-gray-600 text-xs sm:text-sm leading-relaxed border-t border-gray-100 pt-3">
           ليس بالضرورة.
 
 أعادت بعض البنوك تصنيف أو إعادة معالجة بعض البنود المالية في منشوراتها اللاحقة.
@@ -835,13 +801,13 @@
         </div>
       </div>
 
-      <!-- Q10 -->
+      <!-- Q8 -->
       <div class="bg-white rounded-xl border border-gray-200 overflow-hidden shadow-sm">
-        <button onclick="toggleFAQ('pfaq10')" class="w-full text-start p-5 flex justify-between items-center focus:outline-none hover:bg-gray-50/80 transition-colors">
+        <button onclick="toggleFAQ('pfaq8')" class="w-full text-start p-5 flex justify-between items-center focus:outline-none hover:bg-gray-50/80 transition-colors">
           <span class="font-semibold text-gray-900 text-sm sm:text-base pe-4">هل سيؤثر مؤشر الخدمات المصرفية على النتائج المالية أو تصنيفات البنوك؟</span>
-          <svg id="pfaq10-icon" class="w-5 h-5 text-gray-400 flex-shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          <svg id="pfaq8-icon" class="w-5 h-5 text-gray-400 flex-shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
         </button>
-        <div id="pfaq10-content" class="hidden px-5 pb-5 text-gray-600 text-xs sm:text-sm leading-relaxed border-t border-gray-100 pt-3">
+        <div id="pfaq8-content" class="hidden px-5 pb-5 text-gray-600 text-xs sm:text-sm leading-relaxed border-t border-gray-100 pt-3">
           لا.
 
 يُعدّ مؤشر الخدمات المصرفية جزءاً مستقلاً مخصصاً لتجربة ورضا مستخدمي الخدمات المصرفية — التطبيق المحمول والخدمات عبر الإنترنت وخدمات الفروع.
@@ -852,13 +818,13 @@
         </div>
       </div>
 
-      <!-- Q11 -->
+      <!-- Q9 -->
       <div class="bg-white rounded-xl border border-gray-200 overflow-hidden shadow-sm">
-        <button onclick="toggleFAQ('pfaq11')" class="w-full text-start p-5 flex justify-between items-center focus:outline-none hover:bg-gray-50/80 transition-colors">
+        <button onclick="toggleFAQ('pfaq9')" class="w-full text-start p-5 flex justify-between items-center focus:outline-none hover:bg-gray-50/80 transition-colors">
           <span class="font-semibold text-gray-900 text-sm sm:text-base pe-4">هل ستُعطي الدراسة الكلمة للبنوك والخبراء؟</span>
-          <svg id="pfaq11-icon" class="w-5 h-5 text-gray-400 flex-shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          <svg id="pfaq9-icon" class="w-5 h-5 text-gray-400 flex-shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
         </button>
-        <div id="pfaq11-content" class="hidden px-5 pb-5 text-gray-600 text-xs sm:text-sm leading-relaxed border-t border-gray-100 pt-3">
+        <div id="pfaq9-content" class="hidden px-5 pb-5 text-gray-600 text-xs sm:text-sm leading-relaxed border-t border-gray-100 pt-3">
           يُخطَّط لإصدار 2026 أيضاً استضافة مساهمات من مسؤولين وخبراء، رهناً بالتأكيد التحريري.
 
 ستُميَّز هذه المساهمات بوضوح عن التحليل التحريري لـ Algeria Banking Index.
@@ -867,13 +833,13 @@
         </div>
       </div>
 
-      <!-- Q12 -->
+      <!-- Q10 -->
       <div class="bg-white rounded-xl border border-gray-200 overflow-hidden shadow-sm">
-        <button onclick="toggleFAQ('pfaq12')" class="w-full text-start p-5 flex justify-between items-center focus:outline-none hover:bg-gray-50/80 transition-colors">
+        <button onclick="toggleFAQ('pfaq10')" class="w-full text-start p-5 flex justify-between items-center focus:outline-none hover:bg-gray-50/80 transition-colors">
           <span class="font-semibold text-gray-900 text-sm sm:text-base pe-4">هل يشمل اشتراك 2026 إصدار 2025؟</span>
-          <svg id="pfaq12-icon" class="w-5 h-5 text-gray-400 flex-shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          <svg id="pfaq10-icon" class="w-5 h-5 text-gray-400 flex-shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
         </button>
-        <div id="pfaq12-content" class="hidden px-5 pb-5 text-gray-600 text-xs sm:text-sm leading-relaxed border-t border-gray-100 pt-3">
+        <div id="pfaq10-content" class="hidden px-5 pb-5 text-gray-600 text-xs sm:text-sm leading-relaxed border-t border-gray-100 pt-3">
           لا.
 
 يظل إصدار 2025 منشوراً مستقلاً ويمكن اقتناؤه بشكل منفصل.
@@ -882,26 +848,26 @@
         </div>
       </div>
 
-      <!-- Q13 -->
+      <!-- Q11 -->
       <div class="bg-white rounded-xl border border-gray-200 overflow-hidden shadow-sm">
-        <button onclick="toggleFAQ('pfaq13')" class="w-full text-start p-5 flex justify-between items-center focus:outline-none hover:bg-gray-50/80 transition-colors">
+        <button onclick="toggleFAQ('pfaq11')" class="w-full text-start p-5 flex justify-between items-center focus:outline-none hover:bg-gray-50/80 transition-colors">
           <span class="font-semibold text-gray-900 text-sm sm:text-base pe-4">ماذا يحدث إذا تغير تاريخ النشر؟</span>
-          <svg id="pfaq13-icon" class="w-5 h-5 text-gray-400 flex-shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          <svg id="pfaq11-icon" class="w-5 h-5 text-gray-400 flex-shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
         </button>
-        <div id="pfaq13-content" class="hidden px-5 pb-5 text-gray-600 text-xs sm:text-sm leading-relaxed border-t border-gray-100 pt-3">
+        <div id="pfaq11-content" class="hidden px-5 pb-5 text-gray-600 text-xs sm:text-sm leading-relaxed border-t border-gray-100 pt-3">
           سيتم إخطار المشتركين بأي تغيير في جدول النشر.
 
 يظل الاشتراك ساري المفعول ويبقى السعر التفضيلي المحصّل قبل 31 أغسطس 2026 مضموناً.
         </div>
       </div>
 
-      <!-- Q14 -->
+      <!-- Q12 -->
       <div class="bg-white rounded-xl border border-gray-200 overflow-hidden shadow-sm">
-        <button onclick="toggleFAQ('pfaq14')" class="w-full text-start p-5 flex justify-between items-center focus:outline-none hover:bg-gray-50/80 transition-colors">
+        <button onclick="toggleFAQ('pfaq12')" class="w-full text-start p-5 flex justify-between items-center focus:outline-none hover:bg-gray-50/80 transition-colors">
           <span class="font-semibold text-gray-900 text-sm sm:text-base pe-4">هل يمكنني طلب عرض تقديمي أو مقارنة مرجعية مخصصة؟</span>
-          <svg id="pfaq14-icon" class="w-5 h-5 text-gray-400 flex-shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          <svg id="pfaq12-icon" class="w-5 h-5 text-gray-400 flex-shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
         </button>
-        <div id="pfaq14-content" class="hidden px-5 pb-5 text-gray-600 text-xs sm:text-sm leading-relaxed border-t border-gray-100 pt-3">
+        <div id="pfaq12-content" class="hidden px-5 pb-5 text-gray-600 text-xs sm:text-sm leading-relaxed border-t border-gray-100 pt-3">
           نعم.
 
 تتضمن الباقة التنفيذية المؤسسية جلسة شرح ومقارنة مرجعية مخصصة.
@@ -944,22 +910,8 @@
         "text": "L'étude proposera une analyse consolidée du secteur bancaire algérien, des comparaisons entre banques publiques et privées, des analyses individuelles des 21 établissements, ainsi que des classements et benchmarks par indicateur.\n\nCette édition sera également enrichie de nouveaux éclairages sur le hors-bilan, les effectifs, le réseau bancaire et la performance opérationnelle.\n\nElle intègrera par ailleurs un volet consacré à l'expérience des utilisateurs des services bancaires — application mobile, e-banking web et services en agence — à travers le Baromètre ABIX 2026."
       }
     },
-    {
-      "@type": "Question",
-      "name": "Que garantit la souscription anticipée ?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "La souscription anticipée vous permet de réserver l’édition 2026 avant sa publication et de bénéficier d’un tarif préférentiel de 10 %.\n\nÀ la publication, les livrables correspondant au pack souscrit seront mis à disposition du souscripteur."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Le tarif préférentiel est-il garanti ?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Oui. Toute souscription enregistrée au plus tard le 31 août 2026 à 23 h 59, heure d’Algérie, bénéficie du tarif de souscription anticipée.\n\nCe tarif reste garanti jusqu’à la livraison de l’étude."
-      }
-    },
+    
+    
     {
       "@type": "Question",
       "name": "Quels sont les différents niveaux d’offre ?",
@@ -1021,7 +973,7 @@
       "name": "Que se passe-t-il si la date de publication évolue ?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Les souscripteurs seront informés de toute évolution du calendrier de publication.\n\nLa souscription restera valide et le tarif préférentiel obtenu avant le 31 août 2026 demeurera garanti."
+        "text": "Les souscripteurs seront informés de toute évolution du calendrier de publication.\n\nLa souscription restera valide."
       }
     },
     {
@@ -1103,36 +1055,26 @@
   <div class="bg-slate-900 text-white rounded-3xl max-w-2xl w-full max-h-[95vh] flex flex-col border border-amber-400/30 shadow-2xl relative overflow-hidden">
     <div class="p-4 sm:p-5 border-b border-gray-800 flex items-center justify-between bg-slate-900/90 flex-shrink-0">
       <div>
-        <span class="inline-block bg-amber-400/20 text-amber-300 text-[11px] font-bold px-3 py-0.5 rounded-full border border-amber-400/30 mb-1">Souscription anticipée — Édition 2026</span>
         <h3 id="preorderModalTitle" class="text-lg font-bold text-white font-playfair">Formulaire de souscription</h3>
         <!-- Détails dynamiques de l'offre (i18n) -->
         <div id="preorderModalDetails-essential" class="preorder-details hidden mt-2 text-sm text-gray-300">
           <p class="text-xs text-gray-400">مستخدم واحد · PDF آمن · Data Explorer 2025</p>
           <div class="flex items-center gap-2 mt-1">
-            <span class="line-through text-xs text-gray-500">84,000 دج بدون ضريبة</span>
-            <span class="text-[11px] font-bold bg-amber-400/20 text-amber-300 px-2 py-0.5 rounded border border-amber-400/30">-10% حتى 31 أغسطس</span>
+            <span class="text-lg font-bold text-white">84,000 دج بدون ضريبة</span>
+            </div>
           </div>
-          <p class="text-lg font-bold text-amber-300 mt-1">75,600 دج بدون ضريبة</p>
-          <p class="text-xs text-emerald-400 font-semibold">وفّر 8,400 دج بدون ضريبة</p>
-        </div>
         <div id="preorderModalDetails-pro" class="preorder-details hidden mt-2 text-sm text-gray-300">
           <p class="text-xs text-gray-400">حتى 3 مستخدمين · ملف Excel · Data Explorer 2024–2025</p>
           <div class="flex items-center gap-2 mt-1">
-            <span class="line-through text-xs text-gray-500">120,000 دج بدون ضريبة</span>
-            <span class="text-[11px] font-bold bg-amber-400/20 text-amber-300 px-2 py-0.5 rounded border border-amber-400/30">-10% حتى 31 أغسطس</span>
+            <span class="text-lg font-bold text-white">120,000 دج بدون ضريبة</span>
+            </div>
           </div>
-          <p class="text-lg font-bold text-amber-300 mt-1">108,000 دج بدون ضريبة</p>
-          <p class="text-xs text-emerald-400 font-semibold">وفّر 12,000 دج بدون ضريبة</p>
-        </div>
         <div id="preorderModalDetails-corporate" class="preorder-details hidden mt-2 text-sm text-gray-300">
           <p class="text-xs text-gray-400">حتى 20 مستخدماً · Data Explorer Executive 2022–2025</p>
           <div class="flex items-center gap-2 mt-1">
-            <span class="line-through text-xs text-gray-500">180,000 دج بدون ضريبة</span>
-            <span class="text-[11px] font-bold bg-amber-400/20 text-amber-300 px-2 py-0.5 rounded border border-amber-400/30">-10% حتى 31 أغسطس</span>
+            <span class="text-lg font-bold text-white">180,000 دج بدون ضريبة</span>
+            </div>
           </div>
-          <p class="text-lg font-bold text-amber-300 mt-1">162,000 دج بدون ضريبة</p>
-          <p class="text-xs text-emerald-400 font-semibold">وفّر 18,000 دج بدون ضريبة</p>
-        </div>
       </div>
       <button onclick="closePreorder()" class="text-gray-400 hover:text-white transition-colors p-2 rounded-xl hover:bg-slate-800" aria-label="Fermer">
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>

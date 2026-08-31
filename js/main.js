@@ -676,3 +676,36 @@
 
 
 }());
+
+window.openVideoModal = function() {
+    let modal = document.getElementById('dexVideoModal');
+    if (!modal) {
+        modal = document.createElement('div');
+        modal.id = 'dexVideoModal';
+        modal.className = 'fixed inset-0 bg-slate-950/80 backdrop-blur-sm z-50 flex items-center justify-center p-2 sm:p-4';
+        modal.style.zIndex = '9999';
+        modal.innerHTML = `
+            <div class="bg-slate-900 rounded-3xl max-w-5xl w-full max-h-[90vh] flex flex-col border border-gray-800 shadow-2xl relative overflow-hidden">
+                <div class="p-3 border-b border-gray-800 flex justify-end">
+                    <button onclick="closeVideoModal()" class="text-gray-400 hover:text-white transition-colors p-2 rounded-xl hover:bg-slate-800">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+                    </button>
+                </div>
+                <div class="relative w-full bg-black" style="padding-top: 56.25%;">
+                    <iframe id="dexVideoIframe" src="https://www.youtube-nocookie.com/embed/6xiW8lhvE5A?autoplay=1&rel=0&modestbranding=1" class="absolute inset-0 w-full h-full border-0" allow="autoplay; encrypted-media; fullscreen" allowfullscreen></iframe>
+                </div>
+            </div>
+        `;
+        document.body.appendChild(modal);
+    } else {
+        modal.classList.remove('hidden');
+        document.getElementById('dexVideoIframe').src = "https://www.youtube-nocookie.com/embed/6xiW8lhvE5A?autoplay=1&rel=0&modestbranding=1";
+    }
+};
+window.closeVideoModal = function() {
+    const modal = document.getElementById('dexVideoModal');
+    if (modal) {
+        modal.classList.add('hidden');
+        document.getElementById('dexVideoIframe').src = "";
+    }
+};

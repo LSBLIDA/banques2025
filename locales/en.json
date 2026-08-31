@@ -51,7 +51,7 @@
       "subtitleParagraph2": "The 2026 edition analyses the 2024–2025 performance of 21 banks operating in Algeria, with a perspective on 2023–2025 trends. It combines financial data, operational indicators, benchmarks, competitive dynamics and new insights on banking usage.",
       "ctaPreorder": "Subscribe to 2026 Edition",
       "ctaPrimary": "Subscribe to 2026 Edition",
-      "ctaNotify": "Receive 2026 Edition Updates",
+      "ctaNotify": "Discover ABIX Data Explorer",
       "ctaSynthesis": "Receive Executive Summary",
       "ctaPresentation": "Request a Presentation",
       "ctaBenchmark": "Get a Custom Benchmark",
@@ -74,11 +74,11 @@
       "cover2025Status": "Previous Edition Available"
     },
     "earlyBird": {
-      "badge": "Early Subscription Offer — Until August 31, 2026",
+      "badge": "Subscription — 2026 Edition",
       "title": "Subscribe to the 2026 Edition at a Preferential Rate",
       "subtitle": "Benefit from a 10% discount for any subscription registered before August 31, 2026. The study is currently being finalized and will be delivered to subscribers upon publication.",
       "reassurance": [
-        "Preferential rate reserved for early subscriptions before August 31, 2026",
+        "Subscription for the 2026 Edition",
         "Full study delivered upon publication",
         "Access to deliverables corresponding to the subscribed package"
       ],
@@ -174,7 +174,7 @@
       "disclaimerNoBanks": "21 banks covered in the Algerian banking market.",
       "disclaimerNoDate": "Reference financial data is consolidated. Current work focuses on comparative analyses, operational data, Banking Services Barometer, and editorial contributions.",
       "ctaPreorder": "Subscribe to 2026 Edition",
-      "ctaNotify": "Be notified of release"
+      "ctaNotify": "Discover ABIX Data Explorer"
     },
     "forecast": {
       "title": "Expected Content for the 2026 Edition",
@@ -225,10 +225,10 @@
       ]
     },
     "pricing": {
-      "sectionTitle": "Early Subscription Offer — 2026 Edition",
-      "sectionSubtitle": "Subscribe before August 31, 2026 and enjoy a 10% discount on the public price for the 2026 edition. Delivered upon publication.",
-      "earlyBirdBadge": "-10% until Aug 31",
-      "validityMention": "Early subscription rate valid until August 31, 2026",
+      "sectionTitle": "Subscription — 2026 Edition",
+      "sectionSubtitle": "Delivered upon publication.",
+      "earlyBirdBadge": "",
+      "validityMention": "",
       "popularBadge": "Most Popular",
       "regularPriceStruckLabel": "Public price",
       "earlyBirdPriceLabel": "Early subscription rate",
@@ -381,14 +381,6 @@
       "title": "Frequently Asked Questions",
       "subtitle": "Everything you need to know about the 2026 edition.",
       "items": [
-        {
-          "q": "When will the 2026 edition be published?",
-          "a": "The 2026 edition of Algeria Banking Index is expected to be published in September 2026.\n\nSubscribers will be notified as soon as the study is available."
-        },
-        {
-          "q": "What will be the scope of the 2026 edition?",
-          "a": "The 2026 edition will cover 21 banks operating in Algeria. It will focus primarily on comparing 2024–2025 performance, complemented by an analysis of trends observed over the 2023–2025 period."
-        },
         {
           "q": "What will the 2026 study contain?",
           "a": "The study will offer a consolidated analysis of the Algerian banking sector, comparisons between public and private banks, individual analyses of 21 institutions, as well as rankings and benchmarks by indicator.\n\nThis edition will also be enriched with new insights on off-balance sheet items, workforce, banking network, and operational performance.\n\nIt will also include a section dedicated to banking user experience — mobile app, web e-banking, and branch services — through the ABIX 2026 Barometer."
@@ -2067,7 +2059,7 @@
     "labelDuration": "Access Duration",
     "valueDuration": "12 full months",
     "summaryTitle": "Included Features in Your Pack",
-    "validityNotice": "Early Bird promotional offer valid until August 31, 2026.",
+    "validityNotice": "",
     "plans": {
       "essentiel": {
         "name": "Essential Pack",
@@ -4526,5 +4518,8 @@
   "glossary.terms.non-significatif.short_definition": "Value not usable as reliable numeric data.",
   "glossary.terms.non-significatif.detailed_definition": "ABIX explicitly preserves the NS marker; it is never automatically converted to zero or included as a numeric observation.",
   "glossary.terms.non-significatif.interpretation": "The value is excluded from calculations requiring a valid numeric observation.",
-  "glossary.terms.non-significatif.example": "NS"
+  "glossary.terms.non-significatif.example": "NS",
+  "socials": {
+    "linkedin": "https://www.linkedin.com/company/tadjeddine-partners/"
+  }
 }

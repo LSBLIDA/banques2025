@@ -222,7 +222,7 @@
         <!-- Badge Souscription anticipée -->
         <div class="inline-flex items-center gap-2 bg-amber-400/20 text-amber-300 px-4 py-2 rounded-full text-xs sm:text-sm font-bold border border-amber-400/40">
           <span class="w-2.5 h-2.5 bg-amber-400 rounded-full animate-pulse"></span>
-          Souscriptions anticipées ouvertes — Tarif préférentiel jusqu’au 31 août 2026
+          Souscriptions ouvertes — Édition 2026
         </div>
 
         <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold font-playfair leading-tight">
@@ -252,9 +252,9 @@ Des regards de dirigeants et des contributions d'experts viendront également en
             <svg class="w-5 h-5 me-2 flex-shrink-0 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
             Souscrire à l’édition 2026
           </a>
-          <a href="#notification" class="btn-secondary-hero">
-            Être informé de la parution
-          </a>
+          <button onclick="openVideoModal()" class="btn-secondary-hero">
+            Découvrir ABIX Data Explorer
+          </button>
         </div>
       </div>
 
@@ -401,12 +401,8 @@ Des regards de dirigeants et des contributions d'experts viendront également en
 <section id="tarifs" class="scroll-mt-16 pt-24 pb-20 bg-slate-900 text-white relative border-y border-amber-400/20">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
-      <div id="pricing-earlybird-badge" class="badge-discount inline-flex items-center gap-2 bg-amber-400/20 text-amber-300 border border-amber-400/30 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider">
-        <span class="w-2 h-2 bg-amber-400 rounded-full animate-pulse"></span>
-        <span>-10 % jusqu’au 31 août</span>
-      </div>
-      <h2 class="text-3xl sm:text-4xl font-extrabold font-playfair text-white">Offre de souscription anticipée — Édition 2026</h2>
-      <p class="text-gray-300 text-base leading-relaxed">Souscrivez avant le 31 août 2026 et bénéficiez d’une remise de 10 % sur le tarif public de l’édition 2026. L’étude sera livrée dès sa publication.</p>
+      <h2 class="text-3xl sm:text-4xl font-extrabold font-playfair text-white">Souscription — Édition 2026</h2>
+      <p class="text-gray-300 text-base leading-relaxed">L’étude sera livrée dès sa publication.</p>
     </div>
 
     <!-- Grille des 3 cartes d'offres -->
@@ -424,14 +420,12 @@ Des regards de dirigeants et des contributions d'experts viendront également en
           <!-- Affichage du Prix -->
           <div class="pricing-block space-y-1 py-4 border-y border-gray-700/60">
             <div class="flex items-baseline gap-2">
-              <span class="regular-price-struck text-sm text-gray-400 line-through font-semibold">84 000 DA HT</span>
-              <span class="badge-discount inline-block text-[10px] font-bold text-amber-300 bg-amber-500/20 px-2 py-0.5 rounded border border-amber-400/40">-10 % jusqu’au 31 août</span>
-            </div>
+              <span class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">84 000 DA HT</span>
+              </div>
             <div class="early-bird-price text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
-              75 600 DA HT
+              
             </div>
-            <p class="saving-mention text-xs font-bold text-emerald-400">Économisez 8 400 DA HT</p>
-            <p class="validity-mention text-[11px] text-gray-400 italic pt-1">Tarif de souscription anticipée valable jusqu’au 31 août 2026</p>
+            <p class="validity-mention text-[11px] text-gray-400 italic pt-1"></p>
           </div>
 
           <!-- Caractéristiques du Pack Essentiel -->
@@ -516,14 +510,12 @@ Des regards de dirigeants et des contributions d'experts viendront également en
           <!-- Affichage du Prix -->
           <div class="pricing-block space-y-1 py-4 border-y border-amber-400/30">
             <div class="flex items-baseline gap-2">
-              <span class="regular-price-struck text-sm text-gray-400 line-through font-semibold">120 000 DA HT</span>
-              <span class="badge-discount inline-block text-[10px] font-bold text-amber-300 bg-amber-500/20 px-2 py-0.5 rounded border border-amber-400/40">-10 % jusqu’au 31 août</span>
-            </div>
+              <span class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">120 000 DA HT</span>
+              </div>
             <div class="early-bird-price text-3xl sm:text-4xl font-extrabold text-amber-300 tracking-tight">
-              108 000 DA HT
+              
             </div>
-            <p class="saving-mention text-xs font-bold text-emerald-400">Économisez 12 000 DA HT</p>
-            <p class="validity-mention text-[11px] text-gray-400 italic pt-1">Tarif de souscription anticipée valable jusqu’au 31 août 2026</p>
+            <p class="validity-mention text-[11px] text-gray-400 italic pt-1"></p>
           </div>
 
           <!-- Caractéristiques du Pack Pro -->
@@ -595,14 +587,12 @@ Des regards de dirigeants et des contributions d'experts viendront également en
           <!-- Affichage du Prix -->
           <div class="pricing-block space-y-1 py-4 border-y border-gray-700/60">
             <div class="flex items-baseline gap-2">
-              <span class="regular-price-struck text-sm text-gray-400 line-through font-semibold">180 000 DA HT</span>
-              <span class="badge-discount inline-block text-[10px] font-bold text-amber-300 bg-amber-500/20 px-2 py-0.5 rounded border border-amber-400/40">-10 % jusqu’au 31 août</span>
-            </div>
+              <span class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">180 000 DA HT</span>
+              </div>
             <div class="early-bird-price text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
-              162 000 DA HT
+              
             </div>
-            <p class="saving-mention text-xs font-bold text-emerald-400">Économisez 18 000 DA HT</p>
-            <p class="validity-mention text-[11px] text-gray-400 italic pt-1">Tarif de souscription anticipée valable jusqu’au 31 août 2026</p>
+            <p class="validity-mention text-[11px] text-gray-400 italic pt-1"></p>
           </div>
 
           <!-- Caractéristiques du Pack Corporate -->
@@ -693,32 +683,10 @@ Des regards de dirigeants et des contributions d'experts viendront également en
       <!-- Q1 -->
       <div class="bg-white rounded-xl border border-gray-200 overflow-hidden shadow-sm">
         <button onclick="toggleFAQ('pfaq1')" class="w-full text-start p-5 flex justify-between items-center focus:outline-none hover:bg-gray-50/80 transition-colors">
-          <span class="font-semibold text-gray-900 text-sm sm:text-base pe-4">Quand l’étude sera-t-elle publiée ?</span>
+          <span class="font-semibold text-gray-900 text-sm sm:text-base pe-4">Que contiendra l’étude 2026 ?</span>
           <svg id="pfaq1-icon" class="w-5 h-5 text-gray-400 flex-shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
         </button>
         <div id="pfaq1-content" class="hidden px-5 pb-5 text-gray-600 text-xs sm:text-sm leading-relaxed border-t border-gray-100 pt-3">
-          La publication de l’édition 2026 est prévue en septembre 2026, après finalisation des derniers travaux d’analyse et validation éditoriale. Les souscripteurs seront informés dès sa mise à disposition et recevront les livrables correspondant à l’offre souscrite.
-        </div>
-      </div>
-
-      <!-- Q2 -->
-      <div class="bg-white rounded-xl border border-gray-200 overflow-hidden shadow-sm">
-        <button onclick="toggleFAQ('pfaq2')" class="w-full text-start p-5 flex justify-between items-center focus:outline-none hover:bg-gray-50/80 transition-colors">
-          <span class="font-semibold text-gray-900 text-sm sm:text-base pe-4">Quel sera le périmètre de l’édition 2026 ?</span>
-          <svg id="pfaq2-icon" class="w-5 h-5 text-gray-400 flex-shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-        </button>
-        <div id="pfaq2-content" class="hidden px-5 pb-5 text-gray-600 text-xs sm:text-sm leading-relaxed border-t border-gray-100 pt-3">
-          L’édition 2026 couvrira 21 banques opérant en Algérie. Elle portera principalement sur la comparaison des performances 2024–2025, complétée par une analyse des tendances observées sur la période 2023–2025.
-        </div>
-      </div>
-
-      <!-- Q3 -->
-      <div class="bg-white rounded-xl border border-gray-200 overflow-hidden shadow-sm">
-        <button onclick="toggleFAQ('pfaq3')" class="w-full text-start p-5 flex justify-between items-center focus:outline-none hover:bg-gray-50/80 transition-colors">
-          <span class="font-semibold text-gray-900 text-sm sm:text-base pe-4">Que contiendra l’étude 2026 ?</span>
-          <svg id="pfaq3-icon" class="w-5 h-5 text-gray-400 flex-shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-        </button>
-        <div id="pfaq3-content" class="hidden px-5 pb-5 text-gray-600 text-xs sm:text-sm leading-relaxed border-t border-gray-100 pt-3">
           L’étude proposera une analyse consolidée du secteur bancaire algérien, des comparaisons entre banques publiques et privées, des analyses individuelles des 21 établissements, ainsi que des classements et benchmarks par indicateur.
 
 Cette édition sera également enrichie de nouveaux éclairages sur le hors-bilan, les effectifs, le réseau bancaire et la performance opérationnelle.
@@ -727,39 +695,37 @@ Elle intégrera par ailleurs un volet consacré aux services bancaires digitaux,
         </div>
       </div>
 
-      <!-- Q4 -->
+      <!-- Q2 -->
       <div class="bg-white rounded-xl border border-gray-200 overflow-hidden shadow-sm">
-        <button onclick="toggleFAQ('pfaq4')" class="w-full text-start p-5 flex justify-between items-center focus:outline-none hover:bg-gray-50/80 transition-colors">
+        <button onclick="toggleFAQ('pfaq2')" class="w-full text-start p-5 flex justify-between items-center focus:outline-none hover:bg-gray-50/80 transition-colors">
           <span class="font-semibold text-gray-900 text-sm sm:text-base pe-4">Que garantit la souscription anticipée ?</span>
-          <svg id="pfaq4-icon" class="w-5 h-5 text-gray-400 flex-shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          <svg id="pfaq2-icon" class="w-5 h-5 text-gray-400 flex-shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
         </button>
-        <div id="pfaq4-content" class="hidden px-5 pb-5 text-gray-600 text-xs sm:text-sm leading-relaxed border-t border-gray-100 pt-3">
+        <div id="pfaq2-content" class="hidden px-5 pb-5 text-gray-600 text-xs sm:text-sm leading-relaxed border-t border-gray-100 pt-3">
           La souscription anticipée vous permet de réserver l’édition 2026 avant sa publication et de bénéficier d’un tarif préférentiel de 10 %.
 
 À la publication, les livrables correspondant au pack souscrit seront mis à disposition du souscripteur.
         </div>
       </div>
 
-      <!-- Q5 -->
+      <!-- Q3 -->
       <div class="bg-white rounded-xl border border-gray-200 overflow-hidden shadow-sm">
-        <button onclick="toggleFAQ('pfaq5')" class="w-full text-start p-5 flex justify-between items-center focus:outline-none hover:bg-gray-50/80 transition-colors">
+        <button onclick="toggleFAQ('pfaq3')" class="w-full text-start p-5 flex justify-between items-center focus:outline-none hover:bg-gray-50/80 transition-colors">
           <span class="font-semibold text-gray-900 text-sm sm:text-base pe-4">Le tarif préférentiel est-il garanti ?</span>
-          <svg id="pfaq5-icon" class="w-5 h-5 text-gray-400 flex-shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          <svg id="pfaq3-icon" class="w-5 h-5 text-gray-400 flex-shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
         </button>
-        <div id="pfaq5-content" class="hidden px-5 pb-5 text-gray-600 text-xs sm:text-sm leading-relaxed border-t border-gray-100 pt-3">
-          Oui. Toute souscription enregistrée au plus tard le 31 août 2026 à 23 h 59, heure d’Algérie, bénéficie du tarif de souscription anticipée.
-
-Ce tarif reste garanti jusqu’à la livraison de l’étude.
+        <div id="pfaq3-content" class="hidden px-5 pb-5 text-gray-600 text-xs sm:text-sm leading-relaxed border-t border-gray-100 pt-3">
+          Oui. La souscription reste garantie jusqu’à la livraison de l’étude.
         </div>
       </div>
 
-      <!-- Q6 -->
+      <!-- Q4 -->
       <div class="bg-white rounded-xl border border-gray-200 overflow-hidden shadow-sm">
-        <button onclick="toggleFAQ('pfaq6')" class="w-full text-start p-5 flex justify-between items-center focus:outline-none hover:bg-gray-50/80 transition-colors">
+        <button onclick="toggleFAQ('pfaq4')" class="w-full text-start p-5 flex justify-between items-center focus:outline-none hover:bg-gray-50/80 transition-colors">
           <span class="font-semibold text-gray-900 text-sm sm:text-base pe-4">Quels sont les différents niveaux d’offre ?</span>
-          <svg id="pfaq6-icon" class="w-5 h-5 text-gray-400 flex-shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          <svg id="pfaq4-icon" class="w-5 h-5 text-gray-400 flex-shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
         </button>
-        <div id="pfaq6-content" class="hidden px-5 pb-5 text-gray-600 text-xs sm:text-sm leading-relaxed border-t border-gray-100 pt-3">
+        <div id="pfaq4-content" class="hidden px-5 pb-5 text-gray-600 text-xs sm:text-sm leading-relaxed border-t border-gray-100 pt-3">
           Trois offres sont proposées :
 
 Pack Essentiel :
@@ -788,24 +754,24 @@ Pack Corporate Executive :
         </div>
       </div>
 
-      <!-- Q7 -->
+      <!-- Q5 -->
       <div class="bg-white rounded-xl border border-gray-200 overflow-hidden shadow-sm">
-        <button onclick="toggleFAQ('pfaq7')" class="w-full text-start p-5 flex justify-between items-center focus:outline-none hover:bg-gray-50/80 transition-colors">
+        <button onclick="toggleFAQ('pfaq5')" class="w-full text-start p-5 flex justify-between items-center focus:outline-none hover:bg-gray-50/80 transition-colors">
           <span class="font-semibold text-gray-900 text-sm sm:text-base pe-4">Puis-je recevoir une facture pro forma ?</span>
-          <svg id="pfaq7-icon" class="w-5 h-5 text-gray-400 flex-shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          <svg id="pfaq5-icon" class="w-5 h-5 text-gray-400 flex-shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
         </button>
-        <div id="pfaq7-content" class="hidden px-5 pb-5 text-gray-600 text-xs sm:text-sm leading-relaxed border-t border-gray-100 pt-3">
+        <div id="pfaq5-content" class="hidden px-5 pb-5 text-gray-600 text-xs sm:text-sm leading-relaxed border-t border-gray-100 pt-3">
           Oui. Sur demande, Tadjeddine & Partners peut établir une facture pro forma correspondant au pack sélectionné afin de faciliter la procédure interne de commande de l’organisation.
         </div>
       </div>
 
-      <!-- Q8 -->
+      <!-- Q6 -->
       <div class="bg-white rounded-xl border border-gray-200 overflow-hidden shadow-sm">
-        <button onclick="toggleFAQ('pfaq8')" class="w-full text-start p-5 flex justify-between items-center focus:outline-none hover:bg-gray-50/80 transition-colors">
+        <button onclick="toggleFAQ('pfaq6')" class="w-full text-start p-5 flex justify-between items-center focus:outline-none hover:bg-gray-50/80 transition-colors">
           <span class="font-semibold text-gray-900 text-sm sm:text-base pe-4">Puis-je souscrire pour plusieurs utilisateurs ?</span>
-          <svg id="pfaq8-icon" class="w-5 h-5 text-gray-400 flex-shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          <svg id="pfaq6-icon" class="w-5 h-5 text-gray-400 flex-shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
         </button>
-        <div id="pfaq8-content" class="hidden px-5 pb-5 text-gray-600 text-xs sm:text-sm leading-relaxed border-t border-gray-100 pt-3">
+        <div id="pfaq6-content" class="hidden px-5 pb-5 text-gray-600 text-xs sm:text-sm leading-relaxed border-t border-gray-100 pt-3">
           Oui.
 
 Le Pack Essentiel comprend un accès pour 1 utilisateur.
@@ -816,13 +782,13 @@ Le Pack Corporate Executive permet un accès jusqu’à 20 utilisateurs apparten
         </div>
       </div>
 
-      <!-- Q9 -->
+      <!-- Q7 -->
       <div class="bg-white rounded-xl border border-gray-200 overflow-hidden shadow-sm">
-        <button onclick="toggleFAQ('pfaq9')" class="w-full text-start p-5 flex justify-between items-center focus:outline-none hover:bg-gray-50/80 transition-colors">
+        <button onclick="toggleFAQ('pfaq7')" class="w-full text-start p-5 flex justify-between items-center focus:outline-none hover:bg-gray-50/80 transition-colors">
           <span class="font-semibold text-gray-900 text-sm sm:text-base pe-4">Les données 2024 sont-elles les mêmes que dans l’édition précédente ?</span>
-          <svg id="pfaq9-icon" class="w-5 h-5 text-gray-400 flex-shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          <svg id="pfaq7-icon" class="w-5 h-5 text-gray-400 flex-shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
         </button>
-        <div id="pfaq9-content" class="hidden px-5 pb-5 text-gray-600 text-xs sm:text-sm leading-relaxed border-t border-gray-100 pt-3">
+        <div id="pfaq7-content" class="hidden px-5 pb-5 text-gray-600 text-xs sm:text-sm leading-relaxed border-t border-gray-100 pt-3">
           Pas nécessairement.
 
 Certaines banques ont procédé, dans leurs publications ultérieures, à des reclassements ou retraitements de certains postes financiers.
@@ -833,13 +799,13 @@ Ces données remplacent donc, lorsque cela est nécessaire, celles utilisées da
         </div>
       </div>
 
-      <!-- Q10 -->
+      <!-- Q8 -->
       <div class="bg-white rounded-xl border border-gray-200 overflow-hidden shadow-sm">
-        <button onclick="toggleFAQ('pfaq10')" class="w-full text-start p-5 flex justify-between items-center focus:outline-none hover:bg-gray-50/80 transition-colors">
+        <button onclick="toggleFAQ('pfaq8')" class="w-full text-start p-5 flex justify-between items-center focus:outline-none hover:bg-gray-50/80 transition-colors">
           <span class="font-semibold text-gray-900 text-sm sm:text-base pe-4">Le Baromètre des services bancaires influencera-t-il les résultats financiers ou les classements des banques ?</span>
-          <svg id="pfaq10-icon" class="w-5 h-5 text-gray-400 flex-shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          <svg id="pfaq8-icon" class="w-5 h-5 text-gray-400 flex-shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
         </button>
-        <div id="pfaq10-content" class="hidden px-5 pb-5 text-gray-600 text-xs sm:text-sm leading-relaxed border-t border-gray-100 pt-3">
+        <div id="pfaq8-content" class="hidden px-5 pb-5 text-gray-600 text-xs sm:text-sm leading-relaxed border-t border-gray-100 pt-3">
           Non.
 
 Le Baromètre des services bancaires constitue un volet distinct consacré à l'expérience et à la satisfaction des utilisateurs des services bancaires — application mobile, e-banking web et services en agence.
@@ -850,13 +816,13 @@ Ils seront présentés séparément, avec une description de la méthodologie ut
         </div>
       </div>
 
-      <!-- Q11 -->
+      <!-- Q9 -->
       <div class="bg-white rounded-xl border border-gray-200 overflow-hidden shadow-sm">
-        <button onclick="toggleFAQ('pfaq11')" class="w-full text-start p-5 flex justify-between items-center focus:outline-none hover:bg-gray-50/80 transition-colors">
+        <button onclick="toggleFAQ('pfaq9')" class="w-full text-start p-5 flex justify-between items-center focus:outline-none hover:bg-gray-50/80 transition-colors">
           <span class="font-semibold text-gray-900 text-sm sm:text-base pe-4">L’étude donnera-t-elle la parole aux banques et à des experts ?</span>
-          <svg id="pfaq11-icon" class="w-5 h-5 text-gray-400 flex-shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          <svg id="pfaq9-icon" class="w-5 h-5 text-gray-400 flex-shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
         </button>
-        <div id="pfaq11-content" class="hidden px-5 pb-5 text-gray-600 text-xs sm:text-sm leading-relaxed border-t border-gray-100 pt-3">
+        <div id="pfaq9-content" class="hidden px-5 pb-5 text-gray-600 text-xs sm:text-sm leading-relaxed border-t border-gray-100 pt-3">
           L’édition 2026 prévoit également d’accueillir des contributions de dirigeants et d’experts, sous réserve de confirmation éditoriale.
 
 Ces contributions seront clairement distinguées de l’analyse éditoriale d’Algeria Banking Index.
@@ -865,13 +831,13 @@ Elles n’interviendront ni dans le calcul des indicateurs, ni dans les classeme
         </div>
       </div>
 
-      <!-- Q12 -->
+      <!-- Q10 -->
       <div class="bg-white rounded-xl border border-gray-200 overflow-hidden shadow-sm">
-        <button onclick="toggleFAQ('pfaq12')" class="w-full text-start p-5 flex justify-between items-center focus:outline-none hover:bg-gray-50/80 transition-colors">
+        <button onclick="toggleFAQ('pfaq10')" class="w-full text-start p-5 flex justify-between items-center focus:outline-none hover:bg-gray-50/80 transition-colors">
           <span class="font-semibold text-gray-900 text-sm sm:text-base pe-4">L’édition 2025 est-elle incluse dans la souscription 2026 ?</span>
-          <svg id="pfaq12-icon" class="w-5 h-5 text-gray-400 flex-shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          <svg id="pfaq10-icon" class="w-5 h-5 text-gray-400 flex-shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
         </button>
-        <div id="pfaq12-content" class="hidden px-5 pb-5 text-gray-600 text-xs sm:text-sm leading-relaxed border-t border-gray-100 pt-3">
+        <div id="pfaq10-content" class="hidden px-5 pb-5 text-gray-600 text-xs sm:text-sm leading-relaxed border-t border-gray-100 pt-3">
           Non.
 
 L’édition 2025 reste une publication indépendante et peut être acquise séparément.
@@ -880,26 +846,26 @@ Pour les organisations souhaitant disposer des éditions 2025 et 2026, une propo
         </div>
       </div>
 
-      <!-- Q13 -->
+      <!-- Q11 -->
       <div class="bg-white rounded-xl border border-gray-200 overflow-hidden shadow-sm">
-        <button onclick="toggleFAQ('pfaq13')" class="w-full text-start p-5 flex justify-between items-center focus:outline-none hover:bg-gray-50/80 transition-colors">
+        <button onclick="toggleFAQ('pfaq11')" class="w-full text-start p-5 flex justify-between items-center focus:outline-none hover:bg-gray-50/80 transition-colors">
           <span class="font-semibold text-gray-900 text-sm sm:text-base pe-4">Que se passe-t-il si la date de publication évolue ?</span>
-          <svg id="pfaq13-icon" class="w-5 h-5 text-gray-400 flex-shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          <svg id="pfaq11-icon" class="w-5 h-5 text-gray-400 flex-shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
         </button>
-        <div id="pfaq13-content" class="hidden px-5 pb-5 text-gray-600 text-xs sm:text-sm leading-relaxed border-t border-gray-100 pt-3">
+        <div id="pfaq11-content" class="hidden px-5 pb-5 text-gray-600 text-xs sm:text-sm leading-relaxed border-t border-gray-100 pt-3">
           Les souscripteurs seront informés de toute évolution du calendrier de publication.
 
-La souscription restera valide et le tarif préférentiel obtenu avant le 31 août 2026 demeurera garanti.
+La souscription restera valide.
         </div>
       </div>
 
-      <!-- Q14 -->
+      <!-- Q12 -->
       <div class="bg-white rounded-xl border border-gray-200 overflow-hidden shadow-sm">
-        <button onclick="toggleFAQ('pfaq14')" class="w-full text-start p-5 flex justify-between items-center focus:outline-none hover:bg-gray-50/80 transition-colors">
+        <button onclick="toggleFAQ('pfaq12')" class="w-full text-start p-5 flex justify-between items-center focus:outline-none hover:bg-gray-50/80 transition-colors">
           <span class="font-semibold text-gray-900 text-sm sm:text-base pe-4">Puis-je demander une présentation ou un benchmark personnalisé ?</span>
-          <svg id="pfaq14-icon" class="w-5 h-5 text-gray-400 flex-shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          <svg id="pfaq12-icon" class="w-5 h-5 text-gray-400 flex-shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
         </button>
-        <div id="pfaq14-content" class="hidden px-5 pb-5 text-gray-600 text-xs sm:text-sm leading-relaxed border-t border-gray-100 pt-3">
+        <div id="pfaq12-content" class="hidden px-5 pb-5 text-gray-600 text-xs sm:text-sm leading-relaxed border-t border-gray-100 pt-3">
           Oui.
 
 Le Pack Corporate Executive comprend une séance de décryptage ainsi qu’un benchmark personnalisé.
@@ -942,22 +908,8 @@ Des prestations complémentaires, telles qu’une présentation devant un comit�
         "text": "L'étude proposera une analyse consolidée du secteur bancaire algérien, des comparaisons entre banques publiques et privées, des analyses individuelles des 21 établissements, ainsi que des classements et benchmarks par indicateur.\n\nCette édition sera également enrichie de nouveaux éclairages sur le hors-bilan, les effectifs, le réseau bancaire et la performance opérationnelle.\n\nElle intègrera par ailleurs un volet consacré à l'expérience des utilisateurs des services bancaires — application mobile, e-banking web et services en agence — à travers le Baromètre ABIX 2026."
       }
     },
-    {
-      "@type": "Question",
-      "name": "Que garantit la souscription anticipée ?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "La souscription anticipée vous permet de réserver l’édition 2026 avant sa publication et de bénéficier d’un tarif préférentiel de 10 %.\n\nÀ la publication, les livrables correspondant au pack souscrit seront mis à disposition du souscripteur."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Le tarif préférentiel est-il garanti ?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Oui. Toute souscription enregistrée au plus tard le 31 août 2026 à 23 h 59, heure d’Algérie, bénéficie du tarif de souscription anticipée.\n\nCe tarif reste garanti jusqu’à la livraison de l’étude."
-      }
-    },
+    
+    
     {
       "@type": "Question",
       "name": "Quels sont les différents niveaux d’offre ?",
@@ -1019,7 +971,7 @@ Des prestations complémentaires, telles qu’une présentation devant un comit�
       "name": "Que se passe-t-il si la date de publication évolue ?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Les souscripteurs seront informés de toute évolution du calendrier de publication.\n\nLa souscription restera valide et le tarif préférentiel obtenu avant le 31 août 2026 demeurera garanti."
+        "text": "Les souscripteurs seront informés de toute évolution du calendrier de publication.\n\nLa souscription restera valide."
       }
     },
     {
@@ -1101,36 +1053,26 @@ Des prestations complémentaires, telles qu’une présentation devant un comit�
   <div class="bg-slate-900 text-white rounded-3xl max-w-2xl w-full max-h-[95vh] flex flex-col border border-amber-400/30 shadow-2xl relative overflow-hidden">
     <div class="p-4 sm:p-5 border-b border-gray-800 flex items-center justify-between bg-slate-900/90 flex-shrink-0">
       <div>
-        <span class="inline-block bg-amber-400/20 text-amber-300 text-[11px] font-bold px-3 py-0.5 rounded-full border border-amber-400/30 mb-1">Souscription anticipée — Édition 2026</span>
         <h3 id="preorderModalTitle" class="text-lg font-bold text-white font-playfair">Formulaire de souscription</h3>
         <!-- Détails dynamiques de l'offre (i18n) -->
         <div id="preorderModalDetails-essential" class="preorder-details hidden mt-2 text-sm text-gray-300">
           <p class="text-xs text-gray-400">1 utilisateur · PDF sécurisé · Data Explorer 2025</p>
           <div class="flex items-center gap-2 mt-1">
-            <span class="line-through text-xs text-gray-500">84 000 DA HT</span>
-            <span class="text-[11px] font-bold bg-amber-400/20 text-amber-300 px-2 py-0.5 rounded border border-amber-400/30">-10 % jusqu’au 31 août</span>
+            <span class="text-lg font-bold text-white">84 000 DA HT</span>
+            </div>
           </div>
-          <p class="text-lg font-bold text-amber-300 mt-1">75 600 DA HT</p>
-          <p class="text-xs text-emerald-400 font-semibold">Économisez 8 400 DA HT</p>
-        </div>
         <div id="preorderModalDetails-pro" class="preorder-details hidden mt-2 text-sm text-gray-300">
           <p class="text-xs text-gray-400">Jusqu’à 3 utilisateurs · Excel · Data Explorer 2024–2025</p>
           <div class="flex items-center gap-2 mt-1">
-            <span class="line-through text-xs text-gray-500">120 000 DA HT</span>
-            <span class="text-[11px] font-bold bg-amber-400/20 text-amber-300 px-2 py-0.5 rounded border border-amber-400/30">-10 % jusqu’au 31 août</span>
+            <span class="text-lg font-bold text-white">120 000 DA HT</span>
+            </div>
           </div>
-          <p class="text-lg font-bold text-amber-300 mt-1">108 000 DA HT</p>
-          <p class="text-xs text-emerald-400 font-semibold">Économisez 12 000 DA HT</p>
-        </div>
         <div id="preorderModalDetails-corporate" class="preorder-details hidden mt-2 text-sm text-gray-300">
           <p class="text-xs text-gray-400">Jusqu’à 20 utilisateurs · Data Explorer Executive 2022–2025</p>
           <div class="flex items-center gap-2 mt-1">
-            <span class="line-through text-xs text-gray-500">180 000 DA HT</span>
-            <span class="text-[11px] font-bold bg-amber-400/20 text-amber-300 px-2 py-0.5 rounded border border-amber-400/30">-10 % jusqu’au 31 août</span>
+            <span class="text-lg font-bold text-white">180 000 DA HT</span>
+            </div>
           </div>
-          <p class="text-lg font-bold text-amber-300 mt-1">162 000 DA HT</p>
-          <p class="text-xs text-emerald-400 font-semibold">Économisez 18 000 DA HT</p>
-        </div>
       </div>
       <button onclick="closePreorder()" class="text-gray-400 hover:text-white transition-colors p-2 rounded-xl hover:bg-slate-800" aria-label="Fermer">
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
