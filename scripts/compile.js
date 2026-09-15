@@ -39,6 +39,7 @@ const OUTPUT_ROOT = ROOT; // La racine du projet EST la racine du site
 const PAGES = [
   { template: "homepage.html", output: "index.html", titleKey: "home" },
   { template: "edition-2026.html", output: "editions/2026/index.html", titleKey: "edition2026" },
+  { template: "edition-2026-synthese.html", output: "editions/2026/synthese/index.html", titleKey: "edition2026_synthese" },
   { template: "edition-2025.html", output: "editions/2025/index.html", titleKey: "edition2025" },
   { template: "rapport-2023.html", output: "editions/rapport-2023/index.html", titleKey: "rapport2023" },
   { template: "methodologie.html", output: "methodologie/index.html", titleKey: "methodology" },
@@ -296,14 +297,14 @@ function buildMainNav(lang, pageKey, translations, langSwitcher, mobileLangSwitc
   const tEd2025 = translations.edition2025 || {};
 
   const isHomeActive = pageKey === "home" ? " nav-link--active" : "";
-  const isEditionsActive = (pageKey === "edition2026" || pageKey === "edition2025" || pageKey === "rapport2023" || pageKey === "rankings" || pageKey === "banks") ? " nav-link--active" : "";
+  const isEditionsActive = (pageKey === "edition2026" || pageKey === "edition2026_synthese" || pageKey === "edition2025" || pageKey === "rapport2023" || pageKey === "rankings" || pageKey === "banks") ? " nav-link--active" : "";
   const isStudyActive = (pageKey === "methodology" || pageKey === "questionnaire" || pageKey === "transparency2025" || pageKey === "glossary") ? " nav-link--active" : "";
   const isAbixIndexActive = pageKey === "abixIndex" ? " nav-link--active" : "";
   const isDataExplorerActive = pageKey === "dataExplorer" ? " nav-link--active" : "";
   const isServicesActive = pageKey === "services" ? " nav-link--active" : "";
   const isAboutActive = (pageKey === "about" || pageKey === "contact") ? " nav-link--active" : "";
 
-  const isEd2026Active = pageKey === "edition2026" ? " nav-link--active" : "";
+  const isEd2026Active = (pageKey === "edition2026" || pageKey === "edition2026_synthese") ? " nav-link--active" : "";
   const isEd2025Active = pageKey === "edition2025" ? " nav-link--active" : "";
   const isReportActive = pageKey === "rapport2023" ? " nav-link--active" : "";
   const isMethodologyActive = pageKey === "methodology" ? " nav-link--active" : "";
@@ -437,7 +438,7 @@ function buildMainNav(lang, pageKey, translations, langSwitcher, mobileLangSwitc
       <div>
         <span class="block px-3 py-1 text-xs font-bold uppercase tracking-wider text-gray-400">${tNav.editions || "Éditions"}</span>
         <div class="ps-3 border-s-2 border-primary/20 space-y-1 my-1">
-          <a href="${BASE_PATH}/${lang}/editions/2026/" class="mobile-nav-link flex items-center justify-between${pageKey === 'edition2026' ? ' mobile-nav-link--active' : ''}">
+          <a href="${BASE_PATH}/${lang}/editions/2026/" class="mobile-nav-link flex items-center justify-between${(pageKey === 'edition2026' || pageKey === 'edition2026_synthese') ? ' mobile-nav-link--active' : ''}">
             <span>${tNav.edition2026 || "Édition 2026"}</span>
             <span class="dropdown-badge ${ed2026BadgeClass}">${ed2026BadgeText}</span>
           </a>
