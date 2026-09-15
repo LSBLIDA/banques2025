@@ -120,7 +120,7 @@
       "pretitle": "Études et analyses stratégiques du secteur bancaire",
       "title": "Algeria Banking Index",
       "signature": "Études, benchmarks et analyses stratégiques du secteur bancaire algérien",
-      "badge": "Souscriptions ouvertes — Édition 2026",
+      "badge": "Disponible — Édition 2026",
       "subtitle": "Algeria Banking Index est la marque éditoriale créée par Tadjeddine & Partners pour publier des études indépendantes, des benchmarks et des analyses stratégiques consacrés au secteur bancaire algérien.",
       "subtitleParagraph2": "L’édition 2026 analyse les performances 2024–2025 de 21 banques opérant en Algérie, avec une mise en perspective des tendances 2023–2025. Elle croise données financières, indicateurs opérationnels, benchmarks, dynamiques concurrentielles et nouveaux éclairages sur les usages bancaires digitaux.",
       "ctaPreorder": "Souscrire à l’édition 2026",
@@ -142,7 +142,7 @@
       "cover2026Title": "Édition 2026",
       "cover2026Subtitle": "Étude comparative 2024–2025",
       "cover2026Trends": "Avec analyse des tendances 2023–2025",
-      "cover2026Status": "Publication prochaine",
+      "cover2026Status": "Disponible dès maintenant",
       "cover2025Title": "Édition 2025",
       "cover2025Subtitle": "Données financières 2023–2024",
       "cover2025Status": "Édition précédente disponible"
@@ -150,10 +150,10 @@
     "earlyBird": {
       "badge": "Souscription — Édition 2026",
       "title": "Souscrivez à l’édition 2026 à tarif préférentiel",
-      "subtitle": "L’étude est actuellement en cours de finalisation et sera remise aux souscripteurs dès sa publication.",
+      "subtitle": "L’étude est disponible dès maintenant et transmise immédiatement après votre commande.",
       "reassurance": [
         "Souscription pour l'édition 2026",
-        "Livraison de l’étude complète dès sa publication",
+        "Livraison immédiate de l’étude complète",
         "Accès aux livrables correspondant à l’offre souscrite"
       ],
       "ctaPrimary": "Souscrire à l’édition 2026",
@@ -183,7 +183,7 @@
     },
     "edition2026Teaser": {
       "title": "Édition 2026 — Étude comparative 2024–2025",
-      "status": "Publication prévue en septembre 2026 — analyses et enrichissements éditoriaux en cours de finalisation.",
+      "status": "Disponible dès maintenant — analyses consolidées et enrichissements éditoriaux finalisés.",
       "description": "La prochaine édition couvrira 21 banques opérant en Algérie avec une analyse des performances 2024–2025 et des tendances 2023–2025.",
       "ctaNotify": "Être informé de la parution",
       "disclaimer": "Les souscripteurs seront informés dès la parution de l'étude."
@@ -235,24 +235,42 @@
     }
   },
   "edition2026": {
+    "previewBtn": "Voir extrait →",
     "meta": {
       "title": "Édition 2026 — Algeria Banking Index",
-      "description": "Étude comparative 2024–2025 avec analyse des tendances 2023–2025 du secteur bancaire algérien. 21 banques analysées. Souscription anticipée."
+      "description": "Étude comparative 2024–2025 avec analyse des tendances 2023–2025 du secteur bancaire algérien. 21 banques analysées. Édition disponible."
     },
     "hero": {
-      "badge": "Souscriptions ouvertes — Édition 2026",
+      "badge": "Disponible — Édition 2026",
       "title": "Étude du secteur bancaire algérien — Édition 2026",
       "subtitle": "Étude comparative 2024–2025 avec analyse des tendances 2023–2025",
-      "status": "Publication prévue en septembre 2026 — analyses et enrichissements éditoriaux en cours de finalisation.",
+      "status": "Disponible dès maintenant — analyses consolidées et enrichissements éditoriaux finalisés.",
       "description": "L'édition 2026 proposera une lecture approfondie des transformations du secteur bancaire algérien à travers l'analyse de 21 établissements. Elle combinera performances financières 2024–2025, tendances 2023–2025, comparaisons public/privé, parts de marché, benchmarks, analyses individuelles, données sur le hors-bilan, les effectifs et le réseau, ainsi qu'un nouveau volet consacré à l'expérience des utilisateurs des services bancaires — application mobile, e-banking web et services en agence.\n\nDes regards de dirigeants et des contributions d'experts viendront également enrichir l'analyse, sous réserve de confirmation éditoriale.",
       "disclaimerNoBanks": "21 banques couvertes sur le marché bancaire algérien.",
-      "disclaimerNoDate": "Les données financières de référence sont consolidées. Les derniers travaux portent notamment sur les analyses comparatives, les données opérationnelles, le Baromètre des services bancaires et les contributions éditoriales.",
+      "disclaimerNoDate": "Données financières consolidées, analyses comparatives, indicateurs opérationnels et Baromètre des services bancaires inclus.",
       "ctaPreorder": "Souscrire à l’édition 2026",
-      "ctaNotify": "Découvrir ABIX Data Explorer"
+      "ctaPreview": "Voir extrait →",
+      "ctaNotify": "Découvrir ABIX Data Explorer",
+      "coverBadge": "Disponible"
+    },
+    "modal": {
+      "previewTitle": "Aperçu de l'édition 2026",
+      "closeLabel": "Fermer",
+      "imageAlt": "Aperçu ABIX 2026",
+      "imageCaption": "Extrait de l'analyse sectorielle — Édition 2026",
+      "contentTitle": "Contenu de l'aperçu",
+      "items": [
+        "Table des matières complète",
+        "Échantillon d'analyses",
+        "Exemples de graphiques et données",
+        "Méthodologie générale"
+      ],
+      "ctaDownload": "Télécharger l'aperçu gratuit (PDF)",
+      "ctaOrder": "Obtenir l'étude complète"
     },
     "pricing": {
       "sectionTitle": "Souscription — Édition 2026",
-      "sectionSubtitle": "L’étude sera livrée dès sa publication.",
+      "sectionSubtitle": "L’étude est disponible et transmise immédiatement après votre commande.",
       "earlyBirdBadge": "",
       "validityMention": "",
       "popularBadge": "Plus populaire",
@@ -333,8 +351,9 @@
       }
     },
     "preorderForm": {
-      "title": "Formulaire de souscription anticipée",
+      "title": "Formulaire de souscription",
       "subtitle": "Souscrivez à l'édition 2026.",
+      "openNewTab": "Ouvrir dans un nouvel onglet ↗",
       "labelCompany": "Société / Organisme",
       "labelFullName": "Nom & Prénom",
       "labelFirstName": "Prénom",
@@ -347,9 +366,9 @@
       "labelCountry": "Pays",
       "labelPack": "Offre sélectionnée",
       "packOptions": {
-        "essential": "Pack Essentiel (75 600 DA HT souscription anticipée / 84 000 DA HT)",
-        "pro": "Pack Pro (108 000 DA HT souscription anticipée / 120 000 DA HT)",
-        "corporate": "Pack Corporate Executive (162 000 DA HT souscription anticipée / 180 000 DA HT)"
+        "essential": "Pack Essentiel (84 000 DA HT)",
+        "pro": "Pack Pro (120 000 DA HT)",
+        "corporate": "Pack Corporate Executive (180 000 DA HT)"
       },
       "labelUserCount": "Nombre d’utilisateurs",
       "labelProforma": "Facture pro forma",
@@ -359,7 +378,7 @@
         "presentation": "Présentation exécutive devant le comité de direction",
         "benchmark": "Benchmark personnalisé de l’établissement"
       },
-      "labelTermsConsent": "J’ai pris connaissance du fait que l’édition 2026 est en cours de finalisation et qu’elle me sera livrée dès sa publication.",
+      "labelTermsConsent": "J’ai pris connaissance du fait que l’édition 2026 est disponible et qu’elle me sera livrée dès validation de commande.",
       "labelTermsAccept": "J'accepte les Termes & Conditions",
       "labelPrivacyConsent": "J'ai pris connaissance de la politique de confidentialité et donne mon consentement au traitement de mes données selon cette politique.",
       "privacyModalTitle": "Politique de confidentialité — Tadjeddine & Partners",
@@ -443,7 +462,7 @@
         },
         {
           "q": "Les données 2024 sont-elles les mêmes que dans l’édition précédente ?",
-          "a": "Pas nécessairement.\n\nCertaines banques ont procédé, dans leurs publications ultérieures, à des reclassements ou retraitements de certains postes financiers.\n\nPour garantir la meilleure cohérence possible avec les données 2025, l’édition 2026 retient les données 2024 révisées les plus récentes disponibles.\n\nCes données remplacent donc, lorsque cela est nécessaire, celles utilisées dans l’édition précédente."
+          "a": "Les données retenues pour chaque exercice correspondent aux comptes arrêtés et adoptés par l’Assemblée Générale de la banque concernée à la date de collecte. Elles peuvent différer de données republiées ultérieurement par l’établissement (reclassements, retraitements de postes). ABIX privilégie cette approche afin de garantir une méthode de collecte homogène et comparable dans le temps et entre établissements."
         },
         {
           "q": "Le Baromètre des services bancaires influencera-t-il les résultats financiers ou les classements des banques ?",
@@ -2454,7 +2473,7 @@
         ],
         "category": "ratios_profitability",
         "short_definition": "Indicateur de rentabilité des fonds propres publié par la source financière puis importé dans ABIX.",
-        "detailed_definition": "ABIX Data Explorer ne recalcule pas le ROE : il conserve la valeur publiée ou importée depuis la source annuelle. Le dénominateur exact peut donc suivre la convention de la source (fonds propres moyens, de clôture ou ajustés). Cette définition doit être vérifiée dans le document source ; le ROAE reste un concept pédagogique distinct.",
+        "detailed_definition": "Le ROE ABIX est calculé selon une méthode comptable propre à ABIX, appliquée de façon homogène à l'ensemble des banques couvertes depuis 2019/2020. Il s'agit d'un ROE comptable, distinct des ratios de rentabilité prudentiels réglementaires. Cette méthode n'a pas varié dans le temps, afin de garantir la comparabilité des séries historiques et entre établissements.",
         "formula": "ROE = valeur publiée/importée (convention du document source)",
         "formula_latex": "\\\\text{ROE}_{ABIX} = \\\\text{valeur publiée ou importée}",
         "interpretation": "Un ROE élevé témoigne d'une rentabilité financière robuste, mais doit être analysé conjointement avec le levier financier et le profil de risque.",
@@ -4220,7 +4239,7 @@
   "glossary.terms.bons-du-tresor.example": "Exemple pédagogique : Une banque place 50 Mds DZD de ses liquidités excédentaires dans des obligations d'État, ce montant représente son portefeuille de bons du trésor.",
   "glossary.terms.return-on-equity.term": "Return on Equity (Rentabilité des Fonds Propres)",
   "glossary.terms.return-on-equity.short_definition": "Indicateur de rentabilité des fonds propres publié par la source financière puis importé dans ABIX.",
-  "glossary.terms.return-on-equity.detailed_definition": "ABIX Data Explorer ne recalcule pas le ROE : il conserve la valeur publiée ou importée depuis la source annuelle. Le dénominateur exact peut donc suivre la convention de la source (fonds propres moyens, de clôture ou ajustés). Cette définition doit être vérifiée dans le document source ; le ROAE reste un concept pédagogique distinct.",
+  "glossary.terms.return-on-equity.detailed_definition": "Le ROE ABIX est calculé selon une méthode comptable propre à ABIX, appliquée de façon homogène à l'ensemble des banques couvertes depuis 2019/2020. Il s'agit d'un ROE comptable, distinct des ratios de rentabilité prudentiels réglementaires. Cette méthode n'a pas varié dans le temps, afin de garantir la comparabilité des séries historiques et entre établissements.",
   "glossary.terms.return-on-equity.interpretation": "Un ROE élevé témoigne d'une rentabilité financière robuste, mais doit être analysé conjointement avec le levier financier et le profil de risque.",
   "glossary.terms.return-on-equity.example": "Exemple pédagogique : Si le résultat net est de 10 Mds DZD pour des fonds propres de 100 Mds DZD, le ROE est de 10 %.",
   "glossary.terms.return-on-average-equity.term": "Return on Average Equity (ROAE)",

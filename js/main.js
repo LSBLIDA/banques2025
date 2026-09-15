@@ -439,7 +439,8 @@
   };
 
   window.openPreview = function () {
-    window.trackEvent("click_preview_2025");
+    var is2026 = window.location.pathname.indexOf("2026") !== -1;
+    window.trackEvent(is2026 ? "click_preview_2026" : "click_preview_2025");
     var modal = qs("#previewModal");
     if (modal) { modal.classList.remove("hidden"); document.body.style.overflow = "hidden"; }
   };
@@ -448,6 +449,19 @@
     var modal = qs("#previewModal");
     if (modal) { modal.classList.add("hidden"); document.body.style.overflow = ""; }
   };
+
+  // Gestion de l'ancre #synthese (défilement et ouverture automatique de l'aperçu)
+  if (window.location.hash === "#synthese") {
+    setTimeout(function () {
+      var synthEl = qs("#synthese");
+      if (synthEl) {
+        synthEl.scrollIntoView({ behavior: "smooth", block: "center" });
+      }
+      if (typeof window.openPreview === "function") {
+        window.openPreview();
+      }
+    }, 300);
+  }
 
   // Fermer les modaux en cliquant sur le backdrop
   ["preorderModal", "orderModal", "previewModal"].forEach(function (id) {

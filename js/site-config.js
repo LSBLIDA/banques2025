@@ -56,20 +56,21 @@ const SITE_CONFIG = {
       }
     },
     "2026": {
-      status: "preorder",            // "available" | "preorder" | "preparation" | "archived"
-      coverUrl: null,                // null = visuel provisoire généré en CSS/HTML
-      coverStatus: "provisional",    // "provisional" | "official"
+      status: "available",           // "available" | "preorder" | "preparation" | "archived"
+      coverUrl: "/public/couverture-2026.jpg",
+      coverStatus: "official",       // "provisional" | "official"
       periodAnalyzed: "2023–2025",
       pageCount: null,               // Non renseigné → non affiché
       bankCount: 21,                 // 21 banques commerciales couvertes en 2026 (avec Ziraat Bank)
       releaseDate: null,             // Non validée → non affichée
-      synthesisAvailable: false,     // Synthèse exécutive non exposée
+      previewPdfUrl: "/public/apercu-etude-bancaire-2026.pdf",
+      synthesisAvailable: true,      // Synthèse exécutive disponible
       leadFormEndpoint: null,        // null = formulaire en mode fallback/réservation
       orderEnabled: false,
       preorderEnabled: true,
       preorderMode: "lead",          // "direct" (paiement direct) | "lead" (réservation commerciale)
       earlyBird: {
-        enabled: true,
+        enabled: false,
         deadline: "2026-08-31T23:59:59+01:00"
       },
       offers: {

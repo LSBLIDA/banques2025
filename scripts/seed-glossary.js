@@ -685,9 +685,9 @@ const RAW_ENTRIES = [
       "ar": "مؤشر العائد على حقوق الملكية كما تنشره الجهة المالية ثم يُستورد إلى ABIX."
     },
     "detailed_definition": {
-      "fr": "ABIX Data Explorer ne recalcule pas le ROE : il conserve la valeur publiée ou importée depuis la source annuelle. Le dénominateur exact peut donc suivre la convention de la source (fonds propres moyens, de clôture ou ajustés). Cette définition doit être vérifiée dans le document source ; le ROAE reste un concept pédagogique distinct.",
-      "en": "ABIX Data Explorer does not recalculate ROE: it preserves the value published or imported from the annual source. The exact denominator may therefore follow the source convention (average, closing, or adjusted equity). Verify that definition in the source document; ROAE remains a separate educational concept.",
-      "ar": "لا يعيد ABIX Data Explorer احتساب ROE، بل يحافظ على القيمة المنشورة أو المستوردة من المصدر السنوي. وقد يتبع المقام اتفاقية المصدر، سواء حقوق الملكية المتوسطة أو الختامية أو المعدلة. يجب التحقق من التعريف في وثيقة المصدر، بينما يبقى ROAE مفهوماً تعليمياً منفصلاً."
+      "fr": "Le ROE ABIX est calculé selon une méthode comptable propre à ABIX, appliquée de façon homogène à l'ensemble des banques couvertes depuis 2019/2020. Il s'agit d'un ROE comptable, distinct des ratios de rentabilité prudentiels réglementaires. Cette méthode n'a pas varié dans le temps, afin de garantir la comparabilité des séries historiques et entre établissements.",
+      "en": "ABIX ROE is calculated according to an accounting methodology specific to ABIX, applied consistently to all covered banks since 2019/2020. It is an accounting ROE, distinct from regulatory prudential profitability ratios. This methodology has remained unchanged over time, in order to guarantee the comparability of historical series and across institutions.",
+      "ar": "يُحسب ROE ABIX وفق منهجية محاسبية خاصة بـ ABIX، مطبقة بشكل متجانس على كافة البنوك المغطاة منذ 2019/2020. وهو ROE محاسبي، متميز عن نسب الربحية الاحترازية التنظيمية. ولم تتغير هذه المنهجية عبر الزمن، لضمان قابلية مقارنة السلاسل التاريخية وبين مختلف المؤسسات."
     },
     "formula": "ROE = valeur publiée/importée (convention du document source)",
     "formula_latex": "\\\\text{ROE}_{ABIX} = \\\\text{valeur publiée ou importée}",

@@ -335,6 +335,10 @@ function buildMainNav(lang, pageKey, translations, langSwitcher, mobileLangSwitc
   const reportPath = lang === 'fr' ? 'editions/rapport-2023/' : 'editions/report-2023/';
   const glossaryPath = lang === 'en' ? 'glossary/' : 'glossaire/';
 
+  const is2026Avail = SITE_CONFIG.editions && SITE_CONFIG.editions["2026"] && SITE_CONFIG.editions["2026"].status === "available";
+  const ed2026BadgeClass = is2026Avail ? "dropdown-badge--avail" : "dropdown-badge--prep";
+  const ed2026BadgeText = is2026Avail ? availBadge : prepBadge;
+
   return `<nav id="main-nav" class="fixed top-0 w-full bg-white/95 backdrop-blur-sm z-50 border-b border-gray-100 transition-all duration-300">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex justify-between items-center h-16">
@@ -353,7 +357,7 @@ function buildMainNav(lang, pageKey, translations, langSwitcher, mobileLangSwitc
           </button>
           <div class="dropdown-menu">
             <a href="${BASE_PATH}/${lang}/editions/2026/" class="dropdown-item${isEd2026Active}">
-              <span class="dropdown-badge dropdown-badge--prep">${prepBadge}</span>
+              <span class="dropdown-badge ${ed2026BadgeClass}">${ed2026BadgeText}</span>
               ${tNav.edition2026 || "Édition 2026"}
             </a>
             <a href="${BASE_PATH}/${lang}/editions/2025/" class="dropdown-item${isEd2025Active}">
@@ -435,7 +439,7 @@ function buildMainNav(lang, pageKey, translations, langSwitcher, mobileLangSwitc
         <div class="ps-3 border-s-2 border-primary/20 space-y-1 my-1">
           <a href="${BASE_PATH}/${lang}/editions/2026/" class="mobile-nav-link flex items-center justify-between${pageKey === 'edition2026' ? ' mobile-nav-link--active' : ''}">
             <span>${tNav.edition2026 || "Édition 2026"}</span>
-            <span class="dropdown-badge dropdown-badge--prep">${prepBadge}</span>
+            <span class="dropdown-badge ${ed2026BadgeClass}">${ed2026BadgeText}</span>
           </a>
           <a href="${BASE_PATH}/${lang}/editions/2025/" class="mobile-nav-link flex items-center justify-between${pageKey === 'edition2025' ? ' mobile-nav-link--active' : ''}">
             <span>${tNav.edition2025 || "Édition 2025"}</span>

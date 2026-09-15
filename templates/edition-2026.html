@@ -67,7 +67,11 @@
             <svg class="w-5 h-5 me-2 flex-shrink-0 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
             {{edition2026.hero.ctaPreorder}}
           </a>
-          <button onclick="openVideoModal()" class="btn-secondary-hero">
+          <button id="synthese" onclick="openPreview()" class="scroll-mt-16 btn-secondary-hero flex items-center justify-center gap-2">
+            <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
+            {{edition2026.hero.ctaPreview}}
+          </button>
+          <button onclick="openVideoModal()" class="btn-ghost-hero flex items-center justify-center">
             {{edition2026.hero.ctaNotify}}
           </button>
         </div>
@@ -75,7 +79,7 @@
 
       <!-- Couverture 2026 (Col 5) -->
       <div class="lg:col-span-5 flex justify-center">
-        <div class="relative bg-white/10 rounded-2xl overflow-hidden shadow-2xl border border-white/20 max-w-xs transform hover:scale-105 transition-transform duration-300">
+        <div onclick="openPreview()" class="cursor-pointer relative bg-white/10 rounded-2xl overflow-hidden shadow-2xl border border-white/20 max-w-xs transform hover:scale-105 transition-transform duration-300">
           <img src="{{__basePath}}/public/couverture-2026.jpg" alt="Couverture Algeria Banking Index Édition 2026"
             class="w-full h-auto object-cover rounded-2xl"
             onerror="this.src='/public/logo.png'; this.onerror=null;" />
@@ -83,7 +87,7 @@
             <p class="text-xs font-bold text-white mb-0.5">{{edition2026.hero.title}}</p>
             <p class="text-[11px] font-semibold text-amber-300">{{home.covers.cover2026Subtitle}}</p>
             <p class="text-[9px] text-blue-200/90 font-normal">{{home.covers.cover2026Trends}}</p>
-            <span class="inline-block text-[10px] text-amber-300 font-semibold bg-amber-500/20 px-2.5 py-0.5 rounded-full border border-amber-400/30 mt-1">Souscription anticipée</span>
+            <span class="inline-block text-[10px] text-amber-300 font-semibold bg-amber-500/20 px-2.5 py-0.5 rounded-full border border-amber-400/30 mt-1">{{edition2026.hero.coverBadge}}</span>
           </div>
         </div>
       </div>
@@ -106,6 +110,9 @@
           <h3 class="font-bold text-gray-900 text-base">{{edition2026.forecast.cards.0.title}}</h3>
           <p class="text-xs text-gray-600 leading-relaxed">{{edition2026.forecast.cards.0.body}}</p>
         </div>
+        <button onclick="openPreview()" class="mt-4 pt-3 border-t border-gray-100 text-xs font-semibold text-accent hover:text-primary transition-colors w-full text-start flex items-center justify-between">
+          <span>{{edition2026.previewBtn}}</span>
+        </button>
       </div>
       <!-- Carte 02 -->
       <div class="bg-white rounded-xl p-6 border border-gray-200 shadow-sm space-y-3 flex flex-col justify-between hover:shadow-md transition-shadow">
@@ -114,6 +121,9 @@
           <h3 class="font-bold text-gray-900 text-base">{{edition2026.forecast.cards.1.title}}</h3>
           <p class="text-xs text-gray-600 leading-relaxed">{{edition2026.forecast.cards.1.body}}</p>
         </div>
+        <button onclick="openPreview()" class="mt-4 pt-3 border-t border-gray-100 text-xs font-semibold text-accent hover:text-primary transition-colors w-full text-start flex items-center justify-between">
+          <span>{{edition2026.previewBtn}}</span>
+        </button>
       </div>
       <!-- Carte 03 -->
       <div class="bg-white rounded-xl p-6 border border-gray-200 shadow-sm space-y-3 flex flex-col justify-between hover:shadow-md transition-shadow">
@@ -122,6 +132,9 @@
           <h3 class="font-bold text-gray-900 text-base">{{edition2026.forecast.cards.2.title}}</h3>
           <p class="text-xs text-gray-600 leading-relaxed">{{edition2026.forecast.cards.2.body}}</p>
         </div>
+        <button onclick="openPreview()" class="mt-4 pt-3 border-t border-gray-100 text-xs font-semibold text-accent hover:text-primary transition-colors w-full text-start flex items-center justify-between">
+          <span>{{edition2026.previewBtn}}</span>
+        </button>
       </div>
       <!-- Carte 04 -->
       <div class="bg-white rounded-xl p-6 border border-gray-200 shadow-sm space-y-3 flex flex-col justify-between hover:shadow-md transition-shadow">
@@ -130,6 +143,9 @@
           <h3 class="font-bold text-gray-900 text-base">{{edition2026.forecast.cards.3.title}}</h3>
           <p class="text-xs text-gray-600 leading-relaxed">{{edition2026.forecast.cards.3.body}}</p>
         </div>
+        <button onclick="openPreview()" class="mt-4 pt-3 border-t border-gray-100 text-xs font-semibold text-accent hover:text-primary transition-colors w-full text-start flex items-center justify-between">
+          <span>{{edition2026.previewBtn}}</span>
+        </button>
       </div>
       <!-- Carte 05 -->
       <div class="bg-white rounded-xl p-6 border border-gray-200 shadow-sm space-y-3 flex flex-col justify-between hover:shadow-md transition-shadow">
@@ -138,6 +154,9 @@
           <h3 class="font-bold text-gray-900 text-base">{{edition2026.forecast.cards.4.title}}</h3>
           <p class="text-xs text-gray-600 leading-relaxed">{{edition2026.forecast.cards.4.body}}</p>
         </div>
+        <button onclick="openPreview()" class="mt-4 pt-3 border-t border-gray-100 text-xs font-semibold text-accent hover:text-primary transition-colors w-full text-start flex items-center justify-between">
+          <span>{{edition2026.previewBtn}}</span>
+        </button>
       </div>
       <!-- Carte 06 -->
       <div class="bg-white rounded-xl p-6 border border-gray-200 shadow-sm space-y-3 flex flex-col justify-between hover:shadow-md transition-shadow">
@@ -146,6 +165,9 @@
           <h3 class="font-bold text-gray-900 text-base">{{edition2026.forecast.cards.5.title}}</h3>
           <p class="text-xs text-gray-600 leading-relaxed">{{edition2026.forecast.cards.5.body}}</p>
         </div>
+        <button onclick="openPreview()" class="mt-4 pt-3 border-t border-gray-100 text-xs font-semibold text-accent hover:text-primary transition-colors w-full text-start flex items-center justify-between">
+          <span>{{edition2026.previewBtn}}</span>
+        </button>
       </div>
     </div>
   </div>
@@ -609,7 +631,7 @@
       "name": "Quand l’étude sera-t-elle publiée ?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "La publication de l’édition 2026 est prévue en septembre 2026, après finalisation des derniers travaux d’analyse et validation éditoriale. Les souscripteurs seront informés dès sa mise à disposition et recevront les livrables correspondant à l’offre souscrite."
+        "text": "L’édition 2026 est disponible dès maintenant. Les acquéreurs et souscripteurs reçoivent immédiatement les livrables correspondant à l’offre choisie."
       }
     },
     {
@@ -657,7 +679,7 @@
       "name": "Les données 2024 sont-elles les mêmes que dans l’édition précédente ?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Pas nécessairement.\n\nCertaines banques ont procédé, dans leurs publications ultérieures, à des reclassements ou retraitements de certains postes financiers.\n\nPour garantir la meilleure cohérence possible avec les données 2025, l’édition 2026 retient les données 2024 révisées les plus récentes disponibles.\n\nCes données remplacent donc, lorsque cela est nécessaire, celles utilisées dans l’édition précédente."
+        "text": "Les données retenues pour chaque exercice correspondent aux comptes arrêtés et adoptés par l’Assemblée Générale de la banque concernée à la date de collecte. Elles peuvent différer de données republiées ultérieurement par l’établissement (reclassements, retraitements de postes). ABIX privilégie cette approche afin de garantir une méthode de collecte homogène et comparable dans le temps et entre établissements."
       }
     },
     {
@@ -763,7 +785,7 @@
   <div class="bg-slate-900 text-white rounded-3xl max-w-2xl w-full max-h-[95vh] flex flex-col border border-amber-400/30 shadow-2xl relative overflow-hidden">
     <div class="p-4 sm:p-5 border-b border-gray-800 flex items-center justify-between bg-slate-900/90 flex-shrink-0">
       <div>
-        <h3 id="preorderModalTitle" class="text-lg font-bold text-white font-playfair">Formulaire de souscription</h3>
+        <h3 id="preorderModalTitle" class="text-lg font-bold text-white font-playfair">{{edition2026.preorderForm.title}}</h3>
         <!-- Détails dynamiques de l'offre (i18n) -->
         <div id="preorderModalDetails-essential" class="preorder-details hidden mt-2 text-sm text-gray-300">
           <p class="text-xs text-gray-400">{{edition2026.pricing.essential.userLicensesText}}</p>
@@ -784,7 +806,7 @@
             </div>
           </div>
       </div>
-      <button onclick="closePreorder()" class="text-gray-400 hover:text-white transition-colors p-2 rounded-xl hover:bg-slate-800" aria-label="Fermer">
+      <button onclick="closePreorder()" class="text-gray-400 hover:text-white transition-colors p-2 rounded-xl hover:bg-slate-800" aria-label="{{edition2026.modal.closeLabel}}">
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
       </button>
     </div>
@@ -799,7 +821,7 @@
   <div class="bg-white text-gray-900 rounded-2xl p-6 sm:p-8 max-w-3xl w-full border border-gray-200 shadow-2xl relative max-h-[90vh] flex flex-col space-y-4">
     <div class="flex items-center justify-between border-b border-gray-100 pb-4">
       <h3 class="text-xl font-bold font-playfair text-gray-900">{{edition2026.preorderForm.privacyModalTitle}}</h3>
-      <button onclick="closePrivacyModal()" class="text-gray-400 hover:text-gray-600 transition-colors p-1 rounded-lg hover:bg-gray-100" aria-label="Fermer">
+      <button onclick="closePrivacyModal()" class="text-gray-400 hover:text-gray-600 transition-colors p-1 rounded-lg hover:bg-gray-100" aria-label="{{edition2026.modal.closeLabel}}">
         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
       </button>
     </div>
@@ -807,8 +829,45 @@
       <iframe src="https://tadjeddine-partners.com/politique-confidentialite/" class="w-full h-[450px] border border-gray-200 rounded-xl"></iframe>
     </div>
     <div class="pt-4 border-t border-gray-100 flex items-center justify-between gap-3">
-      <a href="https://tadjeddine-partners.com/politique-confidentialite/" target="_blank" rel="noopener" class="text-xs font-semibold text-primary hover:underline flex items-center gap-1">Ouvrir dans un nouvel onglet ↗</a>
-      <button onclick="closePrivacyModal()" class="btn-cta-sm py-2 px-5">Fermer</button>
+      <a href="https://tadjeddine-partners.com/politique-confidentialite/" target="_blank" rel="noopener" class="text-xs font-semibold text-primary hover:underline flex items-center gap-1">{{edition2026.preorderForm.openNewTab}}</a>
+      <button onclick="closePrivacyModal()" class="btn-cta-sm py-2 px-5">{{edition2026.modal.closeLabel}}</button>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL APERÇU ÉDITION 2026 -->
+<div id="previewModal" class="fixed inset-0 bg-black/60 z-50 hidden flex items-center justify-center p-4" role="dialog" aria-modal="true" aria-labelledby="previewModalTitle">
+  <div class="bg-white rounded-2xl max-w-3xl w-full max-h-[90vh] overflow-y-auto shadow-2xl">
+    <div class="p-5 border-b border-gray-100 flex justify-between items-center">
+      <h3 id="previewModalTitle" class="text-xl font-bold text-gray-900">{{edition2026.modal.previewTitle}}</h3>
+      <button onclick="closePreview()" class="text-gray-400 hover:text-gray-600 transition-colors p-1 rounded-lg hover:bg-gray-100" aria-label="{{edition2026.modal.closeLabel}}">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <div class="p-6">
+      <div class="grid md:grid-cols-2 gap-8">
+        <div>
+          <img src="{{__basePath}}/public/analyses.png" alt="{{edition2026.modal.imageAlt}}" class="w-full rounded-xl shadow-sm border border-gray-100" onerror="this.src='/public/logo.png';" />
+          <p class="text-xs text-gray-400 text-center mt-2">{{edition2026.modal.imageCaption}}</p>
+        </div>
+        <div class="space-y-4">
+          <h4 class="font-bold text-gray-900">{{edition2026.modal.contentTitle}}</h4>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-start gap-2"><svg class="w-4 h-4 text-accent mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>{{edition2026.modal.items.0}}</li>
+            <li class="flex items-start gap-2"><svg class="w-4 h-4 text-accent mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>{{edition2026.modal.items.1}}</li>
+            <li class="flex items-start gap-2"><svg class="w-4 h-4 text-accent mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>{{edition2026.modal.items.2}}</li>
+            <li class="flex items-start gap-2"><svg class="w-4 h-4 text-accent mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>{{edition2026.modal.items.3}}</li>
+          </ul>
+          <div class="pt-2 space-y-3">
+            <a href="{{__basePath}}/public/apercu-etude-bancaire-2026.pdf" download="apercu-abix-2026.pdf" class="block w-full btn-cta text-center">
+              {{edition2026.modal.ctaDownload}}
+            </a>
+            <button onclick="closePreview(); document.getElementById('tarifs').scrollIntoView({behavior:'smooth'})" class="block w-full btn-outline text-center">
+              {{edition2026.modal.ctaOrder}}
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
