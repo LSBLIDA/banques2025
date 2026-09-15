@@ -216,7 +216,10 @@ function injectConfigVars(html, lang, outputPath, pageKey, translations) {
     .replace(/\{\{__canonical\}\}/g, canonicalUrl)
     .replace(/\{\{__langSwitcher\}\}/g, langSwitcher)
     .replace(/\{\{__currentEdition\}\}/g, SITE_CONFIG.currentEdition)
-    .replace(/\{\{__basePath\}\}/g, BASE_PATH);
+    .replace(/\{\{__basePath\}\}/g, BASE_PATH)
+    .replace(/\{\{externalLinks\.publisherWebsite\}\}/g, SITE_CONFIG.externalLinks.publisherWebsite)
+    .replace(/\{\{externalLinks\.servicesPage\}\}/g, SITE_CONFIG.externalLinks.servicesPage)
+    .replace(/\{\{externalLinks\.contactPage\}\}/g, SITE_CONFIG.externalLinks.contactPage);
 
   if (pageKey === "transparency2025") {
     res = res
