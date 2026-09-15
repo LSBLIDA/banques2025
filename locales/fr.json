@@ -535,6 +535,43 @@
           "body": "Des contributions de dirigeants et d’experts pourront compléter les analyses indépendantes de l’étude, sous réserve de confirmation éditoriale."
         }
       ]
+    },
+    "coverImage": "/public/couverture-2026.jpg",
+    "synthesisPage": {
+      "meta": {
+        "title": "Synthèse exécutive — Algeria Banking Index 2026",
+        "description": "Découvrez l'extrait gratuit de l'étude annuelle sur la performance du secteur bancaire algérien."
+      },
+      "breadcrumb": {
+        "home": "Accueil",
+        "edition": "Édition 2026",
+        "current": "Extrait"
+      },
+      "badge": "Extrait gratuit",
+      "title": "Synthèse exécutive de l'édition 2026",
+      "subtitle": "Un aperçu exclusif de l'étude annuelle de référence sur la performance des 21 banques en Algérie, couvrant l'analyse financière, la dynamique commerciale et l'efficacité opérationnelle.",
+      "ctaDownload": "Télécharger l'extrait (PDF)",
+      "downloadNotice": "Fichier PDF — Environ 4 Mo",
+      "contentTitle": "Au sommaire de cet extrait :",
+      "items": [
+        "Méthodologie détaillée du cadre d'analyse 4D",
+        "Synthèse des faits marquants de l'exercice 2024–2025",
+        "Aperçu des parts de marché et du classement du Baromètre des services bancaires",
+        "Présentation détaillée des livrables de l'étude complète (170 pages)"
+      ],
+      "ctaSecondary": "Découvrir les offres complètes",
+      "coverBadge": "APERÇU 2026",
+      "coverAlt": "Couverture de la synthèse exécutive 2026",
+      "reassuranceTitle": "Pourquoi lire cet extrait ?",
+      "fullStudyCard": {
+        "tag": "ÉTUDE COMPLÈTE",
+        "title": "Prêt à aller plus loin ?",
+        "description": "Obtenez l'étude complète de 170 pages avec l'ensemble des données financières détaillées et l'accès au Data Explorer interactif.",
+        "benefit1": "Analyse complète des 21 banques",
+        "benefit2": "Accès Data Explorer interactif",
+        "benefit3": "Classements détaillés par indicateur",
+        "cta": "Voir les tarifs"
+      }
     }
   },
   "edition2025": {

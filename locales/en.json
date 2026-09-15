@@ -461,6 +461,43 @@
           "body": "Contributions from banking leaders and experts will complement independent study analyses, subject to editorial confirmation."
         }
       ]
+    },
+    "coverImage": "/public/couverture-2026-en.jpg",
+    "synthesisPage": {
+      "meta": {
+        "title": "Executive Summary — Algeria Banking Index 2026",
+        "description": "Discover the free excerpt of the annual study on the performance of the Algerian banking sector."
+      },
+      "breadcrumb": {
+        "home": "Home",
+        "edition": "2026 Edition",
+        "current": "Excerpt"
+      },
+      "badge": "Free Excerpt",
+      "title": "2026 Edition Executive Summary",
+      "subtitle": "An exclusive overview of the reference annual study on the performance of 21 banks in Algeria, covering financial analysis, commercial dynamics, and operational efficiency.",
+      "ctaDownload": "Download the excerpt (PDF)",
+      "downloadNotice": "PDF File — Approx. 4 MB",
+      "contentTitle": "Inside this excerpt:",
+      "items": [
+        "Detailed methodology of the 4D analysis framework",
+        "Summary of key highlights from the 2024–2025 financial year",
+        "Overview of market shares and Banking Services Barometer ranking",
+        "Detailed presentation of the full study deliverables (170 pages)"
+      ],
+      "ctaSecondary": "Discover full offers",
+      "coverBadge": "2026 PREVIEW",
+      "coverAlt": "2026 executive summary cover",
+      "reassuranceTitle": "Why read this excerpt?",
+      "fullStudyCard": {
+        "tag": "FULL STUDY",
+        "title": "Ready to go further?",
+        "description": "Get the complete 170-page study with all detailed financial data and access to the interactive Data Explorer.",
+        "benefit1": "Complete analysis of 21 banks",
+        "benefit2": "Interactive Data Explorer access",
+        "benefit3": "Detailed rankings by indicator",
+        "cta": "View pricing"
+      }
     }
   },
   "edition2025": {
