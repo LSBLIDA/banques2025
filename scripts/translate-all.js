@@ -240,8 +240,8 @@ const enData = {
         "title": "Corporate Executive Pack",
         "tagline": "Explore and share data",
         "userLicensesText": "Up to 20 users · Executive PPT presentation included",
-        "regularPrice": "180,000 DA HT",
-        "earlyBirdPrice": "162,000 DA HT",
+        "regularPrice": "280,000 DA HT",
+        "earlyBirdPrice": "280,000 DA HT",
         "saving": "Save 18,000 DA HT",
         "cta": "Subscribe to Corporate Executive Pack",
         "ctaAfterAvailable": "Order Corporate Executive Pack",
@@ -277,7 +277,7 @@ const enData = {
       "packOptions": {
         "essential": "Essential Pack (75,600 DA HT early / 84,000 DA HT)",
         "pro": "Pro Pack (108,000 DA HT early / 120,000 DA HT)",
-        "corporate": "Corporate Executive Pack (162,000 DA HT early / 180,000 DA HT)"
+        "corporate": "Corporate Executive Pack (280,000 DA excl. tax)"
       },
       "labelUserCount": "Number of users",
       "labelProforma": "Pro forma invoice",
@@ -1439,8 +1439,8 @@ const arData = {
         "title": "الباقة التنفيذية المؤسسية",
         "tagline": "استكشف البيانات وشاركها",
         "userLicensesText": "حتى 20 مستخدماً · عرض تنفيذي PowerPoint مضمّن",
-        "regularPrice": "180,000 دج بدون ضريبة",
-        "earlyBirdPrice": "162,000 دج بدون ضريبة",
+        "regularPrice": "280,000 دج بدون ضريبة",
+        "earlyBirdPrice": "280,000 دج بدون ضريبة",
         "saving": "وفّر 18,000 دج بدون ضريبة",
         "cta": "الاشتراك في الباقة التنفيذية المؤسسية",
         "ctaAfterAvailable": "طلب الباقة التنفيذية المؤسسية",
@@ -1476,7 +1476,7 @@ const arData = {
       "packOptions": {
         "essential": "الباقة الأساسية (75,600 دج مسبق / 84,000 دج)",
         "pro": "الباقة الاحترافية (108,000 دج مسبق / 120,000 دج)",
-        "corporate": "الباقة التنفيذية المؤسسية (162,000 دج مسبق / 180,000 دج)"
+        "corporate": "الباقة التنفيذية المؤسسية (280,000 دج بدون ضريبة)"
       },
       "labelUserCount": "عدد المستخدمين",
       "labelProforma": "فاتورة مبدئية",

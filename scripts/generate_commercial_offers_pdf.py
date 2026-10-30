@@ -10,6 +10,7 @@ Génère 3 offres PDF A4 haute fidélité (2 pages chacune) pour :
 
 import os
 import sys
+import json
 from reportlab.lib.pagesizes import A4
 from reportlab.lib import colors
 from reportlab.platypus import (
@@ -212,7 +213,7 @@ def build_offer_pdf(plan_key, plan_data, output_path):
     # ══════════════════════════════════════════════════════════════════════════
     
     # 1. En-tête de l'offre & Titre du Pack
-    badge_p = Paragraph(f"<font color='#081426'><b>OFFRE COMMERCIALE 2026 — SOUSCRIPTION ANTICIPÉE</b></font>", title_badge_style)
+    badge_p = Paragraph(f"<font color='#081426'><b>OFFRE COMMERCIALE — ÉDITION 2026</b></font>", title_badge_style)
     badge_table = Table([[badge_p]], colWidths=[PAGE_WIDTH - 30*mm], rowHeights=[6.5*mm])
     badge_table.setStyle(TableStyle([
         ('BACKGROUND', (0, 0), (-1, -1), ACCENT_GOLD),
@@ -247,28 +248,23 @@ def build_offer_pdf(plan_key, plan_data, output_path):
     story.append(header_box)
     story.append(Spacer(1, 4*mm))
 
-    # 2. Cadre Financier & Tarification (Prix normal, remise 10%, promo HT, TVA 19%, TTC)
+    # 2. Cadre Financier & Tarification officielle 2026
     col_w1 = (PAGE_WIDTH - 30*mm) * 0.48
     col_w2 = (PAGE_WIDTH - 30*mm) * 0.52
 
     pricing_left = [
-        Paragraph("CONDITIONS TARIFAIRES EXCLUSIVES", card_h2),
+        Paragraph("TARIF OFFICIEL 2026", card_h2),
         Spacer(1, 2*mm),
-        Paragraph(f"Prix catalogue normal : <b><strike>{plan_data['regular_price_ht']:,} DA HT</strike></b>".replace(',', ' '), price_struck),
-        Paragraph(f"<font color='#10B981'><b>Remise Early Bird 10 % : -{plan_data['discount_amount']:,} DA</b></font>".replace(',', ' '), body_bold),
-        Spacer(1, 2*mm),
-        Paragraph(f"<b>{plan_data['promo_price_ht']:,} DA HT</b>".replace(',', ' '), price_hero),
+        Paragraph(f"<b>{plan_data['regular_price_ht']:,} DA HT</b>".replace(',', ' '), price_hero),
         Spacer(1, 1.5*mm),
         Paragraph(f"TVA (19 %) : {plan_data['vat_amount']:,} DA".replace(',', ' '), body_style),
         Paragraph(f"Montant Total TTC : <b>{plan_data['total_ttc']:,} DA TTC</b>".replace(',', ' '), price_ttc),
-        Spacer(1, 2*mm),
-        Paragraph(f"<b>Économie réalisée : {plan_data['discount_amount']:,} DA</b>".replace(',', ' '), ParagraphStyle('Eco', parent=body_bold, textColor=ACCENT_GOLD)),
     ]
 
     pricing_right = [
-        Paragraph("MODALITÉS DE L’OFFRE PROMOTIONNELLE", card_h2),
+        Paragraph("MODALITÉS DE L’OFFRE", card_h2),
         Spacer(1, 2*mm),
-        Paragraph("• <b>Validité de l'offre :</b> Jusqu'au 31 août 2026 inclus.", body_style),
+        Paragraph("• <b>Tarification :</b> Tarif applicable aux nouvelles souscriptions 2026.", body_style),
         Paragraph(f"• <b>Licence d'utilisation :</b> {plan_data['users']} utilisateur(s) autorisé(s).", body_style),
         Paragraph("• <b>Durée d'accès :</b> 12 mois complets à compter de l'activation.", body_style),
         Paragraph(f"• <b>Périmètre temporel :</b> {plan_data['data_explorer_period']}.", body_style),
@@ -313,6 +309,7 @@ def build_offer_pdf(plan_key, plan_data, output_path):
         adv_items = [
             ("Intelligence bancaire 360°", "Accès aux 4 exercices historiques complets (2022, 2023, 2024 et 2025) pour une profondeur d'analyse stratégique inégalée."),
             ("Executive Dashboard & Key Insights", "Synthèse décisionnelle haute direction avec identification immédiate des forces, faiblesses et ruptures de tendance."),
+            ("Planification stratégique triennale", "Diagnostic, projections et trois scénarios, axes, initiatives, risques, dossier institutionnel, gouvernance et suivi annuel des objectifs."),
             ("Déploiement groupe (20 utilisateurs)", "Large couverture pour vos comités de direction, équipes d'analyse financière, d'audit et de risk management."),
             ("Rapports Executive PDF & Exports Excel", "Exportation libre et illimitée des données consolidées et des synthèses graphiques prêtes pour vos présentations.")
         ]
@@ -465,47 +462,11 @@ def main():
     out_dir = os.path.join(base_dir, "public", "documents", "offres")
     os.makedirs(out_dir, exist_ok=True)
 
-    plans = {
-        'essentiel': {
-            'name': 'Pack Essentiel',
-            'positioning': 'Comprendre le marché',
-            'regular_price_ht': 84000,
-            'discount_amount': 8400,
-            'promo_price_ht': 75600,
-            'vat_amount': 14364,
-            'total_ttc': 89964,
-            'users': 1,
-            'data_explorer_period': 'Données 2025',
-            'filename': 'offre-abix-pack-essentiel-2026.pdf'
-        },
-        'pro': {
-            'name': 'Pack Pro',
-            'positioning': 'Exploiter les données',
-            'regular_price_ht': 120000,
-            'discount_amount': 12000,
-            'promo_price_ht': 108000,
-            'vat_amount': 20520,
-            'total_ttc': 128520,
-            'users': 3,
-            'data_explorer_period': 'Données 2024 et 2025',
-            'filename': 'offre-abix-pack-pro-2026.pdf'
-        },
-        'corporate': {
-            'name': 'Pack Corporate Executive',
-            'positioning': 'Analyser, comparer et partager',
-            'regular_price_ht': 180000,
-            'discount_amount': 18000,
-            'promo_price_ht': 162000,
-            'vat_amount': 30780,
-            'total_ttc': 192780,
-            'users': 20,
-            'data_explorer_period': 'Données historiques 2022, 2023, 2024 et 2025',
-            'filename': 'offre-abix-pack-corporate-executive-2026.pdf'
-        }
-    }
+    with open(os.path.join(base_dir, "data", "offers-2026.json"), encoding="utf-8") as source:
+        plans = json.load(source)["plans"]
 
     for key, data in plans.items():
-        out_file = os.path.join(out_dir, data['filename'])
+        out_file = os.path.join(out_dir, data['pdf_filename'])
         build_offer_pdf(key, data, out_file)
 
 if __name__ == '__main__':

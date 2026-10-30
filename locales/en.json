@@ -304,9 +304,9 @@
         "title": "Corporate Executive Pack",
         "tagline": "Analyze, compare and share",
         "userLicensesText": "Up to 20 users · Data Explorer Executive 2022–2025",
-        "regularPrice": "180,000 DA HT",
-        "earlyBirdPrice": "162,000 DA HT",
-        "saving": "Save 18,000 DA HT",
+        "regularPrice": "280,000 DA HT",
+        "earlyBirdPrice": "280,000 DA HT",
+        "saving": "",
         "cta": "Subscribe to Corporate Executive Pack",
         "ctaAfterAvailable": "Order Corporate Executive Pack",
         "ctaAfterPreorder": "Request Reservation",
@@ -343,7 +343,7 @@
       "packOptions": {
         "essential": "Essential Pack (84,000 DA HT)",
         "pro": "Pro Pack (120,000 DA HT)",
-        "corporate": "Corporate Executive Pack (180,000 DA HT)"
+        "corporate": "Corporate Executive Pack (280,000 DA HT)"
       },
       "labelUserCount": "Number of users",
       "labelProforma": "Pro forma invoice",
@@ -1738,8 +1738,8 @@
           "badge": "Recommended — Decision Makers & Executives",
           "title": "Pack Corporate Executive",
           "description": "Complete access for executive management, board committees, banks and institutions wishing to analyze historical data from 2022 to 2025.",
-          "price": "180,000 DA HT",
-          "earlyBirdPrice": "162,000 DA HT",
+          "price": "280,000 DA HT",
+          "earlyBirdPrice": "280,000 DA HT",
           "users": "Up to 20 users",
           "duration": "12-month access",
           "items": [

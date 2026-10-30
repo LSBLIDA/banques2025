@@ -26,20 +26,20 @@ expected_pdfs = [
     {
         'filename': 'offre-abix-pack-essentiel-2026.pdf',
         'name': 'Pack Essentiel',
-        'promo_price': '75 600 DA HT',
-        'total_ttc': '89 964 DA TTC'
+        'price': '84 000 DA HT',
+        'total_ttc': '99 960 DA TTC'
     },
     {
         'filename': 'offre-abix-pack-pro-2026.pdf',
         'name': 'Pack Pro',
-        'promo_price': '108 000 DA HT',
-        'total_ttc': '128 520 DA TTC'
+        'price': '120 000 DA HT',
+        'total_ttc': '142 800 DA TTC'
     },
     {
         'filename': 'offre-abix-pack-corporate-executive-2026.pdf',
         'name': 'Pack Corporate Executive',
-        'promo_price': '162 000 DA HT',
-        'total_ttc': '192 780 DA TTC'
+        'price': '280 000 DA HT',
+        'total_ttc': '333 200 DA TTC'
     }
 ]
 
@@ -58,7 +58,7 @@ for p in expected_pdfs:
             full_text += page.get_text() + "\n"
             
         check(p['name'] in full_text, f"Nom '{p['name']}' présent dans le texte du PDF")
-        check(p['promo_price'].replace(' ', '') in full_text.replace(' ', ''), f"Prix promo '{p['promo_price']}' présent dans le PDF")
+        check(p['price'].replace(' ', '') in full_text.replace(' ', ''), f"Prix officiel '{p['price']}' présent dans le PDF")
         check(p['total_ttc'].replace(' ', '') in full_text.replace(' ', ''), f"Prix TTC '{p['total_ttc']}' présent dans le PDF")
         
         # Vérification absence de données privées / factures proforma

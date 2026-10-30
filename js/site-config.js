@@ -73,66 +73,8 @@ const SITE_CONFIG = {
         enabled: false,
         deadline: "2026-08-31T23:59:59+01:00"
       },
-      offers: {
-        essential: {
-          id: "essentiel",
-          enabled: true,
-          title: "Pack Essentiel",
-          positioning: "Comprendre le marché",
-          regularPrice: 84000,
-          earlyBirdPrice: 75600,
-          discountPercentage: 10,
-          savingAmount: 8400,
-          vatAmount: 14364,
-          totalTTC: 89964,
-          currency: "DA HT",
-          userLicenses: 1,
-          orderMode: "lead",
-          pdfPath: "/public/documents/offres/offre-abix-pack-essentiel-2026.pdf",
-          pdfFilename: "offre-abix-pack-essentiel-2026.pdf",
-          confirmationPath: "/souscription/confirmation/essentiel",
-          orderFormUrl: null
-        },
-        pro: {
-          id: "pro",
-          enabled: true,
-          title: "Pack Pro",
-          positioning: "Exploiter les données",
-          regularPrice: 120000,
-          earlyBirdPrice: 108000,
-          discountPercentage: 10,
-          savingAmount: 12000,
-          vatAmount: 20520,
-          totalTTC: 128520,
-          currency: "DA HT",
-          userLicenses: 3,
-          orderMode: "lead",
-          pdfPath: "/public/documents/offres/offre-abix-pack-pro-2026.pdf",
-          pdfFilename: "offre-abix-pack-pro-2026.pdf",
-          confirmationPath: "/souscription/confirmation/pro",
-          orderFormUrl: null,
-          recommended: true
-        },
-        corporate: {
-          id: "corporate",
-          enabled: true,
-          title: "Pack Corporate Executive",
-          positioning: "Analyser, comparer et partager",
-          regularPrice: 180000,
-          earlyBirdPrice: 162000,
-          discountPercentage: 10,
-          savingAmount: 18000,
-          vatAmount: 30780,
-          totalTTC: 192780,
-          currency: "DA HT",
-          userLicenses: 20,
-          orderMode: "lead",
-          pdfPath: "/public/documents/offres/offre-abix-pack-corporate-executive-2026.pdf",
-          pdfFilename: "offre-abix-pack-corporate-executive-2026.pdf",
-          confirmationPath: "/souscription/confirmation/corporate",
-          orderFormUrl: null
-        }
-      }
+      // Chargé à la demande par les parcours commerciaux et partagé avec l'API PHP.
+      offersConfigUrl: "/data/offers-2026.json"
     }
   },
 
