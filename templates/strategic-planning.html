@@ -23,9 +23,12 @@
   <script src="{{__basePath}}/js/main.js" defer></script>
   <style>
     .sp-container{max-width:1280px;width:calc(100% - 32px);margin-inline:auto}.sp-section{padding-block:88px}
-    .sp-timeline{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));position:relative;gap:16px}.sp-timeline:before{content:"";position:absolute;inset-inline:8%;top:30px;height:2px;background:linear-gradient(90deg,#fbbf24,#22d3ee);opacity:.55}
-    .sp-step{position:relative}.sp-step-number{position:relative;z-index:1}
-    @media(max-width:900px){.sp-section{padding-block:56px}.sp-timeline{grid-template-columns:1fr;gap:12px}.sp-timeline:before{inset-inline-start:25px;inset-inline-end:auto;top:28px;bottom:28px;width:2px;height:auto;background:linear-gradient(#fbbf24,#22d3ee)}[dir="rtl"] .sp-timeline:before{inset-inline-start:25px;inset-inline-end:auto}.sp-step{padding-inline-start:72px}.sp-step-number{position:absolute;inset-inline-start:0;top:14px}}
+    .sp-timeline{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));position:relative;gap:16px}
+    .sp-timeline:before{content:"";position:absolute;inset-inline:4%;top:48px;height:2px;background:linear-gradient(90deg,#fbbf24,#22d3ee);opacity:.45;pointer-events:none;z-index:0}
+    .sp-step{position:relative;z-index:1}
+    .sp-step-number{position:relative}
+    @media(max-width:1024px){.sp-timeline{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.sp-timeline:before{display:none}}
+    @media(max-width:640px){.sp-section{padding-block:56px}.sp-timeline{grid-template-columns:1fr;gap:14px}}
     details[open] summary svg{transform:rotate(180deg)}
   </style>
 </head>
@@ -80,11 +83,31 @@
     <div class="sp-container">
       <div class="max-w-4xl mx-auto text-center mb-14"><h2 class="font-playfair text-3xl sm:text-4xl font-bold">{{strategicPlanning.process.title}}</h2><p class="mt-4 text-lg text-slate-300 leading-relaxed">{{strategicPlanning.process.subtitle}}</p></div>
       <div class="sp-timeline">
-        <article class="sp-step rounded-2xl border border-slate-700 bg-slate-800 p-5 pt-16 lg:pt-16"><div class="sp-step-number absolute top-4 inset-inline-start-4 w-12 h-12 rounded-full bg-amber-400 text-slate-950 flex items-center justify-center font-extrabold">{{strategicPlanning.process.steps.0.kicker}}</div><h3 class="font-bold text-amber-300 uppercase tracking-wide">{{strategicPlanning.process.steps.0.title}}</h3><p class="mt-2 text-sm text-slate-300 leading-relaxed">{{strategicPlanning.process.steps.0.body}}</p></article>
-        <article class="sp-step rounded-2xl border border-slate-700 bg-slate-800 p-5 pt-16 lg:pt-16"><div class="sp-step-number absolute top-4 inset-inline-start-4 w-12 h-12 rounded-full bg-amber-300 text-slate-950 flex items-center justify-center font-extrabold">{{strategicPlanning.process.steps.1.kicker}}</div><h3 class="font-bold text-amber-200 uppercase tracking-wide">{{strategicPlanning.process.steps.1.title}}</h3><p class="mt-2 text-sm text-slate-300 leading-relaxed">{{strategicPlanning.process.steps.1.body}}</p></article>
-        <article class="sp-step rounded-2xl border border-slate-700 bg-slate-800 p-5 pt-16 lg:pt-16"><div class="sp-step-number absolute top-4 inset-inline-start-4 w-12 h-12 rounded-full bg-cyan-300 text-slate-950 flex items-center justify-center font-extrabold">{{strategicPlanning.process.steps.2.kicker}}</div><h3 class="font-bold text-cyan-200 uppercase tracking-wide">{{strategicPlanning.process.steps.2.title}}</h3><p class="mt-2 text-sm text-slate-300 leading-relaxed">{{strategicPlanning.process.steps.2.body}}</p></article>
-        <article class="sp-step rounded-2xl border border-slate-700 bg-slate-800 p-5 pt-16 lg:pt-16"><div class="sp-step-number absolute top-4 inset-inline-start-4 w-12 h-12 rounded-full bg-cyan-400 text-slate-950 flex items-center justify-center font-extrabold">{{strategicPlanning.process.steps.3.kicker}}</div><h3 class="font-bold text-cyan-200 uppercase tracking-wide">{{strategicPlanning.process.steps.3.title}}</h3><p class="mt-2 text-sm text-slate-300 leading-relaxed">{{strategicPlanning.process.steps.3.body}}</p></article>
-        <article class="sp-step rounded-2xl border border-slate-700 bg-slate-800 p-5 pt-16 lg:pt-16"><div class="sp-step-number absolute top-4 inset-inline-start-4 w-12 h-12 rounded-full bg-cyan-500 text-white flex items-center justify-center font-extrabold">{{strategicPlanning.process.steps.4.kicker}}</div><h3 class="font-bold text-cyan-200 uppercase tracking-wide">{{strategicPlanning.process.steps.4.title}}</h3><p class="mt-2 text-sm text-slate-300 leading-relaxed">{{strategicPlanning.process.steps.4.body}}</p></article>
+        <article class="sp-step rounded-2xl border border-slate-700 bg-slate-800/90 p-5 sm:p-6 flex flex-col items-start relative z-10 transition-all duration-300 hover:border-slate-500">
+          <div class="sp-step-number w-12 h-12 rounded-full bg-amber-400 text-slate-950 flex items-center justify-center font-extrabold text-base mb-5 shadow-md">{{strategicPlanning.process.steps.0.kicker}}</div>
+          <h3 class="font-bold text-amber-300 uppercase tracking-wide text-sm sm:text-base leading-snug mb-2.5">{{strategicPlanning.process.steps.0.title}}</h3>
+          <p class="text-sm text-slate-300 leading-relaxed">{{strategicPlanning.process.steps.0.body}}</p>
+        </article>
+        <article class="sp-step rounded-2xl border border-slate-700 bg-slate-800/90 p-5 sm:p-6 flex flex-col items-start relative z-10 transition-all duration-300 hover:border-slate-500">
+          <div class="sp-step-number w-12 h-12 rounded-full bg-amber-300 text-slate-950 flex items-center justify-center font-extrabold text-base mb-5 shadow-md">{{strategicPlanning.process.steps.1.kicker}}</div>
+          <h3 class="font-bold text-amber-200 uppercase tracking-wide text-sm sm:text-base leading-snug mb-2.5">{{strategicPlanning.process.steps.1.title}}</h3>
+          <p class="text-sm text-slate-300 leading-relaxed">{{strategicPlanning.process.steps.1.body}}</p>
+        </article>
+        <article class="sp-step rounded-2xl border border-slate-700 bg-slate-800/90 p-5 sm:p-6 flex flex-col items-start relative z-10 transition-all duration-300 hover:border-slate-500">
+          <div class="sp-step-number w-12 h-12 rounded-full bg-cyan-300 text-slate-950 flex items-center justify-center font-extrabold text-base mb-5 shadow-md">{{strategicPlanning.process.steps.2.kicker}}</div>
+          <h3 class="font-bold text-cyan-200 uppercase tracking-wide text-sm sm:text-base leading-snug mb-2.5">{{strategicPlanning.process.steps.2.title}}</h3>
+          <p class="text-sm text-slate-300 leading-relaxed">{{strategicPlanning.process.steps.2.body}}</p>
+        </article>
+        <article class="sp-step rounded-2xl border border-slate-700 bg-slate-800/90 p-5 sm:p-6 flex flex-col items-start relative z-10 transition-all duration-300 hover:border-slate-500">
+          <div class="sp-step-number w-12 h-12 rounded-full bg-cyan-400 text-slate-950 flex items-center justify-center font-extrabold text-base mb-5 shadow-md">{{strategicPlanning.process.steps.3.kicker}}</div>
+          <h3 class="font-bold text-cyan-200 uppercase tracking-wide text-sm sm:text-base leading-snug mb-2.5">{{strategicPlanning.process.steps.3.title}}</h3>
+          <p class="text-sm text-slate-300 leading-relaxed">{{strategicPlanning.process.steps.3.body}}</p>
+        </article>
+        <article class="sp-step rounded-2xl border border-slate-700 bg-slate-800/90 p-5 sm:p-6 flex flex-col items-start relative z-10 transition-all duration-300 hover:border-slate-500">
+          <div class="sp-step-number w-12 h-12 rounded-full bg-cyan-500 text-white flex items-center justify-center font-extrabold text-base mb-5 shadow-md">{{strategicPlanning.process.steps.4.kicker}}</div>
+          <h3 class="font-bold text-cyan-200 uppercase tracking-wide text-sm sm:text-base leading-snug mb-2.5">{{strategicPlanning.process.steps.4.title}}</h3>
+          <p class="text-sm text-slate-300 leading-relaxed">{{strategicPlanning.process.steps.4.body}}</p>
+        </article>
       </div>
       <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4"><p class="text-sm text-slate-300">{{strategicPlanning.process.included}}</p><a href="{{__basePath}}/{{__lang}}/editions/2026/#tarifs" class="btn-cta">{{strategicPlanning.process.cta}}</a></div>
     </div>
