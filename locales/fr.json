@@ -109,7 +109,8 @@
     "langSelectLabel": "Langue",
     "report2023Path": "editions/rapport-2023/",
     "transparency2025": "Disponibilité de l’information financière 2025",
-    "glossary": "Glossaire"
+    "glossary": "Glossaire",
+    "strategicPlanning": "Plan stratégique triennal"
   },
   "home": {
     "meta": {
@@ -134,7 +135,10 @@
       "badgeComparative": "Comparatif 2024–2025",
       "badgeTrends": "Tendances 2023–2025",
       "badgeIndicators": "Nouveaux indicateurs opérationnels",
-      "publisherMention": "Une publication de Tadjeddine & Partners"
+      "publisherMention": "Une publication de Tadjeddine & Partners",
+      "strategicPillBadge": "Nouveau",
+      "strategicPillText": "Plan stratégique bancaire sur 3 ans",
+      "ctaStrategicPlanning": "Plan stratégique triennal"
     },
     "covers": {
       "badge2026": "Nouvelle édition",
@@ -1197,7 +1201,8 @@
       "ctaTestFree": "Tester gratuitement",
       "ctaOffers": "Voir les offres",
       "ctaDiscover": "Découvrir les fonctionnalités",
-      "noticeNoCard": "Accès immédiat au mode DEMO avec données fictives — aucune carte bancaire requise."
+      "noticeNoCard": "Accès immédiat au mode DEMO avec données fictives — aucune carte bancaire requise.",
+      "ctaStrategicPlanning": "Plan stratégique triennal"
     },
     "demoBadge": {
       "label": "MODE DEMO",
@@ -1626,7 +1631,8 @@
       "title": "Les données bancaires ne doivent pas seulement être consultées. Elles doivent pouvoir être explorées.",
       "text": "Avec ABIX Data Explorer, passez du chiffre brut à la comparaison, du classement à la trajectoire et de la donnée à la compréhension du marché.",
       "ctaOffers": "Découvrir les offres",
-      "ctaApp": "Accéder à ABIX Data Explorer"
+      "ctaApp": "Accéder à ABIX Data Explorer",
+      "ctaStrategicPlanning": "Plan stratégique triennal"
     },
     "promoHome": {
       "title": "Découvrez ABIX Data Explorer",

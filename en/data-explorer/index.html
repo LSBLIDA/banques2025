@@ -89,7 +89,23 @@
         </div>
 
         <!-- Menu 3 : Data Explorer -->
-        <a href="/en/data-explorer/" class="nav-link whitespace-nowrap nav-link--active">ABIX Data Explorer</a>
+        <div class="relative group">
+          <button class="nav-link flex items-center gap-1.5 whitespace-nowrap nav-link--active" aria-expanded="false" aria-haspopup="true">
+            ABIX Data Explorer
+            <span class="text-[9px] font-bold uppercase tracking-wider text-amber-700 bg-amber-100/90 px-1.5 py-0.5 rounded-full border border-amber-300/60">New</span>
+            <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="dropdown-menu">
+            <a href="/en/data-explorer/" class="dropdown-item nav-link--active">
+              <span class="dropdown-badge dropdown-badge--avail">Platform</span>
+              ABIX Data Explorer
+            </a>
+            <a href="/en/strategic-planning/" class="dropdown-item">
+              <span class="dropdown-badge dropdown-badge--prep">Executive</span>
+              3-Year Strategic Plan
+            </a>
+          </div>
+        </div>
 
         <!-- Menu 4 : Services -->
         <a href="/en/services/" class="nav-link whitespace-nowrap">Services</a>
@@ -183,8 +199,20 @@
         </div>
       </div>
 
-      <!-- Item 3 : Data Explorer -->
-      <a href="/en/data-explorer/" class="mobile-nav-link mobile-nav-link--active">ABIX Data Explorer</a>
+      <!-- Section 3 : Data Explorer -->
+      <div>
+        <span class="block px-3 py-1 text-xs font-bold uppercase tracking-wider text-gray-400">ABIX Data Explorer</span>
+        <div class="ps-3 border-s-2 border-primary/20 space-y-1 my-1">
+          <a href="/en/data-explorer/" class="mobile-nav-link flex items-center justify-between mobile-nav-link--active">
+            <span>ABIX Data Explorer</span>
+            <span class="dropdown-badge dropdown-badge--avail">Platform</span>
+          </a>
+          <a href="/en/strategic-planning/" class="mobile-nav-link flex items-center justify-between">
+            <span>3-Year Strategic Plan</span>
+            <span class="dropdown-badge dropdown-badge--prep">Executive</span>
+          </a>
+        </div>
+      </div>
 
       <!-- Item 4 : Services -->
       <a href="/en/services/" class="mobile-nav-link">Services</a>
@@ -235,7 +263,11 @@
           <div class="pt-2 space-y-3">
             <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
               <a href="https://explorer.algeriabankingindex.com/register" target="_blank" rel="noopener noreferrer" data-track="click_test_free_hero" data-action="demo-cta" class="btn-cta text-base px-7 py-3.5 shadow-xl hover:shadow-2xl transition-all hover:-translate-y-0.5 text-center font-bold">Test for Free</a>
-              <a href="/en/editions/2026/#tarifs" data-track="click_view_offers" class="inline-flex items-center justify-center text-base px-6 py-3.5 rounded-lg bg-white/10 text-white border border-white/20 hover:bg-white/20 transition-all font-semibold text-center">View Offers</a>
+              <a href="/en/strategic-planning/" data-track="click_strategic_planning_hero" class="inline-flex items-center justify-center gap-2 text-base px-6 py-3.5 rounded-lg bg-white/10 hover:bg-white/20 text-white border border-white/25 hover:border-amber-300/50 transition-all font-semibold text-center shadow-lg">
+                <span class="w-2 h-2 rounded-full bg-amber-400"></span>
+                <span>3-Year Strategic Plan</span>
+                <svg class="w-4 h-4 rtl:rotate-180 text-cyan-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+              </a>
             </div>
             <p class="text-xs text-blue-200/85 flex items-center gap-1.5 pt-1">
               <svg class="w-4 h-4 text-emerald-300 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
@@ -792,7 +824,11 @@
       <p class="text-xl text-blue-200/90 leading-relaxed max-w-3xl mx-auto">With ABIX Data Explorer, move from raw numbers to comparison, from ranking to trajectory, and from data to market understanding.</p>
       <div class="pt-6 flex flex-col sm:flex-row justify-center items-center gap-4">
         <a href="https://explorer.algeriabankingindex.com/register" target="_blank" rel="noopener noreferrer" data-track="click_test_free_final" data-action="demo-cta" class="btn-cta text-lg px-10 py-4 shadow-xl hover:-translate-y-1 transition-all">Test for Free</a>
-        <a href="/en/editions/2026/#tarifs" data-track="click_offers_final" class="inline-flex items-center justify-center text-lg px-10 py-4 rounded-lg bg-white/10 text-white border border-white/20 hover:bg-white/20 transition-all font-semibold">View Offers</a>
+        <a href="/en/strategic-planning/" data-track="click_strategic_planning_final" class="inline-flex items-center justify-center gap-2 text-lg px-10 py-4 rounded-lg bg-white/10 text-white border border-white/20 hover:bg-white/20 hover:border-amber-300/50 transition-all font-semibold">
+          <span class="w-2 h-2 rounded-full bg-amber-400"></span>
+          <span>3-Year Strategic Plan</span>
+          <svg class="w-4 h-4 rtl:rotate-180 text-cyan-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+        </a>
       </div>
     </div>
   </section>

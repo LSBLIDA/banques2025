@@ -35,7 +35,8 @@
     "langSelectLabel": "اللغة",
     "report2023Path": "editions/report-2023/",
     "transparency2025": "توفر المعلومات المالية 2025",
-    "glossary": "المعجم"
+    "glossary": "المعجم",
+    "strategicPlanning": "الخطة الاستراتيجية لثلاث سنوات"
   },
   "home": {
     "meta": {
@@ -60,7 +61,10 @@
       "badgeComparative": "مقارنة 2024-2025",
       "badgeTrends": "اتجاهات 2023-2025",
       "badgeIndicators": "مؤشرات تشغيلية جديدة",
-      "publisherMention": "منشور من تاجدين وشركاؤه"
+      "publisherMention": "منشور من تاجدين وشركاؤه",
+      "strategicPillBadge": "جديد",
+      "strategicPillText": "الخطة الاستراتيجية المصرفية لثلاث سنوات",
+      "ctaStrategicPlanning": "الخطة الاستراتيجية لثلاث سنوات"
     },
     "covers": {
       "badge2026": "إصدار جديد",
@@ -1416,7 +1420,8 @@
       "ctaTestFree": "تجربة مجانية",
       "ctaOffers": "عرض الباقات",
       "ctaDiscover": "اكتشف الميزات",
-      "noticeNoCard": "وصول فوري إلى الوضع التجريبي ببيانات افتراضية — لا حاجة لبطاقة بنكية."
+      "noticeNoCard": "وصول فوري إلى الوضع التجريبي ببيانات افتراضية — لا حاجة لبطاقة بنكية.",
+      "ctaStrategicPlanning": "الخطة الاستراتيجية لثلاث سنوات"
     },
     "demoBadge": {
       "label": "الوضع التجريبي",
@@ -1845,7 +1850,8 @@
       "title": "لا ينبغي الاطلاع على البيانات المصرفية فحسب. بل يجب استكشافها.",
       "text": "مع ABIX Data Explorer، انتقل من الأرقام الأولية إلى المقارنة، ومن التصنيف إلى المسار، ومن البيانات إلى فهم السوق.",
       "ctaOffers": "عرض الباقات",
-      "ctaApp": "الوصول إلى ABIX Data Explorer"
+      "ctaApp": "الوصول إلى ABIX Data Explorer",
+      "ctaStrategicPlanning": "الخطة الاستراتيجية لثلاث سنوات"
     },
     "promoHome": {
       "title": "اكتشف ABIX Data Explorer",

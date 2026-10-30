@@ -365,6 +365,12 @@ function buildMainNav(lang, pageKey, translations, langSwitcher, mobileLangSwitc
   const report2023Label = lang === 'en' ? '2023 Report' : lang === 'ar' ? 'تقرير 2023' : 'Rapport 2023';
   const reportPath = lang === 'fr' ? 'editions/rapport-2023/' : 'editions/report-2023/';
   const glossaryPath = lang === 'en' ? 'glossary/' : 'glossaire/';
+  const planningPath = lang === 'en' ? 'strategic-planning/' : 'planification-strategique/';
+  const isStrategicPlanningActive = pageKey === 'strategicPlanning' ? ' nav-link--active' : '';
+  const newBadge = lang === 'en' ? 'New' : lang === 'ar' ? 'جديد' : 'Nouveau';
+  const execBadge = lang === 'en' ? 'Executive' : lang === 'ar' ? 'تنفيذي' : 'Corporate';
+  const platformBadge = lang === 'en' ? 'Platform' : lang === 'ar' ? 'المنصة' : 'Plateforme';
+  const planningNavLabel = tNav.strategicPlanning || (lang === 'en' ? '3-Year Strategic Plan' : lang === 'ar' ? 'الخطة الاستراتيجية لثلاث سنوات' : 'Plan stratégique triennal');
 
   const is2026Avail = SITE_CONFIG.editions && SITE_CONFIG.editions["2026"] && SITE_CONFIG.editions["2026"].status === "available";
   const ed2026BadgeClass = is2026Avail ? "dropdown-badge--avail" : "dropdown-badge--prep";
@@ -426,7 +432,23 @@ function buildMainNav(lang, pageKey, translations, langSwitcher, mobileLangSwitc
         </div>
 
         <!-- Menu 3 : Data Explorer -->
-        <a href="${BASE_PATH}/${lang}/data-explorer/" class="nav-link whitespace-nowrap${isDataExplorerActive}">${tNav.dataExplorer || "ABIX Data Explorer"}</a>
+        <div class="relative group">
+          <button class="nav-link flex items-center gap-1.5 whitespace-nowrap${isDataExplorerActive}" aria-expanded="false" aria-haspopup="true">
+            ${tNav.dataExplorer || "ABIX Data Explorer"}
+            <span class="text-[9px] font-bold uppercase tracking-wider text-amber-700 bg-amber-100/90 px-1.5 py-0.5 rounded-full border border-amber-300/60">${newBadge}</span>
+            <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="dropdown-menu">
+            <a href="${BASE_PATH}/${lang}/data-explorer/" class="dropdown-item${(pageKey === 'dataExplorer') ? ' nav-link--active' : ''}">
+              <span class="dropdown-badge dropdown-badge--avail">${platformBadge}</span>
+              ${tNav.dataExplorer || "ABIX Data Explorer"}
+            </a>
+            <a href="${BASE_PATH}/${lang}/${planningPath}" class="dropdown-item${isStrategicPlanningActive}">
+              <span class="dropdown-badge dropdown-badge--prep">${execBadge}</span>
+              ${planningNavLabel}
+            </a>
+          </div>
+        </div>
 
         <!-- Menu 4 : Services -->
         <a href="${BASE_PATH}/${lang}/services/" class="nav-link whitespace-nowrap${isServicesActive}">${tNav.services || "Services"}</a>
@@ -497,8 +519,20 @@ function buildMainNav(lang, pageKey, translations, langSwitcher, mobileLangSwitc
         </div>
       </div>
 
-      <!-- Item 3 : Data Explorer -->
-      <a href="${BASE_PATH}/${lang}/data-explorer/" class="mobile-nav-link${pageKey === 'dataExplorer' ? ' mobile-nav-link--active' : ''}">${tNav.dataExplorer || "ABIX Data Explorer"}</a>
+      <!-- Section 3 : Data Explorer -->
+      <div>
+        <span class="block px-3 py-1 text-xs font-bold uppercase tracking-wider text-gray-400">${tNav.dataExplorer || "ABIX Data Explorer"}</span>
+        <div class="ps-3 border-s-2 border-primary/20 space-y-1 my-1">
+          <a href="${BASE_PATH}/${lang}/data-explorer/" class="mobile-nav-link flex items-center justify-between${pageKey === 'dataExplorer' ? ' mobile-nav-link--active' : ''}">
+            <span>${tNav.dataExplorer || "ABIX Data Explorer"}</span>
+            <span class="dropdown-badge dropdown-badge--avail">${platformBadge}</span>
+          </a>
+          <a href="${BASE_PATH}/${lang}/${planningPath}" class="mobile-nav-link flex items-center justify-between${pageKey === 'strategicPlanning' ? ' mobile-nav-link--active' : ''}">
+            <span>${planningNavLabel}</span>
+            <span class="dropdown-badge dropdown-badge--prep">${execBadge}</span>
+          </a>
+        </div>
+      </div>
 
       <!-- Item 4 : Services -->
       <a href="${BASE_PATH}/${lang}/services/" class="mobile-nav-link${pageKey === 'services' ? ' mobile-nav-link--active' : ''}">${tNav.services || "Services"}</a>

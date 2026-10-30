@@ -8,7 +8,8 @@
       "eyebrow": "ABIX Data Explorer",
       "title": "De la donnée bancaire au pilotage stratégique.",
       "subtitle": "Analysez. Comparez. Planifiez. Pilotez.",
-      "description": "Exploitez les données financières du secteur bancaire algérien pour comprendre les performances, situer votre établissement et construire une trajectoire stratégique sur trois ans."
+      "description": "Exploitez les données financières du secteur bancaire algérien pour comprendre les performances, situer votre établissement et construire une trajectoire stratégique sur trois ans.",
+      "ctaStrategicPlanning": "Plan stratégique triennal"
     },
     "promoHome": {
       "badge": "NOUVEAU — Planification stratégique triennale",
@@ -40,27 +41,62 @@
     },
     "audiences": {
       "label": "Conçu pour les décideurs bancaires",
-      "items": ["Présidences et Directions générales", "Directions de la stratégie", "Directions financières", "Directions des risques", "Secrétariats des Conseils d’administration"]
+      "items": [
+        "Présidences et Directions générales",
+        "Directions de la stratégie",
+        "Directions financières",
+        "Directions des risques",
+        "Secrétariats des Conseils d’administration"
+      ]
     },
     "why": {
       "eyebrow": "Pourquoi ABIX ?",
       "title": "Un même environnement pour comprendre le passé et décider de la trajectoire.",
       "text": "ABIX relie la base financière historique, les comparaisons sectorielles et les objectifs futurs. Les hypothèses, initiatives, risques et réalisations restent rattachés au diagnostic qui les a motivés.",
       "cards": [
-        {"title": "Base financière historique", "body": "Préremplissage à partir des données disponibles dans ABIX, complétables par les données internes sourcées de la banque."},
-        {"title": "Benchmarks sectoriels", "body": "Positionnement par rapport au marché, au statut, à la taille et aux groupes de pairs pertinents."},
-        {"title": "Pilotage intégré", "body": "Objectifs, initiatives, responsables, échéances, risques et réalisations réunis dans un dossier cohérent."}
+        {
+          "title": "Base financière historique",
+          "body": "Préremplissage à partir des données disponibles dans ABIX, complétables par les données internes sourcées de la banque."
+        },
+        {
+          "title": "Benchmarks sectoriels",
+          "body": "Positionnement par rapport au marché, au statut, à la taille et aux groupes de pairs pertinents."
+        },
+        {
+          "title": "Pilotage intégré",
+          "body": "Objectifs, initiatives, responsables, échéances, risques et réalisations réunis dans un dossier cohérent."
+        }
       ]
     },
     "process": {
       "title": "Construisez votre plan stratégique bancaire sur 3 ans",
       "subtitle": "Des données historiques aux objectifs stratégiques, ABIX vous accompagne dans la construction, la formalisation et le pilotage de votre plan de développement.",
       "steps": [
-        {"kicker": "01", "title": "Diagnostiquer", "body": "Données financières historiques et benchmarks sectoriels."},
-        {"kicker": "02", "title": "Projeter", "body": "Trajectoires financières et trois scénarios stratégiques."},
-        {"kicker": "03", "title": "Planifier", "body": "Axes, objectifs, initiatives, responsables, échéances et risques."},
-        {"kicker": "04", "title": "Formaliser", "body": "Dossier stratégique structuré, avec assistance facultative à la rédaction IA."},
-        {"kicker": "05", "title": "Valider et piloter", "body": "Validation DG, approbation CA, suivi des objectifs et réalisations."}
+        {
+          "kicker": "01",
+          "title": "Diagnostiquer",
+          "body": "Données financières historiques et benchmarks sectoriels."
+        },
+        {
+          "kicker": "02",
+          "title": "Projeter",
+          "body": "Trajectoires financières et trois scénarios stratégiques."
+        },
+        {
+          "kicker": "03",
+          "title": "Planifier",
+          "body": "Axes, objectifs, initiatives, responsables, échéances et risques."
+        },
+        {
+          "kicker": "04",
+          "title": "Formaliser",
+          "body": "Dossier stratégique structuré, avec assistance facultative à la rédaction IA."
+        },
+        {
+          "kicker": "05",
+          "title": "Valider et piloter",
+          "body": "Validation DG, approbation CA, suivi des objectifs et réalisations."
+        }
       ],
       "included": "Fonctionnalité incluse dans le Pack Corporate Executive.",
       "cta": "Découvrir le Pack Corporate Executive"
@@ -70,23 +106,45 @@
       "title": "Trois lectures d’une même trajectoire.",
       "text": "Les hypothèses sont explicites et restent sous la responsabilité de la banque. Les scénarios facilitent l’arbitrage, sans remplacer la décision des organes compétents.",
       "items": [
-        {"title": "Central", "body": "Trajectoire de référence fondée sur les hypothèses retenues par la banque."},
-        {"title": "Ambitieux", "body": "Objectifs de développement renforcés et moyens associés."},
-        {"title": "Défavorable", "body": "Lecture de résilience face à des hypothèses plus contraignantes."}
+        {
+          "title": "Central",
+          "body": "Trajectoire de référence fondée sur les hypothèses retenues par la banque."
+        },
+        {
+          "title": "Ambitieux",
+          "body": "Objectifs de développement renforcés et moyens associés."
+        },
+        {
+          "title": "Défavorable",
+          "body": "Lecture de résilience face à des hypothèses plus contraignantes."
+        }
       ]
     },
     "dossier": {
       "eyebrow": "Dossier institutionnel",
       "title": "Sept chapitres pour structurer la décision.",
       "text": "Le dossier reprend les grands thèmes attendus pour présenter la stratégie, ses moyens, ses risques et sa gouvernance.",
-      "chapters": ["Vision stratégique", "Développement de l’activité", "Projections financières et prudentielles", "Transformation digitale et innovation", "Gouvernance, risques et conformité", "Sécurité SI et résilience", "Développement des ressources humaines"]
+      "chapters": [
+        "Vision stratégique",
+        "Développement de l’activité",
+        "Projections financières et prudentielles",
+        "Transformation digitale et innovation",
+        "Gouvernance, risques et conformité",
+        "Sécurité SI et résilience",
+        "Développement des ressources humaines"
+      ]
     },
     "ai": {
       "eyebrow": "Assistance IA incluse",
       "title": "Une aide à la rédaction, jamais un substitut à la décision.",
       "text": "Une rédaction complète offerte par banque accompagne la note de cadrage et les 30 rubriques du dossier.",
       "quotaTitle": "Crédits inclus au niveau de la banque",
-      "quotas": ["1 rédaction de la note de cadrage et des 30 rubriques", "3 revues internes « œil du régulateur »", "30 retouches IA de rubriques", "2 préremplissages documentaires, jusqu’à 5 fichiers par import"],
+      "quotas": [
+        "1 rédaction de la note de cadrage et des 30 rubriques",
+        "3 revues internes « œil du régulateur »",
+        "30 retouches IA de rubriques",
+        "2 préremplissages documentaires, jusqu’à 5 fichiers par import"
+      ],
       "engine": "Le moteur ABIX sans IA reste gratuit et illimité.",
       "credits": "Crédits supplémentaires disponibles sur demande.",
       "consent": "La rédaction IA est facultative et nécessite un consentement explicite avant la transmission des données nécessaires au prestataire IA.",
@@ -96,7 +154,12 @@
       "eyebrow": "Gouvernance et traçabilité",
       "title": "Un processus lisible de la préparation à l’approbation.",
       "text": "Les changements de statut et les étapes de revue organisent le travail interne sans prétendre à une validation réglementaire automatique.",
-      "steps": ["Préparation et revue interne", "Soumission à la Direction générale", "Validation par la Direction générale", "Approbation par le Conseil d’administration"]
+      "steps": [
+        "Préparation et revue interne",
+        "Soumission à la Direction générale",
+        "Validation par la Direction générale",
+        "Approbation par le Conseil d’administration"
+      ]
     },
     "offer": {
       "eyebrow": "Pack Corporate Executive",
@@ -109,12 +172,30 @@
     "faq": {
       "title": "Questions fréquentes",
       "items": [
-        {"q": "Le Pack Corporate inclut-il la planification stratégique ?", "a": "Oui. Le module de préparation et de pilotage du plan stratégique triennal est inclus dans le Pack Corporate Executive."},
-        {"q": "ABIX utilise-t-il les données financières de ma banque ?", "a": "ABIX préremplit les données financières disponibles dans la plateforme. La banque peut les compléter et les corriger avec ses données internes sourcées."},
-        {"q": "L’intelligence artificielle est-elle obligatoire ?", "a": "Non. Le moteur ABIX permet une génération standardisée sans IA. L’assistance IA est facultative et soumise à un consentement avant toute transmission de données."},
-        {"q": "Le plan est-il automatiquement validé ?", "a": "Non. La Direction générale et le Conseil d’administration restent responsables de la validation et de l’approbation."},
-        {"q": "Les banques déjà abonnées au Corporate doivent-elles payer un supplément ?", "a": "Non. Les abonnés Corporate existants bénéficient du nouveau module sans supplément pendant leur abonnement en cours."},
-        {"q": "Peut-on suivre la réalisation des objectifs ?", "a": "Oui. Le module permet de comparer les cibles triennales avec les réalisations annuelles."}
+        {
+          "q": "Le Pack Corporate inclut-il la planification stratégique ?",
+          "a": "Oui. Le module de préparation et de pilotage du plan stratégique triennal est inclus dans le Pack Corporate Executive."
+        },
+        {
+          "q": "ABIX utilise-t-il les données financières de ma banque ?",
+          "a": "ABIX préremplit les données financières disponibles dans la plateforme. La banque peut les compléter et les corriger avec ses données internes sourcées."
+        },
+        {
+          "q": "L’intelligence artificielle est-elle obligatoire ?",
+          "a": "Non. Le moteur ABIX permet une génération standardisée sans IA. L’assistance IA est facultative et soumise à un consentement avant toute transmission de données."
+        },
+        {
+          "q": "Le plan est-il automatiquement validé ?",
+          "a": "Non. La Direction générale et le Conseil d’administration restent responsables de la validation et de l’approbation."
+        },
+        {
+          "q": "Les banques déjà abonnées au Corporate doivent-elles payer un supplément ?",
+          "a": "Non. Les abonnés Corporate existants bénéficient du nouveau module sans supplément pendant leur abonnement en cours."
+        },
+        {
+          "q": "Peut-on suivre la réalisation des objectifs ?",
+          "a": "Oui. Le module permet de comparer les cibles triennales avec les réalisations annuelles."
+        }
       ]
     },
     "final": {
@@ -131,25 +212,63 @@
         "newBadge": "Nouveau module",
         "aiIncluded": "Assistance IA incluse",
         "planningTitle": "NOUVEAU — PLANIFICATION STRATÉGIQUE TRIENNALE",
-        "planningFeatures": ["Plan bancaire sur 3 exercices", "Préremplissage, benchmarks et projections", "Scénarios central, ambitieux et défavorable", "Axes, initiatives, risques et indicateurs", "Rédaction IA et revue interne", "Validation DG, approbation CA et suivi annuel"],
+        "planningFeatures": [
+          "Plan bancaire sur 3 exercices",
+          "Préremplissage, benchmarks et projections",
+          "Scénarios central, ambitieux et défavorable",
+          "Axes, initiatives, risques et indicateurs",
+          "Rédaction IA et revue interne",
+          "Validation DG, approbation CA et suivi annuel"
+        ],
         "fullFeaturesCta": "Découvrir toutes les fonctionnalités",
         "option_note": "Nouveau tarif applicable aux nouvelles souscriptions Corporate. Les abonnés Corporate existants bénéficient du module sans supplément jusqu’à l’échéance de leur abonnement en cours."
       }
     },
-    "preorderForm": {"packOptions": {"corporate": "Pack Corporate Executive (280 000 DA HT)"}},
+    "preorderForm": {
+      "packOptions": {
+        "corporate": "Pack Corporate Executive (280 000 DA HT)"
+      }
+    },
     "faq": {
       "title": "Questions fréquentes — Édition 2026 et offre Corporate",
       "subtitle": "Les réponses essentielles sur l’étude, les packs et le module de planification stratégique.",
       "items": [
-        {"q": "Que contient l’étude 2026 ?", "a": "L’étude 2026 propose une analyse consolidée du secteur bancaire algérien, des comparaisons entre banques publiques et privées, des analyses individuelles, des classements et des benchmarks, ainsi que de nouveaux éclairages opérationnels."},
-        {"q": "Quels sont les différents niveaux d’offre ?", "a": "Trois packs sont proposés : Essentiel pour comprendre le marché, Pro pour exploiter les données, et Corporate Executive pour l’analyse avancée, les usages collaboratifs et la planification stratégique triennale."},
-        {"q": "Puis-je recevoir une facture pro forma ?", "a": "Oui. Une facture pro forma correspondant au pack sélectionné peut être établie sur demande afin de faciliter la procédure interne de commande."},
-        {"q": "Le Pack Corporate inclut-il la planification stratégique ?", "a": "Oui. Le module de préparation et de pilotage du plan stratégique triennal est inclus dans le Pack Corporate Executive."},
-        {"q": "ABIX utilise-t-il les données financières de ma banque ?", "a": "ABIX préremplit les données financières disponibles dans la plateforme. La banque peut les compléter et les corriger avec ses données internes sourcées."},
-        {"q": "L’intelligence artificielle est-elle obligatoire ?", "a": "Non. Le moteur ABIX permet une génération standardisée sans IA. L’assistance IA est facultative et soumise à un consentement avant toute transmission de données."},
-        {"q": "Le plan est-il automatiquement validé ?", "a": "Non. La Direction générale et le Conseil d’administration restent responsables de la validation et de l’approbation."},
-        {"q": "Les banques déjà abonnées au Corporate doivent-elles payer un supplément ?", "a": "Non. Les abonnés Corporate existants bénéficient du nouveau module sans supplément pendant leur abonnement en cours."},
-        {"q": "Peut-on suivre la réalisation des objectifs ?", "a": "Oui. Le module permet de comparer les cibles triennales avec les réalisations annuelles."}
+        {
+          "q": "Que contient l’étude 2026 ?",
+          "a": "L’étude 2026 propose une analyse consolidée du secteur bancaire algérien, des comparaisons entre banques publiques et privées, des analyses individuelles, des classements et des benchmarks, ainsi que de nouveaux éclairages opérationnels."
+        },
+        {
+          "q": "Quels sont les différents niveaux d’offre ?",
+          "a": "Trois packs sont proposés : Essentiel pour comprendre le marché, Pro pour exploiter les données, et Corporate Executive pour l’analyse avancée, les usages collaboratifs et la planification stratégique triennale."
+        },
+        {
+          "q": "Puis-je recevoir une facture pro forma ?",
+          "a": "Oui. Une facture pro forma correspondant au pack sélectionné peut être établie sur demande afin de faciliter la procédure interne de commande."
+        },
+        {
+          "q": "Le Pack Corporate inclut-il la planification stratégique ?",
+          "a": "Oui. Le module de préparation et de pilotage du plan stratégique triennal est inclus dans le Pack Corporate Executive."
+        },
+        {
+          "q": "ABIX utilise-t-il les données financières de ma banque ?",
+          "a": "ABIX préremplit les données financières disponibles dans la plateforme. La banque peut les compléter et les corriger avec ses données internes sourcées."
+        },
+        {
+          "q": "L’intelligence artificielle est-elle obligatoire ?",
+          "a": "Non. Le moteur ABIX permet une génération standardisée sans IA. L’assistance IA est facultative et soumise à un consentement avant toute transmission de données."
+        },
+        {
+          "q": "Le plan est-il automatiquement validé ?",
+          "a": "Non. La Direction générale et le Conseil d’administration restent responsables de la validation et de l’approbation."
+        },
+        {
+          "q": "Les banques déjà abonnées au Corporate doivent-elles payer un supplément ?",
+          "a": "Non. Les abonnés Corporate existants bénéficient du nouveau module sans supplément pendant leur abonnement en cours."
+        },
+        {
+          "q": "Peut-on suivre la réalisation des objectifs ?",
+          "a": "Oui. Le module permet de comparer les cibles triennales avec les réalisations annuelles."
+        }
       ]
     }
   },

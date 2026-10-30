@@ -52,7 +52,11 @@
           <div class="pt-2 space-y-3">
             <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
               <a href="https://explorer.algeriabankingindex.com/register" target="_blank" rel="noopener noreferrer" data-track="click_test_free_hero" data-action="demo-cta" class="btn-cta text-base px-7 py-3.5 shadow-xl hover:shadow-2xl transition-all hover:-translate-y-0.5 text-center font-bold">{{dataExplorer.hero.ctaTestFree}}</a>
-              <a href="{{__basePath}}/{{__lang}}/editions/2026/#tarifs" data-track="click_view_offers" class="inline-flex items-center justify-center text-base px-6 py-3.5 rounded-lg bg-white/10 text-white border border-white/20 hover:bg-white/20 transition-all font-semibold text-center">{{dataExplorer.hero.ctaOffers}}</a>
+              <a href="{{__basePath}}/{{__lang}}/{{__strategicPlanningPath}}/" data-track="click_strategic_planning_hero" class="inline-flex items-center justify-center gap-2 text-base px-6 py-3.5 rounded-lg bg-white/10 hover:bg-white/20 text-white border border-white/25 hover:border-amber-300/50 transition-all font-semibold text-center shadow-lg">
+                <span class="w-2 h-2 rounded-full bg-amber-400"></span>
+                <span>{{dataExplorer.hero.ctaStrategicPlanning}}</span>
+                <svg class="w-4 h-4 rtl:rotate-180 text-cyan-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+              </a>
             </div>
             <p class="text-xs text-blue-200/85 flex items-center gap-1.5 pt-1">
               <svg class="w-4 h-4 text-emerald-300 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
@@ -609,7 +613,11 @@
       <p class="text-xl text-blue-200/90 leading-relaxed max-w-3xl mx-auto">{{dataExplorer.finalCta.text}}</p>
       <div class="pt-6 flex flex-col sm:flex-row justify-center items-center gap-4">
         <a href="https://explorer.algeriabankingindex.com/register" target="_blank" rel="noopener noreferrer" data-track="click_test_free_final" data-action="demo-cta" class="btn-cta text-lg px-10 py-4 shadow-xl hover:-translate-y-1 transition-all">{{dataExplorer.hero.ctaTestFree}}</a>
-        <a href="{{__basePath}}/{{__lang}}/editions/2026/#tarifs" data-track="click_offers_final" class="inline-flex items-center justify-center text-lg px-10 py-4 rounded-lg bg-white/10 text-white border border-white/20 hover:bg-white/20 transition-all font-semibold">{{dataExplorer.finalCta.ctaOffers}}</a>
+        <a href="{{__basePath}}/{{__lang}}/{{__strategicPlanningPath}}/" data-track="click_strategic_planning_final" class="inline-flex items-center justify-center gap-2 text-lg px-10 py-4 rounded-lg bg-white/10 text-white border border-white/20 hover:bg-white/20 hover:border-amber-300/50 transition-all font-semibold">
+          <span class="w-2 h-2 rounded-full bg-amber-400"></span>
+          <span>{{dataExplorer.finalCta.ctaStrategicPlanning}}</span>
+          <svg class="w-4 h-4 rtl:rotate-180 text-cyan-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+        </a>
       </div>
     </div>
   </section>

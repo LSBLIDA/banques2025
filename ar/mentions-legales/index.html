@@ -76,7 +76,23 @@
         </div>
 
         <!-- Menu 3 : Data Explorer -->
-        <a href="/ar/data-explorer/" class="nav-link whitespace-nowrap">ABIX Data Explorer</a>
+        <div class="relative group">
+          <button class="nav-link flex items-center gap-1.5 whitespace-nowrap" aria-expanded="false" aria-haspopup="true">
+            ABIX Data Explorer
+            <span class="text-[9px] font-bold uppercase tracking-wider text-amber-700 bg-amber-100/90 px-1.5 py-0.5 rounded-full border border-amber-300/60">جديد</span>
+            <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="dropdown-menu">
+            <a href="/ar/data-explorer/" class="dropdown-item">
+              <span class="dropdown-badge dropdown-badge--avail">المنصة</span>
+              ABIX Data Explorer
+            </a>
+            <a href="/ar/planification-strategique/" class="dropdown-item">
+              <span class="dropdown-badge dropdown-badge--prep">تنفيذي</span>
+              الخطة الاستراتيجية لثلاث سنوات
+            </a>
+          </div>
+        </div>
 
         <!-- Menu 4 : Services -->
         <a href="/ar/services/" class="nav-link whitespace-nowrap">الخدمات</a>
@@ -170,8 +186,20 @@
         </div>
       </div>
 
-      <!-- Item 3 : Data Explorer -->
-      <a href="/ar/data-explorer/" class="mobile-nav-link">ABIX Data Explorer</a>
+      <!-- Section 3 : Data Explorer -->
+      <div>
+        <span class="block px-3 py-1 text-xs font-bold uppercase tracking-wider text-gray-400">ABIX Data Explorer</span>
+        <div class="ps-3 border-s-2 border-primary/20 space-y-1 my-1">
+          <a href="/ar/data-explorer/" class="mobile-nav-link flex items-center justify-between">
+            <span>ABIX Data Explorer</span>
+            <span class="dropdown-badge dropdown-badge--avail">المنصة</span>
+          </a>
+          <a href="/ar/planification-strategique/" class="mobile-nav-link flex items-center justify-between">
+            <span>الخطة الاستراتيجية لثلاث سنوات</span>
+            <span class="dropdown-badge dropdown-badge--prep">تنفيذي</span>
+          </a>
+        </div>
+      </div>
 
       <!-- Item 4 : Services -->
       <a href="/ar/services/" class="mobile-nav-link">الخدمات</a>

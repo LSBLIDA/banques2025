@@ -40,10 +40,19 @@
 
       <!-- Texte Hero (Col 7) -->
       <div class="lg:col-span-7 space-y-6">
-        <!-- Badge Early Bird principal -->
-        <div id="hero-earlybird-badge" class="badge-earlybird">
-          <span class="w-2.5 h-2.5 bg-amber-400 rounded-full animate-pulse"></span>
-          <span>{{home.hero.badge}}</span>
+        <div class="flex flex-wrap items-center gap-3">
+          <!-- Badge Early Bird principal -->
+          <div id="hero-earlybird-badge" class="badge-earlybird">
+            <span class="w-2.5 h-2.5 bg-amber-400 rounded-full animate-pulse"></span>
+            <span>{{home.hero.badge}}</span>
+          </div>
+
+          <!-- Nouveau : Plan stratégique triennal pill -->
+          <a href="{{__basePath}}/{{__lang}}/{{__strategicPlanningPath}}/" data-track="click_hero_planning_pill" class="inline-flex items-center gap-2 px-3.5 py-2 rounded-full bg-slate-900/40 hover:bg-slate-900/60 border border-amber-300/40 text-xs text-amber-200 transition-all hover:scale-[1.02] shadow-sm">
+            <span class="px-1.5 py-0.5 rounded bg-amber-400 text-slate-950 font-bold text-[10px] uppercase tracking-wider">{{home.hero.strategicPillBadge}}</span>
+            <span class="text-blue-100 font-semibold">{{home.hero.strategicPillText}}</span>
+            <svg class="w-3.5 h-3.5 rtl:rotate-180 text-amber-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+          </a>
         </div>
 
         <div>
@@ -96,8 +105,13 @@
         </div>
 
         <!-- CTA Secondaires -->
-        <div class="flex flex-wrap items-center gap-4 pt-1">
+        <div class="flex flex-wrap items-center gap-3 sm:gap-4 pt-1">
           <a href="{{__basePath}}/{{__lang}}/editions/2026/synthese/" data-track="click_executive_summary" class="btn-ghost-hero">{{home.hero.ctaSynthesis}}</a>
+          <span class="text-blue-300/40">•</span>
+          <a href="{{__basePath}}/{{__lang}}/{{__strategicPlanningPath}}/" data-track="click_planning_secondary" class="btn-ghost-hero inline-flex items-center gap-1.5 text-amber-300 hover:text-amber-200 font-semibold">
+            <span class="w-1.5 h-1.5 rounded-full bg-amber-400"></span>
+            {{home.hero.ctaStrategicPlanning}}
+          </a>
           <span class="text-blue-300/40">•</span>
           <a href="{{__basePath}}/{{__lang}}/services/" data-track="click_custom_benchmark" class="btn-ghost-hero">{{home.hero.ctaBenchmark}}</a>
         </div>
