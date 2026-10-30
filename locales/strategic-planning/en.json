@@ -1,0 +1,159 @@
+{
+  "dataExplorer": {
+    "meta": {
+      "title": "ABIX Data Explorer — Banking Analysis, Benchmarking and Strategic Planning",
+      "description": "Analyse Algerian banks, benchmark your institution and build a three-year banking strategic plan with ABIX Data Explorer."
+    },
+    "hero": {
+      "eyebrow": "ABIX Data Explorer",
+      "title": "From Banking Data to Strategic Decision-Making.",
+      "subtitle": "Analyse. Compare. Plan. Manage.",
+      "description": "Use Algerian banking-sector financial data to assess performance, position your institution and build a three-year strategic trajectory."
+    },
+    "promoHome": {
+      "badge": "NEW — Three-Year Strategic Planning",
+      "title": "ABIX Data Explorer: from analysis to strategic management",
+      "text": "Use Algerian banking-sector financial data to analyse performance, benchmark your institution against peers and build a three-year strategic trajectory.",
+      "bullets": ["Analyse performance", "Compare and benchmark", "Build a three-year strategic plan", "Manage objectives and actual results"],
+      "ctaPlanning": "Discover strategic planning",
+      "ctaExplorer": "Explore ABIX Data Explorer"
+    }
+  },
+  "strategicPlanning": {
+    "meta": {
+      "title": "Three-Year Banking Strategic Planning in Algeria — ABIX Data Explorer",
+      "description": "Build, formalise and manage your bank’s three-year strategic plan using ABIX data, financial projections and three scenarios."
+    },
+    "hero": {
+      "eyebrow": "NEW · CORPORATE EXECUTIVE PACK",
+      "title": "Your banking strategic plan, built on data.",
+      "subtitle": "From historical analysis to governance approval, ABIX structures a measurable and manageable three-year trajectory.",
+      "signature": "ABIX Data Explorer — From Banking Data to Strategic Decision-Making.",
+      "ctaPrimary": "Discover the Corporate Executive offer",
+      "ctaSecondary": "See the five stages",
+      "included": "Feature included in the Corporate Executive Pack."
+    },
+    "audiences": {
+      "label": "Built for banking decision-makers",
+      "items": ["Chairs and Chief Executive Officers", "Strategy Departments", "Finance Departments", "Risk Departments", "Board Secretariats"]
+    },
+    "why": {
+      "eyebrow": "Why ABIX?",
+      "title": "One environment to understand the past and decide the trajectory.",
+      "text": "ABIX connects historical financial data, sector comparisons and future objectives. Assumptions, initiatives, risks and actual results remain tied to the diagnosis that informed them.",
+      "cards": [
+        {"title": "Historical financial base", "body": "Prefilled from data available in ABIX and expandable with the bank’s sourced internal data."},
+        {"title": "Sector benchmarks", "body": "Positioning against the market, status, size and relevant peer groups."},
+        {"title": "Integrated management", "body": "Objectives, initiatives, owners, deadlines, risks and actual results in one coherent record."}
+      ]
+    },
+    "process": {
+      "title": "Build your three-year banking strategic plan",
+      "subtitle": "From historical data to strategic objectives, ABIX supports the preparation, formalisation and management of your development plan.",
+      "steps": [
+        {"kicker": "01", "title": "Diagnose", "body": "Historical financial data and sector benchmarks."},
+        {"kicker": "02", "title": "Project", "body": "Financial trajectories and three strategic scenarios."},
+        {"kicker": "03", "title": "Plan", "body": "Pillars, objectives, initiatives, owners, deadlines and risks."},
+        {"kicker": "04", "title": "Formalise", "body": "A structured strategic record with optional AI writing assistance."},
+        {"kicker": "05", "title": "Approve and manage", "body": "Executive approval, Board approval, objective and actual-result tracking."}
+      ],
+      "included": "Feature included in the Corporate Executive Pack.",
+      "cta": "Discover the Corporate Executive Pack"
+    },
+    "scenarios": {
+      "eyebrow": "Projections and scenarios",
+      "title": "Three views of the same trajectory.",
+      "text": "Assumptions are explicit and remain the bank’s responsibility. Scenarios support arbitration without replacing decisions by the competent governing bodies.",
+      "items": [
+        {"title": "Base", "body": "Reference trajectory based on assumptions selected by the bank."},
+        {"title": "Ambitious", "body": "Stronger development objectives and the resources required to deliver them."},
+        {"title": "Adverse", "body": "A resilience view under more constrained assumptions."}
+      ]
+    },
+    "dossier": {
+      "eyebrow": "Institutional strategic record",
+      "title": "Seven chapters to structure decision-making.",
+      "text": "The record covers the main themes used to present the strategy, its resources, risks and governance.",
+      "chapters": ["Strategic vision", "Business development", "Financial and prudential projections", "Digital transformation and innovation", "Governance, risk and compliance", "Information-system security and resilience", "Human-resources development"]
+    },
+    "ai": {
+      "eyebrow": "AI assistance included",
+      "title": "Writing support, never a substitute for decision-making.",
+      "text": "One complete drafting package per bank covers the scoping note and all 30 sections of the record.",
+      "quotaTitle": "Bank-level credits included",
+      "quotas": ["1 draft of the scoping note and all 30 sections", "3 internal ‘regulator’s-eye’ reviews", "30 AI section revisions", "2 document prefills, up to 5 files per import"],
+      "engine": "The non-AI ABIX engine remains free and unlimited.",
+      "credits": "Additional credits available on request.",
+      "consent": "AI drafting is optional and requires explicit consent before the necessary data is sent to the AI provider.",
+      "responsibility": "The bank remains responsible for its data, assumptions, decisions, validation and approval of the plan."
+    },
+    "governance": {
+      "eyebrow": "Governance and traceability",
+      "title": "A clear process from preparation to approval.",
+      "text": "Status changes and review stages organise internal work without claiming automatic regulatory validation.",
+      "steps": ["Preparation and internal review", "Submission to Executive Management", "Executive Management validation", "Board of Directors approval"]
+    },
+    "offer": {
+      "eyebrow": "Corporate Executive Pack",
+      "title": "Advanced analysis and strategic planning in one offer.",
+      "price": "280,000 DA excl. tax",
+      "description": "Up to 20 users · Data Explorer Executive 2022–2025 · Three-year strategic planning · AI assistance included",
+      "existingCustomers": "Existing Corporate Executive subscribers receive the module at no additional charge until their current subscription expires.",
+      "cta": "Discover the Corporate Executive offer"
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "items": [
+        {"q": "Does the Corporate Pack include strategic planning?", "a": "Yes. The three-year strategic-plan preparation and management module is included in the Corporate Executive Pack."},
+        {"q": "Does ABIX use my bank’s financial data?", "a": "ABIX prefills financial data available in the platform. The bank may supplement and correct it with sourced internal data."},
+        {"q": "Is artificial intelligence mandatory?", "a": "No. The ABIX engine provides standardised generation without AI. AI assistance is optional and subject to consent before any data transmission."},
+        {"q": "Is the plan approved automatically?", "a": "No. Executive Management and the Board of Directors remain responsible for validation and approval."},
+        {"q": "Must existing Corporate subscribers pay extra?", "a": "No. Existing Corporate subscribers receive the new module at no additional charge during their current subscription."},
+        {"q": "Can progress against objectives be tracked?", "a": "Yes. The module compares three-year targets with annual actual results."}
+      ]
+    },
+    "final": {
+      "title": "Move from diagnosis to a manageable strategic trajectory.",
+      "text": "Discover the three-year planning module included in the Corporate Executive Pack.",
+      "cta": "Discover the Corporate Executive offer"
+    }
+  },
+  "edition2026": {
+    "pricing": {
+      "corporate": {
+        "tagline": "Analyse, compare, plan and manage",
+        "userLicensesText": "Up to 20 users · Data Explorer Executive 2022–2025 · Three-year strategic planning",
+        "newBadge": "New module",
+        "aiIncluded": "AI assistance included",
+        "planningTitle": "NEW — THREE-YEAR STRATEGIC PLANNING",
+        "planningFeatures": ["Three-year banking strategic plan", "Prefill, benchmarks and projections", "Base, ambitious and adverse scenarios", "Pillars, initiatives, risks and indicators", "AI drafting and internal review", "Executive approval, Board approval and annual tracking"],
+        "fullFeaturesCta": "Discover all features",
+        "option_note": "New rate for new Corporate subscriptions. Existing Corporate subscribers receive the module at no additional charge until their current subscription expires."
+      }
+    },
+    "preorderForm": {"packOptions": {"corporate": "Corporate Executive Pack (280,000 DA excl. tax)"}},
+    "faq": {
+      "title": "Frequently Asked Questions — 2026 Edition and Corporate Offer",
+      "subtitle": "Key answers about the study, packs and strategic-planning module.",
+      "items": [
+        {"q": "What does the 2026 study include?", "a": "The 2026 study provides consolidated analysis of Algeria’s banking sector, public/private comparisons, individual analyses, rankings and benchmarks, plus new operational insights."},
+        {"q": "What offer levels are available?", "a": "Three packs are available: Essential to understand the market, Pro to work with the data, and Corporate Executive for advanced analysis, collaborative use and three-year strategic planning."},
+        {"q": "Can I receive a pro forma invoice?", "a": "Yes. A pro forma invoice for the selected pack can be issued on request to support your internal purchasing process."},
+        {"q": "Does the Corporate Pack include strategic planning?", "a": "Yes. The three-year strategic-plan preparation and management module is included in the Corporate Executive Pack."},
+        {"q": "Does ABIX use my bank’s financial data?", "a": "ABIX prefills financial data available in the platform. The bank may supplement and correct it with sourced internal data."},
+        {"q": "Is artificial intelligence mandatory?", "a": "No. The ABIX engine provides standardised generation without AI. AI assistance is optional and subject to consent before any data transmission."},
+        {"q": "Is the plan approved automatically?", "a": "No. Executive Management and the Board of Directors remain responsible for validation and approval."},
+        {"q": "Must existing Corporate subscribers pay extra?", "a": "No. Existing Corporate subscribers receive the new module at no additional charge during their current subscription."},
+        {"q": "Can progress against objectives be tracked?", "a": "Yes. The module compares three-year targets with annual actual results."}
+      ]
+    }
+  },
+  "confirmation": {
+    "plans": {
+      "corporate": {
+        "positioning": "Analyse, compare, plan and manage",
+        "summary": "All Pro features, Data Explorer Executive for up to 20 users, 2022–2025 history, advanced analysis, reports and exports, plus the three-year banking strategic-planning module with AI assistance included."
+      }
+    }
+  }
+}

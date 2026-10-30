@@ -52,7 +52,7 @@ const extraFr = {
         },
         corporate: {
           title: "Pack Corporate Executive",
-          price: "180 000 DA HT",
+          price: "280 000 DA HT",
           features: [
             "Tout du Pack Pro",
             "Livrable PowerPoint exécutif",
@@ -99,7 +99,7 @@ const extraEn = {
         },
         corporate: {
           title: "Corporate Executive Pack",
-          price: "180,000 DZD (excl. VAT)",
+          price: "280,000 DZD (excl. VAT)",
           features: [
             "Everything in Pro Pack",
             "Executive PowerPoint deliverable",
@@ -146,7 +146,7 @@ const extraAr = {
         },
         corporate: {
           title: "الباقة التنفيذية",
-          price: "180,000 د.ج (قبل الضريبة)",
+          price: "280,000 د.ج (قبل الضريبة)",
           features: [
             "كل ما تضمنته الباقة الاحترافية",
             "عرض تقديمي تنفيذيي بصيغة PowerPoint",

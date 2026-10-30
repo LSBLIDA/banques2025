@@ -53,7 +53,7 @@ ed2025Html = ed2025Html.replace(
 );
 
 ed2025Html = ed2025Html.replace(
-  '<h3 class="text-xl font-bold text-gray-900 mb-2">Pack Corporate Executive</h3>\n          <div class="text-3xl font-bold text-primary">180 000 DA HT</div>',
+  '<h3 class="text-xl font-bold text-gray-900 mb-2">Pack Corporate Executive</h3>\n          <div class="text-3xl font-bold text-primary">280 000 DA HT</div>',
   '<h3 class="text-xl font-bold text-gray-900 mb-2">{{edition2025.pricing.packs.corporate.title}}</h3>\n          <div class="text-3xl font-bold text-primary">{{edition2025.pricing.packs.corporate.price}}</div>'
 );
 ed2025Html = ed2025Html.replace(

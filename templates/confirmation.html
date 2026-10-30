@@ -61,12 +61,11 @@
 
       <!-- Tarifs -->
       <div class="bg-slate-900/90 border border-amber-400/30 rounded-xl p-4 text-start md:text-end">
-        <div class="text-xs text-slate-400 line-through">{{confirmation.labelPriceNormal}} : {{__planRegularPrice}}</div>
-        <div class="text-2xl sm:text-3xl font-extrabold text-amber-400 tracking-tight">{{__planPromoPrice}}</div>
-        <div class="text-xs font-semibold text-emerald-400 mt-0.5">{{confirmation.labelSaving}} : {{__planDiscount}}</div>
+        <div class="text-xs text-slate-400">{{confirmation.labelPriceNormal}}</div>
+        <div class="text-2xl sm:text-3xl font-extrabold text-amber-400 tracking-tight">{{__planRegularPrice}}</div>
         <div class="text-xs text-slate-300 mt-1 border-t border-slate-700/60 pt-1">
           <span>{{confirmation.labelTotalTtc}} : <b>{{__planTotalTTC}}</b></span>
-          <span class="text-slate-400 text-[10px]"> ({{confirmation.labelVat}})</span>
+          <span class="text-slate-400 text-[10px]"> ({{confirmation.labelVat}} : {{__planVatAmount}})</span>
         </div>
       </div>
     </div>

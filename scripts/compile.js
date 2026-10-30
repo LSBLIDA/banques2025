@@ -26,6 +26,7 @@ const basePathArg = hasBasePath ? args[args.indexOf("--basePath") + 1] : "";
 const BASE_PATH = (basePathArg || "").replace(/\/$/, ""); // Supprime le slash final si présent
 
 const SITE_CONFIG = require("../js/site-config.js");
+const OFFERS_2026 = require("../data/offers-2026.json");
 const transparencyBuilder = require("./transparency-builder.js");
 
 
@@ -55,6 +56,7 @@ const PAGES = [
   { template: "conditions-utilisation.html", output: "conditions-utilisation/index.html", titleKey: "cgu" },
   { template: "politique-confidentialite.html", output: "politique-confidentialite/index.html", titleKey: "privacy" },
   { template: "data-explorer.html", output: "data-explorer/index.html", titleKey: "dataExplorer" },
+  { template: "strategic-planning.html", output: "planification-strategique/index.html", titleKey: "strategicPlanning" },
   { template: "transparence-information-financiere-2025.html", output: "insights/transparence-information-financiere-2025/index.html", titleKey: "transparency2025" },
   { template: "confirmation.html", output: "souscription/confirmation/essentiel/index.html", titleKey: "confirmation_essentiel", planKey: "essentiel" },
   { template: "confirmation.html", output: "souscription/confirmation/pro/index.html", titleKey: "confirmation_pro", planKey: "pro" },
@@ -71,7 +73,45 @@ function loadLocale(lang) {
   if (!fs.existsSync(filePath)) {
     throw new Error(`Fichier locale introuvable : ${filePath}`);
   }
-  return JSON.parse(fs.readFileSync(filePath, "utf8"));
+  const base = JSON.parse(fs.readFileSync(filePath, "utf8"));
+  const featurePath = path.join(LOCALES_DIR, "strategic-planning", `${lang}.json`);
+  const feature = fs.existsSync(featurePath) ? JSON.parse(fs.readFileSync(featurePath, "utf8")) : {};
+  const translations = deepMerge(base, feature);
+  applyOfferPricing(translations, lang);
+  return translations;
+}
+
+function deepMerge(target, source) {
+  const output = Array.isArray(target) ? [...target] : { ...target };
+  for (const [key, value] of Object.entries(source || {})) {
+    if (value && typeof value === "object" && !Array.isArray(value)) {
+      output[key] = deepMerge(output[key] || {}, value);
+    } else {
+      output[key] = value;
+    }
+  }
+  return output;
+}
+
+function formatPrice(amount, lang, taxIncluded = false) {
+  const separator = lang === "fr" ? " " : ",";
+  const formatted = String(amount).replace(/\B(?=(\d{3})+(?!\d))/g, separator);
+  if (lang === "ar") return `${formatted} دج ${taxIncluded ? "شامل الضريبة" : "بدون ضريبة"}`;
+  if (lang === "en") return `${formatted} DA ${taxIncluded ? "incl. tax" : "excl. tax"}`;
+  return `${formatted} DA ${taxIncluded ? "TTC" : "HT"}`;
+}
+
+function applyOfferPricing(translations, lang) {
+  const pricing = translations.edition2026?.pricing;
+  const packOptions = translations.edition2026?.preorderForm?.packOptions;
+  for (const [key, plan] of Object.entries(OFFERS_2026.plans)) {
+    const localeKey = key === "essentiel" ? "essential" : key;
+    if (pricing?.[localeKey]) pricing[localeKey].regularPrice = formatPrice(plan.regular_price_ht, lang);
+    if (packOptions?.[localeKey]) {
+      const title = pricing?.[localeKey]?.title || plan.name;
+      packOptions[localeKey] = `${title} (${formatPrice(plan.regular_price_ht, lang)})`;
+    }
+  }
 }
 
 /**
@@ -121,6 +161,9 @@ function resolveTranslations(html, translations) {
 }
 
 function resolvePageOutputPath(pageKey, lang, defaultOutput) {
+  if (pageKey === "strategicPlanning") {
+    return lang === "en" ? "strategic-planning/index.html" : "planification-strategique/index.html";
+  }
   if (pageKey === "glossary") {
     return lang === "en" ? "glossary/index.html" : "glossaire/index.html";
   }
@@ -146,6 +189,9 @@ function resolvePageOutputPath(pageKey, lang, defaultOutput) {
 }
 
 function resolvePageSlug(pageSlug, targetLang) {
+  if (pageSlug.includes("planification-strategique") || pageSlug.includes("strategic-planning")) {
+    return targetLang === "en" ? "strategic-planning/" : "planification-strategique/";
+  }
   if (pageSlug.includes("glossaire") || pageSlug.includes("glossary")) {
     return targetLang === "en" ? "glossary/" : "glossaire/";
   }
@@ -216,6 +262,7 @@ function injectConfigVars(html, lang, outputPath, pageKey, translations) {
     .replace(/\{\{__canonical\}\}/g, canonicalUrl)
     .replace(/\{\{__langSwitcher\}\}/g, langSwitcher)
     .replace(/\{\{__currentEdition\}\}/g, SITE_CONFIG.currentEdition)
+    .replace(/\{\{__strategicPlanningPath\}\}/g, lang === "en" ? "strategic-planning" : "planification-strategique")
     .replace(/\{\{__basePath\}\}/g, BASE_PATH)
     .replace(/\{\{externalLinks\.publisherWebsite\}\}/g, SITE_CONFIG.externalLinks.publisherWebsite)
     .replace(/\{\{externalLinks\.servicesPage\}\}/g, SITE_CONFIG.externalLinks.servicesPage)
@@ -230,64 +277,44 @@ function injectConfigVars(html, lang, outputPath, pageKey, translations) {
       .replace(/\{\{__transparencyStructuredData\}\}/g, transparencyBuilder.buildStructuredData(lang, translations, canonicalUrl));
   }
 
+  if (pageKey === "edition2026") {
+    const faqStructuredData = {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: (translations.edition2026?.faq?.items || []).map(item => ({
+        "@type": "Question",
+        name: item.q,
+        acceptedAnswer: { "@type": "Answer", text: item.a }
+      }))
+    };
+    res = res.replace(
+      /<!-- Données structurées FAQPage \(SEO\) -->[\s\S]*?<\/script>/i,
+      `<!-- Données structurées FAQPage (SEO) -->\n<script type="application/ld+json">${JSON.stringify(faqStructuredData).replace(/</g, "\\u003C")}</script>`
+    );
+  }
+
   return res;
 }
 
 function injectPlanVars(html, planKey, lang, translations) {
-  const planData = {
-    essentiel: {
-      id: "essentiel",
-      pdfFilename: "offre-abix-pack-essentiel-2026.pdf",
-      regularPrice: { fr: "84 000 DA HT", en: "84,000 DA excl. tax", ar: "84,000 د.ج قبل الضريبة" },
-      discount: { fr: "-8 400 DA", en: "-8,400 DA", ar: "-8,400 د.ج" },
-      promoPrice: { fr: "75 600 DA HT", en: "75,600 DA excl. tax", ar: "75,600 د.ج قبل الضريبة" },
-      vat: { fr: "14 364 DA", en: "14,364 DA", ar: "14,364 د.ج" },
-      totalTTC: { fr: "89 964 DA TTC", en: "89,964 DA incl. tax", ar: "89,964 د.ج شامل الضريبة" },
-      users: { fr: "1 utilisateur", en: "1 user", ar: "مستخدم واحد" },
-      period: { fr: "Données 2025", en: "2025 Data", ar: "بيانات 2025" }
-    },
-    pro: {
-      id: "pro",
-      pdfFilename: "offre-abix-pack-pro-2026.pdf",
-      regularPrice: { fr: "120 000 DA HT", en: "120,000 DA excl. tax", ar: "120,000 د.ج قبل الضريبة" },
-      discount: { fr: "-12 000 DA", en: "-12,000 DA", ar: "-12,000 د.ج" },
-      promoPrice: { fr: "108 000 DA HT", en: "108,000 DA excl. tax", ar: "108,000 د.ج قبل الضريبة" },
-      vat: { fr: "20 520 DA", en: "20,520 DA", ar: "20,520 د.ج" },
-      totalTTC: { fr: "128 520 DA TTC", en: "128,520 DA incl. tax", ar: "128,520 د.ج شامل الضريبة" },
-      users: { fr: "Jusqu’à 3 utilisateurs", en: "Up to 3 users", ar: "حتى 3 مستخدمين" },
-      period: { fr: "Données 2024 et 2025", en: "2024 & 2025 Data", ar: "بيانات 2024 و2025" }
-    },
-    corporate: {
-      id: "corporate",
-      pdfFilename: "offre-abix-pack-corporate-executive-2026.pdf",
-      regularPrice: { fr: "180 000 DA HT", en: "180,000 DA excl. tax", ar: "180,000 د.ج قبل الضريبة" },
-      discount: { fr: "-18 000 DA", en: "-18,000 DA", ar: "-18,000 د.ج" },
-      promoPrice: { fr: "162 000 DA HT", en: "162,000 DA excl. tax", ar: "162,000 د.ج قبل الضريبة" },
-      vat: { fr: "30 780 DA", en: "30,780 DA", ar: "30,780 د.ج" },
-      totalTTC: { fr: "192 780 DA TTC", en: "192,780 DA incl. tax", ar: "192,780 د.ج شامل الضريبة" },
-      users: { fr: "Jusqu’à 20 utilisateurs", en: "Up to 20 users", ar: "حتى 20 مستخدمًا" },
-      period: { fr: "Données historiques 2022–2025", en: "2022–2025 Historical Data", ar: "بيانات تاريخية 2022–2025" }
-    }
-  };
-
-  const p = planData[planKey] || planData.essentiel;
+  const p = OFFERS_2026.plans[planKey] || OFFERS_2026.plans.essentiel;
   const tPlan = translations.confirmation?.plans?.[planKey] || {};
-  const pdfUrl = `${BASE_PATH}/public/documents/offres/${p.pdfFilename}`;
+  const pdfUrl = `${BASE_PATH}${p.pdf_path}`;
+  const users = lang === "ar" ? (p.users === 1 ? "مستخدم واحد" : `حتى ${p.users} مستخدمًا`) : lang === "en" ? (p.users === 1 ? "1 user" : `Up to ${p.users} users`) : (p.users === 1 ? "1 utilisateur" : `Jusqu’à ${p.users} utilisateurs`);
+  const period = lang === "ar" ? (planKey === "corporate" ? "بيانات 2022–2025 والتخطيط الاستراتيجي لثلاث سنوات" : planKey === "pro" ? "بيانات 2024 و2025" : "بيانات 2025") : lang === "en" ? (planKey === "corporate" ? "2022–2025 data and three-year strategic planning" : planKey === "pro" ? "2024 & 2025 data" : "2025 data") : p.data_explorer_period;
 
   return html
     .replace(/\{\{__planId\}\}/g, p.id)
     .replace(/\{\{__planName\}\}/g, tPlan.name || p.id)
     .replace(/\{\{__planPositioning\}\}/g, tPlan.positioning || "")
     .replace(/\{\{__planSummary\}\}/g, tPlan.summary || "")
-    .replace(/\{\{__planRegularPrice\}\}/g, p.regularPrice[lang] || p.regularPrice.fr)
-    .replace(/\{\{__planDiscount\}\}/g, p.discount[lang] || p.discount.fr)
-    .replace(/\{\{__planPromoPrice\}\}/g, p.promoPrice[lang] || p.promoPrice.fr)
-    .replace(/\{\{__planVat\}\}/g, p.vat[lang] || p.vat.fr)
-    .replace(/\{\{__planTotalTTC\}\}/g, p.totalTTC[lang] || p.totalTTC.fr)
-    .replace(/\{\{__planUsers\}\}/g, p.users[lang] || p.users.fr)
-    .replace(/\{\{__planPeriod\}\}/g, p.period[lang] || p.period.fr)
+    .replace(/\{\{__planRegularPrice\}\}/g, formatPrice(p.regular_price_ht, lang))
+    .replace(/\{\{__planVatAmount\}\}/g, lang === "ar" ? `${String(p.vat_amount).replace(/\B(?=(\d{3})+(?!\d))/g, ",")} دج` : `${String(p.vat_amount).replace(/\B(?=(\d{3})+(?!\d))/g, lang === "fr" ? " " : ",")} DA`)
+    .replace(/\{\{__planTotalTTC\}\}/g, formatPrice(p.total_ttc, lang, true))
+    .replace(/\{\{__planUsers\}\}/g, users)
+    .replace(/\{\{__planPeriod\}\}/g, period)
     .replace(/\{\{__planPdfUrl\}\}/g, pdfUrl)
-    .replace(/\{\{__planPdfFilename\}\}/g, p.pdfFilename);
+    .replace(/\{\{__planPdfFilename\}\}/g, p.pdf_filename);
 }
 
 /**
@@ -303,7 +330,7 @@ function buildMainNav(lang, pageKey, translations, langSwitcher, mobileLangSwitc
   const isEditionsActive = (pageKey === "edition2026" || pageKey === "edition2026_synthese" || pageKey === "edition2025" || pageKey === "rapport2023" || pageKey === "rankings" || pageKey === "banks") ? " nav-link--active" : "";
   const isStudyActive = (pageKey === "methodology" || pageKey === "questionnaire" || pageKey === "transparency2025" || pageKey === "glossary") ? " nav-link--active" : "";
   const isAbixIndexActive = pageKey === "abixIndex" ? " nav-link--active" : "";
-  const isDataExplorerActive = pageKey === "dataExplorer" ? " nav-link--active" : "";
+  const isDataExplorerActive = (pageKey === "dataExplorer" || pageKey === "strategicPlanning") ? " nav-link--active" : "";
   const isServicesActive = pageKey === "services" ? " nav-link--active" : "";
   const isAboutActive = (pageKey === "about" || pageKey === "contact") ? " nav-link--active" : "";
 
