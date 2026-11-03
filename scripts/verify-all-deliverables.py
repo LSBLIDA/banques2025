@@ -7,7 +7,8 @@ Vérification automatisée complète de tous les livrables ABIX 2026
 import os
 import glob
 import re
-import fitz
+import sys
+import pymupdf
 
 BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 
@@ -27,19 +28,25 @@ expected_pdfs = [
         'filename': 'offre-abix-pack-essentiel-2026.pdf',
         'name': 'Pack Essentiel',
         'price': '84 000 DA HT',
-        'total_ttc': '99 960 DA TTC'
+        'total_ttc': '99 960 DA TTC',
+        'pages': 2,
+        'requires_sekak': False,
     },
     {
         'filename': 'offre-abix-pack-pro-2026.pdf',
         'name': 'Pack Pro',
         'price': '120 000 DA HT',
-        'total_ttc': '142 800 DA TTC'
+        'total_ttc': '142 800 DA TTC',
+        'pages': 2,
+        'requires_sekak': False,
     },
     {
         'filename': 'offre-abix-pack-corporate-executive-2026.pdf',
         'name': 'Pack Corporate Executive',
         'price': '280 000 DA HT',
-        'total_ttc': '333 200 DA TTC'
+        'total_ttc': '333 200 DA TTC',
+        'pages': 3,
+        'requires_sekak': True,
     }
 ]
 
@@ -50,8 +57,8 @@ for p in expected_pdfs:
         size = os.path.getsize(pdf_path)
         check(size > 5000, f"Taille valide ({size} octets) pour {p['filename']}")
         
-        doc = fitz.open(pdf_path)
-        check(len(doc) == 2, f"Exactement 2 pages (obtenu: {len(doc)}) pour {p['filename']}")
+        doc = pymupdf.open(pdf_path)
+        check(len(doc) == p['pages'], f"Exactement {p['pages']} pages (obtenu: {len(doc)}) pour {p['filename']}")
         
         full_text = ""
         for i, page in enumerate(doc):
@@ -61,8 +68,12 @@ for p in expected_pdfs:
         check(p['price'].replace(' ', '') in full_text.replace(' ', ''), f"Prix officiel '{p['price']}' présent dans le PDF")
         check(p['total_ttc'].replace(' ', '') in full_text.replace(' ', ''), f"Prix TTC '{p['total_ttc']}' présent dans le PDF")
         
-        # Vérification absence de données privées / factures proforma
-        check("M. Rachid Sekak" not in full_text, f"Pas de mention 'M. Rachid Sekak' dans {p['filename']}")
+        # La session avec M. Rachid Sekak est incluse uniquement dans le Corporate.
+        has_sekak = "M. Rachid Sekak" in full_text
+        check(has_sekak == p['requires_sekak'], f"Mention de M. Rachid Sekak conforme dans {p['filename']}")
+        if p['name'] == 'Pack Corporate Executive':
+            check("PLANIFICATION STRATÉGIQUE TRIENNALE" in full_text, "Planification stratégique présente dans le PDF Corporate")
+            check("ASSISTANCE IA INCLUSE" in full_text, "Assistance IA incluse présente dans le PDF Corporate")
         check("Nom du prospect" not in full_text, f"Pas de champ prospect personnalisé dans {p['filename']}")
 
 print("\n=== 2. VÉRIFICATION DES PAGES DE CONFIRMATION ===")
@@ -92,6 +103,7 @@ for rel_path in expected_html_pages:
         
         # Vérifier présence boutons download et send email
         check("download=" in content, f"Attribut download présent dans {rel_path}")
+        check(".pdf?v=" in content, f"URL PDF versionnée présente dans {rel_path}")
         check("send-offer-email-form" in content, f"Formulaire d'envoi email présent dans {rel_path}")
         check("noindex" in content, f"Protection meta noindex présente dans {rel_path}")
 

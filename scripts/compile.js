@@ -14,6 +14,7 @@
 
 const fs = require("fs");
 const path = require("path");
+const crypto = require("crypto");
 
 const args = process.argv.slice(2);
 const langArg = args.includes("--lang") ? args[args.indexOf("--lang") + 1] : null;
@@ -35,6 +36,7 @@ const ROOT = path.resolve(__dirname, "..");
 const TEMPLATES_DIR = path.join(ROOT, "templates");
 const LOCALES_DIR = path.join(ROOT, "locales");
 const OUTPUT_ROOT = ROOT; // La racine du projet EST la racine du site
+const assetVersionCache = new Map();
 
 // ── Pages à générer (template → chemin de sortie) ─────────────────────────────
 const PAGES = [
@@ -64,6 +66,30 @@ const PAGES = [
 ];
 
 // ── Fonctions utilitaires ──────────────────────────────────────────────────────
+
+/**
+ * Retourne une empreinte courte du contenu d'un asset public.
+ * Les URLs versionnées évitent qu'un navigateur ou CDN réutilise un ancien PDF.
+ */
+function getAssetVersion(assetPath) {
+  if (assetVersionCache.has(assetPath)) {
+    return assetVersionCache.get(assetPath);
+  }
+
+  const relativeParts = String(assetPath).split("/").filter(Boolean);
+  const absolutePath = path.join(ROOT, ...relativeParts);
+  if (!fs.existsSync(absolutePath)) {
+    throw new Error(`Asset public introuvable pour versionnement : ${absolutePath}`);
+  }
+
+  const version = crypto
+    .createHash("sha256")
+    .update(fs.readFileSync(absolutePath))
+    .digest("hex")
+    .slice(0, 12);
+  assetVersionCache.set(assetPath, version);
+  return version;
+}
 
 /**
  * Lit le fichier locale JSON pour une langue donnée.
@@ -299,7 +325,7 @@ function injectConfigVars(html, lang, outputPath, pageKey, translations) {
 function injectPlanVars(html, planKey, lang, translations) {
   const p = OFFERS_2026.plans[planKey] || OFFERS_2026.plans.essentiel;
   const tPlan = translations.confirmation?.plans?.[planKey] || {};
-  const pdfUrl = `${BASE_PATH}${p.pdf_path}`;
+  const pdfUrl = `${BASE_PATH}${p.pdf_path}?v=${getAssetVersion(p.pdf_path)}`;
   const users = lang === "ar" ? (p.users === 1 ? "مستخدم واحد" : `حتى ${p.users} مستخدمًا`) : lang === "en" ? (p.users === 1 ? "1 user" : `Up to ${p.users} users`) : (p.users === 1 ? "1 utilisateur" : `Jusqu’à ${p.users} utilisateurs`);
   const period = lang === "ar" ? (planKey === "corporate" ? "بيانات 2022–2025 والتخطيط الاستراتيجي لثلاث سنوات" : planKey === "pro" ? "بيانات 2024 و2025" : "بيانات 2025") : lang === "en" ? (planKey === "corporate" ? "2022–2025 data and three-year strategic planning" : planKey === "pro" ? "2024 & 2025 data" : "2025 data") : p.data_explorer_period;
 
