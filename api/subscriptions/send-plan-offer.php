@@ -114,7 +114,7 @@ function loadSmtpConfiguration(): ?array
         'use_ssl' => configuredBoolean(getConfiguredValue('EMAIL_USE_SSL', $fileValues, 'false')),
         'timeout' => max(3, min(30, (int)getConfiguredValue('EMAIL_TIMEOUT', $fileValues, '15'))),
         'from_email' => getConfiguredValue('ABIX_OFFER_FROM_EMAIL', $fileValues, 'abix@tadjeddine-partners.com'),
-        'reply_to' => getConfiguredValue('ABIX_OFFER_REPLY_TO', $fileValues, 'abix@tadjeddine-partners.com'),
+        'reply_to' => getConfiguredValue('ABIX_OFFER_REPLY_TO', $fileValues, 'info@tadjeddine-partners.com'),
     ];
     return $configuration;
 }
