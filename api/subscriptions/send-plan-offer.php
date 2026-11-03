@@ -10,7 +10,7 @@ header('X-Frame-Options: SAMEORIGIN');
 
 function parseDotEnvFile(string $path): array
 {
-    if ($path === '' || !is_readable($path)) {
+    if ($path === '' || !is_file($path)) {
         return [];
     }
 
@@ -72,14 +72,22 @@ function configuredBoolean(string $value): bool
 }
 
 /**
- * Réutilise en production la configuration SMTP de l'application Data Explorer.
- * Le chemin peut être surchargé avec ABIX_DATA_EXPLORER_ENV_FILE.
+ * Charge en priorité le .env propre au site public. L'ancien chemin vers Data
+ * Explorer reste un repli de compatibilité, notamment pour le développement.
  */
 function loadSmtpConfiguration(): ?array
 {
-    $configuredPath = trim((string)(getenv('ABIX_DATA_EXPLORER_ENV_FILE') ?: ''));
+    static $loaded = false;
+    static $configuration = null;
+    if ($loaded) {
+        return $configuration;
+    }
+    $loaded = true;
+
+    $configuredPath = trim((string)(getenv('ABIX_OFFER_ENV_FILE') ?: getenv('ABIX_DATA_EXPLORER_ENV_FILE') ?: ''));
     $candidates = array_values(array_filter([
         $configuredPath,
+        dirname(__DIR__, 2) . '/.env',
         '/www/wwwroot/abix-data-explorer/ABIX_back/.env',
     ]));
 
@@ -97,7 +105,7 @@ function loadSmtpConfiguration(): ?array
         return null;
     }
 
-    return [
+    $configuration = [
         'host' => $host,
         'port' => $port,
         'username' => getConfiguredValue('EMAIL_HOST_USER', $fileValues),
@@ -105,7 +113,10 @@ function loadSmtpConfiguration(): ?array
         'use_tls' => configuredBoolean(getConfiguredValue('EMAIL_USE_TLS', $fileValues, 'true')),
         'use_ssl' => configuredBoolean(getConfiguredValue('EMAIL_USE_SSL', $fileValues, 'false')),
         'timeout' => max(3, min(30, (int)getConfiguredValue('EMAIL_TIMEOUT', $fileValues, '15'))),
+        'from_email' => getConfiguredValue('ABIX_OFFER_FROM_EMAIL', $fileValues, 'abix@tadjeddine-partners.com'),
+        'reply_to' => getConfiguredValue('ABIX_OFFER_REPLY_TO', $fileValues, 'abix@tadjeddine-partners.com'),
     ];
+    return $configuration;
 }
 
 function smtpReadResponse($stream): array
@@ -465,9 +476,10 @@ $bodyText = "{$greeting}\n\n"
     . "https://algeriabankingindex.com\n";
 
 // 6. Envoi de l'email avec pièce jointe PDF MIME
-$fromEmail = trim((string)(getenv('ABIX_OFFER_FROM_EMAIL') ?: 'abix@tadjeddine-partners.com'));
+$mailConfiguration = loadSmtpConfiguration();
+$fromEmail = trim((string)($mailConfiguration['from_email'] ?? 'abix@tadjeddine-partners.com'));
 $fromName = 'Algeria Banking Index';
-$replyTo = trim((string)(getenv('ABIX_OFFER_REPLY_TO') ?: $fromEmail));
+$replyTo = trim((string)($mailConfiguration['reply_to'] ?? $fromEmail));
 
 if (!filter_var($fromEmail, FILTER_VALIDATE_EMAIL) || !filter_var($replyTo, FILTER_VALIDATE_EMAIL)) {
     http_response_code(500);

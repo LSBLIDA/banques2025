@@ -1,5 +1,9 @@
 .DS_Store
 node_modules
 .idea
+/.env
+/.env.local
+/.env.production
+!/.env.example
 data/reponses-barometre-2026.csv
 reponses-barometre-2026.csv

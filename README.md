@@ -4,6 +4,24 @@
 # HTML
 bash /root/deploy-abix.sh
 
+## Configuration SMTP des offres
+
+Le formulaire « Recevoir l'offre par email » lit sa configuration dans le
+fichier `.env` placé à la racine du site. Ce fichier contient des secrets et ne
+doit jamais être ajouté à Git.
+
+Sur le serveur de production :
+
+```bash
+cd /chemin/du/site-algeriabankingindex
+cp .env.example .env
+chmod 640 .env
+```
+
+Renseigner ensuite dans `.env` le serveur, le port, l'utilisateur et le mot de
+passe SMTP de `abix@tadjeddine-partners.com`. Le modèle versionné est
+`.env.example`.
+
 A modern HTML project utilizing Tailwind CSS for building responsive web applications with minimal setup.
 
 ## 🚀 Features
