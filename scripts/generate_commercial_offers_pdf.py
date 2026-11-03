@@ -2,10 +2,10 @@
 # -*- coding: utf-8 -*-
 """
 ABIX — Générateur d'offres commerciales PDF standards 2026
-Génère 3 offres PDF A4 haute fidélité (2 pages chacune) pour :
+Génère 3 offres PDF A4 haute fidélité et optimisées pour l'impression :
 - Pack Essentiel
 - Pack Pro
-- Pack Corporate Executive
+- Pack Corporate Executive (3 pages avec planification stratégique dédiée)
 """
 
 import os
@@ -19,23 +19,45 @@ from reportlab.platypus import (
 from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
 from reportlab.lib.units import mm, cm
 from reportlab.pdfgen import canvas
-from reportlab.graphics.shapes import Drawing, Rect, Line, Circle, String
+from reportlab.graphics.shapes import Drawing, Rect, Line, Circle, String, Path
 
-# ── Couleurs de la charte ABIX ──────────────────────────────────────────────
-BG_DARK = colors.HexColor("#081426")       # Bleu nuit profond
-BG_CARD = colors.HexColor("#0E223D")       # Bleu nuit carte
-BG_CARD_LIGHT = colors.HexColor("#142E52") # Bleu nuit carte contrastée
-ACCENT_GOLD = colors.HexColor("#F59E0B")   # Jaune doré primaire
-ACCENT_GOLD_LIGHT = colors.HexColor("#FBBF24")
+# ── Couleurs de la charte ABIX, adaptées à l'impression ─────────────────────
+BG_DARK = colors.HexColor("#FFFFFF")       # Fond de page blanc
+BG_CARD = colors.HexColor("#F8FAFC")       # Carte gris très clair
+BG_CARD_LIGHT = colors.HexColor("#F1F5F9") # Carte contrastée imprimable
+BG_HIGHLIGHT = colors.HexColor("#FFF7E6")  # Mise en avant stratégique
+ACCENT_GOLD = colors.HexColor("#D97706")   # Or soutenu, lisible sur blanc
+ACCENT_GOLD_LIGHT = colors.HexColor("#B45309")
 ACCENT_TEAL = colors.HexColor("#0D9488")   # Turquoise / Action
 ACCENT_CYAN = colors.HexColor("#06B6D4")   # Cyan d'accentuation
-TEXT_WHITE = colors.HexColor("#FFFFFF")
-TEXT_MUTED = colors.HexColor("#94A3B8")    # Gris ardoise clair
-TEXT_SUBTLE = colors.HexColor("#CBD5E1")   # Gris texte secondaire
-BORDER_COLOR = colors.HexColor("#1E3A5F")
+TEXT_WHITE = colors.HexColor("#0F172A")    # Texte principal sur fond clair
+TEXT_MUTED = colors.HexColor("#475569")    # Gris ardoise
+TEXT_SUBTLE = colors.HexColor("#334155")   # Gris texte secondaire
+BORDER_COLOR = colors.HexColor("#CBD5E1")
 SUCCESS_GREEN = colors.HexColor("#10B981")
 
 PAGE_WIDTH, PAGE_HEIGHT = A4
+
+
+def check_icon():
+    """Return an embedded vector check mark with no font dependency."""
+    icon = Drawing(8*mm, 5*mm)
+    mark = Path()
+    mark.moveTo(1.2*mm, 2.4*mm)
+    mark.lineTo(2.6*mm, 1.0*mm)
+    mark.lineTo(5.5*mm, 4.0*mm)
+    mark.strokeColor = ACCENT_GOLD
+    mark.strokeWidth = 1.5
+    mark.fillColor = None
+    icon.add(mark)
+    return icon
+
+
+def dot_icon(color=ACCENT_TEAL):
+    """Return an embedded vector bullet with no font dependency."""
+    icon = Drawing(6*mm, 4*mm)
+    icon.add(Circle(3*mm, 2*mm, 1.1*mm, fillColor=color, strokeColor=None))
+    return icon
 
 class NumberedCanvas(canvas.Canvas):
     """Canvas personnalisé pour arrière-plan institutionnel et pied de page numéroté"""
@@ -51,23 +73,43 @@ class NumberedCanvas(canvas.Canvas):
         num_pages = len(self._saved_page_states)
         for state in self._saved_page_states:
             self.__dict__.update(state)
-            self.draw_page_decorations(num_pages)
+            self.compose_page(num_pages)
             super().showPage()
         super().save()
 
-    def draw_page_decorations(self, page_count):
+    def compose_page(self, page_count):
+        """Place the page background behind the Platypus flowables.
+
+        The numbered-canvas pattern replays each completed page during save().
+        Drawing the full-page background at that point normally appends it after
+        the flowables and therefore hides the document body. Capture the existing
+        page operators, draw the background into a fresh operator list, then put
+        the flowables back before adding the foreground header and footer.
+        """
+        content_code = list(self._code)
+        self._code = []
+        self.draw_page_background()
+        self._code.extend(content_code)
+        self.draw_page_foreground(page_count)
+
+    def draw_page_background(self):
         self.saveState()
-        
+
         # 1. Arrière-plan global bleu nuit
         self.setFillColor(BG_DARK)
         self.rect(0, 0, PAGE_WIDTH, PAGE_HEIGHT, fill=True, stroke=False)
-        
+
         # Lueur/Bande supérieure subtile turquoise & or
         self.setFillColor(ACCENT_TEAL)
         self.rect(0, PAGE_HEIGHT - 3.5*mm, PAGE_WIDTH * 0.65, 3.5*mm, fill=True, stroke=False)
         self.setFillColor(ACCENT_GOLD)
         self.rect(PAGE_WIDTH * 0.65, PAGE_HEIGHT - 3.5*mm, PAGE_WIDTH * 0.35, 3.5*mm, fill=True, stroke=False)
-        
+
+        self.restoreState()
+
+    def draw_page_foreground(self, page_count):
+        self.saveState()
+
         # 2. En-tête (Header)
         # Logo ABIX / Tadjeddine & Partners
         logo_path = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "public", "logo.png"))
@@ -206,6 +248,42 @@ def build_offer_pdf(plan_key, plan_data, output_path):
         textColor=TEXT_WHITE
     )
 
+    section_title_style = ParagraphStyle(
+        'SectionTitle',
+        parent=styles['Normal'],
+        fontName='Helvetica-Bold',
+        fontSize=12,
+        leading=15,
+        textColor=TEXT_WHITE
+    )
+
+    def feature_card(number, title, items, background=BG_CARD, border=BORDER_COLOR, bullet_color=ACCENT_TEAL):
+        """Build a compact, print-friendly feature pillar."""
+        rows = []
+        for item in items:
+            rows.append([dot_icon(bullet_color), Paragraph(item, body_style)])
+
+        item_table = Table(rows, colWidths=[6*mm, PAGE_WIDTH - 42*mm])
+        item_table.setStyle(TableStyle([
+            ('VALIGN', (0, 0), (-1, -1), 'TOP'),
+            ('TOPPADDING', (0, 0), (-1, -1), 1.2*mm),
+            ('BOTTOMPADDING', (0, 0), (-1, -1), 1.2*mm),
+            ('LEFTPADDING', (0, 0), (-1, -1), 0),
+            ('RIGHTPADDING', (0, 0), (-1, -1), 0),
+        ]))
+
+        heading = Paragraph(f"<font color='#D97706'>{number}.</font> {title}", section_title_style)
+        card = Table([[heading], [Spacer(1, 1.5*mm)], [item_table]], colWidths=[PAGE_WIDTH - 30*mm])
+        card.setStyle(TableStyle([
+            ('BACKGROUND', (0, 0), (-1, -1), background),
+            ('BOX', (0, 0), (-1, -1), 1, border),
+            ('TOPPADDING', (0, 0), (-1, -1), 3.5*mm),
+            ('BOTTOMPADDING', (0, 0), (-1, -1), 3.5*mm),
+            ('LEFTPADDING', (0, 0), (-1, -1), 4*mm),
+            ('RIGHTPADDING', (0, 0), (-1, -1), 4*mm),
+        ]))
+        return card
+
     story = []
 
     # ══════════════════════════════════════════════════════════════════════════
@@ -228,12 +306,19 @@ def build_offer_pdf(plan_key, plan_data, output_path):
     title_p = Paragraph(f"{plan_data['name']}", h1_style)
     pos_p = Paragraph(f"Positionnement stratégique : « {plan_data['positioning']} »", pos_style)
     
-    intro_txt = (
-        "L'édition 2026 d'<b>ABIX (Algeria Banking Index)</b> constitue l'analyse de référence indépendante "
-        "du secteur bancaire algérien, couvrant l'ensemble des 21 banques commerciales en activité. "
-        "Cette offre standardisée vous garantit l'accès aux données financières certifiées, aux indicateurs exclusifs "
-        "et aux outils de benchmark décisionnel."
-    )
+    if plan_key == 'corporate':
+        intro_txt = (
+            "Le <b>Pack ABIX Corporate Executive - Édition 2026</b> réunit trois leviers complémentaires : "
+            "l'étude de référence du secteur bancaire algérien, la plateforme ABIX Data Explorer Corporate "
+            "et un dispositif complet de <b>planification stratégique triennale avec assistance IA incluse</b>."
+        )
+    else:
+        intro_txt = (
+            "L'édition 2026 d'<b>ABIX (Algeria Banking Index)</b> constitue l'analyse de référence indépendante "
+            "du secteur bancaire algérien, couvrant l'ensemble des 21 banques commerciales en activité. "
+            "Cette offre standardisée vous garantit l'accès aux données financières certifiées, aux indicateurs exclusifs "
+            "et aux outils de benchmark décisionnel."
+        )
     intro_p = Paragraph(intro_txt, body_style)
 
     header_box = Table([[title_p], [pos_p], [Spacer(1, 1.5*mm)], [intro_p]], colWidths=[PAGE_WIDTH - 30*mm])
@@ -261,6 +346,12 @@ def build_offer_pdf(plan_key, plan_data, output_path):
         Paragraph(f"Montant Total TTC : <b>{plan_data['total_ttc']:,} DA TTC</b>".replace(',', ' '), price_ttc),
     ]
 
+    included_deliverables = (
+        "Étude PDF sécurisée + fichier Excel + ABIX Data Explorer Corporate + planification stratégique triennale avec assistance IA."
+        if plan_key == 'corporate'
+        else "Étude PDF sécurisée haute définition + accès plateforme ABIX Data Explorer."
+    )
+
     pricing_right = [
         Paragraph("MODALITÉS DE L’OFFRE", card_h2),
         Spacer(1, 2*mm),
@@ -268,7 +359,7 @@ def build_offer_pdf(plan_key, plan_data, output_path):
         Paragraph(f"• <b>Licence d'utilisation :</b> {plan_data['users']} utilisateur(s) autorisé(s).", body_style),
         Paragraph("• <b>Durée d'accès :</b> 12 mois complets à compter de l'activation.", body_style),
         Paragraph(f"• <b>Périmètre temporel :</b> {plan_data['data_explorer_period']}.", body_style),
-        Paragraph("• <b>Livrables inclus :</b> Étude PDF sécurisée haute définition + accès plateforme ABIX Data Explorer.", body_style),
+        Paragraph(f"• <b>Livrables inclus :</b> {included_deliverables}", body_style),
         Paragraph("• <b>Facturation :</b> Émission d'une facture officielle en bonne et due forme par Tadjeddine & Partners.", body_style),
     ]
 
@@ -307,18 +398,17 @@ def build_offer_pdf(plan_key, plan_data, output_path):
         ]
     else: # corporate
         adv_items = [
-            ("Intelligence bancaire 360°", "Accès aux 4 exercices historiques complets (2022, 2023, 2024 et 2025) pour une profondeur d'analyse stratégique inégalée."),
-            ("Executive Dashboard & Key Insights", "Synthèse décisionnelle haute direction avec identification immédiate des forces, faiblesses et ruptures de tendance."),
-            ("Planification stratégique triennale", "Diagnostic, projections et trois scénarios, axes, initiatives, risques, dossier institutionnel, gouvernance et suivi annuel des objectifs."),
-            ("Déploiement groupe (20 utilisateurs)", "Large couverture pour vos comités de direction, équipes d'analyse financière, d'audit et de risk management."),
-            ("Rapports Executive PDF & Exports Excel", "Exportation libre et illimitée des données consolidées et des synthèses graphiques prêtes pour vos présentations.")
+            ("Étude ABIX 2026", "Étude sécurisée, fichier Excel des données financières et session de présentation avec M. Rachid Sekak."),
+            ("Data Explorer Corporate", "Licence 12 mois jusqu'à 20 utilisateurs, données 2022-2025, tableaux de bord et benchmarks avancés."),
+            ("Planification stratégique triennale", "Élaboration de plans bancaires sur 3 exercices, projections et scénarios Central, Ambitieux et Défavorable."),
+            ("Assistance IA incluse", "Aide à la rédaction, à l'analyse et à la structuration des axes, initiatives, risques et indicateurs."),
+            ("Gouvernance et pilotage", "Workflow de validation DG / Conseil d'Administration et suivi annuel des objectifs et réalisations.")
         ]
 
     adv_rows = []
     for title, desc in adv_items:
-        check_p = Paragraph("<font color='#F59E0B'>✔</font>", ParagraphStyle('Check', parent=body_bold, fontSize=12, alignment=1))
         content_p = Paragraph(f"<b>{title} :</b> {desc}", body_style)
-        adv_rows.append([check_p, content_p])
+        adv_rows.append([check_icon(), content_p])
 
     adv_table = Table(adv_rows, colWidths=[8*mm, PAGE_WIDTH - 38*mm])
     adv_table.setStyle(TableStyle([
@@ -345,66 +435,124 @@ def build_offer_pdf(plan_key, plan_data, output_path):
     # ══════════════════════════════════════════════════════════════════════════
     story.append(PageBreak())
 
-    p2_header = Paragraph(f"CONTENU DÉTAILLÉ ET SPÉCIFICATIONS — {plan_data['name'].upper()}", card_h2)
-    story.append(p2_header)
-    story.append(Spacer(1, 2.5*mm))
+    if plan_key == 'corporate':
+        story.append(Paragraph("LES TROIS PILIERS DU PACK CORPORATE EXECUTIVE", card_h2))
+        story.append(Spacer(1, 2.5*mm))
 
-    # 1. Tableau du contenu du pack & ABIX Data Explorer
-    if plan_key == 'essentiel':
-        content_items = [
-            ("Étude complète Édition 2026", "Livrable complet au format PDF sécurisé haute définition, incluant la vue d'ensemble du marché et les fiches individuelles des 21 banques."),
-            ("Analyse sectorielle consolidée", "Agrégats macro-bancaires de la place, parts de marché globales et comparaisons banques publiques / banques privées."),
-            ("Classements & Benchmarks", "Palmarès complets par PNB, Résultat net, Bilan, Dépôts, Crédits, ROE, ROA et Efficacité opérationnelle."),
-            ("ABIX Data Explorer (12 mois)", "Licence d'accès interactif à la plateforme en ligne pour 1 utilisateur nommé."),
-            ("Données exercice 2025", "Consultation des données détaillées et des ratios bancaires sur le dernier exercice audité (2025)."),
-            ("Visualisations & Comparaisons 2025", "Graphes dynamiques, benchmarks visuels et comparaisons bancaires directes sur l'exercice 2025.")
+        study_items = [
+            "Étude complète au format PDF sécurisé.",
+            "Analyses sectorielles, banques publiques / privées et profils individuels.",
+            "Classements, ratios et comparaisons bancaires.",
+            "Fichier Excel des données financières.",
+            "Session de présentation avec M. Rachid Sekak.",
         ]
-    elif plan_key == 'pro':
-        content_items = [
-            ("Tout le contenu du Pack Essentiel", "Étude PDF complète 2026, analyses consolidées des 21 banques, classements et ratios de référence."),
-            ("Fichier Excel structuré", "Modèle de données brutes prêt à l'emploi (tableaux financiers, bilans, comptes de résultat et métriques retraitées)."),
-            ("ABIX Data Explorer Pro (12 mois)", "Licence multi-utilisateurs pour jusqu'à 3 collaborateurs d'une même entité."),
-            ("Données 2024 et 2025", "Accès à l'historique sur 2 exercices pour mesurer les évolutions annuelles et taux de croissance."),
-            ("Analyse dynamique des évolutions", "Comparaisons interannuelles, variations d'indicateurs et tendances par groupe bancaire."),
-            ("Visualisations interactives Pro", "Outils de modélisation visuelle, exports graphiques et filtres avancés par segment.")
+        explorer_items = [
+            "Licence 12 mois - jusqu'à 20 utilisateurs.",
+            "Données historiques 2022-2025.",
+            "Tableaux de bord, analyses et benchmarks avancés.",
+            "Profils bancaires, classements et évolutions pluriannuelles.",
+            "Rapports Executive PDF et exports Excel.",
         ]
-    else: # corporate
-        content_items = [
-            ("Tout le contenu du Pack Pro", "Étude PDF 2026, fichier Excel complet des données et fonctionnalités Pro."),
-            ("ABIX Data Explorer Executive (12 mois)", "Accès étendu jusqu'à 20 utilisateurs appartenant à la même organisation."),
-            ("Historique complet sur 4 exercices", "Accès intégral aux données auditées 2022, 2023, 2024 et 2025."),
-            ("Analyse multidimensionnelle & Profils 360°", "Fiches de synthèse bancaire complètes et indicateurs d'efficacité approfondis."),
-            ("Executive Dashboard & Key Insights", "Tableaux de bord stratégiques conçus pour les directions générales et comités d'audit."),
-            ("Groupes de pairs & Benchmarks avancés", "Segmentation personnalisée, analyse de sous-ensembles bancaires et comparaisons sur mesure."),
-            ("Rapports Executive PDF & Exports Excel", "Génération de rapports exécutifs prêts pour les conseils d'administration et exports illimités.")
+        strategic_items = [
+            "Élaboration de plans bancaires sur 3 exercices.",
+            "Préremplissage ABIX, benchmarks et projections.",
+            "Scénarios Central, Ambitieux et Défavorable.",
+            "Axes stratégiques, initiatives, risques et indicateurs.",
+            "Assistance IA à la rédaction et à l'analyse.",
+            "Workflow de validation DG / Conseil d'Administration.",
+            "Suivi annuel des objectifs et réalisations.",
         ]
 
-    content_rows = []
-    for t_elem, d_elem in content_items:
-        dot_p = Paragraph("<font color='#0D9488'>▪</font>", ParagraphStyle('Dot', parent=body_bold, fontSize=14, alignment=1))
-        item_p = Paragraph(f"<b>{t_elem}</b><br/><font color='#CBD5E1'>{d_elem}</font>", body_style)
-        content_rows.append([dot_p, item_p])
+        story.append(feature_card("1", "ÉTUDE ABIX 2026", study_items))
+        story.append(Spacer(1, 4*mm))
+        story.append(feature_card("2", "ABIX DATA EXPLORER - CORPORATE", explorer_items))
 
-    content_table = Table(content_rows, colWidths=[6*mm, PAGE_WIDTH - 36*mm])
-    content_table.setStyle(TableStyle([
-        ('VALIGN', (0, 0), (-1, -1), 'TOP'),
-        ('BOTTOMPADDING', (0, 0), (-1, -1), 1.5*mm),
-        ('TOPPADDING', (0, 0), (-1, -1), 1.5*mm),
-        ('LEFTPADDING', (0, 0), (-1, -1), 0),
-        ('RIGHTPADDING', (0, 0), (-1, -1), 0),
-    ]))
+        story.append(PageBreak())
+        story.append(Paragraph("PLANIFICATION STRATÉGIQUE TRIENNALE", card_h2))
+        story.append(Spacer(1, 1.5*mm))
+        story.append(Paragraph(
+            "Un cadre structuré pour transformer les analyses ABIX en trajectoire stratégique, "
+            "arbitrages de gouvernance et pilotage annuel.",
+            pos_style,
+        ))
+        story.append(Spacer(1, 3*mm))
+        story.append(feature_card(
+            "3",
+            "PLANIFICATION STRATÉGIQUE TRIENNALE",
+            strategic_items,
+            background=BG_HIGHLIGHT,
+            border=ACCENT_GOLD,
+            bullet_color=ACCENT_GOLD,
+        ))
+        story.append(Spacer(1, 3*mm))
 
-    detail_box = Table([[content_table]], colWidths=[PAGE_WIDTH - 30*mm])
-    detail_box.setStyle(TableStyle([
-        ('BACKGROUND', (0, 0), (-1, -1), BG_CARD),
-        ('BOX', (0, 0), (-1, -1), 0.75, BORDER_COLOR),
-        ('TOPPADDING', (0, 0), (-1, -1), 3*mm),
-        ('BOTTOMPADDING', (0, 0), (-1, -1), 3*mm),
-        ('LEFTPADDING', (0, 0), (-1, -1), 4*mm),
-        ('RIGHTPADDING', (0, 0), (-1, -1), 4*mm),
-    ]))
-    story.append(detail_box)
-    story.append(Spacer(1, 3.5*mm))
+        ai_title = Paragraph("<b>ASSISTANCE IA INCLUSE</b>", ParagraphStyle(
+            'AIBannerTitle', parent=card_h2, textColor=colors.HexColor("#065F46"), alignment=1
+        ))
+        ai_text = Paragraph(
+            "L'assistance IA accompagne la rédaction, l'analyse, la structuration des scénarios "
+            "et la formalisation des axes, initiatives, risques et indicateurs.",
+            ParagraphStyle('AIBannerText', parent=body_style, alignment=1),
+        )
+        ai_banner = Table([[ai_title], [ai_text]], colWidths=[PAGE_WIDTH - 30*mm])
+        ai_banner.setStyle(TableStyle([
+            ('BACKGROUND', (0, 0), (-1, -1), colors.HexColor("#ECFDF5")),
+            ('BOX', (0, 0), (-1, -1), 1, ACCENT_TEAL),
+            ('TOPPADDING', (0, 0), (-1, -1), 2.5*mm),
+            ('BOTTOMPADDING', (0, 0), (-1, -1), 2.5*mm),
+            ('LEFTPADDING', (0, 0), (-1, -1), 4*mm),
+            ('RIGHTPADDING', (0, 0), (-1, -1), 4*mm),
+        ]))
+        story.append(ai_banner)
+        story.append(Spacer(1, 3.5*mm))
+    else:
+        story.append(Paragraph(f"CONTENU DÉTAILLÉ ET SPÉCIFICATIONS - {plan_data['name'].upper()}", card_h2))
+        story.append(Spacer(1, 2.5*mm))
+
+        if plan_key == 'essentiel':
+            content_items = [
+                ("Étude complète Édition 2026", "Livrable complet au format PDF sécurisé haute définition, incluant la vue d'ensemble du marché et les fiches individuelles des 21 banques."),
+                ("Analyse sectorielle consolidée", "Agrégats macro-bancaires de la place, parts de marché globales et comparaisons banques publiques / banques privées."),
+                ("Classements & Benchmarks", "Palmarès complets par PNB, Résultat net, Bilan, Dépôts, Crédits, ROE, ROA et Efficacité opérationnelle."),
+                ("ABIX Data Explorer (12 mois)", "Licence d'accès interactif à la plateforme en ligne pour 1 utilisateur nommé."),
+                ("Données exercice 2025", "Consultation des données détaillées et des ratios bancaires sur le dernier exercice audité (2025)."),
+                ("Visualisations & Comparaisons 2025", "Graphes dynamiques, benchmarks visuels et comparaisons bancaires directes sur l'exercice 2025.")
+            ]
+        else:
+            content_items = [
+                ("Tout le contenu du Pack Essentiel", "Étude PDF complète 2026, analyses consolidées des 21 banques, classements et ratios de référence."),
+                ("Fichier Excel structuré", "Modèle de données brutes prêt à l'emploi (tableaux financiers, bilans, comptes de résultat et métriques retraitées)."),
+                ("ABIX Data Explorer Pro (12 mois)", "Licence multi-utilisateurs pour jusqu'à 3 collaborateurs d'une même entité."),
+                ("Données 2024 et 2025", "Accès à l'historique sur 2 exercices pour mesurer les évolutions annuelles et taux de croissance."),
+                ("Analyse dynamique des évolutions", "Comparaisons interannuelles, variations d'indicateurs et tendances par groupe bancaire."),
+                ("Visualisations interactives Pro", "Outils de modélisation visuelle, exports graphiques et filtres avancés par segment.")
+            ]
+
+        content_rows = []
+        for t_elem, d_elem in content_items:
+            item_p = Paragraph(f"<b>{t_elem}</b><br/><font color='#334155'>{d_elem}</font>", body_style)
+            content_rows.append([dot_icon(), item_p])
+
+        content_table = Table(content_rows, colWidths=[6*mm, PAGE_WIDTH - 36*mm])
+        content_table.setStyle(TableStyle([
+            ('VALIGN', (0, 0), (-1, -1), 'TOP'),
+            ('BOTTOMPADDING', (0, 0), (-1, -1), 1.5*mm),
+            ('TOPPADDING', (0, 0), (-1, -1), 1.5*mm),
+            ('LEFTPADDING', (0, 0), (-1, -1), 0),
+            ('RIGHTPADDING', (0, 0), (-1, -1), 0),
+        ]))
+
+        detail_box = Table([[content_table]], colWidths=[PAGE_WIDTH - 30*mm])
+        detail_box.setStyle(TableStyle([
+            ('BACKGROUND', (0, 0), (-1, -1), BG_CARD),
+            ('BOX', (0, 0), (-1, -1), 0.75, BORDER_COLOR),
+            ('TOPPADDING', (0, 0), (-1, -1), 3*mm),
+            ('BOTTOMPADDING', (0, 0), (-1, -1), 3*mm),
+            ('LEFTPADDING', (0, 0), (-1, -1), 4*mm),
+            ('RIGHTPADDING', (0, 0), (-1, -1), 4*mm),
+        ]))
+        story.append(detail_box)
+        story.append(Spacer(1, 3.5*mm))
 
     # 2. Modalités générales d'activation & Engagement de service
     p2_modalites_title = Paragraph("MODALITÉS GÉNÉRALES D'ACTIVATION & FACTURATION", card_h2)
